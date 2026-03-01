@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NotioOS – Minimalistisches Notizsystem</title>
+    <title>NotioOS – Minimalist Note System</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23007AFF'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-weight='700' font-size='20' fill='white'>N</text></svg>">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,9 +45,7 @@
             padding: 0;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
         body {
             background-color: var(--bg);
@@ -119,9 +120,7 @@
             color: var(--text2);
         }
 
-        .nav-links a:hover {
-            color: var(--text);
-        }
+        .nav-links a:hover { color: var(--text); }
 
         /* ── Header / Hero ─────────────────────────── */
         header {
@@ -154,10 +153,91 @@
             font-size: 1.4rem;
             color: var(--text2);
             max-width: 600px;
-            margin: 0 auto 3rem;
+            margin: 0 auto 2rem;
             font-weight: 400;
         }
 
+        /* ── Audio Buttons ──────────────────────────── */
+        .audio-row {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-audio {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: var(--surface2);
+            color: var(--text);
+            padding: 0.75rem 1.75rem;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 1px solid var(--border);
+            cursor: pointer;
+            transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-audio:hover {
+            background: var(--surface);
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,122,255,0.15);
+        }
+
+        .btn-audio.playing {
+            background: var(--accent-dim);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .btn-audio .flag {
+            font-size: 1.1rem;
+        }
+
+        /* Animated sound bars */
+        .sound-bars {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            height: 16px;
+        }
+
+        .sound-bars span {
+            display: block;
+            width: 3px;
+            border-radius: 2px;
+            background: currentColor;
+            animation: none;
+        }
+
+        .btn-audio.playing .sound-bars span {
+            animation: soundBar 0.8s ease-in-out infinite alternate;
+        }
+
+        .sound-bars span:nth-child(1) { height: 6px; animation-delay: 0s; }
+        .sound-bars span:nth-child(2) { height: 12px; animation-delay: 0.15s; }
+        .sound-bars span:nth-child(3) { height: 9px; animation-delay: 0.3s; }
+        .sound-bars span:nth-child(4) { height: 14px; animation-delay: 0.1s; }
+
+        @keyframes soundBar {
+            from { transform: scaleY(0.4); }
+            to   { transform: scaleY(1.4); }
+        }
+
+        /* play icon (shown when not playing) */
+        .play-icon { display: block; }
+        .btn-audio.playing .play-icon { display: none; }
+        .btn-audio:not(.playing) .sound-bars { display: none; }
+        .btn-audio.playing .sound-bars { display: flex; }
+
+        /* ── Primary Button ─────────────────────────── */
         .btn-primary {
             display: inline-flex;
             align-items: center;
@@ -208,24 +288,10 @@
             gap: 6px;
         }
 
-        .dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            opacity: 0.6;
-        }
-
-        .dot.red {
-            background: #ff5f56;
-        }
-
-        .dot.yellow {
-            background: #ffbd2e;
-        }
-
-        .dot.green {
-            background: #27c93f;
-        }
+        .dot { width: 10px; height: 10px; border-radius: 50%; opacity: 0.6; }
+        .dot.red { background: #ff5f56; }
+        .dot.yellow { background: #ffbd2e; }
+        .dot.green { background: #27c93f; }
 
         /* ── Sections ──────────────────────────────── */
         section {
@@ -277,10 +343,7 @@
             font-family: var(--font-display);
         }
 
-        .feature-card p {
-            color: var(--text2);
-            font-size: 1rem;
-        }
+        .feature-card p { color: var(--text2); font-size: 1rem; }
 
         /* ── Tech Stack ────────────────────────────── */
         .stack-container {
@@ -311,17 +374,9 @@
 
         /* ── Responsive ────────────────────────────── */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 3rem;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .section-title {
-                font-size: 2.2rem;
-            }
+            h1 { font-size: 3rem; }
+            .nav-links { display: none; }
+            .section-title { font-size: 2.2rem; }
         }
 
         /* Swipe Preview Animation */
@@ -342,44 +397,13 @@
         }
 
         @keyframes swipeLoop {
-
-            0%,
-            10% {
-                transform: translate(-50%, -50%) rotate(0deg);
-                opacity: 1;
-            }
-
-            25% {
-                transform: translate(-150%, -60%) rotate(-15deg);
-                opacity: 0;
-            }
-
-            30% {
-                transform: translate(-50%, -50%) scale(0.9);
-                opacity: 0;
-            }
-
-            40%,
-            50% {
-                transform: translate(-50%, -50%) scale(1);
-                opacity: 1;
-            }
-
-            65% {
-                transform: translate(50%, -150%) scale(0.8);
-                opacity: 0;
-            }
-
-            70% {
-                transform: translate(-50%, -50%) scale(0.9);
-                opacity: 0;
-            }
-
-            80%,
-            100% {
-                transform: translate(-50%, -50%) scale(1);
-                opacity: 1;
-            }
+            0%, 10% { transform: translate(-50%, -50%) rotate(0deg); opacity: 1; }
+            25% { transform: translate(-150%, -60%) rotate(-15deg); opacity: 0; }
+            30% { transform: translate(-50%, -50%) scale(0.9); opacity: 0; }
+            40%, 50% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            65% { transform: translate(50%, -150%) scale(0.8); opacity: 0; }
+            70% { transform: translate(-50%, -50%) scale(0.9); opacity: 0; }
+            80%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
         }
     </style>
 </head>
@@ -403,11 +427,31 @@
 
     <header>
         <div class="hero-container">
-            <h1>Dein Geist, organisiert.</h1>
-            <p class="hero-sub">NotioOS ist ein minimalistisches, Apple-inspiriertes Notizsystem, das Ordnung in deine
-                Gedanken bringt – mit Fokus auf Design und Schnelligkeit.</p>
+            <h1>Your Mind, Organized.</h1>
+            <p class="hero-sub">NotioOS is a minimalist, Apple-inspired note system that brings order to your thoughts – focused on design and speed.</p>
+
+            <!-- Audio Buttons -->
+            <div class="audio-row">
+                <button class="btn-audio" id="btn-en" onclick="toggleAudio('en')">
+                    <span class="flag">🇬🇧</span>
+                    <span class="play-icon">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    </span>
+                    <span class="sound-bars"><span></span><span></span><span></span><span></span></span>
+                    English Audio
+                </button>
+                <button class="btn-audio" id="btn-de" onclick="toggleAudio('de')">
+                    <span class="flag">🇩🇪</span>
+                    <span class="play-icon">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    </span>
+                    <span class="sound-bars"><span></span><span></span><span></span><span></span></span>
+                    German Audio
+                </button>
+            </div>
+
             <a href="https://github.com/BobBinson007/oopOS" class="btn-primary">
-                Jetzt starten
+                Get Started
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                     stroke-linecap="round" stroke-linejoin="round">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -423,7 +467,7 @@
                         <div class="dot green"></div>
                     </div>
                     <div class="swipe-demo">
-                        <span style="font-weight: 700; color: var(--text2)">Einordnungs-Vorschau</span>
+                        <span style="font-weight: 700; color: var(--text2)">Sorting Preview</span>
                     </div>
                 </div>
             </div>
@@ -431,72 +475,59 @@
     </header>
 
     <section id="features">
-        <h2 class="section-title">Features, die begeistern.</h2>
+        <h2 class="section-title">Features that inspire.</h2>
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                         <line x1="3" y1="10" x2="21" y2="10"></line>
                     </svg>
                 </div>
                 <h3>Inbox System</h3>
-                <p>Alles beginnt hier. Jede Idee, jede Aufgabe landet zuerst in der Inbox, damit du dich auf das
-                    Wesentliche konzentrieren kannst.</p>
+                <p>Everything starts here. Every idea, every task lands in the inbox first, so you can focus on what truly matters.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
-                        <path
-                            d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z">
-                        </path>
+                        <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
                     </svg>
                 </div>
-                <h3>Einordnungsmaschine</h3>
-                <p>Sortiere deine Notizen mit intuitiven Wischgesten. Links für's Archiv, rechts für Workspaces und neu:
-                    **Runter zum Löschen**.</p>
+                <h3>Sorting Machine</h3>
+                <p>Sort your notes with intuitive swipe gestures. Left for the archive, right for workspaces, and new: swipe down to delete.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
                     </svg>
                 </div>
                 <h3>Workspaces</h3>
-                <p>Strukturiere dein Wissen in hierarchischen Workspaces. Behalte den Überblick über Projekte,
-                    Reflektionen oder Logs.</p>
+                <p>Structure your knowledge in hierarchical workspaces. Keep track of projects, reflections, or logs with ease.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                     </svg>
                 </div>
-                <h3>AI-Suche</h3>
-                <p>Finde Antworten in deinen eigenen Notizen. Unsere KI-Integration versteht deine Daten und hilft dir,
-                    Wissen zu reaktivieren.</p>
+                <h3>AI Search</h3>
+                <p>Find answers within your own notes. Our AI integration understands your data and helps you rediscover knowledge.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                         <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                     </svg>
                 </div>
                 <h3>Privacy First</h3>
-                <p>Deine Daten gehören dir. Mit lokaler Speicherung und 2FA (TOTP & E-Mail) sind deine Notizen sicher
-                    verwahrt.</p>
+                <p>Your data belongs to you. With local storage and 2FA (TOTP & Email), your notes are kept safe and secure.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
                         <line x1="12" y1="1" x2="12" y2="3"></line>
                         <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -505,14 +536,13 @@
                     </svg>
                 </div>
                 <h3>Dark & Light Mode</h3>
-                <p>Wähle zwischen verschiedenen Themen wie Forest oder Sunset. Das System passt sich deinem Workflow an.
-                </p>
+                <p>Choose between themes like Forest or Sunset. The system adapts to your workflow and personal preference.</p>
             </div>
         </div>
     </section>
 
     <section id="tech">
-        <h2 class="section-title">Moderner Tech Stack.</h2>
+        <h2 class="section-title">Modern Tech Stack.</h2>
         <div class="stack-container">
             <div class="stack-item">Node.js</div>
             <div class="stack-item">Express</div>
@@ -525,38 +555,65 @@
     </section>
 
     <section id="install">
-        <h2 class="section-title">Einfach installiert.</h2>
-        <div
-            style="background: var(--surface2); padding: 2rem; border-radius: var(--radius-md); font-family: monospace; font-size: 0.95rem; line-height: 1.8;">
+        <h2 class="section-title">Easy to Install.</h2>
+        <div style="background: var(--surface2); padding: 2rem; border-radius: var(--radius-md); font-family: monospace; font-size: 0.95rem; line-height: 1.8;">
             <p><span style="color: var(--accent)">$</span> git clone https://github.com/BobBinson007/oopOS.git</p>
             <p><span style="color: var(--accent)">$</span> cd oopOS</p>
             <p><span style="color: var(--accent)">$</span> npm install</p>
             <p><span style="color: var(--accent)">$</span> npm start</p>
         </div>
-        <p style="text-align: center; margin-top: 2rem; color: var(--text2)">Fertig! Dein System ist unter
-            <code>localhost:3000</code> erreichbar.</p>
+        <p style="text-align: center; margin-top: 2rem; color: var(--text2)">Done! Your system is available at <code>localhost:3000</code>.</p>
     </section>
 
     <footer>
-        <p>&copy; 2026 NotioOS Project. Inspired by Simplicity. </p>
+        <p>&copy; 2026 NotioOS Project. Inspired by Simplicity.</p>
     </footer>
 
     <script>
-        // Smooth Scrolling for anchor links
+        // Audio instances
+        const audios = {
+            en: new Audio('english.mp3'),
+            de: new Audio('german.mp3')
+        };
+
+        const buttons = {
+            en: document.getElementById('btn-en'),
+            de: document.getElementById('btn-de')
+        };
+
+        function toggleAudio(lang) {
+            const audio = audios[lang];
+            const btn = buttons[lang];
+            const otherLang = lang === 'en' ? 'de' : 'en';
+
+            // Stop the other one first
+            audios[otherLang].pause();
+            audios[otherLang].currentTime = 0;
+            buttons[otherLang].classList.remove('playing');
+
+            if (audio.paused) {
+                audio.play();
+                btn.classList.add('playing');
+            } else {
+                audio.pause();
+                audio.currentTime = 0;
+                btn.classList.remove('playing');
+            }
+        }
+
+        // Remove playing state when audio ends naturally
+        audios.en.addEventListener('ended', () => buttons.en.classList.remove('playing'));
+        audios.de.addEventListener('ended', () => buttons.de.classList.remove('playing'));
+
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
 
-        // Reveal animations on scroll
-        const observerOptions = {
-            threshold: 0.1
-        };
-
+        // Reveal animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -564,7 +621,7 @@
                     entry.target.style.transform = 'translateY(0)';
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.1 });
 
         document.querySelectorAll('.feature-card').forEach(card => {
             card.style.opacity = '0';
