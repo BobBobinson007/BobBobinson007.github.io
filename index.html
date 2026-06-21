@@ -10,36 +10,45 @@
   .subtitle { color: #888; font-size: 13px; margin: 0 0 24px; }
   hr { border: none; border-top: 1px solid #e5e5e5; margin: 24px 0; }
 
-  /* Search */
-  .search-wrap { margin: 0 0 18px; }
-  .search-wrap input { width: 100%; padding: 10px 14px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; outline: none; box-sizing: border-box; transition: border 0.2s; }
-  .search-wrap input:focus { border-color: #000; }
+  /* Search Toggle */
+  .search-header { display: flex; align-items: center; gap: 10px; margin: 0 0 18px; min-height: 36px; }
+  .search-icon { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 8px; transition: background 0.15s; flex-shrink: 0; }
+  .search-icon:hover { background: #f0f0f0; }
+  .search-icon svg { width: 18px; height: 18px; stroke: #888; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.15s; }
+  .search-icon:hover svg { stroke: #000; }
+  .search-wrap { flex: 1; overflow: hidden; max-width: 0; transition: max-width 0.3s ease, opacity 0.2s ease; opacity: 0; }
+  .search-wrap.open { max-width: 600px; opacity: 1; }
+  .search-wrap input { width: 100%; padding: 8px 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; outline: none; box-sizing: border-box; transition: border 0.2s; }
+  .search-wrap input:focus { border-color: #007AFF; }
 
   /* Tags */
   .tag-bar { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 20px; }
   .tag { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 12px; cursor: pointer; background: #f0f0f0; color: #555; transition: all 0.15s; user-select: none; border: none; }
   .tag:hover { background: #ddd; }
-  .tag.active { background: #000; color: #fff; }
+  .tag.active { background: #007AFF; color: #fff; }
   .tag-count { font-size: 10px; opacity: 0.6; margin-left: 3px; }
 
   /* Posts */
   .featured { background: #000; color: #fff; padding: 24px 24px 18px; border-radius: 12px; margin: 20px 0; transition: transform 0.3s ease; }
   .featured:hover { transform: translateY(-2px); }
-  .featured .date { font-size: 13px; color: #aaa; font-weight: 500; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .featured .date { font-size: 13px; color: #aaa; font-weight: 500; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.15s; }
+  .featured .date:hover { color: #FF3B30; }
   .featured .content { font-size: 15px; line-height: 1.6; color: #eee; }
-  .featured .p-tags { margin-top: 10px; }
-  .featured .p-tags .tag { background: rgba(255,255,255,0.12); color: #ccc; }
-  .featured .p-tags .tag:hover { background: rgba(255,255,255,0.25); }
+  .featured .p-tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .featured .p-tags span { font-size: 12px; cursor: pointer; color: #888; transition: color 0.15s; }
+  .featured .p-tags span::before { content: '#'; }
+  .featured .p-tags span:hover { color: #007AFF; }
 
   .post { padding: 18px 0; border-bottom: 1px solid #eee; transition: opacity 0.4s ease; }
   .post:last-child { border-bottom: none; }
   .post:hover { opacity: 0.8; }
-  .post .date { font-size: 13px; color: #999; font-weight: 500; margin-bottom: 4px; }
+  .post .date { font-size: 13px; color: #999; font-weight: 500; margin-bottom: 4px; transition: color 0.15s; }
+  .post .date:hover { color: #FF3B30; }
   .post .content { font-size: 15px; line-height: 1.6; color: #333; }
-  .post .p-tags { margin-top: 8px; font-size: 12px; color: #aaa; }
-  .post .p-tags span { cursor: pointer; color: #888; }
-  .post .p-tags span:hover { color: #000; }
+  .post .p-tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .post .p-tags span { font-size: 12px; cursor: pointer; color: #999; transition: color 0.15s; }
   .post .p-tags span::before { content: '#'; }
+  .post .p-tags span:hover { color: #007AFF; }
 
   .post.hidden, .featured.hidden { display: none; }
   .no-results { text-align: center; padding: 40px 0; color: #aaa; font-size: 14px; display: none; }
@@ -62,8 +71,16 @@
   <p class="subtitle">Tägliche Updates aus dem digitalen Leben von Bob.</p>
 </div>
 
-<div class="search-wrap">
-  <input type="text" id="searchInput" placeholder="Suche in Einträgen…" autocomplete="off">
+<div class="search-header">
+  <span class="search-icon" id="searchToggle" role="button" tabindex="0" aria-label="Suche öffnen">
+    <svg viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="8"/>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+  </span>
+  <div class="search-wrap" id="searchWrap">
+    <input type="text" id="searchInput" placeholder="Suche in Einträgen…" autocomplete="off">
+  </div>
 </div>
 <div class="tag-bar" id="tagBar"></div>
 
@@ -87,13 +104,49 @@ const posts = [
 
 const container = document.getElementById('postsContainer');
 const searchInput = document.getElementById('searchInput');
+const searchWrap = document.getElementById('searchWrap');
+const searchToggle = document.getElementById('searchToggle');
 const tagBar = document.getElementById('tagBar');
 const noResults = document.getElementById('noResults');
 
 let selectedTags = new Set();
 let searchTerm = '';
+let searchOpen = false;
 
-// Build tag index
+// --- Search Toggle ---
+searchToggle.addEventListener('click', toggleSearch);
+searchToggle.addEventListener('keydown', (e) => { if (e.key === 'Enter') toggleSearch(); });
+
+function toggleSearch() {
+  searchOpen = !searchOpen;
+  searchWrap.classList.toggle('open', searchOpen);
+  if (searchOpen) {
+    setTimeout(() => searchInput.focus(), 200);
+  }
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && searchOpen) {
+    searchOpen = false;
+    searchWrap.classList.remove('open');
+    searchInput.value = '';
+    searchTerm = '';
+    update();
+  }
+});
+
+// Close search on click outside
+document.addEventListener('click', (e) => {
+  if (searchOpen && !e.target.closest('.search-header')) {
+    searchOpen = false;
+    searchWrap.classList.remove('open');
+    searchInput.value = '';
+    searchTerm = '';
+    update();
+  }
+});
+
+// --- Tag functions ---
 function getTagCounts() {
   const counts = {};
   posts.forEach(p => (p.tags || []).forEach(t => { counts[t] = (counts[t] || 0) + 1; }));
@@ -107,7 +160,6 @@ function renderTagBar() {
     `<span class="tag${selectedTags.has(t) ? ' active' : ''}" data-tag="${t}">${t} <span class="tag-count">${counts[t]}</span></span>`
   ).join('');
 
-  // Show clear button if any tags selected
   let clearBtn = document.querySelector('.clear-btn');
   if (!clearBtn) {
     clearBtn = document.createElement('span');
@@ -124,33 +176,6 @@ function renderTagBar() {
       if (selectedTags.has(t)) selectedTags.delete(t);
       else selectedTags.add(t);
       update();
-    });
-  });
-}
-
-function renderPosts() {
-  const allHidden = posts.every((p, i) => {
-    const match = matchesFilter(p, i);
-    return !match;
-  });
-  noResults.style.display = allHidden ? 'block' : 'none';
-
-  container.innerHTML = posts.map((p, i) => {
-    const feat = i === 0;
-    const cls = feat ? 'featured' : 'post';
-    const hidden = !matchesFilter(p, i) ? ' hidden' : '';
-    const tagHtml = (p.tags || []).map(t => `<span data-tag-i="${t}" onclick="toggleTag('${t}')">${t}</span>`).join(' \u00B7 ');
-    return `<div class="${cls}${hidden}" data-index="${i}">
-  <div class="date">${p.date}</div>
-  <div class="content">${p.content}</div>
-  ${tagHtml ? '<div class="p-tags">' + tagHtml + '</div>' : ''}
-</div>`;
-  }).join('');
-
-  // Re-bind hover on featured
-  container.querySelectorAll('.featured, .post').forEach(el => {
-    el.querySelectorAll('.p-tags span').forEach(s => {
-      s.addEventListener('click', () => toggleTag(s.dataset.tagI));
     });
   });
 }
@@ -187,12 +212,29 @@ function renderPostVisibility() {
   });
 }
 
+function renderPosts() {
+  container.innerHTML = posts.map((p, i) => {
+    const feat = i === 0;
+    const cls = feat ? 'featured' : 'post';
+    const hidden = !matchesFilter(p, i) ? ' hidden' : '';
+    const tagHtml = (p.tags || []).map(t => `<span data-tag-i="${t}">${t}</span>`).join('');
+    return `<div class="${cls}${hidden}" data-index="${i}">
+  <div class="date">${p.date}</div>
+  <div class="content">${p.content}</div>
+  ${tagHtml ? '<div class="p-tags">' + tagHtml + '</div>' : ''}
+</div>`;
+  }).join('');
+
+  container.querySelectorAll('.p-tags span').forEach(s => {
+    s.addEventListener('click', () => toggleTag(s.dataset.tagI));
+  });
+}
+
 searchInput.addEventListener('input', (e) => {
   searchTerm = e.target.value.toLowerCase().trim();
   update();
 });
 
-// Init
 renderTagBar();
 renderPosts();
 </script>
