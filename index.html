@@ -169,21 +169,19 @@
   .toggle::after { content: ''; position: absolute; top: 2px; left: 2px; width: 27px; height: 27px; background: #fff; border-radius: 50%; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
   .toggle.on::after { transform: translateX(20px); }
 
-  .supporter-card { background: var(--search-bg); border-radius: 12px; padding: 16px; margin: 8px 0 4px; border-left: 3px solid #007AFF; transition: background 0.3s; }
-  .supporter-card .label { font-size: 16px; font-weight: 600; }
-  .supporter-card .supporter-benefits { font-size: 13px; color: var(--settings-label); margin: 8px 0; line-height: 1.5; }
-  .supporter-card .supporter-benefits li { margin-bottom: 3px; }
-  .supporter-form { margin-top: 4px; }
-  .supporter-input { display: flex; gap: 8px; margin-top: 8px; }
-  .supporter-input input { flex: 1; padding: 8px 12px; border: 1px solid var(--search-border); border-radius: 8px; font-size: 13px; outline: none; background: var(--settings-bg); color: var(--text); font-family: inherit; }
+  .supporter-btn { background: #007AFF; color: #fff; border: none; padding: 6px 14px; border-radius: 8px; font-size: 13px; cursor: pointer; font-family: inherit; font-weight: 500; transition: opacity 0.15s; flex-shrink: 0; }
+  .supporter-btn:hover { opacity: 0.85; }
+  .supporter-btn:disabled { opacity: 0.5; cursor: default; }
+  .supporter-info { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--settings-border); animation: fadeIn 0.2s ease; }
+  .supporter-benefits { font-size: 13px; color: var(--settings-label); margin: 0 0 8px; line-height: 1.5; }
+  .supporter-benefits li { margin-bottom: 3px; }
+  .supporter-input { display: flex; gap: 8px; margin-bottom: 6px; }
+  .supporter-input input { flex: 1; padding: 8px 12px; border: 1px solid var(--search-border); border-radius: 8px; font-size: 13px; outline: none; background: var(--search-bg); color: var(--text); font-family: inherit; }
   .supporter-input input:focus { border-color: #007AFF; }
-  .supporter-input button { background: #007AFF; color: #fff; border: none; padding: 8px 16px; border-radius: 8px; font-size: 13px; cursor: pointer; font-family: inherit; font-weight: 500; transition: opacity 0.15s; }
-  .supporter-input button:hover { opacity: 0.85; }
-  .supporter-input button:disabled { opacity: 0.5; cursor: default; }
-  .supporter-msg { font-size: 12px; margin-top: 6px; }
+  .supporter-msg { font-size: 12px; margin-top: 4px; }
   .supporter-msg.ok { color: var(--support-success); }
   .supporter-msg.err { color: var(--support-error); }
-  .supporter-done { font-size: 13px; color: var(--support-success); padding: 8px 0; }
+  .supporter-done { font-size: 13px; color: var(--support-success); padding: 4px 0; }
 </style>
 <script data-goatcounter="https://bob.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -244,23 +242,24 @@
 
     <div class="settings-section-title">Supporter</div>
 
-    <div class="supporter-card">
-      <div class="label">Supporter werden</div>
+    <div class="settings-item">
+      <div class="label" style="font-weight: 600;">Supporter werden</div>
+      <button id="supporterBtn" class="supporter-btn">Anmelden</button>
+    </div>
+    <div class="supporter-info" id="supporterInfo" style="display:none;">
       <div class="supporter-benefits">
         <ul style="margin: 0; padding: 0 0 0 16px;">
           <li>Design dauerhaft speichern</li>
-          <li>Tägliche Blog-Posts per E-Mail</li>
+          <li>Tagliche Blog-Posts per E-Mail</li>
         </ul>
       </div>
-      <div class="supporter-form" id="supporterForm">
-        <div class="supporter-input">
-          <input type="email" id="supporterEmail" placeholder="Deine E-Mail" autocomplete="email">
-          <button id="supporterBtn">Anmelden</button>
-        </div>
-        <div class="supporter-msg" id="supporterMsg"></div>
+      <div class="supporter-input">
+        <input type="email" id="supporterEmail" placeholder="Deine E-Mail" autocomplete="email">
+        <button id="supporterSubmit" class="supporter-btn">Senden</button>
       </div>
+      <div class="supporter-msg" id="supporterMsg"></div>
       <div class="supporter-done" id="supporterDone" style="display:none;">
-        ✓ Du bist Supporter! E-Mails kommen täglich.
+        ✓ Du bist Supporter! E-Mails kommen taglich.
       </div>
     </div>
 
@@ -288,9 +287,10 @@ const darkToggle = document.getElementById('darkToggle');
 const colorToggle = document.getElementById('colorToggle');
 const tagBar = document.getElementById('tagBar');
 const noResults = document.getElementById('noResults');
-const supporterForm = document.getElementById('supporterForm');
-const supporterEmail = document.getElementById('supporterEmail');
 const supporterBtn = document.getElementById('supporterBtn');
+const supporterInfo = document.getElementById('supporterInfo');
+const supporterEmail = document.getElementById('supporterEmail');
+const supporterSubmit = document.getElementById('supporterSubmit');
 const supporterMsg = document.getElementById('supporterMsg');
 const supporterDone = document.getElementById('supporterDone');
 
@@ -319,12 +319,17 @@ applyModes();
 
 // Supporter status
 if (isSupporter && supporterEmailSaved) {
-  supporterForm.style.display = 'none';
+  supporterBtn.style.display = 'none';
   supporterDone.style.display = 'block';
 }
 
 /* ===== SUPPORTER SIGNUP ===== */
 supporterBtn.addEventListener('click', () => {
+  supporterInfo.style.display = 'block';
+  setTimeout(() => supporterEmail.focus(), 200);
+});
+
+supporterSubmit.addEventListener('click', () => {
   const email = supporterEmail.value.trim();
   if (!email || !email.includes('@')) {
     supporterMsg.textContent = 'Bitte gültige E-Mail eingeben.';
@@ -332,7 +337,7 @@ supporterBtn.addEventListener('click', () => {
     return;
   }
 
-  supporterBtn.disabled = true;
+  supporterSubmit.disabled = true;
   supporterMsg.textContent = 'Wird registriert…';
   supporterMsg.className = 'supporter-msg';
 
@@ -355,7 +360,7 @@ supporterBtn.addEventListener('click', () => {
   supporterMsg.textContent = 'Angemeldet! Du bekommst täglich die neuesten Posts.';
   supporterMsg.className = 'supporter-msg ok';
   setTimeout(() => {
-    supporterForm.style.display = 'none';
+    supporterInfo.style.display = 'none';
     supporterDone.style.display = 'block';
   }, 1500);
 });
