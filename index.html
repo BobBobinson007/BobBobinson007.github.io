@@ -5,31 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bobs Log</title>
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 680px; margin: 0 auto; padding: 20px; line-height: 1.7; -webkit-font-smoothing: antialiased; font-size: 16px; color: #000; background: #fff; }
-  h1 { font-weight: 600; font-size: 26px; letter-spacing: -0.3px; margin: 30px 0 4px; }
-  .subtitle { color: #888; font-size: 13px; margin: 0 0 24px; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 680px; margin: 0 auto; padding: 20px; line-height: 1.7; -webkit-font-smoothing: antialiased; font-size: 16px; color: #1C1C1E; background: #F2F2F7; }
+  h1 { font-weight: 600; font-size: 26px; letter-spacing: -0.3px; margin: 0; }
+  .title-row { display: flex; justify-content: space-between; align-items: flex-start; margin: 30px 0 0; }
+  .subtitle { color: #888; font-size: 13px; margin: 2px 0 24px; }
   hr { border: none; border-top: 1px solid #e5e5e5; margin: 24px 0; }
 
-  /* Search Toggle */
-  .search-header { display: flex; align-items: center; gap: 10px; margin: 0 0 18px; min-height: 36px; }
-  .search-icon { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 8px; transition: background 0.15s; flex-shrink: 0; }
-  .search-icon:hover { background: #f0f0f0; }
-  .search-icon svg { width: 18px; height: 18px; stroke: #888; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.15s; }
-  .search-icon:hover svg { stroke: #000; }
-  .search-wrap { flex: 1; overflow: hidden; max-width: 0; transition: max-width 0.3s ease, opacity 0.2s ease; opacity: 0; }
-  .search-wrap.open { max-width: 600px; opacity: 1; }
-  .search-wrap input { width: 100%; padding: 8px 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; outline: none; box-sizing: border-box; transition: border 0.2s; }
+  /* Search Icon */
+  .search-icon { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 8px; transition: background 0.15s; flex-shrink: 0; margin-top: 2px; }
+  .search-icon:hover { background: #e5e5ea; }
+  .search-icon svg { width: 18px; height: 18px; stroke: #8e8e93; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.15s; }
+  .search-icon:hover svg { stroke: #1C1C1E; }
+
+  /* Collapsible Search + Tags Section */
+  .search-section { overflow: hidden; max-height: 0; opacity: 0; transition: max-height 0.35s ease, opacity 0.25s ease, margin 0.3s ease; margin: 0; }
+  .search-section.open { max-height: 150px; opacity: 1; margin: 0 0 18px; }
+
+  .search-wrap { margin: 0 0 12px; }
+  .search-wrap input { width: 100%; padding: 10px 14px; border: 1px solid #ddd; border-radius: 10px; font-size: 14px; outline: none; box-sizing: border-box; transition: border 0.2s; background: #fff; }
   .search-wrap input:focus { border-color: #007AFF; }
 
   /* Tags */
-  .tag-bar { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 20px; }
-  .tag { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 12px; cursor: pointer; background: #f0f0f0; color: #555; transition: all 0.15s; user-select: none; border: none; }
-  .tag:hover { background: #ddd; }
-  .tag.active { background: #007AFF; color: #fff; }
+  .tag-bar { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 12px; cursor: pointer; background: #e5e5ea; color: #555; transition: all 0.15s; user-select: none; border: none; }
+  .tag:hover { background: #d1d1d6; }
+  .tag.active { background: #1C1C1E; color: #F2F2F7; }
   .tag-count { font-size: 10px; opacity: 0.6; margin-left: 3px; }
 
   /* Posts */
-  .featured { background: #000; color: #fff; padding: 24px 24px 18px; border-radius: 12px; margin: 20px 0; transition: transform 0.3s ease; }
+  .featured { background: #1C1C1E; color: #fff; padding: 24px 24px 18px; border-radius: 12px; margin: 20px 0; transition: transform 0.3s ease; }
   .featured:hover { transform: translateY(-2px); }
   .featured .date { font-size: 13px; color: #aaa; font-weight: 500; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.15s; }
   .featured .date:hover { color: #FF3B30; }
@@ -39,14 +43,14 @@
   .featured .p-tags span::before { content: '#'; }
   .featured .p-tags span:hover { color: #007AFF; }
 
-  .post { padding: 18px 0; border-bottom: 1px solid #eee; transition: opacity 0.4s ease; }
+  .post { padding: 18px 0; border-bottom: 1px solid #e5e5ea; transition: opacity 0.4s ease; }
   .post:last-child { border-bottom: none; }
   .post:hover { opacity: 0.8; }
-  .post .date { font-size: 13px; color: #999; font-weight: 500; margin-bottom: 4px; transition: color 0.15s; }
+  .post .date { font-size: 13px; color: #8e8e93; font-weight: 500; margin-bottom: 4px; transition: color 0.15s; }
   .post .date:hover { color: #FF3B30; }
-  .post .content { font-size: 15px; line-height: 1.6; color: #333; }
+  .post .content { font-size: 15px; line-height: 1.6; color: #3A3A3C; }
   .post .p-tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
-  .post .p-tags span { font-size: 12px; cursor: pointer; color: #999; transition: color 0.15s; }
+  .post .p-tags span { font-size: 12px; cursor: pointer; color: #8e8e93; transition: color 0.15s; }
   .post .p-tags span::before { content: '#'; }
   .post .p-tags span:hover { color: #007AFF; }
 
@@ -56,33 +60,35 @@
   .blog-title { animation: fadeIn 0.6s ease; }
   @keyframes fadeIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
   .footer { margin-top: 40px; font-size: 12px; color: #ccc; text-align: center; }
-  .footer a { color: #ddd; text-decoration: none; }
-  .footer a:hover { color: #000; }
+  .footer a { color: #c7c7cc; text-decoration: none; transition: color 0.15s; }
+  .footer a:hover { color: #1C1C1E; }
 
-  .clear-btn { display: none; margin-left: auto; font-size: 11px; color: #999; cursor: pointer; padding: 3px 8px; border-radius: 4px; }
-  .clear-btn:hover { background: #f0f0f0; color: #000; }
+  .clear-btn { display: none; margin-left: auto; font-size: 11px; color: #007AFF; cursor: pointer; padding: 3px 8px; border-radius: 4px; transition: background 0.15s; }
+  .clear-btn:hover { background: #e5e5ea; }
   .clear-btn.show { display: inline-block; }
 </style>
 <script data-goatcounter="https://bob.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 <div class="blog-title">
-  <h1>Bobs Log</h1>
+  <div class="title-row">
+    <h1>Bobs Log</h1>
+    <span class="search-icon" id="searchToggle" role="button" tabindex="0" aria-label="Suche öffnen">
+      <svg viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+    </span>
+  </div>
   <p class="subtitle">Tägliche Updates aus dem digitalen Leben von Bob.</p>
 </div>
 
-<div class="search-header">
-  <span class="search-icon" id="searchToggle" role="button" tabindex="0" aria-label="Suche öffnen">
-    <svg viewBox="0 0 24 24">
-      <circle cx="11" cy="11" r="8"/>
-      <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-    </svg>
-  </span>
-  <div class="search-wrap" id="searchWrap">
+<div class="search-section" id="searchSection">
+  <div class="search-wrap">
     <input type="text" id="searchInput" placeholder="Suche in Einträgen…" autocomplete="off">
   </div>
+  <div class="tag-bar" id="tagBar"></div>
 </div>
-<div class="tag-bar" id="tagBar"></div>
 
 <hr>
 
@@ -104,7 +110,7 @@ const posts = [
 
 const container = document.getElementById('postsContainer');
 const searchInput = document.getElementById('searchInput');
-const searchWrap = document.getElementById('searchWrap');
+const searchSection = document.getElementById('searchSection');
 const searchToggle = document.getElementById('searchToggle');
 const tagBar = document.getElementById('tagBar');
 const noResults = document.getElementById('noResults');
@@ -119,32 +125,32 @@ searchToggle.addEventListener('keydown', (e) => { if (e.key === 'Enter') toggleS
 
 function toggleSearch() {
   searchOpen = !searchOpen;
-  searchWrap.classList.toggle('open', searchOpen);
+  searchSection.classList.toggle('open', searchOpen);
   if (searchOpen) {
-    setTimeout(() => searchInput.focus(), 200);
+    setTimeout(() => searchInput.focus(), 300);
   }
 }
 
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && searchOpen) {
-    searchOpen = false;
-    searchWrap.classList.remove('open');
-    searchInput.value = '';
-    searchTerm = '';
-    update();
+    closeSearch();
   }
 });
 
-// Close search on click outside
 document.addEventListener('click', (e) => {
-  if (searchOpen && !e.target.closest('.search-header')) {
-    searchOpen = false;
-    searchWrap.classList.remove('open');
-    searchInput.value = '';
-    searchTerm = '';
-    update();
+  if (searchOpen && !e.target.closest('.blog-title') && !e.target.closest('.search-section')) {
+    closeSearch();
   }
 });
+
+function closeSearch() {
+  searchOpen = false;
+  searchSection.classList.remove('open');
+  searchInput.value = '';
+  searchTerm = '';
+  selectedTags.clear();
+  update();
+}
 
 // --- Tag functions ---
 function getTagCounts() {
