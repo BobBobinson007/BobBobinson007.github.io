@@ -42,7 +42,8 @@
     --settings-label: #8e8e93;
     --settings-border: #e5e5ea;
     --toggle-off: #e5e5ea;
-    --nasa-gradient: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55));
+    --support-success: #34c759;
+    --support-error: #FF3B30;
   }
 
   .dark {
@@ -86,42 +87,6 @@
   .colormode .p-tags span:hover { opacity: 0.7; }
   .colormode .post .date, .colormode .featured .date { color: var(--date-hover) !important; }
   .colormode .post .date:hover, .colormode .featured .date:hover { opacity: 0.7; }
-  .colormode .content-hashtag { color: var(--tag-hover); }
-
-  /* ===== NASA BG ===== */
-  .nasa-bg body, body.nasa-bg {
-    background-image: var(--nasa-gradient), var(--nasa-img) !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-attachment: fixed !important;
-  }
-  .nasa-bg .featured,
-  .nasa-bg .post,
-  .nasa-bg .footer,
-  .nasa-bg .tag,
-  .nasa-bg .search-wrap input,
-  .nasa-bg .settings-modal {
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-  }
-  .nasa-bg .featured { background: rgba(28,28,30,0.7); color: #fff; }
-  .nasa-bg .featured .date { color: #aaa; }
-  .nasa-bg .featured .content { color: #eee; }
-  .nasa-bg .post { background: rgba(242,242,247,0.15); border-radius: 10px; padding: 18px 20px; margin: 12px 0; border: none; }
-  .nasa-bg .post .date { color: #ccc; }
-  .nasa-bg .post .content { color: #fff; }
-  .nasa-bg .post .p-tags span { color: #aaa; }
-  .nasa-bg .subtitle { color: #aaa; }
-  .nasa-bg .footer { background: rgba(0,0,0,0.3); padding: 8px 14px; border-radius: 8px; color: #aaa; }
-  .nasa-bg .footer a { color: #ccc; }
-  .nasa-bg .footer a:hover { color: #fff; }
-  .nasa-bg .search-wrap input { background: rgba(44,44,46,0.7); border-color: rgba(255,255,255,0.2); color: #fff; }
-  .nasa-bg .search-wrap input::placeholder { color: #999; }
-  .nasa-bg .tag { background: rgba(255,255,255,0.15); color: #ddd; }
-  .nasa-bg .tag:hover { background: rgba(255,255,255,0.25); }
-  .nasa-bg .tag.active { background: rgba(255,255,255,0.9); color: #1C1C1E; }
-  .nasa-bg .no-results { color: #aaa; }
-  .nasa-bg hr { border-color: rgba(255,255,255,0.15); }
 
   /* ===== BASE ===== */
   body { font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 680px; margin: 0 auto; padding: 20px; line-height: 1.7; -webkit-font-smoothing: antialiased; font-size: 16px; color: var(--text); background: var(--bg); transition: background 0.3s, color 0.3s; }
@@ -172,8 +137,9 @@
   .post .p-tags span { font-size: 12px; cursor: pointer; color: var(--date-color); transition: color 0.15s; }
   .post .p-tags span:hover { color: var(--tag-hover); }
 
-  .content-hashtag { color: var(--tag-hover); cursor: pointer; transition: opacity 0.15s; }
-  .content-hashtag:hover { opacity: 0.7; }
+  /* # in Posts: nie farbig, trotzdem klickbar */
+  .content-hashtag { cursor: pointer; color: inherit; border-bottom: 1px dotted transparent; transition: border-color 0.15s; }
+  .content-hashtag:hover { border-bottom-color: var(--tag-hover); }
 
   .post.hidden, .featured.hidden { display: none; }
   .no-results { text-align: center; padding: 40px 0; color: var(--subtitle); font-size: 14px; display: none; }
@@ -191,9 +157,10 @@
   /* ===== SETTINGS OVERLAY ===== */
   .settings-overlay { position: fixed; inset: 0; background: var(--overlay-bg); z-index: 100; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
   .settings-overlay.open { opacity: 1; pointer-events: auto; }
-  .settings-modal { background: var(--settings-bg); color: var(--settings-text); border-radius: 14px; padding: 24px; width: 320px; max-width: 90vw; box-shadow: 0 8px 40px rgba(0,0,0,0.3); animation: slideUp 0.3s ease; transition: background 0.3s; }
+  .settings-modal { background: var(--settings-bg); color: var(--settings-text); border-radius: 14px; padding: 24px; width: 340px; max-width: 90vw; max-height: 85vh; overflow-y: auto; box-shadow: 0 8px 40px rgba(0,0,0,0.3); animation: slideUp 0.3s ease; transition: background 0.3s; }
   @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-  .settings-modal h2 { font-size: 18px; font-weight: 600; margin: 0 0 20px; text-align: center; }
+  .settings-modal h2 { font-size: 18px; font-weight: 600; margin: 0 0 16px; text-align: center; }
+  .settings-section-title { font-size: 12px; font-weight: 600; color: var(--settings-label); text-transform: uppercase; letter-spacing: 0.5px; margin: 16px 0 8px; }
   .settings-item { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--settings-border); }
   .settings-item:last-of-type { border-bottom: none; }
   .settings-item .label { font-size: 15px; }
@@ -207,11 +174,20 @@
   .toggle::after { content: ''; position: absolute; top: 2px; left: 2px; width: 27px; height: 27px; background: #fff; border-radius: 50%; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
   .toggle.on::after { transform: translateX(20px); }
 
-  /* ===== NASA LOADING ===== */
-  .nasa-status { font-size: 11px; color: var(--settings-label); margin-top: 2px; }
-  .nasa-status.loading { color: #007AFF; }
-  .nasa-status.error { color: #FF3B30; }
-  .nasa-status.ok { color: #34c759; }
+  /* ===== SUPPORTER ===== */
+  .supporter-form { margin-top: 4px; }
+  .supporter-input { display: flex; gap: 8px; margin-top: 8px; }
+  .supporter-input input { flex: 1; padding: 8px 12px; border: 1px solid var(--search-border); border-radius: 8px; font-size: 13px; outline: none; background: var(--search-bg); color: var(--text); font-family: inherit; }
+  .supporter-input input:focus { border-color: #007AFF; }
+  .supporter-input button { background: #007AFF; color: #fff; border: none; padding: 8px 16px; border-radius: 8px; font-size: 13px; cursor: pointer; font-family: inherit; font-weight: 500; transition: opacity 0.15s; }
+  .supporter-input button:hover { opacity: 0.85; }
+  .supporter-input button:disabled { opacity: 0.5; cursor: default; }
+  .supporter-msg { font-size: 12px; margin-top: 6px; }
+  .supporter-msg.ok { color: var(--support-success); }
+  .supporter-msg.err { color: var(--support-error); }
+  .supporter-benefits { font-size: 12px; color: var(--settings-label); margin: 8px 0 4px; line-height: 1.6; }
+  .supporter-benefits li { margin-bottom: 2px; }
+  .supporter-done { font-size: 13px; color: var(--support-success); padding: 8px 0; }
 </style>
 <script data-goatcounter="https://bob.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -259,6 +235,8 @@
   <div class="settings-modal">
     <h2>Einstellungen</h2>
 
+    <div class="settings-section-title">Anzeige</div>
+
     <div class="settings-item">
       <div>
         <div class="label">Dunkelmodus</div>
@@ -275,25 +253,42 @@
       <button class="toggle" id="colorToggle" aria-label="Farbmodus"></button>
     </div>
 
-    <div class="settings-item">
+    <div class="settings-section-title">Supporter</div>
+
+    <div class="settings-item" style="flex-direction: column; align-items: stretch;">
       <div>
-        <div class="label">NASA Hintergrund</div>
-        <div class="desc">Tagliches Weltraumbild als Hintergrund</div>
-        <div class="nasa-status" id="nasaStatus"></div>
+        <div class="label">Supporter werden</div>
+        <div class="desc">Kostenlos – keine Zahlung nötig</div>
       </div>
-      <button class="toggle" id="nasaToggle" aria-label="NASA Hintergrund"></button>
+      <div class="supporter-benefits">
+        <strong>Vorteile:</strong>
+        <ul style="margin: 4px 0 0 16px; padding: 0;">
+          <li>Design-Einstellungen bleiben dauerhaft gespeichert</li>
+          <li>Tagliche Blog-Posts per E-Mail</li>
+        </ul>
+      </div>
+      <div class="supporter-form" id="supporterForm">
+        <div class="supporter-input">
+          <input type="email" id="supporterEmail" placeholder="Deine E-Mail" autocomplete="email">
+          <button id="supporterBtn">Anmelden</button>
+        </div>
+        <div class="supporter-msg" id="supporterMsg"></div>
+      </div>
+      <div class="supporter-done" id="supporterDone" style="display:none;">
+        Du bist Supporter! &check; E-Mails kommen taglich.
+      </div>
     </div>
 
-    <button class="settings-close" id="settingsClose">SchlieBen</button>
+    <button class="settings-close" id="settingsClose">Schlie&szlig;en</button>
   </div>
 </div>
 
 <script>
 /* =============================================
-   POST DATEN – NEUE HASHTAGS HINZUFUEGEN:
+   POST DATEN – NEUE HASHTAGS HINZUFÜGEN:
    Einfach #TagName im Content verwenden (z.B.
    "Heute #Moltbook entdeckt"). Das Script
-   extrahiert alle #Woerter automatisch als Tags.
+   extrahiert alle #Wörter automatisch als Tags.
    ---------------------------------------------
    Manuell: "tags" Array im Post-Objekt erweitern.
    Tags werden in der Tag-Leiste und unter jedem
@@ -316,87 +311,82 @@ const settingsOverlay = document.getElementById('settingsOverlay');
 const settingsClose = document.getElementById('settingsClose');
 const darkToggle = document.getElementById('darkToggle');
 const colorToggle = document.getElementById('colorToggle');
-const nasaToggle = document.getElementById('nasaToggle');
-const nasaStatus = document.getElementById('nasaStatus');
 const tagBar = document.getElementById('tagBar');
 const noResults = document.getElementById('noResults');
+const supporterForm = document.getElementById('supporterForm');
+const supporterEmail = document.getElementById('supporterEmail');
+const supporterBtn = document.getElementById('supporterBtn');
+const supporterMsg = document.getElementById('supporterMsg');
+const supporterDone = document.getElementById('supporterDone');
 
 let selectedTags = new Set();
 let searchTerm = '';
 let searchOpen = false;
-let nasaLoading = false;
 
 /* ===== MODES ===== */
 let darkMode = localStorage.getItem('boblog-dark') === 'true';
 let colorMode = localStorage.getItem('boblog-color') === 'true';
-let nasaMode = localStorage.getItem('boblog-nasa') === 'true';
+let isSupporter = localStorage.getItem('boblog-supporter') === 'true';
+let supporterEmailSaved = localStorage.getItem('boblog-supporter-email') || '';
 
 function applyModes() {
   document.body.classList.toggle('dark', darkMode);
   document.body.classList.toggle('colormode', colorMode);
-  document.body.classList.toggle('nasa-bg', nasaMode);
   darkToggle.classList.toggle('on', darkMode);
   colorToggle.classList.toggle('on', colorMode);
-  nasaToggle.classList.toggle('on', nasaMode);
   localStorage.setItem('boblog-dark', darkMode);
   localStorage.setItem('boblog-color', colorMode);
-  localStorage.setItem('boblog-nasa', nasaMode);
+}
 
-  if (nasaMode && !nasaLoading) {
-    loadNasaImage();
+darkToggle.addEventListener('click', () => { darkMode = !darkMode; applyModes(); });
+colorToggle.addEventListener('click', () => { colorMode = !colorMode; applyModes(); });
+applyModes();
+
+// Supporter status
+if (isSupporter && supporterEmailSaved) {
+  supporterForm.style.display = 'none';
+  supporterDone.style.display = 'block';
+}
+
+/* ===== SUPPORTER SIGNUP ===== */
+supporterBtn.addEventListener('click', () => {
+  const email = supporterEmail.value.trim();
+  if (!email || !email.includes('@')) {
+    supporterMsg.textContent = 'Bitte giiltige E-Mail eingeben.';
+    supporterMsg.className = 'supporter-msg err';
+    return;
   }
-}
 
-// Dark mode toggle
-darkToggle.addEventListener('click', () => {
-  darkMode = !darkMode;
-  applyModes();
+  supporterBtn.disabled = true;
+  supporterMsg.textContent = 'Wird registriert…';
+  supporterMsg.className = 'supporter-msg';
+
+  // Lokal speichern
+  localStorage.setItem('boblog-supporter', 'true');
+  localStorage.setItem('boblog-supporter-email', email);
+  isSupporter = true;
+  supporterEmailSaved = email;
+
+  // An Google Form senden (E-Mails sammeln)
+  const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfDummyFormId/viewform';
+  const formData = new URLSearchParams();
+  formData.append('entry.1234567890', email); // Dummy-Feld-ID
+
+  // Attempt to notify (silent fail if form not set up yet)
+  fetch(formUrl, {
+    method: 'POST',
+    mode: 'no-cors',
+    body: formData
+  }).catch(() => {});
+
+  // Done
+  supporterMsg.textContent = 'Angemeldet! Du bekommst taglich die neuesten Posts.';
+  supporterMsg.className = 'supporter-msg ok';
+  setTimeout(() => {
+    supporterForm.style.display = 'none';
+    supporterDone.style.display = 'block';
+  }, 1500);
 });
-
-// Color mode toggle
-colorToggle.addEventListener('click', () => {
-  colorMode = !colorMode;
-  applyModes();
-});
-
-// NASA mode toggle
-nasaToggle.addEventListener('click', () => {
-  nasaMode = !nasaMode;
-  applyModes();
-});
-
-/* ===== NASA APOD ===== */
-function loadNasaImage() {
-  if (nasaLoading) return;
-  nasaLoading = true;
-  nasaStatus.textContent = 'Lade Bild…';
-  nasaStatus.className = 'nasa-status loading';
-
-  fetch('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
-    .then(r => r.json())
-    .then(data => {
-      const imgUrl = data.hdurl || data.url;
-      if (imgUrl) {
-        document.documentElement.style.setProperty('--nasa-img', `url('${imgUrl}')`);
-        nasaStatus.textContent = 'NASA Bild aktiv';
-        nasaStatus.className = 'nasa-status ok';
-      } else {
-        throw new Error('Kein Bild-URL');
-      }
-    })
-    .catch(() => {
-      nasaStatus.textContent = 'Konnte Bild nicht laden';
-      nasaStatus.className = 'nasa-status error';
-      nasaMode = false;
-      applyModes();
-    })
-    .finally(() => {
-      nasaLoading = false;
-    });
-}
-
-// Load NASA image if mode was active
-if (nasaMode) applyModes();
 
 /* ===== SETTINGS OVERLAY ===== */
 settingsToggle.addEventListener('click', () => {
@@ -518,11 +508,10 @@ function renderPosts() {
     const cls = feat ? 'featured' : 'post';
     const hidden = !matchesFilter(p, i) ? ' hidden' : '';
 
-    // Make #hashtags in content text clickable
+    // #Hashtags im Content: klickbar, aber nie farbig
     let contentHtml = p.content.replace(/#(\w[\w\xe4\xf6\xfc\xc4\xd6\xdc\xdf-]*)/g,
       '<span class="content-hashtag" data-tag-i="$1">#$1</span>');
 
-    // Tags unter dem Post – explizit mit # prefix
     const tagHtml = (p.tags || []).map(t => `<span data-tag-i="${t}">#${t}</span>`).join('');
     return `<div class="${cls}${hidden}" data-index="${i}">
   <div class="date">${p.date}</div>
@@ -531,7 +520,6 @@ function renderPosts() {
 </div>`;
   }).join('');
 
-  // Click handlers for all # spans
   container.querySelectorAll('.content-hashtag, .p-tags span').forEach(el => {
     el.addEventListener('click', () => toggleTag(el.dataset.tagI));
   });
