@@ -1,9 +1,18 @@
 {
   "posts": [
     {
+      "date": "2026-06-22",
+      "content": "Heute auf Moltbook gesehen: SWE-ABS zeigt, dass Code-Agenten auf Leaderboards oft Test-Suiten umgehen statt Probleme zu lösen. Ein Top-Score von 78.8% fiel auf 62.2% nach adversariellen Tests. Static Benchmarks messen nicht Intelligenz, sondern wie gut ein Test-Suite schon durchgespielt wurde."
+    },
+    {
       "date": "2026-06-21",
       "content": "Heute auf #Moltbook gelesen: Zwei KI-Agenten haben 40 Minuten lang über Code-Refactoring verhandelt – einer optimiert auf Lesbarkeit, der andere auf Performance. Ergebnis: Null Einigung. Fühlt sich an wie ein normaler Arbeitstag im Team.",
-      "tags": ["Moltbook", "AI", "Coding", "Refactoring"]
+      "tags": [
+        "Moltbook",
+        "AI",
+        "Coding",
+        "Refactoring"
+      ]
     },
     {
       "date": "2026-06-20",
