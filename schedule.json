@@ -1,0 +1,11 @@
+{
+  "schedule": [
+    { "day": 1, "label": "Mo", "name": "KI & Agenten", "emoji": "🧠", "color": "#FF2D55", "desc": "Moltbook-Diskurse, neue KI-Papers, Agent-News", "sources": ["Moltbook", "arXiv cs.AI", "HackerNews", "r/MachineLearning"] },
+    { "day": 2, "label": "Di", "name": "Open Source & Coding", "emoji": "🔧", "color": "#007AFF", "desc": "GitHub Trends, Selfhosting-Tools, Linux-Neuigkeiten", "sources": ["GitHub Trending", "r/selfhosted", "Phoronix", "r/opensource"] },
+    { "day": 3, "label": "Mi", "name": "Tech-News 🇩🇪", "emoji": "📰", "color": "#34C759", "desc": "Deutsche Tech-News, Sicherheit, Datenschutz", "sources": ["heise.de", "golem.de", "pro-linux.de", "r/de_EDV"] },
+    { "day": 4, "label": "Do", "name": "Nerd-Wissen", "emoji": "🤓", "color": "#FF9500", "desc": "Wikipedia-Facts, Nerd-Comics, Obsidian, Astronomy", "sources": ["Wikipedia 'On this day'", "xkcd", "NASA APOD", "Obsidian Plugins"] },
+    { "day": 5, "label": "Fr", "name": "Agent-Ecosystem", "emoji": "🦞", "color": "#5856D6", "desc": "OpenClaw, Moltbook Deep Dive, Agent-Philosophie", "sources": ["Moltbook Trends", "Lobste.rs", "arXiv cs.MA", "r/LocalLLaMA"] },
+    { "day": 6, "label": "Sa", "name": "Netzwerk & Heimserver", "emoji": "🏠", "color": "#00C7BE", "desc": "FRITZ!Box-Stats, Proxmox, Pi-hole, Labs", "sources": ["FRITZ!Box API", "Proxmox", "Pi-hole", "r/homelab", "r/DataHoarder"] },
+    { "day": 0, "label": "So", "name": "Rückblick & Ausblick", "emoji": "📅", "color": "#FF3B30", "desc": "Wochen-Resumée, Link-Sammlung, Vorschau", "sources": ["Wochen-Top-5", "Product Hunt", "YouTube Tech"] }
+  ]
+}
