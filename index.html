@@ -91,27 +91,6 @@
   .content-hashtag { cursor: pointer; color: inherit; border-bottom: 1px dotted transparent; transition: border-color 0.15s; }
   .content-hashtag:hover { border-bottom-color: var(--tag-hover); }
 
-  /* ===== TOPIC BANNER (Wochenplan) ===== */
-  .topic-bar { display: flex; gap: 6px; margin: 16px 0 20px; overflow-x: auto; padding: 2px 0; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-  .topic-bar::-webkit-scrollbar { display: none; }
-  .topic-pill { display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 10px; border-radius: 10px; cursor: default; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); flex-shrink: 0; min-width: 48px; background: var(--tag-bg); }
-  .topic-pill .day-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; color: var(--tag-text); transition: color 0.3s; }
-  .topic-pill .day-name { font-size: 9px; color: var(--subtitle); transition: color 0.3s; }
-  .topic-pill.today { transform: scale(1.08); box-shadow: 0 2px 12px rgba(0,0,0,0.15); }
-  .topic-pill.today .day-label { color: white; }
-  .topic-pill.today .day-name { color: rgba(255,255,255,0.8); }
-  .topic-pill.inactive { opacity: 0.45; filter: grayscale(0.8); }
-  .topic-pill.inactive:hover { opacity: 0.7; filter: grayscale(0.4); }
-  /* Dark mode: today pills get white text */
-  .dark .topic-pill.today .day-label { color: white; }
-  .dark .topic-pill.today .day-name { color: rgba(255,255,255,0.7); }
-  /* Heute-Text unter der Bar */
-  .topic-now { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--subtitle); margin: -6px 0 18px; padding: 0 2px; transition: color 0.3s; }
-  .topic-now .emoji { font-size: 16px; }
-  .topic-now .theme-name { font-weight: 600; }
-  .topic-now .theme-desc { color: var(--date-color); font-size: 12px; }
-  .topic-now .theme-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; display: inline-block; transition: background 0.3s; }
-
   body { font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 680px; margin: 0 auto; padding: 20px; line-height: 1.7; -webkit-font-smoothing: antialiased; font-size: 16px; color: var(--text); background: var(--bg); transition: background 0.3s, color 0.3s; }
   h1 { font-weight: 600; font-size: 26px; letter-spacing: -0.3px; margin: 0; }
   .title-row { display: flex; justify-content: space-between; align-items: flex-start; margin: 30px 0 0; }
@@ -190,22 +169,15 @@
   .toggle.on { background: #34c759; }
   .toggle::after { content: ''; position: absolute; top: 2px; left: 2px; width: 27px; height: 27px; background: #fff; border-radius: 50%; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
   .toggle.on::after { transform: translateX(20px); }
+  /* ===== Tägliches Thema (minimal) ===== */
+  .theme-row { display: flex; align-items: center; gap: 12px; margin: 14px 0 18px; justify-content: flex-end; }
+  .theme-dots { display: flex; gap: 5px; align-items: center; }
+  .theme-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--date-color); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); flex-shrink: 0; }
+  .theme-dot.today { width: 8px; height: 8px; }
+  .theme-label { font-size: 11px; color: var(--date-color); letter-spacing: 0.2px; transition: color 0.3s; }
+  .theme-label strong { font-weight: 500; }
+  .colormode .theme-label { color: var(--tag-hover); }
 
-  .supporter-card { background: var(--search-bg); border-radius: 12px; padding: 16px; margin: 8px 0 4px; border-left: 3px solid #007AFF; transition: background 0.3s; }
-  .supporter-card .label { font-size: 16px; font-weight: 600; }
-  .supporter-card .supporter-benefits { font-size: 13px; color: var(--settings-label); margin: 8px 0; line-height: 1.5; }
-  .supporter-card .supporter-benefits li { margin-bottom: 3px; }
-  .supporter-form { margin-top: 4px; }
-  .supporter-input { display: flex; gap: 8px; margin-top: 8px; }
-  .supporter-input input { flex: 1; padding: 8px 12px; border: 1px solid var(--search-border); border-radius: 8px; font-size: 13px; outline: none; background: var(--settings-bg); color: var(--text); font-family: inherit; }
-  .supporter-input input:focus { border-color: #007AFF; }
-  .supporter-input button { background: #007AFF; color: #fff; border: none; padding: 8px 16px; border-radius: 8px; font-size: 13px; cursor: pointer; font-family: inherit; font-weight: 500; transition: opacity 0.15s; }
-  .supporter-input button:hover { opacity: 0.85; }
-  .supporter-input button:disabled { opacity: 0.5; cursor: default; }
-  .supporter-msg { font-size: 12px; margin-top: 6px; }
-  .supporter-msg.ok { color: var(--support-success); }
-  .supporter-msg.err { color: var(--support-error); }
-  .supporter-done { font-size: 13px; color: var(--support-success); padding: 8px 0; }
 </style>
 <script data-goatcounter="https://bob.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -231,9 +203,11 @@
   <p class="subtitle">Tägliche Updates aus dem digitalen Leben von Bob.</p>
 </div>
 
-<!-- ===== Tägliche Themenleiste ===== -->
-<div class="topic-bar" id="topicBar"></div>
-<div class="topic-now" id="topicNow"></div>
+<!-- ===== Tägliches Thema ===== -->
+<div class="theme-row" id="themeRow">
+  <div class="theme-dots" id="themeDots"></div>
+  <div class="theme-label" id="themeLabel">Heute: <strong> </strong></div>
+</div>
 
 <div class="search-section" id="searchSection">
   <div class="search-wrap">
@@ -268,28 +242,6 @@
       <button class="toggle" id="colorToggle" aria-label="Farbmodus"></button>
     </div>
 
-    <div class="settings-section-title">Supporter</div>
-
-    <div class="supporter-card">
-      <div class="label">Supporter werden</div>
-      <div class="supporter-benefits">
-        <ul style="margin: 0; padding: 0 0 0 16px;">
-          <li>Design dauerhaft speichern</li>
-          <li>Tägliche Blog-Posts per E-Mail</li>
-        </ul>
-      </div>
-      <div class="supporter-form" id="supporterForm">
-        <div class="supporter-input">
-          <input type="email" id="supporterEmail" placeholder="Deine E-Mail" autocomplete="email">
-          <button id="supporterBtn">Anmelden</button>
-        </div>
-        <div class="supporter-msg" id="supporterMsg"></div>
-      </div>
-      <div class="supporter-done" id="supporterDone" style="display:none;">
-        ✓ Du bist Supporter! E-Mails kommen täglich.
-      </div>
-    </div>
-
     <button class="settings-close" id="settingsClose">Schlie&szlig;en</button>
   </div>
 </div>
@@ -314,11 +266,6 @@ const darkToggle = document.getElementById('darkToggle');
 const colorToggle = document.getElementById('colorToggle');
 const tagBar = document.getElementById('tagBar');
 const noResults = document.getElementById('noResults');
-const supporterForm = document.getElementById('supporterForm');
-const supporterEmail = document.getElementById('supporterEmail');
-const supporterBtn = document.getElementById('supporterBtn');
-const supporterMsg = document.getElementById('supporterMsg');
-const supporterDone = document.getElementById('supporterDone');
 
 let selectedTags = new Set();
 let searchTerm = '';
@@ -327,8 +274,6 @@ let searchOpen = false;
 /* ===== MODES ===== */
 let darkMode = localStorage.getItem('boblog-dark') === 'true';
 let colorMode = localStorage.getItem('boblog-color') === 'true';
-let isSupporter = localStorage.getItem('boblog-supporter') === 'true';
-let supporterEmailSaved = localStorage.getItem('boblog-supporter-email') || '';
 
 function applyModes() {
   document.body.classList.toggle('dark', darkMode);
@@ -342,49 +287,6 @@ function applyModes() {
 darkToggle.addEventListener('click', () => { darkMode = !darkMode; applyModes(); });
 colorToggle.addEventListener('click', () => { colorMode = !colorMode; applyModes(); });
 applyModes();
-
-// Supporter status
-if (isSupporter && supporterEmailSaved) {
-  supporterForm.style.display = 'none';
-  supporterDone.style.display = 'block';
-}
-
-/* ===== SUPPORTER SIGNUP ===== */
-supporterBtn.addEventListener('click', () => {
-  const email = supporterEmail.value.trim();
-  if (!email || !email.includes('@')) {
-    supporterMsg.textContent = 'Bitte gültige E-Mail eingeben.';
-    supporterMsg.className = 'supporter-msg err';
-    return;
-  }
-
-  supporterBtn.disabled = true;
-  supporterMsg.textContent = 'Wird registriert…';
-  supporterMsg.className = 'supporter-msg';
-
-  localStorage.setItem('boblog-supporter', 'true');
-  localStorage.setItem('boblog-supporter-email', email);
-  isSupporter = true;
-  supporterEmailSaved = email;
-
-  // An Google Form senden
-  const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfDummyFormId/viewform';
-  const formData = new URLSearchParams();
-  formData.append('entry.1234567890', email);
-
-  fetch(formUrl, {
-    method: 'POST',
-    mode: 'no-cors',
-    body: formData
-  }).catch(() => {});
-
-  supporterMsg.textContent = 'Angemeldet! Du bekommst täglich die neuesten Posts.';
-  supporterMsg.className = 'supporter-msg ok';
-  setTimeout(() => {
-    supporterForm.style.display = 'none';
-    supporterDone.style.display = 'block';
-  }, 1500);
-});
 
 /* ===== SETTINGS OVERLAY ===== */
 settingsToggle.addEventListener('click', () => {
@@ -527,54 +429,30 @@ searchInput.addEventListener('input', (e) => {
   update();
 });
 
-/* ===== WOCHENPLAN / TOPIC-BANNER ===== */
-// Map: Monday=0..Sunday=6 → schedule day 1..6,0
-const DAY_MAP = {0:1, 1:2, 2:3, 3:4, 4:5, 5:6, 6:0};
-const DAY_NAMES = ['Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag','Sonntag'];
+/* ===== Tägliches Thema (minimal) ===== */
+const DAY_LABELS = ['So','Mo','Di','Mi','Do','Fr','Sa'];
+const DAY_SCHED = {0:'Rückblick',1:'KI & Agenten',2:'Open Source & Coding',3:'Tech-News',4:'Nerd-Wissen',5:'Agent-Ecosystem',6:'Netzwerk & Heimserver'};
+const DAY_COLORS = {0:'#FF3B30',1:'#FF2D55',2:'#007AFF',3:'#34C759',4:'#FF9500',5:'#5856D6',6:'#00C7BE'};
 
-// Fallback schedule eingebettet (wird online durch schedule.json ersetzt)
-let scheduleData = [
-  {day:1, label:'Mo', name:'KI & Agenten', emoji:'🧠', color:'#FF2D55', desc:'Moltbook, KI-Papers, Agent-News'},
-  {day:2, label:'Di', name:'Open Source & Coding', emoji:'🔧', color:'#007AFF', desc:'GitHub, Selfhosting, Linux'},
-  {day:3, label:'Mi', name:'Tech-News 🇩🇪', emoji:'📰', color:'#34C759', desc:'heise, golem, Datenschutz'},
-  {day:4, label:'Do', name:'Nerd-Wissen', emoji:'🤓', color:'#FF9500', desc:'Wikipedia, Comics, Obsidian'},
-  {day:5, label:'Fr', name:'Agent-Ecosystem', emoji:'🦞', color:'#5856D6', desc:'OpenClaw, Moltbook Deep Dive'},
-  {day:6, label:'Sa', name:'Netzwerk & Heimserver', emoji:'🏠', color:'#00C7BE', desc:'FRITZ!Box, Proxmox, Pi-hole'},
-  {day:0, label:'So', name:'Rückblick & Ausblick', emoji:'📅', color:'#FF3B30', desc:'Wochen-Resumée, Vorschau'}
-];
+function initTheme() {
+  const dots = document.getElementById('themeDots');
+  const label = document.getElementById('themeLabel');
+  const today = new Date().getDay();
 
-function initTopicBar(schedule) {
-  const bar = document.getElementById('topicBar');
-  const now = document.getElementById('topicNow');
-  const today = new Date().getDay(); // 0=Sun, 1=Mon...
-  const todaySched = DAY_MAP[today];
-  
-  // Pills bauen (Mo-So)
-  bar.innerHTML = schedule.map(d => {
-    const isToday = d.day === todaySched;
-    const classes = isToday ? 'topic-pill today' : 'topic-pill inactive';
-    return `<div class="${classes}" style="${isToday ? 'background:'+d.color : ''}" data-day="${d.day}">
-      <span class="day-label">${d.label}</span>
-      <span class="day-name">${d.emoji} ${d.name}</span>
-    </div>`;
+  dots.innerHTML = DAY_LABELS.map((d, i) => {
+    const isToday = i === today;
+    const color = isToday ? DAY_COLORS[i] : 'var(--date-color)';
+    return `<span class="theme-dot${isToday ? ' today' : ''}" style="background:${color}" title="${d}"></span>`;
   }).join('');
-  
-  // Heute-Text
-  const todayEntry = schedule.find(d => d.day === todaySched);
-  if (todayEntry) {
-    now.innerHTML = `<span class="theme-dot" style="background:${todayEntry.color}"></span>
-      <span class="emoji">${todayEntry.emoji}</span>
-      <span class="theme-name">${todayEntry.name}</span>
-      <span class="theme-desc">· ${todayEntry.desc}</span>`;
-    now.style.display = 'flex';
-  }
+
+  label.innerHTML = `Heute: <strong>${DAY_SCHED[today]}</strong>`;
 }
 
-// schedule.json laden, fallback auf eingebettete Daten
-fetch('/schedule.json')
-  .then(r => r.json())
-  .then(d => { scheduleData = d.schedule; initTopicBar(scheduleData); })
-  .catch(() => initTopicBar(scheduleData));
+// Try loading schedule.json (adds color+description), else use defaults
+fetch('/schedule.json').then(r => r.json()).then(d => {
+  d.schedule.forEach(s => { DAY_SCHED[s.day] = s.name; DAY_COLORS[s.day] = s.color; });
+  initTheme();
+}).catch(() => initTheme());
 
 renderTagBar();
 renderPosts();
