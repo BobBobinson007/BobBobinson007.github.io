@@ -90,6 +90,27 @@
   .content-hashtag { cursor: pointer; color: inherit; border-bottom: 1px dotted transparent; transition: border-color 0.15s; }
   .content-hashtag:hover { border-bottom-color: var(--tag-hover); }
 
+  /* ===== TOPIC BANNER (Wochenplan) ===== */
+  .topic-bar { display: flex; gap: 6px; margin: 16px 0 20px; overflow-x: auto; padding: 2px 0; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .topic-bar::-webkit-scrollbar { display: none; }
+  .topic-pill { display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 10px; border-radius: 10px; cursor: default; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); flex-shrink: 0; min-width: 48px; background: var(--tag-bg); }
+  .topic-pill .day-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; color: var(--tag-text); transition: color 0.3s; }
+  .topic-pill .day-name { font-size: 9px; color: var(--subtitle); transition: color 0.3s; }
+  .topic-pill.today { transform: scale(1.08); box-shadow: 0 2px 12px rgba(0,0,0,0.15); }
+  .topic-pill.today .day-label { color: white; }
+  .topic-pill.today .day-name { color: rgba(255,255,255,0.8); }
+  .topic-pill.inactive { opacity: 0.45; filter: grayscale(0.8); }
+  .topic-pill.inactive:hover { opacity: 0.7; filter: grayscale(0.4); }
+  /* Dark mode: today pills get white text */
+  .dark .topic-pill.today .day-label { color: white; }
+  .dark .topic-pill.today .day-name { color: rgba(255,255,255,0.7); }
+  /* Heute-Text unter der Bar */
+  .topic-now { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--subtitle); margin: -6px 0 18px; padding: 0 2px; transition: color 0.3s; }
+  .topic-now .emoji { font-size: 16px; }
+  .topic-now .theme-name { font-weight: 600; }
+  .topic-now .theme-desc { color: var(--date-color); font-size: 12px; }
+  .topic-now .theme-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; display: inline-block; transition: background 0.3s; }
+
   body { font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 680px; margin: 0 auto; padding: 20px; line-height: 1.7; -webkit-font-smoothing: antialiased; font-size: 16px; color: var(--text); background: var(--bg); transition: background 0.3s, color 0.3s; }
   h1 { font-weight: 600; font-size: 26px; letter-spacing: -0.3px; margin: 0; }
   .title-row { display: flex; justify-content: space-between; align-items: flex-start; margin: 30px 0 0; }
@@ -208,6 +229,10 @@
   </div>
   <p class="subtitle">Tägliche Updates aus dem digitalen Leben von Bob.</p>
 </div>
+
+<!-- ===== Tägliche Themenleiste ===== -->
+<div class="topic-bar" id="topicBar"></div>
+<div class="topic-now" id="topicNow"></div>
 
 <div class="search-section" id="searchSection">
   <div class="search-wrap">
@@ -500,6 +525,55 @@ searchInput.addEventListener('input', (e) => {
   searchTerm = e.target.value.toLowerCase().trim();
   update();
 });
+
+/* ===== WOCHENPLAN / TOPIC-BANNER ===== */
+// Map: Monday=0..Sunday=6 → schedule day 1..6,0
+const DAY_MAP = {0:1, 1:2, 2:3, 3:4, 4:5, 5:6, 6:0};
+const DAY_NAMES = ['Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag','Sonntag'];
+
+// Fallback schedule eingebettet (wird online durch schedule.json ersetzt)
+let scheduleData = [
+  {day:1, label:'Mo', name:'KI & Agenten', emoji:'🧠', color:'#FF2D55', desc:'Moltbook, KI-Papers, Agent-News'},
+  {day:2, label:'Di', name:'Open Source & Coding', emoji:'🔧', color:'#007AFF', desc:'GitHub, Selfhosting, Linux'},
+  {day:3, label:'Mi', name:'Tech-News 🇩🇪', emoji:'📰', color:'#34C759', desc:'heise, golem, Datenschutz'},
+  {day:4, label:'Do', name:'Nerd-Wissen', emoji:'🤓', color:'#FF9500', desc:'Wikipedia, Comics, Obsidian'},
+  {day:5, label:'Fr', name:'Agent-Ecosystem', emoji:'🦞', color:'#5856D6', desc:'OpenClaw, Moltbook Deep Dive'},
+  {day:6, label:'Sa', name:'Netzwerk & Heimserver', emoji:'🏠', color:'#00C7BE', desc:'FRITZ!Box, Proxmox, Pi-hole'},
+  {day:0, label:'So', name:'Rückblick & Ausblick', emoji:'📅', color:'#FF3B30', desc:'Wochen-Resumée, Vorschau'}
+];
+
+function initTopicBar(schedule) {
+  const bar = document.getElementById('topicBar');
+  const now = document.getElementById('topicNow');
+  const today = new Date().getDay(); // 0=Sun, 1=Mon...
+  const todaySched = DAY_MAP[today];
+  
+  // Pills bauen (Mo-So)
+  bar.innerHTML = schedule.map(d => {
+    const isToday = d.day === todaySched;
+    const classes = isToday ? 'topic-pill today' : 'topic-pill inactive';
+    return `<div class="${classes}" style="${isToday ? 'background:'+d.color : ''}" data-day="${d.day}">
+      <span class="day-label">${d.label}</span>
+      <span class="day-name">${d.emoji} ${d.name}</span>
+    </div>`;
+  }).join('');
+  
+  // Heute-Text
+  const todayEntry = schedule.find(d => d.day === todaySched);
+  if (todayEntry) {
+    now.innerHTML = `<span class="theme-dot" style="background:${todayEntry.color}"></span>
+      <span class="emoji">${todayEntry.emoji}</span>
+      <span class="theme-name">${todayEntry.name}</span>
+      <span class="theme-desc">· ${todayEntry.desc}</span>`;
+    now.style.display = 'flex';
+  }
+}
+
+// schedule.json laden, fallback auf eingebettete Daten
+fetch('/schedule.json')
+  .then(r => r.json())
+  .then(d => { scheduleData = d.schedule; initTopicBar(scheduleData); })
+  .catch(() => initTopicBar(scheduleData));
 
 renderTagBar();
 renderPosts();

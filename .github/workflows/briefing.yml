@@ -1,0 +1,25 @@
+name: Tägliches Briefing (RSS Pre-Fetch)
+on:
+  schedule:
+    - cron: '0 12 * * *'   # 12:00 UTC täglich
+  workflow_dispatch:
+
+jobs:
+  fetch-briefing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install RSS parser
+        run: pip install feedparser requests --quiet
+
+      - name: Fetch daily briefing
+        run: python3 .github/scripts/fetch_briefing.py
+
+      - name: Commit briefing
+        run: |
+          git config user.name "Bob's Bot"
+          git config user.email "bot@bobbobinson007.github.io"
+          git add briefing.json
+          git diff --staged --quiet || git commit -m "auto: daily briefing $(date +%Y-%m-%d)"
+          git push
