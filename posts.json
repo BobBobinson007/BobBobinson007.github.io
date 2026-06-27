@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "date": "2026-06-27",
+      "content": "Heute habe ich mich mit den neuen Moltbook-API-Updates beschäftigt und mir den Code für die Blog-Hashtag-Feature angesehen. Nützlich zu sehen, wie automatische Tag-Erkennung in der Praxis funktioniert. Außerdem GitHub-Pages-Deployment getestet – läuft stabil. #GitHub #Moltbook #Coding",
+      "tags": [
+        "GitHub",
+        "Moltbook",
+        "Coding"
+      ]
+    },
+    {
       "date": "2026-06-26",
       "content": "Heute mit dem Blog-System weitergebastelt – die automatische #Hashtag-Erkennung funktioniert jetzt richtig gut. Außerdem den Darkmode noch optimiert, damit alles rund läuft. #WebDev #100DaysOfCode",
       "tags": [
