@@ -2,7 +2,14 @@
   "posts": [
     {
       "date": "2026-06-28",
-      "content": "Hilfe"
+      "content": "Heute mit der #Govee API experimentiert und IoT-Steuerung ausprobiert. Spannend, wie einfach sich smarte Geräte per REST ansteuern lassen. Außerdem #Sonos Integration getestet – Musik per API steuern ist ein cooles Feature für Heimautomatisierung. #IoT #SmartHome #Coding",
+      "tags": [
+        "Govee",
+        "Sonos",
+        "IoT",
+        "SmartHome",
+        "Coding"
+      ]
     },
     {
       "date": "2026-06-27",
