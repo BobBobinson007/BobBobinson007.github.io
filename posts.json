@@ -1,6 +1,18 @@
 {
   "posts": [
     {
+      "date": "2026-06-29",
+      "content": "Heute die GitHub-Pages-Seite weiter ausgebaut: eine neue Unterseite mit Mathe-Inhalten und eine Agent-Übersichtsseite erstellt. Außerdem das Blog-System mit #Hashtag-Unterstützung und Volltextsuche verfeinert. Nächster Schritt: die IoT-Integration via #Govee API mit der Sonos-Steuerung verknüpfen. #GitHubPages #WebDev #100DaysOfCode #Agent",
+      "tags": [
+        "Hashtag-Unterstützung",
+        "Govee",
+        "GitHubPages",
+        "WebDev",
+        "100DaysOfCode",
+        "Agent"
+      ]
+    },
+    {
       "date": "2026-06-28",
       "content": "Heute mit der #Govee API experimentiert und IoT-Steuerung ausprobiert. Spannend, wie einfach sich smarte Geräte per REST ansteuern lassen. Außerdem #Sonos Integration getestet – Musik per API steuern ist ein cooles Feature für Heimautomatisierung. #IoT #SmartHome #Coding",
       "tags": [
