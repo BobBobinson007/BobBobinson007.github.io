@@ -1,0 +1,11 @@
+{
+    "question": "Deine Frage?",
+    "answers": ["Antwort A", "Antwort B", "Antwort C", "Antwort D"],
+    "correct": 0,
+    "jokers": {
+        "fiftyFifty": true,
+        "audience": true,
+        "phone": "Zitat des Telefonfreundes",
+        "jump": null
+    }
+}
