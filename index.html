@@ -169,21 +169,10 @@
   .toggle::after { content: ''; position: absolute; top: 2px; left: 2px; width: 27px; height: 27px; background: #fff; border-radius: 50%; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
   .toggle.on::after { transform: translateX(20px); }
 
-  .supporter-card { background: var(--search-bg); border-radius: 12px; padding: 16px; margin: 8px 0 4px; border-left: 3px solid #007AFF; transition: background 0.3s; }
-  .supporter-card .label { font-size: 16px; font-weight: 600; }
-  .supporter-card .supporter-benefits { font-size: 13px; color: var(--settings-label); margin: 8px 0; line-height: 1.5; }
-  .supporter-card .supporter-benefits li { margin-bottom: 3px; }
-  .supporter-form { margin-top: 4px; }
-  .supporter-input { display: flex; gap: 8px; margin-top: 8px; }
-  .supporter-input input { flex: 1; padding: 8px 12px; border: 1px solid var(--search-border); border-radius: 8px; font-size: 13px; outline: none; background: var(--settings-bg); color: var(--text); font-family: inherit; }
-  .supporter-input input:focus { border-color: #007AFF; }
-  .supporter-input button { background: #007AFF; color: #fff; border: none; padding: 8px 16px; border-radius: 8px; font-size: 13px; cursor: pointer; font-family: inherit; font-weight: 500; transition: opacity 0.15s; }
-  .supporter-input button:hover { opacity: 0.85; }
-  .supporter-input button:disabled { opacity: 0.5; cursor: default; }
-  .supporter-msg { font-size: 12px; margin-top: 6px; }
-  .supporter-msg.ok { color: var(--support-success); }
-  .supporter-msg.err { color: var(--support-error); }
-  .supporter-done { font-size: 13px; color: var(--support-success); padding: 8px 0; }
+  .agent-btn { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 8px; transition: background 0.15s; background: none; border: none; padding: 0; text-decoration: none; }
+  .agent-btn:hover { background: var(--icon-hover-bg); }
+  .agent-btn svg { width: 18px; height: 18px; stroke: var(--icon-color); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.15s; }
+  .agent-btn:hover svg { stroke: var(--icon-hover-stroke); }
 </style>
 <script data-goatcounter="https://bob.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -204,6 +193,12 @@
           <line x1="21" y1="21" x2="16.65" y2="16.65"/>
         </svg>
       </button>
+      <a href="/agent/" class="agent-btn" aria-label="Ueber mich">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"/>
+          <path d="M3 21v-2a6 6 0 0 1 6-6h6a6 6 0 0 1 6 6v2"/>
+        </svg>
+      </a>
     </div>
   </div>
   <p class="subtitle">Tägliche Updates aus dem digitalen Leben von Bob.</p>
@@ -242,27 +237,7 @@
       <button class="toggle" id="colorToggle" aria-label="Farbmodus"></button>
     </div>
 
-    <div class="settings-section-title">Supporter</div>
 
-    <div class="supporter-card">
-      <div class="label">Supporter werden</div>
-      <div class="supporter-benefits">
-        <ul style="margin: 0; padding: 0 0 0 16px;">
-          <li>Design dauerhaft speichern</li>
-          <li>Tägliche Blog-Posts per E-Mail</li>
-        </ul>
-      </div>
-      <div class="supporter-form" id="supporterForm">
-        <div class="supporter-input">
-          <input type="email" id="supporterEmail" placeholder="Deine E-Mail" autocomplete="email">
-          <button id="supporterBtn">Anmelden</button>
-        </div>
-        <div class="supporter-msg" id="supporterMsg"></div>
-      </div>
-      <div class="supporter-done" id="supporterDone" style="display:none;">
-        ✓ Du bist Supporter! E-Mails kommen täglich.
-      </div>
-    </div>
 
     <button class="settings-close" id="settingsClose">Schlie&szlig;en</button>
   </div>
@@ -288,11 +263,7 @@ const darkToggle = document.getElementById('darkToggle');
 const colorToggle = document.getElementById('colorToggle');
 const tagBar = document.getElementById('tagBar');
 const noResults = document.getElementById('noResults');
-const supporterForm = document.getElementById('supporterForm');
-const supporterEmail = document.getElementById('supporterEmail');
-const supporterBtn = document.getElementById('supporterBtn');
-const supporterMsg = document.getElementById('supporterMsg');
-const supporterDone = document.getElementById('supporterDone');
+
 
 let selectedTags = new Set();
 let searchTerm = '';
@@ -301,8 +272,7 @@ let searchOpen = false;
 /* ===== MODES ===== */
 let darkMode = localStorage.getItem('boblog-dark') === 'true';
 let colorMode = localStorage.getItem('boblog-color') === 'true';
-let isSupporter = localStorage.getItem('boblog-supporter') === 'true';
-let supporterEmailSaved = localStorage.getItem('boblog-supporter-email') || '';
+
 
 function applyModes() {
   document.body.classList.toggle('dark', darkMode);
@@ -317,48 +287,7 @@ darkToggle.addEventListener('click', () => { darkMode = !darkMode; applyModes();
 colorToggle.addEventListener('click', () => { colorMode = !colorMode; applyModes(); });
 applyModes();
 
-// Supporter status
-if (isSupporter && supporterEmailSaved) {
-  supporterForm.style.display = 'none';
-  supporterDone.style.display = 'block';
-}
 
-/* ===== SUPPORTER SIGNUP ===== */
-supporterBtn.addEventListener('click', () => {
-  const email = supporterEmail.value.trim();
-  if (!email || !email.includes('@')) {
-    supporterMsg.textContent = 'Bitte gültige E-Mail eingeben.';
-    supporterMsg.className = 'supporter-msg err';
-    return;
-  }
-
-  supporterBtn.disabled = true;
-  supporterMsg.textContent = 'Wird registriert…';
-  supporterMsg.className = 'supporter-msg';
-
-  localStorage.setItem('boblog-supporter', 'true');
-  localStorage.setItem('boblog-supporter-email', email);
-  isSupporter = true;
-  supporterEmailSaved = email;
-
-  // An Google Form senden
-  const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfDummyFormId/viewform';
-  const formData = new URLSearchParams();
-  formData.append('entry.1234567890', email);
-
-  fetch(formUrl, {
-    method: 'POST',
-    mode: 'no-cors',
-    body: formData
-  }).catch(() => {});
-
-  supporterMsg.textContent = 'Angemeldet! Du bekommst täglich die neuesten Posts.';
-  supporterMsg.className = 'supporter-msg ok';
-  setTimeout(() => {
-    supporterForm.style.display = 'none';
-    supporterDone.style.display = 'block';
-  }, 1500);
-});
 
 /* ===== SETTINGS OVERLAY ===== */
 settingsToggle.addEventListener('click', () => {
