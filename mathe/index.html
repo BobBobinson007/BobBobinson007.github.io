@@ -1,6 +1,3 @@
-Hier ist deine komplette "Wer wird Millionär?"-Website mit allem, was du brauchst – skalierbar über JSON, mit Soundeffekten, Hintergrundmusik, Jokersystem und authentischem Design.
-
-```html
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -1254,47 +1251,3 @@ Hier ist deine komplette "Wer wird Millionär?"-Website mit allem, was du brauch
     </script>
 </body>
 </html>
-```
-
----
-
-## Kurze Erklärung
-
-**Struktur:** Alles in einer einzigen HTML-Datei – CSS im `<style>`, JavaScript im `<script>`, keine externen Abhängigkeiten außer Tailwind CSS, Google Fonts und Font Awesome via CDN.
-
-**Skalierbarkeit:** Die Fragen liegen im Array `questionsData` am Anfang des Scripts. Jedes Frage-Objekt hat diesen Aufbau:
-
-```json
-{
-    "question": "Deine Frage?",
-    "answers": ["Antwort A", "Antwort B", "Antwort C", "Antwort D"],
-    "correct": 0,
-    "jokers": {
-        "fiftyFifty": true,
-        "audience": true,
-        "phone": "Zitat des Telefonfreundes",
-        "jump": null
-    }
-}
-```
-
-- `correct`: Index der richtigen Antwort (0–3)
-- Jeder Joker-Wert: `true` = verfügbar, `null` = nicht verfügbar, Text = verfügbar mit Inhalt
-- `jump`: `true` = überspringen möglich, `null` = nicht möglich
-
-Einfach weitere Objekte ins Array pushen – das Spiel skaliert automatisch. Die Geldleiter hat 15 Stufen voreingestellt, kann aber ebenfalls beliebig erweitert werden.
-
-**Audio:**
-- Hintergrundmusik: Lädt `/medien/musik.mp3` – Datei einfach ins entsprechende Verzeichnis auf GitHub Pages legen
-- Soundeffekte: Werden über Web Audio API synthetisch erzeugt (keine zusätzlichen Dateien nötig) – richtiger Alarm, falscher Bass, Joker-Klang, Ticken
-- Musik wird bei Joker-Nutzung leiser gedimmt und danach wieder hochgefahren
-
-**Joker-System:**
-- **50:50**: Entfernt zwei falsche Antworten per Zufall
-- **Publikum**: Zeigt animiertes Balkendiagramm (richtige Antwort bekommt 55–79%)
-- **Telefon**: Zeigt das Zitat aus der JSON mit simuliertem Klingeln
-- **Jump**: Überspringt die aktuelle Frage ohne Geldverlust
-
-**Visuelle Effekte:** Sternenhimmel auf Canvas mit Twinkling, zentraler Lichtkegel mit Puls-Animation, schwebende Goldstaub-Partikel, roter Blitz-Overlay bei falscher Antwort, grünes Puls bei richtiger Antwort, Antwort-Buttons mit Hover-Glow und Shake-Animation.
-
-**Tastatursteuerung:** Tasten 1–4 oder A–D zum Antworten.
