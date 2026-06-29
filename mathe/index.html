@@ -1,1253 +1,690 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wer wird Millionär?</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        display: ['Cinzel', 'serif'],
-                        body: ['"Source Sans 3"', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        :root {
-            --bg: #030810;
-            --bg-mid: #0a1428;
-            --gold: #d4a843;
-            --gold-bright: #ffd700;
-            --gold-dim: #8a6d2b;
-            --cyan: #00b4d8;
-            --cyan-dim: #006d84;
-            --correct: #00e676;
-            --wrong: #ff1744;
-            --text: #e8e8e8;
-            --muted: #5a6a80;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wer wird Millionär?</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+:root{
+  --bg0:#03061a;
+  --bg1:#07102e;
+  --bg2:#0d1a48;
+  --glow:#1a40cc;
+  --gold:#d4a017;
+  --gold2:#f5c842;
+  --gold3:#7a5600;
+  --rim:#2a4aaa;
+  --silver:#8aa0c8;
+  --txt:#ccdcff;
+  --white:#ffffff;
+  --hex-w:100%;
+}
 
-        body {
-            font-family: 'Source Sans 3', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
+html,body{
+  width:100%;min-height:100vh;
+  background:var(--bg0);
+  color:var(--txt);
+  font-family:'Barlow Condensed',sans-serif;
+  overflow-x:hidden;
+}
 
-        /* ===== Sternenhimmel ===== */
-        #stars-canvas {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            pointer-events: none;
-        }
+/* ── spotlight ── */
+body::before{
+  content:'';
+  position:fixed;inset:0;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 42%,#112488 0%,transparent 65%),
+    radial-gradient(ellipse 35% 25% at 50% 15%,#0d1e6633 0%,transparent 55%);
+  pointer-events:none;z-index:0;
+}
 
-        /* ===== Lichtkegel ===== */
-        .light-cone {
-            position: fixed;
-            top: -20%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 600px;
-            height: 140%;
-            background: radial-gradient(ellipse at top, rgba(0,180,216,0.07) 0%, rgba(0,180,216,0.02) 40%, transparent 70%);
-            z-index: 1;
-            pointer-events: none;
-            animation: cone-pulse 6s ease-in-out infinite;
-        }
-        @keyframes cone-pulse {
-            0%, 100% { opacity: 0.7; }
-            50% { opacity: 1; }
-        }
+/* ── star field ── */
+#stars{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.s{position:absolute;background:#fff;border-radius:50%;animation:tw var(--d) var(--dl) infinite}
+@keyframes tw{0%,100%{opacity:0}50%{opacity:var(--o)}}
 
-        /* ===== Partikel ===== */
-        .dust-particle {
-            position: fixed;
-            border-radius: 50%;
-            background: rgba(212,168,67,0.3);
-            pointer-events: none;
-            z-index: 2;
-            animation: dust-float linear infinite;
-        }
-        @keyframes dust-float {
-            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
-        }
+/* ── layout ── */
+#app{
+  position:relative;z-index:1;
+  width:100%;max-width:1080px;
+  margin:0 auto;
+  padding:28px 20px 40px;
+  display:flex;flex-direction:column;align-items:center;gap:28px;
+}
 
-        /* ===== Bildschirme ===== */
-        .screen {
-            position: fixed;
-            inset: 0;
-            z-index: 10;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        .screen.hidden {
-            opacity: 0;
-            pointer-events: none;
-            transform: scale(0.95);
-        }
+/* ── show title ── */
+.title-wrap{text-align:center}
+.title-main{
+  font-family:'Cinzel',serif;
+  font-size:clamp(26px,5vw,52px);
+  font-weight:900;
+  letter-spacing:.08em;
+  background:linear-gradient(180deg,var(--gold2) 0%,var(--gold) 55%,var(--gold3) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  line-height:1;
+  filter:drop-shadow(0 0 24px #c8960c88);
+}
+.title-sub{
+  font-family:'Cinzel',serif;
+  font-size:clamp(9px,1.4vw,13px);
+  letter-spacing:.32em;
+  color:var(--silver);
+  text-transform:uppercase;
+  margin-top:6px;
+}
 
-        /* ===== Startbildschirm ===== */
-        #start-screen .logo-text {
-            font-family: 'Cinzel', serif;
-            font-weight: 900;
-            font-size: clamp(2rem, 6vw, 4.5rem);
-            background: linear-gradient(180deg, #ffd700 0%, #d4a843 40%, #8a6d2b 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            filter: drop-shadow(0 4px 20px rgba(212,168,67,0.4));
-            line-height: 1.2;
-            text-align: center;
-        }
-        .logo-diamond {
-            width: 60px;
-            height: 60px;
-            border: 3px solid var(--gold);
-            transform: rotate(45deg);
-            margin: 0 auto 1.5rem;
-            position: relative;
-            animation: diamond-glow 3s ease-in-out infinite;
-        }
-        .logo-diamond::after {
-            content: '';
-            position: absolute;
-            inset: 8px;
-            border: 1px solid var(--gold-dim);
-        }
-        @keyframes diamond-glow {
-            0%, 100% { box-shadow: 0 0 15px rgba(212,168,67,0.3); }
-            50% { box-shadow: 0 0 35px rgba(212,168,67,0.6); }
-        }
+/* ── game row ── */
+.game-row{
+  display:grid;
+  grid-template-columns:150px 1fr;
+  gap:22px;
+  width:100%;
+  align-items:start;
+}
 
-        .start-btn {
-            font-family: 'Cinzel', serif;
-            font-weight: 700;
-            font-size: 1.25rem;
-            padding: 1rem 3rem;
-            background: linear-gradient(180deg, #d4a843, #8a6d2b);
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            transition: all 0.3s;
-            box-shadow: 0 4px 20px rgba(212,168,67,0.3);
-        }
-        .start-btn:hover {
-            background: linear-gradient(180deg, #ffd700, #d4a843);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 30px rgba(212,168,67,0.5);
-        }
+/* ── ladder ── */
+.ladder{
+  display:flex;flex-direction:column-reverse;gap:3px;
+  padding-top:2px;
+}
+.rung{
+  display:flex;align-items:center;justify-content:flex-end;
+  gap:6px;
+  padding:4px 8px 4px 10px;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:12px;font-weight:600;
+  letter-spacing:.04em;
+  color:#3a5580;
+  border-right:2px solid transparent;
+  transition:all .25s;
+  position:relative;
+  cursor:default;
+  user-select:none;
+}
+.rung.safe{color:#6a4400;border-right-color:#7a5600}
+.rung.cur{
+  color:var(--gold2);
+  border-right-color:var(--gold);
+  background:linear-gradient(90deg,transparent,rgba(20,60,160,.4));
+  text-shadow:0 0 12px #f5c84266;
+}
+.rung.cur::before{
+  content:'';
+  position:absolute;right:-6px;top:50%;transform:translateY(-50%);
+  width:0;height:0;
+  border-top:5px solid transparent;border-bottom:5px solid transparent;
+  border-right:6px solid var(--gold);
+}
+.rung.done{color:#22334a}
 
-        /* ===== Spielbildschirm ===== */
-        #game-screen {
-            flex-direction: column;
-            padding: 1rem;
-            gap: 0;
-        }
+/* ── center panel ── */
+.cpanel{display:flex;flex-direction:column;gap:16px}
 
-        /* Joker-Leiste */
-        .joker-bar {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            z-index: 20;
-        }
-        .joker-btn {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            border: 2px solid var(--gold);
-            background: rgba(212,168,67,0.1);
-            color: var(--gold);
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        .joker-btn:hover:not(.used) {
-            background: rgba(212,168,67,0.25);
-            box-shadow: 0 0 20px rgba(212,168,67,0.3);
-            transform: scale(1.1);
-        }
-        .joker-btn.used {
-            border-color: var(--muted);
-            color: var(--muted);
-            opacity: 0.4;
-            cursor: default;
-            background: transparent;
-        }
-        .joker-btn.unavailable {
-            border-color: #333;
-            color: #333;
-            opacity: 0.3;
-            cursor: default;
-            background: transparent;
-        }
+/* ── joker bar ── */
+.joker-bar{
+  display:flex;gap:10px;
+  padding:12px 16px;
+  background:rgba(7,16,46,.7);
+  border:1px solid var(--rim);
+  border-radius:4px;
+  align-items:center;
+}
+.joker-lbl{
+  font-size:11px;font-weight:700;
+  letter-spacing:.18em;
+  color:var(--silver);
+  text-transform:uppercase;
+  flex:0 0 auto;
+  margin-right:4px;
+}
+.jbtn{
+  flex:1;
+  padding:8px 6px;
+  background:linear-gradient(160deg,#0d1b5e,#060c2a);
+  border:1px solid var(--rim);
+  border-radius:3px;
+  color:var(--txt);
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:13px;font-weight:700;
+  letter-spacing:.08em;
+  cursor:pointer;
+  transition:all .18s;
+  text-transform:uppercase;
+}
+.jbtn:hover:not(.jused):not(.junavail){
+  border-color:var(--gold);
+  color:var(--gold2);
+  background:linear-gradient(160deg,#1a3060,#0d1830);
+  box-shadow:0 0 14px #d4a01744;
+}
+.jbtn.jused{opacity:.2;cursor:not-allowed;pointer-events:none}
+.jbtn.junavail{opacity:.12;cursor:not-allowed;pointer-events:none}
 
-        /* Frage-Karte */
-        .question-card {
-            background: linear-gradient(180deg, rgba(10,20,40,0.95), rgba(5,12,25,0.98));
-            border: 1px solid rgba(0,180,216,0.15);
-            border-radius: 16px;
-            padding: 2rem 2.5rem;
-            max-width: 800px;
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 0 60px rgba(0,180,216,0.08), inset 0 1px 0 rgba(255,255,255,0.05);
-        }
-        .question-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--cyan), transparent);
-        }
+/* ── hex question box ── */
+/* Real parallelogram look via clip-path */
+.qwrap{position:relative;padding:3px}
+.qwrap::before{
+  content:'';position:absolute;inset:0;
+  clip-path:polygon(20px 0%,calc(100% - 20px) 0%,100% 50%,calc(100% - 20px) 100%,20px 100%,0% 50%);
+  background:linear-gradient(135deg,var(--gold3),var(--gold),var(--gold3));
+  opacity:.85;
+}
+.qinner{
+  position:relative;
+  clip-path:polygon(20px 0%,calc(100% - 20px) 0%,100% 50%,calc(100% - 20px) 100%,20px 100%,0% 50%);
+  background:linear-gradient(135deg,#08133a,#0d1b5e 45%,#08133a);
+  padding:24px 52px;
+  text-align:center;
+}
+.qtxt{
+  font-family:'Cinzel',serif;
+  font-size:clamp(13px,2vw,18px);
+  font-weight:500;
+  color:var(--white);
+  line-height:1.55;
+  text-shadow:0 0 28px rgba(100,150,255,.35);
+}
 
-        .question-label {
-            font-family: 'Cinzel', serif;
-            font-size: 0.75rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--cyan);
-            margin-bottom: 0.75rem;
-        }
-        .question-text {
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-            font-weight: 400;
-            line-height: 1.5;
-            color: #fff;
-            min-height: 3rem;
-        }
+/* ── answer grid ── */
+.agrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.abtn{
+  position:relative;
+  padding:13px 18px 13px 44px;
+  background:linear-gradient(135deg,#091240,#0d1b5e);
+  border:none;cursor:pointer;
+  color:var(--txt);
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:clamp(13px,1.8vw,16px);
+  font-weight:600;
+  letter-spacing:.04em;
+  text-align:left;
+  /* parallelogram clip */
+  clip-path:polygon(12px 0%,calc(100% - 12px) 0%,100% 50%,calc(100% - 12px) 100%,12px 100%,0% 50%);
+  outline:none;
+  transition:background .13s,color .13s,transform .08s;
+  overflow:visible;
+}
 
-        /* Antwort-Optionen */
-        .answers-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.75rem;
-            margin-top: 1.5rem;
-        }
-        .answer-btn {
-            position: relative;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1rem 1.25rem;
-            background: rgba(0,180,216,0.05);
-            border: 1px solid rgba(0,180,216,0.2);
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-align: left;
-            color: var(--text);
-            font-size: 1rem;
-            font-family: 'Source Sans 3', sans-serif;
-        }
-        .answer-btn:hover:not(.disabled) {
-            background: rgba(0,180,216,0.12);
-            border-color: rgba(0,180,216,0.5);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 15px rgba(0,180,216,0.15);
-        }
-        .answer-btn .letter {
-            width: 32px;
-            height: 32px;
-            border-radius: 6px;
-            background: rgba(0,180,216,0.15);
-            border: 1px solid rgba(0,180,216,0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Cinzel', serif;
-            font-weight: 700;
-            font-size: 0.85rem;
-            color: var(--cyan);
-            flex-shrink: 0;
-            transition: all 0.3s;
-        }
-        .answer-btn:hover:not(.disabled) .letter {
-            background: rgba(0,180,216,0.3);
-        }
-        .answer-btn.correct {
-            background: rgba(0,230,118,0.15);
-            border-color: var(--correct);
-            animation: correct-pulse 0.5s ease;
-        }
-        .answer-btn.correct .letter {
-            background: var(--correct);
-            color: #000;
-            border-color: var(--correct);
-        }
-        .answer-btn.wrong {
-            background: rgba(255,23,68,0.15);
-            border-color: var(--wrong);
-            animation: wrong-shake 0.5s ease;
-        }
-        .answer-btn.wrong .letter {
-            background: var(--wrong);
-            color: #fff;
-            border-color: var(--wrong);
-        }
-        .answer-btn.highlight-correct {
-            background: rgba(0,230,118,0.1);
-            border-color: rgba(0,230,118,0.5);
-        }
-        .answer-btn.highlight-correct .letter {
-            background: rgba(0,230,118,0.3);
-            border-color: rgba(0,230,118,0.5);
-        }
-        .answer-btn.disabled {
-            cursor: default;
-            opacity: 0.35;
-        }
-        .answer-btn.removed {
-            display: none;
-        }
+/* outer gold rim via wrapper div */
+.awrap{
+  clip-path:polygon(12px 0%,calc(100% - 12px) 0%,100% 50%,calc(100% - 12px) 100%,12px 100%,0% 50%);
+  background:linear-gradient(135deg,#1a2860,#2a3880);
+  padding:1.5px;
+  transition:background .13s;
+}
+.awrap:has(.abtn:hover:not(:disabled)) {
+  background:linear-gradient(135deg,var(--gold3),var(--gold));
+}
+.abtn:hover:not(:disabled){
+  background:linear-gradient(135deg,#0e2244,#183060);
+  color:var(--gold2);
+  transform:scale(1.01);
+}
+.abtn:active:not(:disabled){transform:scale(.98)}
+.abtn:disabled{cursor:default}
 
-        @keyframes correct-pulse {
-            0% { transform: scale(1); }
-            30% { transform: scale(1.03); }
-            100% { transform: scale(1); }
-        }
-        @keyframes wrong-shake {
-            0%, 100% { transform: translateX(0); }
-            20% { transform: translateX(-8px); }
-            40% { transform: translateX(8px); }
-            60% { transform: translateX(-5px); }
-            80% { transform: translateX(5px); }
-        }
+.aletter{
+  font-family:'Cinzel',serif;
+  font-size:.85em;font-weight:700;
+  color:var(--gold);
+  margin-right:7px;
+  transition:color .13s;
+}
 
-        /* Geldleiter */
-        .money-ladder {
-            position: fixed;
-            right: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 15;
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
-        }
-        .money-step {
-            padding: 0.25rem 0.75rem;
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 0.75rem;
-            font-weight: 600;
-            border-radius: 4px;
-            text-align: right;
-            white-space: nowrap;
-            transition: all 0.3s;
-            color: var(--muted);
-            background: transparent;
-        }
-        .money-step.active {
-            color: var(--cyan);
-            background: rgba(0,180,216,0.1);
-            box-shadow: 0 0 10px rgba(0,180,216,0.15);
-        }
-        .money-step.reached {
-            color: var(--gold);
-        }
-        .money-step.safety {
-            color: var(--gold-bright);
-            font-weight: 700;
-        }
+.abtn.sel{
+  background:linear-gradient(135deg,#4a2e00,#7a5000) !important;
+  color:var(--gold2) !important;
+  animation:flsel .55s ease-in-out 2;
+}
+.awrap:has(.abtn.sel){background:linear-gradient(135deg,var(--gold3),var(--gold)) !important}
+@keyframes flsel{0%,100%{background:linear-gradient(135deg,#4a2e00,#7a5000)}50%{background:linear-gradient(135deg,#2a1800,#4a3000)}}
 
-        /* Falsch-Overlay */
-        .wrong-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(255,0,0,0.15);
-            z-index: 50;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.15s;
-        }
-        .wrong-overlay.flash {
-            opacity: 1;
-            animation: red-flash 0.8s ease-out forwards;
-        }
-        @keyframes red-flash {
-            0% { opacity: 1; }
-            100% { opacity: 0; }
-        }
+.abtn.ok{background:linear-gradient(135deg,#0d3a1a,#1a6630) !important;color:#aaffbb !important;animation:flok .38s ease 3}
+.awrap:has(.abtn.ok){background:linear-gradient(135deg,#1a6630,#2aaa44) !important}
+@keyframes flok{0%,100%{background:linear-gradient(135deg,#0d3a1a,#1a6630)}50%{background:linear-gradient(135deg,#1a6630,#2aaa44)}}
 
-        /* ===== Ergebnisbildschirm ===== */
-        #result-screen .result-card {
-            background: linear-gradient(180deg, rgba(10,20,40,0.97), rgba(5,12,25,0.99));
-            border: 1px solid rgba(212,168,67,0.2);
-            border-radius: 20px;
-            padding: 3rem;
-            max-width: 500px;
-            width: 90%;
-            text-align: center;
-            box-shadow: 0 0 80px rgba(212,168,67,0.1);
-        }
-        .result-amount {
-            font-family: 'Cinzel', serif;
-            font-weight: 900;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            background: linear-gradient(180deg, #ffd700, #d4a843);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin: 1rem 0;
-        }
-        .result-label {
-            font-size: 0.85rem;
-            color: var(--muted);
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-        }
+.abtn.nope{background:linear-gradient(135deg,#3a0a0a,#6a1818) !important;color:#ffaaaa !important}
+.awrap:has(.abtn.nope){background:linear-gradient(135deg,#8a2020,#bb3030) !important}
 
-        /* ===== Anfrage-Overlay ===== */
-        .ask-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(3,8,16,0.92);
-            z-index: 60;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.4s;
-        }
-        .ask-overlay.active {
-            opacity: 1;
-            pointer-events: all;
-        }
-        .ask-card {
-            background: linear-gradient(180deg, #0d1a30, #060e1c);
-            border: 1px solid rgba(0,180,216,0.25);
-            border-radius: 16px;
-            padding: 2.5rem;
-            max-width: 480px;
-            width: 90%;
-            text-align: center;
-            box-shadow: 0 0 60px rgba(0,180,216,0.1);
-        }
-        .ask-btn {
-            padding: 0.6rem 1.5rem;
-            border-radius: 8px;
-            border: 1px solid var(--gold-dim);
-            background: rgba(212,168,67,0.1);
-            color: var(--gold);
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .ask-btn:hover {
-            background: rgba(212,168,67,0.25);
-            border-color: var(--gold);
-        }
+.abtn.gone{opacity:.12;pointer-events:none}
 
-        /* ===== Toast ===== */
-        .toast {
-            position: fixed;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%) translateY(100px);
-            background: rgba(10,20,40,0.95);
-            border: 1px solid rgba(212,168,67,0.3);
-            color: var(--gold);
-            padding: 0.75rem 1.5rem;
-            border-radius: 10px;
-            font-size: 0.9rem;
-            z-index: 100;
-            transition: transform 0.4s ease;
-            pointer-events: none;
-        }
-        .toast.show {
-            transform: translateX(-50%) translateY(0);
-        }
+/* ── confirm strip ── */
+.confirm-strip{
+  height:18px;
+  text-align:center;
+  font-size:13px;font-weight:600;
+  letter-spacing:.1em;
+  color:var(--silver);
+  text-transform:uppercase;
+  transition:opacity .2s;
+}
 
-        /* ===== Ladebalken ===== */
-        .ask-timer-bar {
-            height: 4px;
-            background: var(--cyan);
-            border-radius: 2px;
-            margin-top: 1rem;
-            transition: width 0.1s linear;
-        }
+/* ── action row ── */
+.arow{display:flex;justify-content:center}
+.abig{
+  padding:11px 36px;
+  font-family:'Cinzel',serif;
+  font-size:14px;font-weight:700;
+  letter-spacing:.12em;
+  border:1px solid var(--gold);
+  background:linear-gradient(135deg,#0d1b5e,#1a3aad);
+  color:var(--gold2);
+  cursor:pointer;
+  border-radius:3px;
+  transition:all .18s;
+  box-shadow:0 0 18px #1a3aad33;
+  text-transform:uppercase;
+}
+.abig:hover{
+  background:linear-gradient(135deg,var(--gold3),var(--gold));
+  color:var(--bg0);
+  box-shadow:0 0 32px var(--gold);
+}
 
-        /* ===== Responsive ===== */
-        @media (max-width: 768px) {
-            .money-ladder { display: none; }
-            .question-card { padding: 1.25rem; }
-            .answers-grid { grid-template-columns: 1fr; }
-            .joker-btn { width: 48px; height: 48px; font-size: 0.95rem; }
-        }
+/* ── current prize ── */
+.prizeline{
+  text-align:center;
+  font-family:'Cinzel',serif;
+  font-size:12px;letter-spacing:.18em;
+  color:var(--silver);
+  text-transform:uppercase;
+}
+.prizeline strong{
+  color:var(--gold2);
+  font-size:17px;font-weight:700;
+}
 
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-    </style>
+/* ── modal ── */
+.moverlay{
+  position:fixed;inset:0;
+  background:rgba(0,0,0,.72);
+  z-index:200;
+  display:flex;align-items:center;justify-content:center;
+  backdrop-filter:blur(5px);
+  opacity:0;pointer-events:none;transition:opacity .25s;
+}
+.moverlay.open{opacity:1;pointer-events:all}
+.mbox{
+  background:linear-gradient(135deg,#060c2a,#0d1b5e);
+  border:1px solid var(--gold);
+  border-radius:4px;
+  padding:32px 36px;
+  max-width:460px;width:90%;
+  box-shadow:0 0 80px #c8960c33,0 0 140px #1a3aad22;
+}
+.mtitle{
+  font-family:'Cinzel',serif;
+  font-size:18px;font-weight:700;
+  color:var(--gold2);
+  margin-bottom:18px;
+  text-align:center;
+  letter-spacing:.08em;
+}
+.mbody{color:var(--txt);line-height:1.6;font-size:15px}
+.mclose{
+  display:block;width:100%;margin-top:22px;
+  padding:10px;
+  background:linear-gradient(135deg,var(--gold3),var(--gold));
+  border:none;border-radius:3px;
+  color:var(--bg0);
+  font-family:'Cinzel',serif;font-weight:700;font-size:13px;
+  letter-spacing:.1em;text-transform:uppercase;cursor:pointer;
+}
+
+/* ── audience chart ── */
+.abars{
+  display:flex;align-items:flex-end;gap:14px;
+  height:110px;justify-content:center;
+  margin-top:14px;
+}
+.bwrap{display:flex;flex-direction:column;align-items:center;gap:5px}
+.bfill{
+  width:36px;
+  background:linear-gradient(180deg,var(--gold2),var(--gold3));
+  border-radius:2px 2px 0 0;
+  transition:height .75s cubic-bezier(.22,1,.36,1);
+}
+.blbl{font-size:12px;font-weight:700;color:var(--gold);font-family:'Cinzel',serif}
+.bpct{font-size:11px;color:var(--silver)}
+
+/* ── end screen ── */
+.endscreen{
+  display:none;
+  flex-direction:column;align-items:center;
+  padding:48px 20px;gap:18px;
+  text-align:center;
+}
+.endscreen.show{display:flex}
+.endtitle{
+  font-family:'Cinzel',serif;
+  font-size:clamp(15px,2.5vw,22px);
+  color:var(--silver);letter-spacing:.1em;
+}
+.endprize{
+  font-family:'Cinzel',serif;
+  font-size:clamp(40px,7vw,80px);
+  font-weight:900;
+  background:linear-gradient(180deg,var(--gold2),var(--gold));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  filter:drop-shadow(0 0 36px var(--gold));
+  animation:gp 2s ease-in-out infinite alternate;
+}
+@keyframes gp{from{filter:drop-shadow(0 0 18px #c8960c88)}to{filter:drop-shadow(0 0 56px var(--gold2))}}
+.endsub{font-family:'Cinzel',serif;font-size:clamp(14px,2vw,20px);color:var(--silver);letter-spacing:.06em}
+
+@media(max-width:640px){
+  .game-row{grid-template-columns:1fr}
+  .ladder{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:4px}
+  .rung{font-size:10px;border-right:none;border-bottom:2px solid transparent;padding:3px 6px}
+  .rung.safe{border-bottom-color:#7a5600}
+  .rung.cur{border-bottom-color:var(--gold)}
+  .rung.cur::before{display:none}
+  .agrid{grid-template-columns:1fr}
+  .qinner{padding:20px 36px}
+}
+</style>
 </head>
 <body>
-    <!-- Sternenhimmel -->
-    <canvas id="stars-canvas"></canvas>
 
-    <!-- Lichtkegel -->
-    <div class="light-cone"></div>
+<div id="stars"></div>
 
-    <!-- Roter Blitz bei falscher Antwort -->
-    <div class="wrong-overlay" id="wrong-overlay"></div>
+<div id="app">
+  <div class="title-wrap">
+    <div class="title-main">Wer wird Millionär?</div>
+    <div class="title-sub">Gewinne 1.000.000 Euro</div>
+  </div>
 
-    <!-- ===== STARTBILDSCHIRM ===== -->
-    <div class="screen" id="start-screen">
-        <div class="flex flex-col items-center gap-6">
-            <div class="logo-diamond"></div>
-            <h1 class="logo-text">Wer wird<br>Millionär?</h1>
-            <p class="text-sm tracking-widest uppercase" style="color: var(--muted);">Die offizielle Fan-Edition</p>
-            <button class="start-btn mt-4" id="btn-start" aria-label="Spiel starten">Spiel starten</button>
-            <p class="text-xs mt-2" style="color: var(--muted);">Musik wird automatisch abgespielt</p>
+  <div id="gmain" style="width:100%;display:flex;flex-direction:column;gap:18px">
+
+    <div class="prizeline">Frage <strong id="qnum">1</strong> von 6 &nbsp;&middot;&nbsp; Möglicher Gewinn: <strong id="qprize">100 €</strong></div>
+
+    <div class="game-row">
+      <!-- Ladder -->
+      <div class="ladder" id="ladder"></div>
+
+      <!-- Center -->
+      <div class="cpanel">
+
+        <!-- Jokers -->
+        <div class="joker-bar">
+          <div class="joker-lbl">Joker</div>
+          <button class="jbtn" id="j5050" onclick="useJoker('fiftyFifty')">50 : 50</button>
+          <button class="jbtn" id="jpub"  onclick="useJoker('audience')">Publikum</button>
+          <button class="jbtn" id="jtel"  onclick="useJoker('phone')">Telefon</button>
+          <button class="jbtn" id="jskip" onclick="useJoker('jump')">Weiter</button>
         </div>
-    </div>
 
-    <!-- ===== SPIELBILDSCHIRM ===== -->
-    <div class="screen hidden" id="game-screen">
-        <!-- Joker -->
-        <nav class="joker-bar" aria-label="Joker">
-            <button class="joker-btn unavailable" id="joker-5050" aria-label="50:50 Joker" title="50:50 Joker (nicht verfügbar)">
-                <span style="font-weight:800;font-size:0.7rem;">50:50</span>
-            </button>
-            <button class="joker-btn" id="joker-audience" aria-label="Publikumsjoker" title="Publikumsjoker">
-                <i class="fas fa-users"></i>
-            </button>
-            <button class="joker-btn" id="joker-phone" aria-label="Telefonjoker" title="Telefonjoker">
-                <i class="fas fa-phone"></i>
-            </button>
-            <button class="joker-btn unavailable" id="joker-jump" aria-label="Frage überspringen" title="Frage überspringen (nicht verfügbar)">
-                <i class="fas fa-forward"></i>
-            </button>
-        </nav>
-
-        <!-- Frage -->
-        <main class="question-card" id="question-card">
-            <div class="question-label" id="question-label">Frage 1</div>
-            <div class="question-text" id="question-text"></div>
-            <div class="answers-grid" id="answers-grid"></div>
-        </main>
-
-        <!-- Geldleiter -->
-        <aside class="money-ladder" id="money-ladder" aria-label="Geldleiter"></aside>
-    </div>
-
-    <!-- ===== ERGEBNISBILDSCHIRM ===== -->
-    <div class="screen hidden" id="result-screen">
-        <div class="result-card">
-            <div id="result-icon" class="text-5xl mb-4"></div>
-            <p class="result-label" id="result-label"></p>
-            <div class="result-amount" id="result-amount"></div>
-            <p class="text-sm mb-6" style="color: var(--muted);" id="result-sub"></p>
-            <button class="start-btn" id="btn-restart" aria-label="Nochmal spielen">Nochmal spielen</button>
+        <!-- Question -->
+        <div class="qwrap">
+          <div class="qinner">
+            <div class="qtxt" id="qtxt">Lade Fragen …</div>
+          </div>
         </div>
-    </div>
 
-    <!-- ===== ANFRAGE-OVERLAY ===== -->
-    <div class="ask-overlay" id="ask-overlay">
-        <div class="ask-card">
-            <div id="ask-icon" class="text-4xl mb-3" style="color: var(--cyan);"></div>
-            <h3 class="font-display text-lg font-bold mb-2" id="ask-title"></h3>
-            <p class="text-sm mb-4" style="color: var(--muted);" id="ask-desc"></p>
-            <div id="ask-content"></div>
-            <div class="ask-timer-bar" id="ask-timer-bar" style="width:100%;"></div>
-            <button class="ask-btn mt-4" id="ask-close">Verstanden</button>
+        <!-- Answers -->
+        <div class="agrid" id="agrid"></div>
+
+        <!-- Confirm -->
+        <div class="confirm-strip" id="cstrip"></div>
+
+        <!-- Action -->
+        <div class="arow" id="arow" style="display:none">
+          <button class="abig" id="abig" onclick="confirmAns()">Endgültige Antwort</button>
         </div>
+
+      </div>
     </div>
-
-    <!-- Toast -->
-    <div class="toast" id="toast"></div>
-
-    <!-- Audio-Elemente -->
-    <audio id="audio-bg" loop preload="none"></audio>
-    <audio id="audio-fx" preload="none"></audio>
-
-    <script>
-    /* ==========================================================
-       FRAGEN-DATEN – HIER ERWEITERN
-       ========================================================== */
-    const questionsData = [
-        {
-            question: "Welche Farbe hat ein Knicks?",
-            answers: ["Blau", "Grün", "Rot", "Gelb"],
-            correct: 1,
-            jokers: {
-                fiftyFifty: true,
-                audience: true,
-                phone: "Mein Freund weiß, das ist definitiv Grün!",
-                jump: null
-            }
-        },
-        {
-            question: "Wie viele Beine hat ein Insekt?",
-            answers: ["4", "6", "8", "10"],
-            correct: 1,
-            jokers: {
-                fiftyFifty: true,
-                audience: null,
-                phone: null,
-                jump: null
-            }
-        },
-        {
-            question: "Was ist die Hauptstadt von Frankreich?",
-            answers: ["London", "Berlin", "Paris", "Madrid"],
-            correct: 2,
-            jokers: {
-                fiftyFifty: true,
-                audience: true,
-                phone: "Ich bin mir sicher, das ist Paris.",
-                jump: true
-            }
-        },
-        {
-            question: "Welcher Planet ist am nächsten an der Sonne?",
-            answers: ["Venus", "Merkur", "Mars", "Erde"],
-            correct: 1,
-            jokers: {
-                fiftyFifty: true,
-                audience: true,
-                phone: "Das muss Merkur sein, ganz nah an der Sonne!",
-                jump: null
-            }
-        }
-    ];
-
-    /* ==========================================================
-       GELDSTUFEN
-       ========================================================== */
-    const moneyLevels = [
-        "50 €", "100 €", "200 €", "300 €", "500 €",
-        "1.000 €", "2.000 €", "4.000 €", "8.000 €", "16.000 €",
-        "32.000 €", "64.000 €", "125.000 €", "500.000 €", "1.000.000 €"
-    ];
-    /* Sicherheitsstufen (0-basiert) */
-    const safetyLevels = [4, 9]; // 500 € und 16.000 €
-
-    /* ==========================================================
-       SPIELZUSTAND
-       ========================================================== */
-    let state = {
-        currentQuestion: 0,
-        currentMoney: 0,
-        guaranteedMoney: 0,
-        isAnswering: false,
-        jokersUsed: { fiftyFifty: false, audience: false, phone: false, jump: false },
-        removedAnswers: []
-    };
-
-    /* ==========================================================
-       AUDIO-SYSTEM
-       ========================================================== */
-    const audioBg = document.getElementById('audio-bg');
-    const audioFx = document.getElementById('audio-fx');
-
-    function initAudio() {
-        audioBg.src = 'medien/musik.mp3';
-        audioBg.volume = 0.25;
-    }
-
-    function playBgMusic() {
-        audioBg.play().catch(() => {});
-    }
-
-    function stopBgMusic() {
-        audioBg.pause();
-        audioBg.currentTime = 0;
-    }
-
-    function fadeInBgMusic() {
-        audioBg.volume = 0;
-        audioBg.play().catch(() => {});
-        let vol = 0;
-        const interval = setInterval(() => {
-            vol += 0.02;
-            if (vol >= 0.25) { vol = 0.25; clearInterval(interval); }
-            audioBg.volume = vol;
-        }, 100);
-    }
-
-    function fadeOutBgMusic() {
-        let vol = audioBg.volume;
-        const interval = setInterval(() => {
-            vol -= 0.02;
-            if (vol <= 0) { vol = 0; clearInterval(interval); audioBg.pause(); }
-            audioBg.volume = vol;
-        }, 100);
-    }
-
-    function dimBgMusic() {
-        audioBg.volume = 0.08;
-    }
-
-    function restoreBgMusic() {
-        audioBg.volume = 0.25;
-    }
-
-    function playTone(freq, duration, type = 'sine', vol = 0.3) {
-        try {
-            const ctx = new (window.AudioContext || window.webkitAudioContext)();
-            const osc = ctx.createOscillator();
-            const gain = ctx.createGain();
-            osc.type = type;
-            osc.frequency.value = freq;
-            gain.gain.value = vol;
-            gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
-            osc.connect(gain);
-            gain.connect(ctx.destination);
-            osc.start();
-            osc.stop(ctx.currentTime + duration);
-        } catch(e) {}
-    }
-
-    function sfxCorrect() {
-        playTone(523, 0.15, 'sine', 0.25);
-        setTimeout(() => playTone(659, 0.15, 'sine', 0.25), 100);
-        setTimeout(() => playTone(784, 0.15, 'sine', 0.25), 200);
-        setTimeout(() => playTone(1047, 0.4, 'sine', 0.3), 300);
-    }
-
-    function sfxWrong() {
-        playTone(200, 0.4, 'sawtooth', 0.2);
-        setTimeout(() => playTone(150, 0.5, 'sawtooth', 0.2), 200);
-        setTimeout(() => playTone(100, 0.8, 'sawtooth', 0.15), 400);
-    }
-
-    function sfxSelect() {
-        playTone(440, 0.08, 'sine', 0.15);
-    }
-
-    function sfxJoker() {
-        playTone(600, 0.1, 'triangle', 0.2);
-        setTimeout(() => playTone(800, 0.1, 'triangle', 0.2), 80);
-        setTimeout(() => playTone(1000, 0.15, 'triangle', 0.2), 160);
-    }
-
-    function sfxTick() {
-        playTone(800, 0.03, 'square', 0.08);
-    }
-
-    /* ==========================================================
-       STERNENHIMMEL
-       ========================================================== */
-    function initStars() {
-        const canvas = document.getElementById('stars-canvas');
-        const ctx = canvas.getContext('2d');
-        let stars = [];
-
-        function resize() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            createStars();
-        }
-
-        function createStars() {
-            stars = [];
-            const count = Math.floor((canvas.width * canvas.height) / 4000);
-            for (let i = 0; i < count; i++) {
-                stars.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    r: Math.random() * 1.5 + 0.3,
-                    alpha: Math.random() * 0.8 + 0.2,
-                    speed: Math.random() * 0.005 + 0.002,
-                    phase: Math.random() * Math.PI * 2
-                });
-            }
-        }
-
-        function draw(time) {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            stars.forEach(s => {
-                const a = s.alpha * (0.5 + 0.5 * Math.sin(time * s.speed + s.phase));
-                ctx.beginPath();
-                ctx.arc(s.x, s.y, Math.max(0.1, s.r), 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(200,220,255,${a})`;
-                ctx.fill();
-            });
-            requestAnimationFrame(draw);
-        }
-
-        window.addEventListener('resize', resize);
-        resize();
-        requestAnimationFrame(draw);
-    }
-
-    /* ==========================================================
-       SCHWEBESTAUB-PARTIKEL
-       ========================================================== */
-    function initDustParticles() {
-        const count = 20;
-        for (let i = 0; i < count; i++) {
-            const p = document.createElement('div');
-            p.className = 'dust-particle';
-            const size = Math.random() * 3 + 1;
-            p.style.width = size + 'px';
-            p.style.height = size + 'px';
-            p.style.left = Math.random() * 100 + '%';
-            p.style.animationDuration = (Math.random() * 15 + 15) + 's';
-            p.style.animationDelay = (Math.random() * 20) + 's';
-            p.style.opacity = Math.random() * 0.4 + 0.1;
-            document.body.appendChild(p);
-        }
-    }
-
-    /* ==========================================================
-       GELDLEITER RENDERN
-       ========================================================== */
-    function renderMoneyLadder() {
-        const container = document.getElementById('money-ladder');
-        container.innerHTML = '';
-        /* Von oben (höchster Betrag) nach unten */
-        for (let i = moneyLevels.length - 1; i >= 0; i--) {
-            const div = document.createElement('div');
-            div.className = 'money-step';
-            div.textContent = moneyLevels[i];
-            div.dataset.index = i;
-            if (i === state.currentQuestion) div.classList.add('active');
-            else if (i < state.currentQuestion) div.classList.add('reached');
-            if (safetyLevels.includes(i)) div.classList.add('safety');
-            container.appendChild(div);
-        }
-    }
-
-    function updateMoneyLadder() {
-        const steps = document.querySelectorAll('.money-step');
-        steps.forEach(step => {
-            const idx = parseInt(step.dataset.index);
-            step.classList.remove('active', 'reached');
-            if (idx === state.currentQuestion) step.classList.add('active');
-            else if (idx < state.currentQuestion) step.classList.add('reached');
-        });
-    }
-
-    /* ==========================================================
-       JOKER-UI AKTUALISIEREN
-       ========================================================== */
-    function updateJokerUI() {
-        const q = questionsData[state.currentQuestion];
-        if (!q) return;
-        const j = q.jokers;
-
-        /* 50:50 */
-        const btn5050 = document.getElementById('joker-5050');
-        btn5050.className = 'joker-btn';
-        if (j.fiftyFifty === null) btn5050.classList.add('unavailable');
-        else if (state.jokersUsed.fiftyFifty) btn5050.classList.add('used');
-
-        /* Publikum */
-        const btnAud = document.getElementById('joker-audience');
-        btnAud.className = 'joker-btn';
-        if (j.audience === null) btnAud.classList.add('unavailable');
-        else if (state.jokersUsed.audience) btnAud.classList.add('used');
-
-        /* Telefon */
-        const btnPh = document.getElementById('joker-phone');
-        btnPh.className = 'joker-btn';
-        if (j.phone === null) btnPh.classList.add('unavailable');
-        else if (state.jokersUsed.phone) btnPh.classList.add('used');
-
-        /* Jump */
-        const btnJump = document.getElementById('joker-jump');
-        btnJump.className = 'joker-btn';
-        if (j.jump === null) btnJump.classList.add('unavailable');
-        else if (state.jokersUsed.jump) btnJump.classList.add('used');
-    }
-
-    /* ==========================================================
-       FRAGE RENDERN
-       ========================================================== */
-    function renderQuestion() {
-        if (state.currentQuestion >= questionsData.length) {
-            showResult(true);
-            return;
-        }
-
-        const q = questionsData[state.currentQuestion];
-        state.isAnswering = true;
-        state.removedAnswers = [];
-
-        document.getElementById('question-label').textContent = `Frage ${state.currentQuestion + 1} von ${questionsData.length}`;
-        document.getElementById('question-text').textContent = q.question;
-
-        const grid = document.getElementById('answers-grid');
-        grid.innerHTML = '';
-
-        const letters = ['A', 'B', 'C', 'D'];
-        q.answers.forEach((ans, i) => {
-            const btn = document.createElement('button');
-            btn.className = 'answer-btn';
-            btn.dataset.index = i;
-            btn.innerHTML = `<span class="letter">${letters[i]}</span><span>${ans}</span>`;
-            btn.addEventListener('click', () => handleAnswer(i));
-            grid.appendChild(btn);
-        });
-
-        updateMoneyLadder();
-        updateJokerUI();
-
-        /* Leises Ticken beim Laden */
-        dimBgMusic();
-        setTimeout(() => restoreBgMusic(), 2000);
-    }
-
-    /* ==========================================================
-       ANTWORT BEHANDELN
-       ========================================================== */
-    function handleAnswer(selectedIndex) {
-        if (!state.isAnswering) return;
-        state.isAnswering = false;
-
-        sfxSelect();
-
-        const q = questionsData[state.currentQuestion];
-        const isCorrect = selectedIndex === q.correct;
-        const buttons = document.querySelectorAll('.answer-btn');
-
-        /* Alle Buttons deaktivieren */
-        buttons.forEach(b => b.classList.add('disabled'));
-
-        /* Ausgewählten Button markieren */
-        if (isCorrect) {
-            buttons[selectedIndex].classList.add('correct');
-            sfxCorrect();
-            state.currentMoney = state.currentQuestion + 1;
-            if (safetyLevels.includes(state.currentQuestion)) {
-                state.guaranteedMoney = state.currentQuestion + 1;
-            }
-        } else {
-            buttons[selectedIndex].classList.add('wrong');
-            sfxWrong();
-            /* Rote Blitz-Animation */
-            const overlay = document.getElementById('wrong-overlay');
-            overlay.classList.add('flash');
-            setTimeout(() => overlay.classList.remove('flash'), 800);
-            /* Richtige Antwort nach kurzer Verzögerung zeigen */
-            setTimeout(() => {
-                buttons[q.correct].classList.add('highlight-correct');
-            }, 800);
-        }
-
-        /* Nächste Frage oder Ergebnis */
-        setTimeout(() => {
-            if (isCorrect) {
-                state.currentQuestion++;
-                if (state.currentQuestion >= questionsData.length) {
-                    showResult(true);
-                } else {
-                    renderQuestion();
-                }
-            } else {
-                showResult(false);
-            }
-        }, isCorrect ? 2000 : 3000);
-    }
-
-    /* ==========================================================
-       JOKER LOGIK
-       ========================================================== */
-
-    /* 50:50 */
-    document.getElementById('joker-5050').addEventListener('click', () => {
-        if (state.jokersUsed.fiftyFifty || !state.isAnswering) return;
-        const q = questionsData[state.currentQuestion];
-        if (q.jokers.fiftyFifty === null) return;
-
-        state.jokersUsed.fiftyFifty = true;
-        sfxJoker();
-
-        /* Zwei falsche Antworten entfernen */
-        const wrongIndices = [];
-        q.answers.forEach((_, i) => { if (i !== q.correct) wrongIndices.push(i); });
-        /* Mischen und 2 entfernen */
-        for (let i = wrongIndices.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [wrongIndices[i], wrongIndices[j]] = [wrongIndices[j], wrongIndices[i]];
-        }
-        const toRemove = wrongIndices.slice(0, 2);
-        state.removedAnswers = toRemove;
-
-        const buttons = document.querySelectorAll('.answer-btn');
-        toRemove.forEach(idx => {
-            buttons[idx].classList.add('removed');
-        });
-
-        updateJokerUI();
-        showToast('50:50 Joker eingesetzt');
-    });
-
-    /* Publikumsjoker */
-    document.getElementById('joker-audience').addEventListener('click', () => {
-        if (state.jokersUsed.audience || !state.isAnswering) return;
-        const q = questionsData[state.currentQuestion];
-        if (q.jokers.audience === null) return;
-
-        state.jokersUsed.audience = true;
-        sfxJoker();
-        dimBgMusic();
-
-        /* Umfragewerte generieren – richtige Antwort bekommt mehr */
-        const values = [0, 0, 0, 0];
-        let remaining = 100;
-        q.answers.forEach((_, i) => {
-            if (i === q.correct) {
-                const v = Math.floor(Math.random() * 25) + 55; // 55-79%
-                values[i] = v;
-                remaining -= v;
-            }
-        });
-        const wrongIndices = q.answers.map((_, i) => i).filter(i => i !== q.correct);
-        wrongIndices.forEach((idx, i) => {
-            if (i === wrongIndices.length - 1) {
-                values[idx] = Math.max(0, remaining);
-            } else {
-                const v = Math.floor(Math.random() * Math.min(remaining, 30));
-                values[idx] = v;
-                remaining -= v;
-            }
-        });
-
-        /* Balkendiagramm anzeigen */
-        const colors = ['#e74c3c', '#3498db', '#2ecc71', '#f39c12'];
-        const letters = ['A', 'B', 'C', 'D'];
-        let html = '<div class="space-y-2">';
-        values.forEach((v, i) => {
-            html += `<div class="flex items-center gap-2">
-                <span class="w-6 text-sm font-bold" style="color:${colors[i]}">${letters[i]}</span>
-                <div class="flex-1 h-7 rounded bg-gray-800 overflow-hidden relative">
-                    <div class="h-full rounded transition-all duration-1000" style="width:${v}%;background:${colors[i]};opacity:0.8;"></div>
-                    <span class="absolute inset-0 flex items-center justify-center text-xs font-bold text-white">${v}%</span>
-                </div>
-            </div>`;
-        });
-        html += '</div>';
-
-        showAskOverlay(
-            '<i class="fas fa-users"></i>',
-            'Publikumsbefragung',
-            'Das Publikum hat abgestimmt:',
-            html,
-            () => { restoreBgMusic(); }
-        );
-
-        updateJokerUI();
-    });
-
-    /* Telefonjoker */
-    document.getElementById('joker-phone').addEventListener('click', () => {
-        if (state.jokersUsed.phone || !state.isAnswering) return;
-        const q = questionsData[state.currentQuestion];
-        if (q.jokers.phone === null) return;
-
-        state.jokersUsed.phone = true;
-        sfxJoker();
-        dimBgMusic();
-
-        /* Klingeln simulieren */
-        let ringCount = 0;
-        const ringInterval = setInterval(() => {
-            sfxTick();
-            ringCount++;
-            if (ringCount >= 4) clearInterval(ringInterval);
-        }, 400);
-
-        setTimeout(() => {
-            clearInterval(ringInterval);
-            showAskOverlay(
-                '<i class="fas fa-phone"></i>',
-                'Telefonjoker',
-                'Dein Freund am Telefon sagt:',
-                `<div class="bg-gray-800 rounded-lg p-4 text-left text-sm italic border-l-4" style="border-color: var(--cyan);">"${q.jokers.phone}"</div>`,
-                () => { restoreBgMusic(); }
-            );
-        }, 2000);
-
-        updateJokerUI();
-    });
-
-    /* Jump-Joker */
-    document.getElementById('joker-jump').addEventListener('click', () => {
-        if (state.jokersUsed.jump || !state.isAnswering) return;
-        const q = questionsData[state.currentQuestion];
-        if (q.jokers.jump === null) return;
-
-        state.jokersUsed.jump = true;
-        sfxJoker();
-        showToast('Frage übersprungen!');
-
-        setTimeout(() => {
-            state.currentQuestion++;
-            renderQuestion();
-        }, 800);
-
-        updateJokerUI();
-    });
-
-    /* ==========================================================
-       ANFRAGE-OVERLAY
-       ========================================================== */
-    function showAskOverlay(icon, title, desc, contentHTML, onClose) {
-        const overlay = document.getElementById('ask-overlay');
-        document.getElementById('ask-icon').innerHTML = icon;
-        document.getElementById('ask-title').textContent = title;
-        document.getElementById('ask-desc').textContent = desc;
-        document.getElementById('ask-content').innerHTML = contentHTML;
-
-        /* Timer-Balken animieren */
-        const bar = document.getElementById('ask-timer-bar');
-        bar.style.transition = 'none';
-        bar.style.width = '100%';
-        overlay.classList.add('active');
-        requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-                bar.style.transition = 'width 5s linear';
-                bar.style.width = '0%';
-            });
-        });
-
-        const closeBtn = document.getElementById('ask-close');
-        const handler = () => {
-            overlay.classList.remove('active');
-            closeBtn.removeEventListener('click', handler);
-            if (onClose) onClose();
-        };
-        closeBtn.addEventListener('click', handler);
-
-        /* Automatisch schließen nach 5 Sekunden */
-        setTimeout(() => {
-            if (overlay.classList.contains('active')) handler();
-        }, 5200);
-    }
-
-    /* ==========================================================
-       ERGEBNIS ANZEIGEN
-       ========================================================== */
-    function showResult(won) {
-        fadeOutBgMusic();
-        setTimeout(() => stopBgMusic(), 1000);
-
-        const screen = document.getElementById('result-screen');
-        const icon = document.getElementById('result-icon');
-        const label = document.getElementById('result-label');
-        const amount = document.getElementById('result-amount');
-        const sub = document.getElementById('result-sub');
-
-        if (won) {
-            icon.innerHTML = '<i class="fas fa-trophy" style="color: var(--gold-bright);"></i>';
-            label.textContent = 'Herzlichen Glückwunsch!';
-            amount.textContent = moneyLevels[moneyLevels.length - 1];
-            sub.textContent = `Du hast alle ${questionsData.length} Fragen richtig beantwortet!`;
-            /* Sieges-Fanfare */
-            setTimeout(() => {
-                playTone(523, 0.2, 'sine', 0.3);
-                setTimeout(() => playTone(659, 0.2, 'sine', 0.3), 150);
-                setTimeout(() => playTone(784, 0.2, 'sine', 0.3), 300);
-                setTimeout(() => playTone(1047, 0.4, 'sine', 0.35), 450);
-                setTimeout(() => playTone(1319, 0.6, 'sine', 0.35), 650);
-            }, 500);
-        } else {
-            icon.innerHTML = '<i class="fas fa-times-circle" style="color: var(--wrong);"></i>';
-            label.textContent = 'Leider falsch!';
-            const wonIdx = Math.max(0, state.guaranteedMoney - 1);
-            const wonAmount = state.guaranteedMoney > 0 ? moneyLevels[wonIdx] : '0 €';
-            amount.textContent = wonAmount;
-            sub.textContent = state.guaranteedMoney > 0
-                ? `Du bist bei Frage ${state.currentQuestion + 1} ausgestiegen. Deine Sicherheitsstufe: ${wonAmount}`
-                : `Du bist direkt bei Frage ${state.currentQuestion + 1} ausgestiegen.`;
-        }
-
-        document.getElementById('game-screen').classList.add('hidden');
-        screen.classList.remove('hidden');
-    }
-
-    /* ==========================================================
-       TOAST
-       ========================================================== */
-    function showToast(msg) {
-        const toast = document.getElementById('toast');
-        toast.textContent = msg;
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 2500);
-    }
-
-    /* ==========================================================
-       SPIEL STARTEN / NEUSTARTEN
-       ========================================================== */
-    function startGame() {
-        state = {
-            currentQuestion: 0,
-            currentMoney: 0,
-            guaranteedMoney: 0,
-            isAnswering: false,
-            jokersUsed: { fiftyFifty: false, audience: false, phone: false, jump: false },
-            removedAnswers: []
-        };
-
-        document.getElementById('start-screen').classList.add('hidden');
-        document.getElementById('result-screen').classList.add('hidden');
-        document.getElementById('game-screen').classList.remove('hidden');
-
-        renderMoneyLadder();
-        renderQuestion();
-        playBgMusic();
-    }
-
-    document.getElementById('btn-start').addEventListener('click', startGame);
-    document.getElementById('btn-restart').addEventListener('click', startGame);
-
-    /* ==========================================================
-       TASTATUR-STEUERUNG
-       ========================================================== */
-    document.addEventListener('keydown', (e) => {
-        if (!state.isAnswering) return;
-        const keyMap = { '1': 0, '2': 1, '3': 2, '4': 3, 'a': 0, 'b': 1, 'c': 2, 'd': 3 };
-        const idx = keyMap[e.key.toLowerCase()];
-        if (idx !== undefined) {
-            const q = questionsData[state.currentQuestion];
-            if (q && !state.removedAnswers.includes(idx)) {
-                handleAnswer(idx);
-            }
-        }
-    });
-
-    /* ==========================================================
-       INITIALISIERUNG
-       ========================================================== */
-    initStars();
-    initDustParticles();
-    initAudio();
-    </script>
+  </div>
+
+  <!-- End -->
+  <div class="endscreen" id="endscreen">
+    <div class="endtitle" id="etitle"></div>
+    <div class="endprize" id="eprize"></div>
+    <div class="endsub" id="esub"></div>
+    <button class="abig" onclick="restart()" style="margin-top:12px">Nochmal spielen</button>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="moverlay" id="moverlay" onclick="closeModal(event)">
+  <div class="mbox" onclick="event.stopPropagation()">
+    <div class="mtitle" id="mtitle"></div>
+    <div class="mbody"  id="mbody"></div>
+    <button class="mclose" onclick="closeModal()">Schließen</button>
+  </div>
+</div>
+
+<script>
+/* ── stars ── */
+(()=>{
+  const c=document.getElementById('stars');
+  for(let i=0;i<90;i++){
+    const el=document.createElement('div');el.className='s';
+    const sz=Math.random()*2.5+.5;
+    el.style.cssText=`width:${sz}px;height:${sz}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--d:${(Math.random()*4+2).toFixed(1)}s;--dl:-${(Math.random()*6).toFixed(1)}s;--o:${(Math.random()*.55+.15).toFixed(2)}`;
+    c.appendChild(el);
+  }
+})();
+
+/* ── data ── */
+const PRIZES=['100 €','200 €','500 €','1.000 €','4.000 €','1.000.000 €'];
+const SAFE=[3,5]; // indices that are safe havens (1.000 € and 1.000.000 €)
+let qs=[],cur=0,selIdx=null,answered=false,jokers={};
+
+/* ── load ── */
+async function load(){
+  try{
+    const r=await fetch('fragen.json');
+    qs=await r.json();
+    init();
+  }catch(e){
+    document.getElementById('qtxt').textContent='fragen.json nicht gefunden. Beide Dateien in denselben Ordner legen.';
+  }
+}
+
+function init(){
+  cur=0;selIdx=null;answered=false;
+  buildLadder();
+  loadQ();
+}
+
+/* ── ladder ── */
+function buildLadder(){
+  const el=document.getElementById('ladder');
+  el.innerHTML='';
+  PRIZES.forEach((p,i)=>{
+    const d=document.createElement('div');
+    d.className='rung'+(SAFE.includes(i)?' safe':'');
+    d.id='rung'+i;
+    d.textContent=p;
+    el.appendChild(d);
+  });
+  refreshLadder();
+}
+function refreshLadder(){
+  PRIZES.forEach((_,i)=>{
+    const el=document.getElementById('rung'+i);
+    el.classList.remove('cur','done');
+    if(i<cur)el.classList.add('done');
+    else if(i===cur)el.classList.add('cur');
+  });
+}
+
+/* ── load question ── */
+function loadQ(){
+  answered=false;selIdx=null;
+  const q=qs[cur];
+  jokers={...q.jokers};
+  document.getElementById('qnum').textContent=cur+1;
+  document.getElementById('qprize').textContent=PRIZES[cur];
+  document.getElementById('qtxt').textContent=q.question;
+  document.getElementById('cstrip').textContent='';
+  document.getElementById('arow').style.display='none';
+  document.getElementById('abig').textContent='Endgültige Antwort';
+  document.getElementById('abig').onclick=confirmAns;
+  refreshJokers();
+  buildAnswers();
+  refreshLadder();
+}
+
+/* ── joker UI ── */
+function refreshJokers(){
+  const q=qs[cur];
+  const map={fiftyFifty:'j5050',audience:'jpub',phone:'jtel',jump:'jskip'};
+  Object.keys(map).forEach(k=>{
+    const el=document.getElementById(map[k]);
+    el.classList.remove('jused','junavail');
+    if(!q.jokers[k])el.classList.add('junavail');
+    else if(!jokers[k])el.classList.add('jused');
+  });
+}
+
+/* ── answers ── */
+function buildAnswers(hidden=[]){
+  const q=qs[cur];
+  const g=document.getElementById('agrid');
+  g.innerHTML='';
+  const letters=['A','B','C','D'];
+  q.answers.forEach((a,i)=>{
+    const wrap=document.createElement('div');wrap.className='awrap';wrap.id='aw'+i;
+    const btn=document.createElement('button');
+    btn.className='abtn'+(hidden.includes(i)?' gone':'');
+    btn.id='ab'+i;
+    btn.disabled=answered;
+    btn.innerHTML=`<span class="aletter">${letters[i]}:</span>${a}`;
+    btn.onclick=()=>pickAns(i);
+    wrap.appendChild(btn);
+    g.appendChild(wrap);
+  });
+}
+
+/* ── pick answer ── */
+function pickAns(i){
+  if(answered)return;
+  selIdx=i;
+  document.querySelectorAll('.abtn').forEach(b=>b.classList.remove('sel'));
+  document.getElementById('ab'+i).classList.add('sel');
+  document.getElementById('cstrip').textContent='Ist das Ihre endgültige Antwort?';
+  document.getElementById('arow').style.display='flex';
+}
+
+/* ── confirm ── */
+function confirmAns(){
+  if(answered||selIdx===null)return;
+  answered=true;
+  document.getElementById('cstrip').textContent='';
+  document.querySelectorAll('.abtn').forEach(b=>{b.disabled=true;b.classList.remove('sel')});
+  const q=qs[cur];
+  if(selIdx===q.correct){
+    setTimeout(()=>{
+      document.getElementById('ab'+selIdx).classList.add('ok');
+      const isLast=cur>=qs.length-1;
+      document.getElementById('abig').textContent=isLast?'Gewinn einlösen':'Weiter';
+      document.getElementById('abig').onclick=advance;
+      document.getElementById('arow').style.display='flex';
+    },600);
+  }else{
+    document.getElementById('ab'+selIdx).classList.add('nope');
+    setTimeout(()=>document.getElementById('ab'+q.correct).classList.add('ok'),420);
+    document.getElementById('abig').textContent='Spiel beenden';
+    document.getElementById('abig').onclick=()=>endGame(false);
+    document.getElementById('arow').style.display='flex';
+  }
+}
+
+/* ── advance ── */
+function advance(){
+  if(!answered)return;
+  const q=qs[cur];
+  if(selIdx!==q.correct){endGame(false);return}
+  if(cur>=qs.length-1){endGame(true);return}
+  cur++;loadQ();
+}
+
+/* ── jokers ── */
+function useJoker(type){
+  if(answered)return;
+  const q=qs[cur];
+  if(!q.jokers[type]||!jokers[type])return;
+  jokers[type]=false;
+  refreshJokers();
+  if(type==='fiftyFifty'){
+    const wrong=[0,1,2,3].filter(i=>i!==q.correct);
+    const hide=wrong.sort(()=>Math.random()-.5).slice(0,2);
+    buildAnswers(hide);
+  }else if(type==='audience'){
+    doAudience();
+  }else if(type==='phone'){
+    showModal('Telefonjoker',`<p style="color:var(--silver);font-size:13px;margin-bottom:12px">Ihr Freund meldet sich …</p><p style="font-style:italic;font-size:16px;line-height:1.6">"${q.jokers.phone}"</p>`);
+  }else if(type==='jump'){
+    if(cur>=qs.length-1){showModal('Weiter-Joker','<p>Dies ist bereits die letzte Frage.</p>');return}
+    cur++;loadQ();
+  }
+}
+
+function doAudience(){
+  const q=qs[cur];
+  const pct=[0,0,0,0];
+  pct[q.correct]=Math.floor(Math.random()*20)+54;
+  const others=[0,1,2,3].filter(i=>i!==q.correct);
+  let rem=100-pct[q.correct];
+  others.forEach((o,idx)=>{
+    if(idx===others.length-1){pct[o]=rem;}
+    else{const v=Math.floor(Math.random()*rem*.45);pct[o]=v;rem-=v;}
+  });
+  const letters=['A','B','C','D'];
+  const bars=pct.map((p,i)=>`
+    <div class="bwrap">
+      <div class="bpct">${p}%</div>
+      <div class="bfill" style="height:${Math.round(p*1.05)}px"></div>
+      <div class="blbl">${letters[i]}</div>
+    </div>`).join('');
+  showModal('Publikumsjoker',`<p style="text-align:center;margin-bottom:4px;color:var(--silver);font-size:13px">Das Publikum hat abgestimmt:</p><div class="abars">${bars}</div>`);
+}
+
+/* ── modal ── */
+function showModal(title,body){
+  document.getElementById('mtitle').textContent=title;
+  document.getElementById('mbody').innerHTML=body;
+  document.getElementById('moverlay').classList.add('open');
+}
+function closeModal(e){
+  if(!e||e.target===document.getElementById('moverlay'))
+    document.getElementById('moverlay').classList.remove('open');
+}
+
+/* ── end ── */
+function endGame(won){
+  document.getElementById('gmain').style.display='none';
+  const es=document.getElementById('endscreen');
+  es.classList.add('show');
+  if(won){
+    document.getElementById('etitle').textContent='Herzlichen Glückwunsch!';
+    document.getElementById('eprize').textContent='1.000.000 €';
+    document.getElementById('esub').textContent='Sie sind Millionär!';
+  }else{
+    const safe=SAFE.filter(i=>i<cur);
+    const prize=safe.length?PRIZES[safe[safe.length-1]]:'0 €';
+    document.getElementById('etitle').textContent='Das war leider falsch.';
+    document.getElementById('eprize').textContent=prize;
+    document.getElementById('esub').textContent=prize==='0 €'?'Sie verlassen das Studio leider ohne Gewinn.':`Sie verlassen das Studio mit ${prize}.`;
+  }
+}
+
+function restart(){
+  document.getElementById('endscreen').classList.remove('show');
+  document.getElementById('gmain').style.display='';
+  init();
+}
+
+load();
+</script>
 </body>
 </html>
