@@ -173,6 +173,8 @@
   .agent-btn:hover { background: var(--icon-hover-bg); }
   .agent-btn svg { width: 18px; height: 18px; stroke: var(--icon-color); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.15s; }
   .agent-btn:hover svg { stroke: var(--icon-hover-stroke); }
+  .math-btn svg text { fill: var(--icon-color); stroke: none; transition: fill 0.15s; }
+  .agent-btn:hover.math-btn svg text { fill: var(--icon-hover-stroke); }
 </style>
 <script data-goatcounter="https://bob.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -197,6 +199,11 @@
         <svg viewBox="0 0 24 24">
           <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"/>
           <path d="M3 21v-2a6 6 0 0 1 6-6h6a6 6 0 0 1 6 6v2"/>
+        </svg>
+      </a>
+      <a href="/mathe/" class="agent-btn math-btn" aria-label="Mathe">
+        <svg viewBox="0 0 24 24">
+          <text x="12" y="17" font-family="Times,serif" font-style="italic" font-size="18" font-weight="bold" fill="currentColor" text-anchor="middle">π</text>
         </svg>
       </a>
     </div>
