@@ -1,11 +1,80 @@
-{
-    "question": "Deine Frage?",
-    "answers": ["Antwort A", "Antwort B", "Antwort C", "Antwort D"],
-    "correct": 0,
+[
+  {
+    "id": 1,
+    "prize": "100 €",
+    "question": "Welche Farbe hat eine reife Banane?",
+    "answers": ["Blau", "Gelb", "Grün", "Rot"],
+    "correct": 1,
     "jokers": {
-        "fiftyFifty": true,
-        "audience": true,
-        "phone": "Zitat des Telefonfreundes",
-        "jump": null
+      "fiftyFifty": true,
+      "audience": true,
+      "phone": "Also… ich bin mir ziemlich sicher, dass Bananen gelb sind, wenn sie reif sind!",
+      "jump": true
     }
-}
+  },
+  {
+    "id": 2,
+    "prize": "200 €",
+    "question": "Wie viele Beine hat eine Spinne?",
+    "answers": ["6", "8", "10", "12"],
+    "correct": 1,
+    "jokers": {
+      "fiftyFifty": true,
+      "audience": true,
+      "phone": "Spinnen haben 8 Beine – das weiß ich noch aus der Schule!",
+      "jump": true
+    }
+  },
+  {
+    "id": 3,
+    "prize": "500 €",
+    "question": "In welcher Stadt steht der Eiffelturm?",
+    "answers": ["London", "Berlin", "Paris", "Rom"],
+    "correct": 2,
+    "jokers": {
+      "fiftyFifty": true,
+      "audience": true,
+      "phone": "Paris! Der Eiffelturm steht definitiv in Paris, Frankreich.",
+      "jump": true
+    }
+  },
+  {
+    "id": 4,
+    "prize": "1.000 €",
+    "question": "Welches Tier ist das größte Landtier der Welt?",
+    "answers": ["Nilpferd", "Nashorn", "Afrikanischer Elefant", "Giraffe"],
+    "correct": 2,
+    "jokers": {
+      "fiftyFifty": true,
+      "audience": true,
+      "phone": "Ich tippe auf den Afrikanischen Elefanten – der ist doch riesig!",
+      "jump": true
+    }
+  },
+  {
+    "id": 5,
+    "prize": "4.000 €",
+    "question": "Wer schrieb das Theaterstück \"Faust\"?",
+    "answers": ["Friedrich Schiller", "Johann Wolfgang von Goethe", "Bertolt Brecht", "Heinrich Heine"],
+    "correct": 1,
+    "jokers": {
+      "fiftyFifty": true,
+      "audience": true,
+      "phone": "Goethe! Faust ist von Goethe, das bin ich sicher.",
+      "jump": true
+    }
+  },
+  {
+    "id": 6,
+    "prize": "1.000.000 €",
+    "question": "Welches chemische Element hat das Symbol \"Au\"?",
+    "answers": ["Silber", "Kupfer", "Gold", "Aluminium"],
+    "correct": 2,
+    "jokers": {
+      "fiftyFifty": true,
+      "audience": true,
+      "phone": "Au… ich glaube das ist Gold, vom lateinischen Aurum. Ich würde Gold tippen!",
+      "jump": false
+    }
+  }
+]
