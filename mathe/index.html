@@ -481,11 +481,11 @@ let qs=[],cur=0,selIdx=null,answered=false,jokers={};
 /* ── load ── */
 async function load(){
   try{
-    const r=await fetch('fragen.json');
+    const r=await fetch('config.json');
     qs=await r.json();
     init();
   }catch(e){
-    document.getElementById('qtxt').textContent='fragen.json nicht gefunden. Beide Dateien in denselben Ordner legen.';
+    document.getElementById('qtxt').textContent='config.json nicht gefunden. Beide Dateien in denselben Ordner legen.';
   }
 }
 
