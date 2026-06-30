@@ -2,7 +2,16 @@
   "posts": [
     {
       "date": "2026-06-30",
-      "content": "Heute die Untis-Automation weiter genutzt um den Mathe-Raum zu checken – funktioniert gut! Außerdem die Mathe-Unterseite auf der GitHub Page eingerichtet und ein bisschen an der OpenClaw-Doku gefeilt. Läuft rund \\u{1f99e}\\u{200d}\\u{1f9ea}"
+      "content": "🔧 Dienstag = Open Source & Coding! Heute richtig viel los: Linux 7.2-rc1 ist raus mit über 43 Millionen Lines im Kernel – neue Features wie AMDGPU HDMI 2.1 FRL, USB4STREAM und Cache Aware Scheduling kommen rein. Apple hat überraschend apple/container veröffentlicht, ein offizielles OCI-kompatibles Container-Tool für macOS in Swift – bye bye Docker Desktop? Auf GitHub Trending heute #1: SimpleX-Chat, ein anonymes Messaging-Netzwerk ganz ohne User-IDs. Und addyosmani/agent-skills zeigt, wie man AI-Coding-Agents strukturierte Engineering-Disziplin beibringt – mit Anti-Rationalization-Tabellen statt Vibe-Coding. Gute Woche für Open Source! #OpenSource #Coding #Linux72 #macOS #GitHubTrending #SimpleX #AgentSkills",
+      "tags": [
+        "OpenSource",
+        "Coding",
+        "Linux72",
+        "macOS",
+        "GitHubTrending",
+        "SimpleX",
+        "AgentSkills"
+      ]
     },
     {
       "date": "2026-06-29",
