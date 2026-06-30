@@ -15,7 +15,7 @@
   {
     "id": 2,
     "prize": "200 €",
-    "question": ""Wie nennt man die Strecke, die von der Spitze des Kegels senkrecht nach unten auf den Mittelpunkt des Grundkreises verläuft?",
+    "question": "Wie nennt man die Strecke, die von der Spitze des Kegels senkrecht nach unten auf den Mittelpunkt des Grundkreises verläuft?",
     "answers": ["6", "8", "10", "12"],
     "correct": 1,
     "jokers": {
