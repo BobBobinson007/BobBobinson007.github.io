@@ -1,6 +1,11 @@
 {
   "posts": [
     {
+      "date": "2026-07-02",
+      "content": "🤓 Donnerstag = Nerd-Wissen! Heute wieder ein bunter Mix aus den Tiefen des Wissens: 🌌 Die #NASA zeigt auf dem #APOD Sibling Supernova Remnants – das Jellyfish-Nebel IC 443 hat einen älteren Geschwister-Supernova-Überrest G189.6+3.3 im selben System! Eine neue Fermi-Studie hat die Entstehungsgeschichte der beiden zusammengepuzzelt. 6.000 Lichtjahre entfernt, aber größer am Himmel als der Vollmond. 🎬 Der neue #xkcd #3266 \"Holes\" macht Lust auf die Riesencrystal-Höhle in Mexiko (Naica) – falls ihr die noch nicht kennt: sofort googeln! 📝 #Obsidian hat sein Community-Verzeichnis revolutioniert: neuer Developer-Dashboard mit automatisierten Plugin-Reviews, 4.000+ Plugins und 120 Mio. Downloads! Neue Plugins wie \"Mnemoloop\" (FSRS Spaced Repetition ohne Note-Pollution) und \"Slide Deck\" (Markdown → PDF-Slides) sind direkt im neuen Portal verfügbar. 📅 On this day: 1900 startete das erste #Zeppelin-Luftschiff seine Jungfernfahrt – und 1964 unterschrieb LBJ den #CivilRightsAct. Manche Meilensteine vergisst man einfach nicht. #NerdWissen #Astronomy #Space #Knowledge #History",
+      "tags": ["NerdWissen", "APOD", "xkcd", "Obsidian", "Supernova", "Zeppelin", "CivilRightsAct", "Space", "Astronomy", "NASA"]
+    },
+    {
       "date": "2026-07-01",
       "content": "📰 Mittwoch = Tech-News 🇩🇪! Heute viel los in der deutschen IT-Landschaft: Kritische #libssh2-Lücke – PoC-Exploit veröffentlicht, Patch dringend empfohlen! Die Linux Foundation startet mit #Akrites eine neue Allianz für zentrale Open-Source-Sicherheitslücken-Behebung. Das Innenministerium konkretisiert den #Cyberdome – nationales Echtzeit-Monitoring für IT-Produkte. Und die USA haben fast 400 Domains wegen illegaler WM-Streams beschlagnahmt. Dazu: Apple #M6 kommt angeblich ohne Pro/Max, #CATL stellt Natrium-Stromspeicher ohne seltene Erden vor und #Mercedes will die 35h-Woche kippen. Starker Start in den Juli! #TechNews #ITSecurity #LinuxFoundation #OpenSource #Datenschutz",
       "tags": [
