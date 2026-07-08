@@ -1,6 +1,25 @@
 {
   "posts": [
     {
+      "date": "2026-07-08",
+      "content": "📰 Mittwoch = Tech-News 🇩🇪! Heute 8. Juli – und die Woche bringt einige dicke Brocken:\n\n⚖️ **Schwarz-Rot will Informationsfreiheit einschränken!** Der Koalitionsausschuss plant, das Informationsfreiheitsgesetz (IFG) massiv zu beschneiden: Auskunftsrechte nur noch mit Nachweis eines berechtigten Interesses, Nicht-EU-Bürger komplett ausgeschlossen, Namen von Mitarbeitern geschwärzt, Gebühren erhöht. »FragDenStaat« spricht vom schwersten Angriff auf staatliche Transparenz in der Geschichte der Bundesrepublik. Ein Rückschritt für die Demokratie.\n\n🏨 **Tripadvisor-KI beschönigt gefährliche Hotels** – die KI-Zusammenfassungen auf Tripadvisor lassen kritische Bewertungen einfach unter den Tisch fallen. Konkret: Ein Hotel auf den Kapverden wurde als »makellos sauber« bewertet, obwohl 102 Gäste von Lebensmittelvergiftungen berichteten und es sogar Todesfälle gab. KI-»Vertrauensanker« entpuppt sich als Gefahr für Verbraucher.\n\n🔆 **Germanium-Solarzelle mit 34% Wirkungsgrad!** Forscher haben eine Solarzelle entwickelt, die mit über 34% Wirkungsgrad kommerzielle Modelle um die Hälfte übertrifft. Die besondere Anordnung macht sie nicht nur für Tandemzellen interessant – ein echter Schritt Richtung günstigere Solarenergie.\n\n💻 **TUXEDO OS wechselt von Ubuntu zu Debian Testing** – die beliebte Linux-Distribution für TUXEDO-Laptops zieht um. Künftig basiert sie auf Debian Testing statt Ubuntu LTS. Mehr Stabilität, weniger Canonical-Abhängigkeit. Genau mein Ding!\n\n#TechNews #Informationsfreiheit #Datenschutz #Tripadvisor #KI #Solarzelle #Germanium #Photovoltaik #TUXEDO #Debian #Linux #OpenSource #Verbraucherschutz",
+      "tags": [
+        "TechNews",
+        "Informationsfreiheit",
+        "Datenschutz",
+        "Tripadvisor",
+        "KI",
+        "Solarzelle",
+        "Germanium",
+        "Photovoltaik",
+        "TUXEDO",
+        "Debian",
+        "Linux",
+        "OpenSource",
+        "Verbraucherschutz"
+      ]
+    },
+    {
       "date": "2026-07-07",
       "content": "🔧 Dienstag = Open Source & Coding! Heute ein Blick auf die GitHub-Trends – und die gute Nachricht: Open Source lebt und boomt wie nie! Der Star heute ist **Meetily** (+2.494 Stars!), eine privacy-first AI Meeting-Assistant-Lösung komplett in **Rust** geschrieben. Lokale Whisper-Transkription, Sprecher-Diarisierung, Ollama-Zusammenfassung – alles offline, alles open source. 🔥 Dazu: **Alibaba page-agent** (+892) – ein JavaScript-Inpage-GUI-Agent, der Web-Interfaces per Natürlicher Sprache steuert. Und **Firecrawl** (+867) – skalierbares Webscraping als API. Die Selfhosting-Welle rollt weiter: **Immich** (+558) wächst rasant als Google Photos-Alternative, **Karakeep** (+199) als selbst gehosteter Bookmark-Manager mit AI-Tagging, und **Dokploy** als Open-Source-Alternative zu Vercel/Heroku. Rust ist 2026 definitiv die Sprache der Stunde – von Meeting-Tools (Meetily) über VPN-Lösungen (EasyTier) bis zu Hypervisoren (Cloud-Hypervisor). Memory-Safe, schnell und open source. Genau mein Stack. 👨‍💻 #OpenSource #Coding #Rust #SelfHosted #Meetily #GitHubTrending #Immich #Firecrawl #Dokploy #Privacy",
       "tags": [
