@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technik AG RBG – Veranstaltungsbuchung</title>
+<style>
+  :root {
+    --rbg-blue: #003366;
+    --rbg-amber: #e6a800;
+    --rbg-light: #f0f4f8;
+    --accent: #0077b6;
+    --success: #2e7d32;
+    --step-bg: #ffffff;
+    --shadow: 0 4px 20px rgba(0,0,0,0.08);
+    --radius: 12px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background: var(--rbg-light);
+    color: #1a1a2e;
+    line-height: 1.6;
+  }
+
+  /* HEADER */
+  header {
+    background: linear-gradient(135deg, var(--rbg-blue) 0%, #002244 100%);
+    color: #fff;
+    padding: 0.75rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  }
+  .header-logos {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .header-logos a { display: flex; align-items: center; }
+  .header-logos img { height: 44px; width: auto; }
+  .logo-fallback {
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0 0.6rem;
+  }
+  .logo-fallback svg { height: 40px; }
+  .site-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .site-title small {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 400;
+    opacity: 0.8;
+  }
+
+  /* NAV */
+  nav {
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+  }
+  nav a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  nav a:hover, nav a.active {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+  }
+  nav a.active { background: var(--rbg-amber); color: var(--rbg-blue); }
+
+  /* MAIN */
+  main { max-width: 960px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+
+  /* CARDS */
+  .card {
+    background: var(--step-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--rbg-blue);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .card h2 .step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--rbg-blue);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  /* PROGRESS */
+  .progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    position: relative;
+    padding: 0 0.5rem;
+  }
+  .progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: 2rem;
+    right: 2rem;
+    height: 3px;
+    background: #ddd;
+    z-index: 0;
+  }
+  .progress-bar .fill {
+    position: absolute;
+    top: 18px;
+    left: 2rem;
+    height: 3px;
+    background: var(--accent);
+    z-index: 1;
+    transition: width 0.4s ease;
+  }
+  .progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .progress-step .circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #ddd;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: all 0.3s;
+    border: 3px solid transparent;
+  }
+  .progress-step.active .circle {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(0,119,182,0.2);
+  }
+  .progress-step.done .circle {
+    background: var(--success);
+    color: #fff;
+    border-color: var(--success);
+  }
+  .progress-step .label {
+    font-size: 0.7rem;
+    color: #888;
+    font-weight: 500;
+    text-align: center;
+    max-width: 80px;
+  }
+  .progress-step.active .label { color: var(--accent); font-weight: 700; }
+  .progress-step.done .label { color: var(--success); }
+
+  /* STEPS */
+  .step-content { display: none; }
+  .step-content.active { display: block; animation: fadeIn 0.3s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* FORM */
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+  .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  .form-group label .hint {
+    font-weight: 400;
+    color: #888;
+    font-size: 0.8rem;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    border: 1.5px solid #d0d5dd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: border 0.2s;
+    font-family: inherit;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(0,119,182,0.1);
+  }
+  .form-group textarea { resize: vertical; min-height: 80px; }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .form-row-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+  @media (max-width: 600px) {
+    .form-row, .form-row-3 { grid-template-columns: 1fr; }
+  }
+
+  /* CHIPS */
+  .chip-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .chip {
+    padding: 0.5rem 1.2rem;
+    border-radius: 24px;
+    border: 2px solid #d0d5dd;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  .chip:hover { border-color: var(--accent); background: #eef6fb; }
+  .chip.selected {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: #fff;
+  }
+
+  /* SPOTIFY */
+  .spotify-preview {
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .spotify-preview iframe { border-radius: 8px; max-width: 100%; }
+
+  /* FILE UPLOAD */
+  .file-upload-area {
+    border: 2px dashed #d0d5dd;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: #fafbfc;
+  }
+  .file-upload-area:hover { border-color: var(--accent); background: #eef6fb; }
+  .file-upload-area.dragover { border-color: var(--accent); background: #d4e6f5; }
+  .file-upload-area input { display: none; }
+  .file-upload-area .icon { font-size: 2rem; margin-bottom: 0.5rem; }
+  .file-list {
+    margin-top: 1rem;
+    list-style: none;
+  }
+  .file-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.7rem;
+    background: #f5f7fa;
+    border-radius: 6px;
+    margin-bottom: 0.3rem;
+    font-size: 0.85rem;
+  }
+  .file-list li .remove {
+    margin-left: auto;
+    cursor: pointer;
+    color: #e74c3c;
+    font-weight: 700;
+    background: none;
+    border: none;
+    font-size: 1rem;
+  }
+
+  /* EQUIPMENT CHECKLIST */
+  .equip-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  @media (max-width: 600px) { .equip-grid { grid-template-columns: 1fr; } }
+  .equip-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.7rem;
+    background: #f8f9fb;
+    border-radius: 8px;
+    font-size: 0.9rem;
+  }
+  .equip-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent);
+  }
+
+  /* BUTTONS */
+  .btn-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .btn {
+    padding: 0.7rem 2rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+  }
+  .btn-primary:hover { background: #005f8c; transform: translateY(-1px); }
+  .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+  .btn-secondary {
+    background: #e9ecef;
+    color: #333;
+  }
+  .btn-secondary:hover { background: #d0d5dd; }
+  .btn-success {
+    background: var(--success);
+    color: #fff;
+  }
+  .btn-success:hover { background: #1b5e20; transform: translateY(-1px); }
+  .btn-danger {
+    background: #e74c3c;
+    color: #fff;
+  }
+  .btn-danger:hover { background: #c0392b; }
+  .btn-sm { padding: 0.4rem 1rem; font-size: 0.85rem; }
+
+  /* SUMMARY */
+  .summary-grid {
+    display: grid;
+    gap: 0.8rem;
+  }
+  .summary-item {
+    display: flex;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  .summary-item .label {
+    font-weight: 600;
+    min-width: 140px;
+    color: #555;
+  }
+  .summary-item .value { flex: 1; }
+
+  /* GITHUB */
+  .github-box {
+    background: #f5f7fa;
+    border: 1px solid #e0e4e8;
+    border-radius: 8px;
+    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .github-box input { flex: 1; min-width: 200px; }
+  .github-box a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .github-box a:hover { text-decoration: underline; }
+
+  /* FEATURE GRID */
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+  .feature-card {
+    background: #f8f9fb;
+    border-radius: 10px;
+    padding: 1.2rem;
+    border: 1px solid #e8ecf0;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .feature-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  }
+  .feature-card .symbol { font-size: 1.8rem; margin-bottom: 0.5rem; }
+  .feature-card h4 { font-size: 0.95rem; margin-bottom: 0.3rem; }
+  .feature-card p { font-size: 0.8rem; color: #666; }
+
+  /* SUCCESS */
+  .success-screen {
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+  .success-screen .big { font-size: 4rem; margin-bottom: 0.5rem; }
+  .success-screen h2 { font-size: 1.8rem; color: var(--success); margin-bottom: 0.5rem; }
+  .success-screen p { color: #666; max-width: 500px; margin: 0 auto 1.5rem; }
+  .email-preview {
+    background: #f5f7fa;
+    border-radius: 8px;
+    padding: 1.2rem;
+    text-align: left;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    margin: 1rem 0;
+    white-space: pre-wrap;
+    border: 1px solid #e0e4e8;
+  }
+
+  /* DATENSCHUTZ */
+  .privacy-notice {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    font-size: 0.8rem;
+    color: #6d5200;
+    margin: 0.5rem 0 1rem;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    color: #888;
+    font-size: 0.85rem;
+    border-top: 1px solid #e0e4e8;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  /* TOAST */
+  .toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #1a1a2e;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+    font-size: 0.9rem;
+    z-index: 999;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+  .toast.show { transform: translateY(0); opacity: 1; }
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #f0f0f0; }
+  ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+
+  /* GMAIL HINWEIS */
+  .gmail-hint {
+    background: #e3f2fd;
+    border: 1px solid #90caf9;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+  }
+  .gmail-hint strong { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-logos">
+    <!-- RBG Logo -->
+    <a href="https://rbg-g.de" target="_blank" title="RBG Gerlingen">
+      <img src="https://rbg-g.de/wp-content/uploads/2024/06/cropped-RBG_Logo_Header_transparent.png"
+           alt="RBG Gerlingen"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <span class="logo-fallback" style="display:none">
+        <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="120" height="40" rx="6" fill="#e6a800"/>
+          <text x="60" y="27" text-anchor="middle" fill="#003366" font-weight="800" font-size="18">RBG</text>
+        </svg>
+      </span>
+    </a>
+
+    <!-- HEIT Logo -->
+    <a href="#" title="HEIT" style="color:#fff;text-decoration:none">
+      <span class="logo-fallback">
+        <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="100" height="40" rx="6" fill="rgba(255,255,255,0.12)"/>
+          <text x="50" y="26" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">HEIT</text>
+        </svg>
+      </span>
+    </a>
+  </div>
+
+  <div class="site-title">
+    Technik AG <small>Robert-Bosch-Gymnasium Gerlingen</small>
+  </div>
+
+  <nav>
+    <a href="#" class="active" data-page="new">[+] Neu / Buchen</a>
+    <a href="#" data-page="overview">[~] Uebersicht</a>
+    <a href="#" data-page="equipment">[*] Equipment</a>
+    <a href="#" data-page="github">[#] GitHub</a>
+  </nav>
+</header>
+
+<!-- MAIN -->
+<main>
+
+  <!-- PAGE: NEU / BUCHEN -->
+  <div id="page-new" class="page active">
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar">
+      <div class="fill" id="progressFill" style="width:0%"></div>
+      <div class="progress-step active" data-step="1">
+        <div class="circle">1</div>
+        <span class="label">Veranstaltung</span>
+      </div>
+      <div class="progress-step" data-step="2">
+        <div class="circle">2</div>
+        <span class="label">Details</span>
+      </div>
+      <div class="progress-step" data-step="3">
+        <div class="circle">3</div>
+        <span class="label">Medien</span>
+      </div>
+      <div class="progress-step" data-step="4">
+        <div class="circle">4</div>
+        <span class="label">Technik</span>
+      </div>
+      <div class="progress-step" data-step="5">
+        <div class="circle">5</div>
+        <span class="label">Bestätigung</span>
+      </div>
+    </div>
+
+    <form id="bookingForm" onsubmit="return false;">
+
+      <!-- STEP 1 -->
+      <div class="card step-content active" data-step="1">
+        <h2><span class="step-num">1</span> Art der Veranstaltung</h2>
+
+        <div class="form-group">
+          <label>Was fuer eine Veranstaltung?</label>
+          <div class="chip-group" id="eventType">
+            <span class="chip" data-value="konzert">[~] Konzert</span>
+            <span class="chip" data-value="theater">[*] Theater</span>
+            <span class="chip" data-value="film">[>] Filmvorfuehrung</span>
+            <span class="chip" data-value="workshop">[+] Workshop</span>
+            <span class="chip" data-value="ag-treffen">[o] AG-Treffen</span>
+            <span class="chip" data-value="vortrag">[!] Vortrag</span>
+            <span class="chip" data-value="sonstiges">[?] Sonstiges</span>
+          </div>
+          <input type="hidden" name="eventType" id="eventTypeInput" required>
+        </div>
+
+        <div class="form-group" id="otherTypeGroup" style="display:none">
+          <label>Sonstigen Typ angeben</label>
+          <input type="text" id="otherType" placeholder="z.B. Open Stage, Lesung, ...">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Ansprechpartner <span class="hint">(Name)</span></label>
+            <input type="text" id="contactName" placeholder="Max Mustermann" required>
+          </div>
+          <div class="form-group">
+            <label>E-Mail fuer Rueckmeldung</label>
+            <input type="email" id="contactEmail" placeholder="max.mustermann@rbg-g.de" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Titel der Veranstaltung</label>
+            <input type="text" id="eventTitle" placeholder="z.B. Sommerkonzert 2026" required>
+          </div>
+          <div class="form-group">
+            <label>Klasse / Stufe <span class="hint">(optional)</span></label>
+            <input type="text" id="classLevel" placeholder="z.B. Kl. 7-10">
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <span></span>
+          <button type="button" class="btn btn-primary" onclick="nextStep()">Weiter [>]</button>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="card step-content" data-step="2">
+        <h2><span class="step-num">2</span> Datum, Ort &amp; Beschreibung</h2>
+
+        <div class="form-row-3">
+          <div class="form-group">
+            <label>Datum</label>
+            <input type="date" id="eventDate" required>
+          </div>
+          <div class="form-group">
+            <label>Beginn</label>
+            <input type="time" id="eventStart" required>
+          </div>
+          <div class="form-group">
+            <label>Ende <span class="hint">(ca.)</span></label>
+            <input type="time" id="eventEnd" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Ort / Raum</label>
+          <select id="eventLocation">
+            <option value="">-- Ort waehlen --</option>
+            <option value="Atrium">Atrium</option>
+            <option value="Aula">Aula</option>
+            <option value="Musiksaal">Musiksaal</option>
+            <option value="Mensa">Mensa</option>
+            <option value="Physiksaal">Physiksaal</option>
+            <option value="Informatikraum">Informatikraum</option>
+            <option value="Schulhof">Schulhof</option>
+            <option value="Theaterraum">Theaterraum</option>
+            <option value="Klassenzimmer">Klassenzimmer</option>
+            <option value="extern">Externer Ort</option>
+          </select>
+        </div>
+        <div class="form-group" id="externalLocationGroup" style="display:none">
+          <label>Externen Ort angeben</label>
+          <input type="text" id="externalLocation" placeholder="z.B. Stadthalle Gerlingen">
+        </div>
+
+        <div class="form-group">
+          <label>Beschreibung <span class="hint">(fuer die Ankuendigung)</span></label>
+          <textarea id="eventDescription" rows="3" placeholder="Was erwartet die Besucher? ..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Anmerkungen / Notizen <span class="hint">(intern fuer die Technik-AG)</span></label>
+          <textarea id="eventNotes" rows="3" placeholder="Besondere Anforderungen, Aufbauhinweise, ..."></textarea>
+        </div>
+
+        <div class="btn-row">
+          <button type="button" class="btn btn-secondary" onclick="prevStep()">[<] Zurueck</button>
+          <button type="button" class="btn btn-primary" onclick="nextStep()">Weiter [>]</button>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="card step-content" data-step="3">
+        <h2><span class="step-num">3</span> Medien &amp; Dateien</h2>
+
+        <!-- Spotify -->
+        <div class="form-group">
+          <label>[==] Spotify-Playlist <span class="hint">(optional - Link einfuegen)</span></label>
+          <input type="url" id="spotifyUrl"
+                 placeholder="https://open.spotify.com/playlist/..."
+                 oninput="updateSpotifyPreview()">
+          <div class="spotify-preview" id="spotifyPreview"></div>
+        </div>
+
+        <!-- Dateien -->
+        <div class="form-group">
+          <label>[/] Dateien hochladen <span class="hint">(Scripte, PDFs, Noten, Grafiken, ...)</span></label>
+          <div class="file-upload-area" id="fileDropArea">
+            <div class="icon">[+]</div>
+            <p><strong>Klicken</strong> zum Auswaehlen oder <strong>Drag &amp; Drop</strong></p>
+            <p style="font-size:0.8rem;color:#888">Scripte, Noten, Buehnenplaene, PDFs, Bilder ...</p>
+            <input type="file" id="fileInput" multiple accept=".pdf,.doc,.docx,.txt,.md,.png,.jpg,.jpeg,.svg,.mp3,.mp4,.zip">
+          </div>
+          <ul class="file-list" id="fileList"></ul>
+        </div>
+
+        <!-- GitHub -->
+        <div class="form-group">
+          <label>[#] GitHub-Repository <span class="hint">(optional)</span></label>
+          <div class="github-box">
+            <span style="font-weight:700">[#]</span>
+            <input type="url" id="githubUrl"
+                   placeholder="https://github.com/username/repo"
+                   style="border:1.5px solid #d0d5dd;border-radius:6px;padding:0.5rem 0.7rem;font-size:0.9rem">
+            <span style="font-size:0.8rem;color:#888">oder</span>
+            <a href="https://github.com/rbg-technik-ag" target="_blank" style="white-space:nowrap">Technik-AG GitHub [-]</a>
+          </div>
+          <p style="font-size:0.8rem;color:#888;margin-top:0.3rem">
+            Link: <a href="https://bobbobinson007.github.io/rbg-technik-ag" target="_blank">bobbobinson007.github.io/rbg-technik-ag</a>
+          </p>
+        </div>
+
+        <!-- Datenschutz -->
+        <div class="privacy-notice">
+          [i] Datenschutzhinweis: Alle eingegebenen Daten werden nur lokal in Ihrem Browser gespeichert
+          und nicht an Dritte uebermittelt. Die E-Mail wird ueber Ihr eigenes Mailprogramm versendet.
+        </div>
+
+        <div class="btn-row">
+          <button type="button" class="btn btn-secondary" onclick="prevStep()">[<] Zurueck</button>
+          <button type="button" class="btn btn-primary" onclick="nextStep()">Weiter [>]</button>
+        </div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="card step-content" data-step="4">
+        <h2><span class="step-num">4</span> Benoetigtes Equipment</h2>
+        <p style="color:#666;margin-bottom:1rem">Welche Technik wird von der Technik-AG benoetigt?</p>
+
+        <div class="equip-grid">
+          <label class="equip-item"><input type="checkbox" name="equip" value="mischpult"> [~~] Mischpult</label>
+          <label class="equip-item"><input type="checkbox" name="equip" value="boxen"> [o] PA-Boxen</label>
+          <label class="equip-item"><input type="checkbox" name="equip" value="mikrofone"> [*] Mikrofone (Kabel)</label>
+          <label class="equip-item"><input type="checkbox" name="equip" value="mikrofone-funk"> [~] Funkmikrofone</label>
+          <label class="equip-item"><input type="checkbox" name="equip" value="beamer"> [>] Beamer / Projektor</label>
+          <label class="equip-item"><input type="checkbox" name="equip" value="leinwand"> [ ] Leinwand</label>
+          <label class="equip-item"><input type="checkbox" name="equip" value="lichtpult"> [*] Lichtpult</label>
+          <label class="equip-item"><input type="checkbox" name="equip" value="parscheinwerfer"> [o] PAR-Scheinwerfer</label>
+          <label class="equip-item"><input type="checkbox" name="equip" value="moving-head"> [~] Moving Heads</label>
+          <label class="equip-item"><input type="checkbox" name="equip" value="nebelschleier"> [-] Nebelmaschine</label>
+          <label class="equip-item"><input type="checkbox" name="equip" value="kabel"> [/] Kabel / Verlaengerungen</label>
+          <label class="equip-item"><input type="checkbox" name="equip" value="strom"> [=] Stromverteiler</label>
+          <label class="equip-item"><input type="checkbox" name="equip" value="notenständer"> [|] Notenstaender</label>
+          <label class="equip-item"><input type="checkbox" name="equip" value="buehne"> [#] Buehnenpodeste</label>
+          <label class="equip-item"><input type="checkbox" name="equip" value="laptop"> [=] Laptop / Steuerrechner</label>
+          <label class="equip-item"><input type="checkbox" name="equip" value="cam"> [o] Kamera / Livestream</label>
+        </div>
+
+        <div class="form-group" style="margin-top:1rem">
+          <label>Sonstiges Equipment / Anmerkungen</label>
+          <textarea id="otherEquip" rows="2" placeholder="Weitere Technikwuensche ..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>[-] Benoetigte Techniker</label>
+          <input type="number" id="techCount" min="0" max="10" value="2" style="max-width:100px">
+        </div>
+
+        <div class="btn-row">
+          <button type="button" class="btn btn-secondary" onclick="prevStep()">[<] Zurueck</button>
+          <button type="button" class="btn btn-primary" onclick="nextStep()">Weiter [>]</button>
+        </div>
+      </div>
+
+      <!-- STEP 5 -->
+      <div class="card step-content" data-step="5">
+        <h2><span class="step-num">5</span> Bestaetigung &amp; Absenden</h2>
+
+        <div class="summary-grid" id="summaryGrid"></div>
+
+        <!-- Mail Vorschau -->
+        <div style="margin-top:1.5rem">
+          <label style="font-weight:600;display:block;margin-bottom:0.3rem">
+            [@] Automatisch generierte E-Mail (Betreff: "Technik AG Buchung - Nix aendern!")
+          </label>
+          <div class="email-preview" id="emailPreview"></div>
+        </div>
+
+        <!-- Gmail Automatisierung -->
+        <div class="gmail-hint">
+          <strong>[-] Automatischer Versand ueber Gmail:</strong><br>
+          Der Button oeffnet Gmail im Browser mit allen Daten ausgefuellt.
+          Wenn du ein Gmail-Filter auf den Betreff
+          <strong>"Technik AG Buchung - Nix aendern!"</strong> einrichtest,
+          kannst du die E-Mails automatisch verarbeiten lassen.
+          <br><br>
+          <strong>Filter-Vorschlag fuer Gmail:</strong><br>
+          <code style="background:#e0e0e0;padding:0.2rem 0.4rem;border-radius:3px;font-size:0.85rem">
+            Betreff: "Technik AG Buchung" -> Weiterleiten an: technik-ag@rbg-g.de
+          </code>
+        </div>
+
+        <!-- Datenschutz -->
+        <div class="privacy-notice">
+          [i] Datenschutz: Diese Daten werden nur lokal gespeichert. Die E-Mail wird
+          ausschliesslich ueber Ihren eigenen Gmail-Account versendet. Es erfolgt keine
+          Speicherung auf externen Servern.
+        </div>
+
+        <div class="btn-row" style="margin-top:1.5rem">
+          <button type="button" class="btn btn-secondary" onclick="prevStep()">[<] Bearbeiten</button>
+          <button type="button" class="btn btn-success" onclick="submitBooking()">
+            [@] Buchung absenden &amp; E-Mail via Gmail oeffnen
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- PAGE: UEBERSICHT -->
+  <div id="page-overview" class="page" style="display:none">
+    <div class="card">
+      <h2>[~] Gebuchte Veranstaltungen</h2>
+      <p style="color:#666;margin-bottom:1rem">Alle Eintraege dieser Session (lokal gespeichert).</p>
+      <div id="bookingList">
+        <p style="color:#999;text-align:center;padding:2rem">Noch keine Buchungen vorhanden.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE: EQUIPMENT -->
+  <div id="page-equipment" class="page" style="display:none">
+    <div class="card">
+      <h2>[*] Equipment-Uebersicht</h2>
+      <p style="color:#666;margin-bottom:1rem">Verfuegbare Technik und Ausleihstatus.</p>
+      <table style="width:100%;border-collapse:collapse">
+        <thead>
+          <tr style="background:var(--rbg-blue);color:#fff;text-align:left">
+            <th style="padding:0.6rem 0.8rem">Geraet</th>
+            <th style="padding:0.6rem 0.8rem">Anzahl</th>
+            <th style="padding:0.6rem 0.8rem">Status</th>
+            <th style="padding:0.6rem 0.8rem">Naechste Buchung</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:0.6rem 0.8rem">Mischpult (Digital)</td><td>2</td><td style="color:var(--success)">[OK] Verfuegbar</td><td>--</td></tr>
+          <tr><td style="padding:0.6rem 0.8rem">PA-Boxen</td><td>4</td><td style="color:var(--success)">[OK] Verfuegbar</td><td>--</td></tr>
+          <tr><td style="padding:0.6rem 0.8rem">Funkmikrofone</td><td>6</td><td style="color:var(--success)">[OK] Verfuegbar</td><td>--</td></tr>
+          <tr><td style="padding:0.6rem 0.8rem">Kabelmikrofone</td><td>8</td><td style="color:var(--success)">[OK] Verfuegbar</td><td>--</td></tr>
+          <tr><td style="padding:0.6rem 0.8rem">Lichtpult</td><td>1</td><td style="color:var(--success)">[OK] Verfuegbar</td><td>--</td></tr>
+          <tr><td style="padding:0.6rem 0.8rem">Moving Heads</td><td>4</td><td style="color:var(--success)">[OK] Verfuegbar</td><td>--</td></tr>
+          <tr><td style="padding:0.6rem 0.8rem">Beamer</td><td>2</td><td style="color:var(--success)">[OK] Verfuegbar</td><td>--</td></tr>
+          <tr><td style="padding:0.6rem 0.8rem">Nebelmaschine</td><td>1</td><td style="color:var(--success)">[OK] Verfuegbar</td><td>--</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- PAGE: GITHUB -->
+  <div id="page-github" class="page" style="display:none">
+    <div class="card">
+      <h2>[#] Technik-AG auf GitHub</h2>
+      <p style="color:#666;margin-bottom:1.5rem">
+        Hier landen Scripte, Buehnenplaene, DMX-Konfigurationen und mehr.
+      </p>
+      <div class="github-box" style="margin-bottom:1rem">
+        <span style="font-weight:700">[#]</span>
+        <a href="https://github.com/rbg-technik-ag" target="_blank">
+          github.com/rbg-technik-ag
+        </a>
+      </div>
+      <div class="github-box" style="margin-bottom:1.5rem">
+        <span style="font-weight:700">[~]</span>
+        <a href="https://bobbobinson007.github.io/rbg-technik-ag" target="_blank">
+          bobbobinson007.github.io/rbg-technik-ag
+        </a>
+        <span style="font-size:0.8rem;color:#888">(Website in Kuerze verfuegbar)</span>
+      </div>
+      <div class="feature-grid" style="margin-bottom:1.5rem">
+        <div class="feature-card">
+          <div class="symbol">[*]</div>
+          <h4>Theater-Scripte</h4>
+          <p>Alle Theaterstuecke &amp; Probenfassungen</p>
+        </div>
+        <div class="feature-card">
+          <div class="symbol">[~]</div>
+          <h4>DMX-Konfigs</h4>
+          <p>Lighting-Setups &amp; Patchplaene</p>
+        </div>
+        <div class="feature-card">
+          <div class="symbol">[/]</div>
+          <h4>Checklisten</h4>
+          <p>Vorlagen fuer Auf- &amp; Abbau</p>
+        </div>
+        <div class="feature-card">
+          <div class="symbol">[=]</div>
+          <h4>How-Tos</h4>
+          <p>Anleitungen fuer Technik-Einweisungen</p>
+        </div>
+      </div>
+      <p style="font-size:0.9rem;color:#888">
+        Repository klonen:<br>
+        <code style="background:#f0f0f0;padding:0.3rem 0.6rem;border-radius:4px">
+          git clone https://github.com/rbg-technik-ag/technik-ag.git
+        </code>
+      </p>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  Technik AG - Robert-Bosch-Gymnasium Gerlingen -
+  <a href="https://rbg-g.de" target="_blank">rbg-g.de</a> -
+  <a href="https://github.com/rbg-technik-ag" target="_blank">GitHub</a> -
+  <a href="https://bobbobinson007.github.io/rbg-technik-ag" target="_blank">Webseite</a> -
+  <span id="footerDate"></span>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- JAVASCRIPT -->
+<script>
+(function() {
+  const DATA = { bookings: JSON.parse(localStorage.getItem('ta_bookings') || '[]') };
+  let currentStep = 1;
+  let uploadedFiles = [];
+
+  // Seiten-Navigation
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const page = this.dataset.page;
+      document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+      this.classList.add('active');
+      document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+      const target = document.getElementById('page-' + page);
+      if (target) target.style.display = 'block';
+      if (page === 'overview') renderOverview();
+    });
+  });
+
+  // Step Navigation
+  window.nextStep = function() {
+    if (!validateStep(currentStep)) return;
+    document.querySelector('.step-content[data-step="'+currentStep+'"]').classList.remove('active');
+    document.querySelector('.progress-step[data-step="'+currentStep+'"]').classList.add('done');
+    document.querySelector('.progress-step[data-step="'+currentStep+'"]').classList.remove('active');
+    currentStep++;
+    document.querySelector('.step-content[data-step="'+currentStep+'"]').classList.add('active');
+    document.querySelector('.progress-step[data-step="'+currentStep+'"]').classList.add('active');
+    updateProgressFill();
+    if (currentStep === 5) buildSummary();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  window.prevStep = function() {
+    document.querySelector('.step-content[data-step="'+currentStep+'"]').classList.remove('active');
+    document.querySelector('.progress-step[data-step="'+currentStep+'"]').classList.remove('active');
+    currentStep--;
+    document.querySelector('.step-content[data-step="'+currentStep+'"]').classList.add('active');
+    document.querySelector('.progress-step[data-step="'+currentStep+'"]').classList.remove('done');
+    document.querySelector('.progress-step[data-step="'+currentStep+'"]').classList.add('active');
+    updateProgressFill();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  function updateProgressFill() {
+    document.getElementById('progressFill').style.width = ((currentStep - 1) / 4 * 100) + '%';
+  }
+
+  function validateStep(step) {
+    if (step === 1) {
+      if (!document.getElementById('eventTypeInput').value) { showToast('Bitte waehle eine Veranstaltungsart aus.'); return false; }
+      if (!document.getElementById('contactName').value.trim()) { showToast('Bitte gib einen Ansprechpartner an.'); return false; }
+      if (!document.getElementById('contactEmail').value.trim()) { showToast('Bitte gib eine E-Mail an.'); return false; }
+      if (!document.getElementById('eventTitle').value.trim()) { showToast('Bitte gib einen Titel ein.'); return false; }
+    }
+    if (step === 2) {
+      if (!document.getElementById('eventDate').value) { showToast('Bitte waehle ein Datum.'); return false; }
+      if (!document.getElementById('eventStart').value || !document.getElementById('eventEnd').value) { showToast('Bitte gib Beginn und Ende an.'); return false; }
+      if (!document.getElementById('eventLocation').value) { showToast('Bitte waehle einen Ort.'); return false; }
+    }
+    return true;
+  }
+
+  // Chips
+  document.querySelectorAll('.chip').forEach(chip => {
+    chip.addEventListener('click', function() {
+      document.querySelectorAll('.chip').forEach(c => c.classList.remove('selected'));
+      this.classList.add('selected');
+      document.getElementById('eventTypeInput').value = this.dataset.value;
+      document.getElementById('otherTypeGroup').style.display = this.dataset.value === 'sonstiges' ? 'block' : 'none';
+    });
+  });
+
+  // Externer Ort
+  document.getElementById('eventLocation').addEventListener('change', function() {
+    document.getElementById('externalLocationGroup').style.display = this.value === 'extern' ? 'block' : 'none';
+  });
+
+  // Spotify
+  window.updateSpotifyPreview = function() {
+    const url = document.getElementById('spotifyUrl').value.trim();
+    const container = document.getElementById('spotifyPreview');
+    container.innerHTML = '';
+    if (!url) return;
+    const match = url.match(/(?:playlist|album|track)[\/:]([a-zA-Z0-9]{22})/);
+    if (match) {
+      const type = url.includes('album') ? 'album' : url.includes('track') ? 'track' : 'playlist';
+      container.innerHTML = '<iframe src="https://open.spotify.com/embed/' + type + '/' + match[1] + '?utm_source=generator&theme=0" width="100%" height="152" allow="encrypted-media" style="border-radius:8px"></iframe>';
+    } else {
+      container.innerHTML = '<p style="font-size:0.8rem;color:#999">[!] Bitte einen gueltigen Spotify-Link einfuegen.</p>';
+    }
+  };
+
+  // File Upload
+  const dropArea = document.getElementById('fileDropArea');
+  const fileInput = document.getElementById('fileInput');
+  const fileList = document.getElementById('fileList');
+  dropArea.addEventListener('click', () => fileInput.click());
+  dropArea.addEventListener('dragover', e => { e.preventDefault(); dropArea.classList.add('dragover'); });
+  dropArea.addEventListener('dragleave', () => dropArea.classList.remove('dragover'));
+  dropArea.addEventListener('drop', e => { e.preventDefault(); dropArea.classList.remove('dragover'); handleFiles(e.dataTransfer.files); });
+  fileInput.addEventListener('change', () => handleFiles(fileInput.files));
+
+  function handleFiles(files) {
+    for (const f of files) {
+      if (f.size > 50 * 1024 * 1024) { showToast('"' + f.name + '" ist zu gross (max. 50 MB).'); continue; }
+      uploadedFiles.push(f);
+    }
+    renderFileList();
+  }
+
+  function renderFileList() {
+    fileList.innerHTML = '';
+    if (uploadedFiles.length === 0) return;
+    uploadedFiles.forEach((f, i) => {
+      const li = document.createElement('li');
+      li.innerHTML = '<span>[/]</span><span>' + f.name + '</span><span style="color:#888;font-size:0.8rem">(' + (f.size / 1024).toFixed(0) + ' KB)</span><button class="remove" onclick="window.removeFile(' + i + ')">[x]</button>';
+      fileList.appendChild(li);
+    });
+  }
+
+  window.removeFile = function(idx) { uploadedFiles.splice(idx, 1); renderFileList(); };
+
+  // Zusammenfassung
+  function buildSummary() {
+    const g = id => document.getElementById(id);
+    const v = id => (g(id) ? g(id).value : '');
+    const t = () => { const s = document.querySelectorAll('.chip.selected'); return s.length ? s[0].textContent.trim() : '--'; };
+    const e = () => {
+      const sel = [];
+      document.querySelectorAll('.equip-item input:checked').forEach(c => sel.push(c.parentElement.textContent.trim()));
+      return sel.length ? sel.join(', ') : 'Keine';
+    };
+    const loc = v('eventLocation');
+    const locationDisplay = loc === 'extern' ? v('externalLocation') : loc || '--';
+
+    const items = [
+      ['Veranstaltungstyp', t()],
+      ['Titel', v('eventTitle')],
+      ['Ansprechpartner', v('contactName') + ' (' + v('contactEmail') + ')'],
+      ['Klasse / Stufe', v('classLevel') || '--'],
+      ['Datum', v('eventDate')],
+      ['Zeit', v('eventStart') + ' - ' + v('eventEnd')],
+      ['Ort', locationDisplay],
+      ['Beschreibung', v('eventDescription') || '--'],
+      ['Anmerkungen', v('eventNotes') || '--'],
+      ['Spotify', v('spotifyUrl') || '--'],
+      ['GitHub', v('githubUrl') || '--'],
+      ['Equipment', e()],
+      ['Sonst. Equipment', v('otherEquip') || '--'],
+      ['Techniker', v('techCount') || '2'],
+      ['Dateien', uploadedFiles.length ? uploadedFiles.map(f => f.name).join(', ') : 'Keine']
+    ];
+
+    document.getElementById('summaryGrid').innerHTML = items.map(([label, value]) =>
+      '<div class="summary-item"><span class="label">' + label + '</span><span class="value">' + value + '</span></div>'
+    ).join('');
+
+    // E-Mail mit fixem Betreff
+    const email = [
+      'Betreff: Technik AG Buchung - Nix aendern!',
+      '',
+      'Hallo Technik-AG-Team,',
+      '',
+      'hiermit buche ich folgende Veranstaltung:',
+      '',
+      '-- Veranstaltung ----------',
+      'Typ:     ' + t(),
+      'Titel:   ' + v('eventTitle'),
+      'Datum:   ' + v('eventDate'),
+      'Zeit:    ' + v('eventStart') + ' - ' + v('eventEnd'),
+      'Ort:     ' + locationDisplay,
+      '',
+      '-- Kontakt ---------------',
+      'Name:    ' + v('contactName'),
+      'E-Mail:  ' + v('contactEmail'),
+      'Klasse:  ' + (v('classLevel') || '--'),
+      '',
+      '-- Beschreibung ----------',
+      v('eventDescription') || '--',
+      '',
+      '-- Anmerkungen -----------',
+      v('eventNotes') || '--',
+      '',
+      '-- Equipment -------------',
+      'Gewuenscht: ' + e(),
+      'Sonstiges: ' + (v('otherEquip') || '--'),
+      'Techniker: ' + (v('techCount') || '2'),
+      '',
+      '-- Medien ----------------',
+      'Spotify: ' + (v('spotifyUrl') || '--'),
+      'GitHub:  ' + (v('githubUrl') || '--'),
+      'Dateien: ' + (uploadedFiles.length ? uploadedFiles.map(f => f.name).join(', ') : 'Keine'),
+      '',
+      'Viele Gruesse',
+      v('contactName')
+    ].join('\n');
+
+    document.getElementById('emailPreview').textContent = email;
+  }
+
+  // Submit - Gmail compose
+  window.submitBooking = function() {
+    const v = id => document.getElementById(id).value;
+    const t = () => { const s = document.querySelectorAll('.chip.selected'); return s.length ? s[0].textContent.trim() : ''; };
+    const e = () => {
+      const sel = [];
+      document.querySelectorAll('.equip-item input:checked').forEach(c => sel.push(c.parentElement.textContent.trim()));
+      return sel.length ? sel.join(', ') : 'Keine';
+    };
+    const loc = v('eventLocation') === 'extern' ? v('externalLocation') : v('eventLocation');
+
+    const booking = {
+      id: Date.now(),
+      type: document.querySelector('.chip.selected')?.dataset.value || '',
+      typeLabel: t(),
+      title: v('eventTitle'),
+      contactName: v('contactName'),
+      contactEmail: v('contactEmail'),
+      classLevel: v('classLevel'),
+      date: v('eventDate'),
+      start: v('eventStart'),
+      end: v('eventEnd'),
+      location: loc,
+      description: v('eventDescription'),
+      notes: v('eventNotes'),
+      spotify: v('spotifyUrl'),
+      github: v('githubUrl'),
+      otherEquip: v('otherEquip'),
+      techCount: v('techCount'),
+      files: uploadedFiles.map(f => ({ name: f.name, size: f.size })),
+      equipment: Array.from(document.querySelectorAll('.equip-item input:checked')).map(c => c.value),
+      timestamp: new Date().toISOString()
+    };
+
+    DATA.bookings.push(booking);
+    localStorage.setItem('ta_bookings', JSON.stringify(DATA.bookings));
+
+    // Gmail compose URL
+    const body = document.getElementById('emailPreview').textContent;
+    const subject = 'Technik AG Buchung - Nix aendern!';
+    const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1'
+      + '&to=' + encodeURIComponent(v('contactEmail'))
+      + '&cc=' + encodeURIComponent('technik-ag@rbg-g.de')
+      + '&su=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+
+    // Erfolgsansicht
+    const form = document.getElementById('bookingForm');
+    form.innerHTML = ''
+      + '<div class="card success-screen">'
+      + '  <div class="big">[OK]</div>'
+      + '  <h2>Buchung erfolgreich!</h2>'
+      + '  <p>Deine Veranstaltung <strong>"' + booking.title + '"</strong> wurde gespeichert.</p>'
+      + '  <div class="gmail-hint">'
+      + '    <strong>[-] Automatischer Versand:</strong><br>'
+      + '    Gmail wird jetzt geoeffnet mit:<br>'
+      + '    <strong>Betreff:</strong> Technik AG Buchung - Nix aendern!<br>'
+      + '    <strong>An:</strong> ' + v('contactEmail') + '<br>'
+      + '    <strong>CC:</strong> technik-ag@rbg-g.de<br><br>'
+      + '    <strong>Wichtig fuer Automatisierung:</strong><br>'
+      + '    Richte in Gmail einen Filter ein:<br>'
+      + '    <code style="background:#e0e0e0;padding:0.2rem 0.4rem;border-radius:3px;font-size:0.85rem">'
+      + '      Betreff: "Technik AG Buchung" -> Kategorie: "Technik AG"'
+      + '    </code>'
+      + '  </div>'
+      + '  <div class="privacy-notice">'
+      + '    [i] Datenschutz: Keine Daten werden an Dritte gesendet. Die E-Mail wird ausschliesslich ueber deinen Gmail-Account versendet.'
+      + '  </div>'
+      + '  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem">'
+      + '    <a href="' + gmailUrl + '" class="btn btn-success" target="_blank">[@] Gmail oeffnen</a>'
+      + '    <button class="btn btn-primary" onclick="location.reload()">[+] Neue Buchung</button>'
+      + '    <button class="btn btn-secondary" onclick="document.querySelector(\'nav a[data-page=overview]\').click()">[~] Zur Uebersicht</button>'
+      + '  </div>'
+      + '</div>';
+
+    window.open(gmailUrl, '_blank');
+    showToast('[OK] Buchung gespeichert! Gmail wird geoeffnet ...');
+  };
+
+  // Uebersicht
+  function renderOverview() {
+    const container = document.getElementById('bookingList');
+    const bookings = JSON.parse(localStorage.getItem('ta_bookings') || '[]');
+    if (bookings.length === 0) {
+      container.innerHTML = '<p style="color:#999;text-align:center;padding:2rem">Keine Buchungen vorhanden.</p>';
+      return;
+    }
+    container.innerHTML = bookings.reverse().map(b => ''
+      + '<div style="background:#f8f9fb;border-radius:8px;padding:1rem;margin-bottom:0.8rem;border:1px solid #e8ecf0">'
+      + '  <div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:0.5rem">'
+      + '    <div><strong>' + b.title + '</strong><br><span style="font-size:0.85rem;color:#666">' + b.date + ' - ' + b.start + '-' + b.end + ' - ' + b.location + '</span></div>'
+      + '    <span style="background:var(--accent);color:#fff;padding:0.2rem 0.8rem;border-radius:12px;font-size:0.75rem;font-weight:600">' + b.typeLabel + '</span>'
+      + '  </div>'
+      + '  <div style="font-size:0.85rem;color:#888;margin-top:0.4rem">[@] ' + b.contactName + ' - ' + b.contactEmail + '</div>'
+      + '</div>'
+    ).join('');
+  }
+
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 3500);
+  }
+
+  document.getElementById('footerDate').textContent = new Date().getFullYear();
+  const today = new Date();
+  document.getElementById('eventDate').valueAsDate = today;
+  document.getElementById('eventDate').min = today.toISOString().split('T')[0];
+})();
+</script>
+
+</body>
+</html>
