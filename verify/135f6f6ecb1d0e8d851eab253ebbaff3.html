@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#ffffff">
+<title>Verifiziert</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: -apple-system, 'Helvetica Neue', 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+    background: #ffffff;
+    color: #1d1d1f;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .container {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  /* Checkmark Circle Animation */
+  .checkmark-wrapper {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 32px;
+    position: relative;
+  }
+
+  .checkmark-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #34c759;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: popIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    box-shadow: 0 4px 20px rgba(52, 199, 89, 0.3);
+  }
+
+  .checkmark-circle svg {
+    width: 56px;
+    height: 56px;
+    stroke: white;
+    stroke-width: 3;
+    fill: none;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: drawCheck 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+  }
+
+  @keyframes popIn {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes drawCheck {
+    0% { stroke-dashoffset: 100; }
+    100% { stroke-dashoffset: 0; }
+  }
+
+  /* Status Badge */
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f2f2f7;
+    color: #34c759;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeUp 0.5s ease 0.6s forwards;
+  }
+
+  .status-badge::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #34c759;
+  }
+
+  @keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(8px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Name */
+  .name {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1d1d1f;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeUp 0.5s ease 0.7s forwards;
+    letter-spacing: -0.3px;
+  }
+
+  /* Verification text */
+  .verified-text {
+    font-size: 17px;
+    font-weight: 400;
+    color: #86868b;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp 0.5s ease 0.8s forwards;
+  }
+
+  .verified-text strong {
+    font-weight: 600;
+    color: #1d1d1f;
+  }
+
+  /* Divider */
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: #e5e5ea;
+    margin: 0 auto 24px;
+    opacity: 0;
+    animation: fadeUp 0.5s ease 0.9s forwards;
+  }
+
+  /* Footer */
+  .footer {
+    font-size: 12px;
+    color: #c7c7cc;
+    letter-spacing: 0.3px;
+    opacity: 0;
+    animation: fadeUp 0.5s ease 1.0s forwards;
+  }
+
+  .footer-lock {
+    display: inline-block;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="checkmark-wrapper">
+      <div class="checkmark-circle">
+        <svg viewBox="0 0 24 24">
+          <polyline points="4,13 9,18 20,7"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="status-badge">Verifiziert</div>
+
+    <div class="name">Lina Schröder</div>
+    <div class="verified-text">
+      ist <strong>verifiziertes Mitglied</strong><br>der Technik AG
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="footer">
+      <div class="footer-lock">🔒</div>
+      <div>Zertifizierte Mitgliedschaft · Technik AG</div>
+    </div>
+  </div>
+</body>
+</html>
