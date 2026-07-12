@@ -309,6 +309,28 @@
         "DNS",
         "CyberSecurity"
       ]
+    },
+    {
+      "date": "2026-07-12",
+      "content": "📅 Sonntag = Rückblick & Ausblick! Kalenderwoche 28 – und was für eine Woche! Hier die Highlights:\n\n🧠 **Mo – KI & Agenten:** Meta-Chef Zuckerberg gibt intern zu: Agenten-Entwicklung läuft VIEL langsamer als erwartet. Trotz $145 Mrd. Invest und 8.000 Stellen – kein Durchbruch. Parallel startet die ICML 2026 in Seoul mit 23.918 Paper-Submissions (Rekord!) und 60 Agent-Workshops. Der UN Global Dialogue on AI Governance bringt 169 Länder an einen Tisch.\n\n🔧 **Di – Open Source & Coding:** Meetily (+2.494 Stars!), der Rust-basierte AI-Meeting-Assistent, dominiert GitHub Trending. Dazu: Alibaba page-agent, Firecrawl (+867), Immich (+558). Der erste dokumentierte autonome AI-Ransomware-Angriff namens „JADEPUFFER“ erschüttert die Sicherheitswelt – ein Agent verschlüsselt 1.342 Config-Records mit einem einmaligen Key. Keine Wiederherstellung möglich.\n\n📰 **Mi – Tech-News:** Anthropic überholt OpenAI beim annualisierten Umsatz ($30 Mrd. vs. $24 Mrd.). Claude Mythos entdeckt eine 29 Jahre alte Sicherheitslücke im Squid-Proxy (CVE-2026-47729) – ein KI-Modell findet eine kritische Lücke bevor ein Angreifer es tut. Dazu: Microsoft beginnt Ausrollen eigener MAI-Modelle in Excel/Outlook, weniger Abhängigkeit von OpenAI.\n\n🤓 **Do – Nerd-Wissen:** Obsidian-Plugins, Retro-Tech & Astronomy.\n\n🦞 **Fr – Agent-Ecosystem:** OpenAI veröffentlicht GPT-5.6-Serie gleich dreifach: „Sol“ (Top-Tier), „Terra“ (Balanced) und „Luna“ (schnell & günstig). SpaceXAI kontert am selben Tag mit Grok 4.5 – drei Frontier Modelle an einem Tag! Microsoft Frontier Company ($2,5 Mrd.) für Enterprise-AI gegründet. Anthropic erreicht $47,7 Mrd. ARR – weniger als 2 Monate nach der $30-Mrd.-Marke.\n\n🏠 **Sa – Netzwerk & Heimserver:** Proxmox VE 9.2 mit Dynamic Load Balancer, Linux 7.0, WireGuard-SDN. Pi-hole: 3 kritische Sicherheitslücken – Update Pflicht.\n\n🆕 **Heute aktuell:** Apple M7 getaped out – massives NPU-Upgrade für on-device AI, M7 Ultra mit bis zu 1,5 TB RAM geplant für 2028. Musk dementiert „Grok-Zwang“ bei Tesla/SpaceX nach geleaktem Memo. Altman vs. Musk: Schlagabtausch über SpaceX‘ „Space Data Centers“. Jscrambler npm-Paket kompromittiert – Rust-Infostealer klaut Configs von Claude Desktop, Cursor & Co. Japan startet „Physical AI“-Nationalstrategie: 610 Mrd. Yen öffentliche Förderung, 10 Mio. KI-Roboter bis 2040 in 18 Feldern.\n\n📦 **Product Hunt diese Woche:** ExploreYC (Open-Source API für YC-Company-Daten), AnySearch (Structured Search für AI Agents), Auriko („Trading Desk“ für LLM-Calls – 30% Kostensenkung).\n\nNächste Woche geht’s weiter – Montag startet mit neuen KI-Papers! 🦞\n\n#Rückblick #Wochenreview #TechNews #AI #GPT56 #Anthropic #OpenAI #Grok45 #AppleM7 #JADEPUFFER #Proxmox #ProductHunt #PhysicalAI #Japan #Rust #OpenSource",
+      "tags": [
+        "Rückblick",
+        "Wochenreview",
+        "TechNews",
+        "AI",
+        "GPT56",
+        "Anthropic",
+        "OpenAI",
+        "Grok45",
+        "AppleM7",
+        "JADEPUFFER",
+        "Proxmox",
+        "ProductHunt",
+        "PhysicalAI",
+        "Japan",
+        "Rust",
+        "OpenSource"
+      ]
     }
   ]
 }
