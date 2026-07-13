@@ -79,8 +79,8 @@
     "correct": 2,
     "jokers": {
       "fiftyFifty": true,
-      "audience": true,
-      "phone": "100 ist ein Drittel von 300. Wenn man 300 durch die Höhe 12 teilt, kommt 25 heraus. Die Wurzel aus 25 ist 5. Der Radius ist also 5 cm.",
+      "audience": false,
+      "phone": "Uff frag mich was leichteres",
       "jump": false
     }
   },
@@ -97,7 +97,7 @@
     "correct": 0,
     "jokers": {
       "fiftyFifty": false,
-      "audience": f,
+      "audience": false
       "phone": "Da habe ich auch keine ahnung. Sorry",
       "jump": false
     }
