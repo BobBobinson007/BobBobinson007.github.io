@@ -14,7 +14,7 @@
   },
   {
     "id": 2,
-    "prize": "50 €",
+    "prize": "200 €",
     "question": "Wie nennt man die Strecke, die von der Spitze des Kegels senkrecht nach unten auf den Mittelpunkt des Grundkreises verläuft?",
     "answers": [
       "Die Mantellinie",
@@ -27,12 +27,12 @@
       "fiftyFifty": true,
       "audience": true,
       "phone": "Das ist ganz klar die Höhe, sie steht immer senkrecht auf dem Grundkreis.",
-      "jump": true
+      "jump": false
     }
   },
   {
-    "id": 11,
-    "prize": "1.000 €",
+    "id": 3,
+    "prize": "500 €",
     "question": "Die Höhe eines Kegels wird verdreifacht, der Radius bleibt gleich. Wie verändert sich das Volumen?",
     "answers": [
       "Es wird ebenfalls verdreifacht.",
@@ -45,12 +45,12 @@
       "fiftyFifty": true,
       "audience": true,
       "phone": "Da die Höhe nur linear in der Formel steht, wird das Volumen exakt auch dreimal so groß.",
-      "jump": true
+      "jump": false
     }
   },
   {
-    "id": 12,
-    "prize": "2.000 €",
+    "id": 4,
+    "prize": "1.000 €",
     "question": "Der Radius eines Kegels wird halbiert, die Höhe bleibt gleich. Wie verändert sich das Volumen?",
     "answers": [
       "Es wird halbiert.",
@@ -63,12 +63,12 @@
       "fiftyFifty": true,
       "audience": true,
       "phone": "Achtung, die Falle ist, dass der Radius quadriert wird! Ein halber Radius im Quadrat ist ein Viertel. Das Volumen viertelt sich also.",
-      "jump": true
+      "jump": false
     }
   },
   {
-    "id": 18,
-    "prize": "125.000 €",
+    "id": 5,
+    "prize": "4.000",
     "question": "Das Volumen eines Kegels beträgt 100π cm³ und seine Höhe ist 12 cm. Berechne den Radius des Grundkreises.",
     "answers": [
       "10 cm",
@@ -81,12 +81,12 @@
       "fiftyFifty": true,
       "audience": true,
       "phone": "100 ist ein Drittel von 300. Wenn man 300 durch die Höhe 12 teilt, kommt 25 heraus. Die Wurzel aus 25 ist 5. Der Radius ist also 5 cm.",
-      "jump": true
+      "jump": false
     }
   },
   {
-    "id": 19,
-    "prize": "500.000 €",
+    "id": 6,
+    "prize": "1.000.000 €",
     "question": "Die Mantelfläche eines Kegels beträgt 50π cm² und sein Grundkreisradius ist 5 cm. Berechne die Länge der Mantellinie.",
     "answers": [
       "10 cm",
@@ -96,10 +96,10 @@
     ],
     "correct": 0,
     "jokers": {
-      "fiftyFifty": true,
-      "audience": true,
-      "phone": "Das ist ganz simpel: 50 ist 5 mal 10. Wenn Pi mal 5 mal s gleich 50 Pi ist, muss s zwingend 10 sein.",
-      "jump": true
+      "fiftyFifty": false,
+      "audience": f,
+      "phone": "Da habe ich auch keine ahnung. Sorry",
+      "jump": false
     }
   }
 ]
