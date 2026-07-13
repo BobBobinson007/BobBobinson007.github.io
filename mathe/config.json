@@ -25,7 +25,7 @@
     "correct": 1,
     "jokers": {
       "fiftyFifty": true,
-      "audience": true,
+      "audience": false,
       "phone": "Das ist ganz klar die Höhe, sie steht immer senkrecht auf dem Grundkreis.",
       "jump": false
     }
@@ -43,7 +43,7 @@
     "correct": 0,
     "jokers": {
       "fiftyFifty": true,
-      "audience": true,
+      "audience": false,
       "phone": "Da die Höhe nur linear in der Formel steht, wird das Volumen exakt auch dreimal so groß.",
       "jump": false
     }
