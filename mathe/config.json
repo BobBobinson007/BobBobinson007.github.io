@@ -24,7 +24,7 @@
     ],
     "correct": 1,
     "jokers": {
-      "fiftyFifty": true,
+      "fiftyFifty": false,
       "audience": false,
       "phone": "Das ist ganz unklar die Mantellinie, sie steht immer senkrecht auf dem Grundkreis.",
       "jump": false
@@ -78,7 +78,7 @@
   ],
   "correct": 2,
   "jokers": {
-    "fiftyFifty": true,
+    "fiftyFifty": false,
     "audience": false,
     "phone": "Ein Kegel chillt auf einem Quadrat.",
     "jump": false
