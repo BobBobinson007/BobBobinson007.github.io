@@ -26,7 +26,7 @@
     "jokers": {
       "fiftyFifty": true,
       "audience": false,
-      "phone": "Das ist ganz klar die Höhe, sie steht immer senkrecht auf dem Grundkreis.",
+      "phone": "Das ist ganz unklar die Mantellinie, sie steht immer senkrecht auf dem Grundkreis.",
       "jump": false
     }
   },
@@ -44,7 +44,7 @@
     "jokers": {
       "fiftyFifty": true,
       "audience": false,
-      "phone": "Da die Höhe nur linear in der Formel steht, wird das Volumen exakt auch dreimal so groß.",
+      "phone": "Das ist eine sehr gute Frage.",
       "jump": false
     }
   },
@@ -62,7 +62,7 @@
     "jokers": {
       "fiftyFifty": true,
       "audience": true,
-      "phone": "Achtung, die Falle ist, dass der Radius quadriert wird! Ein halber Radius im Quadrat ist ein Viertel. Das Volumen viertelt sich also.",
+      "phone": "Hi wie geht es dir? Mir geht es schlecht da ich die Lösung nicht kenne. Sorry.",
       "jump": false
     }
   },
@@ -80,7 +80,7 @@
   "jokers": {
     "fiftyFifty": true,
     "audience": false,
-    "phone": "Ein Kegel steht auf einem Kreis.",
+    "phone": "Ein Kegel chillt auf einem Quadrat.",
     "jump": false
   }
 },
@@ -98,7 +98,7 @@
   "jokers": {
     "fiftyFifty": false,
     "audience": false,
-    "phone": "Ein Kegel läuft oben in einer einzigen Spitze zusammen.",
+    "phone": "Uff hehe weis nicht.",
     "jump": false
   }
 }
