@@ -377,6 +377,7 @@ const fmt=n=>n.toLocaleString('de-DE')+' €';
 let PRIZES=PRIZE_VALUES.map(fmt);
 
 let qs=[],cur=0,selIdx=null,answered=false,jokers={},N=6;
+let currentAnswerMap={}; // Speichert die Zuordnung der randomisierten Antworten
 
 /* ── shuffle (Fisher–Yates) — order only, JSON structure untouched ── */
 function shuffle(arr){
@@ -392,7 +393,7 @@ async function load(){
   try{
     const r=await fetch('config.json');
     const data=await r.json();
-    qs=shuffle(data);
+    qs=data;
     N=Math.min(6,qs.length);
     qs=qs.slice(0,N);
     PRIZES=PRIZE_VALUES.slice(0,N).map(fmt);
@@ -434,15 +435,29 @@ function refreshAxis(){
 /* ── load question ── */
 function loadQ(){
   answered=false;selIdx=null;
-  const q=qs[cur];
-  jokers={...q.jokers};
+  const originalQ=qs[cur];
+  
+  // Randomisiere die Antworten und passe correct an
+  const answerIndices=[0,1,2,3];
+  const shuffledIndices=shuffle(answerIndices);
+  const newCorrect=shuffledIndices.indexOf(originalQ.correct);
+  const shuffledAnswers=shuffledIndices.map(i=>originalQ.answers[i]);
+  
+  // Speichere die Zuordnung für diese Frage
+  currentAnswerMap={
+    shuffledAnswers:shuffledAnswers,
+    correct:newCorrect,
+    originalCorrect:originalQ.correct
+  };
+  
+  jokers={...originalQ.jokers};
   document.getElementById('qnum').textContent=cur+1;
   document.getElementById('fqn').textContent=cur+1;
   document.getElementById('qtagn').textContent=String(cur+1).padStart(2,'0');
   document.getElementById('qprize').textContent=PRIZES[cur];
   const qEl=document.getElementById('qtxt');
   qEl.style.animation='none';qEl.offsetHeight;qEl.style.animation='';
-  qEl.textContent=q.question;
+  qEl.textContent=originalQ.question;
   document.getElementById('cstrip').textContent='';
   document.getElementById('arow').style.display='none';
   document.getElementById('abig').textContent='Endgültige Antwort';
@@ -466,11 +481,10 @@ function refreshJokers(){
 }
 
 function buildAnswers(hidden=[]){
-  const q=qs[cur];
   const g=document.getElementById('agrid');
   g.innerHTML='';
   const letters=['A','B','C','D'];
-  q.answers.forEach((a,i)=>{
+  currentAnswerMap.shuffledAnswers.forEach((a,i)=>{
     const btn=document.createElement('button');
     btn.className='abtn'+(hidden.includes(i)?' gone':'');
     btn.id='ab'+i;
@@ -496,8 +510,7 @@ function confirmAns(){
   document.getElementById('cstrip').textContent='';
   document.querySelectorAll('.abtn').forEach(b=>{b.disabled=true;b.classList.remove('sel')});
   document.getElementById('quitline').style.display='none';
-  const q=qs[cur];
-  if(selIdx===q.correct){
+  if(selIdx===currentAnswerMap.correct){
     setTimeout(()=>{
       document.getElementById('ab'+selIdx).classList.add('ok');
       const isLast=cur>=N-1;
@@ -507,7 +520,7 @@ function confirmAns(){
     },500);
   }else{
     document.getElementById('ab'+selIdx).classList.add('nope');
-    setTimeout(()=>document.getElementById('ab'+q.correct).classList.add('ok'),400);
+    setTimeout(()=>document.getElementById('ab'+currentAnswerMap.correct).classList.add('ok'),400);
     document.getElementById('abig').textContent='Spiel beenden';
     document.getElementById('abig').onclick=()=>endGame('lost');
     document.getElementById('arow').style.display='flex';
@@ -516,8 +529,7 @@ function confirmAns(){
 
 function advance(){
   if(!answered)return;
-  const q=qs[cur];
-  if(selIdx!==q.correct){endGame('lost');return}
+  if(selIdx!==currentAnswerMap.correct){endGame('lost');return}
   if(cur>=N-1){endGame('won');return}
   cur++;loadQ();
 }
@@ -529,7 +541,7 @@ function useJoker(type){
   jokers[type]=false;
   refreshJokers();
   if(type==='fiftyFifty'){
-    const wrong=[0,1,2,3].filter(i=>i!==q.correct);
+    const wrong=[0,1,2,3].filter(i=>i!==currentAnswerMap.correct);
     const hide=wrong.sort(()=>Math.random()-.5).slice(0,2);
     buildAnswers(hide);
   }else if(type==='audience'){
@@ -543,11 +555,10 @@ function useJoker(type){
 }
 
 function doAudience(){
-  const q=qs[cur];
   const pct=[0,0,0,0];
-  pct[q.correct]=Math.floor(Math.random()*20)+54;
-  const others=[0,1,2,3].filter(i=>i!==q.correct);
-  let rem=100-pct[q.correct];
+  pct[currentAnswerMap.correct]=Math.floor(Math.random()*20)+54;
+  const others=[0,1,2,3].filter(i=>i!==currentAnswerMap.correct);
+  let rem=100-pct[currentAnswerMap.correct];
   others.forEach((o,idx)=>{
     if(idx===others.length-1){pct[o]=rem;}
     else{const v=Math.floor(Math.random()*rem*.45);pct[o]=v;rem-=v;}
