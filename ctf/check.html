@@ -4,188 +4,191 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Flag Check</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0a0e0d;
-    --panel:#0f1512;
-    --line:#1c2a22;
-    --text:#9db8a8;
-    --text-dim:#5c7167;
-    --green:#4ade80;
-    --amber:#e8b34c;
-    --red:#ff5f56;
-    --font: 'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --bg:#0b0e11;
+    --panel:#12161b;
+    --border:#1f252c;
+    --border-focus:#2c3742;
+    --text:#e6e9ec;
+    --text-dim:#6b7480;
+    --accent:#3ecf8e;
+    --danger:#f0665e;
+    --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
   *{box-sizing:border-box;}
   html,body{
-    margin:0;padding:0;height:100%;
-    background:
-      radial-gradient(ellipse at 50% -10%, #10201a 0%, var(--bg) 60%);
+    margin:0;
+    min-height:100dvh;
+    background:var(--bg);
     font-family:var(--font);
     color:var(--text);
-    display:flex;align-items:center;justify-content:center;
     -webkit-font-smoothing:antialiased;
   }
-  .wrap{width:100%;max-width:560px;padding:24px;}
-
-  .term{
+  body{
+    display:flex;align-items:center;justify-content:center;
+    min-height:100dvh;
+    padding:20px;
+  }
+  .card{
+    width:100%;max-width:380px;
+    padding:26px 24px;
     background:var(--panel);
-    border:1px solid var(--line);
-    border-radius:10px;
-    box-shadow:0 0 0 1px rgba(0,0,0,.4), 0 20px 60px -20px rgba(0,0,0,.8), inset 0 0 40px rgba(74,222,128,0.02);
-    overflow:hidden;
-    position:relative;
+    border:1px solid var(--border);
+    border-radius:12px;
   }
-  .term::after{
-    content:"";
-    position:absolute;inset:0;
-    background:repeating-linear-gradient(
-      to bottom,
-      rgba(255,255,255,0.015) 0px,
-      rgba(255,255,255,0.015) 1px,
-      transparent 1px,
-      transparent 3px
-    );
-    pointer-events:none;
-  }
-  .titlebar{
-    display:flex;align-items:center;gap:8px;
-    padding:10px 14px;
-    background:#0c120f;
-    border-bottom:1px solid var(--line);
-  }
-  .dot{width:10px;height:10px;border-radius:50%;opacity:.85;}
-  .dot.r{background:var(--red);}
-  .dot.y{background:var(--amber);}
-  .dot.g{background:var(--green);}
-  .titlebar span{
-    margin-left:auto;margin-right:auto;
-    font-size:11px;letter-spacing:.12em;
-    color:var(--text-dim);
+  label{
+    display:block;
+    font-size:11px;font-weight:600;
+    letter-spacing:.04em;
     text-transform:uppercase;
+    color:var(--text-dim);
+    margin-bottom:6px;
   }
-
-  .body{padding:28px 26px 30px;}
-
-  .eyebrow{
-    font-size:11px;letter-spacing:.18em;color:var(--text-dim);
-    text-transform:uppercase;margin:0 0 6px;
-  }
-  h1{
-    margin:0 0 22px;
-    font-size:20px;font-weight:600;color:#e8f5ee;
-    letter-spacing:.01em;
-  }
-  h1 .caret{
-    display:inline-block;width:10px;height:1.1em;background:var(--green);
-    margin-left:6px;vertical-align:-2px;
-    animation:blink 1.1s step-end infinite;
-  }
-  @keyframes blink{50%{opacity:0;}}
-
-  .prompt-row{
-    display:flex;align-items:center;gap:10px;
-    background:#0a100c;
-    border:1px solid var(--line);
-    border-radius:6px;
-    padding:12px 14px;
-    transition:border-color .2s ease;
-  }
-  .prompt-row:focus-within{border-color:#2b4237;}
-  .prompt-row .sym{color:var(--green);font-weight:600;flex-shrink:0;}
   input#i{
-    flex:1;
-    background:transparent;border:none;outline:none;
-    font-family:var(--font);font-size:14px;color:#e8f5ee;
-    caret-color:var(--green);
-    min-width:0;
+    width:100%;
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:12px 14px;
+    font-family:var(--font);
+    font-size:16px;
+    color:var(--text);
+    outline:none;
+    transition:border-color .15s ease, box-shadow .15s ease;
   }
   input#i::placeholder{color:var(--text-dim);}
+  input#i:focus{border-color:var(--border-focus);}
 
   button{
-    margin-top:14px;width:100%;
-    background:transparent;
-    border:1px solid #2b4237;
-    color:var(--green);
-    font-family:var(--font);font-size:13px;letter-spacing:.06em;
-    text-transform:uppercase;
-    padding:11px 14px;border-radius:6px;
+    position:relative;
+    width:100%;
+    margin-top:12px;
+    background:var(--accent);
+    border:none;
+    border-radius:8px;
+    padding:12px 14px;
+    font-family:var(--font);
+    font-size:14px;font-weight:600;
+    color:#06120c;
     cursor:pointer;
-    transition:background .15s ease, border-color .15s ease, transform .05s ease;
+    transition:opacity .15s ease, transform .05s ease;
   }
-  button:hover{background:rgba(74,222,128,0.08);border-color:#3d5c4c;}
+  button:hover{opacity:.9;}
   button:active{transform:scale(0.99);}
 
-  #r{
-    margin:16px 0 0;
-    min-height:20px;
-    font-size:14px;
-    display:flex;align-items:center;gap:8px;
+  #btnLabel{
+    display:block;
+    transition:opacity .15s ease;
   }
-  #r::before{content:"$";color:var(--text-dim);}
-  #r.ok{color:var(--green);}
-  #r.bad{color:var(--red);}
 
-  .foot{
-    margin-top:22px;padding-top:16px;
-    border-top:1px dashed var(--line);
-    font-size:11px;color:var(--text-dim);
-    display:flex;justify-content:space-between;
+  .card.shake{animation:shake .35s ease;}
+  @keyframes shake{
+    20%{transform:translateX(-4px);}
+    40%{transform:translateX(4px);}
+    60%{transform:translateX(-3px);}
+    80%{transform:translateX(3px);}
+    100%{transform:translateX(0);}
+  }
+
+  #i.ok-glow{
+    border-color:var(--accent);
+    box-shadow:0 0 0 3px rgba(62,207,142,0.15);
+  }
+  #i.bad-glow{
+    border-color:var(--danger);
+    box-shadow:0 0 0 3px rgba(240,102,94,0.15);
+  }
+
+  #r{
+    margin-top:0;
+    max-height:0;
+    font-size:13px;
+    font-weight:500;
+    overflow:hidden;
+    transition:max-height .2s ease, margin-top .2s ease;
+  }
+  #r.bad{
+    margin-top:10px;
+    max-height:20px;
+    color:var(--danger);
+  }
+
+  .checkIcon{
+    position:absolute;
+    left:50%;top:50%;
+    display:flex;align-items:center;justify-content:center;
+    width:18px;height:18px;
+    border-radius:50%;
+    background:#06120c;
+    opacity:0;
+    transform:translate(-50%,-50%) scale(0.5);
+    transition:opacity .2s ease, transform .2s cubic-bezier(.34,1.56,.64,1);
+    pointer-events:none;
+  }
+  .checkIcon.show{opacity:1;transform:translate(-50%,-50%) scale(1);}
+  .checkIcon svg{width:11px;height:11px;}
+
+  @media (max-width: 420px){
+    .card{padding:26px 20px;border-radius:10px;}
   }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="term">
-    <div class="titlebar">
-      <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
-      <span>flag_check.sh</span>
-    </div>
-    <div class="body">
-      <p class="eyebrow">Verification</p>
-      <h1>Flag eingeben<span class="caret"></span></h1>
-
-      <div class="prompt-row">
-        <span class="sym">&gt;</span>
-        <input id="i" type="text" placeholder="FLAG{...}" autocomplete="off" spellcheck="false" onkeydown="if(event.key==='Enter') check();">
-      </div>
-      <button onclick="check()">Prüfen</button>
-
-      <p id="r"></p>
-
-      <div class="foot">
-        <span>sha256 · client-side</span>
-        <span id="status">bereit</span>
-      </div>
-    </div>
-  </div>
+<div class="card" id="card">
+  <label for="i">Flag</label>
+  <input id="i" type="text" placeholder="FLAG{...}" autocomplete="off" spellcheck="false" onkeydown="if(event.key==='Enter') check();">
+  <button id="btn" onclick="check()">
+    <span id="btnLabel">Prüfen</span>
+    <span class="checkIcon" id="checkIcon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#3ecf8e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    </span>
+  </button>
+  <p id="r"></p>
 </div>
 
 <script>
 async function check() {
-  const val = document.getElementById('i').value;
+  const input = document.getElementById('i');
+  const val = input.value;
   const enc = new TextEncoder().encode(val);
   const buf = await crypto.subtle.digest('SHA-256', enc);
   const hex = Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
   const target = "688bc7272379513070954984fdabfa55240f5c28e96932ff59f503674bf340a9";
+
   const r = document.getElementById('r');
-  const status = document.getElementById('status');
+  const card = document.getElementById('card');
+  const btnLabel = document.getElementById('btnLabel');
+  const checkIcon = document.getElementById('checkIcon');
+
   r.className = "";
+  r.textContent = "";
+  input.classList.remove('ok-glow', 'bad-glow');
+  checkIcon.classList.remove('show');
+  card.classList.remove('shake');
+  btnLabel.style.opacity = 1;
+
   if (hex === target) {
-    r.textContent = "Richtig — Flag akzeptiert.";
-    r.classList.add("ok");
-    status.textContent = "verified";
+    input.classList.add('ok-glow');
+    btnLabel.style.opacity = 0;
+    checkIcon.classList.add('show');
     playSuccess();
   } else {
-    r.textContent = "Falsch — Hash stimmt nicht überein.";
+    input.classList.add('bad-glow');
+    r.textContent = "Falsch. Versuch es erneut.";
     r.classList.add("bad");
-    status.textContent = "abgelehnt";
+    void card.offsetWidth;
+    card.classList.add('shake');
+    setTimeout(() => input.classList.remove('bad-glow'), 600);
   }
 }
 
 function playSuccess() {
   const ctx = new (window.AudioContext || window.webkitAudioContext)();
-  const notes = [523.25, 659.25, 783.99]; // C5 E5 G5
+  const notes = [523.25, 659.25, 783.99];
   notes.forEach((freq, i) => {
     const osc = ctx.createOscillator();
     const gain = ctx.createGain();
