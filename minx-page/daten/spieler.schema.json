@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Spielerdaten Minx",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": { "type": "string" },
+      "welt": { "type": "string", "enum": ["minx", "alte-welt"] },
+      "statistiken": {
+        "type": "object",
+        "properties": {
+          "tode": { "type": "integer" },
+          "spieler_treffen": { "type": "integer" },
+          "bloecke_abbau": { "type": "integer" },
+          "bloecke_bau": { "type": "integer" },
+          "distanz_km": { "type": "integer" },
+          "spielzeit_stunden": { "type": "integer" }
+        }
+      }
+    }
+  }
+}

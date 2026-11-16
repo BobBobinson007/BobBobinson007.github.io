@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>minx – Vanilla Survival Server</title>
+<meta name="description" content="Der minx Minecraft-Server: Vanilla Survival, Community, Statistiken und Bilder.">
+<style>
+  :root{
+    --bg:#0f1210; --panel:#171c18; --panel2:#1d2420; --line:#2a332c;
+    --text:#e8ede9; --dim:#9aa8a0; --accent:#7cc15c; --accent2:#57b8c9;
+    --mono:'DejaVu Sans Mono','JetBrains Mono',Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6}
+  a{color:var(--accent2);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+  header{border-bottom:1px solid var(--line);background:var(--panel)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent);letter-spacing:.05em}
+  nav{display:flex;gap:22px}
+  nav a{color:var(--dim);font-size:.92rem}
+  nav a:hover{color:var(--text)}
+  .hero{padding:64px 0 44px;text-align:center;border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,#121814 0%,var(--bg) 100%)}
+  .hero h1{font-family:var(--mono);font-size:2.6rem;color:var(--accent);letter-spacing:.08em}
+  .hero p{color:var(--dim);margin-top:8px;font-size:1.05rem}
+  .ipbox{margin-top:28px;display:inline-flex;align-items:center;gap:12px;
+    background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:12px 18px}
+  .ipbox code{font-family:var(--mono);font-size:1.05rem;color:var(--text)}
+  .ipbox button{background:var(--accent);color:#0f1210;border:0;border-radius:6px;
+    padding:7px 14px;font-weight:600;cursor:pointer;font-size:.88rem}
+  .ipbox button:hover{filter:brightness(1.1)}
+  .status{margin-top:16px;font-size:.9rem;color:var(--dim);font-family:var(--mono)}
+  .status .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;background:#666;vertical-align:middle}
+  .status.online .dot{background:var(--accent)}
+  .status.offline .dot{background:#c96a5c}
+  section{padding:48px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:1.35rem;margin-bottom:6px}
+  .sub{color:var(--dim);font-size:.92rem;margin-bottom:24px}
+  /* Statistiken */
+  .tabs{display:flex;gap:8px;margin-bottom:18px}
+  .tabs button{background:var(--panel);border:1px solid var(--line);color:var(--dim);
+    padding:8px 18px;border-radius:6px;cursor:pointer;font-size:.9rem}
+  .tabs button.active{background:var(--panel2);color:var(--accent);border-color:var(--accent)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:28px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px}
+  .card .num{font-family:var(--mono);font-size:1.5rem;color:var(--accent2)}
+  .card .lbl{color:var(--dim);font-size:.8rem;margin-top:2px}
+  table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  th,td{padding:10px 14px;text-align:left;font-size:.92rem}
+  th{background:var(--panel2);color:var(--dim);font-weight:600;cursor:pointer;user-select:none;white-space:nowrap}
+  th:hover{color:var(--text)}
+  th .arrow{font-size:.7rem;margin-left:4px}
+  td{border-top:1px solid var(--line)}
+  tr.top td{color:var(--accent)}
+  td.num{font-family:var(--mono);text-align:right}
+  .updated{color:var(--dim);font-size:.8rem;margin-top:12px;font-family:var(--mono)}
+  /* Galerie */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+  .grid img{width:100%;border-radius:8px;border:1px solid var(--line);display:block}
+  .grid figcaption{color:var(--dim);font-size:.82rem;padding:6px 2px}
+  .empty{background:var(--panel);border:1px dashed var(--line);border-radius:8px;
+    padding:32px;text-align:center;color:var(--dim);font-size:.92rem}
+  /* Regeln */
+  ol.rules{background:var(--panel);border:1px solid var(--line);border-radius:8px;
+    padding:24px 24px 24px 44px}
+  ol.rules li{padding:7px 0;border-bottom:1px solid var(--line)}
+  ol.rules li:last-child{border-bottom:0}
+  footer{padding:32px 0;color:var(--dim);font-size:.85rem;text-align:center}
+  @media(max-width:640px){nav{display:none}.hero h1{font-size:2rem}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo">minx</div>
+    <nav>
+      <a href="#statistiken">Statistiken</a>
+      <a href="#gebaeude">Gebäude</a>
+      <a href="#regeln">Regeln</a>
+      <a href="#ip">Server-IP</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>minx</h1>
+    <p>Vanilla Survival – gemeinsam bauen, ohne Gimmicks.</p>
+    <div class="ipbox" id="ip">
+      <code>minxserver.duckdns.org</code>
+      <button onclick="copyIp(this)">Kopieren</button>
+    </div>
+    <div class="status" id="status"><span class="dot"></span>Status wird geladen …</div>
+  </div>
+</div>
+
+<section id="statistiken">
+  <div class="wrap">
+    <h2>Statistiken</h2>
+    <p class="sub">Wer baut, gräbt und kämpft am meisten. Klicke auf eine Spalte zum Sortieren.</p>
+    <div class="tabs">
+      <button class="active" data-welt="aktuell">Aktuelle Welt</button>
+      <button data-welt="alte-welt">Alte Welt</button>
+    </div>
+    <div class="cards" id="cards"></div>
+    <table id="tabelle">
+      <thead><tr id="kopf"></tr></thead>
+      <tbody id="koerper"></tbody>
+    </table>
+    <div class="updated" id="updated"></div>
+  </div>
+</section>
+
+<section id="gebaeude">
+  <div class="wrap">
+    <h2>Gebäude</h2>
+    <p class="sub">Bauten von der Welt, die sich sehen lassen können.</p>
+    <div id="galerie"></div>
+  </div>
+</section>
+
+<section id="regeln">
+  <div class="wrap">
+    <h2>Regeln</h2>
+    <p class="sub">Kurz und klar. Wer sich daran hält, hat freie Bahn.</p>
+    <ol class="rules">
+      <li>Nichts zerstören, was andere gebaut haben – kein Griefing.</li>
+      <li>Kein Klauen aus fremden Kisten und Farmen.</li>
+      <li>Respekt im Chat – keine Beleidigungen, kein Spam.</li>
+      <li>Fallen, Lava-Fallen und Forellen-Tuning gegen andere Spieler sind tabu.</li>
+      <li>Chaos-Bugs ausnutzen schadet allen: nichts exploiten, Bugs melden.</li>
+      <li>Wer dauerhaft stört, wird vom Server ausgeschlossen.</li>
+    </ol>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    minx – Vanilla Survival &nbsp;·&nbsp;
+    <a href="https://github.com/BobBobinson007/BobBobinson007.github.io/tree/main/minx-page">Quelle auf GitHub</a>
+  </div>
+</footer>
+
+<script>
+const SPALTEN = [
+  {key:'name',        label:'Spieler',  num:false},
+  {key:'playtime_h',  label:'Spielzeit (h)', num:true},
+  {key:'mined',       label:'Blöcke abgebaut', num:true},
+  {key:'crafted',     label:'Gecraftet', num:true},
+  {key:'mob_kills',   label:'Mobs besiegt', num:true},
+  {key:'deaths',      label:'Tode', num:true},
+  {key:'distance_km', label:'Distanz (km)', num:true},
+];
+let daten = null, welt = 'aktuell', sortKey = 'playtime_h', aufwaerts = false;
+
+function fmt(n){ return n.toLocaleString('de-DE'); }
+
+async function laden(){
+  try{
+    const r = await fetch('daten/statistiken.json');
+    daten = await r.json();
+    const g = await fetch('daten/galerie.json');
+    if(g.ok) zeigeGalerie(await g.json());
+    else zeigeGalerie(null);
+  }catch(e){ zeigeGalerie(null); }
+  tabellenKopf();
+  render();
+  statusHolen();
+}
+
+function tabellenKopf(){
+  const kopf = document.getElementById('kopf');
+  kopf.innerHTML = '';
+  SPALTEN.forEach(s=>{
+    const th = document.createElement('th');
+    if(s.num) th.classList.add('num');
+    th.innerHTML = s.label + (sortKey===s.key ? ' <span class="arrow">'+(aufwaerts?'&#9650;':'&#9660;')+'</span>':'');
+    th.onclick = ()=>{ if(sortKey===s.key){aufwaerts=!aufwaerts}else{sortKey=s.key;aufwaerts=false} tabellenKopf(); render(); };
+    kopf.appendChild(th);
+  });
+}
+
+function render(){
+  const list = (daten?.welten?.[welt]||[]).slice();
+  const s = SPALTEN.find(x=>x.key===sortKey);
+  list.sort((a,b)=>{
+    const va = s.key==='name' ? a.name : a.stats[s.key];
+    const vb = s.key==='name' ? b.name : b.stats[s.key];
+    return (aufwaerts ? (va>vb?1:-1) : (va<vb?1:-1));
+  });
+  const koerper = document.getElementById('koerper');
+  koerper.innerHTML = list.map((p,i)=>
+    '<tr'+(i<3?' class="top"':'')+'>'+
+    SPALTEN.map(c=>{
+      const v = c.key==='name' ? p.name : fmt(p.stats[c.key]);
+      return '<td'+(c.num?' class="num"':'')+'>'+v+'</td>';
+    }).join('')+'</tr>'
+  ).join('');
+  document.getElementById('updated').textContent =
+    'Stand: ' + (daten?.aktualisiert || 'unbekannt');
+
+  // Summen-Karten
+  const sum = {spieler:list.length, playtime_h:0, mined:0, crafted:0, mob_kills:0, deaths:0};
+  list.forEach(p=>{ sum.playtime_h+=p.stats.playtime_h; sum.mined+=p.stats.mined;
+    sum.crafted+=p.stats.crafted; sum.mob_kills+=p.stats.mob_kills; sum.deaths+=p.stats.deaths; });
+  const cards = [
+    [fmt(sum.spieler),'Spieler'],
+    [fmt(Math.round(sum.playtime_h)),'Stunden gespielt'],
+    [fmt(sum.mined),'Blöcke abgebaut'],
+    [fmt(sum.crafted),'Items gecraftet'],
+    [fmt(sum.mob_kills),'Mobs besiegt'],
+    [fmt(sum.deaths),'Tode'],
+  ];
+  document.getElementById('cards').innerHTML =
+    cards.map(c=>'<div class="card"><div class="num">'+c[0]+'</div><div class="lbl">'+c[1]+'</div></div>').join('');
+}
+
+function zeigeGalerie(manifest){
+  const el = document.getElementById('galerie');
+  if(manifest && manifest.bilder && manifest.bilder.length){
+    el.innerHTML = '<div class="grid">'+manifest.bilder.map(b=>
+      '<figure><img src="'+b.datei+'" alt="'+(b.titel||'')+'" loading="lazy">'+
+      (b.titel?'<figcaption>'+b.titel+'</figcaption>':'')+'</figure>'
+    ).join('')+'</div>';
+  }else{
+    el.innerHTML = '<div class="empty">Noch keine Bilder in der Galerie. '+
+      'Bilder einfach in den Ordner <code>galerie/</code> legen und im Repo eintragen – sie erscheinen hier automatisch.</div>';
+  }
+}
+
+async function statusHolen(){
+  const el = document.getElementById('status');
+  try{
+    const r = await fetch('https://api.mcsrvstat.us/3/minxserver.duckdns.org');
+    const d = await r.json();
+    if(d.online){
+      el.className = 'status online';
+      el.innerHTML = '<span class="dot"></span>Online – '+
+        (d.players ? d.players.online+' / '+d.players.max+' Spieler online' : 'Server erreichbar');
+    }else{
+      el.className = 'status offline';
+      el.innerHTML = '<span class="dot"></span>Aktuell offline';
+    }
+  }catch(e){
+    el.innerHTML = '<span class="dot"></span>Status nicht abrufbar';
+  }
+}
+
+function copyIp(btn){
+  navigator.clipboard.writeText('minxserver.duckdns.org').then(()=>{
+    btn.textContent = 'Kopiert';
+    setTimeout(()=>btn.textContent='Kopieren', 1500);
+  });
+}
+
+document.querySelectorAll('.tabs button').forEach(b=>{
+  b.onclick = ()=>{
+    document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    welt = b.dataset.welt;
+    tabellenKopf(); render();
+  };
+});
+
+laden();
+</script>
+</body>
+</html>
