@@ -1,4 +1,8 @@
 {
   "hinweis": "Bilder hier eintragen: datei = Pfad im Ordner galerie/, titel = Beschriftung.",
-  "bilder": []
+  "bilder": [
+    {"datei": "galerie/beispiel-spawn.jpg", "titel": "Beispiel: Spawn-Burg (Platzhalter bis echte Screenshots kommen)"},
+    {"datei": "galerie/beispiel-eisenfarm.jpg", "titel": "Beispiel: Eisenfarm bei Nacht (Platzhalter)"},
+    {"datei": "galerie/beispiel-portal.jpg", "titel": "Beispiel: Nether-Portal (Platzhalter)"}
+  ]
 }

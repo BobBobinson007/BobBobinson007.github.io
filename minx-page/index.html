@@ -4,92 +4,170 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>minx – Vanilla Survival Server</title>
-<meta name="description" content="Der minx Minecraft-Server: Vanilla Survival, Community, Statistiken und Bilder.">
+<meta name="description" content="Der minx Minecraft-Server: Vanilla Survival, Community, Statistiken, Galerie und Schutzsysteme.">
 <style>
   :root{
-    --bg:#0f1210; --panel:#171c18; --panel2:#1d2420; --line:#2a332c;
-    --text:#e8ede9; --dim:#9aa8a0; --accent:#7cc15c; --accent2:#57b8c9;
+    --bg:#0a0a0a; --panel:#141414; --panel2:#1c1c1c; --panel3:#242424;
+    --line:#2e2e2e; --line2:#3d3d3d;
+    --text:#f5f5f5; --dim:#9a9a9a; --dimmer:#6b6b6b;
+    --white:#ffffff;
     --mono:'DejaVu Sans Mono','JetBrains Mono',Consolas,monospace;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6}
-  a{color:var(--accent2);text-decoration:none}
-  a:hover{text-decoration:underline}
-  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
-  header{border-bottom:1px solid var(--line);background:var(--panel)}
-  header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--accent);letter-spacing:.05em}
-  nav{display:flex;gap:22px}
-  nav a{color:var(--dim);font-size:.92rem}
-  nav a:hover{color:var(--text)}
-  .hero{padding:64px 0 44px;text-align:center;border-bottom:1px solid var(--line);
-    background:linear-gradient(180deg,#121814 0%,var(--bg) 100%)}
-  .hero h1{font-family:var(--mono);font-size:2.6rem;color:var(--accent);letter-spacing:.08em}
-  .hero p{color:var(--dim);margin-top:8px;font-size:1.05rem}
-  .ipbox{margin-top:28px;display:inline-flex;align-items:center;gap:12px;
-    background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:12px 18px}
-  .ipbox code{font-family:var(--mono);font-size:1.05rem;color:var(--text)}
-  .ipbox button{background:var(--accent);color:#0f1210;border:0;border-radius:6px;
-    padding:7px 14px;font-weight:600;cursor:pointer;font-size:.88rem}
-  .ipbox button:hover{filter:brightness(1.1)}
-  .status{margin-top:16px;font-size:.9rem;color:var(--dim);font-family:var(--mono)}
-  .status .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;background:#666;vertical-align:middle}
-  .status.online .dot{background:var(--accent)}
-  .status.offline .dot{background:#c96a5c}
-  section{padding:48px 0;border-bottom:1px solid var(--line)}
-  h2{font-size:1.35rem;margin-bottom:6px}
-  .sub{color:var(--dim);font-size:.92rem;margin-bottom:24px}
-  /* Statistiken */
-  .tabs{display:flex;gap:8px;margin-bottom:18px}
-  .tabs button{background:var(--panel);border:1px solid var(--line);color:var(--dim);
-    padding:8px 18px;border-radius:6px;cursor:pointer;font-size:.9rem}
-  .tabs button.active{background:var(--panel2);color:var(--accent);border-color:var(--accent)}
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:28px}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px}
-  .card .num{font-family:var(--mono);font-size:1.5rem;color:var(--accent2)}
-  .card .lbl{color:var(--dim);font-size:.8rem;margin-top:2px}
-  table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}
-  th,td{padding:10px 14px;text-align:left;font-size:.92rem}
-  th{background:var(--panel2);color:var(--dim);font-weight:600;cursor:pointer;user-select:none;white-space:nowrap}
-  th:hover{color:var(--text)}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6;
+    background-image:
+      repeating-linear-gradient(0deg,transparent 0 23px,rgba(255,255,255,.015) 23px 24px),
+      repeating-linear-gradient(90deg,transparent 0 23px,rgba(255,255,255,.015) 23px 24px);
+  }
+  a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--dimmer)}
+  a:hover{border-bottom-color:var(--white)}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+
+  /* ---------- Header ---------- */
+  header{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.92);backdrop-filter:blur(6px);border-bottom:2px solid var(--line)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .logo{font-family:var(--mono);font-size:1.5rem;font-weight:800;letter-spacing:.25em;color:var(--white);
+    text-shadow:3px 3px 0 var(--line2)}
+  .logo span{color:var(--dim)}
+  nav{display:flex;gap:26px}
+  nav a{color:var(--dim);font-size:.9rem;text-transform:uppercase;letter-spacing:.08em;border-bottom:2px solid transparent;padding:4px 0}
+  nav a:hover{color:var(--white);border-bottom-color:var(--white)}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:78px 0 52px;text-align:center;border-bottom:2px solid var(--line);position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;
+    background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(255,255,255,.06),transparent 70%)}
+  .hero h1{font-family:var(--mono);font-size:clamp(2.6rem,8vw,4.6rem);letter-spacing:.3em;color:var(--white);
+    text-shadow:4px 4px 0 var(--line2),8px 8px 0 rgba(255,255,255,.07);position:relative}
+  .hero .tag{color:var(--dim);margin-top:10px;font-size:1.08rem;position:relative}
+  .pixelrow{display:flex;justify-content:center;gap:6px;margin:26px 0 0;position:relative}
+  .pixelrow i{width:12px;height:12px;background:var(--panel3);display:block}
+  .pixelrow i:nth-child(2n){background:var(--line)}
+  .pixelrow i:nth-child(3n){background:var(--line2)}
+  .pixelrow i:nth-child(5n){background:var(--white)}
+
+  .ipbox{margin-top:34px;display:inline-flex;align-items:center;gap:14px;position:relative;
+    background:var(--panel);border:2px solid var(--line2);padding:14px 20px;box-shadow:6px 6px 0 rgba(255,255,255,.06)}
+  .ipbox code{font-family:var(--mono);font-size:1.1rem;color:var(--white);letter-spacing:.04em}
+  .ipbox button{background:var(--white);color:#000;border:0;padding:8px 16px;font-weight:700;cursor:pointer;
+    font-size:.85rem;text-transform:uppercase;letter-spacing:.08em}
+  .ipbox button:hover{background:var(--dim)}
+  .status{margin-top:18px;font-size:.92rem;color:var(--dim);font-family:var(--mono);position:relative}
+  .status .dot{display:inline-block;width:10px;height:10px;margin-right:8px;background:#555;vertical-align:middle}
+  .status.online .dot{background:var(--white);box-shadow:0 0 8px rgba(255,255,255,.8);animation:pulse 1.6s infinite}
+  .status.offline .dot{background:#777}
+  @keyframes pulse{50%{opacity:.35}}
+
+  /* ---------- Sections ---------- */
+  section{padding:60px 0;border-bottom:2px solid var(--line)}
+  h2{font-family:var(--mono);font-size:1.5rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:4px;color:var(--white)}
+  h2::before{content:"█ ";color:var(--line2)}
+  .sub{color:var(--dim);font-size:.94rem;margin-bottom:28px}
+
+  /* ---------- Statistiken ---------- */
+  .tabs{display:flex;gap:0;margin-bottom:24px;border:2px solid var(--line2);width:max-content}
+  .tabs button{background:var(--panel);border:0;color:var(--dim);padding:10px 26px;cursor:pointer;
+    font-size:.88rem;text-transform:uppercase;letter-spacing:.08em;font-family:var(--mono)}
+  .tabs button+button{border-left:2px solid var(--line2)}
+  .tabs button.active{background:var(--white);color:#000;font-weight:700}
+  .tabs button:hover:not(.active){color:var(--white)}
+
+  .podium{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:30px}
+  .pod{background:var(--panel);border:2px solid var(--line);padding:22px 14px 16px;text-align:center;position:relative;transition:transform .15s}
+  .pod:hover{transform:translateY(-3px);border-color:var(--white)}
+  .pod .rank{position:absolute;top:8px;left:10px;font-family:var(--mono);font-size:.8rem;color:var(--dimmer)}
+  .pod.gold{border-color:var(--white);background:linear-gradient(180deg,#222,var(--panel))}
+  .pod img{width:84px;height:84px;image-rendering:pixelated;display:block;margin:0 auto 10px;
+    box-shadow:0 0 0 2px var(--line2),4px 4px 0 rgba(255,255,255,.12)}
+  .pod .name{font-weight:700;color:var(--white);word-break:break-word}
+  .pod .val{font-family:var(--mono);color:var(--dim);font-size:.82rem;margin-top:4px}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:30px}
+  .card{background:var(--panel);border:1px solid var(--line);padding:16px;transition:border-color .15s}
+  .card:hover{border-color:var(--white)}
+  .card .num{font-family:var(--mono);font-size:1.45rem;color:var(--white)}
+  .card .lbl{color:var(--dim);font-size:.78rem;margin-top:2px;text-transform:uppercase;letter-spacing:.06em}
+
+  .tablewrap{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;background:var(--panel);border:2px solid var(--line)}
+  th,td{padding:10px 14px;text-align:left;font-size:.92rem;white-space:nowrap}
+  th{background:var(--panel2);color:var(--dim);font-weight:600;cursor:pointer;user-select:none;
+    text-transform:uppercase;font-size:.76rem;letter-spacing:.08em}
+  th:hover{color:var(--white)}
   th .arrow{font-size:.7rem;margin-left:4px}
   td{border-top:1px solid var(--line)}
-  tr.top td{color:var(--accent)}
+  tr.top td{color:var(--white);font-weight:600}
+  tr:hover td{background:var(--panel2)}
   td.num{font-family:var(--mono);text-align:right}
-  .updated{color:var(--dim);font-size:.8rem;margin-top:12px;font-family:var(--mono)}
-  /* Galerie */
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
-  .grid img{width:100%;border-radius:8px;border:1px solid var(--line);display:block}
-  .grid figcaption{color:var(--dim);font-size:.82rem;padding:6px 2px}
-  .empty{background:var(--panel);border:1px dashed var(--line);border-radius:8px;
-    padding:32px;text-align:center;color:var(--dim);font-size:.92rem}
-  /* Regeln */
-  ol.rules{background:var(--panel);border:1px solid var(--line);border-radius:8px;
-    padding:24px 24px 24px 44px}
-  ol.rules li{padding:7px 0;border-bottom:1px solid var(--line)}
+  td.playercell{display:flex;align-items:center;gap:10px}
+  td.playercell img{width:26px;height:26px;image-rendering:pixelated;box-shadow:0 0 0 1px var(--line2)}
+  .updated{color:var(--dimmer);font-size:.8rem;margin-top:14px;font-family:var(--mono)}
+
+  /* ---------- Galerie ---------- */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+  .grid figure{border:2px solid var(--line);background:var(--panel);transition:border-color .15s,transform .15s}
+  .grid figure:hover{border-color:var(--white);transform:translateY(-3px)}
+  .grid img{width:100%;display:block;filter:grayscale(1) contrast(1.05)}
+  .grid figcaption{color:var(--dim);font-size:.84rem;padding:10px 12px;border-top:1px solid var(--line)}
+  .empty{background:var(--panel);border:2px dashed var(--line2);padding:34px;text-align:center;color:var(--dim);font-size:.92rem}
+
+  /* ---------- Anti-Cheat ---------- */
+  .scanbar{display:flex;align-items:center;gap:12px;background:var(--panel);border:2px solid var(--line2);
+    padding:14px 18px;margin-bottom:26px;font-family:var(--mono);font-size:.9rem}
+  .scanbar .dot{width:10px;height:10px;background:var(--white);box-shadow:0 0 10px rgba(255,255,255,.9);
+    animation:pulse 1.4s infinite;flex:none}
+  .scanbar .bar{flex:1;height:4px;background:var(--panel3);position:relative;overflow:hidden}
+  .scanbar .bar i{position:absolute;top:0;left:-30%;width:30%;height:100%;background:var(--white);animation:scan 2.4s linear infinite}
+  @keyframes scan{to{left:110%}}
+  .acgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .ac{perspective:900px;cursor:pointer;height:170px}
+  .ac .inner{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+  .ac.flip .inner{transform:rotateY(180deg)}
+  .ac .face{position:absolute;inset:0;backface-visibility:hidden;border:2px solid var(--line2);
+    background:var(--panel);padding:20px;display:flex;flex-direction:column;justify-content:center}
+  .ac .face.front:hover{border-color:var(--white)}
+  .ac .ico{font-size:1.9rem;margin-bottom:10px;filter:grayscale(1)}
+  .ac .titel{font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;font-size:.95rem;color:var(--white)}
+  .ac .hint{color:var(--dimmer);font-size:.76rem;margin-top:8px;text-transform:uppercase;letter-spacing:.1em}
+  .ac .face.back{transform:rotateY(180deg);background:var(--white);color:#000;border-color:var(--white)}
+  .ac .face.back p{font-size:.92rem;line-height:1.5}
+  .ac .face.back .zurueck{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;margin-top:10px;color:#555;font-family:var(--mono)}
+  .acnote{color:var(--dimmer);font-size:.84rem;margin-top:22px;font-family:var(--mono)}
+
+  /* ---------- Regeln ---------- */
+  ol.rules{background:var(--panel);border:2px solid var(--line);padding:26px 26px 26px 48px;counter-reset:r}
+  ol.rules li{padding:10px 0;border-bottom:1px solid var(--line)}
   ol.rules li:last-child{border-bottom:0}
-  footer{padding:32px 0;color:var(--dim);font-size:.85rem;text-align:center}
-  @media(max-width:640px){nav{display:none}.hero h1{font-size:2rem}}
+  ol.rules li::marker{color:var(--dimmer);font-family:var(--mono)}
+
+  footer{padding:36px 0;color:var(--dimmer);font-size:.85rem;text-align:center;font-family:var(--mono)}
+  footer a{color:var(--dim)}
+  @media(max-width:640px){nav{display:none}.ac{height:190px}}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap">
-    <div class="logo">minx</div>
+    <div class="logo">MINX<span>_</span></div>
     <nav>
       <a href="#statistiken">Statistiken</a>
       <a href="#gebaeude">Gebäude</a>
+      <a href="#schutz">Schutz</a>
       <a href="#regeln">Regeln</a>
-      <a href="#ip">Server-IP</a>
+      <a href="#ip">Server</a>
     </nav>
   </div>
 </header>
 
 <div class="hero">
   <div class="wrap">
-    <h1>minx</h1>
-    <p>Vanilla Survival – gemeinsam bauen, ohne Gimmicks.</p>
+    <h1>MINX</h1>
+    <p class="tag">Vanilla Survival – gemeinsam bauen, ohne Gimmicks.</p>
+    <div class="pixelrow"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
     <div class="ipbox" id="ip">
       <code>minxserver.duckdns.org</code>
       <button onclick="copyIp(this)">Kopieren</button>
@@ -101,16 +179,19 @@
 <section id="statistiken">
   <div class="wrap">
     <h2>Statistiken</h2>
-    <p class="sub">Wer baut, gräbt und kämpft am meisten. Klicke auf eine Spalte zum Sortieren.</p>
+    <p class="sub">Wer baut, gräbt und kämpft am meisten – aktuelle und alte Welt. Klicke auf eine Spalte zum Sortieren.</p>
     <div class="tabs">
       <button class="active" data-welt="aktuell">Aktuelle Welt</button>
       <button data-welt="alte-welt">Alte Welt</button>
     </div>
+    <div class="podium" id="podium"></div>
     <div class="cards" id="cards"></div>
-    <table id="tabelle">
-      <thead><tr id="kopf"></tr></thead>
-      <tbody id="koerper"></tbody>
-    </table>
+    <div class="tablewrap">
+      <table id="tabelle">
+        <thead><tr id="kopf"></tr></thead>
+        <tbody id="koerper"></tbody>
+      </table>
+    </div>
     <div class="updated" id="updated"></div>
   </div>
 </section>
@@ -120,6 +201,20 @@
     <h2>Gebäude</h2>
     <p class="sub">Bauten von der Welt, die sich sehen lassen können.</p>
     <div id="galerie"></div>
+  </div>
+</section>
+
+<section id="schutz">
+  <div class="wrap">
+    <h2>Schutzsysteme</h2>
+    <p class="sub">Was der Server gegen Cheater, Griefer und Exploits tut – auf einen Blick. Karte anklicken zum Umdrehen.</p>
+    <div class="scanbar">
+      <span class="dot"></span><span>SCHUTZ AKTIV</span>
+      <span class="bar"><i></i></span>
+      <span id="account">6 / 6 SYSTEME</span>
+    </div>
+    <div class="acgrid" id="acgrid"></div>
+    <p class="acnote">// Details werden bewusst nicht veröffentlicht – wer cheaten will, soll nicht wissen, woran er hängt.</p>
   </div>
 </section>
 
@@ -140,7 +235,7 @@
 
 <footer>
   <div class="wrap">
-    minx – Vanilla Survival &nbsp;·&nbsp;
+    MINX – Vanilla Survival &nbsp;·&nbsp;
     <a href="https://github.com/BobBobinson007/BobBobinson007.github.io/tree/main/minx-page">Quelle auf GitHub</a>
   </div>
 </footer>
@@ -155,18 +250,39 @@ const SPALTEN = [
   {key:'deaths',      label:'Tode', num:true},
   {key:'distance_km', label:'Distanz (km)', num:true},
 ];
+const SCHUTZ = [
+  {ico:'🏃', titel:'Bewegung', back:'Bewegungsmuster werden laufend analysiert. Unmögliche Sprünge, Geschwindigkeiten und Kampf-Abläufe fallen sofort auf.'},
+  {ico:'⛏️', titel:'Untergrund', back:'Röntgenblick wird erschwert: Wertvolle Erze werden versteckt und verdächtige Abbau-Muster werden erkannt.'},
+  {ico:'🛡️', titel:'Exploits', back:'Bekannte Server-Exploits werden abgeblockt, bevor jemand etwas damit anfangen kann.'},
+  {ico:'🧱', titel:'Griefing', back:'Veränderungen an Blöcken werden protokolliert. Was kaputt gemacht wird, lässt sich zurücksetzen.'},
+  {ico:'💬', titel:'Chat', back:'Beleidigungen, Spam und Werbe-Nachrichten werden automatisch herausgefiltert.'},
+  {ico:'⏳', titel:'Zeitmaschine', back:'Spieleraktionen lassen sich nachvollziehen – und bei Bedarf rückgängig machen.'},
+];
 let daten = null, welt = 'aktuell', sortKey = 'playtime_h', aufwaerts = false;
 
 function fmt(n){ return n.toLocaleString('de-DE'); }
+function skin(name, px){
+  return 'https://mc-heads.net/avatar/' + encodeURIComponent(name) + '/' + px;
+}
+function fallbackImg(img){
+  img.onerror = null;
+  img.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">'+
+    '<rect width="64" height="64" fill="#1c1c1c"/>'+
+    '<rect x="8" y="8" width="48" height="48" fill="#3d3d3d"/>'+
+    '<rect x="16" y="20" width="10" height="10" fill="#0a0a0a"/>'+
+    '<rect x="38" y="20" width="10" height="10" fill="#0a0a0a"/>'+
+    '<rect x="24" y="40" width="16" height="6" fill="#0a0a0a"/></svg>');
+}
 
 async function laden(){
   try{
     const r = await fetch('daten/statistiken.json');
     daten = await r.json();
-    const g = await fetch('daten/galerie.json');
-    if(g.ok) zeigeGalerie(await g.json());
-    else zeigeGalerie(null);
-  }catch(e){ zeigeGalerie(null); }
+  }catch(e){ daten = null; }
+  let g = null;
+  try{ const gr = await fetch('daten/galerie.json'); if(gr.ok) g = await gr.json(); }catch(e){}
+  zeigeGalerie(g);
   tabellenKopf();
   render();
   statusHolen();
@@ -192,16 +308,35 @@ function render(){
     const vb = s.key==='name' ? b.name : b.stats[s.key];
     return (aufwaerts ? (va>vb?1:-1) : (va<vb?1:-1));
   });
+
+  // Podium: Top 3 mit Skins
+  const podEl = document.getElementById('podium');
+  if(list.length){
+    const pod = list.slice(0,3).map((p,i)=>{
+      const v = s.key==='name' ? p.name : p.stats[s.key];
+      const wert = s.key==='name' ? '' : fmt(v) + ' ' + SPALTEN.find(x=>x.key===sortKey).label;
+      return '<div class="pod'+(i===0?' gold':'')+'"><span class="rank">#'+(i+1)+'</span>'+
+        '<img src="'+skin(p.name,84)+'" alt="'+p.name+'" onerror="fallbackImg(this)">'+
+        '<div class="name">'+p.name+'</div><div class="val">'+(wert||'Platz '+(i+1))+'</div></div>';
+    }).join('');
+    podEl.innerHTML = pod;
+  }else{
+    podEl.innerHTML = '<div class="empty">Keine Daten für diese Welt.</div>';
+  }
+
+  // Tabelle
   const koerper = document.getElementById('koerper');
-  koerper.innerHTML = list.map((p,i)=>
-    '<tr'+(i<3?' class="top"':'')+'>'+
-    SPALTEN.map(c=>{
-      const v = c.key==='name' ? p.name : fmt(p.stats[c.key]);
-      return '<td'+(c.num?' class="num"':'')+'>'+v+'</td>';
-    }).join('')+'</tr>'
-  ).join('');
+  koerper.innerHTML = list.map((p,i)=>{
+    const zellen = SPALTEN.map(c=>{
+      if(c.key==='name'){
+        return '<td><span class="playercell"><img src="'+skin(p.name,26)+'" alt="" onerror="fallbackImg(this)">'+p.name+'</span></td>';
+      }
+      return '<td class="num">'+fmt(p.stats[c.key])+'</td>';
+    }).join('');
+    return '<tr'+(i<3?' class="top"':'')+'>'+zellen+'</tr>';
+  }).join('');
   document.getElementById('updated').textContent =
-    'Stand: ' + (daten?.aktualisiert || 'unbekannt');
+    '// Stand: ' + (daten?.aktualisiert || 'unbekannt');
 
   // Summen-Karten
   const sum = {spieler:list.length, playtime_h:0, mined:0, crafted:0, mob_kills:0, deaths:0};
@@ -232,6 +367,18 @@ function zeigeGalerie(manifest){
   }
 }
 
+function baueSchutz(){
+  const grid = document.getElementById('acgrid');
+  grid.innerHTML = SCHUTZ.map((s,i)=>
+    '<div class="ac" id="ac'+i+'" onclick="this.classList.toggle(\'flip\')">'+
+    '<div class="inner">'+
+    '<div class="face front"><div class="ico">'+s.ico+'</div>'+
+    '<div class="titel">'+s.titel+'</div><div class="hint">Klicken für Details ▸</div></div>'+
+    '<div class="face back"><p>'+s.back+'</p><div class="zurueck">◂ zurück</div></div>'+
+    '</div></div>'
+  ).join('');
+}
+
 async function statusHolen(){
   const el = document.getElementById('status');
   try{
@@ -239,20 +386,20 @@ async function statusHolen(){
     const d = await r.json();
     if(d.online){
       el.className = 'status online';
-      el.innerHTML = '<span class="dot"></span>Online – '+
-        (d.players ? d.players.online+' / '+d.players.max+' Spieler online' : 'Server erreichbar');
+      el.innerHTML = '<span class="dot"></span>ONLINE – '+
+        (d.players ? d.players.online+' / '+d.players.max+' SPIELER' : 'SERVER ERREICHBAR');
     }else{
       el.className = 'status offline';
-      el.innerHTML = '<span class="dot"></span>Aktuell offline';
+      el.innerHTML = '<span class="dot"></span>AKTUELL OFFLINE';
     }
   }catch(e){
-    el.innerHTML = '<span class="dot"></span>Status nicht abrufbar';
+    el.innerHTML = '<span class="dot"></span>STATUS NICHT ABRUFBAR';
   }
 }
 
 function copyIp(btn){
   navigator.clipboard.writeText('minxserver.duckdns.org').then(()=>{
-    btn.textContent = 'Kopiert';
+    btn.textContent = 'Kopiert ✓';
     setTimeout(()=>btn.textContent='Kopieren', 1500);
   });
 }
@@ -266,6 +413,7 @@ document.querySelectorAll('.tabs button').forEach(b=>{
   };
 });
 
+baueSchutz();
 laden();
 </script>
 </body>
