@@ -8,7 +8,7 @@ Persönliche Website unter https://bobbobinson007.github.io
 - **/agent** – Unterseite zur Server-Automatisierung
 - **/ctf** – Dokumentation von Capture-The-Flag-Aufgaben und deren Lösungen
 - **/weinachten** – kleine Sonderseite zur Weihnachtszeit
-- **/minx-page** – [minx – Vanilla Survival Server](https://bobbobinson007.github.io/minx-page/): Spielerstatistiken (aktuelle + alte Welt, automatisch exportiert), Bildergalerie, Serverregeln und Server-IP mit Live-Status
+- **/minx** – [minx – Vanilla Survival Server](https://bobbobinson007.github.io/minx/): Spielerstatistiken (aktuelle + alte Welt, automatisch exportiert), Bildergalerie, Serverregeln und Server-IP mit Live-Status
 
 ## Technik
 
