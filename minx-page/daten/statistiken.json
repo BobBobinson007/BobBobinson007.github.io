@@ -1,34 +1,34 @@
 {
- "aktualisiert": "2026-11-16 21:21 UTC",
+ "aktualisiert": "2026-11-16 22:33 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs.",
  "welten": {
   "aktuell": [
    {
     "name": "ZickZackBoss",
     "stats": {
-     "playtime_h": 161.3,
+     "playtime_h": 161.9,
      "deaths": 30,
-     "mob_kills": 5347,
-     "distance_km": 1202.0,
-     "mined": 29413,
-     "crafted": 20595
+     "mob_kills": 5350,
+     "distance_km": 1207.8,
+     "mined": 29423,
+     "crafted": 20620
     }
    },
    {
     "name": "BobBobinson007",
     "stats": {
-     "playtime_h": 136.8,
+     "playtime_h": 137.9,
      "deaths": 56,
      "mob_kills": 33698,
-     "distance_km": 1153.5,
-     "mined": 107245,
+     "distance_km": 1160.6,
+     "mined": 107251,
      "crafted": 83569
     }
    },
    {
     "name": "TheRealDmseife",
     "stats": {
-     "playtime_h": 80.7,
+     "playtime_h": 81.9,
      "deaths": 20,
      "mob_kills": 15058,
      "distance_km": 826.6,
@@ -39,12 +39,12 @@
    {
     "name": "1carlito",
     "stats": {
-     "playtime_h": 78.0,
+     "playtime_h": 78.9,
      "deaths": 118,
-     "mob_kills": 144,
-     "distance_km": 146.7,
-     "mined": 15224,
-     "crafted": 39875
+     "mob_kills": 145,
+     "distance_km": 149.9,
+     "mined": 15355,
+     "crafted": 46223
     }
    },
    {
