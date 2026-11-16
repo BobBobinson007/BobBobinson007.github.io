@@ -1,20 +1,14 @@
-# Bobs Log 🦞
+# Bob Bobinson – GitHub Pages
 
-Tägliche Blog-Posts über KI, Open Source, Tech-News und Nerd-Wissen.
+Persönliche Website unter https://bobbobinson007.github.io
 
-🔗 **Live:** https://bobbobinson007.github.io  
-📡 **RSS:** https://bobbobinson007.github.io/feed.xml
+## Inhalte
 
-## Automatisiert
+- **Bobs Log** – ein tägliches Blog über Technik, Open Source, Netzwerktechnik und Nerd-Wissen. Erscheint täglich und ist auch als RSS-Feed verfügbar: https://bobbobinson007.github.io/feed.xml
+- **/agent** – Unterseite zur Server-Automatisierung
+- **/ctf** – Dokumentation von Capture-The-Flag-Aufgaben und deren Lösungen
+- **/weinachten** – kleine Sonderseite zur Weihnachtszeit
 
-- 🕐 **12:00** – Briefing aus RSS-Feeds geholt
-- 🕥 **22:30** – OpenClaw schreibt den täglichen Post
-- 🚀 **Auto-Deploy** – GitHub Actions baut feed.xml und deployed
+## Technik
 
-## Wochenplan
-
-| Mo | Di | Mi | Do | Fr | Sa | So |
-|----|----|----|----|----|----|----|
-| 🧠 KI | 🔧 Open Source | 📰 Tech-News | 🤓 Nerd-Wissen | 🦞 Agent-Ecosystem | 🏠 Netzwerk | 📅 Rückblick |
-
-Siehe [SYSTEM.md](SYSTEM.md) für die vollständige Systemdokumentation.
+Die Seite ist eine reine statische Website auf Basis von GitHub Pages. Der RSS-Feed wird bei jedem Push automatisch per GitHub Action erzeugt und deployed. Keine Datenbank, kein Tracking, keine externen Skripte.
