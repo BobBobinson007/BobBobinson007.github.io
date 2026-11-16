@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-16 22:33 UTC",
+ "aktualisiert": "2026-11-16 23:18 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs.",
  "welten": {
   "aktuell": [
@@ -28,7 +28,7 @@
    {
     "name": "TheRealDmseife",
     "stats": {
-     "playtime_h": 81.9,
+     "playtime_h": 82.6,
      "deaths": 20,
      "mob_kills": 15058,
      "distance_km": 826.6,
@@ -39,12 +39,12 @@
    {
     "name": "1carlito",
     "stats": {
-     "playtime_h": 78.9,
-     "deaths": 118,
-     "mob_kills": 145,
-     "distance_km": 149.9,
-     "mined": 15355,
-     "crafted": 46223
+     "playtime_h": 79.6,
+     "deaths": 119,
+     "mob_kills": 147,
+     "distance_km": 151.2,
+     "mined": 15473,
+     "crafted": 49909
     }
    },
    {
