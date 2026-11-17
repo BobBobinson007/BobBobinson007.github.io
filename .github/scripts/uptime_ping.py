@@ -93,12 +93,12 @@ def mc_ping(host: str, port: int, timeout: float):
         sock = socket.create_connection((host, port), timeout=timeout)
         sock.settimeout(timeout)
         host_b = host.encode()
-        hs = (_varint(0)                    # Paket-ID Handshake
-              + _varint(0xFFFFFFFF)         # Protokoll -1 (Status)
+        hs = (_varint(0xFFFFFFFF)         # Protokoll -1 (Status)
               + _varint(len(host_b)) + host_b
               + struct.pack(">H", port)
               + _varint(1))                 # Next State: Status
-        sock.sendall(_varint(len(hs)) + b"\x00" + hs)
+        # Paket: [Länge][Paket-ID 0x00][Daten]
+        sock.sendall(_varint(len(hs) + 1) + b"\x00" + hs)
         sock.sendall(_varint(1) + b"\x00")  # Status-Request
         total = _read_varint_stream(sock)
         body = _read_exact(sock, total)

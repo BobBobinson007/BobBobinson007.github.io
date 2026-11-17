@@ -146,6 +146,22 @@
     color:var(--dim);margin-top:5px}
   .updated{color:var(--dimmer);font-size:.8rem;margin-top:14px;font-family:var(--mono)}
 
+  /* ---------- Uptime ---------- */
+  .uptgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:16px}
+  .uptcard{background:var(--panel);border:1px solid var(--line);padding:20px 14px;text-align:center}
+  .uptcard:hover{border-color:var(--line2)}
+  .uptnum{font-family:var(--mono);font-size:1.9rem;font-weight:800;color:var(--white)}
+  .uptlabel{font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;color:var(--dim);margin-top:4px}
+  .uptms{font-size:.74rem;color:var(--dimmer);margin-top:2px;font-family:var(--mono)}
+  .uptspark{display:flex;gap:2px;height:36px;align-items:stretch;background:var(--panel);border:1px solid var(--line);padding:6px}
+  .uptspark i{flex:1;min-width:1px;background:var(--white);opacity:.8;transition:opacity .12s}
+  .uptspark i.down{background:var(--dimmer)}
+  .uptspark i:hover{opacity:1 !important}
+  .uptsparklegend{display:flex;gap:18px;margin-top:8px;font-size:.74rem;color:var(--dimmer);font-family:var(--mono)}
+  .uptsparklegend i{display:inline-block;width:10px;height:10px;background:var(--white);vertical-align:middle;margin-right:6px}
+  .uptsparklegend i.down{background:var(--dimmer)}
+  .uptstale{color:var(--dim);font-size:.8rem;font-family:var(--mono);margin-top:8px}
+
   /* ---------- Mehr Animationen + VIP-Plus ---------- */
   @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
   @keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.09)}}
@@ -319,6 +335,7 @@
     <nav>
       <a href="#beitreten" id="navBeitreten">Beitreten</a>
       <a href="#statistiken">Statistiken</a>
+      <a href="#uptime">Uptime</a>
       <a href="#schutz">Schutz</a>
       <a href="#regeln">Regeln</a>
       <a href="#server">Server</a>
@@ -349,6 +366,18 @@
 </div>
 
 <div class="strip" id="strip"></div>
+
+<section id="uptime">
+  <div class="wrap">
+    <h2>Server-Uptime</h2>
+    <p class="sub">Wird alle 5 Minuten von GitHub-Servern extern gepingt – unabhängig von dieser Seite, auch wenn niemand drauf schaut.</p>
+    <div class="uptgrid" id="uptgrid"></div>
+    <div class="uptspark" id="uptspark" aria-label="Ping-Verlauf der letzten 24 Stunden"></div>
+    <div class="uptsparklegend"><span><i></i>erreichbar</span><span><i class="down"></i>nicht erreichbar</span><span style="margin-left:auto">letzte 24 h</span></div>
+    <div class="uptstale" id="uptstale"></div>
+    <div class="updated" id="uptupdated"></div>
+  </div>
+</section>
 
 <section id="statistiken">
   <div class="wrap">
@@ -577,6 +606,7 @@ async function laden(){
   zeigeStreifen();
   render();
   statusHolen();
+  uptimeHolen();
   route();
   try{
     const r = await fetch('daten/statistiken.json');
@@ -883,6 +913,51 @@ const SCHUTZ = [
   {titel:'Chat', text:'Beleidigungen, Spam und Werbung werden gefiltert.'},
   {titel:'Zeitmaschine', text:'Aktionen lassen sich nachvollziehen und rückgängig machen.'},
 ];
+
+/* ================= Server-Uptime (extern via GitHub Actions) ================= */
+
+async function uptimeHolen(){
+  const grid = document.getElementById('uptgrid');
+  const spark = document.getElementById('uptspark');
+  const stale = document.getElementById('uptstale');
+  const upd = document.getElementById('uptupdated');
+  if(!grid) return;
+  try{
+    const r = await fetch('https://raw.githubusercontent.com/BobBobinson007/BobBobinson007.github.io/uptime-data/uptime_data.json?t='+Date.now());
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    const d = await r.json();
+    const days = Object.entries(d.days||{}).sort();
+    function fenster(tage){
+      const cutoff = new Date(Date.now() - tage*86400000).toISOString().slice(0,10);
+      let up=0, down=0, ms=0, msN=0;
+      for(const [date, a] of days){
+        if(date < cutoff) continue;
+        up += a.up; down += a.down; ms += (a.ms_sum||0); msN += (a.ms_n||0);
+      }
+      const tot = up+down;
+      return { pct: tot ? Math.round(1000*up/tot)/10 : null, ms: msN ? Math.round(ms/msN) : null };
+    }
+    const f = [fenster(7), fenster(30), fenster(90)];
+    grid.innerHTML = ['7 Tage','30 Tage','90 Tage'].map((lbl,i)=>
+      '<div class="uptcard"><div class="uptnum">'+(f[i].pct===null?'\u2013':f[i].pct+'%')+'</div>'+
+      '<div class="uptlabel">'+lbl+'</div>'+
+      '<div class="uptms">'+(f[i].ms!==null?'\u2300 '+f[i].ms+' ms Ping':'')+'</div></div>'
+    ).join('');
+    const rec = d.recent||[];
+    spark.innerHTML = rec.map(s=>
+      '<i class="'+(s.ok?'up':'down')+'" title="'+s.t.replace('T',' ').replace('Z',' UTC')+' | '+(s.ok?('erreichbar'+(s.ms!==null?' \u00b7 '+s.ms+' ms':'')):'NICHT erreichbar')+'"></i>'
+    ).join('');
+    // Veraltet? (letzter Ping > 20 Min her -> Monitor pausiert?)
+    const alter = d.generated ? (Date.now() - new Date(d.generated).getTime())/60000 : null;
+    if(alter !== null && alter > 20){
+      stale.textContent = '\u26a0 Letzter externer Check ist '+Math.round(alter)+' Minuten her \u2013 der Monitor l\u00e4uft eventuell nicht.';
+    }else{ stale.textContent = ''; }
+    upd.textContent = 'Letzter externer Check: '+(d.generated||'').replace('T',' ').replace('Z',' UTC')+' \u00b7 Quelle: GitHub Actions, alle 5 Min';
+  }catch(e){
+    grid.innerHTML = '<div class="uptcard"><div class="uptnum">\u2013</div><div class="uptlabel">Uptime-Daten nicht ladbar</div><div class="uptms">('+e.message+')</div></div>';
+    spark.innerHTML = '';
+  }
+}
 
 /* ================= Status + Online-Hover ================= */
 
