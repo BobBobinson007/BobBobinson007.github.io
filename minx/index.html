@@ -171,10 +171,8 @@
     .pcard:hover{transform:none}
   }
 
-  /* ---------- Beitreten (Einrichtungs-Guide) ---------- */
-  #beitreten{display:none}
-  #beitreten.open{display:block}
-  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+  /* ---------- Beitreten (Overlay) ---------- */
+  .steps{display:grid;grid-template-columns:1fr;gap:10px}
   .step{position:relative;background:var(--panel);border:2px solid var(--line);padding:20px 16px 18px;
     cursor:pointer;transition:border-color .15s,transform .18s}
   .step:hover{border-color:var(--white);transform:translateY(-3px)}
@@ -348,14 +346,6 @@
 
 <div class="strip" id="strip"></div>
 
-<section id="beitreten">
-  <div class="wrap">
-    <h2>Beitreten</h2>
-    <p class="sub">In fünf Schritten auf dem Server. Klick auf einen Schritt, um ihn abzuhaken – der Stand wird gespeichert.</p>
-    <div class="steps" id="steps"></div>
-  </div>
-</section>
-
 <section id="statistiken">
   <div class="wrap">
     <h2>Statistiken</h2>
@@ -434,6 +424,16 @@ window.__DATEN__ = {"aktualisiert":"2026-11-17 16:00 UTC","hinweis":"Öffentlich
     <div id="d_items"></div>
     <div class="d_sect">Fakten</div>
     <div class="facts" id="d_facts"></div>
+  </div>
+</div>
+
+<!-- Beitreten-Overlay -->
+<div class="overlay" id="joinoverlay">
+  <div class="dash" role="dialog" aria-modal="true">
+    <button class="dashclose" onclick="closeJoin()" aria-label="Schließen">✕</button>
+    <h2>Beitreten</h2>
+    <p class="sub">In fünf Schritten auf dem Server. Klick auf einen Schritt, um ihn abzuhaken – der Stand wird gespeichert.</p>
+    <div class="steps" id="steps"></div>
   </div>
 </div>
 
@@ -939,17 +939,24 @@ function copyIp(btn){
 }
 
 function oeffneBeitreten(){
-  const sec = document.getElementById('beitreten');
-  if(sec.classList.contains('open')) return;
-  sec.classList.add('open');
+  const ov = document.getElementById('joinoverlay');
+  if(ov.classList.contains('open')) return;
   baueSchritte();   // Entrance-Animation mit Stagger neu starten
-  setTimeout(()=>sec.scrollIntoView({behavior:'smooth', block:'start'}), 150);
+  ov.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeJoin(){
+  document.getElementById('joinoverlay').classList.remove('open');
+  document.body.style.overflow = '';
 }
 
 /* ================= Routing ================= */
 let overlay = document.getElementById('overlay');
 overlay.addEventListener('click', e=>{ if(e.target===overlay) closeDash(); });
-document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeDash(); });
+const joinov = document.getElementById('joinoverlay');
+joinov.addEventListener('click', e=>{ if(e.target===joinov) closeJoin(); });
+document.addEventListener('keydown', e=>{ if(e.key==='Escape'){ closeDash(); closeJoin(); } });
 
 function route(){
   const m = location.hash.match(/^#spieler\/(.+)$/);
@@ -968,11 +975,12 @@ window.addEventListener('skin3dready', ()=>{ if(daten) render(); });
 baueSchutz();
 laden();
 
-// Beitreten per Nav-Link auch ohne Kopieren öffnen
+// Beitreten-Overlay per Nav-Link öffnen
 (function(){
   const nav = document.getElementById('navBeitreten');
   if(!nav) return;
-  nav.addEventListener('click', ()=>{
+  nav.addEventListener('click', e=>{
+    e.preventDefault();
     oeffneBeitreten();
   });
 })();

@@ -70,10 +70,11 @@ Der Exporter hängt jedem Export einen `server`-Block an:
 
 ## Beitreten-Sektion
 
-- **Versteckt bis kopiert:** Die Sektion ist anfangs ausgeblendet. Drückt man
-  neben der IP auf „Kopieren“, erscheint sie automatisch (mit Stagger-Animation)
-  und scrollt smooth hin. Der Nav-Link „Beitreten“ öffnet sie ebenfalls.
-- Fünf abhakbare Schritte (Checklist, Stand in `localStorage`):
+- **Overlay-Dialog:** Keine eigene Sektion im Seitenfluss. Bei Klick auf
+  „Kopieren“ neben der IP (oder Nav-Link „Beitreten“) poppt der Guide als
+  Dialog auf (gleiches Muster wie das Spieler-Dashboard: `.overlay` + `.dash`,
+  `#joinoverlay`). ESC, Klick auf Backdrop oder ✕ schließen.
+- Fünf abhakbare Schritte (Checklist, Stand in `localStorage`, einspaltig):
   1. Discord beitreten – Link: `https://discord.com/channels/1570554700611461230/1570557411352387645`
   2. Whitelist beantragen (Name im Discord angeben)
   3. Minecraft-Version **26.2**, keine Mods nötig (Vanilla Survival)
