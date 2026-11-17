@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-17 19:30 UTC",
+ "aktualisiert": "2026-11-17 20:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 317.3,
+    "playtime_h": 317.8,
     "deaths": 104,
-    "mob_kills": 52177,
-    "distance_km": 2328.4,
-    "mined": 178852,
+    "mob_kills": 52350,
+    "distance_km": 2336.3,
+    "mined": 178855,
     "crafted": 158666,
     "distanz": {
-     "fuss": 702.5,
-     "elytra": 1592.3,
+     "fuss": 703.2,
+     "elytra": 1599.6,
      "schwimmen": 20.2,
      "boot": 11.7,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 182283,
-    "damage_taken": 245317,
-    "damage_dealt": 936065,
+    "jumps": 182623,
+    "damage_taken": 245557,
+    "damage_dealt": 940934,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 7536,
+    "drops": 7551,
     "trades": 0,
     "top_mined": [
      [
@@ -83,31 +83,31 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 298.5,
+    "playtime_h": 298.9,
     "deaths": 51,
-    "mob_kills": 9223,
-    "distance_km": 1507.2,
-    "mined": 51424,
-    "crafted": 37157,
+    "mob_kills": 9237,
+    "distance_km": 1511.2,
+    "mined": 53453,
+    "crafted": 37229,
     "distanz": {
-     "fuss": 358.2,
-     "elytra": 1092.5,
+     "fuss": 359.4,
+     "elytra": 1095.2,
      "schwimmen": 55.0,
      "boot": 0.4,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 134375,
-    "damage_taken": 90689,
-    "damage_dealt": 560340,
+    "jumps": 134733,
+    "damage_taken": 90877,
+    "damage_dealt": 563005,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4262,
+    "drops": 4286,
     "trades": 0,
     "top_mined": [
      [
       "stone",
-      8954
+      9009
      ],
      [
       "dirt",
@@ -127,7 +127,7 @@
      ],
      [
       "short grass",
-      2767
+      2769
      ]
     ],
     "top_crafted": [
@@ -161,26 +161,26 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 88.5,
+    "playtime_h": 88.7,
     "deaths": 20,
     "mob_kills": 15595,
-    "distance_km": 896.2,
+    "distance_km": 897.5,
     "mined": 29894,
     "crafted": 110466,
     "distanz": {
-     "fuss": 225.3,
-     "elytra": 664.0,
+     "fuss": 225.7,
+     "elytra": 665.0,
      "schwimmen": 3.7,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 52936,
-    "damage_taken": 80957,
-    "damage_dealt": 428526,
+    "jumps": 53075,
+    "damage_taken": 81009,
+    "damage_dealt": 428566,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2081,
+    "drops": 2082,
     "trades": 0,
     "top_mined": [
      [
@@ -1306,6 +1306,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-17 19:30 UTC"
+  "wann": "2026-11-17 20:00 UTC"
  }
 }
