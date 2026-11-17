@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-17 19:00 UTC",
+ "aktualisiert": "2026-11-17 19:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 316.9,
+    "playtime_h": 317.3,
     "deaths": 104,
-    "mob_kills": 52176,
-    "distance_km": 2324.1,
-    "mined": 178830,
+    "mob_kills": 52177,
+    "distance_km": 2328.4,
+    "mined": 178852,
     "crafted": 158666,
     "distanz": {
-     "fuss": 701.8,
-     "elytra": 1588.9,
-     "schwimmen": 20.1,
+     "fuss": 702.5,
+     "elytra": 1592.3,
+     "schwimmen": 20.2,
      "boot": 11.7,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 181922,
-    "damage_taken": 245067,
-    "damage_dealt": 935816,
+    "jumps": 182283,
+    "damage_taken": 245317,
+    "damage_dealt": 936065,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 7525,
+    "drops": 7536,
     "trades": 0,
     "top_mined": [
      [
@@ -83,26 +83,26 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 298.1,
+    "playtime_h": 298.5,
     "deaths": 51,
-    "mob_kills": 9219,
-    "distance_km": 1503.9,
-    "mined": 51414,
-    "crafted": 37143,
+    "mob_kills": 9223,
+    "distance_km": 1507.2,
+    "mined": 51424,
+    "crafted": 37157,
     "distanz": {
-     "fuss": 357.5,
-     "elytra": 1089.9,
-     "schwimmen": 54.9,
+     "fuss": 358.2,
+     "elytra": 1092.5,
+     "schwimmen": 55.0,
      "boot": 0.4,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 134086,
-    "damage_taken": 90354,
-    "damage_dealt": 559659,
+    "jumps": 134375,
+    "damage_taken": 90689,
+    "damage_dealt": 560340,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4258,
+    "drops": 4262,
     "trades": 0,
     "top_mined": [
      [
@@ -127,7 +127,7 @@
      ],
      [
       "short grass",
-      2762
+      2767
      ]
     ],
     "top_crafted": [
@@ -239,21 +239,21 @@
   {
    "name": "1carlito",
    "stats": {
-    "playtime_h": 82.4,
+    "playtime_h": 82.5,
     "deaths": 119,
     "mob_kills": 147,
-    "distance_km": 171.3,
-    "mined": 16083,
+    "distance_km": 171.4,
+    "mined": 16085,
     "crafted": 55041,
     "distanz": {
-     "fuss": 83.1,
+     "fuss": 83.2,
      "elytra": 83.1,
      "schwimmen": 3.8,
      "boot": 0.3,
      "minecart": 1.1
     },
-    "jumps": 14758,
-    "damage_taken": 56161,
+    "jumps": 14764,
+    "damage_taken": 56447,
     "damage_dealt": 16809,
     "fish_caught": 0,
     "enchanted": 0,
@@ -1306,6 +1306,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-17 19:00 UTC"
+  "wann": "2026-11-17 19:30 UTC"
  }
 }
