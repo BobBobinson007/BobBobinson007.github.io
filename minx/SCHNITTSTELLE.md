@@ -70,16 +70,19 @@ Der Exporter hängt jedem Export einen `server`-Block an:
 
 ## Beitreten-Sektion
 
-- **Overlay-Dialog:** Keine eigene Sektion im Seitenfluss. Bei Klick auf
-  „Kopieren“ neben der IP (oder Nav-Link „Beitreten“) poppt der Guide als
-  Dialog auf (gleiches Muster wie das Spieler-Dashboard: `.overlay` + `.dash`,
-  `#joinoverlay`). ESC, Klick auf Backdrop oder ✕ schließen.
-- Fünf abhakbare Schritte (Checklist, Stand in `localStorage`, einspaltig):
-  1. Discord beitreten – Link: `https://discord.com/channels/1570554700611461230/1570557411352387645`
-  2. Whitelist beantragen (Name im Discord angeben)
-  3. Minecraft-Version **26.2**, keine Mods nötig (Vanilla Survival)
-  4. **Lunar Client** empfohlen
-  5. IP eingeben (Kopier-Button)
+- **Overlay-Wizard:** Keine eigene Sektion im Seitenfluss. Bei Klick auf
+  „Kopieren“ neben der IP (oder Nav-Link „Beitreten“) öffnet sich der Dialog
+  (`#joinoverlay`, gleiche Optik wie das Spieler-Dashboard). Pro Schritt eine
+  Karte mit Fortschrittsbalken; „Weiter“/„Zurück“ blättern („Weiter“-Flow,
+  keine To-do-Checkliste mehr). ESC, Backdrop-Klick oder ✕ schließen.
+- Fünf Schritte:
+  1. Discord & Whitelist – Link: `https://discord.com/channels/1570554700611461230/1570557411352387645`
+  2. Minecraft installieren – Version **26.2**
+  3. Mods installieren – **Chunkloader**, **Xaero's Minimap**, **Xaero's World Map**,
+     **Voice Chat** (Modrinth-Links)
+  4. **Lunar Client** empfohlen (Link lunarclient.com)
+  5. Server beitreten – IP kopieren
+- Mods sind **Pflicht** (Bob-Langform), entgegen früherem „keine Mods nötig“.
 
 ## Sonstiges
 

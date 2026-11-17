@@ -4,11 +4,11 @@ Interaktive Server-Seite: https://bobbobinson007.github.io/minx/
 
 Inhalt:
 
-- **Beitreten** – Einrichtungs-Guide als **Overlay-Dialog** (wie das Spieler-
-  Dashboard): verborgen bis neben der IP auf „Kopieren“ gedrückt wird – dann
-  poppt er als Dialog auf (auch über den Nav-Link, ESC/Backdrop schließt).
-  5 abhakbare Schritte: Discord beitreten, Whitelist beantragen, Version 26.2
-  (keine Mods nötig), **Lunar Client** empfohlen, IP eingeben.
+- **Beitreten** – Einrichtungs-Guide als **Overlay-Wizard** (wie das Spieler-
+  Dashboard): poppt bei „Kopieren“ neben der IP auf (auch per Nav-Link),
+  „Weiter“ führt Schritt für Schritt: Discord & Whitelist → Minecraft
+  installieren (26.2) → **Mods** (Chunkloader, Xaero's Minimap, Xaero's World
+  Map, Voice Chat) → **Lunar Client** (empfohlen) → Server beitreten.
 - **Statistiken** – Spielerstatistiken aus aktueller und alter Welt,
   automatisch pro Spieler zusammengeführt. Jeder Spieler bekommt automatisch
   ein persönliches Dashboard: Skin, Kennzahlen, Distanz-Aufschlüsselung,

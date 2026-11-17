@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>minx – Vanilla Survival Server</title>
+<title>minx - Vanilla Survival Server</title>
 <meta name="description" content="Der minx Minecraft-Server: Vanilla Survival, Community, Spieler-Dashboards und Schutzsysteme.">
 <script src="https://cdn.jsdelivr.net/npm/skinview3d@3.4.1/bundles/skinview3d.bundle.js"
         onload="window.dispatchEvent(new Event('skin3dready'))"
@@ -171,26 +171,30 @@
     .pcard:hover{transform:none}
   }
 
-  /* ---------- Beitreten (Overlay) ---------- */
-  .steps{display:grid;grid-template-columns:1fr;gap:10px}
-  .step{position:relative;background:var(--panel);border:2px solid var(--line);padding:20px 16px 18px;
-    cursor:pointer;transition:border-color .15s,transform .18s}
-  .step:hover{border-color:var(--white);transform:translateY(-3px)}
-  .step .snr{position:absolute;top:8px;left:10px;font-family:var(--mono);font-size:.8rem;color:var(--dimmer)}
-  .step .check{position:absolute;top:8px;right:10px;width:22px;height:22px;border:1px solid var(--line2);
-    font-family:var(--mono);font-size:.85rem;display:flex;align-items:center;justify-content:center;
-    color:transparent;background:var(--panel2);transition:all .2s;user-select:none}
-  .step:hover .check{border-color:var(--white);color:var(--dim)}
-  .step.fertig .check{color:#000;background:var(--white);border-color:var(--white);box-shadow:0 0 12px rgba(255,255,255,.5)}
-  .step .stitel{font-family:var(--mono);font-weight:700;font-size:.95rem;letter-spacing:.06em;
-    text-transform:uppercase;color:var(--white);margin:4px 0 8px;padding-right:28px;word-break:break-word;
-    transition:color .2s}
-  .step.fertig .stitel{text-decoration:line-through;color:var(--dim)}
-  .step .stext{color:var(--dim);font-size:.85rem}
-  .step .sbtn{display:inline-block;margin-top:12px;background:var(--white);color:#000;border:0;
-    padding:8px 14px;font-weight:700;cursor:pointer;font-size:.78rem;text-transform:uppercase;
+  /* ---------- Beitreten (Overlay-Wizard) ---------- */
+  .jstep{background:var(--panel);border:2px solid var(--line);padding:22px 18px}
+  .jstep .jsnr{font-family:var(--mono);font-size:.76rem;color:var(--dimmer);letter-spacing:.14em;text-transform:uppercase}
+  .jstep .jstitel{font-family:var(--mono);font-weight:700;font-size:1.15rem;color:var(--white);margin:6px 0 10px}
+  .jstep .jstext{color:var(--dim);font-size:.9rem}
+  .sbtn{display:inline-block;margin-top:16px;margin-right:10px;background:var(--white);color:#000;border:0;
+    padding:10px 18px;font-weight:700;cursor:pointer;font-size:.8rem;text-transform:uppercase;
     letter-spacing:.08em;font-family:var(--mono);text-decoration:none;border-bottom:0}
-  .step .sbtn:hover{background:var(--dim)}
+  .sbtn:hover{background:var(--dim)}
+  .modlist{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+  .mrow{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--panel2);
+    border:1px solid var(--line);padding:9px 12px;font-family:var(--mono);font-size:.84rem;color:var(--text)}
+  .mrow a{border-bottom:1px solid var(--dimmer)}
+  .mrow a:hover{border-bottom-color:var(--white)}
+  .joinprog{display:flex;gap:6px;margin:16px 0 22px}
+  .joinprog i{height:6px;flex:1;background:var(--panel2);border:1px solid var(--line)}
+  .joinprog i.an{background:var(--white);border-color:var(--white);box-shadow:0 0 8px rgba(255,255,255,.5)}
+  .joinnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:22px}
+  .wbtn{background:var(--white);color:#000;border:0;padding:10px 24px;font-weight:700;cursor:pointer;
+    font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em;font-size:.85rem}
+  .wbtn:hover{background:var(--dim)}
+  .wbtn.back{background:var(--panel);color:var(--dim);border:1px solid var(--line2)}
+  .wbtn.back:hover{color:var(--white);border-color:var(--white)}
+  .joincount{font-family:var(--mono);font-size:.8rem;color:var(--dimmer)}
 
   /* ---------- Schutz (minimal) ---------- */
   .slist{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px}
@@ -320,7 +324,7 @@
       <a href="#server">Server</a>
     </nav>
     <div class="hdrstatus" id="hdrstatus" style="display:none">
-      <span class="dot"></span><span id="hdrcount">–</span>
+      <span class="dot"></span><span id="hdrcount">-</span>
       <div class="hdrwho" id="hdrwho"></div>
     </div>
   </div>
@@ -331,7 +335,7 @@
   <div class="veil"></div>
   <div class="wrap">
     <h1>MINX</h1>
-    <p class="tag">Vanilla Survival – gemeinsam bauen, ohne Gimmicks.</p>
+    <p class="tag">Vanilla Survival - gemeinsam bauen, ohne Gimmicks.</p>
     <div class="pixelrow"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
     <div class="ipbox">
       <code>minxserver.duckdns.org</code>
@@ -360,7 +364,7 @@
 <section id="schutz">
   <div class="wrap">
     <h2>Schutzsysteme</h2>
-    <p class="sub">Was im Hintergrund läuft – bewusst knapp gehalten.</p>
+    <p class="sub">Was im Hintergrund läuft - bewusst knapp gehalten.</p>
     <div class="slist" id="slist"></div>
   </div>
 </section>
@@ -370,11 +374,11 @@
     <h2>Regeln</h2>
     <p class="sub">Kurz und klar.</p>
     <ol class="rules">
-      <li>Kein Griefing – nichts zerstören, was andere gebaut haben.</li>
+      <li>Kein Griefing - nichts zerstören, was andere gebaut haben.</li>
       <li>Kein Klauen aus fremden Kisten und Farmen.</li>
       <li>Respekt im Chat, kein Spam.</li>
       <li>Keine Fallen und Trolle gegen andere Spieler.</li>
-      <li>Bugs nicht ausnutzen – melden.</li>
+      <li>Bugs nicht ausnutzen - melden.</li>
       <li>Wer dauerhaft stört, wird ausgeschlossen.</li>
     </ol>
   </div>
@@ -391,7 +395,7 @@
 
 <footer>
   <div class="wrap">
-    MINX – Vanilla Survival &nbsp;·&nbsp;
+    MINX - Vanilla Survival &nbsp;·&nbsp;
     <a href="https://github.com/BobBobinson007/BobBobinson007.github.io/tree/main/minx">Quelle auf GitHub</a>
   </div>
 </footer>
@@ -432,8 +436,9 @@ window.__DATEN__ = {"aktualisiert":"2026-11-17 16:30 UTC","hinweis":"Öffentlich
   <div class="dash" role="dialog" aria-modal="true">
     <button class="dashclose" onclick="closeJoin()" aria-label="Schließen">✕</button>
     <h2>Beitreten</h2>
-    <p class="sub">In fünf Schritten auf dem Server. Klick auf einen Schritt, um ihn abzuhaken – der Stand wird gespeichert.</p>
-    <div class="steps" id="steps"></div>
+    <div class="joinprog" id="joinprog"></div>
+    <div id="joinbody"></div>
+    <div class="joinnav" id="joinnav"></div>
   </div>
 </div>
 
@@ -448,7 +453,7 @@ let onlineMax = null;
 function fmt(n){ return n.toLocaleString('de-DE'); }
 function fmtW(n, dec){ return dec ? n.toLocaleString('de-DE',{minimumFractionDigits:1,maximumFractionDigits:1}) : fmt(n); }
 function headUrl(name, px){
-  // 3D-Iso-Kopf (Visage/vzge – liefert korrekt normalisierte 64x64-Skins)
+  // 3D-Iso-Kopf (Visage/vzge - liefert korrekt normalisierte 64x64-Skins)
   return 'https://vzge.me/head/' + px + '/' + encodeURIComponent(name);
 }
 function helmFallback(img, name, px){
@@ -695,11 +700,11 @@ function renderServer(){
     '<div class="sval">'+(srv?.cpu || 'Intel Core i5')+'</div></div>';
 
   html += '<div class="srv"><div class="slbl">Arbeitsspeicher</div>'+
-    '<div class="sval">'+(srv?.ram_gb ? fmtW(srv.ram_gb,1)+' GB' : '—')+'</div>'+
+    '<div class="sval">'+(srv?.ram_gb ? fmtW(srv.ram_gb,1)+' GB' : '-')+'</div>'+
     '<div class="sdet">RAM des Hosts</div></div>';
 
-  html += '<div class="srv"><div class="slbl">Weltgröße – aktuell</div>'+
-    '<div class="sval">'+(srv?.welt_aktuell_gb ? fmtW(srv.welt_aktuell_gb,1)+' GB' : '—')+'</div>'+
+  html += '<div class="srv"><div class="slbl">Weltgröße - aktuell</div>'+
+    '<div class="sval">'+(srv?.welt_aktuell_gb ? fmtW(srv.welt_aktuell_gb,1)+' GB' : '-')+'</div>'+
     '<div class="dbar"><span class="track"><span class="fill" data-w="'+(srv? (srv.welt_aktuell_gb||0)/maxW*100 :0).toFixed(1)+'%"></span></span></div>'+
     '<div class="sdet">Wird bei jedem Daten-Export frisch gemessen</div></div>';
 
@@ -802,47 +807,68 @@ function oeffneDash(name){
   document.body.style.overflow = 'hidden';
 }
 
-/* ================= Beitreten (Einrichtungs-Guide) ================= */
+/* ================= Beitreten (Overlay-Wizard) ================= */
 
 const DISCORD_URL = 'https://discord.com/channels/1570554700611461230/1570557411352387645';
 
-function baueSchritte(){
-  const el = document.getElementById('steps');
-  const schritte = [
-    {id:'discord', titel:'Discord beitreten',
-     text:'Tritt unserem Discord bei – dort läuft die Organisation und die Whitelist.',
-     btn:{label:'Discord öffnen', href:DISCORD_URL, ext:true}},
-    {id:'whitelist', titel:'Whitelist',
-     text:'Schreib deinen Minecraft-Namen im Discord in den Whitelist-Kanal. Erst mit Eintrag kannst du auf den Server.'},
-    {id:'version', titel:'Version 26.2',
-     text:'Installiere Minecraft 26.2 – Vanilla Survival, es werden keine Mods benötigt.'},
-    {id:'client', titel:'Lunar Client',
-     text:'Empfohlen: Lunar Client. Damit läuft der Server besonders flüssig.'},
-    {id:'ip', titel:'Server beitreten',
-     text:'IP in Minecraft eintragen, verbinden, fertig.',
-     btn:{label:'IP kopieren', copy:true}},
-  ];
-  let fertig = [];
-  try{ fertig = JSON.parse(localStorage.getItem('minx_steps') || '[]'); }catch(e){}
-  el.innerHTML = schritte.map((s,i)=>
-    '<div class="step'+(fertig.includes(s.id)?' fertig':'')+'" data-id="'+s.id+'" style="animation-delay:'+(i*0.08)+'s">'+
-    '<span class="snr">'+String(i+1).padStart(2,'0')+'</span>'+
-    '<span class="check">✓</span>'+
-    '<div class="stitel">'+s.titel+'</div>'+
-    '<div class="stext">'+s.text+'</div>'+
-    (s.btn ? (s.btn.copy
-      ? '<button class="sbtn" onclick="event.stopPropagation();copyIp(this)">IP kopieren</button>'
-      : '<a class="sbtn" href="'+s.btn.href+'" target="_blank" rel="noopener" onclick="event.stopPropagation()">'+s.btn.label+'</a>')
-    : '')+
-    '</div>'
-  ).join('');
-  el.querySelectorAll('.step').forEach(step=>{
-    step.addEventListener('click', ()=>{
-      step.classList.toggle('fertig');
-      const set = [...el.querySelectorAll('.step.fertig')].map(x=>x.dataset.id);
-      try{ localStorage.setItem('minx_steps', JSON.stringify(set)); }catch(e){}
-    });
-  });
+const JOIN_SCHRITTE = [
+  {titel:'Discord & Whitelist',
+   text:'Tritt unserem Discord bei und schreib deinen Minecraft-Namen in den Whitelist-Kanal. Erst mit Eintrag kannst du auf den Server.',
+   btns:[{label:'Discord öffnen', href:DISCORD_URL, ext:true}]},
+  {titel:'Minecraft installieren',
+   text:'Installiere Minecraft in der Version 26.2 – Vanilla Survival.'},
+  {titel:'Mods installieren',
+   text:'Diese Mods werden benötigt – in derselben Version installieren:',
+   mods:[
+     {name:'Chunkloader', href:'https://modrinth.com/mods?q=chunkloader'},
+     {name:"Xaero's Minimap", href:'https://modrinth.com/mod/xaeros-minimap'},
+     {name:"Xaero's World Map", href:'https://modrinth.com/mod/xaeros-world-map'},
+     {name:'Voice Chat', href:'https://modrinth.com/mod/simple-voice-chat'},
+   ]},
+  {titel:'Lunar Client',
+   text:'Empfohlen: Lunar Client. Damit läuft der Server besonders flüssig.',
+   btns:[{label:'Lunar Client laden', href:'https://www.lunarclient.com', ext:true}]},
+  {titel:'Server beitreten',
+   text:'Server-IP in Minecraft eintragen, verbinden – fertig.',
+   btns:[{copy:true}]},
+];
+let joinIndex = 0;
+
+function zeigeJoinSchritt(){
+  const n = JOIN_SCHRITTE.length;
+  const s = JOIN_SCHRITTE[joinIndex];
+  document.getElementById('joinprog').innerHTML =
+    Array.from({length:n},(_,i)=>'<i class="'+(i<=joinIndex?'an':'')+'"></i>').join('');
+  document.getElementById('joinbody').innerHTML =
+    '<div class="jstep">'+
+    '<div class="jsnr">Schritt '+(joinIndex+1)+' / '+n+'</div>'+
+    '<div class="jstitel">'+s.titel+'</div>'+
+    '<div class="jstext">'+s.text+'</div>'+
+    (s.mods
+      ? '<div class="modlist">'+s.mods.map(m=>
+          '<div class="mrow"><span>'+m.name+'</span>'+
+          (m.href?'<a href="'+m.href+'" target="_blank" rel="noopener">Modrinth ↗</a>':'<span></span>')+
+          '</div>').join('')+'</div>'
+      : '')+
+    (s.btns
+      ? s.btns.map(b=> b.copy
+          ? '<button class="sbtn" onclick="copyIp(this)">IP kopieren</button>'
+          : '<a class="sbtn" href="'+b.href+'" target="_blank" rel="noopener">'+b.label+'</a>').join('')
+      : '')+
+    '</div>';
+  const nav = document.getElementById('joinnav');
+  nav.innerHTML =
+    (joinIndex>0
+      ? '<button class="wbtn back" onclick="joinWechsel(-1)">Zurück</button>'
+      : '<span></span>')+
+    (joinIndex<n-1
+      ? '<button class="wbtn" onclick="joinWechsel(1)">Weiter</button>'
+      : '<span class="joincount">Fertig – wir sehen uns auf dem Server!</span>');
+}
+
+function joinWechsel(d){
+  joinIndex = Math.max(0, Math.min(JOIN_SCHRITTE.length-1, joinIndex+d));
+  zeigeJoinSchritt();
 }
 
 /* ================= Schutz (minimal) ================= */
@@ -894,7 +920,7 @@ async function statusHolen(){
   }
   if(ok){
     el.className = 'status online';
-    el.innerHTML = '<span class="dot"></span>ONLINE – '+(serverOnline!==null? serverOnline+' / '+onlineMax+' SPIELER':'SERVER ERREICHBAR');
+    el.innerHTML = '<span class="dot"></span>ONLINE - '+(serverOnline!==null? serverOnline+' / '+onlineMax+' SPIELER':'SERVER ERREICHBAR');
   }else{
     el.className = 'status';
     el.innerHTML = '<span class="dot"></span>STATUS UNBEKANNT';
@@ -941,7 +967,7 @@ function copyIp(btn){
 function oeffneBeitreten(){
   const ov = document.getElementById('joinoverlay');
   if(ov.classList.contains('open')) return;
-  baueSchritte();   // Entrance-Animation mit Stagger neu starten
+  zeigeJoinSchritt();
   ov.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
