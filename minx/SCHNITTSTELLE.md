@@ -53,9 +53,14 @@ Der Exporter hängt jedem Export einen `server`-Block an:
 
 ## Skin-Darstellung
 
-- 3D-Skins (Podium + Spieler-Dashboard) über **skinview3d** (CDN),
-  Skin-Texturen von `minotar.net/skin/` mit Fallback auf `mc-heads.net/skin/`.
-- Spieler-Board nutzt 3D-Iso-Köpfe von `vzge.me` (Fallback: `minotar.net/helm`,
-  dann SVG-Platzhalter).
-- Online-Status (Punkte am Spieler-Board + Hover-Liste am Status) kommt live
-  von `api.mcsrvstat.us` (Fallback: `api.mcstatus.io`).
+- 3D-Skins (Podium + Spieler-Dashboard) über **skinview3d** (CDN).
+- Skin-Texturen: **`vzge.me/skin/` primär** – vzge normalisiert alle Skins auf
+  64×64. Achtung: `minotar.net/skin/` liefert teils 64×32-Legacy-Formate, die
+  skinview3d falsch rendert – daher nur als letzter Fallback.
+- Fallback-Kette Skin: vzge → mc-heads → minotar. Fallback-Kette Köpfe:
+  vzge (3D-Iso) → mc-heads → minotar helm → SVG-Platzhalter.
+- Animationen: Podium = Laufen/Gehen/Idle gemischt; Dashboard = umschaltbar
+  (Idle/Gehen/Laufen-Buttons).
+- Online-Liste steht zentriert unter der IP-Box (kein Hover mehr); Punkte am
+  Spieler-Board markieren verbundene Spieler. Quelle: `api.mcsrvstat.us`
+  (Fallback: `api.mcstatus.io`), live per Server-List-Ping.
