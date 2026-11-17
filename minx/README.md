@@ -6,9 +6,9 @@ Inhalt:
 
 - **Beitreten** – Einrichtungs-Guide als **Overlay-Wizard** (wie das Spieler-
   Dashboard): poppt bei „Kopieren“ neben der IP auf (auch per Nav-Link),
-  „Weiter“ führt Schritt für Schritt: Discord & Whitelist → Minecraft
-  installieren (26.2) → **Mods** (Chunkloader, Xaero's Minimap, Xaero's World
-  Map, Voice Chat) → **Lunar Client** (empfohlen) → Server beitreten.
+  „Weiter“ führt Schritt für Schritt: Discord & Whitelist → Version
+  (**26.2 empfohlen**, alle Versionen 1.8–26.3 möglich) → **Simple Voice
+  Chat** (empfohlen) → Server beitreten. Keine Mods nötig.
 - **Statistiken** – Spielerstatistiken aus aktueller und alter Welt,
   automatisch pro Spieler zusammengeführt. Jeder Spieler bekommt automatisch
   ein persönliches Dashboard: Skin, Kennzahlen, Distanz-Aufschlüsselung,

@@ -75,14 +75,13 @@ Der Exporter hängt jedem Export einen `server`-Block an:
   (`#joinoverlay`, gleiche Optik wie das Spieler-Dashboard). Pro Schritt eine
   Karte mit Fortschrittsbalken; „Weiter“/„Zurück“ blättern („Weiter“-Flow,
   keine To-do-Checkliste mehr). ESC, Backdrop-Klick oder ✕ schließen.
-- Fünf Schritte:
+- Vier Schritte:
   1. Discord & Whitelist – Link: `https://discord.com/channels/1570554700611461230/1570557411352387645`
-  2. Minecraft installieren – Version **26.2**
-  3. Mods installieren – **Chunkloader**, **Xaero's Minimap**, **Xaero's World Map**,
-     **Voice Chat** (Modrinth-Links)
-  4. **Lunar Client** empfohlen (Link lunarclient.com)
-  5. Server beitreten – IP kopieren
-- Mods sind **Pflicht** (Bob-Langform), entgegen früherem „keine Mods nötig“.
+  2. Version wählen – **26.2 empfohlen**; unterstützt werden alle Versionen **1.8–26.3** (ViaVersion/ViaBackwards), keine Mods nötig
+  3. **Simple Voice Chat** (empfohlen, optional) – Modrinth-Link
+  4. Server beitreten – IP kopieren
+- Mods sind **nicht** nötig zum Beitreen (Vanilla-Join möglich, Registry-Mods entfernt);
+  Simple Voice Chat ist der einzige empfohlene Zusatz.
 
 ## Sonstiges
 
