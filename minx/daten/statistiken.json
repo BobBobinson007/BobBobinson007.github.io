@@ -1,35 +1,35 @@
 {
- "aktualisiert": "2026-11-17 20:00 UTC",
+ "aktualisiert": "2026-11-17 20:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 317.8,
+    "playtime_h": 318.3,
     "deaths": 104,
-    "mob_kills": 52350,
-    "distance_km": 2336.3,
-    "mined": 178855,
-    "crafted": 158666,
+    "mob_kills": 52353,
+    "distance_km": 2340.4,
+    "mined": 179329,
+    "crafted": 158779,
     "distanz": {
-     "fuss": 703.2,
-     "elytra": 1599.6,
+     "fuss": 705.4,
+     "elytra": 1601.5,
      "schwimmen": 20.2,
      "boot": 11.7,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 182623,
-    "damage_taken": 245557,
-    "damage_dealt": 940934,
+    "jumps": 183254,
+    "damage_taken": 245690,
+    "damage_dealt": 941434,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 7551,
+    "drops": 7585,
     "trades": 0,
     "top_mined": [
      [
       "stone",
-      44962
+      44986
      ],
      [
       "sand",
@@ -45,7 +45,7 @@
      ],
      [
       "dirt",
-      11101
+      11122
      ],
      [
       "magma block",
@@ -161,26 +161,26 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 88.7,
+    "playtime_h": 89.2,
     "deaths": 20,
-    "mob_kills": 15595,
-    "distance_km": 897.5,
-    "mined": 29894,
-    "crafted": 110466,
+    "mob_kills": 15609,
+    "distance_km": 902.1,
+    "mined": 29901,
+    "crafted": 110477,
     "distanz": {
-     "fuss": 225.7,
-     "elytra": 665.0,
+     "fuss": 227.6,
+     "elytra": 667.7,
      "schwimmen": 3.7,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 53075,
-    "damage_taken": 81009,
-    "damage_dealt": 428566,
+    "jumps": 53655,
+    "damage_taken": 81252,
+    "damage_dealt": 431746,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2082,
+    "drops": 2095,
     "trades": 0,
     "top_mined": [
      [
@@ -1306,6 +1306,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-17 20:00 UTC"
+  "wann": "2026-11-17 20:30 UTC"
  }
 }
