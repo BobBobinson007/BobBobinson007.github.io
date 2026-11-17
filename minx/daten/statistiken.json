@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-17 20:30 UTC",
+ "aktualisiert": "2026-11-17 21:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 318.3,
+    "playtime_h": 318.8,
     "deaths": 104,
-    "mob_kills": 52353,
-    "distance_km": 2340.4,
-    "mined": 179329,
-    "crafted": 158779,
+    "mob_kills": 52362,
+    "distance_km": 2348.7,
+    "mined": 179365,
+    "crafted": 158891,
     "distanz": {
-     "fuss": 705.4,
-     "elytra": 1601.5,
+     "fuss": 706.8,
+     "elytra": 1608.4,
      "schwimmen": 20.2,
      "boot": 11.7,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 183254,
-    "damage_taken": 245690,
-    "damage_dealt": 941434,
+    "jumps": 183900,
+    "damage_taken": 246141,
+    "damage_dealt": 942563,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 7585,
+    "drops": 7605,
     "trades": 0,
     "top_mined": [
      [
@@ -45,7 +45,7 @@
      ],
      [
       "dirt",
-      11122
+      11124
      ],
      [
       "magma block",
@@ -161,26 +161,26 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 89.2,
+    "playtime_h": 89.7,
     "deaths": 20,
-    "mob_kills": 15609,
-    "distance_km": 902.1,
-    "mined": 29901,
-    "crafted": 110477,
+    "mob_kills": 15689,
+    "distance_km": 910.8,
+    "mined": 30002,
+    "crafted": 110804,
     "distanz": {
-     "fuss": 227.6,
-     "elytra": 667.7,
+     "fuss": 229.1,
+     "elytra": 674.8,
      "schwimmen": 3.7,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 53655,
-    "damage_taken": 81252,
-    "damage_dealt": 431746,
+    "jumps": 54114,
+    "damage_taken": 82141,
+    "damage_dealt": 442237,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2095,
+    "drops": 2138,
     "trades": 0,
     "top_mined": [
      [
@@ -193,7 +193,7 @@
      ],
      [
       "stone",
-      2636
+      2696
      ],
      [
       "dark oak log",
@@ -201,11 +201,11 @@
      ],
      [
       "dirt",
-      1241
+      1244
      ],
      [
       "grass block",
-      1077
+      1078
      ]
     ],
     "top_crafted": [
@@ -546,22 +546,22 @@
   {
    "name": "Captifipo",
    "stats": {
-    "playtime_h": 20.1,
+    "playtime_h": 20.6,
     "deaths": 5,
-    "mob_kills": 3184,
-    "distance_km": 331.4,
-    "mined": 17534,
-    "crafted": 3355,
+    "mob_kills": 3207,
+    "distance_km": 343.9,
+    "mined": 17570,
+    "crafted": 3451,
     "distanz": {
-     "fuss": 72.0,
-     "elytra": 258.0,
+     "fuss": 73.2,
+     "elytra": 269.4,
      "schwimmen": 0.3,
      "minecart": 1.1,
      "pferd": 0.0
     },
-    "jumps": 9698,
-    "damage_taken": 12864,
-    "damage_dealt": 47529,
+    "jumps": 10039,
+    "damage_taken": 12976,
+    "damage_dealt": 47649,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 751,
@@ -598,16 +598,16 @@
       584
      ],
      [
+      "spruce planks",
+      496
+     ],
+     [
       "oak planks",
       456
      ],
      [
       "glass pane",
       448
-     ],
-     [
-      "spruce planks",
-      408
      ],
      [
       "rail",
@@ -1306,6 +1306,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-17 20:30 UTC"
+  "wann": "2026-11-17 21:00 UTC"
  }
 }
