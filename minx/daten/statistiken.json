@@ -1,31 +1,31 @@
 {
- "aktualisiert": "2026-11-17 07:16 UTC",
+ "aktualisiert": "2026-11-17 12:21 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 314.4,
-    "deaths": 102,
-    "mob_kills": 52094,
-    "distance_km": 2547.2,
-    "mined": 178737,
-    "crafted": 158302,
+    "playtime_h": 315.3,
+    "deaths": 104,
+    "mob_kills": 52132,
+    "distance_km": 2554.8,
+    "mined": 178793,
+    "crafted": 158366,
     "distanz": {
-     "fuss": 697.4,
-     "elytra": 1567.6,
-     "schwimmen": 19.8,
+     "fuss": 698.6,
+     "elytra": 1573.0,
+     "schwimmen": 20.0,
      "boot": 11.7,
      "minecart": 1.1,
      "pferd": 0.5,
-     "kreativ": 249.1
+     "kreativ": 249.8
     },
-    "jumps": 179291,
-    "damage_taken": 240515,
-    "damage_dealt": 915446,
+    "jumps": 179648,
+    "damage_taken": 241519,
+    "damage_dealt": 922813,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 7466,
+    "drops": 7481,
     "trades": 0,
     "top_mined": [
      [
@@ -34,11 +34,11 @@
      ],
      [
       "sand",
-      19612
+      19615
      ],
      [
       "netherrack",
-      16764
+      16811
      ],
      [
       "sandstone",
@@ -163,27 +163,27 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 86.2,
+    "playtime_h": 86.4,
     "deaths": 20,
     "mob_kills": 15058,
-    "distance_km": 946.7,
+    "distance_km": 948.8,
     "mined": 29551,
     "crafted": 110365,
     "distanz": {
-     "fuss": 217.1,
-     "elytra": 641.3,
+     "fuss": 217.4,
+     "elytra": 642.7,
      "schwimmen": 3.6,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0,
-     "kreativ": 81.6
+     "kreativ": 81.9
     },
-    "jumps": 50525,
-    "damage_taken": 75554,
-    "damage_dealt": 380113,
+    "jumps": 50594,
+    "damage_taken": 75917,
+    "damage_dealt": 380206,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1983,
+    "drops": 1984,
     "trades": 0,
     "top_mined": [
      [
@@ -242,39 +242,39 @@
   {
    "name": "1carlito",
    "stats": {
-    "playtime_h": 79.6,
+    "playtime_h": 81.3,
     "deaths": 119,
     "mob_kills": 147,
-    "distance_km": 167.0,
-    "mined": 15473,
-    "crafted": 49909,
+    "distance_km": 168.9,
+    "mined": 15871,
+    "crafted": 54954,
     "distanz": {
-     "fuss": 79.9,
+     "fuss": 81.7,
      "elytra": 81.0,
-     "schwimmen": 3.3,
+     "schwimmen": 3.4,
      "boot": 0.3,
      "minecart": 1.1,
      "kreativ": 1.5
     },
-    "jumps": 14426,
-    "damage_taken": 54975,
-    "damage_dealt": 16759,
+    "jumps": 14613,
+    "damage_taken": 55825,
+    "damage_dealt": 16769,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1193,
+    "drops": 1229,
     "trades": 0,
     "top_mined": [
      [
       "deepslate",
-      5482
+      5614
      ],
      [
       "tuff",
-      1092
+      1115
      ],
      [
       "cobbled deepslate",
-      772
+      822
      ],
      [
       "stone",
@@ -292,7 +292,7 @@
     "top_crafted": [
      [
       "bone meal",
-      32573
+      36982
      ],
      [
       "polished deepslate",
@@ -300,7 +300,7 @@
      ],
      [
       "bamboo block",
-      2629
+      3023
      ],
      [
       "iron ingot",
@@ -312,7 +312,7 @@
      ],
      [
       "stick",
-      1089
+      1097
      ]
     ]
    }

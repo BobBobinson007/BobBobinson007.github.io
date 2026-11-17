@@ -11,7 +11,6 @@
     --line:#2e2e2e; --line2:#3d3d3d;
     --text:#f5f5f5; --dim:#9a9a9a; --dimmer:#6b6b6b;
     --white:#ffffff;
-    --acc:#7dd35f; --accdim:rgba(125,211,95,.14);
     --mono:'DejaVu Sans Mono','JetBrains Mono',Consolas,monospace;
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -24,7 +23,7 @@
       repeating-linear-gradient(90deg,transparent 0 23px,rgba(255,255,255,.015) 23px 24px);
   }
   a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--dimmer)}
-  a:hover{border-bottom-color:var(--acc)}
+  a:hover{border-bottom-color:var(--white)}
   .wrap{max-width:1000px;margin:0 auto;padding:0 20px}
 
   /* ---------- Header ---------- */
@@ -32,15 +31,15 @@
   header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
   .logo{font-family:var(--mono);font-size:1.5rem;font-weight:800;letter-spacing:.25em;color:var(--white);
     text-shadow:3px 3px 0 var(--line2)}
-  .logo span{color:var(--acc)}
+  .logo span{color:var(--dim)}
   nav{display:flex;gap:26px}
   nav a{color:var(--dim);font-size:.9rem;text-transform:uppercase;letter-spacing:.08em;border-bottom:2px solid transparent;padding:4px 0}
-  nav a:hover{color:var(--white);border-bottom-color:var(--acc)}
+  nav a:hover{color:var(--white);border-bottom-color:var(--white)}
 
   /* ---------- Hero ---------- */
   .hero{padding:72px 0 50px;text-align:center;border-bottom:2px solid var(--line);position:relative;overflow:hidden}
   .hero::before{content:"";position:absolute;inset:0;
-    background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(125,211,95,.07),transparent 70%)}
+    background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(255,255,255,.06),transparent 70%)}
   .hero h1{font-family:var(--mono);font-size:clamp(2.6rem,8vw,4.6rem);letter-spacing:.3em;color:var(--white);
     text-shadow:4px 4px 0 var(--line2),8px 8px 0 rgba(255,255,255,.07);position:relative}
   .hero .tag{color:var(--dim);margin-top:10px;font-size:1.05rem;position:relative}
@@ -48,74 +47,63 @@
   .pixelrow i{width:12px;height:12px;background:var(--panel3);display:block}
   .pixelrow i:nth-child(2n){background:var(--line)}
   .pixelrow i:nth-child(3n){background:var(--line2)}
-  .pixelrow i:nth-child(5n){background:var(--acc)}
+  .pixelrow i:nth-child(5n){background:var(--white)}
 
   .ipbox{margin-top:32px;display:inline-flex;align-items:center;gap:14px;position:relative;
-    background:var(--panel);border:2px solid var(--line2);padding:14px 20px;box-shadow:6px 6px 0 rgba(125,211,95,.1)}
+    background:var(--panel);border:2px solid var(--line2);padding:14px 20px;box-shadow:6px 6px 0 rgba(255,255,255,.06)}
   .ipbox code{font-family:var(--mono);font-size:1.1rem;color:var(--white);letter-spacing:.04em}
-  .ipbox button{background:var(--acc);color:#08260a;border:0;padding:8px 16px;font-weight:700;cursor:pointer;
+  .ipbox button{background:var(--white);color:#000;border:0;padding:8px 16px;font-weight:700;cursor:pointer;
     font-size:.85rem;text-transform:uppercase;letter-spacing:.08em}
-  .ipbox button:hover{filter:brightness(1.15)}
+  .ipbox button:hover{background:var(--dim)}
   .status{margin-top:18px;font-size:.92rem;color:var(--dim);font-family:var(--mono);position:relative}
   .status .dot{display:inline-block;width:10px;height:10px;margin-right:8px;background:#555;vertical-align:middle}
-  .status.online .dot{background:var(--acc);box-shadow:0 0 8px rgba(125,211,95,.9);animation:pulse 1.6s infinite}
+  .status.online .dot{background:var(--white);box-shadow:0 0 8px rgba(255,255,255,.8);animation:pulse 1.6s infinite}
   .status.offline .dot{background:#777}
   @keyframes pulse{50%{opacity:.35}}
 
   /* ---------- Sections ---------- */
   section{padding:56px 0;border-bottom:2px solid var(--line)}
   h2{font-family:var(--mono);font-size:1.5rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px;color:var(--white)}
-  h2::before{content:"█ ";color:var(--acc)}
+  h2::before{content:"█ ";color:var(--line2)}
   .sub{color:var(--dim);font-size:.92rem;margin-bottom:26px}
 
   /* ---------- Statistiken ---------- */
   .podium{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-bottom:26px}
   .pod{background:var(--panel);border:2px solid var(--line);padding:22px 14px 16px;text-align:center;position:relative;
-    cursor:pointer;transition:transform .18s,box-shadow .18s,border-color .18s}
-  .pod:hover{transform:translateY(-4px);border-color:var(--acc);box-shadow:6px 6px 0 var(--accdim)}
+    cursor:pointer;transition:transform .18s,border-color .18s}
+  .pod:hover{transform:translateY(-4px);border-color:var(--white)}
   .pod .rank{position:absolute;top:8px;left:10px;font-family:var(--mono);font-size:.8rem;color:var(--dimmer)}
-  .pod.gold{border-color:var(--acc);background:linear-gradient(180deg,#1a2216,var(--panel))}
-  .pod.gold .rank{color:var(--acc)}
+  .pod.gold{border-color:var(--white);background:linear-gradient(180deg,#222,var(--panel))}
+  .pod.gold .rank{color:var(--white)}
   .pod img{width:88px;height:88px;image-rendering:pixelated;display:block;margin:0 auto 10px;
-    box-shadow:0 0 0 2px var(--line2),4px 4px 0 var(--accdim);transition:transform .18s}
-  .pod:hover img{transform:scale(1.08) rotate(-2deg)}
+    box-shadow:0 0 0 2px var(--line2),4px 4px 0 rgba(255,255,255,.12)}
   .pod .name{font-weight:700;color:var(--white);word-break:break-word}
   .pod .val{font-family:var(--mono);color:var(--dim);font-size:.82rem;margin-top:4px}
 
   .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:26px}
-  .card{background:var(--panel);border:1px solid var(--line);padding:16px;transition:border-color .15s,transform .15s}
-  .card:hover{border-color:var(--acc);transform:translateY(-2px)}
+  .card{background:var(--panel);border:1px solid var(--line);padding:16px;transition:border-color .15s}
+  .card:hover{border-color:var(--white)}
   .card .num{font-family:var(--mono);font-size:1.45rem;color:var(--white)}
   .card .lbl{color:var(--dim);font-size:.76rem;margin-top:2px;text-transform:uppercase;letter-spacing:.06em}
 
-  /* ---------- Spieler-Board (statt Tabelle) ---------- */
-  .sortrow{display:flex;align-items:center;gap:12px;margin-bottom:16px}
-  .sortrow label{font-family:var(--mono);font-size:.78rem;color:var(--dimmer);text-transform:uppercase;letter-spacing:.1em}
-  .sortrow select{background:var(--panel);color:var(--white);border:2px solid var(--line2);padding:8px 12px;
-    font-family:var(--mono);font-size:.9rem;cursor:pointer}
-  .sortrow select:hover{border-color:var(--acc)}
+  /* ---------- Spieler-Board ---------- */
   .board{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:14px}
   .pcard{position:relative;background:var(--panel);border:2px solid var(--line);padding:18px 14px 14px;cursor:pointer;
-    transition:transform .15s,border-color .15s,box-shadow .15s;overflow:hidden}
-  .pcard::after{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--acc);
-    transform:scaleX(0);transform-origin:left;transition:transform .2s}
-  .pcard:hover{transform:translateY(-3px);border-color:var(--acc);box-shadow:5px 5px 0 var(--accdim)}
-  .pcard:hover::after{transform:scaleX(1)}
-  .pcard.top3{border-color:var(--line2);background:linear-gradient(180deg,#171d13,var(--panel))}
+    transition:border-color .15s;overflow:hidden}
+  .pcard:hover{border-color:var(--white)}
+  .pcard.top3{border-color:var(--line2);background:linear-gradient(180deg,#1c1c1c,var(--panel))}
   .pcard .rank{position:absolute;top:8px;right:10px;font-family:var(--mono);font-size:.8rem;color:var(--dimmer)}
-  .pcard.top3 .rank{color:var(--acc)}
+  .pcard.top3 .rank{color:var(--white)}
   .pcard .head{width:64px;height:64px;image-rendering:pixelated;display:block;margin:0 auto 10px;
-    box-shadow:0 0 0 2px var(--line2),3px 3px 0 var(--accdim);transition:transform .18s}
-  .pcard:hover .head{transform:scale(1.08) rotate(-3deg)}
+    box-shadow:0 0 0 2px var(--line2),3px 3px 0 rgba(255,255,255,.12)}
   .pcard .pname{font-weight:700;color:var(--white);text-align:center;word-break:break-word;font-size:.95rem}
-  .pcard .prank1{font-family:var(--mono);font-size:.7rem;color:var(--acc);text-align:center;letter-spacing:.14em;text-transform:uppercase}
   .pcard .pstats{font-family:var(--mono);font-size:.74rem;color:var(--dim);text-align:center;margin-top:8px;line-height:1.7}
   .updated{color:var(--dimmer);font-size:.8rem;margin-top:14px;font-family:var(--mono)}
 
   /* ---------- Galerie ---------- */
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
-  .grid figure{border:2px solid var(--line);background:var(--panel);transition:border-color .15s,transform .15s}
-  .grid figure:hover{border-color:var(--acc);transform:translateY(-3px)}
+  .grid figure{border:2px solid var(--line);background:var(--panel);transition:border-color .15s}
+  .grid figure:hover{border-color:var(--white)}
   .grid img{width:100%;display:block;filter:grayscale(1) contrast(1.05)}
   .grid figcaption{color:var(--dim);font-size:.84rem;padding:10px 12px;border-top:1px solid var(--line)}
   .empty{background:var(--panel);border:2px dashed var(--line2);padding:34px;text-align:center;color:var(--dim);font-size:.92rem}
@@ -123,10 +111,10 @@
   /* ---------- Anti-Cheat ---------- */
   .scanbar{display:flex;align-items:center;gap:12px;background:var(--panel);border:2px solid var(--line2);
     padding:14px 18px;margin-bottom:26px;font-family:var(--mono);font-size:.9rem}
-  .scanbar .dot{width:10px;height:10px;background:var(--acc);box-shadow:0 0 10px rgba(125,211,95,.9);
+  .scanbar .dot{width:10px;height:10px;background:var(--white);box-shadow:0 0 10px rgba(255,255,255,.9);
     animation:pulse 1.4s infinite;flex:none}
   .scanbar .bar{flex:1;height:4px;background:var(--panel3);position:relative;overflow:hidden}
-  .scanbar .bar i{position:absolute;top:0;left:-30%;width:30%;height:100%;background:var(--acc);animation:scan 2.4s linear infinite}
+  .scanbar .bar i{position:absolute;top:0;left:-30%;width:30%;height:100%;background:var(--white);animation:scan 2.4s linear infinite}
   @keyframes scan{to{left:110%}}
   .acgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
   .ac{perspective:900px;cursor:pointer;height:170px}
@@ -134,8 +122,8 @@
   .ac.flip .inner{transform:rotateY(180deg)}
   .ac .face{position:absolute;inset:0;backface-visibility:hidden;border:2px solid var(--line2);
     background:var(--panel);padding:20px;display:flex;flex-direction:column;justify-content:center}
-  .ac .face.front:hover{border-color:var(--acc)}
-  .ac .nr{font-family:var(--mono);font-size:1.6rem;color:var(--acc);margin-bottom:10px}
+  .ac .face.front:hover{border-color:var(--white)}
+  .ac .nr{font-family:var(--mono);font-size:1.6rem;color:var(--white);margin-bottom:10px}
   .ac .titel{font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;font-size:.95rem;color:var(--white)}
   .ac .hint{color:var(--dimmer);font-size:.76rem;margin-top:8px;text-transform:uppercase;letter-spacing:.1em}
   .ac .face.back{transform:rotateY(180deg);background:var(--white);color:#000;border-color:var(--white)}
@@ -147,7 +135,7 @@
   ol.rules{background:var(--panel);border:2px solid var(--line);padding:24px 24px 24px 46px;counter-reset:r}
   ol.rules li{padding:9px 0;border-bottom:1px solid var(--line)}
   ol.rules li:last-child{border-bottom:0}
-  ol.rules li::marker{color:var(--acc);font-family:var(--mono)}
+  ol.rules li::marker{color:var(--dimmer);font-family:var(--mono)}
 
   footer{padding:36px 0;color:var(--dimmer);font-size:.85rem;text-align:center;font-family:var(--mono)}
   footer a{color:var(--dim)}
@@ -159,20 +147,18 @@
   .dash{max-width:760px;margin:34px auto;padding:26px 24px 30px;background:var(--bg);
     background-image:repeating-linear-gradient(0deg,transparent 0 23px,rgba(255,255,255,.02) 23px 24px),
       repeating-linear-gradient(90deg,transparent 0 23px,rgba(255,255,255,.02) 23px 24px);
-    border:2px solid var(--line2);box-shadow:10px 10px 0 var(--accdim);
+    border:2px solid var(--line2);box-shadow:10px 10px 0 rgba(255,255,255,.07);
     transform:translateY(24px) scale(.98);transition:transform .28s cubic-bezier(.2,.9,.3,1.2)}
   .overlay.open .dash{transform:translateY(0) scale(1)}
   .dashclose{position:absolute;top:10px;right:12px;background:var(--panel);color:var(--text);
     border:2px solid var(--line2);width:38px;height:38px;font-size:1rem;cursor:pointer;font-family:var(--mono)}
-  .dashclose:hover{background:var(--acc);color:#08260a;border-color:var(--acc)}
+  .dashclose:hover{background:var(--white);color:#000;border-color:var(--white)}
   .dashkopf{display:flex;align-items:center;gap:18px;border-bottom:2px solid var(--line);padding-bottom:16px;margin-bottom:18px;position:relative}
   .dashkopf .headwrap{position:relative;flex:none}
-  .dashkopf img{width:76px;height:76px;image-rendering:pixelated;box-shadow:0 0 0 2px var(--line2),4px 4px 0 var(--accdim);
-    animation:bob 3.2s ease-in-out infinite}
-  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+  .dashkopf img{width:76px;height:76px;image-rendering:pixelated;box-shadow:0 0 0 2px var(--line2),4px 4px 0 rgba(255,255,255,.15)}
   .d_name{font-family:var(--mono);font-size:1.5rem;font-weight:800;color:var(--white);letter-spacing:.04em;word-break:break-word}
   .d_rank{color:var(--dim);font-family:var(--mono);font-size:.85rem;margin-top:4px}
-  .d_rank b{color:var(--acc)}
+  .d_rank b{color:var(--white)}
   .d_view{position:absolute;bottom:16px;right:0;font-family:var(--mono);font-size:.78rem;color:var(--dimmer);
     letter-spacing:.1em;text-transform:uppercase}
   .d_stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:22px}
@@ -180,21 +166,21 @@
   .d_stats .num{font-size:1.2rem}
   .d_sect{font-family:var(--mono);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);
     margin:20px 0 10px}
-  .d_sect::before{content:"▚ ";color:var(--acc)}
+  .d_sect::before{content:"▚ ";color:var(--line2)}
   .dbar{display:flex;align-items:center;gap:10px;margin-bottom:7px;font-size:.88rem}
   .dbar .lbl{width:96px;flex:none;color:var(--dim);font-size:.82rem;text-transform:capitalize}
   .dbar .track{flex:1;height:14px;background:var(--panel2);border:1px solid var(--line);position:relative;overflow:hidden}
-  .dbar .fill{position:absolute;inset:0;width:0;background:repeating-linear-gradient(90deg,var(--acc) 0 6px,#3f6b31 6px 8px);
+  .dbar .fill{position:absolute;inset:0;width:0;background:repeating-linear-gradient(90deg,var(--white) 0 6px,var(--panel3) 6px 8px);
     transition:width .8s cubic-bezier(.2,.8,.3,1)}
   .dbar .val{font-family:var(--mono);font-size:.8rem;color:var(--dim);min-width:78px;text-align:right}
   .facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
   .fact{background:var(--panel);border:1px solid var(--line);padding:7px 12px;font-size:.84rem;color:var(--dim);
-    font-family:var(--mono);transition:border-color .15s,transform .15s;cursor:default}
-  .fact:hover{border-color:var(--acc);color:var(--white);transform:translateY(-2px)}
+    font-family:var(--mono);transition:border-color .15s;cursor:default}
+  .fact:hover{border-color:var(--white);color:var(--white)}
   .fact b{color:var(--white);font-weight:700}
   .d_body{display:flex;gap:18px;align-items:flex-start;margin-bottom:20px}
   .d_body .skinbox{flex:none;text-align:center}
-  .d_body img{width:130px;image-rendering:pixelated;box-shadow:0 0 0 2px var(--line2),5px 5px 0 var(--accdim)}
+  .d_body img{width:130px;image-rendering:pixelated;box-shadow:0 0 0 2px var(--line2),5px 5px 0 rgba(255,255,255,.1)}
   .d_body .skinbox .cap{font-family:var(--mono);font-size:.68rem;color:var(--dimmer);text-transform:uppercase;
     letter-spacing:.12em;margin-top:6px}
   .d_body .bodyfacts{flex:1;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;align-content:center}
@@ -218,7 +204,6 @@
     .pod img{width:64px;height:64px}
     .grid{grid-template-columns:1fr}
     .ac{height:auto;min-height:160px}
-    .sortrow{flex-wrap:wrap}
     .dash{margin:10px;padding:20px 14px 24px}
     .dashkopf{flex-wrap:wrap;gap:12px}
     .dashkopf img{width:60px;height:60px}
@@ -257,7 +242,7 @@
       <code>minxserver.duckdns.org</code>
       <button onclick="copyIp(this)">Kopieren</button>
     </div>
-    <div class="status" id="status"><span class="dot"></span>Status wird geladen …</div>
+    <div class="status" id="status"><span class="dot"></span>STATUS UNBEKANNT</div>
   </div>
 </div>
 
@@ -267,18 +252,6 @@
     <p class="sub">Beide Welten in einem Profil. Klick auf einen Spieler öffnet sein Dashboard.</p>
     <div class="podium" id="podium"></div>
     <div class="cards" id="cards"></div>
-    <div class="sortrow">
-      <label for="sortSel">Sortieren</label>
-      <select id="sortSel" onchange="setSort(this.value)">
-        <option value="playtime_h" selected>Spielzeit</option>
-        <option value="mined">Blöcke abgebaut</option>
-        <option value="crafted">Gecraftet</option>
-        <option value="mob_kills">Mobs besiegt</option>
-        <option value="deaths">Tode</option>
-        <option value="distance_km">Distanz</option>
-        <option value="name">Name</option>
-      </select>
-    </div>
     <div class="board" id="board"></div>
     <div class="updated" id="updated"></div>
   </div>
@@ -328,6 +301,13 @@
   </div>
 </footer>
 
+<!-- Eingebettete Daten (Fallback, wird vom Export-Skript aktualisiert) -->
+<script>
+/*DATEN-BEGIN*/
+window.__DATEN__ = {"aktualisiert":"2026-11-17 12:21 UTC","hinweis":"Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.","spieler":[{"name":"BobBobinson007","stats":{"playtime_h":315.3,"deaths":104,"mob_kills":52132,"distance_km":2554.8,"mined":178793,"crafted":158366,"distanz":{"fuss":698.6,"elytra":1573.0,"schwimmen":20.0,"boot":11.7,"minecart":1.1,"pferd":0.5,"kreativ":249.8},"jumps":179648,"damage_taken":241519,"damage_dealt":922813,"fish_caught":129,"enchanted":0,"drops":7481,"trades":0,"top_mined":[["stone",44962],["sand",19615],["netherrack",16811],["sandstone",11369],["dirt",11101],["magma block",6920]],"top_crafted":[["paper",60201],["firework rocket",18310],["gold nugget",10715],["bone meal",6274],["oak planks",4392],["iron ingot",4197]]}},{"name":"ZickZackBoss","stats":{"playtime_h":296.6,"deaths":51,"mob_kills":9159,"distance_km":2220.8,"mined":51275,"crafted":37140,"distanz":{"fuss":354.4,"elytra":1072.2,"schwimmen":54.5,"boot":0.4,"minecart":1.2,"pferd":0.0,"kreativ":738.1},"jumps":132596,"damage_taken":88870,"damage_dealt":553775,"fish_caught":0,"enchanted":0,"drops":4188,"trades":0,"top_mined":[["stone",8945],["dirt",7498],["grass block",7167],["sand",6666],["netherrack",3305],["short grass",2721]],"top_crafted":[["iron block",10494],["stick",5936],["paper",4032],["oak planks",3632],["acacia planks",3116],["firework rocket",2354]]}},{"name":"TheRealDmseife","stats":{"playtime_h":86.4,"deaths":20,"mob_kills":15058,"distance_km":948.8,"mined":29551,"crafted":110365,"distanz":{"fuss":217.4,"elytra":642.7,"schwimmen":3.6,"boot":2.0,"minecart":1.2,"pferd":0.0,"kreativ":81.9},"jumps":50594,"damage_taken":75917,"damage_dealt":380206,"fish_caught":0,"enchanted":0,"drops":1984,"trades":0,"top_mined":[["netherrack",11011],["oak leaves",3750],["stone",2556],["dark oak log",1265],["dirt",1241],["grass block",1077]],"top_crafted":[["paper",42381],["cherry planks",11000],["dark oak planks",8515],["firework rocket",8128],["gold nugget",5735],["gold ingot",4534]]}},{"name":"1carlito","stats":{"playtime_h":81.3,"deaths":119,"mob_kills":147,"distance_km":168.9,"mined":15871,"crafted":54954,"distanz":{"fuss":81.7,"elytra":81.0,"schwimmen":3.4,"boot":0.3,"minecart":1.1,"kreativ":1.5},"jumps":14613,"damage_taken":55825,"damage_dealt":16769,"fish_caught":0,"enchanted":0,"drops":1229,"trades":0,"top_mined":[["deepslate",5614],["tuff",1115],["cobbled deepslate",822],["stone",723],["oak leaves",669],["amethyst cluster",558]],"top_crafted":[["bone meal",36982],["polished deepslate",4830],["bamboo block",3023],["iron ingot",1647],["tinted glass",1104],["stick",1097]]}},{"name":"Wemmbuuufaker","stats":{"playtime_h":51.6,"deaths":30,"mob_kills":3873,"distance_km":624.7,"mined":23449,"crafted":22244,"distanz":{"fuss":137.6,"elytra":222.2,"schwimmen":1.6,"boot":2.2,"kreativ":261.1},"jumps":30522,"damage_taken":65178,"damage_dealt":237237,"fish_caught":0,"enchanted":0,"drops":1100,"trades":0,"top_mined":[["dirt",4333],["netherrack",4095],["grass block",3155],["stone",2272],["dark oak log",1091],["deepslate",961]],"top_crafted":[["dark oak planks",3370],["stick",2436],["spruce planks",2320],["iron nugget",2199],["bone meal",1266],["cherry planks",1148]]}},{"name":"LuisCrafter92","stats":{"playtime_h":39.8,"deaths":11,"mob_kills":5221,"distance_km":864.4,"mined":25374,"crafted":47579,"distanz":{"fuss":104.3,"elytra":707.4,"schwimmen":2.9,"boot":0.5,"pferd":1.3,"kreativ":48.0},"jumps":28675,"damage_taken":66731,"damage_dealt":499380,"fish_caught":0,"enchanted":0,"drops":2358,"trades":0,"top_mined":[["sandstone",5239],["netherrack",4518],["stone",2169],["oak log",1753],["cut sandstone",1299],["sand",1049]],"top_crafted":[["paper",13014],["stick",12108],["oak planks",5988],["bone meal",2925],["cut sandstone",2908],["firework rocket",2860]]}},{"name":"WerferHades19","stats":{"playtime_h":32.1,"deaths":38,"mob_kills":2907,"distance_km":475.3,"mined":26628,"crafted":5383,"distanz":{"fuss":96.1,"elytra":337.2,"schwimmen":1.2,"boot":1.2,"pferd":1.6,"kreativ":38.0},"jumps":21560,"damage_taken":39346,"damage_dealt":97745,"fish_caught":0,"enchanted":0,"drops":494,"trades":0,"top_mined":[["sand",10423],["sandstone",7101],["netherrack",2673],["stone",1374],["cut sandstone",762],["sandstone stairs",695]],"top_crafted":[["stick",1568],["oak planks",736],["jungle planks",672],["firework rocket",576],["sandstone",271],["iron ingot",239]]}},{"name":"Captifipo","stats":{"playtime_h":20.1,"deaths":5,"mob_kills":3184,"distance_km":343.0,"mined":17534,"crafted":3355,"distanz":{"fuss":72.0,"elytra":258.0,"schwimmen":0.3,"minecart":1.1,"pferd":0.0,"kreativ":11.7},"jumps":9698,"damage_taken":12864,"damage_dealt":47529,"fish_caught":0,"enchanted":0,"drops":751,"trades":0,"top_mined":[["stone",5079],["netherrack",3819],["deepslate",3700],["deepslate diamond ore",719],["sandstone",715],["tuff",335]],"top_crafted":[["stick",584],["oak planks",456],["glass pane",448],["spruce planks",408],["rail",336],["quartz block",164]]}},{"name":"Jaki_03","stats":{"playtime_h":18.7,"deaths":12,"mob_kills":145,"distance_km":173.7,"mined":4848,"crafted":1772,"distanz":{"fuss":69.7,"elytra":89.8,"schwimmen":0.8,"boot":3.1,"minecart":5.1,"kreativ":5.3},"jumps":7386,"damage_taken":11496,"damage_dealt":27861,"fish_caught":0,"enchanted":0,"drops":290,"trades":0,"top_mined":[["grass block",1516],["stone",1028],["dirt",685],["cobblestone",471],["rail",206],["short grass",125]],"top_crafted":[["paper",576],["rail",512],["black stained glass",224],["cobblestone stairs",76],["gold ingot",54],["powered rail",51]]}},{"name":"maxderbeste1234","stats":{"playtime_h":12.6,"deaths":3,"mob_kills":475,"distance_km":184.2,"mined":6785,"crafted":6116,"distanz":{"fuss":67.6,"elytra":103.3,"schwimmen":1.1,"kreativ":12.2},"jumps":8399,"damage_taken":9546,"damage_dealt":68471,"fish_caught":0,"enchanted":0,"drops":171,"trades":0,"top_mined":[["pink petals",2122],["sand",892],["cherry leaves",718],["dirt",656],["short grass",570],["grass block",516]],"top_crafted":[["oak planks",2608],["paper",768],["glass",640],["firework rocket",498],["acacia planks",336],["spruce planks",248]]}},{"name":"Hagen13juhhuh","stats":{"playtime_h":11.5,"deaths":20,"mob_kills":218,"distance_km":91.6,"mined":3089,"crafted":2768,"distanz":{"fuss":32.2,"elytra":58.1,"schwimmen":0.0,"boot":0.1,"minecart":0.5,"kreativ":0.6},"jumps":4655,"damage_taken":13824,"damage_dealt":9075,"fish_caught":0,"enchanted":0,"drops":125,"trades":0,"top_mined":[["grass block",792],["stone",610],["dirt",409],["oak log",402],["short grass",192],["coal ore",130]],"top_crafted":[["paper",1406],["oak planks",776],["cobblestone stairs",112],["stick",96],["emerald",65],["oak stairs",64]]}},{"name":"fabsthreal","stats":{"playtime_h":8.0,"deaths":0,"mob_kills":28,"distance_km":40.4,"mined":2404,"crafted":1154,"distanz":{"fuss":33.5,"schwimmen":0.4,"kreativ":6.5},"jumps":7184,"damage_taken":1586,"damage_dealt":5168,"fish_caught":0,"enchanted":0,"drops":110,"trades":0,"top_mined":[["stone",658],["grass block",442],["dirt",426],["sand",300],["spruce log",166],["oak planks",114]],"top_crafted":[["oak planks",552],["spruce planks",288],["glass",284],["oak stairs",16],["oak door",12],["crafting table",2]]}},{"name":"tillomix","stats":{"playtime_h":4.6,"deaths":134,"mob_kills":294,"distance_km":36.5,"mined":634,"crafted":535,"distanz":{"fuss":13.6,"elytra":8.3,"schwimmen":1.3,"boot":0.3,"kreativ":12.9},"jumps":6453,"damage_taken":35486,"damage_dealt":9617,"fish_caught":0,"enchanted":0,"drops":70,"trades":0,"top_mined":[["bamboo block",150],["iron block",78],["soul sand",73],["deepslate",52],["kelp plant",43],["redstone wire",28]],"top_crafted":[["bamboo planks",152],["stick",92],["jungle planks",84],["bamboo fence",78],["iron block",64],["deepslate",44]]}},{"name":"BooklyTooCozy","stats":{"playtime_h":4.2,"deaths":3,"mob_kills":27,"distance_km":26.4,"mined":304,"crafted":267,"distanz":{"fuss":10.6,"elytra":7.9,"schwimmen":0.0,"minecart":0.2,"kreativ":7.7},"jumps":4582,"damage_taken":5105,"damage_dealt":5806,"fish_caught":0,"enchanted":0,"drops":130,"trades":0,"top_mined":[["nether wart",66],["stone",49],["wheat",38],["andesite",22],["stone bricks",19],["hopper",14]],"top_crafted":[["iron ingot",90],["spruce planks",64],["wheat",27],["bread",21],["birch planks",16],["cooked cod",16]]}},{"name":"EnvyTheBlade","stats":{"playtime_h":1.8,"deaths":17,"mob_kills":3,"distance_km":6.4,"mined":648,"crafted":30,"distanz":{"fuss":4.0,"schwimmen":0.1,"kreativ":2.4},"jumps":1426,"damage_taken":5097,"damage_dealt":1138,"fish_caught":0,"enchanted":0,"drops":3,"trades":0,"top_mined":[["netherrack",235],["deepslate",199],["stone",83],["deepslate diamond ore",35],["iron ore",12],["prismarine bricks",11]],"top_crafted":[["oak planks",8],["stick",4],["crafting table",3],["iron ingot",2],["diamond axe",2],["furnace",1]]}},{"name":"PaladinEnzym661","stats":{"playtime_h":1.0,"deaths":0,"mob_kills":36,"distance_km":13.5,"mined":73,"crafted":120,"distanz":{"fuss":2.5,"elytra":8.5,"schwimmen":0.0,"minecart":0.2,"pferd":0.0,"kreativ":2.3},"jumps":1527,"damage_taken":1085,"damage_dealt":8290,"fish_caught":0,"enchanted":0,"drops":19,"trades":0,"top_mined":[["tnt",27],["sand",14],["oak pressure plate",7],["hay block",7],["cobblestone",6],["crafting table",3]],"top_crafted":[["wheat",63],["bread",21],["cooked cod",14],["iron ingot",9],["acacia planks",8],["bucket",2]]}},{"name":"Itz_Rick","stats":{"playtime_h":0.8,"deaths":20,"mob_kills":1,"distance_km":3.4,"mined":88,"crafted":84,"distanz":{"fuss":0.8,"schwimmen":0.0,"kreativ":2.5},"jumps":840,"damage_taken":5642,"damage_dealt":866,"fish_caught":0,"enchanted":0,"drops":0,"trades":0,"top_mined":[["stone",26],["grass block",20],["dirt",13],["oak log",11],["crafting table",3],["stone bricks",2]],"top_crafted":[["stick",52],["oak planks",10],["dark oak planks",8],["spruce planks",4],["crafting table",3],["wooden axe",1]]}}]};
+/*DATEN-END*/
+</script>
+
 <!-- Spieler-Dashboard -->
 <div class="overlay" id="overlay">
   <div class="dash" role="dialog" aria-modal="true">
@@ -360,26 +340,9 @@
 </div>
 
 <script>
-const SORT_FELDER = {
-  playtime_h:{label:'Spielzeit (h)', dec:1},
-  mined:{label:'Blöcke abgebaut', dec:0},
-  crafted:{label:'Gecraftet', dec:0},
-  mob_kills:{label:'Mobs besiegt', dec:0},
-  deaths:{label:'Tode', dec:0},
-  distance_km:{label:'Distanz (km)', dec:1},
-  name:{label:'Name', dec:null},
-};
-const SCHUTZ = [
-  {titel:'Bewegung', back:'Bewegungsmuster werden laufend analysiert. Unmögliche Sprünge, Geschwindigkeiten und Kampf-Abläufe fallen sofort auf.'},
-  {titel:'Untergrund', back:'Röntgenblick wird erschwert: Wertvolle Erze werden versteckt und verdächtige Abbau-Muster werden erkannt.'},
-  {titel:'Exploits', back:'Bekannte Server-Exploits werden abgeblockt, bevor jemand etwas damit anfangen kann.'},
-  {titel:'Griefing', back:'Veränderungen an Blöcken werden protokolliert. Was kaputt gemacht wird, lässt sich zurücksetzen.'},
-  {titel:'Chat', back:'Beleidigungen, Spam und Werbe-Nachrichten werden automatisch herausgefiltert.'},
-  {titel:'Zeitmaschine', back:'Spieleraktionen lassen sich nachvollziehen – und bei Bedarf rückgängig machen.'},
-];
 const DIST_KAT = {fuss:'Zu Fuß', elytra:'Elytra', schwimmen:'Schwimmen', boot:'Boot',
   minecart:'Minecart', pferd:'Pferd & Co.', kreativ:'Kreativ-Flug'};
-let daten = null, sortKey = 'playtime_h', aufwaerts = false;
+let daten = null;
 
 function fmt(n){ return n.toLocaleString('de-DE'); }
 function fmtW(n, dec){ return dec ? n.toLocaleString('de-DE',{minimumFractionDigits:1,maximumFractionDigits:1}) : fmt(n); }
@@ -419,50 +382,43 @@ function animiereBalken(root){
 }
 
 async function laden(){
-  try{
-    const r = await fetch('daten/statistiken.json');
-    daten = await r.json();
-  }catch(e){ daten = null; }
+  daten = window.__DATEN__ || null;   // eingebettete Daten zuerst
   let g = null;
   try{ const gr = await fetch('daten/galerie.json'); if(gr.ok) g = await gr.json(); }catch(e){}
   zeigeGalerie(g);
   render();
   statusHolen();
   route();
-}
-
-function setSort(k){
-  sortKey = k;
-  render();
+  // Frische Daten nachladen, wenn möglich
+  try{
+    const r = await fetch('daten/statistiken.json');
+    const frisch = await r.json();
+    if(frisch && frisch.spieler && frisch.spieler.length){
+      const alt = daten?.aktualisiert || '';
+      if(frisch.aktualisiert !== alt){ daten = frisch; render(); }
+    }
+  }catch(e){}
 }
 
 function sortierteListe(){
   const list = (daten?.spieler||[]).slice();
-  const s = SORT_FELDER[sortKey];
-  list.sort((a,b)=>{
-    const va = sortKey==='name' ? a.name.toLowerCase() : a.stats[sortKey];
-    const vb = sortKey==='name' ? b.name.toLowerCase() : b.stats[sortKey];
-    return (aufwaerts ? (va>vb?1:-1) : (va<vb?1:-1));
-  });
+  list.sort((a,b)=>b.stats.playtime_h - a.stats.playtime_h);
   return list;
 }
 
 function render(){
   const list = sortierteListe();
-  const s = SORT_FELDER[sortKey];
 
   // Podium
   const podEl = document.getElementById('podium');
   if(list.length){
-    const pod = list.slice(0,3).map((p,i)=>{
-      const v = p.stats[s.key];
-      const wert = s.dec===null ? 'Platz '+(i+1) : fmtW(v, s.dec)+' '+s.label;
-      return '<div class="pod'+(i===0?' gold':'')+'" onclick="openPlayer(\''+encodeURIComponent(p.name)+'\')">'+
-        '<span class="rank">#'+(i+1)+'</span>'+
-        '<img src="'+skin(p.name,96)+'" alt="'+p.name+'" onerror="fallbackImg(this)">'+
-        '<div class="name">'+p.name+'</div><div class="val">'+wert+'</div></div>';
-    }).join('');
-    podEl.innerHTML = pod;
+    podEl.innerHTML = list.slice(0,3).map((p,i)=>
+      '<div class="pod'+(i===0?' gold':'')+'" onclick="openPlayer(\''+encodeURIComponent(p.name)+'\')">'+
+      '<span class="rank">#'+(i+1)+'</span>'+
+      '<img src="'+skin(p.name,88)+'" alt="'+p.name+'" onerror="fallbackImg(this)">'+
+      '<div class="name">'+p.name+'</div>'+
+      '<div class="val">'+(i===0?'Platz 1':fmtW(p.stats.playtime_h,1)+' Spielzeit (h)')+'</div></div>'
+    ).join('');
   }else{
     podEl.innerHTML = '<div class="empty">Keine Daten geladen.</div>';
   }
@@ -471,12 +427,10 @@ function render(){
   const board = document.getElementById('board');
   board.innerHTML = list.map((p,i)=>{
     const st = p.stats;
-    const top3 = i<3 ? ' top3' : '';
-    return '<div class="pcard'+top3+'" onclick="openPlayer(\''+encodeURIComponent(p.name)+'\')">'+
+    return '<div class="pcard'+(i<3?' top3':'')+'" onclick="openPlayer(\''+encodeURIComponent(p.name)+'\')">'+
       '<span class="rank">#'+(i+1)+'</span>'+
       '<img class="head" src="'+skin(p.name,64)+'" alt="" onerror="fallbackImg(this)">'+
       '<div class="pname">'+p.name+'</div>'+
-      (i===0 ? '<div class="prank1">Platz 1</div>' : '')+
       '<div class="pstats">'+fmtW(st.playtime_h,1)+' h · '+fmtW(st.distance_km,1)+' km<br>'+
         fmt(st.mined)+' Blöcke · '+fmt(st.mob_kills)+' Mobs</div></div>';
   }).join('');
@@ -518,12 +472,12 @@ function oeffneDash(name){
   const p = (daten?.spieler||[]).find(x=>x.name===name);
   if(!p) return;
   const st = p.stats;
-  const liste = (daten.spieler||[]).slice().sort((a,b)=>b.stats.playtime_h-a.stats.playtime_h);
+  const liste = sortierteListe();
   const rank = liste.findIndex(x=>x.name===name)+1;
 
   const head = document.getElementById('d_head');
   head.onerror = ()=>fallbackImg(head);
-  head.src = skin(name,96); head.alt = name;
+  head.src = skin(name,76); head.alt = name;
   const body = document.getElementById('d_body');
   body.onerror = ()=>{ body.onerror=null; body.src = skin(name,130); };
   body.src = bodySkin(name);
@@ -618,6 +572,14 @@ function baueSchutz(){
     '</div></div>'
   ).join('');
 }
+const SCHUTZ = [
+  {titel:'Bewegung', back:'Bewegungsmuster werden laufend analysiert. Unmögliche Sprünge, Geschwindigkeiten und Kampf-Abläufe fallen sofort auf.'},
+  {titel:'Untergrund', back:'Röntgenblick wird erschwert: Wertvolle Erze werden versteckt und verdächtige Abbau-Muster werden erkannt.'},
+  {titel:'Exploits', back:'Bekannte Server-Exploits werden abgeblockt, bevor jemand etwas damit anfangen kann.'},
+  {titel:'Griefing', back:'Veränderungen an Blöcken werden protokolliert. Was kaputt gemacht wird, lässt sich zurücksetzen.'},
+  {titel:'Chat', back:'Beleidigungen, Spam und Werbe-Nachrichten werden automatisch herausgefiltert.'},
+  {titel:'Zeitmaschine', back:'Spieleraktionen lassen sich nachvollziehen – und bei Bedarf rückgängig machen.'},
+];
 
 async function statusHolen(){
   const el = document.getElementById('status');
@@ -633,7 +595,8 @@ async function statusHolen(){
       el.innerHTML = '<span class="dot"></span>AKTUELL OFFLINE';
     }
   }catch(e){
-    el.innerHTML = '<span class="dot"></span>STATUS NICHT ABRUFBAR';
+    el.className = 'status';
+    el.innerHTML = '<span class="dot"></span>STATUS UNBEKANNT';
   }
 }
 
