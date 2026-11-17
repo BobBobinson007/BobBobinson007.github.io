@@ -27,4 +27,35 @@ Spielerelemente und Statistiken des Minx-Servers sollen automatisiert, aber kont
 
 ## Bildübertragung
 
-Bilder gehen denselben Weg wie die Daten: lokal ablegen, einchecken, pushen. Für später ist vorgesehen, dass die Seite den Ordner `galerie/` automatisch ausliest – dazu reicht später eine einfache JSON-Liste im Ordner `daten/`.
+Bilder gehen denselben Weg wie die Daten: lokal ablegen, einchecken, pushen.
+Die Seite zeigt die Bilder aus `daten/galerie.json` als Endlos-Filmstreifen
+unter dem Kopfbereich. Das Hero-Hintergrundbild ist fest verdrahtet auf
+`galerie/base-zickzackboss.jpg` (fehlt die Datei, bleibt das dunkle Raster).
+
+## Server-Block (`server` in statistiken.json)
+
+Der Exporter hängt jedem Export einen `server`-Block an:
+
+```json
+{
+  "cpu": "Intel Core i5-8500T CPU @ 2.10GHz",
+  "ram_gb": 9.7,
+  "welt_aktuell_gb": 5.0,
+  "welt_alt_gb": 1.6,
+  "wann": "2026-11-17 15:00 UTC"
+}
+```
+
+- `welt_aktuell_gb` / `welt_alt_gb` werden bei **jedem Export frisch per
+  `du -sb`** gemessen (aktuell nur diese beiden Werte werden live abgefragt).
+- `cpu`/`ram_gb` sind statische Host-Angaben.
+- Der Export läuft per Cron alle 30 Minuten und pusht automatisch.
+
+## Skin-Darstellung
+
+- 3D-Skins (Podium + Spieler-Dashboard) über **skinview3d** (CDN),
+  Skin-Texturen von `minotar.net/skin/` mit Fallback auf `mc-heads.net/skin/`.
+- Spieler-Board nutzt 3D-Iso-Köpfe von `vzge.me` (Fallback: `minotar.net/helm`,
+  dann SVG-Platzhalter).
+- Online-Status (Punkte am Spieler-Board + Hover-Liste am Status) kommt live
+  von `api.mcsrvstat.us` (Fallback: `api.mcstatus.io`).
