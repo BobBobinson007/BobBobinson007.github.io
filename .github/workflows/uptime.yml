@@ -1,0 +1,38 @@
+name: Server-Uptime-Ping
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'   # alle 5 Minuten, extern von GitHub-Servern
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: uptime-ping
+  cancel-in-progress: false
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: uptime-data
+          fetch-depth: 1
+
+      - name: Minecraft-Server pingen
+        run: python3 .github/scripts/uptime_ping.py .
+
+      - name: Commit & Push
+        run: |
+          git config user.name "Bob's Bot"
+          git config user.email "bot@bobbobinson007.github.io"
+          git add uptime_data.json
+          git diff --staged --quiet || git commit -m "ping: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          for i in 1 2 3; do
+            git pull --rebase origin uptime-data && git push origin uptime-data && exit 0
+            sleep 5
+          done
+          exit 1
