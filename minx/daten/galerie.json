@@ -1,8 +1,13 @@
 {
   "hinweis": "Bilder hier eintragen: datei = Pfad im Ordner galerie/, titel = Beschriftung.",
   "bilder": [
-    {"datei": "galerie/beispiel-spawn.jpg", "titel": "Beispiel: Spawn-Burg (Platzhalter bis echte Screenshots kommen)"},
-    {"datei": "galerie/beispiel-eisenfarm.jpg", "titel": "Beispiel: Eisenfarm bei Nacht (Platzhalter)"},
-    {"datei": "galerie/beispiel-portal.jpg", "titel": "Beispiel: Nether-Portal (Platzhalter)"}
+    {"datei": "galerie/ZickZackBoss_Base.png", "titel": "Base von ZickZackBoss"},
+    {"datei": "galerie/Wemmbuuufaker_Base.png", "titel": "Base von Wemmbuuufaker"},
+    {"datei": "galerie/Wemmbuuufaker_Base-at-Night.png", "titel": "Base von Wemmbuuufaker bei Nacht"},
+    {"datei": "galerie/1carlito_Base.png", "titel": "Base von 1carlito"},
+    {"datei": "galerie/Jaki_03_Home.png", "titel": "Zuhause von Jaki_03"},
+    {"datei": "galerie/TheRealDmseife_Home.png", "titel": "Zuhause von TheRealDmseife"},
+    {"datei": "galerie/Farming-Center.png", "titel": "Farming-Center"},
+    {"datei": "galerie/Meetingroom.png", "titel": "Meetingroom"}
   ]
 }

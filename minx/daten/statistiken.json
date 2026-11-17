@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-17 15:00 UTC",
+ "aktualisiert": "2026-11-17 15:09 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -161,23 +161,23 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 87.0,
+    "playtime_h": 87.1,
     "deaths": 20,
-    "mob_kills": 15402,
-    "distance_km": 875.1,
-    "mined": 29690,
+    "mob_kills": 15419,
+    "distance_km": 878.4,
+    "mined": 29798,
     "crafted": 110365,
     "distanz": {
-     "fuss": 219.0,
-     "elytra": 649.3,
+     "fuss": 219.5,
+     "elytra": 652.0,
      "schwimmen": 3.7,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 51024,
-    "damage_taken": 76642,
-    "damage_dealt": 383658,
+    "jumps": 51273,
+    "damage_taken": 77124,
+    "damage_dealt": 386359,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 2008,
@@ -775,30 +775,30 @@
   {
    "name": "Hagen13juhhuh",
    "stats": {
-    "playtime_h": 11.9,
+    "playtime_h": 12.1,
     "deaths": 24,
-    "mob_kills": 229,
-    "distance_km": 94.8,
-    "mined": 3181,
+    "mob_kills": 231,
+    "distance_km": 95.4,
+    "mined": 3367,
     "crafted": 2834,
     "distanz": {
-     "fuss": 33.8,
+     "fuss": 34.4,
      "elytra": 60.4,
      "schwimmen": 0.0,
      "boot": 0.1,
      "minecart": 0.5
     },
-    "jumps": 4936,
-    "damage_taken": 15156,
-    "damage_dealt": 9562,
+    "jumps": 5062,
+    "damage_taken": 15453,
+    "damage_dealt": 9881,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 168,
+    "drops": 169,
     "trades": 0,
     "top_mined": [
      [
       "grass block",
-      797
+      800
      ],
      [
       "stone",
@@ -806,7 +806,7 @@
      ],
      [
       "dirt",
-      419
+      421
      ],
      [
       "oak log",
@@ -817,8 +817,8 @@
       192
      ],
      [
-      "coal ore",
-      130
+      "deepslate",
+      175
      ]
     ],
     "top_crafted": [
@@ -1306,6 +1306,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-17 15:00 UTC"
+  "wann": "2026-11-17 15:09 UTC"
  }
 }

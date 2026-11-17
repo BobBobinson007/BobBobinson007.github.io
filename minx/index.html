@@ -62,22 +62,18 @@
     font-size:.85rem;text-transform:uppercase;letter-spacing:.08em}
   .ipbox button:hover{background:var(--dim)}
   .status{margin-top:18px;font-size:.92rem;color:var(--dim);font-family:var(--mono);
-    position:relative;display:inline-block;cursor:pointer;user-select:none;padding:4px 10px}
+    position:relative;display:inline-block;user-select:none;padding:4px 10px}
   .status .dot{display:inline-block;width:10px;height:10px;margin-right:8px;background:#555;vertical-align:middle}
   .status.online .dot{background:var(--white);box-shadow:0 0 8px rgba(255,255,255,.8);animation:pulse 1.6s infinite}
   .status.offline .dot{background:#777}
-  .status::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
   @keyframes pulse{50%{opacity:.35}}
-  .status .tip{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(4px);
-    background:var(--panel);border:2px solid var(--line2);box-shadow:6px 6px 0 rgba(255,255,255,.08);
-    padding:12px 16px;min-width:220px;text-align:left;font-size:.85rem;z-index:60;
-    opacity:0;pointer-events:none;transition:opacity .15s,transform .15s}
-  .status:hover .tip,.status:focus .tip{opacity:1;transform:translateX(-50%) translateY(0);pointer-events:auto}
-  .tip .thead{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;color:var(--dimmer);
-    text-transform:uppercase;margin-bottom:8px;border-bottom:1px solid var(--line);padding-bottom:6px}
-  .tip .trow{display:flex;align-items:center;gap:8px;padding:3px 0;color:var(--text)}
-  .tip .trow i{width:7px;height:7px;background:var(--white);box-shadow:0 0 6px rgba(255,255,255,.8);flex:none}
-  .tip .tmore{color:var(--dimmer);font-family:var(--mono);font-size:.75rem;margin-top:6px}
+  .who{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:12px;max-width:520px;
+    margin-left:auto;margin-right:auto}
+  .who .chip{background:var(--panel);border:1px solid var(--line2);padding:5px 12px;font-size:.84rem;
+    color:var(--text);font-family:var(--mono);display:inline-flex;align-items:center;gap:8px}
+  .who .chip i{width:7px;height:7px;background:var(--white);box-shadow:0 0 6px rgba(255,255,255,.85);
+    animation:pulse 1.6s infinite;flex:none}
+  .who .leer{color:var(--dimmer);font-size:.85rem;font-family:var(--mono)}
 
   /* ---------- Bild-Filmstreifen ---------- */
   .strip{border-bottom:2px solid var(--line);padding:0;overflow:hidden}
@@ -192,10 +188,12 @@
   .d_name{font-family:var(--mono);font-size:1.6rem;font-weight:800;color:var(--white);letter-spacing:.04em;word-break:break-word}
   .d_rank{color:var(--dim);font-family:var(--mono);font-size:.85rem;margin-top:4px}
   .d_rank b{color:var(--white)}
-  .d_share{margin-top:14px}
-  .d_share .slbl{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dimmer)}
-  .d_share .pbarwrap{margin-top:6px}
-  .d_share .pval{font-family:var(--mono);font-size:.78rem;color:var(--dim);margin-top:4px}
+  .d_anim{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+  .d_anim button{background:var(--panel);border:1px solid var(--line2);color:var(--dim);
+    font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;
+    padding:7px 12px;cursor:pointer}
+  .d_anim button:hover{border-color:var(--white);color:var(--white)}
+  .d_anim button.aktiv{background:var(--white);color:#000;border-color:var(--white)}
   .d_stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:22px}
   .d_stats .card{padding:12px}
   .d_stats .num{font-size:1.2rem}
@@ -267,7 +265,7 @@
 </header>
 
 <div class="hero" id="ip">
-  <img class="herobg" src="galerie/base-zickzackboss.jpg" alt="" onerror="this.remove()">
+  <img class="herobg" src="galerie/ZickZackBoss_Base.png" alt="" onerror="this.remove()">
   <div class="veil"></div>
   <div class="wrap">
     <h1>MINX</h1>
@@ -279,8 +277,8 @@
     </div>
     <div class="status" id="status" tabindex="0">
       <span class="dot"></span>STATUS UNBEKANNT
-      <div class="tip" id="tip" aria-hidden="true"></div>
     </div>
+    <div class="who" id="who" style="display:none"></div>
   </div>
 </div>
 
@@ -340,7 +338,7 @@
 <!-- Eingebettete Daten (Fallback, wird vom Export-Skript aktualisiert) -->
 <script>
 /*DATEN-BEGIN*/
-window.__DATEN__ = {"aktualisiert":"2026-11-17 15:00 UTC","hinweis":"Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.","spieler":[{"name":"BobBobinson007","stats":{"playtime_h":315.5,"deaths":104,"mob_kills":52132,"distance_km":2307.5,"mined":178794,"crafted":158366,"distanz":{"fuss":698.9,"elytra":1575.2,"schwimmen":20.1,"boot":11.7,"minecart":1.1,"pferd":0.5},"jumps":179783,"damage_taken":241740,"damage_dealt":923103,"fish_caught":129,"enchanted":0,"drops":7485,"trades":0,"top_mined":[["stone",44962],["sand",19615],["netherrack",16811],["sandstone",11369],["dirt",11101],["magma block",6920]],"top_crafted":[["paper",60201],["firework rocket",18310],["gold nugget",10715],["bone meal",6274],["oak planks",4392],["iron ingot",4197]]}},{"name":"ZickZackBoss","stats":{"playtime_h":296.7,"deaths":51,"mob_kills":9159,"distance_km":1484.3,"mined":51275,"crafted":37140,"distanz":{"fuss":354.5,"elytra":1073.6,"schwimmen":54.5,"boot":0.4,"minecart":1.2,"pferd":0.0},"jumps":132663,"damage_taken":88971,"damage_dealt":553775,"fish_caught":0,"enchanted":0,"drops":4188,"trades":0,"top_mined":[["stone",8945],["dirt",7498],["grass block",7167],["sand",6666],["netherrack",3305],["short grass",2721]],"top_crafted":[["iron block",10494],["stick",5936],["paper",4032],["oak planks",3632],["acacia planks",3116],["firework rocket",2354]]}},{"name":"TheRealDmseife","stats":{"playtime_h":87.0,"deaths":20,"mob_kills":15402,"distance_km":875.1,"mined":29690,"crafted":110365,"distanz":{"fuss":219.0,"elytra":649.3,"schwimmen":3.7,"boot":2.0,"minecart":1.2,"pferd":0.0},"jumps":51024,"damage_taken":76642,"damage_dealt":383658,"fish_caught":0,"enchanted":0,"drops":2008,"trades":0,"top_mined":[["netherrack",11011],["oak leaves",3750],["stone",2632],["dark oak log",1265],["dirt",1241],["grass block",1077]],"top_crafted":[["paper",42381],["cherry planks",11000],["dark oak planks",8515],["firework rocket",8128],["gold nugget",5735],["gold ingot",4534]]}},{"name":"1carlito","stats":{"playtime_h":82.4,"deaths":119,"mob_kills":147,"distance_km":171.3,"mined":16083,"crafted":55041,"distanz":{"fuss":83.1,"elytra":83.1,"schwimmen":3.8,"boot":0.3,"minecart":1.1},"jumps":14758,"damage_taken":56161,"damage_dealt":16809,"fish_caught":0,"enchanted":0,"drops":1291,"trades":0,"top_mined":[["deepslate",5682],["tuff",1124],["cobbled deepslate",877],["stone",723],["oak leaves",669],["amethyst cluster",558]],"top_crafted":[["bone meal",36982],["polished deepslate",4830],["bamboo block",3023],["iron ingot",1647],["tinted glass",1104],["stick",1101]]}},{"name":"Wemmbuuufaker","stats":{"playtime_h":51.6,"deaths":30,"mob_kills":3873,"distance_km":363.6,"mined":23449,"crafted":22244,"distanz":{"fuss":137.6,"elytra":222.2,"schwimmen":1.6,"boot":2.2},"jumps":30522,"damage_taken":65178,"damage_dealt":237237,"fish_caught":0,"enchanted":0,"drops":1100,"trades":0,"top_mined":[["dirt",4333],["netherrack",4095],["grass block",3155],["stone",2272],["dark oak log",1091],["deepslate",961]],"top_crafted":[["dark oak planks",3370],["stick",2436],["spruce planks",2320],["iron nugget",2199],["bone meal",1266],["cherry planks",1148]]}},{"name":"LuisCrafter92","stats":{"playtime_h":39.8,"deaths":11,"mob_kills":5221,"distance_km":816.3,"mined":25374,"crafted":47579,"distanz":{"fuss":104.3,"elytra":707.4,"schwimmen":2.9,"boot":0.5,"pferd":1.3},"jumps":28675,"damage_taken":66731,"damage_dealt":499380,"fish_caught":0,"enchanted":0,"drops":2358,"trades":0,"top_mined":[["sandstone",5239],["netherrack",4518],["stone",2169],["oak log",1753],["cut sandstone",1299],["sand",1049]],"top_crafted":[["paper",13014],["stick",12108],["oak planks",5988],["bone meal",2925],["cut sandstone",2908],["firework rocket",2860]]}},{"name":"WerferHades19","stats":{"playtime_h":32.1,"deaths":38,"mob_kills":2907,"distance_km":437.3,"mined":26628,"crafted":5383,"distanz":{"fuss":96.1,"elytra":337.2,"schwimmen":1.2,"boot":1.2,"pferd":1.6},"jumps":21560,"damage_taken":39346,"damage_dealt":97745,"fish_caught":0,"enchanted":0,"drops":494,"trades":0,"top_mined":[["sand",10423],["sandstone",7101],["netherrack",2673],["stone",1374],["cut sandstone",762],["sandstone stairs",695]],"top_crafted":[["stick",1568],["oak planks",736],["jungle planks",672],["firework rocket",576],["sandstone",271],["iron ingot",239]]}},{"name":"Captifipo","stats":{"playtime_h":20.1,"deaths":5,"mob_kills":3184,"distance_km":331.4,"mined":17534,"crafted":3355,"distanz":{"fuss":72.0,"elytra":258.0,"schwimmen":0.3,"minecart":1.1,"pferd":0.0},"jumps":9698,"damage_taken":12864,"damage_dealt":47529,"fish_caught":0,"enchanted":0,"drops":751,"trades":0,"top_mined":[["stone",5079],["netherrack",3819],["deepslate",3700],["deepslate diamond ore",719],["sandstone",715],["tuff",335]],"top_crafted":[["stick",584],["oak planks",456],["glass pane",448],["spruce planks",408],["rail",336],["quartz block",164]]}},{"name":"Jaki_03","stats":{"playtime_h":18.7,"deaths":12,"mob_kills":145,"distance_km":168.5,"mined":4848,"crafted":1772,"distanz":{"fuss":69.7,"elytra":89.8,"schwimmen":0.8,"boot":3.1,"minecart":5.1},"jumps":7386,"damage_taken":11496,"damage_dealt":27861,"fish_caught":0,"enchanted":0,"drops":290,"trades":0,"top_mined":[["grass block",1516],["stone",1028],["dirt",685],["cobblestone",471],["rail",206],["short grass",125]],"top_crafted":[["paper",576],["rail",512],["black stained glass",224],["cobblestone stairs",76],["gold ingot",54],["powered rail",51]]}},{"name":"maxderbeste1234","stats":{"playtime_h":12.6,"deaths":3,"mob_kills":475,"distance_km":172.0,"mined":6785,"crafted":6116,"distanz":{"fuss":67.6,"elytra":103.3,"schwimmen":1.1},"jumps":8399,"damage_taken":9546,"damage_dealt":68471,"fish_caught":0,"enchanted":0,"drops":171,"trades":0,"top_mined":[["pink petals",2122],["sand",892],["cherry leaves",718],["dirt",656],["short grass",570],["grass block",516]],"top_crafted":[["oak planks",2608],["paper",768],["glass",640],["firework rocket",498],["acacia planks",336],["spruce planks",248]]}},{"name":"Hagen13juhhuh","stats":{"playtime_h":11.9,"deaths":24,"mob_kills":229,"distance_km":94.8,"mined":3181,"crafted":2834,"distanz":{"fuss":33.8,"elytra":60.4,"schwimmen":0.0,"boot":0.1,"minecart":0.5},"jumps":4936,"damage_taken":15156,"damage_dealt":9562,"fish_caught":0,"enchanted":0,"drops":168,"trades":0,"top_mined":[["grass block",797],["stone",627],["dirt",419],["oak log",402],["short grass",192],["coal ore",130]],"top_crafted":[["paper",1406],["oak planks",776],["cobblestone stairs",176],["stick",96],["emerald",65],["oak stairs",64]]}},{"name":"fabsthreal","stats":{"playtime_h":8.0,"deaths":0,"mob_kills":28,"distance_km":33.9,"mined":2404,"crafted":1154,"distanz":{"fuss":33.5,"schwimmen":0.4},"jumps":7184,"damage_taken":1586,"damage_dealt":5168,"fish_caught":0,"enchanted":0,"drops":110,"trades":0,"top_mined":[["stone",658],["grass block",442],["dirt",426],["sand",300],["spruce log",166],["oak planks",114]],"top_crafted":[["oak planks",552],["spruce planks",288],["glass",284],["oak stairs",16],["oak door",12],["crafting table",2]]}},{"name":"tillomix","stats":{"playtime_h":4.6,"deaths":134,"mob_kills":294,"distance_km":23.5,"mined":634,"crafted":535,"distanz":{"fuss":13.6,"elytra":8.3,"schwimmen":1.3,"boot":0.3},"jumps":6453,"damage_taken":35486,"damage_dealt":9617,"fish_caught":0,"enchanted":0,"drops":70,"trades":0,"top_mined":[["bamboo block",150],["iron block",78],["soul sand",73],["deepslate",52],["kelp plant",43],["redstone wire",28]],"top_crafted":[["bamboo planks",152],["stick",92],["jungle planks",84],["bamboo fence",78],["iron block",64],["deepslate",44]]}},{"name":"BooklyTooCozy","stats":{"playtime_h":4.2,"deaths":3,"mob_kills":27,"distance_km":18.7,"mined":304,"crafted":267,"distanz":{"fuss":10.6,"elytra":7.9,"schwimmen":0.0,"minecart":0.2},"jumps":4582,"damage_taken":5105,"damage_dealt":5806,"fish_caught":0,"enchanted":0,"drops":130,"trades":0,"top_mined":[["nether wart",66],["stone",49],["wheat",38],["andesite",22],["stone bricks",19],["hopper",14]],"top_crafted":[["iron ingot",90],["spruce planks",64],["wheat",27],["bread",21],["birch planks",16],["cooked cod",16]]}},{"name":"EnvyTheBlade","stats":{"playtime_h":1.8,"deaths":17,"mob_kills":3,"distance_km":4.1,"mined":648,"crafted":30,"distanz":{"fuss":4.0,"schwimmen":0.1},"jumps":1426,"damage_taken":5097,"damage_dealt":1138,"fish_caught":0,"enchanted":0,"drops":3,"trades":0,"top_mined":[["netherrack",235],["deepslate",199],["stone",83],["deepslate diamond ore",35],["iron ore",12],["prismarine bricks",11]],"top_crafted":[["oak planks",8],["stick",4],["crafting table",3],["iron ingot",2],["diamond axe",2],["furnace",1]]}},{"name":"PaladinEnzym661","stats":{"playtime_h":1.0,"deaths":0,"mob_kills":36,"distance_km":11.2,"mined":73,"crafted":120,"distanz":{"fuss":2.5,"elytra":8.5,"schwimmen":0.0,"minecart":0.2,"pferd":0.0},"jumps":1527,"damage_taken":1085,"damage_dealt":8290,"fish_caught":0,"enchanted":0,"drops":19,"trades":0,"top_mined":[["tnt",27],["sand",14],["oak pressure plate",7],["hay block",7],["cobblestone",6],["crafting table",3]],"top_crafted":[["wheat",63],["bread",21],["cooked cod",14],["iron ingot",9],["acacia planks",8],["bucket",2]]}},{"name":"Itz_Rick","stats":{"playtime_h":0.8,"deaths":20,"mob_kills":1,"distance_km":0.8,"mined":88,"crafted":84,"distanz":{"fuss":0.8,"schwimmen":0.0},"jumps":840,"damage_taken":5642,"damage_dealt":866,"fish_caught":0,"enchanted":0,"drops":0,"trades":0,"top_mined":[["stone",26],["grass block",20],["dirt",13],["oak log",11],["crafting table",3],["stone bricks",2]],"top_crafted":[["stick",52],["oak planks",10],["dark oak planks",8],["spruce planks",4],["crafting table",3],["wooden axe",1]]}}],"server":{"cpu":"Intel Core i5-8500T CPU @ 2.10GHz","ram_gb":9.7,"welt_aktuell_gb":5.0,"welt_alt_gb":1.6,"wann":"2026-11-17 15:00 UTC"}};
+window.__DATEN__ = {"aktualisiert":"2026-11-17 15:09 UTC","hinweis":"Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.","spieler":[{"name":"BobBobinson007","stats":{"playtime_h":315.5,"deaths":104,"mob_kills":52132,"distance_km":2307.5,"mined":178794,"crafted":158366,"distanz":{"fuss":698.9,"elytra":1575.2,"schwimmen":20.1,"boot":11.7,"minecart":1.1,"pferd":0.5},"jumps":179783,"damage_taken":241740,"damage_dealt":923103,"fish_caught":129,"enchanted":0,"drops":7485,"trades":0,"top_mined":[["stone",44962],["sand",19615],["netherrack",16811],["sandstone",11369],["dirt",11101],["magma block",6920]],"top_crafted":[["paper",60201],["firework rocket",18310],["gold nugget",10715],["bone meal",6274],["oak planks",4392],["iron ingot",4197]]}},{"name":"ZickZackBoss","stats":{"playtime_h":296.7,"deaths":51,"mob_kills":9159,"distance_km":1484.3,"mined":51275,"crafted":37140,"distanz":{"fuss":354.5,"elytra":1073.6,"schwimmen":54.5,"boot":0.4,"minecart":1.2,"pferd":0.0},"jumps":132663,"damage_taken":88971,"damage_dealt":553775,"fish_caught":0,"enchanted":0,"drops":4188,"trades":0,"top_mined":[["stone",8945],["dirt",7498],["grass block",7167],["sand",6666],["netherrack",3305],["short grass",2721]],"top_crafted":[["iron block",10494],["stick",5936],["paper",4032],["oak planks",3632],["acacia planks",3116],["firework rocket",2354]]}},{"name":"TheRealDmseife","stats":{"playtime_h":87.1,"deaths":20,"mob_kills":15419,"distance_km":878.4,"mined":29798,"crafted":110365,"distanz":{"fuss":219.5,"elytra":652.0,"schwimmen":3.7,"boot":2.0,"minecart":1.2,"pferd":0.0},"jumps":51273,"damage_taken":77124,"damage_dealt":386359,"fish_caught":0,"enchanted":0,"drops":2008,"trades":0,"top_mined":[["netherrack",11011],["oak leaves",3750],["stone",2632],["dark oak log",1265],["dirt",1241],["grass block",1077]],"top_crafted":[["paper",42381],["cherry planks",11000],["dark oak planks",8515],["firework rocket",8128],["gold nugget",5735],["gold ingot",4534]]}},{"name":"1carlito","stats":{"playtime_h":82.4,"deaths":119,"mob_kills":147,"distance_km":171.3,"mined":16083,"crafted":55041,"distanz":{"fuss":83.1,"elytra":83.1,"schwimmen":3.8,"boot":0.3,"minecart":1.1},"jumps":14758,"damage_taken":56161,"damage_dealt":16809,"fish_caught":0,"enchanted":0,"drops":1291,"trades":0,"top_mined":[["deepslate",5682],["tuff",1124],["cobbled deepslate",877],["stone",723],["oak leaves",669],["amethyst cluster",558]],"top_crafted":[["bone meal",36982],["polished deepslate",4830],["bamboo block",3023],["iron ingot",1647],["tinted glass",1104],["stick",1101]]}},{"name":"Wemmbuuufaker","stats":{"playtime_h":51.6,"deaths":30,"mob_kills":3873,"distance_km":363.6,"mined":23449,"crafted":22244,"distanz":{"fuss":137.6,"elytra":222.2,"schwimmen":1.6,"boot":2.2},"jumps":30522,"damage_taken":65178,"damage_dealt":237237,"fish_caught":0,"enchanted":0,"drops":1100,"trades":0,"top_mined":[["dirt",4333],["netherrack",4095],["grass block",3155],["stone",2272],["dark oak log",1091],["deepslate",961]],"top_crafted":[["dark oak planks",3370],["stick",2436],["spruce planks",2320],["iron nugget",2199],["bone meal",1266],["cherry planks",1148]]}},{"name":"LuisCrafter92","stats":{"playtime_h":39.8,"deaths":11,"mob_kills":5221,"distance_km":816.3,"mined":25374,"crafted":47579,"distanz":{"fuss":104.3,"elytra":707.4,"schwimmen":2.9,"boot":0.5,"pferd":1.3},"jumps":28675,"damage_taken":66731,"damage_dealt":499380,"fish_caught":0,"enchanted":0,"drops":2358,"trades":0,"top_mined":[["sandstone",5239],["netherrack",4518],["stone",2169],["oak log",1753],["cut sandstone",1299],["sand",1049]],"top_crafted":[["paper",13014],["stick",12108],["oak planks",5988],["bone meal",2925],["cut sandstone",2908],["firework rocket",2860]]}},{"name":"WerferHades19","stats":{"playtime_h":32.1,"deaths":38,"mob_kills":2907,"distance_km":437.3,"mined":26628,"crafted":5383,"distanz":{"fuss":96.1,"elytra":337.2,"schwimmen":1.2,"boot":1.2,"pferd":1.6},"jumps":21560,"damage_taken":39346,"damage_dealt":97745,"fish_caught":0,"enchanted":0,"drops":494,"trades":0,"top_mined":[["sand",10423],["sandstone",7101],["netherrack",2673],["stone",1374],["cut sandstone",762],["sandstone stairs",695]],"top_crafted":[["stick",1568],["oak planks",736],["jungle planks",672],["firework rocket",576],["sandstone",271],["iron ingot",239]]}},{"name":"Captifipo","stats":{"playtime_h":20.1,"deaths":5,"mob_kills":3184,"distance_km":331.4,"mined":17534,"crafted":3355,"distanz":{"fuss":72.0,"elytra":258.0,"schwimmen":0.3,"minecart":1.1,"pferd":0.0},"jumps":9698,"damage_taken":12864,"damage_dealt":47529,"fish_caught":0,"enchanted":0,"drops":751,"trades":0,"top_mined":[["stone",5079],["netherrack",3819],["deepslate",3700],["deepslate diamond ore",719],["sandstone",715],["tuff",335]],"top_crafted":[["stick",584],["oak planks",456],["glass pane",448],["spruce planks",408],["rail",336],["quartz block",164]]}},{"name":"Jaki_03","stats":{"playtime_h":18.7,"deaths":12,"mob_kills":145,"distance_km":168.5,"mined":4848,"crafted":1772,"distanz":{"fuss":69.7,"elytra":89.8,"schwimmen":0.8,"boot":3.1,"minecart":5.1},"jumps":7386,"damage_taken":11496,"damage_dealt":27861,"fish_caught":0,"enchanted":0,"drops":290,"trades":0,"top_mined":[["grass block",1516],["stone",1028],["dirt",685],["cobblestone",471],["rail",206],["short grass",125]],"top_crafted":[["paper",576],["rail",512],["black stained glass",224],["cobblestone stairs",76],["gold ingot",54],["powered rail",51]]}},{"name":"maxderbeste1234","stats":{"playtime_h":12.6,"deaths":3,"mob_kills":475,"distance_km":172.0,"mined":6785,"crafted":6116,"distanz":{"fuss":67.6,"elytra":103.3,"schwimmen":1.1},"jumps":8399,"damage_taken":9546,"damage_dealt":68471,"fish_caught":0,"enchanted":0,"drops":171,"trades":0,"top_mined":[["pink petals",2122],["sand",892],["cherry leaves",718],["dirt",656],["short grass",570],["grass block",516]],"top_crafted":[["oak planks",2608],["paper",768],["glass",640],["firework rocket",498],["acacia planks",336],["spruce planks",248]]}},{"name":"Hagen13juhhuh","stats":{"playtime_h":12.1,"deaths":24,"mob_kills":231,"distance_km":95.4,"mined":3367,"crafted":2834,"distanz":{"fuss":34.4,"elytra":60.4,"schwimmen":0.0,"boot":0.1,"minecart":0.5},"jumps":5062,"damage_taken":15453,"damage_dealt":9881,"fish_caught":0,"enchanted":0,"drops":169,"trades":0,"top_mined":[["grass block",800],["stone",627],["dirt",421],["oak log",402],["short grass",192],["deepslate",175]],"top_crafted":[["paper",1406],["oak planks",776],["cobblestone stairs",176],["stick",96],["emerald",65],["oak stairs",64]]}},{"name":"fabsthreal","stats":{"playtime_h":8.0,"deaths":0,"mob_kills":28,"distance_km":33.9,"mined":2404,"crafted":1154,"distanz":{"fuss":33.5,"schwimmen":0.4},"jumps":7184,"damage_taken":1586,"damage_dealt":5168,"fish_caught":0,"enchanted":0,"drops":110,"trades":0,"top_mined":[["stone",658],["grass block",442],["dirt",426],["sand",300],["spruce log",166],["oak planks",114]],"top_crafted":[["oak planks",552],["spruce planks",288],["glass",284],["oak stairs",16],["oak door",12],["crafting table",2]]}},{"name":"tillomix","stats":{"playtime_h":4.6,"deaths":134,"mob_kills":294,"distance_km":23.5,"mined":634,"crafted":535,"distanz":{"fuss":13.6,"elytra":8.3,"schwimmen":1.3,"boot":0.3},"jumps":6453,"damage_taken":35486,"damage_dealt":9617,"fish_caught":0,"enchanted":0,"drops":70,"trades":0,"top_mined":[["bamboo block",150],["iron block",78],["soul sand",73],["deepslate",52],["kelp plant",43],["redstone wire",28]],"top_crafted":[["bamboo planks",152],["stick",92],["jungle planks",84],["bamboo fence",78],["iron block",64],["deepslate",44]]}},{"name":"BooklyTooCozy","stats":{"playtime_h":4.2,"deaths":3,"mob_kills":27,"distance_km":18.7,"mined":304,"crafted":267,"distanz":{"fuss":10.6,"elytra":7.9,"schwimmen":0.0,"minecart":0.2},"jumps":4582,"damage_taken":5105,"damage_dealt":5806,"fish_caught":0,"enchanted":0,"drops":130,"trades":0,"top_mined":[["nether wart",66],["stone",49],["wheat",38],["andesite",22],["stone bricks",19],["hopper",14]],"top_crafted":[["iron ingot",90],["spruce planks",64],["wheat",27],["bread",21],["birch planks",16],["cooked cod",16]]}},{"name":"EnvyTheBlade","stats":{"playtime_h":1.8,"deaths":17,"mob_kills":3,"distance_km":4.1,"mined":648,"crafted":30,"distanz":{"fuss":4.0,"schwimmen":0.1},"jumps":1426,"damage_taken":5097,"damage_dealt":1138,"fish_caught":0,"enchanted":0,"drops":3,"trades":0,"top_mined":[["netherrack",235],["deepslate",199],["stone",83],["deepslate diamond ore",35],["iron ore",12],["prismarine bricks",11]],"top_crafted":[["oak planks",8],["stick",4],["crafting table",3],["iron ingot",2],["diamond axe",2],["furnace",1]]}},{"name":"PaladinEnzym661","stats":{"playtime_h":1.0,"deaths":0,"mob_kills":36,"distance_km":11.2,"mined":73,"crafted":120,"distanz":{"fuss":2.5,"elytra":8.5,"schwimmen":0.0,"minecart":0.2,"pferd":0.0},"jumps":1527,"damage_taken":1085,"damage_dealt":8290,"fish_caught":0,"enchanted":0,"drops":19,"trades":0,"top_mined":[["tnt",27],["sand",14],["oak pressure plate",7],["hay block",7],["cobblestone",6],["crafting table",3]],"top_crafted":[["wheat",63],["bread",21],["cooked cod",14],["iron ingot",9],["acacia planks",8],["bucket",2]]}},{"name":"Itz_Rick","stats":{"playtime_h":0.8,"deaths":20,"mob_kills":1,"distance_km":0.8,"mined":88,"crafted":84,"distanz":{"fuss":0.8,"schwimmen":0.0},"jumps":840,"damage_taken":5642,"damage_dealt":866,"fish_caught":0,"enchanted":0,"drops":0,"trades":0,"top_mined":[["stone",26],["grass block",20],["dirt",13],["oak log",11],["crafting table",3],["stone bricks",2]],"top_crafted":[["stick",52],["oak planks",10],["dark oak planks",8],["spruce planks",4],["crafting table",3],["wooden axe",1]]}}],"server":{"cpu":"Intel Core i5-8500T CPU @ 2.10GHz","ram_gb":9.7,"welt_aktuell_gb":5.0,"welt_alt_gb":1.6,"wann":"2026-11-17 15:09 UTC"}};
 /*DATEN-END*/
 </script>
 
@@ -353,11 +351,7 @@ window.__DATEN__ = {"aktualisiert":"2026-11-17 15:00 UTC","hinweis":"Öffentlich
       <div style="flex:1;min-width:0">
         <div class="d_name" id="d_name"></div>
         <div class="d_rank" id="d_rank"></div>
-        <div class="d_share">
-          <div class="slbl">Anteil an der Server-Spielzeit</div>
-          <div class="dbar"><span class="track"><span class="fill" id="d_sharefill"></span></span></div>
-          <div class="pval" id="d_shareval"></div>
-        </div>
+        <div class="d_anim" id="d_anim"></div>
       </div>
     </div>
     <div class="d_stats" id="d_stats"></div>
@@ -383,12 +377,18 @@ let onlineMax = null;
 function fmt(n){ return n.toLocaleString('de-DE'); }
 function fmtW(n, dec){ return dec ? n.toLocaleString('de-DE',{minimumFractionDigits:1,maximumFractionDigits:1}) : fmt(n); }
 function headUrl(name, px){
-  // 3D-Iso-Kopf (Visage/vzge), Fallback-Kette unten per onerror
+  // 3D-Iso-Kopf (Visage/vzge – liefert korrekt normalisierte 64x64-Skins)
   return 'https://vzge.me/head/' + px + '/' + encodeURIComponent(name);
 }
 function helmFallback(img, name, px){
-  img.onerror = ()=>svgFallback(img);
-  img.src = 'https://minotar.net/helm/' + encodeURIComponent(name) + '/' + px;
+  const schritt = +(img.dataset.step || 0);
+  img.dataset.step = schritt + 1;
+  const kette = [
+    'https://mc-heads.net/head/' + encodeURIComponent(name) + '/' + px,
+    'https://minotar.net/helm/' + encodeURIComponent(name) + '/' + px,
+  ];
+  if(schritt < kette.length){ img.src = kette[schritt]; }
+  else{ svgFallback(img); }
 }
 function svgFallback(img){
   img.onerror = null;
@@ -422,15 +422,32 @@ function animiereBalken(root){
 /* ================= 3D-Skins (skinview3d) ================= */
 
 function skinTextureUrls(name){
+  // vzge normalisiert jeden Skin auf 64x64 (minotar liefert teils 64x32
+  // Legacy-Formate, die skinview3d falsch rendert) -> vzge zuerst.
   return [
-    'https://minotar.net/skin/' + encodeURIComponent(name),
+    'https://vzge.me/skin/' + encodeURIComponent(name),
     'https://mc-heads.net/skin/' + encodeURIComponent(name),
+    'https://minotar.net/skin/' + encodeURIComponent(name),
   ];
+}
+
+const ANIMS = [
+  {key:'idle',   label:'Idle',   klasse: ()=> new skinview3d.IdleAnimation()},
+  {key:'walk',   label:'Gehen',  klasse: ()=> new skinview3d.WalkingAnimation()},
+  {key:'run',    label:'Laufen', klasse: ()=> new skinview3d.RunningAnimation()},
+];
+
+function setzeAnim(viewer, key, speed){
+  const a = ANIMS.find(x=>x.key===key) || ANIMS[1];
+  try{
+    viewer.animation = a.klasse();
+    if(viewer.animation.speed !== undefined){ viewer.animation.speed = speed || 0.8; }
+  }catch(e){}
 }
 
 function baue3dSkin(container, name, w, h, opts){
   opts = opts || {};
-  if(window.__KEIN_3D__ || !window.skinview3d){ return false; }
+  if(window.__KEIN_3D__ || !window.skinview3d){ return null; }
   try{
     const canvas = document.createElement('canvas');
     canvas.className = 'skincanvas';
@@ -444,19 +461,16 @@ function baue3dSkin(container, name, w, h, opts){
     viewer.autoRotateSpeed = opts.speed || 1.4;
     viewer.controls.enableZoom = false;
     viewer.controls.enablePan = false;
-    if(opts.walk !== false){
-      try{
-        viewer.animation = new skinview3d.WalkingAnimation();
-        viewer.animation.speed = 0.75;
-      }catch(e){}
-    }
-    // Skin-Fallback-Kette
+    setzeAnim(viewer, opts.anim || 'walk', opts.animSpeed || 0.8);
+    // Skin-Fallback-Kette (vzge -> mc-heads -> minotar)
     viewer.loadSkin(skinTextureUrls(name)[0]).catch(()=>{
       return viewer.loadSkin(skinTextureUrls(name)[1]);
+    }).catch(()=>{
+      return viewer.loadSkin(skinTextureUrls(name)[2]);
     }).catch(()=>{});
-    return true;
+    return viewer;
   }catch(e){
-    return false;
+    return null;
   }
 }
 
@@ -519,8 +533,9 @@ function render(){
     ).join('');
     podEl.querySelectorAll('.podskin').forEach((box,i)=>{
       const name = decodeURIComponent(box.dataset.name);
-      const ok = baue3dSkin(box, name, 90, 118, {speed: 1.2});
-      if(!ok){
+      const anim = ['run','walk','idle'][i] || 'walk';
+      const viewer = baue3dSkin(box, name, 90, 118, {speed: 1.2, anim: anim, animSpeed: 0.9});
+      if(!viewer){
         box.innerHTML = '<img src="'+headUrl(name,192)+'" alt="'+name+'" style="width:90px;height:90px;image-rendering:pixelated;display:block;margin:0 auto 10px;box-shadow:0 0 0 2px var(--line2)" onerror="helmFallback(this,\''+encodeURIComponent(name)+'\',96)">';
       }
     });
@@ -620,27 +635,29 @@ function oeffneDash(name){
   const liste = sortierteListe();
   const rank = liste.findIndex(x=>x.name===name)+1;
 
-  // 3D-Skin groß (Fallback: Iso-Kopf-Bild)
+  // 3D-Skin groß (Fallback: Iso-Kopf-Bild) + Animation-Wahl
   const box = document.getElementById('d_skin3d');
   box.innerHTML = '';
-  const ok = baue3dSkin(box, name, 150, 210, {speed: 1.6, walk: true});
-  if(!ok){
+  let dViewer = baue3dSkin(box, name, 150, 210, {speed: 1.6, anim: 'walk'});
+  const animEl = document.getElementById('d_anim');
+  if(dViewer){
+    animEl.innerHTML = ANIMS.map(a=>
+      '<button data-anim="'+a.key+'" class="'+(a.key==='walk'?'aktiv':'')+'">'+a.label+'</button>').join('');
+    animEl.querySelectorAll('button').forEach(btn=>{
+      btn.addEventListener('click', ev=>{
+        ev.stopPropagation();
+        setzeAnim(dViewer, btn.dataset.anim, 0.9);
+        animEl.querySelectorAll('button').forEach(b=>b.classList.toggle('aktiv', b===btn));
+      });
+    });
+  }else{
+    animEl.innerHTML = '';
     box.innerHTML = '<div class="d3dfail"><img src="'+headUrl(name,256)+'" alt="'+name+'" style="width:130px;image-rendering:pixelated" onerror="helmFallback(this,\''+encodeURIComponent(name)+'\',130)"></div>';
   }
 
   document.getElementById('d_name').textContent = name;
   document.getElementById('d_rank').innerHTML =
     'Platz <b>#'+rank+'</b> von '+liste.length+' Spielern';
-
-  // Anteil an der Gesamt-Spielzeit
-  const gesamt = liste.reduce((a,x)=>a+x.stats.playtime_h,0) || 1;
-  const anteil = st.playtime_h/gesamt*100;
-  document.getElementById('d_shareval').textContent =
-    fmtW(anteil,1)+' % · '+fmtW(st.playtime_h,1)+' von '+fmtW(gesamt,1)+' Stunden';
-  const sf = document.getElementById('d_sharefill');
-  sf.dataset.w = anteil.toFixed(1)+'%';
-  sf.style.width = '0%';
-  requestAnimationFrame(()=>requestAnimationFrame(()=>{ sf.style.width = sf.dataset.w; }));
 
   const karten = [
     [st.playtime_h,'Stunden',1], [st.distance_km,'km gereist',1],
@@ -742,25 +759,24 @@ async function statusHolen(){
   }
   if(ok){
     el.className = 'status online';
-    el.innerHTML = '<span class="dot"></span>ONLINE – '+(serverOnline!==null? serverOnline+' / '+onlineMax+' SPIELER':'SERVER ERREICHBAR')+
-      ' · <span style="color:var(--dimmer)">HOVER: WER IST DA</span>'+
-      tipHtml();
+    el.innerHTML = '<span class="dot"></span>ONLINE – '+(serverOnline!==null? serverOnline+' / '+onlineMax+' SPIELER':'SERVER ERREICHBAR');
   }else{
     el.className = 'status';
-    el.innerHTML = '<span class="dot"></span>STATUS UNBEKANNT' + tipHtml();
+    el.innerHTML = '<span class="dot"></span>STATUS UNBEKANNT';
   }
+  zeigeWerOnline();
   if(daten) render();   // Board mit Online-Punkten neu zeichnen
 }
 
-function tipHtml(){
-  const namen = onlineListe.slice(0,12);
-  if(!namen.length){
-    return '<div class="tip"><div class="thead">Gerade niemand online</div></div>';
+function zeigeWerOnline(){
+  const el = document.getElementById('who');
+  if(serverOnline === null){ el.style.display = 'none'; return; }
+  el.style.display = 'flex';
+  if(!onlineListe.length){
+    el.innerHTML = '<span class="leer">Gerade niemand online</span>';
+  }else{
+    el.innerHTML = onlineListe.map(n=>'<span class="chip"><i></i>'+n+'</span>').join('');
   }
-  return '<div class="tip"><div class="thead">Jetzt online – '+onlineListe.length+'</div>'+
-    namen.map(n=>'<div class="trow"><i></i>'+n+'</div>').join('')+
-    (onlineListe.length>namen.length ? '<div class="tmore">+'+(onlineListe.length-namen.length)+' weitere</div>' : '')+
-    '</div>';
 }
 
 function copyIp(btn){
