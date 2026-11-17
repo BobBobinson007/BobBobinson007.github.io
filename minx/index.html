@@ -160,7 +160,6 @@
   .uptsparklegend{display:flex;gap:18px;margin-top:8px;font-size:.74rem;color:var(--dimmer);font-family:var(--mono)}
   .uptsparklegend i{display:inline-block;width:10px;height:10px;background:var(--white);vertical-align:middle;margin-right:6px}
   .uptsparklegend i.down{background:var(--dimmer)}
-  .uptstale{color:var(--dim);font-size:.8rem;font-family:var(--mono);margin-top:8px}
 
   /* ---------- Mehr Animationen + VIP-Plus ---------- */
   @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
@@ -367,18 +366,6 @@
 
 <div class="strip" id="strip"></div>
 
-<section id="uptime">
-  <div class="wrap">
-    <h2>Server-Uptime</h2>
-    <p class="sub">Wird alle 5 Minuten von GitHub-Servern extern gepingt – unabhängig von dieser Seite, auch wenn niemand drauf schaut.</p>
-    <div class="uptgrid" id="uptgrid"></div>
-    <div class="uptspark" id="uptspark" aria-label="Ping-Verlauf der letzten 24 Stunden"></div>
-    <div class="uptsparklegend"><span><i></i>erreichbar</span><span><i class="down"></i>nicht erreichbar</span><span style="margin-left:auto">letzte 24 h</span></div>
-    <div class="uptstale" id="uptstale"></div>
-    <div class="updated" id="uptupdated"></div>
-  </div>
-</section>
-
 <section id="statistiken">
   <div class="wrap">
     <h2>Statistiken</h2>
@@ -419,6 +406,15 @@
     <p class="sub">Der Host und die Welt dahinter.</p>
     <div class="srvgrid" id="srvgrid"></div>
     <div class="updated" id="srvupdated"></div>
+  </div>
+</section>
+
+<section id="uptime">
+  <div class="wrap">
+    <h2>Uptime</h2>
+    <div class="uptgrid" id="uptgrid"></div>
+    <div class="uptspark" id="uptspark"></div>
+    <div class="updated" id="uptupdated"></div>
   </div>
 </section>
 
@@ -919,7 +915,6 @@ const SCHUTZ = [
 async function uptimeHolen(){
   const grid = document.getElementById('uptgrid');
   const spark = document.getElementById('uptspark');
-  const stale = document.getElementById('uptstale');
   const upd = document.getElementById('uptupdated');
   if(!grid) return;
   try{
@@ -947,14 +942,11 @@ async function uptimeHolen(){
     spark.innerHTML = rec.map(s=>
       '<i class="'+(s.ok?'up':'down')+'" title="'+s.t.replace('T',' ').replace('Z',' UTC')+' | '+(s.ok?('erreichbar'+(s.ms!==null?' \u00b7 '+s.ms+' ms':'')):'NICHT erreichbar')+'"></i>'
     ).join('');
-    // Veraltet? (letzter Ping > 20 Min her -> Monitor pausiert?)
     const alter = d.generated ? (Date.now() - new Date(d.generated).getTime())/60000 : null;
-    if(alter !== null && alter > 20){
-      stale.textContent = '\u26a0 Letzter externer Check ist '+Math.round(alter)+' Minuten her \u2013 der Monitor l\u00e4uft eventuell nicht.';
-    }else{ stale.textContent = ''; }
-    upd.textContent = 'Letzter externer Check: '+(d.generated||'').replace('T',' ').replace('Z',' UTC')+' \u00b7 Quelle: GitHub Actions, alle 5 Min';
+    upd.textContent = (alter !== null && alter > 20 ? '\u26a0 Monitor still seit '+Math.round(alter)+' Min \u00b7 ' : '') +
+      'Externer Ping, alle 5 Min \u00b7 '+(d.generated||'').replace('T',' ').replace('Z',' UTC');
   }catch(e){
-    grid.innerHTML = '<div class="uptcard"><div class="uptnum">\u2013</div><div class="uptlabel">Uptime-Daten nicht ladbar</div><div class="uptms">('+e.message+')</div></div>';
+    grid.innerHTML = '<div class="uptcard"><div class="uptnum">\u2013</div><div class="uptlabel">keine Daten</div><div class="uptms">('+e.message+')</div></div>';
     spark.innerHTML = '';
   }
 }
