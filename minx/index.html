@@ -136,6 +136,31 @@
     color:var(--dim);margin-top:5px}
   .updated{color:var(--dimmer);font-size:.8rem;margin-top:14px;font-family:var(--mono)}
 
+  /* ---------- Mehr Animationen + VIP-Plus ---------- */
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  @keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.09)}}
+  @keyframes shimmer{from{transform:translateX(-120%)}to{transform:translateX(450%)}}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+  .herobg{animation:kenburns 26s ease-in-out infinite alternate}
+  .pod,.card,.srv,.srow{animation:fadeUp .55s cubic-bezier(.2,.8,.3,1) both}
+  .pcard{animation:fadeUp .5s cubic-bezier(.2,.8,.3,1) both}
+  .podskin{animation:floaty 3.6s ease-in-out infinite}
+  .pcard:hover{transform:translateY(-3px)}
+  .pcard{transition:border-color .15s,transform .18s}
+  .pcard .pbar .fill::after{content:"";position:absolute;top:0;bottom:0;left:0;width:34%;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.6),transparent);
+    animation:shimmer 2.8s linear infinite}
+  .vplus{width:20px;height:20px;flex:none;display:inline-flex;align-items:center;justify-content:center;
+    border:1px solid var(--line2);color:var(--dim);font-family:var(--mono);font-size:.8rem;font-weight:700;
+    background:var(--panel2);transition:all .2s;user-select:none;cursor:default}
+  .pod .vplus{position:absolute;top:8px;right:10px}
+  .pod:hover .vplus,.pcard:hover .vplus,.vplus:hover{color:#000;background:var(--white);
+    box-shadow:0 0 14px rgba(255,255,255,.95);transform:scale(1.18)}
+  @media (prefers-reduced-motion: reduce){
+    .herobg,.pod,.card,.srv,.srow,.pcard,.podskin,.pcard .pbar .fill::after{animation:none}
+    .pcard:hover{transform:none}
+  }
+
   /* ---------- Schutz (minimal) ---------- */
   .slist{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px}
   .srow{display:flex;align-items:baseline;gap:12px;background:var(--panel);border:1px solid var(--line);padding:10px 14px}
@@ -421,6 +446,10 @@ function animiereBalken(root){
 
 /* ================= 3D-Skins (skinview3d) ================= */
 
+// VIP-Liste (Quelle: /opt/minecraft/vips.json, Stand 17.11.2026)
+const VIPS = ['1carlito','LuisCrafter92','TheRealDmseife','WerferHades19','ZickZackBoss'];
+const vplusHtml = '<span class="vplus" title="VIP">+</span>';
+
 function skinTextureUrls(name){
   // vzge normalisiert jeden Skin auf 64x64 (minotar liefert teils 64x32
   // Legacy-Formate, die skinview3d falsch rendert) -> vzge zuerst.
@@ -435,6 +464,7 @@ const ANIMS = [
   {key:'idle',   label:'Idle',   klasse: ()=> new skinview3d.IdleAnimation()},
   {key:'walk',   label:'Gehen',  klasse: ()=> new skinview3d.WalkingAnimation()},
   {key:'run',    label:'Laufen', klasse: ()=> new skinview3d.RunningAnimation()},
+  {key:'fly',    label:'Flug',   klasse: ()=> new skinview3d.FlyingAnimation()},
 ];
 
 function setzeAnim(viewer, key, speed){
@@ -457,8 +487,10 @@ function baue3dSkin(container, name, w, h, opts){
       skin: skinTextureUrls(name)[0],
       fov: 45,
     });
-    viewer.autoRotate = true;
-    viewer.autoRotateSpeed = opts.speed || 1.4;
+    if(!opts.noRotate){
+      viewer.autoRotate = true;
+      viewer.autoRotateSpeed = opts.speed || 1.4;
+    }
     viewer.controls.enableZoom = false;
     viewer.controls.enablePan = false;
     setzeAnim(viewer, opts.anim || 'walk', opts.animSpeed || 0.8);
@@ -525,16 +557,27 @@ function render(){
   const podEl = document.getElementById('podium');
   if(list.length){
     podEl.innerHTML = list.slice(0,3).map((p,i)=>
-      '<div class="pod'+(i===0?' gold':'')+'" data-name="'+encodeURIComponent(p.name)+'">'+
+      '<div class="pod'+(i===0?' gold':'')+'" data-name="'+encodeURIComponent(p.name)+'" style="animation-delay:'+(i*0.09)+'s">'+
       '<span class="rank">#'+(i+1)+'</span>'+
+      (VIPS.includes(p.name)?vplusHtml:'')+
       '<div class="podskin" data-name="'+encodeURIComponent(p.name)+'"></div>'+
       '<div class="name">'+p.name+'</div>'+
       '<div class="val">'+(i===0?'Platz 1':fmtW(p.stats.playtime_h,1)+' Spielzeit (h)')+'</div></div>'
     ).join('');
+    // Wunsch-Animationen pro Spieler: ZickZackBoss dreht in die andere Richtung,
+    // TheRealDmseife fliegt wie ein Superheld (Flugpose) ohne Rotation.
+    const special = {
+      'zickzackboss':   {speed:-1.2},
+      'therealdmseife': {anim:'fly', animSpeed:1.0, noRotate:true},
+    };
     podEl.querySelectorAll('.podskin').forEach((box,i)=>{
       const name = decodeURIComponent(box.dataset.name);
-      const anim = ['run','walk','idle'][i] || 'walk';
-      const viewer = baue3dSkin(box, name, 90, 118, {speed: 1.2, anim: anim, animSpeed: 0.9});
+      const sp = special[name.toLowerCase()] || {};
+      const anim = sp.anim || ['run','walk','idle'][i] || 'walk';
+      const viewer = baue3dSkin(box, name, 90, 118, {
+        speed: sp.speed !== undefined ? sp.speed : 1.2,
+        anim: anim, animSpeed: sp.animSpeed || 0.9, noRotate: !!sp.noRotate
+      });
       if(!viewer){
         box.innerHTML = '<img src="'+headUrl(name,192)+'" alt="'+name+'" style="width:90px;height:90px;image-rendering:pixelated;display:block;margin:0 auto 10px;box-shadow:0 0 0 2px var(--line2)" onerror="helmFallback(this,\''+encodeURIComponent(name)+'\',96)">';
       }
@@ -553,10 +596,10 @@ function render(){
     const st = p.stats;
     const isOnline = onlineListe.includes(p.name);
     const pct = (st.playtime_h/maxPt*100);
-    return '<div class="pcard'+(i<3?' top3':'')+(isOnline?' is-online':'')+'" onclick="openPlayer(\''+encodeURIComponent(p.name)+'\')">'+
+    return '<div class="pcard'+(i<3?' top3':'')+(isOnline?' is-online':'')+'" style="animation-delay:'+(Math.min(i*0.05,0.6)).toFixed(2)+'s" onclick="openPlayer(\''+encodeURIComponent(p.name)+'\')">'+
       '<span class="rank">#'+(i+1)+'</span>'+
       '<img class="head" src="'+headUrl(p.name,144)+'" alt="'+p.name+'" onerror="helmFallback(this,\''+encodeURIComponent(p.name)+'\',72)">'+
-      '<div class="pname"><span class="odot" title="Jetzt online"></span>'+p.name+'</div>'+
+      '<div class="pname"><span class="odot" title="Jetzt online"></span>'+p.name+(VIPS.includes(p.name)?vplusHtml:'')+'</div>'+
       '<div class="pbar"><span class="fill" data-w="'+pct.toFixed(1)+'%"></span></div>'+
       '<div class="pmeta"><span>'+fmtW(st.playtime_h,1)+' h</span><span>'+fmtW(st.distance_km,1)+' km</span></div></div>';
   }).join('');
@@ -590,8 +633,7 @@ function renderServer(){
   let html = '';
 
   html += '<div class="srv"><div class="slbl">Prozessor</div>'+
-    '<div class="sval">'+(srv?.cpu || 'Intel Core i5')+'</div>'+
-    '<div class="sdet">Vom Server gehostet zu Hause</div></div>';
+    '<div class="sval">'+(srv?.cpu || 'Intel Core i5')+'</div></div>';
 
   html += '<div class="srv"><div class="slbl">Arbeitsspeicher</div>'+
     '<div class="sval">'+(srv?.ram_gb ? fmtW(srv.ram_gb,1)+' GB' : '—')+'</div>'+
@@ -606,10 +648,6 @@ function renderServer(){
     '<div class="sval">'+(srv?.welt_alt_gb ? fmtW(srv.welt_alt_gb,1)+' GB' : '—')+'</div>'+
     '<div class="dbar"><span class="track"><span class="fill" data-w="'+(srv? (srv.welt_alt_gb||0)/maxW*100 :0).toFixed(1)+'%"></span></span></div>'+
     '<div class="sdet">Archiv der Kubek-Welt</div></div>';
-
-  html += '<div class="srv"><div class="slbl">Jetzt online</div>'+
-    '<div class="sval">'+(serverOnline===null ? '—' : serverOnline+(onlineMax!==null?' / '+onlineMax:''))+'</div>'+
-    '<div class="sdet">'+(onlineListe.length ? onlineListe.map(n=>'<b>'+n+'</b>').join(', ') : 'Live-Abfrage im Kopfbereich')+'</div></div>';
 
   grid.innerHTML = html;
   animiereBalken(grid);
@@ -657,7 +695,7 @@ function oeffneDash(name){
 
   document.getElementById('d_name').textContent = name;
   document.getElementById('d_rank').innerHTML =
-    'Platz <b>#'+rank+'</b> von '+liste.length+' Spielern';
+    'Platz <b>#'+rank+'</b> von '+liste.length+' Spielern'+(VIPS.includes(name)?' <span class="vplus" title="VIP">+</span>':'');
 
   const karten = [
     [st.playtime_h,'Stunden',1], [st.distance_km,'km gereist',1],
