@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-17 17:00 UTC",
+ "aktualisiert": "2026-11-17 17:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -9,7 +9,7 @@
     "deaths": 104,
     "mob_kills": 52176,
     "distance_km": 2324.1,
-    "mined": 178836,
+    "mined": 178830,
     "crafted": 158666,
     "distanz": {
      "fuss": 701.8,
@@ -86,19 +86,19 @@
     "playtime_h": 297.9,
     "deaths": 51,
     "mob_kills": 9215,
-    "distance_km": 1501.8,
-    "mined": 51390,
+    "distance_km": 1502.0,
+    "mined": 51392,
     "crafted": 37143,
     "distanz": {
-     "fuss": 356.7,
+     "fuss": 356.9,
      "elytra": 1088.7,
      "schwimmen": 54.9,
      "boot": 0.4,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 133754,
-    "damage_taken": 90295,
+    "jumps": 133892,
+    "damage_taken": 90311,
     "damage_dealt": 558144,
     "fish_caught": 0,
     "enchanted": 0,
@@ -127,7 +127,7 @@
      ],
      [
       "short grass",
-      2747
+      2749
      ]
     ],
     "top_crafted": [
@@ -1306,6 +1306,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-17 17:00 UTC"
+  "wann": "2026-11-17 17:30 UTC"
  }
 }
