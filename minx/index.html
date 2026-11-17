@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>minx – Vanilla Survival Server</title>
-<meta name="description" content="Der minx Minecraft-Server: Vanilla Survival, Community, Statistiken, Galerie und Schutzsysteme.">
+<meta name="description" content="Der minx Minecraft-Server: Vanilla Survival, Community, Spieler-Dashboards, Galerie und Schutzsysteme.">
 <style>
   :root{
     --bg:#0a0a0a; --panel:#141414; --panel2:#1c1c1c; --panel3:#242424;
@@ -68,26 +68,21 @@
   .sub{color:var(--dim);font-size:.94rem;margin-bottom:28px}
 
   /* ---------- Statistiken ---------- */
-  .tabs{display:flex;gap:0;margin-bottom:24px;border:2px solid var(--line2);width:max-content}
-  .tabs button{background:var(--panel);border:0;color:var(--dim);padding:10px 26px;cursor:pointer;
-    font-size:.88rem;text-transform:uppercase;letter-spacing:.08em;font-family:var(--mono)}
-  .tabs button+button{border-left:2px solid var(--line2)}
-  .tabs button.active{background:var(--white);color:#000;font-weight:700}
-  .tabs button:hover:not(.active){color:var(--white)}
-
   .podium{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:30px}
-  .pod{background:var(--panel);border:2px solid var(--line);padding:22px 14px 16px;text-align:center;position:relative;transition:transform .15s}
-  .pod:hover{transform:translateY(-3px);border-color:var(--white)}
+  .pod{background:var(--panel);border:2px solid var(--line);padding:22px 14px 16px;text-align:center;position:relative;
+    cursor:pointer;transition:transform .18s,box-shadow .18s,border-color .18s}
+  .pod:hover{transform:translateY(-4px);border-color:var(--white);box-shadow:6px 6px 0 rgba(255,255,255,.08)}
   .pod .rank{position:absolute;top:8px;left:10px;font-family:var(--mono);font-size:.8rem;color:var(--dimmer)}
   .pod.gold{border-color:var(--white);background:linear-gradient(180deg,#222,var(--panel))}
   .pod img{width:84px;height:84px;image-rendering:pixelated;display:block;margin:0 auto 10px;
-    box-shadow:0 0 0 2px var(--line2),4px 4px 0 rgba(255,255,255,.12)}
+    box-shadow:0 0 0 2px var(--line2),4px 4px 0 rgba(255,255,255,.12);transition:transform .18s}
+  .pod:hover img{transform:scale(1.06) rotate(-2deg)}
   .pod .name{font-weight:700;color:var(--white);word-break:break-word}
   .pod .val{font-family:var(--mono);color:var(--dim);font-size:.82rem;margin-top:4px}
 
   .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:30px}
-  .card{background:var(--panel);border:1px solid var(--line);padding:16px;transition:border-color .15s}
-  .card:hover{border-color:var(--white)}
+  .card{background:var(--panel);border:1px solid var(--line);padding:16px;transition:border-color .15s,transform .15s}
+  .card:hover{border-color:var(--white);transform:translateY(-2px)}
   .card .num{font-family:var(--mono);font-size:1.45rem;color:var(--white)}
   .card .lbl{color:var(--dim);font-size:.78rem;margin-top:2px;text-transform:uppercase;letter-spacing:.06em}
 
@@ -100,11 +95,13 @@
   th .arrow{font-size:.7rem;margin-left:4px}
   td{border-top:1px solid var(--line)}
   tr.top td{color:var(--white);font-weight:600}
-  tr:hover td{background:var(--panel2)}
+  tbody tr{cursor:pointer;transition:background .12s}
+  tbody tr:hover td{background:var(--panel2)}
   td.num{font-family:var(--mono);text-align:right}
   td.playercell{display:flex;align-items:center;gap:10px}
   td.playercell img{width:26px;height:26px;image-rendering:pixelated;box-shadow:0 0 0 1px var(--line2)}
   .updated{color:var(--dimmer);font-size:.8rem;margin-top:14px;font-family:var(--mono)}
+  .hintline{color:var(--dimmer);font-size:.8rem;margin-top:8px;font-family:var(--mono)}
 
   /* ---------- Galerie ---------- */
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
@@ -145,7 +142,63 @@
 
   footer{padding:36px 0;color:var(--dimmer);font-size:.85rem;text-align:center;font-family:var(--mono)}
   footer a{color:var(--dim)}
-  @media(max-width:640px){nav{display:none}.ac{height:190px}}
+
+  /* ---------- Spieler-Dashboard ---------- */
+  .overlay{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.82);backdrop-filter:blur(3px);
+    overflow-y:auto;opacity:0;pointer-events:none;transition:opacity .22s}
+  .overlay.open{opacity:1;pointer-events:auto}
+  .dash{max-width:760px;margin:34px auto;padding:26px 24px 30px;background:var(--bg);
+    background-image:repeating-linear-gradient(0deg,transparent 0 23px,rgba(255,255,255,.02) 23px 24px),
+      repeating-linear-gradient(90deg,transparent 0 23px,rgba(255,255,255,.02) 23px 24px);
+    border:2px solid var(--line2);box-shadow:10px 10px 0 rgba(255,255,255,.07);
+    transform:translateY(24px) scale(.98);transition:transform .28s cubic-bezier(.2,.9,.3,1.2)}
+  .overlay.open .dash{transform:translateY(0) scale(1)}
+  .dashclose{position:absolute;top:10px;right:12px;background:var(--panel);color:var(--text);
+    border:2px solid var(--line2);width:38px;height:38px;font-size:1rem;cursor:pointer;font-family:var(--mono)}
+  .dashclose:hover{background:var(--white);color:#000;border-color:var(--white)}
+  .dashkopf{display:flex;align-items:center;gap:16px;border-bottom:2px solid var(--line);padding-bottom:16px;margin-bottom:18px;position:relative}
+  .dashkopf .headwrap{position:relative;flex:none}
+  .dashkopf img{width:64px;height:64px;image-rendering:pixelated;box-shadow:0 0 0 2px var(--line2),4px 4px 0 rgba(255,255,255,.15);
+    animation:bob 3.2s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+  .d_name{font-family:var(--mono);font-size:1.5rem;font-weight:800;color:var(--white);letter-spacing:.04em;word-break:break-word}
+  .d_rank{color:var(--dim);font-family:var(--mono);font-size:.85rem;margin-top:4px}
+  .d_rank b{color:var(--white)}
+  .d_view{position:absolute;bottom:16px;right:0;font-family:var(--mono);font-size:.78rem;color:var(--dimmer);
+    letter-spacing:.1em;text-transform:uppercase}
+  .d_stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:22px}
+  .d_stats .card{padding:12px}
+  .d_stats .num{font-size:1.2rem}
+  .d_sect{font-family:var(--mono);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);
+    margin:20px 0 10px}
+  .d_sect::before{content:"▚ ";color:var(--line2)}
+  .dbar{display:flex;align-items:center;gap:10px;margin-bottom:7px;font-size:.88rem}
+  .dbar .lbl{width:96px;flex:none;color:var(--dim);font-size:.82rem;text-transform:capitalize}
+  .dbar .track{flex:1;height:14px;background:var(--panel2);border:1px solid var(--line);position:relative;overflow:hidden}
+  .dbar .fill{position:absolute;inset:0;width:0;background:repeating-linear-gradient(90deg,var(--white) 0 6px,var(--panel3) 6px 8px);
+    transition:width .8s cubic-bezier(.2,.8,.3,1)}
+  .dbar:hover .fill{background:repeating-linear-gradient(90deg,var(--white) 0 6px,var(--panel2) 6px 8px)}
+  .dbar .val{font-family:var(--mono);font-size:.8rem;color:var(--dim);min-width:78px;text-align:right}
+  .facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+  .fact{background:var(--panel);border:1px solid var(--line);padding:7px 12px;font-size:.84rem;color:var(--dim);
+    font-family:var(--mono);transition:border-color .15s,transform .15s;cursor:default}
+  .fact:hover{border-color:var(--white);color:var(--white);transform:translateY(-2px)}
+  .fact .ico{filter:grayscale(1);margin-right:6px}
+  .d_body{display:flex;gap:18px;align-items:flex-start;margin-bottom:20px}
+  .d_body img{width:110px;image-rendering:pixelated;box-shadow:0 0 0 2px var(--line2),5px 5px 0 rgba(255,255,255,.1);
+    flex:none;image-rendering:pixelated}
+  .d_body .bodyfacts{flex:1;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
+
+  @media(max-width:640px){
+    nav{display:none}
+    .ac{height:190px}
+    .dash{margin:14px;padding:20px 14px 24px}
+    .dbar .lbl{width:80px;font-size:.76rem}
+    .dbar .val{min-width:64px}
+    .d_body{flex-direction:column;align-items:center}
+    .d_body img{width:90px}
+    .dashkopf{flex-wrap:wrap}
+  }
 </style>
 </head>
 <body>
@@ -179,11 +232,7 @@
 <section id="statistiken">
   <div class="wrap">
     <h2>Statistiken</h2>
-    <p class="sub">Wer baut, gräbt und kämpft am meisten – aktuelle und alte Welt. Klicke auf eine Spalte zum Sortieren.</p>
-    <div class="tabs">
-      <button class="active" data-welt="aktuell">Aktuelle Welt</button>
-      <button data-welt="alte-welt">Alte Welt</button>
-    </div>
+    <p class="sub">Wer baut, gräbt und kämpft am meisten – alle Spieler, alle Welten in einem Profil. Klicke auf eine Spalte zum Sortieren, auf einen Spieler für das persönliche Dashboard.</p>
     <div class="podium" id="podium"></div>
     <div class="cards" id="cards"></div>
     <div class="tablewrap">
@@ -192,6 +241,7 @@
         <tbody id="koerper"></tbody>
       </table>
     </div>
+    <div class="hintline">// Klick auf einen Spieler öffnet sein Dashboard – auch per Link teilbar.</div>
     <div class="updated" id="updated"></div>
   </div>
 </section>
@@ -240,15 +290,43 @@
   </div>
 </footer>
 
+<!-- Spieler-Dashboard -->
+<div class="overlay" id="overlay">
+  <div class="dash" role="dialog" aria-modal="true">
+    <button class="dashclose" onclick="closeDash()" aria-label="Schließen">✕</button>
+    <div class="dashkopf">
+      <div class="headwrap"><img id="d_head" alt=""></div>
+      <div>
+        <div class="d_name" id="d_name"></div>
+        <div class="d_rank" id="d_rank"></div>
+      </div>
+      <div class="d_view">Spieler-Dashboard</div>
+    </div>
+    <div class="d_stats" id="d_stats"></div>
+    <div class="d_body" id="d_bodywrap">
+      <img id="d_body" alt="Skin">
+      <div class="bodyfacts" id="d_facts2"></div>
+    </div>
+    <div class="d_sect">Reise-Distanz</div>
+    <div id="d_dist"></div>
+    <div class="d_sect">Lieblingsblöcke</div>
+    <div id="d_blocks"></div>
+    <div class="d_sect">Meistgebraute Items</div>
+    <div id="d_items"></div>
+    <div class="d_sect">Fakten</div>
+    <div class="facts" id="d_facts"></div>
+  </div>
+</div>
+
 <script>
 const SPALTEN = [
   {key:'name',        label:'Spieler',  num:false},
-  {key:'playtime_h',  label:'Spielzeit (h)', num:true},
+  {key:'playtime_h',  label:'Spielzeit (h)', num:true, dec:1},
   {key:'mined',       label:'Blöcke abgebaut', num:true},
   {key:'crafted',     label:'Gecraftet', num:true},
   {key:'mob_kills',   label:'Mobs besiegt', num:true},
   {key:'deaths',      label:'Tode', num:true},
-  {key:'distance_km', label:'Distanz (km)', num:true},
+  {key:'distance_km', label:'Distanz (km)', num:true, dec:1},
 ];
 const SCHUTZ = [
   {ico:'🏃', titel:'Bewegung', back:'Bewegungsmuster werden laufend analysiert. Unmögliche Sprünge, Geschwindigkeiten und Kampf-Abläufe fallen sofort auf.'},
@@ -258,11 +336,17 @@ const SCHUTZ = [
   {ico:'💬', titel:'Chat', back:'Beleidigungen, Spam und Werbe-Nachrichten werden automatisch herausgefiltert.'},
   {ico:'⏳', titel:'Zeitmaschine', back:'Spieleraktionen lassen sich nachvollziehen – und bei Bedarf rückgängig machen.'},
 ];
-let daten = null, welt = 'aktuell', sortKey = 'playtime_h', aufwaerts = false;
+const DIST_KAT = {fuss:'Zu Fuß', elytra:'Elytra', schwimmen:'Schwimmen', boot:'Boot',
+  minecart:'Minecart', pferd:'Pferd & Co.', kreativ:'Kreativ-Flug'};
+let daten = null, sortKey = 'playtime_h', aufwaerts = false;
 
 function fmt(n){ return n.toLocaleString('de-DE'); }
+function fmtW(n, dec){ return dec ? n.toLocaleString('de-DE',{minimumFractionDigits:1,maximumFractionDigits:1}) : fmt(n); }
 function skin(name, px){
   return 'https://mc-heads.net/avatar/' + encodeURIComponent(name) + '/' + px;
+}
+function bodySkin(name){
+  return 'https://mc-heads.net/body/' + encodeURIComponent(name) + '/110';
 }
 function fallbackImg(img){
   img.onerror = null;
@@ -273,6 +357,26 @@ function fallbackImg(img){
     '<rect x="16" y="20" width="10" height="10" fill="#0a0a0a"/>'+
     '<rect x="38" y="20" width="10" height="10" fill="#0a0a0a"/>'+
     '<rect x="24" y="40" width="16" height="6" fill="#0a0a0a"/></svg>');
+}
+
+// Zahl-Zähler-Animation
+function countUp(el, ziel, dec){
+  const dur = 650, t0 = performance.now();
+  function schritt(t){
+    const p = Math.min(1,(t-t0)/dur), e = p*(2-p);
+    el.textContent = fmtW(dec ? ziel*e : Math.round(ziel*e), dec);
+    if(p<1) requestAnimationFrame(schritt);
+  }
+  requestAnimationFrame(schritt);
+}
+
+// Balken animieren (nach dem Einfügen)
+function animiereBalken(root){
+  root.querySelectorAll('.fill').forEach(f=>{
+    const w = f.dataset.w || '0%';
+    f.style.width = '0%';
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{ f.style.width = w; }));
+  });
 }
 
 async function laden(){
@@ -286,6 +390,7 @@ async function laden(){
   tabellenKopf();
   render();
   statusHolen();
+  route(); // Hash evtl. Dashboard öffnen
 }
 
 function tabellenKopf(){
@@ -300,28 +405,35 @@ function tabellenKopf(){
   });
 }
 
-function render(){
-  const list = (daten?.welten?.[welt]||[]).slice();
+function sortierteListe(){
+  const list = (daten?.spieler||[]).slice();
   const s = SPALTEN.find(x=>x.key===sortKey);
   list.sort((a,b)=>{
     const va = s.key==='name' ? a.name : a.stats[s.key];
     const vb = s.key==='name' ? b.name : b.stats[s.key];
     return (aufwaerts ? (va>vb?1:-1) : (va<vb?1:-1));
   });
+  return list;
+}
+
+function render(){
+  const list = sortierteListe();
+  const s = SPALTEN.find(x=>x.key===sortKey);
 
   // Podium: Top 3 mit Skins
   const podEl = document.getElementById('podium');
   if(list.length){
     const pod = list.slice(0,3).map((p,i)=>{
       const v = s.key==='name' ? p.name : p.stats[s.key];
-      const wert = s.key==='name' ? '' : fmt(v) + ' ' + SPALTEN.find(x=>x.key===sortKey).label;
-      return '<div class="pod'+(i===0?' gold':'')+'"><span class="rank">#'+(i+1)+'</span>'+
+      const wert = s.key==='name' ? '' : fmtW(v, s.dec) + ' ' + s.label;
+      return '<div class="pod'+(i===0?' gold':'')+'" onclick="openPlayer(\''+encodeURIComponent(p.name)+'\')">'+
+        '<span class="rank">#'+(i+1)+'</span>'+
         '<img src="'+skin(p.name,84)+'" alt="'+p.name+'" onerror="fallbackImg(this)">'+
         '<div class="name">'+p.name+'</div><div class="val">'+(wert||'Platz '+(i+1))+'</div></div>';
     }).join('');
     podEl.innerHTML = pod;
   }else{
-    podEl.innerHTML = '<div class="empty">Keine Daten für diese Welt.</div>';
+    podEl.innerHTML = '<div class="empty">Keine Daten geladen.</div>';
   }
 
   // Tabelle
@@ -331,28 +443,130 @@ function render(){
       if(c.key==='name'){
         return '<td><span class="playercell"><img src="'+skin(p.name,26)+'" alt="" onerror="fallbackImg(this)">'+p.name+'</span></td>';
       }
-      return '<td class="num">'+fmt(p.stats[c.key])+'</td>';
+      return '<td class="num">'+fmtW(p.stats[c.key], c.dec)+'</td>';
     }).join('');
-    return '<tr'+(i<3?' class="top"':'')+'>'+zellen+'</tr>';
+    return '<tr'+(i<3?' class="top"':'')+' onclick="openPlayer(\''+encodeURIComponent(p.name)+'\')">'+zellen+'</tr>';
   }).join('');
   document.getElementById('updated').textContent =
     '// Stand: ' + (daten?.aktualisiert || 'unbekannt');
 
-  // Summen-Karten
-  const sum = {spieler:list.length, playtime_h:0, mined:0, crafted:0, mob_kills:0, deaths:0};
+  // Summen-Karten mit Zähler-Animation
+  const sum = {spieler:list.length, playtime_h:0, mined:0, crafted:0, mob_kills:0, deaths:0, distance_km:0};
   list.forEach(p=>{ sum.playtime_h+=p.stats.playtime_h; sum.mined+=p.stats.mined;
-    sum.crafted+=p.stats.crafted; sum.mob_kills+=p.stats.mob_kills; sum.deaths+=p.stats.deaths; });
+    sum.crafted+=p.stats.crafted; sum.mob_kills+=p.stats.mob_kills; sum.deaths+=p.stats.deaths;
+    sum.distance_km+=p.stats.distance_km; });
   const cards = [
-    [fmt(sum.spieler),'Spieler'],
-    [fmt(Math.round(sum.playtime_h)),'Stunden gespielt'],
-    [fmt(sum.mined),'Blöcke abgebaut'],
-    [fmt(sum.crafted),'Items gecraftet'],
-    [fmt(sum.mob_kills),'Mobs besiegt'],
-    [fmt(sum.deaths),'Tode'],
+    [sum.spieler,'Spieler',0],
+    [Math.round(sum.playtime_h),'Stunden gespielt',0],
+    [sum.mined,'Blöcke abgebaut',0],
+    [sum.crafted,'Items gecraftet',0],
+    [sum.mob_kills,'Mobs besiegt',0],
+    [sum.deaths,'Tode',0],
+    [Math.round(sum.distance_km),'km gereist',0],
   ];
-  document.getElementById('cards').innerHTML =
-    cards.map(c=>'<div class="card"><div class="num">'+c[0]+'</div><div class="lbl">'+c[1]+'</div></div>').join('');
+  const cardsEl = document.getElementById('cards');
+  cardsEl.innerHTML = cards.map(c=>
+    '<div class="card"><div class="num">0</div><div class="lbl">'+c[1]+'</div></div>').join('');
+  cardsEl.querySelectorAll('.card .num').forEach((el,i)=>countUp(el, cards[i][0], cards[i][2]));
 }
+
+/* ================= Spieler-Dashboard ================= */
+
+function openPlayer(encName){
+  location.hash = 'spieler/' + encName;
+}
+function closeDash(){
+  if(location.hash.startsWith('#spieler/')) history.pushState('', document.title, location.pathname + location.search);
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function oeffneDash(name){
+  const p = (daten?.spieler||[]).find(x=>x.name===name);
+  if(!p) return;
+  const st = p.stats;
+  const liste = (daten.spieler||[]).slice().sort((a,b)=>b.stats.playtime_h-a.stats.playtime_h);
+  const rank = liste.findIndex(x=>x.name===name)+1;
+
+  const head = document.getElementById('d_head');
+  head.onerror = ()=>fallbackImg(head);
+  head.src = skin(name,64); head.alt = name;
+  const body = document.getElementById('d_body');
+  body.onerror = ()=>{ body.onerror=null; body.src = skin(name,110); };
+  body.src = bodySkin(name);
+
+  document.getElementById('d_name').textContent = name;
+  document.getElementById('d_rank').innerHTML =
+    'Platz <b>#'+rank+'</b> von '+liste.length+' Spielern';
+
+  // Stat-Karten mit Zähler
+  const karten = [
+    [st.playtime_h,'Stunden',1], [st.mined,'Blöcke',0], [st.crafted,'Gecraftet',0],
+    [st.mob_kills,'Mobs besiegt',0], [st.deaths,'Tode',0], [st.distance_km,'km gereist',1],
+    [st.jumps||0,'Sprünge',0], [st.damage_taken||0,'Schaden erlitten',0],
+  ];
+  const statsEl = document.getElementById('d_stats');
+  statsEl.innerHTML = karten.map(k=>
+    '<div class="card"><div class="num">0</div><div class="lbl">'+k[1]+'</div></div>').join('');
+  statsEl.querySelectorAll('.card .num').forEach((el,i)=>countUp(el, karten[i][0], karten[i][2]));
+
+  // Mini-Fakten neben dem Skin
+  const kd = st.deaths>0 ? (st.mob_kills/st.deaths) : st.mob_kills;
+  const mini = [
+    ['⚔️','K/D', kd>=1000 ? fmt(Math.round(kd)) : fmtW(kd,1)],
+    ['🧭','Ø km / 10 h', fmtW(st.playtime_h>0 ? st.distance_km/st.playtime_h*10 : 0,1)],
+    ['☠️','Tode / 10 h', fmtW(st.playtime_h>0 ? st.deaths/st.playtime_h*10 : 0,1)],
+    ['⛏️','Blöcke / h', fmt(Math.round(st.playtime_h>0 ? st.mined/st.playtime_h : 0))],
+  ];
+  const f2 = document.getElementById('d_facts2');
+  f2.innerHTML = mini.map(m=>
+    '<div class="card"><div class="num">'+m[2]+'</div><div class="lbl">'+m[0]+' '+m[1]+'</div></div>').join('');
+
+  // Distanz-Balken
+  const maxD = Math.max(1, ...Object.values(st.distanz||{}));
+  const dist = Object.entries(st.distanz||{}).sort((a,b)=>b[1]-a[1]);
+  document.getElementById('d_dist').innerHTML = dist.map(([k,v])=>
+    '<div class="dbar"><span class="lbl">'+(DIST_KAT[k]||k)+'</span>'+
+    '<span class="track"><span class="fill" data-w="'+(v/maxD*100).toFixed(1)+'%"></span></span>'+
+    '<span class="val">'+fmtW(v,1)+' km</span></div>').join('') ||
+    '<div class="empty">Keine Reisedaten.</div>';
+
+  // Balken-Renderer für Top-Listen
+  function balken(elId, datensatz, einheit){
+    const el = document.getElementById(elId);
+    const max = Math.max(1, ...datensatz.map(d=>d[1]));
+    el.innerHTML = datensatz.length ? datensatz.map(d=>
+      '<div class="dbar"><span class="lbl">'+d[0]+'</span>'+
+      '<span class="track"><span class="fill" data-w="'+(d[1]/max*100).toFixed(1)+'%"></span></span>'+
+      '<span class="val">'+fmt(d[1])+(einheit?' '+einheit:'')+'</span></div>').join('')
+      : '<div class="empty">Keine Daten.</div>';
+  }
+  balken('d_blocks', st.top_mined||[], '');
+  balken('d_items', st.top_crafted||[], '');
+
+  // Fakten-Chips
+  const fakten = [];
+  if(st.top_mined?.length) fakten.push(['⛏️','Lieblingsblock: '+st.top_mined[0][0]+' ('+fmt(st.top_mined[0][1])+')']);
+  if(st.top_crafted?.length) fakten.push(['🛠️','Meistgebraut: '+st.top_crafted[0][0]+' ('+fmt(st.top_crafted[0][1])+')']);
+  if(st.trades>0) fakten.push(['🤝',fmt(st.trades)+'mal mit Dorfbewohnern gehandelt']);
+  if(st.fish_caught>0) fakten.push(['🐟',fmt(st.fish_caught)+' Fische gefangen']);
+  if(st.enchanted>0) fakten.push(['✨',fmt(st.enchanted)+' Items verzaubert']);
+  if(st.drops>0) fakten.push(['🎒',fmt(st.drops)+' Items fallen gelassen']);
+  fakten.push(['🛡️','Schaden verursacht: '+fmt(st.damage_dealt||0)]);
+  const faktenEl = document.getElementById('d_facts');
+  faktenEl.innerHTML = fakten.map(f=>
+    '<span class="fact"><span class="ico">'+f[0]+'</span>'+f[1]+'</span>').join('');
+
+  animiereBalken(document.getElementById('d_dist'));
+  animiereBalken(document.getElementById('d_blocks'));
+  animiereBalken(document.getElementById('d_items'));
+
+  overlay = document.getElementById('overlay');
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+/* ================= Galerie / Schutz / Status ================= */
 
 function zeigeGalerie(manifest){
   const el = document.getElementById('galerie');
@@ -404,14 +618,24 @@ function copyIp(btn){
   });
 }
 
-document.querySelectorAll('.tabs button').forEach(b=>{
-  b.onclick = ()=>{
-    document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));
-    b.classList.add('active');
-    welt = b.dataset.welt;
-    tabellenKopf(); render();
-  };
-});
+/* ================= Routing ================= */
+let overlay = document.getElementById('overlay');
+overlay.addEventListener('click', e=>{ if(e.target===overlay) closeDash(); });
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeDash(); });
+
+function route(){
+  const m = location.hash.match(/^#spieler\/(.+)$/);
+  if(m){
+    const name = decodeURIComponent(m[1]);
+    if(daten) oeffneDash(name);
+  }else if(overlay.classList.contains('open')){
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+window.addEventListener('hashchange', route);
+// Browser-Zurück: Overlay schließen
+window.addEventListener('popstate', ()=>{ if(overlay.classList.contains('open')) closeDash(); });
 
 baueSchutz();
 laden();

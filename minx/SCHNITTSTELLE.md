@@ -7,7 +7,7 @@ Spielerelemente und Statistiken des Minx-Servers sollen automatisiert, aber kont
 ## Datenquelle
 
 - Aktuelle Welt: `/opt/minecraft/server/world/stats/<uuid>.json` (Statistiken), `advancements/`, `playerdata/`
-- Alte Welt: Der Server lief bis zum Wechsel unter einer anderen Welt (`world.kubek`). Bobs Spieler und seine Statistiken existierten dort schon. Diese alten Daten werden separat exportiert und als historische Daten geführt, damit die Leistungen aus der alten Welt nicht verloren gehen.
+- Alte Welt: Der Server lief bis zum Wechsel unter einer anderen Welt (`world.kubek`). Bobs Spieler und seine Statistiken existierten dort schon. **Beide Welten werden pro Spieler zusammengeführt** – jeder Spieler hat ein einziges, gemeinsames Profil (Summe beider Welten).
 
 ## Ablauf (Export-Pipeline)
 
