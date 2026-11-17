@@ -1,31 +1,30 @@
 {
- "aktualisiert": "2026-11-17 12:21 UTC",
+ "aktualisiert": "2026-11-17 14:34 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 315.3,
+    "playtime_h": 315.5,
     "deaths": 104,
     "mob_kills": 52132,
-    "distance_km": 2554.8,
-    "mined": 178793,
+    "distance_km": 2307.5,
+    "mined": 178794,
     "crafted": 158366,
     "distanz": {
-     "fuss": 698.6,
-     "elytra": 1573.0,
-     "schwimmen": 20.0,
+     "fuss": 698.9,
+     "elytra": 1575.2,
+     "schwimmen": 20.1,
      "boot": 11.7,
      "minecart": 1.1,
-     "pferd": 0.5,
-     "kreativ": 249.8
+     "pferd": 0.5
     },
-    "jumps": 179648,
-    "damage_taken": 241519,
-    "damage_dealt": 922813,
+    "jumps": 179783,
+    "damage_taken": 241740,
+    "damage_dealt": 923103,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 7481,
+    "drops": 7485,
     "trades": 0,
     "top_mined": [
      [
@@ -84,23 +83,22 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 296.6,
+    "playtime_h": 296.7,
     "deaths": 51,
     "mob_kills": 9159,
-    "distance_km": 2220.8,
+    "distance_km": 1483.5,
     "mined": 51275,
     "crafted": 37140,
     "distanz": {
-     "fuss": 354.4,
-     "elytra": 1072.2,
+     "fuss": 354.5,
+     "elytra": 1072.8,
      "schwimmen": 54.5,
      "boot": 0.4,
      "minecart": 1.2,
-     "pferd": 0.0,
-     "kreativ": 738.1
+     "pferd": 0.0
     },
-    "jumps": 132596,
-    "damage_taken": 88870,
+    "jumps": 132629,
+    "damage_taken": 88967,
     "damage_dealt": 553775,
     "fish_caught": 0,
     "enchanted": 0,
@@ -163,27 +161,26 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 86.4,
+    "playtime_h": 86.5,
     "deaths": 20,
-    "mob_kills": 15058,
-    "distance_km": 948.8,
-    "mined": 29551,
+    "mob_kills": 15269,
+    "distance_km": 869.2,
+    "mined": 29552,
     "crafted": 110365,
     "distanz": {
-     "fuss": 217.4,
-     "elytra": 642.7,
+     "fuss": 217.8,
+     "elytra": 644.6,
      "schwimmen": 3.6,
      "boot": 2.0,
      "minecart": 1.2,
-     "pferd": 0.0,
-     "kreativ": 81.9
+     "pferd": 0.0
     },
-    "jumps": 50594,
-    "damage_taken": 75917,
-    "damage_dealt": 380206,
+    "jumps": 50646,
+    "damage_taken": 76014,
+    "damage_dealt": 381136,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1984,
+    "drops": 1993,
     "trades": 0,
     "top_mined": [
      [
@@ -242,39 +239,38 @@
   {
    "name": "1carlito",
    "stats": {
-    "playtime_h": 81.3,
+    "playtime_h": 82.2,
     "deaths": 119,
     "mob_kills": 147,
-    "distance_km": 168.9,
-    "mined": 15871,
-    "crafted": 54954,
+    "distance_km": 170.1,
+    "mined": 16049,
+    "crafted": 55041,
     "distanz": {
-     "fuss": 81.7,
-     "elytra": 81.0,
-     "schwimmen": 3.4,
+     "fuss": 82.6,
+     "elytra": 82.4,
+     "schwimmen": 3.7,
      "boot": 0.3,
-     "minecart": 1.1,
-     "kreativ": 1.5
+     "minecart": 1.1
     },
-    "jumps": 14613,
-    "damage_taken": 55825,
-    "damage_dealt": 16769,
+    "jumps": 14739,
+    "damage_taken": 56155,
+    "damage_dealt": 16809,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1229,
+    "drops": 1290,
     "trades": 0,
     "top_mined": [
      [
       "deepslate",
-      5614
+      5682
      ],
      [
       "tuff",
-      1115
+      1124
      ],
      [
       "cobbled deepslate",
-      822
+      876
      ],
      [
       "stone",
@@ -312,7 +308,7 @@
      ],
      [
       "stick",
-      1097
+      1101
      ]
     ]
    }
@@ -323,15 +319,14 @@
     "playtime_h": 51.6,
     "deaths": 30,
     "mob_kills": 3873,
-    "distance_km": 624.7,
+    "distance_km": 363.6,
     "mined": 23449,
     "crafted": 22244,
     "distanz": {
      "fuss": 137.6,
      "elytra": 222.2,
      "schwimmen": 1.6,
-     "boot": 2.2,
-     "kreativ": 261.1
+     "boot": 2.2
     },
     "jumps": 30522,
     "damage_taken": 65178,
@@ -400,7 +395,7 @@
     "playtime_h": 39.8,
     "deaths": 11,
     "mob_kills": 5221,
-    "distance_km": 864.4,
+    "distance_km": 816.3,
     "mined": 25374,
     "crafted": 47579,
     "distanz": {
@@ -408,8 +403,7 @@
      "elytra": 707.4,
      "schwimmen": 2.9,
      "boot": 0.5,
-     "pferd": 1.3,
-     "kreativ": 48.0
+     "pferd": 1.3
     },
     "jumps": 28675,
     "damage_taken": 66731,
@@ -478,7 +472,7 @@
     "playtime_h": 32.1,
     "deaths": 38,
     "mob_kills": 2907,
-    "distance_km": 475.3,
+    "distance_km": 437.3,
     "mined": 26628,
     "crafted": 5383,
     "distanz": {
@@ -486,8 +480,7 @@
      "elytra": 337.2,
      "schwimmen": 1.2,
      "boot": 1.2,
-     "pferd": 1.6,
-     "kreativ": 38.0
+     "pferd": 1.6
     },
     "jumps": 21560,
     "damage_taken": 39346,
@@ -556,7 +549,7 @@
     "playtime_h": 20.1,
     "deaths": 5,
     "mob_kills": 3184,
-    "distance_km": 343.0,
+    "distance_km": 331.4,
     "mined": 17534,
     "crafted": 3355,
     "distanz": {
@@ -564,8 +557,7 @@
      "elytra": 258.0,
      "schwimmen": 0.3,
      "minecart": 1.1,
-     "pferd": 0.0,
-     "kreativ": 11.7
+     "pferd": 0.0
     },
     "jumps": 9698,
     "damage_taken": 12864,
@@ -634,7 +626,7 @@
     "playtime_h": 18.7,
     "deaths": 12,
     "mob_kills": 145,
-    "distance_km": 173.7,
+    "distance_km": 168.5,
     "mined": 4848,
     "crafted": 1772,
     "distanz": {
@@ -642,8 +634,7 @@
      "elytra": 89.8,
      "schwimmen": 0.8,
      "boot": 3.1,
-     "minecart": 5.1,
-     "kreativ": 5.3
+     "minecart": 5.1
     },
     "jumps": 7386,
     "damage_taken": 11496,
@@ -712,14 +703,13 @@
     "playtime_h": 12.6,
     "deaths": 3,
     "mob_kills": 475,
-    "distance_km": 184.2,
+    "distance_km": 172.0,
     "mined": 6785,
     "crafted": 6116,
     "distanz": {
      "fuss": 67.6,
      "elytra": 103.3,
-     "schwimmen": 1.1,
-     "kreativ": 12.2
+     "schwimmen": 1.1
     },
     "jumps": 8399,
     "damage_taken": 9546,
@@ -788,7 +778,7 @@
     "playtime_h": 11.5,
     "deaths": 20,
     "mob_kills": 218,
-    "distance_km": 91.6,
+    "distance_km": 91.0,
     "mined": 3089,
     "crafted": 2768,
     "distanz": {
@@ -796,8 +786,7 @@
      "elytra": 58.1,
      "schwimmen": 0.0,
      "boot": 0.1,
-     "minecart": 0.5,
-     "kreativ": 0.6
+     "minecart": 0.5
     },
     "jumps": 4655,
     "damage_taken": 13824,
@@ -866,13 +855,12 @@
     "playtime_h": 8.0,
     "deaths": 0,
     "mob_kills": 28,
-    "distance_km": 40.4,
+    "distance_km": 33.9,
     "mined": 2404,
     "crafted": 1154,
     "distanz": {
      "fuss": 33.5,
-     "schwimmen": 0.4,
-     "kreativ": 6.5
+     "schwimmen": 0.4
     },
     "jumps": 7184,
     "damage_taken": 1586,
@@ -941,15 +929,14 @@
     "playtime_h": 4.6,
     "deaths": 134,
     "mob_kills": 294,
-    "distance_km": 36.5,
+    "distance_km": 23.5,
     "mined": 634,
     "crafted": 535,
     "distanz": {
      "fuss": 13.6,
      "elytra": 8.3,
      "schwimmen": 1.3,
-     "boot": 0.3,
-     "kreativ": 12.9
+     "boot": 0.3
     },
     "jumps": 6453,
     "damage_taken": 35486,
@@ -1018,15 +1005,14 @@
     "playtime_h": 4.2,
     "deaths": 3,
     "mob_kills": 27,
-    "distance_km": 26.4,
+    "distance_km": 18.7,
     "mined": 304,
     "crafted": 267,
     "distanz": {
      "fuss": 10.6,
      "elytra": 7.9,
      "schwimmen": 0.0,
-     "minecart": 0.2,
-     "kreativ": 7.7
+     "minecart": 0.2
     },
     "jumps": 4582,
     "damage_taken": 5105,
@@ -1095,13 +1081,12 @@
     "playtime_h": 1.8,
     "deaths": 17,
     "mob_kills": 3,
-    "distance_km": 6.4,
+    "distance_km": 4.1,
     "mined": 648,
     "crafted": 30,
     "distanz": {
      "fuss": 4.0,
-     "schwimmen": 0.1,
-     "kreativ": 2.4
+     "schwimmen": 0.1
     },
     "jumps": 1426,
     "damage_taken": 5097,
@@ -1170,7 +1155,7 @@
     "playtime_h": 1.0,
     "deaths": 0,
     "mob_kills": 36,
-    "distance_km": 13.5,
+    "distance_km": 11.2,
     "mined": 73,
     "crafted": 120,
     "distanz": {
@@ -1178,8 +1163,7 @@
      "elytra": 8.5,
      "schwimmen": 0.0,
      "minecart": 0.2,
-     "pferd": 0.0,
-     "kreativ": 2.3
+     "pferd": 0.0
     },
     "jumps": 1527,
     "damage_taken": 1085,
@@ -1248,13 +1232,12 @@
     "playtime_h": 0.8,
     "deaths": 20,
     "mob_kills": 1,
-    "distance_km": 3.4,
+    "distance_km": 0.8,
     "mined": 88,
     "crafted": 84,
     "distanz": {
      "fuss": 0.8,
-     "schwimmen": 0.0,
-     "kreativ": 2.5
+     "schwimmen": 0.0
     },
     "jumps": 840,
     "damage_taken": 5642,
