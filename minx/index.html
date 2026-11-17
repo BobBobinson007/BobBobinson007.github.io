@@ -172,6 +172,8 @@
   }
 
   /* ---------- Beitreten (Einrichtungs-Guide) ---------- */
+  #beitreten{display:none}
+  #beitreten.open{display:block}
   .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
   .step{position:relative;background:var(--panel);border:2px solid var(--line);padding:20px 16px 18px;
     cursor:pointer;transition:border-color .15s,transform .18s}
@@ -313,7 +315,7 @@
   <div class="wrap">
     <div class="logo">MINX<span>_</span></div>
     <nav>
-      <a href="#beitreten">Beitreten</a>
+      <a href="#beitreten" id="navBeitreten">Beitreten</a>
       <a href="#statistiken">Statistiken</a>
       <a href="#schutz">Schutz</a>
       <a href="#regeln">Regeln</a>
@@ -814,8 +816,8 @@ function baueSchritte(){
      text:'Schreib deinen Minecraft-Namen im Discord in den Whitelist-Kanal. Erst mit Eintrag kannst du auf den Server.'},
     {id:'version', titel:'Version 26.2',
      text:'Installiere Minecraft 26.2 – Vanilla Survival, es werden keine Mods benötigt.'},
-    {id:'client', titel:'Luna Client',
-     text:'Empfohlen: Luna Client. Damit läuft der Server besonders flüssig.'},
+    {id:'client', titel:'Lunar Client',
+     text:'Empfohlen: Lunar Client. Damit läuft der Server besonders flüssig.'},
     {id:'ip', titel:'Server beitreten',
      text:'IP in Minecraft eintragen, verbinden, fertig.',
      btn:{label:'IP kopieren', copy:true}},
@@ -931,7 +933,17 @@ function copyIp(btn){
     if(!btn.dataset.label){ btn.dataset.label = btn.textContent; }
     btn.textContent = 'Kopiert ✓';
     setTimeout(()=>btn.textContent = btn.dataset.label || 'Kopieren', 1500);
+    // Beitreten-Guide erscheint automatisch nach dem Kopieren
+    oeffneBeitreten();
   });
+}
+
+function oeffneBeitreten(){
+  const sec = document.getElementById('beitreten');
+  if(sec.classList.contains('open')) return;
+  sec.classList.add('open');
+  baueSchritte();   // Entrance-Animation mit Stagger neu starten
+  setTimeout(()=>sec.scrollIntoView({behavior:'smooth', block:'start'}), 150);
 }
 
 /* ================= Routing ================= */
@@ -954,8 +966,16 @@ window.addEventListener('popstate', ()=>{ if(overlay.classList.contains('open'))
 window.addEventListener('skin3dready', ()=>{ if(daten) render(); });
 
 baueSchutz();
-baueSchritte();
 laden();
+
+// Beitreten per Nav-Link auch ohne Kopieren öffnen
+(function(){
+  const nav = document.getElementById('navBeitreten');
+  if(!nav) return;
+  nav.addEventListener('click', ()=>{
+    oeffneBeitreten();
+  });
+})();
 </script>
 </body>
 </html>

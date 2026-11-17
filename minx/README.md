@@ -4,9 +4,10 @@ Interaktive Server-Seite: https://bobbobinson007.github.io/minx/
 
 Inhalt:
 
-- **Beitreten** – Einrichtungs-Guide in 5 Schritten (abhakbar): Discord
-  beitreten, Whitelist beantragen, Version 26.2 (keine Mods nötig),
-  Luna Client empfohlen, IP eingeben.
+- **Beitreten** – Einrichtungs-Guide in 5 Schritten (abhakbar): **versteckt bis**
+  neben der IP auf „Kopieren“ gedrückt wird – dann erscheint er automatisch und
+  scrollt hin (auch über den Nav-Link erreichbar). Discord beitreten, Whitelist
+  beantragen, Version 26.2 (keine Mods nötig), **Lunar Client** empfohlen, IP eingeben.
 - **Statistiken** – Spielerstatistiken aus aktueller und alter Welt,
   automatisch pro Spieler zusammengeführt. Jeder Spieler bekommt automatisch
   ein persönliches Dashboard: Skin, Kennzahlen, Distanz-Aufschlüsselung,

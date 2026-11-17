@@ -70,18 +70,22 @@ Der Exporter hängt jedem Export einen `server`-Block an:
 
 ## Beitreten-Sektion
 
+- **Versteckt bis kopiert:** Die Sektion ist anfangs ausgeblendet. Drückt man
+  neben der IP auf „Kopieren“, erscheint sie automatisch (mit Stagger-Animation)
+  und scrollt smooth hin. Der Nav-Link „Beitreten“ öffnet sie ebenfalls.
 - Fünf abhakbare Schritte (Checklist, Stand in `localStorage`):
   1. Discord beitreten – Link: `https://discord.com/channels/1570554700611461230/1570557411352387645`
   2. Whitelist beantragen (Name im Discord angeben)
   3. Minecraft-Version **26.2**, keine Mods nötig (Vanilla Survival)
-  4. **Luna Client** empfohlen
+  4. **Lunar Client** empfohlen
   5. IP eingeben (Kopier-Button)
 
 ## Sonstiges
 
 - Kein `//`-Kommentar-Stil mehr im sichtbaren Text (früher `// Stand:` etc.).
 - Kopieren-Buttons bestätigen mit `Kopiert ✓` und kehren zum ursprünglichen
-  Label zurück.
+  Label zurück. Der Kopier-Klick neben der IP öffnet zusätzlich automatisch die
+  Beitreten-Sektion.
 - Flug-Animation (skinview3d `FlyingAnimation`) bleibt fast senkrecht und
   leicht nach rechts geneigt statt komplett wagerecht (Wrapper in
   `setzeAnim`).
