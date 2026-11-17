@@ -48,6 +48,8 @@ Der Exporter hängt jedem Export einen `server`-Block an:
 
 - `welt_aktuell_gb` / `welt_alt_gb` werden bei **jedem Export frisch per
   `du -sb`** gemessen (aktuell nur diese beiden Werte werden live abgefragt).
+  Auf der Seite wird **nur die aktuelle Welt** angezeigt – die alte Welt-Größe
+  wird nicht mehr gezeigt (Export liefert sie weiterhin mit).
 - `cpu`/`ram_gb` sind statische Host-Angaben.
 - Der Export läuft per Cron alle 30 Minuten und pusht automatisch.
 
@@ -61,6 +63,27 @@ Der Exporter hängt jedem Export einen `server`-Block an:
   vzge (3D-Iso) → mc-heads → minotar helm → SVG-Platzhalter.
 - Animationen: Podium = Laufen/Gehen/Idle gemischt; Dashboard = umschaltbar
   (Idle/Gehen/Laufen-Buttons).
-- Online-Liste steht zentriert unter der IP-Box (kein Hover mehr); Punkte am
-  Spieler-Board markieren verbundene Spieler. Quelle: `api.mcsrvstat.us`
+- Online-Badge **ganz oben im Header** (sticky): Zähler + Hover-Dropdown
+  mit den Namen der verbundenen Spieler. Die Wer-Liste steht zusätzlich
+  zentriert unter der IP-Box. Quelle: `api.mcsrvstat.us`
   (Fallback: `api.mcstatus.io`), live per Server-List-Ping.
+
+## Beitreten-Sektion
+
+- Fünf abhakbare Schritte (Checklist, Stand in `localStorage`):
+  1. Discord beitreten – Link: `https://discord.com/channels/1570554700611461230/1570557411352387645`
+  2. Whitelist beantragen (Name im Discord angeben)
+  3. Minecraft-Version **26.2**, keine Mods nötig (Vanilla Survival)
+  4. **Luna Client** empfohlen
+  5. IP eingeben (Kopier-Button)
+
+## Sonstiges
+
+- Kein `//`-Kommentar-Stil mehr im sichtbaren Text (früher `// Stand:` etc.).
+- Kopieren-Buttons bestätigen mit `Kopiert ✓` und kehren zum ursprünglichen
+  Label zurück.
+- Flug-Animation (skinview3d `FlyingAnimation`) bleibt fast senkrecht und
+  leicht nach rechts geneigt statt komplett wagerecht (Wrapper in
+  `setzeAnim`).
+
+## Skin-Darstellung

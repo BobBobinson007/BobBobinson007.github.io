@@ -38,6 +38,21 @@
   nav{display:flex;gap:26px}
   nav a{color:var(--dim);font-size:.9rem;text-transform:uppercase;letter-spacing:.08em;border-bottom:2px solid transparent;padding:4px 0}
   nav a:hover{color:var(--white);border-bottom-color:var(--white)}
+  .hdrstatus{position:relative;display:flex;align-items:center;gap:8px;font-family:var(--mono);
+    font-size:.76rem;color:var(--dim);border:1px solid var(--line);background:var(--panel);
+    padding:6px 12px;cursor:default;user-select:none;white-space:nowrap}
+  .hdrstatus .dot{width:9px;height:9px;background:#555;flex:none}
+  .hdrstatus.online{border-color:var(--line2)}
+  .hdrstatus.online .dot{background:var(--white);box-shadow:0 0 8px rgba(255,255,255,.8);animation:pulse 1.6s infinite}
+  .hdrwho{display:none;position:absolute;top:calc(100% + 8px);right:0;flex-direction:column;gap:6px;
+    background:var(--panel);border:2px solid var(--line2);padding:10px;min-width:200px;
+    box-shadow:6px 6px 0 rgba(255,255,255,.06);z-index:60}
+  .hdrstatus:hover .hdrwho{display:flex}
+  .hdrwho .chip,.who .chip{background:var(--panel2);border:1px solid var(--line2);padding:5px 12px;
+    font-size:.84rem;color:var(--text);font-family:var(--mono);display:inline-flex;align-items:center;gap:8px}
+  .hdrwho .chip i,.who .chip i{width:7px;height:7px;background:var(--white);box-shadow:0 0 6px rgba(255,255,255,.85);
+    animation:pulse 1.6s infinite;flex:none}
+  .hdrwho .leer,.who .leer{color:var(--dimmer);font-size:.85rem;font-family:var(--mono)}
 
   /* ---------- Hero mit Hintergrundbild ---------- */
   .hero{padding:96px 0 60px;text-align:center;border-bottom:2px solid var(--line);position:relative;overflow:hidden}
@@ -69,11 +84,6 @@
   @keyframes pulse{50%{opacity:.35}}
   .who{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:12px;max-width:520px;
     margin-left:auto;margin-right:auto}
-  .who .chip{background:var(--panel);border:1px solid var(--line2);padding:5px 12px;font-size:.84rem;
-    color:var(--text);font-family:var(--mono);display:inline-flex;align-items:center;gap:8px}
-  .who .chip i{width:7px;height:7px;background:var(--white);box-shadow:0 0 6px rgba(255,255,255,.85);
-    animation:pulse 1.6s infinite;flex:none}
-  .who .leer{color:var(--dimmer);font-size:.85rem;font-family:var(--mono)}
 
   /* ---------- Bild-Filmstreifen ---------- */
   .strip{border-bottom:2px solid var(--line);padding:0;overflow:hidden}
@@ -161,6 +171,27 @@
     .pcard:hover{transform:none}
   }
 
+  /* ---------- Beitreten (Einrichtungs-Guide) ---------- */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+  .step{position:relative;background:var(--panel);border:2px solid var(--line);padding:20px 16px 18px;
+    cursor:pointer;transition:border-color .15s,transform .18s}
+  .step:hover{border-color:var(--white);transform:translateY(-3px)}
+  .step .snr{position:absolute;top:8px;left:10px;font-family:var(--mono);font-size:.8rem;color:var(--dimmer)}
+  .step .check{position:absolute;top:8px;right:10px;width:22px;height:22px;border:1px solid var(--line2);
+    font-family:var(--mono);font-size:.85rem;display:flex;align-items:center;justify-content:center;
+    color:transparent;background:var(--panel2);transition:all .2s;user-select:none}
+  .step:hover .check{border-color:var(--white);color:var(--dim)}
+  .step.fertig .check{color:#000;background:var(--white);border-color:var(--white);box-shadow:0 0 12px rgba(255,255,255,.5)}
+  .step .stitel{font-family:var(--mono);font-weight:700;font-size:.95rem;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--white);margin:4px 0 8px;padding-right:28px;word-break:break-word;
+    transition:color .2s}
+  .step.fertig .stitel{text-decoration:line-through;color:var(--dim)}
+  .step .stext{color:var(--dim);font-size:.85rem}
+  .step .sbtn{display:inline-block;margin-top:12px;background:var(--white);color:#000;border:0;
+    padding:8px 14px;font-weight:700;cursor:pointer;font-size:.78rem;text-transform:uppercase;
+    letter-spacing:.08em;font-family:var(--mono);text-decoration:none;border-bottom:0}
+  .step .sbtn:hover{background:var(--dim)}
+
   /* ---------- Schutz (minimal) ---------- */
   .slist{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px}
   .srow{display:flex;align-items:baseline;gap:12px;background:var(--panel);border:1px solid var(--line);padding:10px 14px}
@@ -241,6 +272,7 @@
 
   @media(max-width:640px){
     nav{display:none}
+    .hdrwho{display:none!important}
     .hero{padding:64px 0 44px}
     .ipbox{flex-direction:column;gap:10px;padding:14px;width:100%;max-width:320px}
     .ipbox button{width:100%}
@@ -281,11 +313,16 @@
   <div class="wrap">
     <div class="logo">MINX<span>_</span></div>
     <nav>
+      <a href="#beitreten">Beitreten</a>
       <a href="#statistiken">Statistiken</a>
       <a href="#schutz">Schutz</a>
       <a href="#regeln">Regeln</a>
       <a href="#server">Server</a>
     </nav>
+    <div class="hdrstatus" id="hdrstatus" style="display:none">
+      <span class="dot"></span><span id="hdrcount">–</span>
+      <div class="hdrwho" id="hdrwho"></div>
+    </div>
   </div>
 </header>
 
@@ -309,6 +346,14 @@
 
 <div class="strip" id="strip"></div>
 
+<section id="beitreten">
+  <div class="wrap">
+    <h2>Beitreten</h2>
+    <p class="sub">In fünf Schritten auf dem Server. Klick auf einen Schritt, um ihn abzuhaken – der Stand wird gespeichert.</p>
+    <div class="steps" id="steps"></div>
+  </div>
+</section>
+
 <section id="statistiken">
   <div class="wrap">
     <h2>Statistiken</h2>
@@ -325,7 +370,6 @@
     <h2>Schutzsysteme</h2>
     <p class="sub">Was im Hintergrund läuft – bewusst knapp gehalten.</p>
     <div class="slist" id="slist"></div>
-    <p class="acnote">// Details bewusst unveröffentlicht – Cheater sollen nicht wissen, woran sie hängen.</p>
   </div>
 </section>
 
@@ -470,8 +514,21 @@ const ANIMS = [
 function setzeAnim(viewer, key, speed){
   const a = ANIMS.find(x=>x.key===key) || ANIMS[1];
   try{
-    viewer.animation = a.klasse();
-    if(viewer.animation.speed !== undefined){ viewer.animation.speed = speed || 0.8; }
+    if(a.key === 'fly'){
+      // Weniger wagerecht als der Standard-Flug: Figur bleibt fast senkrecht,
+      // leicht nach rechts geneigt.
+      const flug = new skinview3d.FlyingAnimation();
+      const orig = flug.animate.bind(flug);
+      flug.animate = player => {
+        orig(player);
+        player.rotation.x = player.rotation.x * 0.3 - 0.1;
+        player.rotation.z = -0.5;
+      };
+      viewer.animation = flug;
+    }else{
+      viewer.animation = a.klasse();
+      if(viewer.animation.speed !== undefined){ viewer.animation.speed = speed || 0.8; }
+    }
   }catch(e){}
 }
 
@@ -605,7 +662,7 @@ function render(){
   }).join('');
   animiereBalken(board);
   document.getElementById('updated').textContent =
-    '// Stand: ' + (daten?.aktualisiert || 'unbekannt') + (onlineListe.length ? ' · ' + onlineListe.length + ' online' : '');
+    'Stand: ' + (daten?.aktualisiert || 'unbekannt') + (onlineListe.length ? ' · ' + onlineListe.length + ' online' : '');
 
   // Summen-Karten (schlank, 4 Stück)
   const sum = {playtime_h:0, mined:0, distance_km:0};
@@ -644,15 +701,10 @@ function renderServer(){
     '<div class="dbar"><span class="track"><span class="fill" data-w="'+(srv? (srv.welt_aktuell_gb||0)/maxW*100 :0).toFixed(1)+'%"></span></span></div>'+
     '<div class="sdet">Wird bei jedem Daten-Export frisch gemessen</div></div>';
 
-  html += '<div class="srv"><div class="slbl">Weltgröße – alte Welt</div>'+
-    '<div class="sval">'+(srv?.welt_alt_gb ? fmtW(srv.welt_alt_gb,1)+' GB' : '—')+'</div>'+
-    '<div class="dbar"><span class="track"><span class="fill" data-w="'+(srv? (srv.welt_alt_gb||0)/maxW*100 :0).toFixed(1)+'%"></span></span></div>'+
-    '<div class="sdet">Archiv der Kubek-Welt</div></div>';
-
   grid.innerHTML = html;
   animiereBalken(grid);
   document.getElementById('srvupdated').textContent =
-    '// Weltgröße vom ' + (srv?.wann || daten?.aktualisiert || 'unbekannt');
+    'Weltgröße vom ' + (srv?.wann || daten?.aktualisiert || 'unbekannt');
 }
 
 /* ================= Spieler-Dashboard ================= */
@@ -748,6 +800,49 @@ function oeffneDash(name){
   document.body.style.overflow = 'hidden';
 }
 
+/* ================= Beitreten (Einrichtungs-Guide) ================= */
+
+const DISCORD_URL = 'https://discord.com/channels/1570554700611461230/1570557411352387645';
+
+function baueSchritte(){
+  const el = document.getElementById('steps');
+  const schritte = [
+    {id:'discord', titel:'Discord beitreten',
+     text:'Tritt unserem Discord bei – dort läuft die Organisation und die Whitelist.',
+     btn:{label:'Discord öffnen', href:DISCORD_URL, ext:true}},
+    {id:'whitelist', titel:'Whitelist',
+     text:'Schreib deinen Minecraft-Namen im Discord in den Whitelist-Kanal. Erst mit Eintrag kannst du auf den Server.'},
+    {id:'version', titel:'Version 26.2',
+     text:'Installiere Minecraft 26.2 – Vanilla Survival, es werden keine Mods benötigt.'},
+    {id:'client', titel:'Luna Client',
+     text:'Empfohlen: Luna Client. Damit läuft der Server besonders flüssig.'},
+    {id:'ip', titel:'Server beitreten',
+     text:'IP in Minecraft eintragen, verbinden, fertig.',
+     btn:{label:'IP kopieren', copy:true}},
+  ];
+  let fertig = [];
+  try{ fertig = JSON.parse(localStorage.getItem('minx_steps') || '[]'); }catch(e){}
+  el.innerHTML = schritte.map((s,i)=>
+    '<div class="step'+(fertig.includes(s.id)?' fertig':'')+'" data-id="'+s.id+'" style="animation-delay:'+(i*0.08)+'s">'+
+    '<span class="snr">'+String(i+1).padStart(2,'0')+'</span>'+
+    '<span class="check">✓</span>'+
+    '<div class="stitel">'+s.titel+'</div>'+
+    '<div class="stext">'+s.text+'</div>'+
+    (s.btn ? (s.btn.copy
+      ? '<button class="sbtn" onclick="event.stopPropagation();copyIp(this)">IP kopieren</button>'
+      : '<a class="sbtn" href="'+s.btn.href+'" target="_blank" rel="noopener" onclick="event.stopPropagation()">'+s.btn.label+'</a>')
+    : '')+
+    '</div>'
+  ).join('');
+  el.querySelectorAll('.step').forEach(step=>{
+    step.addEventListener('click', ()=>{
+      step.classList.toggle('fertig');
+      const set = [...el.querySelectorAll('.step.fertig')].map(x=>x.dataset.id);
+      try{ localStorage.setItem('minx_steps', JSON.stringify(set)); }catch(e){}
+    });
+  });
+}
+
 /* ================= Schutz (minimal) ================= */
 
 function baueSchutz(){
@@ -807,6 +902,20 @@ async function statusHolen(){
 }
 
 function zeigeWerOnline(){
+  // Badge ganz oben im Header (Hover: wer online ist) ...
+  const hdr = document.getElementById('hdrstatus');
+  if(serverOnline === null){ hdr.style.display = 'none'; }
+  else{
+    hdr.style.display = 'flex';
+    hdr.classList.add('online');
+    document.getElementById('hdrcount').textContent =
+      serverOnline!==null ? serverOnline+' / '+onlineMax+' online' : 'online';
+    const hw = document.getElementById('hdrwho');
+    hw.innerHTML = onlineListe.length
+      ? onlineListe.map(n=>'<span class="chip"><i></i>'+n+'</span>').join('')
+      : '<span class="leer">Gerade niemand online</span>';
+  }
+  // ... plus Wer-Liste in der Hero-Box
   const el = document.getElementById('who');
   if(serverOnline === null){ el.style.display = 'none'; return; }
   el.style.display = 'flex';
@@ -819,8 +928,9 @@ function zeigeWerOnline(){
 
 function copyIp(btn){
   navigator.clipboard.writeText('minxserver.duckdns.org').then(()=>{
-    btn.textContent = 'Kopiert';
-    setTimeout(()=>btn.textContent='Kopieren', 1500);
+    if(!btn.dataset.label){ btn.dataset.label = btn.textContent; }
+    btn.textContent = 'Kopiert ✓';
+    setTimeout(()=>btn.textContent = btn.dataset.label || 'Kopieren', 1500);
   });
 }
 
@@ -844,6 +954,7 @@ window.addEventListener('popstate', ()=>{ if(overlay.classList.contains('open'))
 window.addEventListener('skin3dready', ()=>{ if(daten) render(); });
 
 baueSchutz();
+baueSchritte();
 laden();
 </script>
 </body>

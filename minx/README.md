@@ -1,9 +1,12 @@
 # minx – Vanilla Survival Server
 
-Interaktive Server-Seite: https://bobbobinson007.github.io/minx-page/
+Interaktive Server-Seite: https://bobbobinson007.github.io/minx/
 
 Inhalt:
 
+- **Beitreten** – Einrichtungs-Guide in 5 Schritten (abhakbar): Discord
+  beitreten, Whitelist beantragen, Version 26.2 (keine Mods nötig),
+  Luna Client empfohlen, IP eingeben.
 - **Statistiken** – Spielerstatistiken aus aktueller und alter Welt,
   automatisch pro Spieler zusammengeführt. Jeder Spieler bekommt automatisch
   ein persönliches Dashboard: Skin, Kennzahlen, Distanz-Aufschlüsselung,
@@ -12,7 +15,7 @@ Inhalt:
   `daten/galerie.json` eintragen, sie erscheinen automatisch auf der Seite.
 - **Regeln** – die Serverregeln.
 - **Server-IP** – `minxserver.duckdns.org`, mit Live-Status (online/offline,
-  Spielerzahl).
+  Spielerzahl) und Online-Badge ganz oben im Header (Hover zeigt, wer online ist).
 
 ## Daten
 
