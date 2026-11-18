@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-18 20:30 UTC",
+ "aktualisiert": "2026-11-18 21:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 321.7,
+    "playtime_h": 322.3,
     "deaths": 104,
-    "mob_kills": 52384,
-    "distance_km": 2386.4,
-    "mined": 181192,
+    "mob_kills": 52416,
+    "distance_km": 2403.0,
+    "mined": 181352,
     "crafted": 159186,
     "distanz": {
-     "fuss": 713.7,
-     "elytra": 1638.7,
+     "fuss": 715.0,
+     "elytra": 1654.0,
      "schwimmen": 20.6,
      "boot": 11.7,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 187475,
-    "damage_taken": 251252,
-    "damage_dealt": 947568,
+    "jumps": 188016,
+    "damage_taken": 253775,
+    "damage_dealt": 955458,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 7740,
+    "drops": 7767,
     "trades": 0,
     "top_mined": [
      [
@@ -45,7 +45,7 @@
      ],
      [
       "dirt",
-      11188
+      11193
      ],
      [
       "magma block",
@@ -161,26 +161,26 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 97.3,
+    "playtime_h": 97.8,
     "deaths": 20,
-    "mob_kills": 16040,
-    "distance_km": 972.7,
-    "mined": 31802,
-    "crafted": 113042,
+    "mob_kills": 16078,
+    "distance_km": 986.9,
+    "mined": 31917,
+    "crafted": 113111,
     "distanz": {
-     "fuss": 241.9,
-     "elytra": 723.7,
+     "fuss": 243.4,
+     "elytra": 736.4,
      "schwimmen": 4.0,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 58284,
-    "damage_taken": 87847,
-    "damage_dealt": 457737,
+    "jumps": 58914,
+    "damage_taken": 88813,
+    "damage_dealt": 467195,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2331,
+    "drops": 2363,
     "trades": 0,
     "top_mined": [
      [
@@ -193,19 +193,19 @@
      ],
      [
       "stone",
-      3014
+      3018
      ],
      [
       "dirt",
-      1323
+      1330
      ],
      [
       "dark oak log",
-      1265
+      1280
      ],
      [
       "grass block",
-      1084
+      1087
      ]
     ],
     "top_crafted": [
@@ -219,7 +219,7 @@
      ],
      [
       "dark oak planks",
-      8515
+      8575
      ],
      [
       "firework rocket",
@@ -1379,8 +1379,8 @@
  "server": {
   "cpu": "Intel Core i5-8500T CPU @ 2.10GHz",
   "ram_gb": 9.7,
-  "welt_aktuell_gb": 5.1,
+  "welt_aktuell_gb": 5.4,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-18 20:30 UTC"
+  "wann": "2026-11-18 21:00 UTC"
  }
 }
