@@ -99,6 +99,27 @@
   .strip figcaption{color:var(--dim);font-size:.78rem;padding:8px 10px;border-top:1px solid var(--line);
     font-family:var(--mono);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
+  /* ---------- Bild-Lightbox ---------- */
+  .lightbox{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.94);backdrop-filter:blur(3px);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    opacity:0;pointer-events:none;transition:opacity .2s}
+  .lightbox.open{opacity:1;pointer-events:auto}
+  .lightbox .lbimg{max-width:94vw;max-height:76vh;object-fit:contain;border:2px solid var(--line2);
+    box-shadow:10px 10px 0 rgba(255,255,255,.07);user-select:none;-webkit-user-drag:none;
+    transition:transform .18s ease,opacity .18s ease}
+  .lightbox .lbcap{color:var(--dim);font-family:var(--mono);font-size:.85rem;margin-top:14px;
+    text-align:center;padding:0 16px}
+  .lightbox .lbcount{color:var(--dimmer);font-family:var(--mono);font-size:.75rem;margin-top:4px}
+  .lightbox .lbclose{position:fixed;top:12px;right:14px;width:42px;height:42px;background:var(--panel);
+    color:var(--text);border:2px solid var(--line2);font-size:1.1rem;cursor:pointer;font-family:var(--mono)}
+  .lightbox .lbclose:hover{background:var(--white);color:#000;border-color:var(--white)}
+  .lightbox .lbnav{position:fixed;top:50%;transform:translateY(-50%);width:46px;height:58px;background:var(--panel);
+    color:var(--text);border:2px solid var(--line2);font-size:1.4rem;cursor:pointer;font-family:var(--mono)}
+  .lightbox .lbnav:hover{background:var(--white);color:#000;border-color:var(--white)}
+  .lightbox .lbprev{left:10px}
+  .lightbox .lbnext{right:10px}
+  .strip figure{cursor:pointer}
+
   /* ---------- Sections ---------- */
   section{padding:56px 0;border-bottom:2px solid var(--line)}
   h2{font-family:var(--mono);font-size:1.5rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px;color:var(--white)}
@@ -309,6 +330,7 @@
     .pod canvas{width:64px;height:84px}
     .strip figure{width:220px}
     .strip img{height:120px}
+    .lightbox .lbnav{top:auto;bottom:18px;transform:none;width:56px}
     .srow{flex-wrap:wrap;gap:6px}
     .srow .stitel{min-width:0}
     .dash{margin:10px;padding:20px 14px 24px}
@@ -465,6 +487,16 @@ window.__DATEN__ = {"aktualisiert":"2026-11-18 12:00 UTC","hinweis":"Öffentlich
     <div id="joinbody"></div>
     <div class="joinnav" id="joinnav"></div>
   </div>
+</div>
+
+<!-- Bild-Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lbclose" onclick="closeLightbox()" aria-label="Schließen">✕</button>
+  <button class="lbnav lbprev" onclick="lbWechsel(-1)" aria-label="Zurück">‹</button>
+  <img class="lbimg" id="lbimg" alt="" draggable="false">
+  <button class="lbnav lbnext" onclick="lbWechsel(1)" aria-label="Weiter">›</button>
+  <div class="lbcap" id="lbcap"></div>
+  <div class="lbcount" id="lbcount"></div>
 </div>
 
 <script>
@@ -631,12 +663,71 @@ async function zeigeStreifen(){
     el.style.display = 'none';
     return;
   }
-  const fig = b=>
-    '<figure><img src="'+b.datei+'" alt="'+(b.titel||'')+'" loading="lazy" onerror="this.parentElement.style.display=\'none\'">'+
+  lbListe = bilder.map(b=>({src:b.datei, titel:b.titel||''}));
+  const fig = (b,i)=>
+    '<figure data-i="'+i+'" onclick="openLightbox('+i+')">'+
+    '<img src="'+b.datei+'" alt="'+(b.titel||'')+'" loading="lazy" onerror="this.parentElement.style.display=\'none\'">'+
     (b.titel?'<figcaption>'+b.titel+'</figcaption>':'')+'</figure>';
   // Doppelte Reihe -> nahtloser Endlos-Lauf
   el.innerHTML = '<div class="strip-track">'+bilder.map(fig).join('')+bilder.map(fig).join('')+'</div>';
 }
+
+/* ================= Bild-Lightbox ================= */
+
+let lbListe = [];       // Bilder des Filmstreifens {src, titel}
+let lbIndex = 0;
+let lbStartX = null;
+
+function openLightbox(i){
+  if(!lbListe.length) return;
+  lbIndex = ((i % lbListe.length) + lbListe.length) % lbListe.length;
+  lbZeigen();
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+  if(!overlay.classList.contains('open') && !joinov.classList.contains('open')){
+    document.body.style.overflow = '';
+  }
+}
+
+function lbZeigen(richtung){
+  const b = lbListe[lbIndex];
+  const img = document.getElementById('lbimg');
+  img.src = b.src;
+  img.alt = b.titel || '';
+  document.getElementById('lbcap').textContent = b.titel || '';
+  document.getElementById('lbcount').textContent = (lbIndex+1)+' / '+lbListe.length;
+  if(richtung){   // kurze Slide-Animation beim Blättern
+    img.style.transform = 'translateX('+(richtung*26)+'px)';
+    img.style.opacity = '0';
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      img.style.transform = 'translateX(0)';
+      img.style.opacity = '1';
+    }));
+  }
+}
+
+function lbWechsel(d){
+  lbIndex = ((lbIndex + d) % lbListe.length + lbListe.length) % lbListe.length;
+  lbZeigen(d);
+}
+
+(function(){
+  const lb = document.getElementById('lightbox');
+  // Klick neben dem Bild (auf den dunklen Hintergrund) schließt
+  lb.addEventListener('click', e=>{ if(e.target===lb) closeLightbox(); });
+  // Zur Seite wischen auf dem Handy
+  lb.addEventListener('touchstart', e=>{ lbStartX = e.touches[0].clientX; }, {passive:true});
+  lb.addEventListener('touchend', e=>{
+    if(lbStartX === null) return;
+    const dx = e.changedTouches[0].clientX - lbStartX;
+    if(Math.abs(dx) > 50) lbWechsel(dx < 0 ? 1 : -1);
+    lbStartX = null;
+  }, {passive:true});
+})();
 
 /* ================= Render ================= */
 
@@ -1043,7 +1134,14 @@ let overlay = document.getElementById('overlay');
 overlay.addEventListener('click', e=>{ if(e.target===overlay) closeDash(); });
 const joinov = document.getElementById('joinoverlay');
 joinov.addEventListener('click', e=>{ if(e.target===joinov) closeJoin(); });
-document.addEventListener('keydown', e=>{ if(e.key==='Escape'){ closeDash(); closeJoin(); } });
+document.addEventListener('keydown', e=>{
+  if(e.key==='Escape'){ closeDash(); closeJoin(); closeLightbox(); }
+  const lb = document.getElementById('lightbox');
+  if(lb.classList.contains('open')){
+    if(e.key==='ArrowLeft') lbWechsel(-1);
+    if(e.key==='ArrowRight') lbWechsel(1);
+  }
+});
 
 function route(){
   const m = location.hash.match(/^#spieler\/(.+)$/);
