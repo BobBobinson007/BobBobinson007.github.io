@@ -1,35 +1,35 @@
 {
- "aktualisiert": "2026-11-18 21:30 UTC",
+ "aktualisiert": "2026-11-18 22:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 322.6,
+    "playtime_h": 323.1,
     "deaths": 104,
-    "mob_kills": 52421,
-    "distance_km": 2410.3,
-    "mined": 181583,
-    "crafted": 159374,
+    "mob_kills": 52441,
+    "distance_km": 2418.2,
+    "mined": 181641,
+    "crafted": 159530,
     "distanz": {
-     "fuss": 715.8,
-     "elytra": 1660.4,
+     "fuss": 716.6,
+     "elytra": 1667.5,
      "schwimmen": 20.8,
      "boot": 11.7,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 188191,
-    "damage_taken": 254022,
-    "damage_dealt": 955958,
+    "jumps": 188378,
+    "damage_taken": 254877,
+    "damage_dealt": 956148,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 7788,
+    "drops": 7799,
     "trades": 0,
     "top_mined": [
      [
       "stone",
-      45504
+      45505
      ],
      [
       "sand",
@@ -45,7 +45,7 @@
      ],
      [
       "dirt",
-      11214
+      11225
      ],
      [
       "magma block",
@@ -1381,6 +1381,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.4,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-18 21:30 UTC"
+  "wann": "2026-11-18 22:00 UTC"
  }
 }
