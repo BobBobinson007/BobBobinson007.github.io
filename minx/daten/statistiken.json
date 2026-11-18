@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-18 12:30 UTC",
+ "aktualisiert": "2026-11-18 13:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -161,26 +161,26 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 90.1,
+    "playtime_h": 90.2,
     "deaths": 20,
-    "mob_kills": 15693,
-    "distance_km": 913.3,
+    "mob_kills": 15694,
+    "distance_km": 914.2,
     "mined": 30103,
-    "crafted": 111105,
+    "crafted": 112385,
     "distanz": {
-     "fuss": 230.4,
-     "elytra": 676.0,
+     "fuss": 230.7,
+     "elytra": 676.6,
      "schwimmen": 3.7,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 54569,
-    "damage_taken": 82227,
+    "jumps": 54665,
+    "damage_taken": 82231,
     "damage_dealt": 443047,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2158,
+    "drops": 2159,
     "trades": 0,
     "top_mined": [
      [
@@ -231,7 +231,7 @@
      ],
      [
       "gold ingot",
-      4534
+      5686
      ]
     ]
    }
@@ -1306,6 +1306,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-18 12:30 UTC"
+  "wann": "2026-11-18 13:00 UTC"
  }
 }
