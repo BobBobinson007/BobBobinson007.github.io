@@ -1,35 +1,35 @@
 {
- "aktualisiert": "2026-11-18 21:00 UTC",
+ "aktualisiert": "2026-11-18 21:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 322.3,
+    "playtime_h": 322.6,
     "deaths": 104,
-    "mob_kills": 52416,
-    "distance_km": 2403.0,
-    "mined": 181352,
-    "crafted": 159186,
+    "mob_kills": 52421,
+    "distance_km": 2410.3,
+    "mined": 181583,
+    "crafted": 159374,
     "distanz": {
-     "fuss": 715.0,
-     "elytra": 1654.0,
-     "schwimmen": 20.6,
+     "fuss": 715.8,
+     "elytra": 1660.4,
+     "schwimmen": 20.8,
      "boot": 11.7,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 188016,
-    "damage_taken": 253775,
-    "damage_dealt": 955458,
+    "jumps": 188191,
+    "damage_taken": 254022,
+    "damage_dealt": 955958,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 7767,
+    "drops": 7788,
     "trades": 0,
     "top_mined": [
      [
       "stone",
-      45458
+      45504
      ],
      [
       "sand",
@@ -45,7 +45,7 @@
      ],
      [
       "dirt",
-      11193
+      11214
      ],
      [
       "magma block",
@@ -161,26 +161,26 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 97.8,
+    "playtime_h": 98.1,
     "deaths": 20,
-    "mob_kills": 16078,
-    "distance_km": 986.9,
-    "mined": 31917,
-    "crafted": 113111,
+    "mob_kills": 16235,
+    "distance_km": 997.8,
+    "mined": 32522,
+    "crafted": 113114,
     "distanz": {
-     "fuss": 243.4,
-     "elytra": 736.4,
+     "fuss": 244.0,
+     "elytra": 746.6,
      "schwimmen": 4.0,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 58914,
-    "damage_taken": 88813,
-    "damage_dealt": 467195,
+    "jumps": 59016,
+    "damage_taken": 88891,
+    "damage_dealt": 467715,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2363,
+    "drops": 2390,
     "trades": 0,
     "top_mined": [
      [
@@ -189,15 +189,15 @@
      ],
      [
       "oak leaves",
-      3753
+      3754
      ],
      [
       "stone",
-      3018
+      3057
      ],
      [
       "dirt",
-      1330
+      1364
      ],
      [
       "dark oak log",
@@ -205,7 +205,7 @@
      ],
      [
       "grass block",
-      1087
+      1088
      ]
     ],
     "top_crafted": [
@@ -1381,6 +1381,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.4,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-18 21:00 UTC"
+  "wann": "2026-11-18 21:30 UTC"
  }
 }
