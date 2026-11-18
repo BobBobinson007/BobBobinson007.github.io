@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-18 22:00 UTC",
+ "aktualisiert": "2026-11-18 22:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 323.1,
+    "playtime_h": 323.2,
     "deaths": 104,
-    "mob_kills": 52441,
-    "distance_km": 2418.2,
-    "mined": 181641,
+    "mob_kills": 52467,
+    "distance_km": 2418.7,
+    "mined": 181642,
     "crafted": 159530,
     "distanz": {
-     "fuss": 716.6,
-     "elytra": 1667.5,
+     "fuss": 716.7,
+     "elytra": 1667.8,
      "schwimmen": 20.8,
      "boot": 11.7,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 188378,
-    "damage_taken": 254877,
-    "damage_dealt": 956148,
+    "jumps": 188394,
+    "damage_taken": 254929,
+    "damage_dealt": 956458,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 7799,
+    "drops": 7817,
     "trades": 0,
     "top_mined": [
      [
@@ -1374,6 +1374,35 @@
      ]
     ]
    }
+  },
+  {
+   "name": "TimotheToaster",
+   "stats": {
+    "playtime_h": 0.3,
+    "deaths": 0,
+    "mob_kills": 2,
+    "distance_km": 1.4,
+    "mined": 2,
+    "crafted": 0,
+    "distanz": {
+     "fuss": 1.4,
+     "schwimmen": 0.0
+    },
+    "jumps": 273,
+    "damage_taken": 276,
+    "damage_dealt": 360,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 0,
+    "trades": 0,
+    "top_mined": [
+     [
+      "grass block",
+      2
+     ]
+    ],
+    "top_crafted": []
+   }
   }
  ],
  "server": {
@@ -1381,6 +1410,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.4,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-18 22:00 UTC"
+  "wann": "2026-11-18 22:30 UTC"
  }
 }
