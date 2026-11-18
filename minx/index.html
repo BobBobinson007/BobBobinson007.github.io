@@ -86,12 +86,16 @@
     margin-left:auto;margin-right:auto}
 
   /* ---------- Bild-Filmstreifen ---------- */
-  .strip{border-bottom:2px solid var(--line);padding:0;overflow:hidden}
-  .strip-track{display:flex;gap:14px;width:max-content;padding:18px 0;
+  .strip{border-bottom:2px solid var(--line);padding:0;overflow:hidden;
+    touch-action:pan-y;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;cursor:grab}
+  .strip.dragging{cursor:grabbing}
+  .strip-drag{will-change:transform}
+  .strip-track{display:flex;width:max-content;padding:18px 0;
     animation:slide 46s linear infinite}
   .strip:hover .strip-track{animation-play-state:paused}
+  .strip.dragging .strip-track{animation-play-state:paused}
   @keyframes slide{to{transform:translateX(-50%)}}
-  .strip figure{flex:none;width:300px;border:2px solid var(--line);background:var(--panel)}
+  .strip figure{flex:none;width:300px;margin-right:14px;border:2px solid var(--line);background:var(--panel)}
   .strip figure:hover{border-color:var(--white)}
   .strip img{width:100%;height:170px;object-fit:cover;display:block;
     filter:grayscale(1) contrast(1.05);transition:filter .3s}
@@ -654,7 +658,7 @@ function sortierteListe(){
 
 /* ================= Bild-Filmstreifen ================= */
 
-async function zeigeStreifen(){
+  async function zeigeStreifen(){
   const el = document.getElementById('strip');
   let g = null;
   try{ const r = await fetch('daten/galerie.json'); if(r.ok) g = await r.json(); }catch(e){}
@@ -665,11 +669,96 @@ async function zeigeStreifen(){
   }
   lbListe = bilder.map(b=>({src:b.datei, titel:b.titel||''}));
   const fig = (b,i)=>
-    '<figure data-i="'+i+'" onclick="openLightbox('+i+')">'+
+    '<figure data-i="'+i+'">'+
     '<img src="'+b.datei+'" alt="'+(b.titel||'')+'" loading="lazy" onerror="this.parentElement.style.display=\'none\'">'+
     (b.titel?'<figcaption>'+b.titel+'</figcaption>':'')+'</figure>';
   // Doppelte Reihe -> nahtloser Endlos-Lauf
-  el.innerHTML = '<div class="strip-track">'+bilder.map(fig).join('')+bilder.map(fig).join('')+'</div>';
+  el.innerHTML = '<div class="strip-drag"><div class="strip-track">'+
+    bilder.map(fig).join('')+bilder.map(fig).join('')+'</div></div>';
+  initStripDrag(el);
+}
+
+/* ---- Filmstreifen per Hand ziehen (nahtlos) + Langdruck öffnet Bild ---- */
+
+const STRIP_DAUER = 46;   // Sekunden, muss zu @keyframes slide passen
+
+function trackOffset(track){
+  const t = getComputedStyle(track).transform;
+  if(t && t !== 'none'){
+    const m = t.match(/matrix\(([^)]+)\)/);
+    if(m) return parseFloat(m[1].split(',')[4]);
+  }
+  return 0;
+}
+
+function initStripDrag(el){
+  const wrap = el.querySelector('.strip-drag');
+  const track = el.querySelector('.strip-track');
+  const SCHWELLWEG = 10, LANGDRUCK = 450;
+  let startX = null, basis = 0, breite = 1, timer = null, ziel = null, uebernommen = false;
+
+  function timerStop(){ if(timer){ clearTimeout(timer); timer = null; } }
+
+  function dragEnde(){
+    if(startX === null) return;
+    timerStop();
+    startX = null; ziel = null;
+    if(uebernommen){
+      // Animation nahtlos an der aktuellen Stelle fortsetzen
+      const w = parseFloat((wrap.style.transform.match(/-?[\d.]+/)||[0])[0]);
+      let v = ((w % breite) + breite) % breite;    // [0, breite)
+      v = v ? v - breite : 0;                      // (-breite, 0]
+      const p = -v / breite;
+      track.style.animation = 'none';
+      void track.offsetWidth;
+      track.style.animationDelay = (-p*STRIP_DAUER)+'s';
+      track.style.animation = '';
+      wrap.style.transition = 'none';
+      wrap.style.transform = 'translateX(0)';
+      uebernommen = false;
+    }
+    el.classList.remove('dragging');
+  }
+
+  el.addEventListener('pointerdown', e=>{
+    if(startX !== null) return;
+    startX = e.clientX;
+    uebernommen = false;
+    basis = trackOffset(track);
+    breite = track.scrollWidth/2 || 1;
+    ziel = e.target.closest ? e.target.closest('figure') : null;
+    el.classList.add('dragging');
+    if(ziel){
+      timer = setTimeout(()=>{
+        timer = null;
+        openLightbox(+ziel.dataset.i);
+        dragEnde();
+      }, LANGDRUCK);
+    }
+  });
+
+  el.addEventListener('pointermove', e=>{
+    if(startX === null) return;
+    const deltaX = e.clientX - startX;
+    if(Math.abs(deltaX) > SCHWELLWEG) timerStop();   // Bewegung = kein Langdruck
+    if(!uebernommen){
+      if(deltaX === 0) return;
+      uebernommen = true;
+      track.style.animation = 'none';                // Auto-Lauf an JS übergeben
+      void track.offsetWidth;
+      wrap.style.transform = 'translateX('+basis+'px)';
+    }
+    let v = basis + deltaX;
+    v = ((v % breite) + breite) % breite;            // endlos wrappen
+    if(v) v -= breite;
+    wrap.style.transform = 'translateX('+v+'px)';
+  });
+
+  el.addEventListener('pointerup', dragEnde);
+  el.addEventListener('pointercancel', dragEnde);
+  el.addEventListener('pointerleave', ()=>{ if(startX!==null) dragEnde(); });
+  // Langdruck auf dem Handy soll nicht das Bild-Menü öffnen
+  el.addEventListener('contextmenu', e=> e.preventDefault());
 }
 
 /* ================= Bild-Lightbox ================= */
