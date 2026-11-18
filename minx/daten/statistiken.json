@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-18 16:30 UTC",
+ "aktualisiert": "2026-11-18 17:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -161,7 +161,7 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 93.3,
+    "playtime_h": 93.8,
     "deaths": 20,
     "mob_kills": 16002,
     "distance_km": 954.2,
@@ -546,20 +546,20 @@
   {
    "name": "Captifipo",
    "stats": {
-    "playtime_h": 21.5,
+    "playtime_h": 21.6,
     "deaths": 5,
     "mob_kills": 3233,
-    "distance_km": 360.1,
-    "mined": 17937,
-    "crafted": 3601,
+    "distance_km": 362.6,
+    "mined": 17976,
+    "crafted": 3627,
     "distanz": {
-     "fuss": 76.0,
-     "elytra": 281.7,
+     "fuss": 76.4,
+     "elytra": 283.9,
      "schwimmen": 0.3,
      "minecart": 2.1,
      "pferd": 0.0
     },
-    "jumps": 10417,
+    "jumps": 10468,
     "damage_taken": 13661,
     "damage_dealt": 52011,
     "fish_caught": 0,
@@ -614,8 +614,8 @@
       336
      ],
      [
-      "stone",
-      174
+      "quartz block",
+      182
      ]
     ]
    }
@@ -1381,6 +1381,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-18 16:30 UTC"
+  "wann": "2026-11-18 17:00 UTC"
  }
 }
