@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-18 13:30 UTC",
+ "aktualisiert": "2026-11-18 14:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 319.3,
+    "playtime_h": 319.8,
     "deaths": 104,
-    "mob_kills": 52362,
-    "distance_km": 2351.7,
-    "mined": 179379,
+    "mob_kills": 52374,
+    "distance_km": 2360.5,
+    "mined": 179397,
     "crafted": 158995,
     "distanz": {
-     "fuss": 707.7,
-     "elytra": 1610.4,
-     "schwimmen": 20.2,
+     "fuss": 709.1,
+     "elytra": 1617.8,
+     "schwimmen": 20.3,
      "boot": 11.7,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 184080,
-    "damage_taken": 246183,
-    "damage_dealt": 942563,
+    "jumps": 184976,
+    "damage_taken": 247733,
+    "damage_dealt": 944869,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 7627,
+    "drops": 7693,
     "trades": 0,
     "top_mined": [
      [
@@ -161,26 +161,26 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 90.7,
+    "playtime_h": 91.2,
     "deaths": 20,
-    "mob_kills": 15701,
-    "distance_km": 920.9,
-    "mined": 30110,
+    "mob_kills": 15706,
+    "distance_km": 930.5,
+    "mined": 30130,
     "crafted": 112385,
     "distanz": {
-     "fuss": 232.6,
-     "elytra": 681.4,
+     "fuss": 234.2,
+     "elytra": 689.4,
      "schwimmen": 3.8,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 55110,
-    "damage_taken": 82582,
-    "damage_dealt": 444246,
+    "jumps": 55728,
+    "damage_taken": 83261,
+    "damage_dealt": 445169,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2160,
+    "drops": 2175,
     "trades": 0,
     "top_mined": [
      [
@@ -700,22 +700,22 @@
   {
    "name": "Hagen13juhhuh",
    "stats": {
-    "playtime_h": 13.1,
-    "deaths": 25,
-    "mob_kills": 237,
-    "distance_km": 104.2,
-    "mined": 4063,
-    "crafted": 3535,
+    "playtime_h": 13.6,
+    "deaths": 27,
+    "mob_kills": 249,
+    "distance_km": 111.2,
+    "mined": 4336,
+    "crafted": 3678,
     "distanz": {
-     "fuss": 37.1,
-     "elytra": 66.4,
+     "fuss": 38.8,
+     "elytra": 71.8,
      "schwimmen": 0.0,
      "boot": 0.1,
      "minecart": 0.5
     },
-    "jumps": 5607,
-    "damage_taken": 16526,
-    "damage_dealt": 11473,
+    "jumps": 5881,
+    "damage_taken": 17365,
+    "damage_dealt": 13495,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 172,
@@ -723,27 +723,27 @@
     "top_mined": [
      [
       "grass block",
-      804
+      808
      ],
      [
       "stone",
       786
      ],
      [
+      "snow",
+      570
+     ],
+     [
       "dirt",
-      438
+      441
      ],
      [
       "oak log",
-      402
-     ],
-     [
-      "snow",
-      320
+      403
      ],
      [
       "short grass",
-      207
+      213
      ]
     ],
     "top_crafted": [
@@ -760,16 +760,16 @@
       176
      ],
      [
+      "snow block",
+      168
+     ],
+     [
       "stick",
-      124
+      132
      ],
      [
       "emerald",
       90
-     ],
-     [
-      "oak stairs",
-      64
      ]
     ]
    }
@@ -1303,25 +1303,76 @@
   {
    "name": "Manumel12",
    "stats": {
-    "playtime_h": 0.2,
-    "deaths": 0,
-    "mob_kills": 0,
-    "distance_km": 1.6,
-    "mined": 0,
-    "crafted": 0,
+    "playtime_h": 0.7,
+    "deaths": 1,
+    "mob_kills": 17,
+    "distance_km": 9.0,
+    "mined": 68,
+    "crafted": 22,
     "distanz": {
-     "fuss": 0.7,
-     "elytra": 0.9
+     "fuss": 2.3,
+     "elytra": 6.6,
+     "schwimmen": 0.0
     },
-    "jumps": 61,
-    "damage_taken": 12,
-    "damage_dealt": 70,
+    "jumps": 773,
+    "damage_taken": 1226,
+    "damage_dealt": 4364,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1,
+    "drops": 15,
     "trades": 0,
-    "top_mined": [],
-    "top_crafted": []
+    "top_mined": [
+     [
+      "deepslate diamond ore",
+      17
+     ],
+     [
+      "coal ore",
+      17
+     ],
+     [
+      "deepslate",
+      6
+     ],
+     [
+      "fire",
+      6
+     ],
+     [
+      "deepslate gold ore",
+      6
+     ],
+     [
+      "short grass",
+      5
+     ]
+    ],
+    "top_crafted": [
+     [
+      "birch planks",
+      12
+     ],
+     [
+      "stick",
+      4
+     ],
+     [
+      "bucket",
+      2
+     ],
+     [
+      "iron axe",
+      2
+     ],
+     [
+      "shield",
+      1
+     ],
+     [
+      "iron pickaxe",
+      1
+     ]
+    ]
    }
   }
  ],
@@ -1330,6 +1381,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-18 13:30 UTC"
+  "wann": "2026-11-18 14:00 UTC"
  }
 }
