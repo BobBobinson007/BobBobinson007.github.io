@@ -711,8 +711,10 @@ function initStripDrag(el){
       const p = -v / breite;
       track.style.animation = 'none';
       void track.offsetWidth;
-      track.style.animationDelay = (-p*STRIP_DAUER)+'s';
-      track.style.animation = '';
+      // Delay im Shorthand mitsetzen – style.animation = '' würde das
+      // lange adjacency-Flag animation-delay wieder löschen
+      track.style.animation =
+        'slide ' + STRIP_DAUER + 's linear ' + (-p*STRIP_DAUER) + 's infinite';
       wrap.style.transition = 'none';
       wrap.style.transform = 'translateX(0)';
       uebernommen = false;
