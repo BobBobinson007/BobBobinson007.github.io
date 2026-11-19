@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-19 16:53 UTC",
+ "aktualisiert": "2026-11-19 17:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -928,21 +928,22 @@
    "stats": {
     "playtime_h": 5.3,
     "deaths": 1,
-    "mob_kills": 58,
-    "distance_km": 42.1,
+    "mob_kills": 60,
+    "distance_km": 44.8,
     "mined": 101,
     "crafted": 2258,
     "distanz": {
-     "fuss": 9.9,
-     "elytra": 31.0,
-     "schwimmen": 1.2
+     "fuss": 10.2,
+     "elytra": 32.9,
+     "schwimmen": 1.2,
+     "minecart": 0.6
     },
-    "jumps": 2519,
-    "damage_taken": 3716,
-    "damage_dealt": 14412,
+    "jumps": 2554,
+    "damage_taken": 4003,
+    "damage_dealt": 14812,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 46,
+    "drops": 47,
     "trades": 0,
     "top_mined": [
      [
@@ -1453,18 +1454,18 @@
   {
    "name": "Reep811",
    "stats": {
-    "playtime_h": 0.2,
+    "playtime_h": 0.3,
     "deaths": 8,
-    "mob_kills": 2,
-    "distance_km": 0.9,
-    "mined": 22,
+    "mob_kills": 3,
+    "distance_km": 1.2,
+    "mined": 49,
     "crafted": 0,
     "distanz": {
-     "fuss": 0.9
+     "fuss": 1.2
     },
-    "jumps": 352,
-    "damage_taken": 2385,
-    "damage_dealt": 819,
+    "jumps": 560,
+    "damage_taken": 2535,
+    "damage_dealt": 1013,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 0,
@@ -1472,19 +1473,27 @@
     "top_mined": [
      [
       "dirt",
-      13
+      20
+     ],
+     [
+      "spruce log",
+      8
      ],
      [
       "grass block",
-      6
+      7
      ],
      [
-      "chorus plant",
+      "birch leaves",
+      5
+     ],
+     [
+      "spruce leaves",
+      4
+     ],
+     [
+      "powder snow",
       2
-     ],
-     [
-      "cyan bed",
-      1
      ]
     ],
     "top_crafted": []
@@ -1496,6 +1505,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.6,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-19 16:53 UTC"
+  "wann": "2026-11-19 17:00 UTC"
  }
 }
