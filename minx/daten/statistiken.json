@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-19 16:30 UTC",
+ "aktualisiert": "2026-11-19 16:53 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 324.7,
+    "playtime_h": 324.8,
     "deaths": 105,
     "mob_kills": 52479,
-    "distance_km": 2433.5,
+    "distance_km": 2433.7,
     "mined": 181923,
     "crafted": 159530,
     "distanz": {
-     "fuss": 721.0,
+     "fuss": 721.1,
      "elytra": 1678.3,
-     "schwimmen": 20.8,
+     "schwimmen": 20.9,
      "boot": 11.7,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 191063,
-    "damage_taken": 260723,
-    "damage_dealt": 959753,
+    "jumps": 191137,
+    "damage_taken": 260840,
+    "damage_dealt": 959804,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 7851,
+    "drops": 7853,
     "trades": 0,
     "top_mined": [
      [
@@ -83,26 +83,26 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 299.3,
+    "playtime_h": 299.6,
     "deaths": 51,
     "mob_kills": 9237,
-    "distance_km": 1511.6,
+    "distance_km": 1512.1,
     "mined": 53454,
     "crafted": 37229,
     "distanz": {
-     "fuss": 359.8,
+     "fuss": 360.3,
      "elytra": 1095.2,
      "schwimmen": 55.0,
      "boot": 0.4,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 134874,
-    "damage_taken": 90884,
+    "jumps": 135043,
+    "damage_taken": 90898,
     "damage_dealt": 563005,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4286,
+    "drops": 4288,
     "trades": 0,
     "top_mined": [
      [
@@ -161,26 +161,26 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 99.0,
+    "playtime_h": 99.3,
     "deaths": 20,
-    "mob_kills": 16241,
-    "distance_km": 1012.6,
-    "mined": 33909,
+    "mob_kills": 16250,
+    "distance_km": 1015.3,
+    "mined": 34054,
     "crafted": 113141,
     "distanz": {
-     "fuss": 245.9,
-     "elytra": 759.5,
-     "schwimmen": 4.1,
+     "fuss": 246.6,
+     "elytra": 760.6,
+     "schwimmen": 5.0,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 59471,
-    "damage_taken": 89293,
-    "damage_dealt": 468837,
+    "jumps": 59618,
+    "damage_taken": 89936,
+    "damage_dealt": 469129,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2441,
+    "drops": 2443,
     "trades": 0,
     "top_mined": [
      [
@@ -193,7 +193,7 @@
      ],
      [
       "stone",
-      3319
+      3419
      ],
      [
       "dirt",
@@ -926,20 +926,20 @@
   {
    "name": "TimotheToaster",
    "stats": {
-    "playtime_h": 4.9,
+    "playtime_h": 5.3,
     "deaths": 1,
     "mob_kills": 58,
-    "distance_km": 40.0,
-    "mined": 86,
-    "crafted": 1107,
+    "distance_km": 42.1,
+    "mined": 101,
+    "crafted": 2258,
     "distanz": {
-     "fuss": 8.5,
-     "elytra": 30.4,
+     "fuss": 9.9,
+     "elytra": 31.0,
      "schwimmen": 1.2
     },
-    "jumps": 2247,
-    "damage_taken": 3571,
-    "damage_dealt": 12564,
+    "jumps": 2519,
+    "damage_taken": 3716,
+    "damage_dealt": 14412,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 46,
@@ -950,12 +950,12 @@
       19
      ],
      [
-      "decorated pot",
-      8
+      "shulker box",
+      14
      ],
      [
-      "shulker box",
-      7
+      "decorated pot",
+      9
      ],
      [
       "stone bricks",
@@ -973,7 +973,7 @@
     "top_crafted": [
      [
       "paper",
-      759
+      1845
      ],
      [
       "stick",
@@ -984,16 +984,16 @@
       88
      ],
      [
+      "emerald",
+      76
+     ],
+     [
       "iron ingot",
       63
      ],
      [
-      "emerald",
-      31
-     ],
-     [
       "spruce planks",
-      4
+      20
      ]
     ]
    }
@@ -1001,23 +1001,23 @@
   {
    "name": "Manumel12",
    "stats": {
-    "playtime_h": 4.7,
+    "playtime_h": 4.9,
     "deaths": 2,
     "mob_kills": 1839,
-    "distance_km": 52.8,
-    "mined": 6748,
-    "crafted": 1079,
+    "distance_km": 56.7,
+    "mined": 6879,
+    "crafted": 1083,
     "distanz": {
-     "fuss": 14.6,
-     "elytra": 38.0,
-     "schwimmen": 0.2
+     "fuss": 15.1,
+     "elytra": 40.9,
+     "schwimmen": 0.7
     },
-    "jumps": 3420,
-    "damage_taken": 4616,
-    "damage_dealt": 21319,
+    "jumps": 3508,
+    "damage_taken": 4833,
+    "damage_dealt": 21337,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1288,
+    "drops": 1302,
     "trades": 0,
     "top_mined": [
      [
@@ -1449,6 +1449,46 @@
      ]
     ]
    }
+  },
+  {
+   "name": "Reep811",
+   "stats": {
+    "playtime_h": 0.2,
+    "deaths": 8,
+    "mob_kills": 2,
+    "distance_km": 0.9,
+    "mined": 22,
+    "crafted": 0,
+    "distanz": {
+     "fuss": 0.9
+    },
+    "jumps": 352,
+    "damage_taken": 2385,
+    "damage_dealt": 819,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 0,
+    "trades": 0,
+    "top_mined": [
+     [
+      "dirt",
+      13
+     ],
+     [
+      "grass block",
+      6
+     ],
+     [
+      "chorus plant",
+      2
+     ],
+     [
+      "cyan bed",
+      1
+     ]
+    ],
+    "top_crafted": []
+   }
   }
  ],
  "server": {
@@ -1456,6 +1496,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.6,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-19 16:30 UTC"
+  "wann": "2026-11-19 16:53 UTC"
  }
 }
