@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-19 20:00 UTC",
+ "aktualisiert": "2026-11-19 20:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -164,8 +164,8 @@
     "playtime_h": 99.3,
     "deaths": 20,
     "mob_kills": 16250,
-    "distance_km": 1015.3,
-    "mined": 34054,
+    "distance_km": 1015.4,
+    "mined": 34055,
     "crafted": 113141,
     "distanz": {
      "fuss": 246.6,
@@ -175,7 +175,7 @@
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 59618,
+    "jumps": 59624,
     "damage_taken": 89936,
     "damage_dealt": 469129,
     "fish_caught": 0,
@@ -623,30 +623,30 @@
   {
    "name": "Jaki_03",
    "stats": {
-    "playtime_h": 19.7,
-    "deaths": 14,
-    "mob_kills": 155,
-    "distance_km": 183.3,
-    "mined": 5291,
-    "crafted": 2053,
+    "playtime_h": 19.9,
+    "deaths": 15,
+    "mob_kills": 158,
+    "distance_km": 185.0,
+    "mined": 5374,
+    "crafted": 2095,
     "distanz": {
-     "fuss": 74.8,
+     "fuss": 76.5,
      "elytra": 99.0,
      "schwimmen": 0.8,
      "boot": 3.1,
      "minecart": 5.7
     },
-    "jumps": 7979,
-    "damage_taken": 12658,
-    "damage_dealt": 29707,
+    "jumps": 8107,
+    "damage_taken": 12904,
+    "damage_dealt": 30098,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 304,
+    "drops": 308,
     "trades": 0,
     "top_mined": [
      [
       "grass block",
-      1738
+      1781
      ],
      [
       "stone",
@@ -658,7 +658,7 @@
      ],
      [
       "cobblestone",
-      472
+      473
      ],
      [
       "rail",
@@ -666,7 +666,7 @@
      ],
      [
       "short grass",
-      136
+      159
      ]
     ],
     "top_crafted": [
@@ -852,7 +852,7 @@
   {
    "name": "TimotheToaster",
    "stats": {
-    "playtime_h": 8.2,
+    "playtime_h": 8.7,
     "deaths": 2,
     "mob_kills": 555,
     "distance_km": 60.7,
@@ -1681,6 +1681,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.7,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-19 20:00 UTC"
+  "wann": "2026-11-19 20:30 UTC"
  }
 }
