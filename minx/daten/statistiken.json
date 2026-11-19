@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-19 15:30 UTC",
+ "aktualisiert": "2026-11-19 16:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -86,19 +86,19 @@
     "playtime_h": 298.9,
     "deaths": 51,
     "mob_kills": 9237,
-    "distance_km": 1511.2,
+    "distance_km": 1511.3,
     "mined": 53453,
     "crafted": 37229,
     "distanz": {
-     "fuss": 359.4,
+     "fuss": 359.5,
      "elytra": 1095.2,
      "schwimmen": 55.0,
      "boot": 0.4,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 134733,
-    "damage_taken": 90877,
+    "jumps": 134774,
+    "damage_taken": 90884,
     "damage_dealt": 563005,
     "fish_caught": 0,
     "enchanted": 0,
@@ -161,26 +161,26 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 98.1,
+    "playtime_h": 98.6,
     "deaths": 20,
-    "mob_kills": 16235,
-    "distance_km": 997.8,
-    "mined": 32522,
-    "crafted": 113114,
+    "mob_kills": 16238,
+    "distance_km": 1007.8,
+    "mined": 32960,
+    "crafted": 113141,
     "distanz": {
-     "fuss": 244.0,
-     "elytra": 746.6,
-     "schwimmen": 4.0,
+     "fuss": 245.1,
+     "elytra": 755.5,
+     "schwimmen": 4.1,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 59016,
-    "damage_taken": 88891,
-    "damage_dealt": 467715,
+    "jumps": 59223,
+    "damage_taken": 89171,
+    "damage_dealt": 468365,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2390,
+    "drops": 2407,
     "trades": 0,
     "top_mined": [
      [
@@ -193,11 +193,11 @@
      ],
      [
       "stone",
-      3057
+      3108
      ],
      [
       "dirt",
-      1364
+      1401
      ],
      [
       "dark oak log",
@@ -700,20 +700,20 @@
   {
    "name": "Hagen13juhhuh",
    "stats": {
-    "playtime_h": 14.7,
+    "playtime_h": 14.8,
     "deaths": 32,
     "mob_kills": 262,
-    "distance_km": 118.0,
+    "distance_km": 118.2,
     "mined": 5171,
-    "crafted": 4356,
+    "crafted": 4358,
     "distanz": {
-     "fuss": 43.3,
+     "fuss": 43.4,
      "elytra": 74.1,
      "schwimmen": 0.0,
      "boot": 0.1,
      "minecart": 0.5
     },
-    "jumps": 6740,
+    "jumps": 6754,
     "damage_taken": 20507,
     "damage_dealt": 16769,
     "fish_caught": 0,
@@ -1075,6 +1075,81 @@
    }
   },
   {
+   "name": "Manumel12",
+   "stats": {
+    "playtime_h": 4.2,
+    "deaths": 2,
+    "mob_kills": 1833,
+    "distance_km": 44.4,
+    "mined": 5371,
+    "crafted": 1079,
+    "distanz": {
+     "fuss": 13.2,
+     "elytra": 31.0,
+     "schwimmen": 0.2
+    },
+    "jumps": 3089,
+    "damage_taken": 4464,
+    "damage_dealt": 20093,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 855,
+    "trades": 0,
+    "top_mined": [
+     [
+      "netherrack",
+      4112
+     ],
+     [
+      "gravel",
+      386
+     ],
+     [
+      "dirt",
+      175
+     ],
+     [
+      "blackstone",
+      124
+     ],
+     [
+      "nether quartz ore",
+      111
+     ],
+     [
+      "deepslate diamond ore",
+      66
+     ]
+    ],
+    "top_crafted": [
+     [
+      "paper",
+      762
+     ],
+     [
+      "sea lantern",
+      135
+     ],
+     [
+      "tnt",
+      51
+     ],
+     [
+      "emerald",
+      31
+     ],
+     [
+      "stick",
+      16
+     ],
+     [
+      "netherite scrap",
+      16
+     ]
+    ]
+   }
+  },
+  {
    "name": "BooklyTooCozy",
    "stats": {
     "playtime_h": 4.2,
@@ -1145,81 +1220,6 @@
      ],
      [
       "cooked cod",
-      16
-     ]
-    ]
-   }
-  },
-  {
-   "name": "Manumel12",
-   "stats": {
-    "playtime_h": 3.9,
-    "deaths": 2,
-    "mob_kills": 1830,
-    "distance_km": 38.1,
-    "mined": 4663,
-    "crafted": 1071,
-    "distanz": {
-     "fuss": 12.6,
-     "elytra": 25.4,
-     "schwimmen": 0.1
-    },
-    "jumps": 2979,
-    "damage_taken": 4417,
-    "damage_dealt": 19553,
-    "fish_caught": 0,
-    "enchanted": 0,
-    "drops": 822,
-    "trades": 0,
-    "top_mined": [
-     [
-      "netherrack",
-      4112
-     ],
-     [
-      "blackstone",
-      124
-     ],
-     [
-      "nether quartz ore",
-      111
-     ],
-     [
-      "deepslate diamond ore",
-      66
-     ],
-     [
-      "cobweb",
-      45
-     ],
-     [
-      "gravel",
-      27
-     ]
-    ],
-    "top_crafted": [
-     [
-      "paper",
-      762
-     ],
-     [
-      "sea lantern",
-      135
-     ],
-     [
-      "tnt",
-      51
-     ],
-     [
-      "emerald",
-      31
-     ],
-     [
-      "stick",
-      16
-     ],
-     [
-      "netherite scrap",
       16
      ]
     ]
@@ -1454,8 +1454,8 @@
  "server": {
   "cpu": "Intel Core i5-8500T CPU @ 2.10GHz",
   "ram_gb": 9.7,
-  "welt_aktuell_gb": 5.4,
+  "welt_aktuell_gb": 5.5,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-19 15:30 UTC"
+  "wann": "2026-11-19 16:00 UTC"
  }
 }
