@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-19 15:00 UTC",
+ "aktualisiert": "2026-11-19 15:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -700,22 +700,22 @@
   {
    "name": "Hagen13juhhuh",
    "stats": {
-    "playtime_h": 14.3,
-    "deaths": 29,
-    "mob_kills": 255,
-    "distance_km": 116.0,
-    "mined": 5139,
-    "crafted": 3683,
+    "playtime_h": 14.7,
+    "deaths": 32,
+    "mob_kills": 262,
+    "distance_km": 118.0,
+    "mined": 5171,
+    "crafted": 4356,
     "distanz": {
-     "fuss": 41.5,
-     "elytra": 73.9,
+     "fuss": 43.3,
+     "elytra": 74.1,
      "schwimmen": 0.0,
      "boot": 0.1,
      "minecart": 0.5
     },
-    "jumps": 6549,
-    "damage_taken": 19395,
-    "damage_dealt": 15142,
+    "jumps": 6740,
+    "damage_taken": 20507,
+    "damage_dealt": 16769,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 173,
@@ -731,7 +731,7 @@
      ],
      [
       "grass block",
-      808
+      809
      ],
      [
       "snow",
@@ -739,7 +739,7 @@
      ],
      [
       "dirt",
-      441
+      454
      ],
      [
       "oak log",
@@ -749,7 +749,7 @@
     "top_crafted": [
      [
       "paper",
-      1982
+      2621
      ],
      [
       "oak planks",
@@ -765,11 +765,11 @@
      ],
      [
       "stick",
-      136
+      140
      ],
      [
       "emerald",
-      90
+      116
      ]
     ]
    }
@@ -924,6 +924,81 @@
    }
   },
   {
+   "name": "TimotheToaster",
+   "stats": {
+    "playtime_h": 4.9,
+    "deaths": 1,
+    "mob_kills": 58,
+    "distance_km": 40.0,
+    "mined": 86,
+    "crafted": 1107,
+    "distanz": {
+     "fuss": 8.5,
+     "elytra": 30.4,
+     "schwimmen": 1.2
+    },
+    "jumps": 2247,
+    "damage_taken": 3571,
+    "damage_dealt": 12564,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 46,
+    "trades": 0,
+    "top_mined": [
+     [
+      "short grass",
+      19
+     ],
+     [
+      "decorated pot",
+      8
+     ],
+     [
+      "shulker box",
+      7
+     ],
+     [
+      "stone bricks",
+      6
+     ],
+     [
+      "crafting table",
+      5
+     ],
+     [
+      "amethyst block",
+      4
+     ]
+    ],
+    "top_crafted": [
+     [
+      "paper",
+      759
+     ],
+     [
+      "stick",
+      149
+     ],
+     [
+      "dark oak planks",
+      88
+     ],
+     [
+      "iron ingot",
+      63
+     ],
+     [
+      "emerald",
+      31
+     ],
+     [
+      "spruce planks",
+      4
+     ]
+    ]
+   }
+  },
+  {
    "name": "tillomix",
    "stats": {
     "playtime_h": 4.6,
@@ -995,81 +1070,6 @@
      [
       "deepslate",
       44
-     ]
-    ]
-   }
-  },
-  {
-   "name": "TimotheToaster",
-   "stats": {
-    "playtime_h": 4.4,
-    "deaths": 1,
-    "mob_kills": 58,
-    "distance_km": 40.0,
-    "mined": 86,
-    "crafted": 1107,
-    "distanz": {
-     "fuss": 8.5,
-     "elytra": 30.4,
-     "schwimmen": 1.2
-    },
-    "jumps": 2247,
-    "damage_taken": 3571,
-    "damage_dealt": 12564,
-    "fish_caught": 0,
-    "enchanted": 0,
-    "drops": 46,
-    "trades": 0,
-    "top_mined": [
-     [
-      "short grass",
-      19
-     ],
-     [
-      "decorated pot",
-      8
-     ],
-     [
-      "shulker box",
-      7
-     ],
-     [
-      "stone bricks",
-      6
-     ],
-     [
-      "crafting table",
-      5
-     ],
-     [
-      "amethyst block",
-      4
-     ]
-    ],
-    "top_crafted": [
-     [
-      "paper",
-      759
-     ],
-     [
-      "stick",
-      149
-     ],
-     [
-      "dark oak planks",
-      88
-     ],
-     [
-      "iron ingot",
-      63
-     ],
-     [
-      "emerald",
-      31
-     ],
-     [
-      "spruce planks",
-      4
      ]
     ]
    }
@@ -1153,20 +1153,20 @@
   {
    "name": "Manumel12",
    "stats": {
-    "playtime_h": 3.4,
+    "playtime_h": 3.9,
     "deaths": 2,
-    "mob_kills": 1829,
-    "distance_km": 37.7,
-    "mined": 4642,
+    "mob_kills": 1830,
+    "distance_km": 38.1,
+    "mined": 4663,
     "crafted": 1071,
     "distanz": {
-     "fuss": 12.4,
-     "elytra": 25.2,
+     "fuss": 12.6,
+     "elytra": 25.4,
      "schwimmen": 0.1
     },
-    "jumps": 2884,
-    "damage_taken": 4405,
-    "damage_dealt": 19393,
+    "jumps": 2979,
+    "damage_taken": 4417,
+    "damage_dealt": 19553,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 822,
@@ -1186,7 +1186,7 @@
      ],
      [
       "deepslate diamond ore",
-      62
+      66
      ],
      [
       "cobweb",
@@ -1456,6 +1456,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.4,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-19 15:00 UTC"
+  "wann": "2026-11-19 15:30 UTC"
  }
 }
