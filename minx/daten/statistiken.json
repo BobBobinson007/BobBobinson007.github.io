@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-19 12:00 UTC",
+ "aktualisiert": "2026-11-19 12:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 323.4,
+    "playtime_h": 323.6,
     "deaths": 104,
-    "mob_kills": 52467,
-    "distance_km": 2419.1,
-    "mined": 181643,
+    "mob_kills": 52469,
+    "distance_km": 2421.2,
+    "mined": 181896,
     "crafted": 159530,
     "distanz": {
-     "fuss": 717.2,
-     "elytra": 1667.8,
+     "fuss": 717.7,
+     "elytra": 1669.4,
      "schwimmen": 20.8,
      "boot": 11.7,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 188519,
-    "damage_taken": 255272,
-    "damage_dealt": 956489,
+    "jumps": 188765,
+    "damage_taken": 255623,
+    "damage_dealt": 956889,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 7817,
+    "drops": 7819,
     "trades": 0,
     "top_mined": [
      [
@@ -37,7 +37,7 @@
      ],
      [
       "netherrack",
-      16811
+      16967
      ],
      [
       "sandstone",
@@ -1151,6 +1151,81 @@
    }
   },
   {
+   "name": "TimotheToaster",
+   "stats": {
+    "playtime_h": 2.0,
+    "deaths": 0,
+    "mob_kills": 47,
+    "distance_km": 32.0,
+    "mined": 62,
+    "crafted": 312,
+    "distanz": {
+     "fuss": 4.5,
+     "elytra": 26.3,
+     "schwimmen": 1.1
+    },
+    "jumps": 1148,
+    "damage_taken": 1174,
+    "damage_dealt": 8795,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 43,
+    "trades": 0,
+    "top_mined": [
+     [
+      "short grass",
+      8
+     ],
+     [
+      "decorated pot",
+      8
+     ],
+     [
+      "stone bricks",
+      6
+     ],
+     [
+      "amethyst block",
+      4
+     ],
+     [
+      "anvil",
+      3
+     ],
+     [
+      "jungle planks",
+      3
+     ]
+    ],
+    "top_crafted": [
+     [
+      "stick",
+      149
+     ],
+     [
+      "dark oak planks",
+      88
+     ],
+     [
+      "iron ingot",
+      63
+     ],
+     [
+      "chest",
+      2
+     ],
+     [
+      "iron chestplate",
+      1
+     ],
+     [
+      "iron boots",
+      1
+     ]
+    ]
+   }
+  },
+  {
    "name": "EnvyTheBlade",
    "stats": {
     "playtime_h": 1.8,
@@ -1219,81 +1294,6 @@
      ],
      [
       "furnace",
-      1
-     ]
-    ]
-   }
-  },
-  {
-   "name": "TimotheToaster",
-   "stats": {
-    "playtime_h": 1.5,
-    "deaths": 0,
-    "mob_kills": 37,
-    "distance_km": 31.3,
-    "mined": 60,
-    "crafted": 299,
-    "distanz": {
-     "fuss": 4.5,
-     "elytra": 25.7,
-     "schwimmen": 1.1
-    },
-    "jumps": 1107,
-    "damage_taken": 1129,
-    "damage_dealt": 6788,
-    "fish_caught": 0,
-    "enchanted": 0,
-    "drops": 10,
-    "trades": 0,
-    "top_mined": [
-     [
-      "short grass",
-      8
-     ],
-     [
-      "decorated pot",
-      8
-     ],
-     [
-      "stone bricks",
-      6
-     ],
-     [
-      "amethyst block",
-      4
-     ],
-     [
-      "anvil",
-      3
-     ],
-     [
-      "jungle planks",
-      3
-     ]
-    ],
-    "top_crafted": [
-     [
-      "stick",
-      136
-     ],
-     [
-      "dark oak planks",
-      88
-     ],
-     [
-      "iron ingot",
-      63
-     ],
-     [
-      "chest",
-      2
-     ],
-     [
-      "iron chestplate",
-      1
-     ],
-     [
-      "iron boots",
       1
      ]
     ]
@@ -1456,6 +1456,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.4,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-19 12:00 UTC"
+  "wann": "2026-11-19 12:30 UTC"
  }
 }
