@@ -1,11 +1,11 @@
 {
- "aktualisiert": "2026-11-19 18:30 UTC",
+ "aktualisiert": "2026-11-19 19:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 325.8,
+    "playtime_h": 326.2,
     "deaths": 105,
     "mob_kills": 52487,
     "distance_km": 2445.6,
@@ -83,35 +83,35 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 300.7,
+    "playtime_h": 301.0,
     "deaths": 51,
-    "mob_kills": 9311,
-    "distance_km": 1527.5,
-    "mined": 53488,
+    "mob_kills": 9312,
+    "distance_km": 1533.5,
+    "mined": 54320,
     "crafted": 37261,
     "distanz": {
-     "fuss": 362.3,
-     "elytra": 1108.6,
+     "fuss": 364.2,
+     "elytra": 1112.6,
      "schwimmen": 55.0,
      "boot": 0.4,
-     "minecart": 1.2,
+     "minecart": 1.4,
      "pferd": 0.0
     },
-    "jumps": 136461,
-    "damage_taken": 91558,
-    "damage_dealt": 570486,
+    "jumps": 136709,
+    "damage_taken": 91785,
+    "damage_dealt": 570668,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4306,
+    "drops": 4312,
     "trades": 0,
     "top_mined": [
      [
       "stone",
-      9009
+      9578
      ],
      [
       "dirt",
-      7534
+      7563
      ],
      [
       "grass block",
@@ -239,22 +239,22 @@
   {
    "name": "the_carlito_",
    "stats": {
-    "playtime_h": 82.5,
+    "playtime_h": 82.7,
     "deaths": 120,
     "mob_kills": 147,
-    "distance_km": 171.5,
-    "mined": 16085,
+    "distance_km": 171.6,
+    "mined": 16094,
     "crafted": 55041,
     "distanz": {
-     "fuss": 83.2,
+     "fuss": 83.3,
      "elytra": 83.1,
      "schwimmen": 3.8,
      "boot": 0.3,
      "minecart": 1.1
     },
-    "jumps": 14766,
-    "damage_taken": 56527,
-    "damage_dealt": 16809,
+    "jumps": 14771,
+    "damage_taken": 56537,
+    "damage_dealt": 16819,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 1291,
@@ -270,7 +270,7 @@
      ],
      [
       "cobbled deepslate",
-      877
+      883
      ],
      [
       "stone",
@@ -926,7 +926,7 @@
   {
    "name": "TimotheToaster",
    "stats": {
-    "playtime_h": 6.7,
+    "playtime_h": 7.2,
     "deaths": 2,
     "mob_kills": 555,
     "distance_km": 60.7,
@@ -1227,6 +1227,81 @@
    }
   },
   {
+   "name": "Reep811",
+   "stats": {
+    "playtime_h": 1.9,
+    "deaths": 13,
+    "mob_kills": 28,
+    "distance_km": 21.4,
+    "mined": 471,
+    "crafted": 151,
+    "distanz": {
+     "fuss": 4.9,
+     "elytra": 16.4,
+     "schwimmen": 0.1
+    },
+    "jumps": 2887,
+    "damage_taken": 5452,
+    "damage_dealt": 4480,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 10,
+    "trades": 0,
+    "top_mined": [
+     [
+      "deepslate diamond ore",
+      72
+     ],
+     [
+      "red mushroom block",
+      48
+     ],
+     [
+      "powder snow",
+      48
+     ],
+     [
+      "moss block",
+      48
+     ],
+     [
+      "dirt",
+      47
+     ],
+     [
+      "stone",
+      39
+     ]
+    ],
+    "top_crafted": [
+     [
+      "spruce planks",
+      44
+     ],
+     [
+      "iron ingot",
+      35
+     ],
+     [
+      "stick",
+      24
+     ],
+     [
+      "mushroom stew",
+      11
+     ],
+     [
+      "copper ingot",
+      7
+     ],
+     [
+      "bowl",
+      4
+     ]
+    ]
+   }
+  },
+  {
    "name": "EnvyTheBlade",
    "stats": {
     "playtime_h": 1.8,
@@ -1296,81 +1371,6 @@
      [
       "furnace",
       1
-     ]
-    ]
-   }
-  },
-  {
-   "name": "Reep811",
-   "stats": {
-    "playtime_h": 1.7,
-    "deaths": 13,
-    "mob_kills": 26,
-    "distance_km": 16.8,
-    "mined": 439,
-    "crafted": 151,
-    "distanz": {
-     "fuss": 4.4,
-     "elytra": 12.4,
-     "schwimmen": 0.1
-    },
-    "jumps": 2635,
-    "damage_taken": 5013,
-    "damage_dealt": 4308,
-    "fish_caught": 0,
-    "enchanted": 0,
-    "drops": 3,
-    "trades": 0,
-    "top_mined": [
-     [
-      "red mushroom block",
-      48
-     ],
-     [
-      "powder snow",
-      48
-     ],
-     [
-      "moss block",
-      48
-     ],
-     [
-      "dirt",
-      47
-     ],
-     [
-      "deepslate diamond ore",
-      45
-     ],
-     [
-      "stone",
-      39
-     ]
-    ],
-    "top_crafted": [
-     [
-      "spruce planks",
-      44
-     ],
-     [
-      "iron ingot",
-      35
-     ],
-     [
-      "stick",
-      24
-     ],
-     [
-      "mushroom stew",
-      11
-     ],
-     [
-      "copper ingot",
-      7
-     ],
-     [
-      "bowl",
-      4
      ]
     ]
    }
@@ -1604,29 +1604,38 @@
   {
    "name": "2_Much_Marloo",
    "stats": {
-    "playtime_h": 0.1,
-    "deaths": 0,
-    "mob_kills": 0,
-    "distance_km": 0.7,
-    "mined": 31,
-    "crafted": 19,
+    "playtime_h": 0.3,
+    "deaths": 1,
+    "mob_kills": 3,
+    "distance_km": 1.5,
+    "mined": 132,
+    "crafted": 76,
     "distanz": {
-     "fuss": 0.7
+     "fuss": 1.4,
+     "schwimmen": 0.1
     },
-    "jumps": 219,
-    "damage_taken": 30,
-    "damage_dealt": 0,
+    "jumps": 443,
+    "damage_taken": 420,
+    "damage_dealt": 589,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 0,
     "trades": 0,
     "top_mined": [
      [
+      "jungle log",
+      54
+     ],
+     [
       "stone",
-      12
+      47
      ],
      [
       "grass block",
+      8
+     ],
+     [
+      "melon",
       6
      ],
      [
@@ -1634,29 +1643,25 @@
       5
      ],
      [
-      "jungle log",
-      3
-     ],
-     [
-      "melon",
-      2
-     ],
-     [
       "vine",
-      2
+      5
      ]
     ],
     "top_crafted": [
      [
       "jungle planks",
-      12
+      64
      ],
      [
       "stick",
-      4
+      8
      ],
      [
       "wooden pickaxe",
+      1
+     ],
+     [
+      "stone axe",
       1
      ],
      [
@@ -1676,6 +1681,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.7,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-19 18:30 UTC"
+  "wann": "2026-11-19 19:00 UTC"
  }
 }
