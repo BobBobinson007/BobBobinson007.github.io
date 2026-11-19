@@ -1,35 +1,35 @@
 {
- "aktualisiert": "2026-11-19 18:00 UTC",
+ "aktualisiert": "2026-11-19 18:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 325.6,
+    "playtime_h": 325.8,
     "deaths": 105,
-    "mob_kills": 52484,
-    "distance_km": 2438.3,
-    "mined": 181928,
+    "mob_kills": 52487,
+    "distance_km": 2445.6,
+    "mined": 181950,
     "crafted": 159530,
     "distanz": {
-     "fuss": 721.9,
-     "elytra": 1682.1,
-     "schwimmen": 20.9,
+     "fuss": 722.5,
+     "elytra": 1688.8,
+     "schwimmen": 21.0,
      "boot": 11.7,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 191807,
-    "damage_taken": 261334,
-    "damage_dealt": 960572,
+    "jumps": 192068,
+    "damage_taken": 262108,
+    "damage_dealt": 961786,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 7864,
+    "drops": 7870,
     "trades": 0,
     "top_mined": [
      [
       "stone",
-      45507
+      45511
      ],
      [
       "sand",
@@ -83,26 +83,26 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 300.2,
+    "playtime_h": 300.7,
     "deaths": 51,
-    "mob_kills": 9240,
-    "distance_km": 1521.7,
-    "mined": 53476,
+    "mob_kills": 9311,
+    "distance_km": 1527.5,
+    "mined": 53488,
     "crafted": 37261,
     "distanz": {
-     "fuss": 361.1,
-     "elytra": 1104.1,
+     "fuss": 362.3,
+     "elytra": 1108.6,
      "schwimmen": 55.0,
      "boot": 0.4,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 135667,
-    "damage_taken": 91080,
-    "damage_dealt": 563605,
+    "jumps": 136461,
+    "damage_taken": 91558,
+    "damage_dealt": 570486,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4295,
+    "drops": 4306,
     "trades": 0,
     "top_mined": [
      [
@@ -127,7 +127,7 @@
      ],
      [
       "short grass",
-      2781
+      2786
      ]
     ],
     "top_crafted": [
@@ -237,12 +237,12 @@
    }
   },
   {
-   "name": "1carlito",
+   "name": "the_carlito_",
    "stats": {
     "playtime_h": 82.5,
-    "deaths": 119,
+    "deaths": 120,
     "mob_kills": 147,
-    "distance_km": 171.4,
+    "distance_km": 171.5,
     "mined": 16085,
     "crafted": 55041,
     "distanz": {
@@ -252,8 +252,8 @@
      "boot": 0.3,
      "minecart": 1.1
     },
-    "jumps": 14764,
-    "damage_taken": 56447,
+    "jumps": 14766,
+    "damage_taken": 56527,
     "damage_dealt": 16809,
     "fish_caught": 0,
     "enchanted": 0,
@@ -926,33 +926,33 @@
   {
    "name": "TimotheToaster",
    "stats": {
-    "playtime_h": 6.3,
-    "deaths": 1,
-    "mob_kills": 528,
-    "distance_km": 54.7,
-    "mined": 354,
+    "playtime_h": 6.7,
+    "deaths": 2,
+    "mob_kills": 555,
+    "distance_km": 60.7,
+    "mined": 373,
     "crafted": 4139,
     "distanz": {
-     "fuss": 13.4,
-     "elytra": 39.3,
-     "schwimmen": 1.4,
+     "fuss": 14.3,
+     "elytra": 44.4,
+     "schwimmen": 1.5,
      "minecart": 0.6
     },
-    "jumps": 3395,
-    "damage_taken": 5964,
-    "damage_dealt": 28375,
+    "jumps": 3795,
+    "damage_taken": 6877,
+    "damage_dealt": 35270,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 72,
+    "drops": 78,
     "trades": 0,
     "top_mined": [
      [
       "stone",
-      89
+      90
      ],
      [
       "deepslate",
-      70
+      76
      ],
      [
       "clay",
@@ -1303,23 +1303,23 @@
   {
    "name": "Reep811",
    "stats": {
-    "playtime_h": 1.3,
+    "playtime_h": 1.7,
     "deaths": 13,
-    "mob_kills": 22,
-    "distance_km": 4.1,
-    "mined": 336,
-    "crafted": 118,
+    "mob_kills": 26,
+    "distance_km": 16.8,
+    "mined": 439,
+    "crafted": 151,
     "distanz": {
-     "fuss": 3.6,
-     "elytra": 0.4,
-     "schwimmen": 0.0
+     "fuss": 4.4,
+     "elytra": 12.4,
+     "schwimmen": 0.1
     },
-    "jumps": 2305,
-    "damage_taken": 4356,
-    "damage_dealt": 3508,
+    "jumps": 2635,
+    "damage_taken": 5013,
+    "damage_dealt": 4308,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1,
+    "drops": 3,
     "trades": 0,
     "top_mined": [
      [
@@ -1331,34 +1331,34 @@
       48
      ],
      [
+      "moss block",
+      48
+     ],
+     [
       "dirt",
       47
      ],
      [
+      "deepslate diamond ore",
+      45
+     ],
+     [
       "stone",
       39
-     ],
-     [
-      "iron ore",
-      28
-     ],
-     [
-      "brown mushroom block",
-      18
      ]
     ],
     "top_crafted": [
+     [
+      "spruce planks",
+      44
+     ],
      [
       "iron ingot",
       35
      ],
      [
-      "spruce planks",
-      32
-     ],
-     [
       "stick",
-      12
+      24
      ],
      [
       "mushroom stew",
@@ -1380,18 +1380,18 @@
    "stats": {
     "playtime_h": 1.1,
     "deaths": 0,
-    "mob_kills": 95,
-    "distance_km": 4.5,
+    "mob_kills": 97,
+    "distance_km": 4.6,
     "mined": 270,
     "crafted": 123,
     "distanz": {
-     "fuss": 3.5,
-     "schwimmen": 0.1,
+     "fuss": 3.7,
+     "schwimmen": 0.2,
      "boot": 0.8
     },
-    "jumps": 2486,
-    "damage_taken": 1879,
-    "damage_dealt": 13943,
+    "jumps": 2669,
+    "damage_taken": 1907,
+    "damage_dealt": 14273,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 12,
@@ -1600,6 +1600,75 @@
      ]
     ]
    }
+  },
+  {
+   "name": "2_Much_Marloo",
+   "stats": {
+    "playtime_h": 0.1,
+    "deaths": 0,
+    "mob_kills": 0,
+    "distance_km": 0.7,
+    "mined": 31,
+    "crafted": 19,
+    "distanz": {
+     "fuss": 0.7
+    },
+    "jumps": 219,
+    "damage_taken": 30,
+    "damage_dealt": 0,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 0,
+    "trades": 0,
+    "top_mined": [
+     [
+      "stone",
+      12
+     ],
+     [
+      "grass block",
+      6
+     ],
+     [
+      "dirt",
+      5
+     ],
+     [
+      "jungle log",
+      3
+     ],
+     [
+      "melon",
+      2
+     ],
+     [
+      "vine",
+      2
+     ]
+    ],
+    "top_crafted": [
+     [
+      "jungle planks",
+      12
+     ],
+     [
+      "stick",
+      4
+     ],
+     [
+      "wooden pickaxe",
+      1
+     ],
+     [
+      "stone pickaxe",
+      1
+     ],
+     [
+      "crafting table",
+      1
+     ]
+    ]
+   }
   }
  ],
  "server": {
@@ -1607,6 +1676,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.7,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-19 18:00 UTC"
+  "wann": "2026-11-19 18:30 UTC"
  }
 }
