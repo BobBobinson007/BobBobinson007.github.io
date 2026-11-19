@@ -1,26 +1,26 @@
 {
- "aktualisiert": "2026-11-19 12:30 UTC",
+ "aktualisiert": "2026-11-19 13:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 323.6,
+    "playtime_h": 323.7,
     "deaths": 104,
     "mob_kills": 52469,
-    "distance_km": 2421.2,
-    "mined": 181896,
+    "distance_km": 2422.9,
+    "mined": 181904,
     "crafted": 159530,
     "distanz": {
-     "fuss": 717.7,
-     "elytra": 1669.4,
+     "fuss": 717.8,
+     "elytra": 1670.9,
      "schwimmen": 20.8,
      "boot": 11.7,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 188765,
-    "damage_taken": 255623,
+    "jumps": 188827,
+    "damage_taken": 256039,
     "damage_dealt": 956889,
     "fish_caught": 129,
     "enchanted": 0,
@@ -1076,6 +1076,81 @@
    }
   },
   {
+   "name": "TimotheToaster",
+   "stats": {
+    "playtime_h": 2.5,
+    "deaths": 0,
+    "mob_kills": 50,
+    "distance_km": 34.8,
+    "mined": 67,
+    "crafted": 1088,
+    "distanz": {
+     "fuss": 5.6,
+     "elytra": 28.0,
+     "schwimmen": 1.2
+    },
+    "jumps": 1402,
+    "damage_taken": 1386,
+    "damage_dealt": 9253,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 46,
+    "trades": 0,
+    "top_mined": [
+     [
+      "short grass",
+      9
+     ],
+     [
+      "decorated pot",
+      8
+     ],
+     [
+      "stone bricks",
+      6
+     ],
+     [
+      "shulker box",
+      5
+     ],
+     [
+      "crafting table",
+      5
+     ],
+     [
+      "amethyst block",
+      4
+     ]
+    ],
+    "top_crafted": [
+     [
+      "paper",
+      759
+     ],
+     [
+      "stick",
+      149
+     ],
+     [
+      "dark oak planks",
+      88
+     ],
+     [
+      "iron ingot",
+      63
+     ],
+     [
+      "emerald",
+      16
+     ],
+     [
+      "chest",
+      2
+     ]
+    ]
+   }
+  },
+  {
    "name": "Manumel12",
    "stats": {
     "playtime_h": 2.0,
@@ -1146,81 +1221,6 @@
      [
       "enchanted book",
       4
-     ]
-    ]
-   }
-  },
-  {
-   "name": "TimotheToaster",
-   "stats": {
-    "playtime_h": 2.0,
-    "deaths": 0,
-    "mob_kills": 47,
-    "distance_km": 32.0,
-    "mined": 62,
-    "crafted": 312,
-    "distanz": {
-     "fuss": 4.5,
-     "elytra": 26.3,
-     "schwimmen": 1.1
-    },
-    "jumps": 1148,
-    "damage_taken": 1174,
-    "damage_dealt": 8795,
-    "fish_caught": 0,
-    "enchanted": 0,
-    "drops": 43,
-    "trades": 0,
-    "top_mined": [
-     [
-      "short grass",
-      8
-     ],
-     [
-      "decorated pot",
-      8
-     ],
-     [
-      "stone bricks",
-      6
-     ],
-     [
-      "amethyst block",
-      4
-     ],
-     [
-      "anvil",
-      3
-     ],
-     [
-      "jungle planks",
-      3
-     ]
-    ],
-    "top_crafted": [
-     [
-      "stick",
-      149
-     ],
-     [
-      "dark oak planks",
-      88
-     ],
-     [
-      "iron ingot",
-      63
-     ],
-     [
-      "chest",
-      2
-     ],
-     [
-      "iron chestplate",
-      1
-     ],
-     [
-      "iron boots",
-      1
      ]
     ]
    }
@@ -1456,6 +1456,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.4,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-19 12:30 UTC"
+  "wann": "2026-11-19 13:00 UTC"
  }
 }
