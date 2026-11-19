@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-19 19:30 UTC",
+ "aktualisiert": "2026-11-19 20:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -546,25 +546,25 @@
   {
    "name": "Captifipo",
    "stats": {
-    "playtime_h": 21.8,
+    "playtime_h": 21.9,
     "deaths": 5,
     "mob_kills": 3234,
-    "distance_km": 363.6,
-    "mined": 18248,
-    "crafted": 3627,
+    "distance_km": 364.8,
+    "mined": 18401,
+    "crafted": 3655,
     "distanz": {
-     "fuss": 77.0,
-     "elytra": 284.2,
+     "fuss": 77.6,
+     "elytra": 284.7,
      "schwimmen": 0.3,
      "minecart": 2.1,
      "pferd": 0.0
     },
-    "jumps": 10612,
-    "damage_taken": 13728,
+    "jumps": 10664,
+    "damage_taken": 13764,
     "damage_dealt": 52401,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 779,
+    "drops": 791,
     "trades": 0,
     "top_mined": [
      [
@@ -614,8 +614,8 @@
       336
      ],
      [
-      "quartz block",
-      182
+      "stone",
+      202
      ]
     ]
    }
@@ -623,38 +623,38 @@
   {
    "name": "Jaki_03",
    "stats": {
-    "playtime_h": 19.2,
+    "playtime_h": 19.7,
     "deaths": 14,
-    "mob_kills": 153,
-    "distance_km": 179.6,
-    "mined": 4900,
-    "crafted": 1772,
+    "mob_kills": 155,
+    "distance_km": 183.3,
+    "mined": 5291,
+    "crafted": 2053,
     "distanz": {
-     "fuss": 72.4,
-     "elytra": 97.7,
+     "fuss": 74.8,
+     "elytra": 99.0,
      "schwimmen": 0.8,
      "boot": 3.1,
-     "minecart": 5.6
+     "minecart": 5.7
     },
-    "jumps": 7763,
-    "damage_taken": 12465,
-    "damage_dealt": 29262,
+    "jumps": 7979,
+    "damage_taken": 12658,
+    "damage_dealt": 29707,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 297,
+    "drops": 304,
     "trades": 0,
     "top_mined": [
      [
       "grass block",
-      1554
+      1738
      ],
      [
       "stone",
-      1028
+      1046
      ],
      [
       "dirt",
-      687
+      784
      ],
      [
       "cobblestone",
@@ -666,7 +666,7 @@
      ],
      [
       "short grass",
-      128
+      136
      ]
     ],
     "top_crafted": [
@@ -679,6 +679,10 @@
       512
      ],
      [
+      "stone brick slab",
+      240
+     ],
+     [
       "black stained glass",
       224
      ],
@@ -689,10 +693,6 @@
      [
       "gold ingot",
       54
-     ],
-     [
-      "powered rail",
-      51
      ]
     ]
    }
@@ -850,6 +850,82 @@
    }
   },
   {
+   "name": "TimotheToaster",
+   "stats": {
+    "playtime_h": 8.2,
+    "deaths": 2,
+    "mob_kills": 555,
+    "distance_km": 60.7,
+    "mined": 373,
+    "crafted": 4139,
+    "distanz": {
+     "fuss": 14.3,
+     "elytra": 44.4,
+     "schwimmen": 1.5,
+     "minecart": 0.6
+    },
+    "jumps": 3795,
+    "damage_taken": 6877,
+    "damage_dealt": 35270,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 78,
+    "trades": 0,
+    "top_mined": [
+     [
+      "stone",
+      90
+     ],
+     [
+      "deepslate",
+      76
+     ],
+     [
+      "clay",
+      26
+     ],
+     [
+      "andesite",
+      22
+     ],
+     [
+      "shulker box",
+      21
+     ],
+     [
+      "short grass",
+      20
+     ]
+    ],
+    "top_crafted": [
+     [
+      "paper",
+      3549
+     ],
+     [
+      "stick",
+      157
+     ],
+     [
+      "emerald",
+      144
+     ],
+     [
+      "dark oak planks",
+      88
+     ],
+     [
+      "iron ingot",
+      81
+     ],
+     [
+      "wind charge",
+      56
+     ]
+    ]
+   }
+  },
+  {
    "name": "fabsthreal",
    "stats": {
     "playtime_h": 8.0,
@@ -919,82 +995,6 @@
      [
       "crafting table",
       2
-     ]
-    ]
-   }
-  },
-  {
-   "name": "TimotheToaster",
-   "stats": {
-    "playtime_h": 7.7,
-    "deaths": 2,
-    "mob_kills": 555,
-    "distance_km": 60.7,
-    "mined": 373,
-    "crafted": 4139,
-    "distanz": {
-     "fuss": 14.3,
-     "elytra": 44.4,
-     "schwimmen": 1.5,
-     "minecart": 0.6
-    },
-    "jumps": 3795,
-    "damage_taken": 6877,
-    "damage_dealt": 35270,
-    "fish_caught": 0,
-    "enchanted": 0,
-    "drops": 78,
-    "trades": 0,
-    "top_mined": [
-     [
-      "stone",
-      90
-     ],
-     [
-      "deepslate",
-      76
-     ],
-     [
-      "clay",
-      26
-     ],
-     [
-      "andesite",
-      22
-     ],
-     [
-      "shulker box",
-      21
-     ],
-     [
-      "short grass",
-      20
-     ]
-    ],
-    "top_crafted": [
-     [
-      "paper",
-      3549
-     ],
-     [
-      "stick",
-      157
-     ],
-     [
-      "emerald",
-      144
-     ],
-     [
-      "dark oak planks",
-      88
-     ],
-     [
-      "iron ingot",
-      81
-     ],
-     [
-      "wind charge",
-      56
      ]
     ]
    }
@@ -1378,32 +1378,32 @@
   {
    "name": "FranoGames",
    "stats": {
-    "playtime_h": 1.1,
+    "playtime_h": 1.3,
     "deaths": 0,
-    "mob_kills": 97,
-    "distance_km": 4.6,
-    "mined": 270,
-    "crafted": 123,
+    "mob_kills": 101,
+    "distance_km": 6.4,
+    "mined": 286,
+    "crafted": 124,
     "distanz": {
-     "fuss": 3.7,
-     "schwimmen": 0.2,
-     "boot": 0.8
+     "fuss": 4.1,
+     "schwimmen": 0.3,
+     "boot": 2.1
     },
-    "jumps": 2669,
-    "damage_taken": 1907,
-    "damage_dealt": 14273,
+    "jumps": 2896,
+    "damage_taken": 1988,
+    "damage_dealt": 15072,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 12,
+    "drops": 14,
     "trades": 0,
     "top_mined": [
      [
       "stone",
-      94
+      95
      ],
      [
       "iron ore",
-      36
+      44
      ],
      [
       "deepslate diamond ore",
@@ -1436,15 +1436,15 @@
       16
      ],
      [
-      "iron ingot",
-      8
-     ],
-     [
       "cooked mutton",
       8
      ],
      [
       "cooked porkchop",
+      8
+     ],
+     [
+      "iron ingot",
       8
      ]
     ]
@@ -1681,6 +1681,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.7,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-19 19:30 UTC"
+  "wann": "2026-11-19 20:00 UTC"
  }
 }
