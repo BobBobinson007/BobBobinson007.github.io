@@ -1,35 +1,35 @@
 {
- "aktualisiert": "2026-11-19 14:00 UTC",
+ "aktualisiert": "2026-11-19 14:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 324.4,
-    "deaths": 104,
-    "mob_kills": 52478,
-    "distance_km": 2432.3,
-    "mined": 181917,
+    "playtime_h": 324.7,
+    "deaths": 105,
+    "mob_kills": 52479,
+    "distance_km": 2433.5,
+    "mined": 181923,
     "crafted": 159530,
     "distanz": {
-     "fuss": 720.4,
-     "elytra": 1677.7,
+     "fuss": 721.0,
+     "elytra": 1678.3,
      "schwimmen": 20.8,
      "boot": 11.7,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 190588,
-    "damage_taken": 259583,
-    "damage_dealt": 959367,
+    "jumps": 191063,
+    "damage_taken": 260723,
+    "damage_dealt": 959753,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 7850,
+    "drops": 7851,
     "trades": 0,
     "top_mined": [
      [
       "stone",
-      45505
+      45507
      ],
      [
       "sand",
@@ -1078,20 +1078,20 @@
   {
    "name": "TimotheToaster",
    "stats": {
-    "playtime_h": 3.6,
+    "playtime_h": 3.9,
     "deaths": 1,
     "mob_kills": 58,
-    "distance_km": 38.7,
-    "mined": 83,
-    "crafted": 1103,
+    "distance_km": 40.0,
+    "mined": 86,
+    "crafted": 1107,
     "distanz": {
-     "fuss": 7.9,
-     "elytra": 29.6,
+     "fuss": 8.5,
+     "elytra": 30.4,
      "schwimmen": 1.2
     },
-    "jumps": 2079,
-    "damage_taken": 3215,
-    "damage_dealt": 12208,
+    "jumps": 2247,
+    "damage_taken": 3571,
+    "damage_dealt": 12564,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 46,
@@ -1106,11 +1106,11 @@
       8
      ],
      [
-      "stone bricks",
-      6
+      "shulker box",
+      7
      ],
      [
-      "shulker box",
+      "stone bricks",
       6
      ],
      [
@@ -1144,8 +1144,8 @@
       31
      ],
      [
-      "chest",
-      2
+      "spruce planks",
+      4
      ]
     ]
    }
@@ -1153,25 +1153,37 @@
   {
    "name": "Manumel12",
    "stats": {
-    "playtime_h": 2.4,
+    "playtime_h": 2.9,
     "deaths": 2,
     "mob_kills": 1214,
-    "distance_km": 30.2,
-    "mined": 221,
-    "crafted": 851,
+    "distance_km": 32.5,
+    "mined": 3627,
+    "crafted": 852,
     "distanz": {
-     "fuss": 8.5,
+     "fuss": 10.8,
      "elytra": 21.6,
      "schwimmen": 0.1
     },
-    "jumps": 2462,
-    "damage_taken": 3943,
+    "jumps": 2627,
+    "damage_taken": 4130,
     "damage_dealt": 17023,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 120,
+    "drops": 129,
     "trades": 0,
     "top_mined": [
+     [
+      "netherrack",
+      3160
+     ],
+     [
+      "nether quartz ore",
+      111
+     ],
+     [
+      "blackstone",
+      84
+     ],
      [
       "deepslate diamond ore",
       62
@@ -1181,20 +1193,8 @@
       45
      ],
      [
-      "netherrack",
-      31
-     ],
-     [
-      "coal ore",
-      17
-     ],
-     [
-      "deepslate",
-      15
-     ],
-     [
-      "tuff",
-      11
+      "gravel",
+      25
      ]
     ],
     "top_crafted": [
@@ -1456,6 +1456,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.4,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-19 14:00 UTC"
+  "wann": "2026-11-19 14:30 UTC"
  }
 }
