@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-19 16:00 UTC",
+ "aktualisiert": "2026-11-19 16:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -83,21 +83,21 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 298.9,
+    "playtime_h": 299.3,
     "deaths": 51,
     "mob_kills": 9237,
-    "distance_km": 1511.3,
-    "mined": 53453,
+    "distance_km": 1511.6,
+    "mined": 53454,
     "crafted": 37229,
     "distanz": {
-     "fuss": 359.5,
+     "fuss": 359.8,
      "elytra": 1095.2,
      "schwimmen": 55.0,
      "boot": 0.4,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 134774,
+    "jumps": 134874,
     "damage_taken": 90884,
     "damage_dealt": 563005,
     "fish_caught": 0,
@@ -161,26 +161,26 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 98.6,
+    "playtime_h": 99.0,
     "deaths": 20,
-    "mob_kills": 16238,
-    "distance_km": 1007.8,
-    "mined": 32960,
+    "mob_kills": 16241,
+    "distance_km": 1012.6,
+    "mined": 33909,
     "crafted": 113141,
     "distanz": {
-     "fuss": 245.1,
-     "elytra": 755.5,
+     "fuss": 245.9,
+     "elytra": 759.5,
      "schwimmen": 4.1,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 59223,
-    "damage_taken": 89171,
-    "damage_dealt": 468365,
+    "jumps": 59471,
+    "damage_taken": 89293,
+    "damage_dealt": 468837,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2407,
+    "drops": 2441,
     "trades": 0,
     "top_mined": [
      [
@@ -193,19 +193,19 @@
      ],
      [
       "stone",
-      3108
+      3319
      ],
      [
       "dirt",
-      1401
+      1479
      ],
      [
       "dark oak log",
       1280
      ],
      [
-      "grass block",
-      1088
+      "gravel",
+      1239
      ]
     ],
     "top_crafted": [
@@ -392,25 +392,25 @@
   {
    "name": "LuisCrafter92",
    "stats": {
-    "playtime_h": 39.8,
+    "playtime_h": 39.9,
     "deaths": 11,
-    "mob_kills": 5221,
-    "distance_km": 816.3,
-    "mined": 25374,
-    "crafted": 47579,
+    "mob_kills": 5266,
+    "distance_km": 824.0,
+    "mined": 25377,
+    "crafted": 47873,
     "distanz": {
-     "fuss": 104.3,
-     "elytra": 707.4,
+     "fuss": 104.4,
+     "elytra": 714.9,
      "schwimmen": 2.9,
      "boot": 0.5,
      "pferd": 1.3
     },
-    "jumps": 28675,
-    "damage_taken": 66731,
-    "damage_dealt": 499380,
+    "jumps": 28706,
+    "damage_taken": 66851,
+    "damage_dealt": 499580,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2358,
+    "drops": 2360,
     "trades": 0,
     "top_mined": [
      [
@@ -999,6 +999,81 @@
    }
   },
   {
+   "name": "Manumel12",
+   "stats": {
+    "playtime_h": 4.7,
+    "deaths": 2,
+    "mob_kills": 1839,
+    "distance_km": 52.8,
+    "mined": 6748,
+    "crafted": 1079,
+    "distanz": {
+     "fuss": 14.6,
+     "elytra": 38.0,
+     "schwimmen": 0.2
+    },
+    "jumps": 3420,
+    "damage_taken": 4616,
+    "damage_dealt": 21319,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 1288,
+    "trades": 0,
+    "top_mined": [
+     [
+      "netherrack",
+      4112
+     ],
+     [
+      "gravel",
+      1086
+     ],
+     [
+      "dirt",
+      363
+     ],
+     [
+      "deepslate",
+      128
+     ],
+     [
+      "blackstone",
+      124
+     ],
+     [
+      "nether quartz ore",
+      111
+     ]
+    ],
+    "top_crafted": [
+     [
+      "paper",
+      762
+     ],
+     [
+      "sea lantern",
+      135
+     ],
+     [
+      "tnt",
+      51
+     ],
+     [
+      "emerald",
+      31
+     ],
+     [
+      "stick",
+      16
+     ],
+     [
+      "netherite scrap",
+      16
+     ]
+    ]
+   }
+  },
+  {
    "name": "tillomix",
    "stats": {
     "playtime_h": 4.6,
@@ -1070,81 +1145,6 @@
      [
       "deepslate",
       44
-     ]
-    ]
-   }
-  },
-  {
-   "name": "Manumel12",
-   "stats": {
-    "playtime_h": 4.2,
-    "deaths": 2,
-    "mob_kills": 1833,
-    "distance_km": 44.4,
-    "mined": 5371,
-    "crafted": 1079,
-    "distanz": {
-     "fuss": 13.2,
-     "elytra": 31.0,
-     "schwimmen": 0.2
-    },
-    "jumps": 3089,
-    "damage_taken": 4464,
-    "damage_dealt": 20093,
-    "fish_caught": 0,
-    "enchanted": 0,
-    "drops": 855,
-    "trades": 0,
-    "top_mined": [
-     [
-      "netherrack",
-      4112
-     ],
-     [
-      "gravel",
-      386
-     ],
-     [
-      "dirt",
-      175
-     ],
-     [
-      "blackstone",
-      124
-     ],
-     [
-      "nether quartz ore",
-      111
-     ],
-     [
-      "deepslate diamond ore",
-      66
-     ]
-    ],
-    "top_crafted": [
-     [
-      "paper",
-      762
-     ],
-     [
-      "sea lantern",
-      135
-     ],
-     [
-      "tnt",
-      51
-     ],
-     [
-      "emerald",
-      31
-     ],
-     [
-      "stick",
-      16
-     ],
-     [
-      "netherite scrap",
-      16
      ]
     ]
    }
@@ -1454,8 +1454,8 @@
  "server": {
   "cpu": "Intel Core i5-8500T CPU @ 2.10GHz",
   "ram_gb": 9.7,
-  "welt_aktuell_gb": 5.5,
+  "welt_aktuell_gb": 5.6,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-19 16:00 UTC"
+  "wann": "2026-11-19 16:30 UTC"
  }
 }
