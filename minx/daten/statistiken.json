@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-18 23:30 UTC",
+ "aktualisiert": "2026-11-19 00:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -1227,20 +1227,20 @@
   {
    "name": "TimotheToaster",
    "stats": {
-    "playtime_h": 1.3,
+    "playtime_h": 1.4,
     "deaths": 0,
-    "mob_kills": 32,
-    "distance_km": 27.2,
+    "mob_kills": 34,
+    "distance_km": 30.5,
     "mined": 58,
     "crafted": 296,
     "distanz": {
-     "fuss": 3.9,
-     "elytra": 22.3,
-     "schwimmen": 0.9
+     "fuss": 4.2,
+     "elytra": 25.2,
+     "schwimmen": 1.1
     },
-    "jumps": 912,
-    "damage_taken": 825,
-    "damage_dealt": 5866,
+    "jumps": 1005,
+    "damage_taken": 1062,
+    "damage_dealt": 6268,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 10,
@@ -1456,6 +1456,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.4,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-18 23:30 UTC"
+  "wann": "2026-11-19 00:00 UTC"
  }
 }
