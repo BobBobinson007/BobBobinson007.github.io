@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-19 21:00 UTC",
+ "aktualisiert": "2026-11-19 21:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -852,19 +852,19 @@
   {
    "name": "TimotheToaster",
    "stats": {
-    "playtime_h": 9.2,
+    "playtime_h": 9.5,
     "deaths": 2,
     "mob_kills": 555,
-    "distance_km": 61.8,
-    "mined": 375,
-    "crafted": 4139,
+    "distance_km": 62.7,
+    "mined": 387,
+    "crafted": 8601,
     "distanz": {
-     "fuss": 14.5,
-     "elytra": 45.2,
+     "fuss": 15.3,
+     "elytra": 45.3,
      "schwimmen": 1.5,
      "minecart": 0.6
     },
-    "jumps": 3852,
+    "jumps": 3922,
     "damage_taken": 7090,
     "damage_dealt": 35270,
     "fish_caught": 0,
@@ -881,16 +881,16 @@
       76
      ],
      [
+      "shulker box",
+      33
+     ],
+     [
       "clay",
       26
      ],
      [
       "andesite",
       22
-     ],
-     [
-      "shulker box",
-      21
      ],
      [
       "short grass",
@@ -900,15 +900,15 @@
     "top_crafted": [
      [
       "paper",
-      3549
+      7827
+     ],
+     [
+      "emerald",
+      316
      ],
      [
       "stick",
       157
-     ],
-     [
-      "emerald",
-      144
      ],
      [
       "dark oak planks",
@@ -1681,6 +1681,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.7,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-19 21:00 UTC"
+  "wann": "2026-11-19 21:30 UTC"
  }
 }
