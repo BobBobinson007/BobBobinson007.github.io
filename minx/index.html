@@ -641,7 +641,7 @@ async function laden(){
   uptimeHolen();
   route();
   try{
-    const r = await fetch('daten/statistiken.json');
+    const r = await fetch('daten/statistiken.json?v=' + Date.now());
     const frisch = await r.json();
     if(frisch && frisch.spieler && frisch.spieler.length){
       const alt = daten?.aktualisiert || '';
