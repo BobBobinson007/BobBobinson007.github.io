@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-19 17:00 UTC",
+ "aktualisiert": "2026-11-19 17:02 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -83,7 +83,7 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 299.6,
+    "playtime_h": 299.7,
     "deaths": 51,
     "mob_kills": 9237,
     "distance_km": 1512.1,
@@ -926,19 +926,19 @@
   {
    "name": "TimotheToaster",
    "stats": {
-    "playtime_h": 5.3,
+    "playtime_h": 5.4,
     "deaths": 1,
     "mob_kills": 60,
-    "distance_km": 44.8,
+    "distance_km": 45.3,
     "mined": 101,
-    "crafted": 2258,
+    "crafted": 2259,
     "distanz": {
-     "fuss": 10.2,
+     "fuss": 10.6,
      "elytra": 32.9,
      "schwimmen": 1.2,
      "minecart": 0.6
     },
-    "jumps": 2554,
+    "jumps": 2583,
     "damage_taken": 4003,
     "damage_dealt": 14812,
     "fish_caught": 0,
@@ -1454,17 +1454,17 @@
   {
    "name": "Reep811",
    "stats": {
-    "playtime_h": 0.3,
-    "deaths": 8,
+    "playtime_h": 0.4,
+    "deaths": 9,
     "mob_kills": 3,
-    "distance_km": 1.2,
-    "mined": 49,
-    "crafted": 0,
+    "distance_km": 1.5,
+    "mined": 63,
+    "crafted": 14,
     "distanz": {
-     "fuss": 1.2
+     "fuss": 1.5
     },
-    "jumps": 560,
-    "damage_taken": 2535,
+    "jumps": 809,
+    "damage_taken": 2715,
     "damage_dealt": 1013,
     "fish_caught": 0,
     "enchanted": 0,
@@ -1473,7 +1473,7 @@
     "top_mined": [
      [
       "dirt",
-      20
+      22
      ],
      [
       "spruce log",
@@ -1481,22 +1481,105 @@
      ],
      [
       "grass block",
-      7
+      8
+     ],
+     [
+      "red mushroom block",
+      6
+     ],
+     [
+      "brown mushroom block",
+      5
      ],
      [
       "birch leaves",
       5
+     ]
+    ],
+    "top_crafted": [
+     [
+      "spruce planks",
+      8
      ],
      [
-      "spruce leaves",
+      "bowl",
       4
      ],
      [
-      "powder snow",
+      "mushroom stew",
+      1
+     ],
+     [
+      "crafting table",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "FranoGames",
+   "stats": {
+    "playtime_h": 0.1,
+    "deaths": 0,
+    "mob_kills": 2,
+    "distance_km": 0.5,
+    "mined": 40,
+    "crafted": 40,
+    "distanz": {
+     "fuss": 0.5,
+     "schwimmen": 0.0
+    },
+    "jumps": 246,
+    "damage_taken": 40,
+    "damage_dealt": 140,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 1,
+    "trades": 0,
+    "top_mined": [
+     [
+      "stone",
+      24
+     ],
+     [
+      "coal ore",
+      9
+     ],
+     [
+      "oak log",
+      5
+     ],
+     [
+      "crafting table",
       2
      ]
     ],
-    "top_crafted": []
+    "top_crafted": [
+     [
+      "oak planks",
+      20
+     ],
+     [
+      "stick",
+      12
+     ],
+     [
+      "furnace",
+      1
+     ],
+     [
+      "stone sword",
+      1
+     ],
+     [
+      "wooden pickaxe",
+      1
+     ],
+     [
+      "stone shovel",
+      1
+     ]
+    ]
    }
   }
  ],
@@ -1505,6 +1588,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.6,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-19 17:00 UTC"
+  "wann": "2026-11-19 17:02 UTC"
  }
 }
