@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-19 22:30 UTC",
+ "aktualisiert": "2026-11-19 23:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -83,23 +83,23 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 301.0,
+    "playtime_h": 301.1,
     "deaths": 51,
-    "mob_kills": 9312,
-    "distance_km": 1533.5,
-    "mined": 54320,
+    "mob_kills": 9313,
+    "distance_km": 1534.4,
+    "mined": 54428,
     "crafted": 37261,
     "distanz": {
-     "fuss": 364.2,
-     "elytra": 1112.6,
+     "fuss": 364.4,
+     "elytra": 1113.2,
      "schwimmen": 55.0,
      "boot": 0.4,
      "minecart": 1.4,
      "pferd": 0.0
     },
-    "jumps": 136709,
-    "damage_taken": 91785,
-    "damage_dealt": 570668,
+    "jumps": 136757,
+    "damage_taken": 91797,
+    "damage_dealt": 570868,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 4312,
@@ -107,7 +107,7 @@
     "top_mined": [
      [
       "stone",
-      9578
+      9686
      ],
      [
       "dirt",
@@ -1681,6 +1681,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.7,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-19 22:30 UTC"
+  "wann": "2026-11-19 23:00 UTC"
  }
 }
