@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-19 19:00 UTC",
+ "aktualisiert": "2026-11-19 19:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -19,7 +19,7 @@
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 192068,
+    "jumps": 192070,
     "damage_taken": 262108,
     "damage_dealt": 961786,
     "fish_caught": 129,
@@ -239,30 +239,30 @@
   {
    "name": "the_carlito_",
    "stats": {
-    "playtime_h": 82.7,
+    "playtime_h": 83.0,
     "deaths": 120,
     "mob_kills": 147,
-    "distance_km": 171.6,
-    "mined": 16094,
+    "distance_km": 171.9,
+    "mined": 16133,
     "crafted": 55041,
     "distanz": {
-     "fuss": 83.3,
+     "fuss": 83.6,
      "elytra": 83.1,
      "schwimmen": 3.8,
      "boot": 0.3,
      "minecart": 1.1
     },
-    "jumps": 14771,
-    "damage_taken": 56537,
+    "jumps": 14799,
+    "damage_taken": 56657,
     "damage_dealt": 16819,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1291,
+    "drops": 1293,
     "trades": 0,
     "top_mined": [
      [
       "deepslate",
-      5682
+      5689
      ],
      [
       "tuff",
@@ -270,7 +270,7 @@
      ],
      [
       "cobbled deepslate",
-      883
+      892
      ],
      [
       "stone",
@@ -546,22 +546,22 @@
   {
    "name": "Captifipo",
    "stats": {
-    "playtime_h": 21.6,
+    "playtime_h": 21.8,
     "deaths": 5,
-    "mob_kills": 3233,
-    "distance_km": 362.6,
-    "mined": 17976,
+    "mob_kills": 3234,
+    "distance_km": 363.6,
+    "mined": 18248,
     "crafted": 3627,
     "distanz": {
-     "fuss": 76.4,
-     "elytra": 283.9,
+     "fuss": 77.0,
+     "elytra": 284.2,
      "schwimmen": 0.3,
      "minecart": 2.1,
      "pferd": 0.0
     },
-    "jumps": 10468,
-    "damage_taken": 13661,
-    "damage_dealt": 52011,
+    "jumps": 10612,
+    "damage_taken": 13728,
+    "damage_dealt": 52401,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 779,
@@ -573,7 +573,7 @@
      ],
      [
       "netherrack",
-      3819
+      3963
      ],
      [
       "deepslate",
@@ -623,30 +623,30 @@
   {
    "name": "Jaki_03",
    "stats": {
-    "playtime_h": 18.8,
-    "deaths": 12,
-    "mob_kills": 149,
-    "distance_km": 173.9,
-    "mined": 4850,
+    "playtime_h": 19.2,
+    "deaths": 14,
+    "mob_kills": 153,
+    "distance_km": 179.6,
+    "mined": 4900,
     "crafted": 1772,
     "distanz": {
-     "fuss": 70.4,
-     "elytra": 94.5,
+     "fuss": 72.4,
+     "elytra": 97.7,
      "schwimmen": 0.8,
      "boot": 3.1,
-     "minecart": 5.1
+     "minecart": 5.6
     },
-    "jumps": 7493,
-    "damage_taken": 11722,
-    "damage_dealt": 28471,
+    "jumps": 7763,
+    "damage_taken": 12465,
+    "damage_dealt": 29262,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 290,
+    "drops": 297,
     "trades": 0,
     "top_mined": [
      [
       "grass block",
-      1516
+      1554
      ],
      [
       "stone",
@@ -654,11 +654,11 @@
      ],
      [
       "dirt",
-      685
+      687
      ],
      [
       "cobblestone",
-      471
+      472
      ],
      [
       "rail",
@@ -666,7 +666,7 @@
      ],
      [
       "short grass",
-      125
+      128
      ]
     ],
     "top_crafted": [
@@ -926,7 +926,7 @@
   {
    "name": "TimotheToaster",
    "stats": {
-    "playtime_h": 7.2,
+    "playtime_h": 7.7,
     "deaths": 2,
     "mob_kills": 555,
     "distance_km": 60.7,
@@ -1681,6 +1681,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.7,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-19 19:00 UTC"
+  "wann": "2026-11-19 19:30 UTC"
  }
 }
