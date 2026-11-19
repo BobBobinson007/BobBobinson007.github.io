@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-19 13:00 UTC",
+ "aktualisiert": "2026-11-19 13:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 323.7,
+    "playtime_h": 323.9,
     "deaths": 104,
-    "mob_kills": 52469,
-    "distance_km": 2422.9,
-    "mined": 181904,
+    "mob_kills": 52473,
+    "distance_km": 2426.6,
+    "mined": 181908,
     "crafted": 159530,
     "distanz": {
-     "fuss": 717.8,
-     "elytra": 1670.9,
+     "fuss": 718.9,
+     "elytra": 1673.6,
      "schwimmen": 20.8,
      "boot": 11.7,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 188827,
-    "damage_taken": 256039,
-    "damage_dealt": 956889,
+    "jumps": 189405,
+    "damage_taken": 257252,
+    "damage_dealt": 957433,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 7819,
+    "drops": 7822,
     "trades": 0,
     "top_mined": [
      [
@@ -37,7 +37,7 @@
      ],
      [
       "netherrack",
-      16967
+      16968
      ],
      [
       "sandstone",
@@ -1078,20 +1078,20 @@
   {
    "name": "TimotheToaster",
    "stats": {
-    "playtime_h": 2.5,
+    "playtime_h": 3.0,
     "deaths": 0,
-    "mob_kills": 50,
-    "distance_km": 34.8,
-    "mined": 67,
+    "mob_kills": 57,
+    "distance_km": 35.6,
+    "mined": 72,
     "crafted": 1088,
     "distanz": {
-     "fuss": 5.6,
-     "elytra": 28.0,
+     "fuss": 6.0,
+     "elytra": 28.5,
      "schwimmen": 1.2
     },
-    "jumps": 1402,
-    "damage_taken": 1386,
-    "damage_dealt": 9253,
+    "jumps": 1479,
+    "damage_taken": 1673,
+    "damage_dealt": 10735,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 46,
@@ -1110,11 +1110,11 @@
       6
      ],
      [
-      "shulker box",
+      "crafting table",
       5
      ],
      [
-      "crafting table",
+      "shulker box",
       5
      ],
      [
@@ -1456,6 +1456,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.4,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-19 13:00 UTC"
+  "wann": "2026-11-19 13:30 UTC"
  }
 }
