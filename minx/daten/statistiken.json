@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-19 14:30 UTC",
+ "aktualisiert": "2026-11-19 15:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -1000,6 +1000,81 @@
    }
   },
   {
+   "name": "TimotheToaster",
+   "stats": {
+    "playtime_h": 4.4,
+    "deaths": 1,
+    "mob_kills": 58,
+    "distance_km": 40.0,
+    "mined": 86,
+    "crafted": 1107,
+    "distanz": {
+     "fuss": 8.5,
+     "elytra": 30.4,
+     "schwimmen": 1.2
+    },
+    "jumps": 2247,
+    "damage_taken": 3571,
+    "damage_dealt": 12564,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 46,
+    "trades": 0,
+    "top_mined": [
+     [
+      "short grass",
+      19
+     ],
+     [
+      "decorated pot",
+      8
+     ],
+     [
+      "shulker box",
+      7
+     ],
+     [
+      "stone bricks",
+      6
+     ],
+     [
+      "crafting table",
+      5
+     ],
+     [
+      "amethyst block",
+      4
+     ]
+    ],
+    "top_crafted": [
+     [
+      "paper",
+      759
+     ],
+     [
+      "stick",
+      149
+     ],
+     [
+      "dark oak planks",
+      88
+     ],
+     [
+      "iron ingot",
+      63
+     ],
+     [
+      "emerald",
+      31
+     ],
+     [
+      "spruce planks",
+      4
+     ]
+    ]
+   }
+  },
+  {
    "name": "BooklyTooCozy",
    "stats": {
     "playtime_h": 4.2,
@@ -1076,113 +1151,38 @@
    }
   },
   {
-   "name": "TimotheToaster",
-   "stats": {
-    "playtime_h": 3.9,
-    "deaths": 1,
-    "mob_kills": 58,
-    "distance_km": 40.0,
-    "mined": 86,
-    "crafted": 1107,
-    "distanz": {
-     "fuss": 8.5,
-     "elytra": 30.4,
-     "schwimmen": 1.2
-    },
-    "jumps": 2247,
-    "damage_taken": 3571,
-    "damage_dealt": 12564,
-    "fish_caught": 0,
-    "enchanted": 0,
-    "drops": 46,
-    "trades": 0,
-    "top_mined": [
-     [
-      "short grass",
-      19
-     ],
-     [
-      "decorated pot",
-      8
-     ],
-     [
-      "shulker box",
-      7
-     ],
-     [
-      "stone bricks",
-      6
-     ],
-     [
-      "crafting table",
-      5
-     ],
-     [
-      "amethyst block",
-      4
-     ]
-    ],
-    "top_crafted": [
-     [
-      "paper",
-      759
-     ],
-     [
-      "stick",
-      149
-     ],
-     [
-      "dark oak planks",
-      88
-     ],
-     [
-      "iron ingot",
-      63
-     ],
-     [
-      "emerald",
-      31
-     ],
-     [
-      "spruce planks",
-      4
-     ]
-    ]
-   }
-  },
-  {
    "name": "Manumel12",
    "stats": {
-    "playtime_h": 2.9,
+    "playtime_h": 3.4,
     "deaths": 2,
-    "mob_kills": 1214,
-    "distance_km": 32.5,
-    "mined": 3627,
-    "crafted": 852,
+    "mob_kills": 1829,
+    "distance_km": 37.7,
+    "mined": 4642,
+    "crafted": 1071,
     "distanz": {
-     "fuss": 10.8,
-     "elytra": 21.6,
+     "fuss": 12.4,
+     "elytra": 25.2,
      "schwimmen": 0.1
     },
-    "jumps": 2627,
-    "damage_taken": 4130,
-    "damage_dealt": 17023,
+    "jumps": 2884,
+    "damage_taken": 4405,
+    "damage_dealt": 19393,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 129,
+    "drops": 822,
     "trades": 0,
     "top_mined": [
      [
       "netherrack",
-      3160
+      4112
+     ],
+     [
+      "blackstone",
+      124
      ],
      [
       "nether quartz ore",
       111
-     ],
-     [
-      "blackstone",
-      84
      ],
      [
       "deepslate diamond ore",
@@ -1194,13 +1194,13 @@
      ],
      [
       "gravel",
-      25
+      27
      ]
     ],
     "top_crafted": [
      [
       "paper",
-      576
+      762
      ],
      [
       "sea lantern",
@@ -1212,15 +1212,15 @@
      ],
      [
       "emerald",
-      24
+      31
      ],
      [
       "stick",
       16
      ],
      [
-      "birch planks",
-      12
+      "netherite scrap",
+      16
      ]
     ]
    }
@@ -1456,6 +1456,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.4,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-19 14:30 UTC"
+  "wann": "2026-11-19 15:00 UTC"
  }
 }
