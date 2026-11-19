@@ -1,27 +1,27 @@
 {
- "aktualisiert": "2026-11-19 17:02 UTC",
+ "aktualisiert": "2026-11-19 17:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 324.8,
+    "playtime_h": 325.1,
     "deaths": 105,
-    "mob_kills": 52479,
-    "distance_km": 2433.7,
-    "mined": 181923,
+    "mob_kills": 52481,
+    "distance_km": 2435.0,
+    "mined": 181925,
     "crafted": 159530,
     "distanz": {
-     "fuss": 721.1,
-     "elytra": 1678.3,
+     "fuss": 721.3,
+     "elytra": 1679.5,
      "schwimmen": 20.9,
      "boot": 11.7,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 191137,
-    "damage_taken": 260840,
-    "damage_dealt": 959804,
+    "jumps": 191218,
+    "damage_taken": 260923,
+    "damage_dealt": 960002,
     "fish_caught": 129,
     "enchanted": 0,
     "drops": 7853,
@@ -83,21 +83,21 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 299.7,
+    "playtime_h": 299.9,
     "deaths": 51,
     "mob_kills": 9237,
-    "distance_km": 1512.1,
+    "distance_km": 1515.8,
     "mined": 53454,
     "crafted": 37229,
     "distanz": {
-     "fuss": 360.3,
-     "elytra": 1095.2,
+     "fuss": 360.4,
+     "elytra": 1098.9,
      "schwimmen": 55.0,
      "boot": 0.4,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 135043,
+    "jumps": 135050,
     "damage_taken": 90898,
     "damage_dealt": 563005,
     "fish_caught": 0,
@@ -926,33 +926,41 @@
   {
    "name": "TimotheToaster",
    "stats": {
-    "playtime_h": 5.4,
+    "playtime_h": 5.8,
     "deaths": 1,
-    "mob_kills": 60,
-    "distance_km": 45.3,
-    "mined": 101,
-    "crafted": 2259,
+    "mob_kills": 461,
+    "distance_km": 51.5,
+    "mined": 195,
+    "crafted": 4075,
     "distanz": {
-     "fuss": 10.6,
-     "elytra": 32.9,
-     "schwimmen": 1.2,
+     "fuss": 11.6,
+     "elytra": 38.0,
+     "schwimmen": 1.3,
      "minecart": 0.6
     },
-    "jumps": 2583,
-    "damage_taken": 4003,
-    "damage_dealt": 14812,
+    "jumps": 2896,
+    "damage_taken": 4469,
+    "damage_dealt": 18336,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 47,
+    "drops": 62,
     "trades": 0,
     "top_mined": [
      [
+      "deepslate",
+      64
+     ],
+     [
       "short grass",
-      19
+      20
      ],
      [
       "shulker box",
-      14
+      20
+     ],
+     [
+      "stone",
+      10
      ],
      [
       "decorated pot",
@@ -961,40 +969,32 @@
      [
       "stone bricks",
       6
-     ],
-     [
-      "crafting table",
-      5
-     ],
-     [
-      "amethyst block",
-      4
      ]
     ],
     "top_crafted": [
      [
       "paper",
-      1845
+      3549
      ],
      [
       "stick",
       149
      ],
      [
-      "dark oak planks",
-      88
+      "emerald",
+      144
      ],
      [
-      "emerald",
-      76
+      "dark oak planks",
+      88
      ],
      [
       "iron ingot",
       63
      ],
      [
-      "spruce planks",
-      20
+      "wind charge",
+      28
      ]
     ]
    }
@@ -1378,6 +1378,80 @@
    }
   },
   {
+   "name": "Reep811",
+   "stats": {
+    "playtime_h": 0.8,
+    "deaths": 10,
+    "mob_kills": 6,
+    "distance_km": 2.3,
+    "mined": 244,
+    "crafted": 76,
+    "distanz": {
+     "fuss": 2.3,
+     "schwimmen": 0.0
+    },
+    "jumps": 1357,
+    "damage_taken": 3045,
+    "damage_dealt": 1172,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 1,
+    "trades": 0,
+    "top_mined": [
+     [
+      "red mushroom block",
+      48
+     ],
+     [
+      "dirt",
+      37
+     ],
+     [
+      "powder snow",
+      34
+     ],
+     [
+      "stone",
+      29
+     ],
+     [
+      "brown mushroom block",
+      18
+     ],
+     [
+      "iron ore",
+      16
+     ]
+    ],
+    "top_crafted": [
+     [
+      "spruce planks",
+      24
+     ],
+     [
+      "iron ingot",
+      14
+     ],
+     [
+      "stick",
+      12
+     ],
+     [
+      "mushroom stew",
+      8
+     ],
+     [
+      "bowl",
+      4
+     ],
+     [
+      "copper ingot",
+      3
+     ]
+    ]
+   }
+  },
+  {
    "name": "Itz_Rick",
    "stats": {
     "playtime_h": 0.8,
@@ -1452,132 +1526,76 @@
    }
   },
   {
-   "name": "Reep811",
-   "stats": {
-    "playtime_h": 0.4,
-    "deaths": 9,
-    "mob_kills": 3,
-    "distance_km": 1.5,
-    "mined": 63,
-    "crafted": 14,
-    "distanz": {
-     "fuss": 1.5
-    },
-    "jumps": 809,
-    "damage_taken": 2715,
-    "damage_dealt": 1013,
-    "fish_caught": 0,
-    "enchanted": 0,
-    "drops": 0,
-    "trades": 0,
-    "top_mined": [
-     [
-      "dirt",
-      22
-     ],
-     [
-      "spruce log",
-      8
-     ],
-     [
-      "grass block",
-      8
-     ],
-     [
-      "red mushroom block",
-      6
-     ],
-     [
-      "brown mushroom block",
-      5
-     ],
-     [
-      "birch leaves",
-      5
-     ]
-    ],
-    "top_crafted": [
-     [
-      "spruce planks",
-      8
-     ],
-     [
-      "bowl",
-      4
-     ],
-     [
-      "mushroom stew",
-      1
-     ],
-     [
-      "crafting table",
-      1
-     ]
-    ]
-   }
-  },
-  {
    "name": "FranoGames",
    "stats": {
-    "playtime_h": 0.1,
+    "playtime_h": 0.5,
     "deaths": 0,
-    "mob_kills": 2,
-    "distance_km": 0.5,
-    "mined": 40,
-    "crafted": 40,
+    "mob_kills": 49,
+    "distance_km": 3.1,
+    "mined": 153,
+    "crafted": 80,
     "distanz": {
-     "fuss": 0.5,
-     "schwimmen": 0.0
+     "fuss": 2.2,
+     "schwimmen": 0.1,
+     "boot": 0.8
     },
-    "jumps": 246,
-    "damage_taken": 40,
-    "damage_dealt": 140,
+    "jumps": 1284,
+    "damage_taken": 963,
+    "damage_dealt": 5485,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1,
+    "drops": 3,
     "trades": 0,
     "top_mined": [
      [
       "stone",
-      24
+      84
      ],
      [
       "coal ore",
-      9
+      22
      ],
      [
       "oak log",
-      5
+      9
      ],
      [
-      "crafting table",
-      2
+      "iron ore",
+      9
+     ],
+     [
+      "dirt",
+      7
+     ],
+     [
+      "oak leaves",
+      5
      ]
     ],
     "top_crafted": [
      [
       "oak planks",
-      20
+      24
+     ],
+     [
+      "cooked beef",
+      16
      ],
      [
       "stick",
       12
      ],
      [
+      "iron ingot",
+      8
+     ],
+     [
+      "cooked porkchop",
+      8
+     ],
+     [
       "furnace",
-      1
-     ],
-     [
-      "stone sword",
-      1
-     ],
-     [
-      "wooden pickaxe",
-      1
-     ],
-     [
-      "stone shovel",
-      1
+      2
      ]
     ]
    }
@@ -1586,8 +1604,8 @@
  "server": {
   "cpu": "Intel Core i5-8500T CPU @ 2.10GHz",
   "ram_gb": 9.7,
-  "welt_aktuell_gb": 5.6,
+  "welt_aktuell_gb": 5.7,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-19 17:02 UTC"
+  "wann": "2026-11-19 17:30 UTC"
  }
 }
