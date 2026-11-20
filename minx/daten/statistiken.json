@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-20 15:00 UTC",
+ "aktualisiert": "2026-11-20 15:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 328.7,
+    "playtime_h": 329.2,
     "deaths": 105,
-    "mob_kills": 52574,
-    "distance_km": 2497.6,
-    "mined": 182301,
-    "crafted": 160799,
+    "mob_kills": 53088,
+    "distance_km": 2506.9,
+    "mined": 182337,
+    "crafted": 160819,
     "distanz": {
-     "fuss": 727.9,
-     "elytra": 1733.9,
-     "schwimmen": 22.4,
+     "fuss": 728.5,
+     "elytra": 1742.6,
+     "schwimmen": 22.5,
      "boot": 11.7,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 195314,
-    "damage_taken": 265614,
-    "damage_dealt": 974115,
+    "jumps": 195693,
+    "damage_taken": 266293,
+    "damage_dealt": 976195,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 7968,
+    "drops": 8001,
     "trades": 0,
     "top_mined": [
      [
@@ -87,7 +87,7 @@
     "deaths": 51,
     "mob_kills": 9313,
     "distance_km": 1534.4,
-    "mined": 54428,
+    "mined": 54469,
     "crafted": 37261,
     "distanz": {
      "fuss": 364.4,
@@ -97,7 +97,7 @@
      "minecart": 1.4,
      "pferd": 0.0
     },
-    "jumps": 136757,
+    "jumps": 136760,
     "damage_taken": 91797,
     "damage_dealt": 570868,
     "fish_caught": 0,
@@ -107,7 +107,7 @@
     "top_mined": [
      [
       "stone",
-      9686
+      9727
      ],
      [
       "dirt",
@@ -161,26 +161,26 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 101.1,
+    "playtime_h": 101.4,
     "deaths": 20,
-    "mob_kills": 16350,
-    "distance_km": 1047.1,
-    "mined": 34128,
-    "crafted": 113277,
+    "mob_kills": 16449,
+    "distance_km": 1050.7,
+    "mined": 34380,
+    "crafted": 113316,
     "distanz": {
-     "fuss": 253.7,
-     "elytra": 785.1,
-     "schwimmen": 5.1,
+     "fuss": 254.3,
+     "elytra": 788.0,
+     "schwimmen": 5.3,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 61538,
-    "damage_taken": 91855,
-    "damage_dealt": 483219,
+    "jumps": 61705,
+    "damage_taken": 91933,
+    "damage_dealt": 483679,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2511,
+    "drops": 2535,
     "trades": 0,
     "top_mined": [
      [
@@ -193,11 +193,11 @@
      ],
      [
       "stone",
-      3422
+      3484
      ],
      [
       "dirt",
-      1479
+      1481
      ],
      [
       "dark oak log",
@@ -239,21 +239,21 @@
   {
    "name": "the_carlito_",
    "stats": {
-    "playtime_h": 83.4,
+    "playtime_h": 83.6,
     "deaths": 122,
     "mob_kills": 148,
-    "distance_km": 179.2,
-    "mined": 16187,
+    "distance_km": 185.0,
+    "mined": 16192,
     "crafted": 55042,
     "distanz": {
-     "fuss": 84.6,
-     "elytra": 88.9,
-     "schwimmen": 4.3,
+     "fuss": 84.9,
+     "elytra": 94.4,
+     "schwimmen": 4.4,
      "boot": 0.3,
      "minecart": 1.1
     },
-    "jumps": 14959,
-    "damage_taken": 57416,
+    "jumps": 14981,
+    "damage_taken": 57506,
     "damage_dealt": 17019,
     "fish_caught": 0,
     "enchanted": 0,
@@ -700,21 +700,21 @@
   {
    "name": "Hagen13juhhuh",
    "stats": {
-    "playtime_h": 15.9,
+    "playtime_h": 16.2,
     "deaths": 32,
     "mob_kills": 266,
-    "distance_km": 126.9,
-    "mined": 5345,
-    "crafted": 6033,
+    "distance_km": 131.5,
+    "mined": 5347,
+    "crafted": 6123,
     "distanz": {
-     "fuss": 45.8,
-     "elytra": 80.4,
+     "fuss": 46.7,
+     "elytra": 84.2,
      "schwimmen": 0.0,
      "boot": 0.1,
      "minecart": 0.5
     },
-    "jumps": 7012,
-    "damage_taken": 20924,
+    "jumps": 7079,
+    "damage_taken": 20991,
     "damage_dealt": 17089,
     "fish_caught": 0,
     "enchanted": 0,
@@ -757,7 +757,7 @@
      ],
      [
       "stone brick slab",
-      384
+      474
      ],
      [
       "cobblestone stairs",
@@ -1376,6 +1376,81 @@
    }
   },
   {
+   "name": "Devolos2358",
+   "stats": {
+    "playtime_h": 1.3,
+    "deaths": 0,
+    "mob_kills": 707,
+    "distance_km": 22.9,
+    "mined": 102,
+    "crafted": 1677,
+    "distanz": {
+     "fuss": 4.0,
+     "elytra": 18.8,
+     "schwimmen": 0.1
+    },
+    "jumps": 855,
+    "damage_taken": 1079,
+    "damage_dealt": 3419,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 54,
+    "trades": 0,
+    "top_mined": [
+     [
+      "sugar cane",
+      37
+     ],
+     [
+      "oak log",
+      10
+     ],
+     [
+      "iron door",
+      9
+     ],
+     [
+      "black shulker box",
+      6
+     ],
+     [
+      "oak leaves",
+      6
+     ],
+     [
+      "birch log",
+      6
+     ]
+    ],
+    "top_crafted": [
+     [
+      "paper",
+      1431
+     ],
+     [
+      "emerald",
+      106
+     ],
+     [
+      "oak planks",
+      40
+     ],
+     [
+      "diamond",
+      27
+     ],
+     [
+      "birch planks",
+      24
+     ],
+     [
+      "stick",
+      24
+     ]
+    ]
+   }
+  },
+  {
    "name": "FranoGames",
    "stats": {
     "playtime_h": 1.3,
@@ -1523,81 +1598,6 @@
      [
       "bucket",
       2
-     ]
-    ]
-   }
-  },
-  {
-   "name": "Devolos2358",
-   "stats": {
-    "playtime_h": 0.8,
-    "deaths": 0,
-    "mob_kills": 2,
-    "distance_km": 13.1,
-    "mined": 38,
-    "crafted": 458,
-    "distanz": {
-     "fuss": 2.5,
-     "elytra": 10.6,
-     "schwimmen": 0.1
-    },
-    "jumps": 614,
-    "damage_taken": 416,
-    "damage_dealt": 387,
-    "fish_caught": 0,
-    "enchanted": 0,
-    "drops": 21,
-    "trades": 0,
-    "top_mined": [
-     [
-      "black shulker box",
-      6
-     ],
-     [
-      "birch log",
-      6
-     ],
-     [
-      "iron door",
-      5
-     ],
-     [
-      "oak log",
-      5
-     ],
-     [
-      "stone bricks",
-      3
-     ],
-     [
-      "heavy weighted pressure plate",
-      3
-     ]
-    ],
-    "top_crafted": [
-     [
-      "paper",
-      309
-     ],
-     [
-      "emerald",
-      58
-     ],
-     [
-      "birch planks",
-      24
-     ],
-     [
-      "stick",
-      20
-     ],
-     [
-      "oak planks",
-      20
-     ],
-     [
-      "iron ingot",
-      9
      ]
     ]
    }
@@ -1756,6 +1756,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 6.1,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-20 15:00 UTC"
+  "wann": "2026-11-20 15:30 UTC"
  }
 }
