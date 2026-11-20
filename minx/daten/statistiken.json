@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-20 08:00 UTC",
+ "aktualisiert": "2026-11-20 08:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -1681,6 +1681,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 5.7,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-20 08:00 UTC"
+  "wann": "2026-11-20 08:30 UTC"
  }
 }
