@@ -1,35 +1,35 @@
 {
- "aktualisiert": "2026-11-20 13:00 UTC",
+ "aktualisiert": "2026-11-20 13:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 326.7,
+    "playtime_h": 327.2,
     "deaths": 105,
-    "mob_kills": 52510,
-    "distance_km": 2460.7,
-    "mined": 181968,
+    "mob_kills": 52554,
+    "distance_km": 2480.3,
+    "mined": 181993,
     "crafted": 159530,
     "distanz": {
-     "fuss": 723.0,
-     "elytra": 1702.3,
-     "schwimmen": 22.0,
+     "fuss": 724.1,
+     "elytra": 1720.8,
+     "schwimmen": 22.1,
      "boot": 11.7,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 192411,
-    "damage_taken": 262808,
-    "damage_dealt": 968529,
+    "jumps": 193055,
+    "damage_taken": 263555,
+    "damage_dealt": 970189,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 7876,
+    "drops": 7923,
     "trades": 0,
     "top_mined": [
      [
       "stone",
-      45511
+      45512
      ],
      [
       "sand",
@@ -161,26 +161,26 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 99.3,
+    "playtime_h": 99.6,
     "deaths": 20,
-    "mob_kills": 16250,
-    "distance_km": 1015.4,
-    "mined": 34055,
+    "mob_kills": 16255,
+    "distance_km": 1021.3,
+    "mined": 34057,
     "crafted": 113141,
     "distanz": {
-     "fuss": 246.6,
-     "elytra": 760.6,
+     "fuss": 247.2,
+     "elytra": 765.9,
      "schwimmen": 5.0,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 59624,
-    "damage_taken": 89936,
-    "damage_dealt": 469129,
+    "jumps": 59741,
+    "damage_taken": 89990,
+    "damage_dealt": 470075,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2443,
+    "drops": 2478,
     "trades": 0,
     "top_mined": [
      [
@@ -852,24 +852,24 @@
   {
    "name": "TimotheToaster",
    "stats": {
-    "playtime_h": 9.7,
+    "playtime_h": 10.2,
     "deaths": 2,
-    "mob_kills": 676,
-    "distance_km": 66.2,
-    "mined": 395,
-    "crafted": 8612,
+    "mob_kills": 1699,
+    "distance_km": 90.7,
+    "mined": 458,
+    "crafted": 8630,
     "distanz": {
-     "fuss": 15.6,
-     "elytra": 48.4,
+     "fuss": 16.6,
+     "elytra": 71.9,
      "schwimmen": 1.6,
      "minecart": 0.6
     },
-    "jumps": 4066,
-    "damage_taken": 8488,
-    "damage_dealt": 40680,
+    "jumps": 4462,
+    "damage_taken": 10097,
+    "damage_dealt": 47723,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 90,
+    "drops": 94,
     "trades": 0,
     "top_mined": [
      [
@@ -885,16 +885,16 @@
       35
      ],
      [
+      "dark oak log",
+      31
+     ],
+     [
       "clay",
       26
      ],
      [
       "andesite",
       22
-     ],
-     [
-      "short grass",
-      20
      ]
     ],
     "top_crafted": [
@@ -908,7 +908,7 @@
      ],
      [
       "stick",
-      157
+      165
      ],
      [
       "dark oak planks",
@@ -1679,8 +1679,8 @@
  "server": {
   "cpu": "Intel Core i5-8500T CPU @ 2.10GHz",
   "ram_gb": 9.7,
-  "welt_aktuell_gb": 5.8,
+  "welt_aktuell_gb": 6.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-20 13:00 UTC"
+  "wann": "2026-11-20 13:30 UTC"
  }
 }
