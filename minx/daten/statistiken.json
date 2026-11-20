@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-20 12:30 UTC",
+ "aktualisiert": "2026-11-20 13:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 326.2,
+    "playtime_h": 326.7,
     "deaths": 105,
-    "mob_kills": 52487,
-    "distance_km": 2445.6,
-    "mined": 181950,
+    "mob_kills": 52510,
+    "distance_km": 2460.7,
+    "mined": 181968,
     "crafted": 159530,
     "distanz": {
-     "fuss": 722.5,
-     "elytra": 1688.8,
-     "schwimmen": 21.0,
+     "fuss": 723.0,
+     "elytra": 1702.3,
+     "schwimmen": 22.0,
      "boot": 11.7,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 192070,
-    "damage_taken": 262108,
-    "damage_dealt": 961786,
+    "jumps": 192411,
+    "damage_taken": 262808,
+    "damage_dealt": 968529,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 7870,
+    "drops": 7876,
     "trades": 0,
     "top_mined": [
      [
@@ -852,24 +852,24 @@
   {
    "name": "TimotheToaster",
    "stats": {
-    "playtime_h": 9.5,
+    "playtime_h": 9.7,
     "deaths": 2,
-    "mob_kills": 555,
-    "distance_km": 62.7,
-    "mined": 387,
-    "crafted": 8601,
+    "mob_kills": 676,
+    "distance_km": 66.2,
+    "mined": 395,
+    "crafted": 8612,
     "distanz": {
-     "fuss": 15.3,
-     "elytra": 45.3,
-     "schwimmen": 1.5,
+     "fuss": 15.6,
+     "elytra": 48.4,
+     "schwimmen": 1.6,
      "minecart": 0.6
     },
-    "jumps": 3922,
-    "damage_taken": 7090,
-    "damage_dealt": 35270,
+    "jumps": 4066,
+    "damage_taken": 8488,
+    "damage_dealt": 40680,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 86,
+    "drops": 90,
     "trades": 0,
     "top_mined": [
      [
@@ -882,7 +882,7 @@
      ],
      [
       "shulker box",
-      33
+      35
      ],
      [
       "clay",
@@ -1679,8 +1679,8 @@
  "server": {
   "cpu": "Intel Core i5-8500T CPU @ 2.10GHz",
   "ram_gb": 9.7,
-  "welt_aktuell_gb": 5.7,
+  "welt_aktuell_gb": 5.8,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-20 12:30 UTC"
+  "wann": "2026-11-20 13:00 UTC"
  }
 }
