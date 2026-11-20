@@ -1,14 +1,14 @@
 {
- "aktualisiert": "2026-11-20 21:30 UTC",
+ "aktualisiert": "2026-11-20 22:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 332.9,
+    "playtime_h": 333.4,
     "deaths": 116,
     "mob_kills": 53098,
-    "distance_km": 2546.5,
+    "distance_km": 2546.6,
     "mined": 183142,
     "crafted": 161288,
     "distanz": {
@@ -161,26 +161,26 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 107.3,
+    "playtime_h": 107.8,
     "deaths": 25,
-    "mob_kills": 17235,
-    "distance_km": 1136.0,
-    "mined": 36973,
-    "crafted": 133409,
+    "mob_kills": 17237,
+    "distance_km": 1140.4,
+    "mined": 37157,
+    "crafted": 133438,
     "distanz": {
-     "fuss": 273.8,
-     "elytra": 853.4,
+     "fuss": 275.3,
+     "elytra": 856.4,
      "schwimmen": 5.6,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 65099,
-    "damage_taken": 103143,
-    "damage_dealt": 507409,
+    "jumps": 65358,
+    "damage_taken": 103258,
+    "damage_dealt": 507766,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2714,
+    "drops": 2715,
     "trades": 0,
     "top_mined": [
      [
@@ -189,7 +189,7 @@
      ],
      [
       "stone",
-      3912
+      3924
      ],
      [
       "oak leaves",
@@ -231,7 +231,7 @@
      ],
      [
       "gold ingot",
-      7462
+      7479
      ]
     ]
    }
@@ -928,23 +928,23 @@
   {
    "name": "Manumel12",
    "stats": {
-    "playtime_h": 10.1,
+    "playtime_h": 10.6,
     "deaths": 3,
-    "mob_kills": 3194,
-    "distance_km": 134.9,
-    "mined": 10229,
-    "crafted": 8021,
+    "mob_kills": 3199,
+    "distance_km": 136.6,
+    "mined": 10430,
+    "crafted": 13115,
     "distanz": {
-     "fuss": 35.7,
+     "fuss": 37.4,
      "elytra": 98.4,
      "schwimmen": 0.8
     },
-    "jumps": 6130,
-    "damage_taken": 9946,
-    "damage_dealt": 44046,
+    "jumps": 6386,
+    "damage_taken": 10210,
+    "damage_dealt": 44936,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1540,
+    "drops": 1878,
     "trades": 0,
     "top_mined": [
      [
@@ -957,15 +957,15 @@
      ],
      [
       "stone",
-      658
+      774
      ],
      [
       "dirt",
-      484
+      488
      ],
      [
       "carrots",
-      257
+      308
      ],
      [
       "coal ore",
@@ -974,28 +974,28 @@
     ],
     "top_crafted": [
      [
+      "gold nugget",
+      5756
+     ],
+     [
       "paper",
       2304
      ],
      [
-      "gold nugget",
-      2277
+      "golden carrot",
+      1004
+     ],
+     [
+      "gold ingot",
+      900
      ],
      [
       "sea lantern",
       855
      ],
      [
-      "blue stained glass",
-      728
-     ],
-     [
       "bone meal",
-      579
-     ],
-     [
-      "golden carrot",
-      285
+      771
      ]
     ]
    }
@@ -1756,6 +1756,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 6.7,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-20 21:30 UTC"
+  "wann": "2026-11-20 22:00 UTC"
  }
 }
