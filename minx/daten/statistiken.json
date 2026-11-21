@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-21 15:00 UTC",
+ "aktualisiert": "2026-11-21 15:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -86,20 +86,20 @@
     "playtime_h": 310.9,
     "deaths": 55,
     "mob_kills": 10162,
-    "distance_km": 1699.0,
-    "mined": 72524,
+    "distance_km": 1699.3,
+    "mined": 72588,
     "crafted": 37807,
     "distanz": {
-     "fuss": 391.1,
+     "fuss": 391.4,
      "elytra": 1249.3,
      "schwimmen": 56.6,
      "boot": 0.4,
      "minecart": 1.6,
      "pferd": 0.0
     },
-    "jumps": 144575,
-    "damage_taken": 105059,
-    "damage_dealt": 613615,
+    "jumps": 144649,
+    "damage_taken": 105153,
+    "damage_dealt": 613757,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 4516,
@@ -316,24 +316,24 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 53.8,
+    "playtime_h": 54.1,
     "deaths": 30,
-    "mob_kills": 4472,
-    "distance_km": 393.7,
-    "mined": 24090,
-    "crafted": 22601,
+    "mob_kills": 4527,
+    "distance_km": 396.0,
+    "mined": 24098,
+    "crafted": 22602,
     "distanz": {
-     "fuss": 146.8,
-     "elytra": 243.0,
+     "fuss": 147.5,
+     "elytra": 244.6,
      "schwimmen": 1.7,
      "boot": 2.2
     },
-    "jumps": 32424,
-    "damage_taken": 71984,
-    "damage_dealt": 295932,
+    "jumps": 32535,
+    "damage_taken": 72663,
+    "damage_dealt": 298601,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1280,
+    "drops": 1300,
     "trades": 0,
     "top_mined": [
      [
@@ -928,23 +928,23 @@
   {
    "name": "Manumel12",
    "stats": {
-    "playtime_h": 10.9,
+    "playtime_h": 11.3,
     "deaths": 3,
-    "mob_kills": 3209,
-    "distance_km": 139.8,
-    "mined": 10705,
-    "crafted": 16943,
+    "mob_kills": 4774,
+    "distance_km": 144.5,
+    "mined": 10726,
+    "crafted": 17687,
     "distanz": {
-     "fuss": 38.4,
-     "elytra": 100.4,
+     "fuss": 39.2,
+     "elytra": 104.4,
      "schwimmen": 0.9
     },
-    "jumps": 6475,
-    "damage_taken": 10252,
-    "damage_dealt": 45191,
+    "jumps": 6579,
+    "damage_taken": 10580,
+    "damage_dealt": 52284,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2751,
+    "drops": 2752,
     "trades": 0,
     "top_mined": [
      [
@@ -961,7 +961,7 @@
      ],
      [
       "carrots",
-      572
+      588
      ],
      [
       "dirt",
@@ -979,7 +979,7 @@
      ],
      [
       "paper",
-      2304
+      2880
      ],
      [
       "golden carrot",
@@ -991,7 +991,7 @@
      ],
      [
       "sea lantern",
-      855
+      983
      ],
      [
       "bone meal",
@@ -1077,23 +1077,23 @@
   {
    "name": "Devolos2358",
    "stats": {
-    "playtime_h": 4.8,
+    "playtime_h": 4.9,
     "deaths": 1,
-    "mob_kills": 1515,
-    "distance_km": 94.3,
-    "mined": 12828,
+    "mob_kills": 1978,
+    "distance_km": 98.4,
+    "mined": 12848,
     "crafted": 4561,
     "distanz": {
-     "fuss": 15.1,
-     "elytra": 79.1,
+     "fuss": 15.4,
+     "elytra": 82.9,
      "schwimmen": 0.1
     },
-    "jumps": 3723,
-    "damage_taken": 8454,
-    "damage_dealt": 12051,
+    "jumps": 3768,
+    "damage_taken": 8614,
+    "damage_dealt": 13813,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 178,
+    "drops": 182,
     "trades": 0,
     "top_mined": [
      [
@@ -1756,6 +1756,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 6.8,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-21 15:00 UTC"
+  "wann": "2026-11-21 15:30 UTC"
  }
 }
