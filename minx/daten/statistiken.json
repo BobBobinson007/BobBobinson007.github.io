@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-21 17:30 UTC",
+ "aktualisiert": "2026-11-21 18:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -239,30 +239,30 @@
   {
    "name": "the_carlito_",
    "stats": {
-    "playtime_h": 87.0,
+    "playtime_h": 87.5,
     "deaths": 126,
     "mob_kills": 154,
-    "distance_km": 219.3,
-    "mined": 17411,
-    "crafted": 56128,
+    "distance_km": 221.0,
+    "mined": 17938,
+    "crafted": 56134,
     "distanz": {
-     "fuss": 91.2,
+     "fuss": 92.3,
      "elytra": 120.4,
      "schwimmen": 5.8,
      "boot": 0.3,
-     "minecart": 1.6
+     "minecart": 2.3
     },
-    "jumps": 16175,
+    "jumps": 16202,
     "damage_taken": 60336,
     "damage_dealt": 17769,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1308,
+    "drops": 1309,
     "trades": 0,
     "top_mined": [
      [
       "deepslate",
-      5948
+      6363
      ],
      [
       "stone",
@@ -270,11 +270,11 @@
      ],
      [
       "tuff",
-      1134
+      1155
      ],
      [
       "cobbled deepslate",
-      903
+      904
      ],
      [
       "oak leaves",
@@ -308,7 +308,7 @@
      ],
      [
       "stick",
-      1121
+      1125
      ]
     ]
    }
@@ -316,24 +316,24 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 55.2,
+    "playtime_h": 55.5,
     "deaths": 30,
-    "mob_kills": 4605,
-    "distance_km": 416.3,
-    "mined": 24198,
-    "crafted": 23287,
+    "mob_kills": 4609,
+    "distance_km": 421.5,
+    "mined": 24216,
+    "crafted": 24185,
     "distanz": {
-     "fuss": 150.1,
-     "elytra": 262.2,
+     "fuss": 150.9,
+     "elytra": 266.5,
      "schwimmen": 1.9,
      "boot": 2.2
     },
-    "jumps": 33152,
-    "damage_taken": 74034,
-    "damage_dealt": 306349,
+    "jumps": 33363,
+    "damage_taken": 74862,
+    "damage_dealt": 307849,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1333,
+    "drops": 1340,
     "trades": 0,
     "top_mined": [
      [
@@ -1824,6 +1824,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 6.8,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-21 17:30 UTC"
+  "wann": "2026-11-21 18:00 UTC"
  }
 }
