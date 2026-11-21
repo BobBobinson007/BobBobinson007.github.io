@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-21 16:00 UTC",
+ "aktualisiert": "2026-11-21 16:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -316,29 +316,29 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 54.1,
+    "playtime_h": 54.4,
     "deaths": 30,
-    "mob_kills": 4527,
-    "distance_km": 397.0,
-    "mined": 24108,
-    "crafted": 22627,
+    "mob_kills": 4535,
+    "distance_km": 403.0,
+    "mined": 24142,
+    "crafted": 23272,
     "distanz": {
-     "fuss": 147.6,
-     "elytra": 245.5,
+     "fuss": 148.5,
+     "elytra": 250.6,
      "schwimmen": 1.7,
      "boot": 2.2
     },
-    "jumps": 32551,
-    "damage_taken": 72695,
-    "damage_dealt": 298602,
+    "jumps": 32736,
+    "damage_taken": 72993,
+    "damage_dealt": 300062,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1302,
+    "drops": 1311,
     "trades": 0,
     "top_mined": [
      [
       "dirt",
-      4354
+      4356
      ],
      [
       "netherrack",
@@ -346,7 +346,7 @@
      ],
      [
       "grass block",
-      3169
+      3170
      ],
      [
       "stone",
@@ -383,8 +383,8 @@
       1266
      ],
      [
-      "cherry planks",
-      1148
+      "gold nugget",
+      1152
      ]
     ]
    }
@@ -1679,21 +1679,21 @@
   {
    "name": "F0x_XY",
    "stats": {
-    "playtime_h": 0.4,
-    "deaths": 0,
-    "mob_kills": 3,
-    "distance_km": 5.5,
-    "mined": 20,
+    "playtime_h": 0.8,
+    "deaths": 1,
+    "mob_kills": 11,
+    "distance_km": 19.7,
+    "mined": 32,
     "crafted": 18,
     "distanz": {
-     "fuss": 1.3,
-     "elytra": 3.0,
+     "fuss": 2.2,
+     "elytra": 16.3,
      "schwimmen": 0.1,
      "minecart": 1.1
     },
-    "jumps": 592,
-    "damage_taken": 250,
-    "damage_dealt": 560,
+    "jumps": 824,
+    "damage_taken": 776,
+    "damage_dealt": 2691,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 0,
@@ -1712,16 +1712,16 @@
       3
      ],
      [
-      "ladder",
-      1
+      "purpur stairs",
+      3
      ],
      [
-      "crafting table",
-      1
+      "smooth stone",
+      2
      ],
      [
-      "oak planks",
-      1
+      "purpur block",
+      2
      ]
     ],
     "top_crafted": [
@@ -1824,6 +1824,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 6.8,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-21 16:00 UTC"
+  "wann": "2026-11-21 16:30 UTC"
  }
 }
