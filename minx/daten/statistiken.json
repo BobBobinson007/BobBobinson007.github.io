@@ -1,26 +1,26 @@
 {
- "aktualisiert": "2026-11-21 00:00 UTC",
+ "aktualisiert": "2026-11-21 00:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 335.3,
+    "playtime_h": 335.6,
     "deaths": 116,
     "mob_kills": 53196,
-    "distance_km": 2554.0,
+    "distance_km": 2554.9,
     "mined": 183184,
     "crafted": 161288,
     "distanz": {
-     "fuss": 735.2,
-     "elytra": 1782.6,
-     "schwimmen": 22.8,
+     "fuss": 735.3,
+     "elytra": 1783.3,
+     "schwimmen": 23.0,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 198825,
-    "damage_taken": 279275,
+    "jumps": 198853,
+    "damage_taken": 279277,
     "damage_dealt": 983767,
     "fish_caught": 129,
     "enchanted": 0,
@@ -83,26 +83,26 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 307.4,
+    "playtime_h": 307.8,
     "deaths": 55,
-    "mob_kills": 9972,
-    "distance_km": 1676.4,
-    "mined": 65501,
-    "crafted": 37539,
+    "mob_kills": 9980,
+    "distance_km": 1682.5,
+    "mined": 65517,
+    "crafted": 37541,
     "distanz": {
-     "fuss": 384.4,
-     "elytra": 1233.4,
+     "fuss": 385.4,
+     "elytra": 1238.5,
      "schwimmen": 56.6,
      "boot": 0.4,
      "minecart": 1.6,
      "pferd": 0.0
     },
-    "jumps": 143066,
-    "damage_taken": 103691,
-    "damage_dealt": 609084,
+    "jumps": 143273,
+    "damage_taken": 103932,
+    "damage_dealt": 609189,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4463,
+    "drops": 4471,
     "trades": 0,
     "top_mined": [
      [
@@ -1756,6 +1756,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 6.7,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-21 00:00 UTC"
+  "wann": "2026-11-21 00:30 UTC"
  }
 }
