@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-21 15:30 UTC",
+ "aktualisiert": "2026-11-21 16:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -83,26 +83,26 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 310.9,
+    "playtime_h": 311.1,
     "deaths": 55,
-    "mob_kills": 10162,
-    "distance_km": 1699.3,
-    "mined": 72588,
+    "mob_kills": 10214,
+    "distance_km": 1701.4,
+    "mined": 72589,
     "crafted": 37807,
     "distanz": {
-     "fuss": 391.4,
-     "elytra": 1249.3,
+     "fuss": 391.7,
+     "elytra": 1251.1,
      "schwimmen": 56.6,
      "boot": 0.4,
      "minecart": 1.6,
      "pferd": 0.0
     },
-    "jumps": 144649,
-    "damage_taken": 105153,
-    "damage_dealt": 613757,
+    "jumps": 144799,
+    "damage_taken": 105208,
+    "damage_dealt": 617818,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4516,
+    "drops": 4571,
     "trades": 0,
     "top_mined": [
      [
@@ -319,21 +319,21 @@
     "playtime_h": 54.1,
     "deaths": 30,
     "mob_kills": 4527,
-    "distance_km": 396.0,
-    "mined": 24098,
-    "crafted": 22602,
+    "distance_km": 397.0,
+    "mined": 24108,
+    "crafted": 22627,
     "distanz": {
-     "fuss": 147.5,
-     "elytra": 244.6,
+     "fuss": 147.6,
+     "elytra": 245.5,
      "schwimmen": 1.7,
      "boot": 2.2
     },
-    "jumps": 32535,
-    "damage_taken": 72663,
-    "damage_dealt": 298601,
+    "jumps": 32551,
+    "damage_taken": 72695,
+    "damage_dealt": 298602,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1300,
+    "drops": 1302,
     "trades": 0,
     "top_mined": [
      [
@@ -368,7 +368,7 @@
      ],
      [
       "stick",
-      2436
+      2440
      ],
      [
       "spruce planks",
@@ -928,23 +928,23 @@
   {
    "name": "Manumel12",
    "stats": {
-    "playtime_h": 11.3,
+    "playtime_h": 11.6,
     "deaths": 3,
     "mob_kills": 4774,
-    "distance_km": 144.5,
-    "mined": 10726,
-    "crafted": 17687,
+    "distance_km": 146.0,
+    "mined": 10938,
+    "crafted": 21556,
     "distanz": {
-     "fuss": 39.2,
-     "elytra": 104.4,
+     "fuss": 40.1,
+     "elytra": 105.0,
      "schwimmen": 0.9
     },
-    "jumps": 6579,
-    "damage_taken": 10580,
-    "damage_dealt": 52284,
+    "jumps": 6618,
+    "damage_taken": 10785,
+    "damage_dealt": 52312,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2752,
+    "drops": 2965,
     "trades": 0,
     "top_mined": [
      [
@@ -957,11 +957,11 @@
      ],
      [
       "stone",
-      774
+      778
      ],
      [
       "carrots",
-      588
+      771
      ],
      [
       "dirt",
@@ -975,7 +975,7 @@
     "top_crafted": [
      [
       "gold nugget",
-      8070
+      10819
      ],
      [
       "paper",
@@ -983,11 +983,11 @@
      ],
      [
       "golden carrot",
-      2036
+      2590
      ],
      [
       "gold ingot",
-      1381
+      1940
      ],
      [
       "sea lantern",
@@ -1077,23 +1077,23 @@
   {
    "name": "Devolos2358",
    "stats": {
-    "playtime_h": 4.9,
+    "playtime_h": 5.3,
     "deaths": 1,
-    "mob_kills": 1978,
-    "distance_km": 98.4,
-    "mined": 12848,
-    "crafted": 4561,
+    "mob_kills": 1980,
+    "distance_km": 103.0,
+    "mined": 12859,
+    "crafted": 5260,
     "distanz": {
-     "fuss": 15.4,
-     "elytra": 82.9,
+     "fuss": 16.4,
+     "elytra": 86.6,
      "schwimmen": 0.1
     },
-    "jumps": 3768,
-    "damage_taken": 8614,
-    "damage_dealt": 13813,
+    "jumps": 4047,
+    "damage_taken": 8760,
+    "damage_dealt": 13969,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 182,
+    "drops": 195,
     "trades": 0,
     "top_mined": [
      [
@@ -1127,24 +1127,24 @@
       4074
      ],
      [
+      "gold nugget",
+      566
+     ],
+     [
       "emerald",
       220
      ],
      [
+      "gold ingot",
+      90
+     ],
+     [
+      "golden carrot",
+      70
+     ],
+     [
       "diamond",
       54
-     ],
-     [
-      "oak planks",
-      40
-     ],
-     [
-      "birch planks",
-      32
-     ],
-     [
-      "gold ingot",
-      27
      ]
     ]
    }
@@ -1304,23 +1304,23 @@
   {
    "name": "Reep811",
    "stats": {
-    "playtime_h": 1.9,
+    "playtime_h": 2.2,
     "deaths": 13,
-    "mob_kills": 28,
-    "distance_km": 21.4,
-    "mined": 471,
+    "mob_kills": 33,
+    "distance_km": 22.5,
+    "mined": 498,
     "crafted": 151,
     "distanz": {
-     "fuss": 4.9,
+     "fuss": 5.9,
      "elytra": 16.4,
-     "schwimmen": 0.1
+     "schwimmen": 0.2
     },
-    "jumps": 2887,
-    "damage_taken": 5452,
-    "damage_dealt": 4480,
+    "jumps": 3554,
+    "damage_taken": 5796,
+    "damage_dealt": 5580,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 10,
+    "drops": 16,
     "trades": 0,
     "top_mined": [
      [
@@ -1677,6 +1677,74 @@
    }
   },
   {
+   "name": "F0x_XY",
+   "stats": {
+    "playtime_h": 0.4,
+    "deaths": 0,
+    "mob_kills": 3,
+    "distance_km": 5.5,
+    "mined": 20,
+    "crafted": 18,
+    "distanz": {
+     "fuss": 1.3,
+     "elytra": 3.0,
+     "schwimmen": 0.1,
+     "minecart": 1.1
+    },
+    "jumps": 592,
+    "damage_taken": 250,
+    "damage_dealt": 560,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 0,
+    "trades": 0,
+    "top_mined": [
+     [
+      "short grass",
+      8
+     ],
+     [
+      "oak log",
+      5
+     ],
+     [
+      "oak leaves",
+      3
+     ],
+     [
+      "ladder",
+      1
+     ],
+     [
+      "crafting table",
+      1
+     ],
+     [
+      "oak planks",
+      1
+     ]
+    ],
+    "top_crafted": [
+     [
+      "oak planks",
+      12
+     ],
+     [
+      "stick",
+      4
+     ],
+     [
+      "shield",
+      1
+     ],
+     [
+      "crafting table",
+      1
+     ]
+    ]
+   }
+  },
+  {
    "name": "2_Much_Marloo",
    "stats": {
     "playtime_h": 0.3,
@@ -1756,6 +1824,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 6.8,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-21 15:30 UTC"
+  "wann": "2026-11-21 16:00 UTC"
  }
 }
