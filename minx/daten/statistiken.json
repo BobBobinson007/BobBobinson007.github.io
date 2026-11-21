@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-21 17:00 UTC",
+ "aktualisiert": "2026-11-21 17:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -239,30 +239,30 @@
   {
    "name": "the_carlito_",
    "stats": {
-    "playtime_h": 86.5,
+    "playtime_h": 87.0,
     "deaths": 126,
     "mob_kills": 154,
-    "distance_km": 218.0,
-    "mined": 17024,
-    "crafted": 55990,
+    "distance_km": 219.3,
+    "mined": 17411,
+    "crafted": 56128,
     "distanz": {
-     "fuss": 90.2,
+     "fuss": 91.2,
      "elytra": 120.4,
      "schwimmen": 5.8,
      "boot": 0.3,
-     "minecart": 1.4
+     "minecart": 1.6
     },
-    "jumps": 16111,
+    "jumps": 16175,
     "damage_taken": 60336,
     "damage_dealt": 17769,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1300,
+    "drops": 1308,
     "trades": 0,
     "top_mined": [
      [
       "deepslate",
-      5689
+      5948
      ],
      [
       "stone",
@@ -270,11 +270,11 @@
      ],
      [
       "tuff",
-      1124
+      1134
      ],
      [
       "cobbled deepslate",
-      899
+      903
      ],
      [
       "oak leaves",
@@ -308,7 +308,7 @@
      ],
      [
       "stick",
-      1114
+      1121
      ]
     ]
    }
@@ -316,24 +316,24 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 54.8,
+    "playtime_h": 55.2,
     "deaths": 30,
-    "mob_kills": 4552,
-    "distance_km": 409.2,
-    "mined": 24189,
+    "mob_kills": 4605,
+    "distance_km": 416.3,
+    "mined": 24198,
     "crafted": 23287,
     "distanz": {
-     "fuss": 149.3,
-     "elytra": 255.9,
-     "schwimmen": 1.7,
+     "fuss": 150.1,
+     "elytra": 262.2,
+     "schwimmen": 1.9,
      "boot": 2.2
     },
-    "jumps": 32947,
-    "damage_taken": 73644,
-    "damage_dealt": 303801,
+    "jumps": 33152,
+    "damage_taken": 74034,
+    "damage_dealt": 306349,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1323,
+    "drops": 1333,
     "trades": 0,
     "top_mined": [
      [
@@ -346,7 +346,7 @@
      ],
      [
       "grass block",
-      3171
+      3172
      ],
      [
       "stone",
@@ -1824,6 +1824,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 6.8,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-21 17:00 UTC"
+  "wann": "2026-11-21 17:30 UTC"
  }
 }
