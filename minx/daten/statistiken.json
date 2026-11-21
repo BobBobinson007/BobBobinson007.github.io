@@ -1,11 +1,11 @@
 {
- "aktualisiert": "2026-11-21 11:30 UTC",
+ "aktualisiert": "2026-11-21 12:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 336.0,
+    "playtime_h": 336.2,
     "deaths": 116,
     "mob_kills": 53196,
     "distance_km": 2555.9,
@@ -1756,6 +1756,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 6.7,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-21 11:30 UTC"
+  "wann": "2026-11-21 12:00 UTC"
  }
 }
