@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-21 18:00 UTC",
+ "aktualisiert": "2026-11-21 18:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -239,30 +239,30 @@
   {
    "name": "the_carlito_",
    "stats": {
-    "playtime_h": 87.5,
-    "deaths": 126,
+    "playtime_h": 88.0,
+    "deaths": 127,
     "mob_kills": 154,
-    "distance_km": 221.0,
-    "mined": 17938,
-    "crafted": 56134,
+    "distance_km": 223.4,
+    "mined": 17959,
+    "crafted": 56135,
     "distanz": {
-     "fuss": 92.3,
-     "elytra": 120.4,
-     "schwimmen": 5.8,
+     "fuss": 93.0,
+     "elytra": 121.0,
+     "schwimmen": 6.0,
      "boot": 0.3,
-     "minecart": 2.3
+     "minecart": 3.0
     },
-    "jumps": 16202,
-    "damage_taken": 60336,
+    "jumps": 16268,
+    "damage_taken": 61622,
     "damage_dealt": 17769,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1309,
+    "drops": 1323,
     "trades": 0,
     "top_mined": [
      [
       "deepslate",
-      6363
+      6371
      ],
      [
       "stone",
@@ -274,7 +274,7 @@
      ],
      [
       "cobbled deepslate",
-      904
+      907
      ],
      [
       "oak leaves",
@@ -316,29 +316,29 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 55.5,
+    "playtime_h": 56.0,
     "deaths": 30,
-    "mob_kills": 4609,
-    "distance_km": 421.5,
-    "mined": 24216,
-    "crafted": 24185,
+    "mob_kills": 4757,
+    "distance_km": 428.0,
+    "mined": 24318,
+    "crafted": 24189,
     "distanz": {
-     "fuss": 150.9,
-     "elytra": 266.5,
+     "fuss": 151.9,
+     "elytra": 272.0,
      "schwimmen": 1.9,
      "boot": 2.2
     },
-    "jumps": 33363,
-    "damage_taken": 74862,
-    "damage_dealt": 307849,
+    "jumps": 33558,
+    "damage_taken": 76341,
+    "damage_dealt": 309347,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1340,
+    "drops": 1400,
     "trades": 0,
     "top_mined": [
      [
       "dirt",
-      4357
+      4358
      ],
      [
       "netherrack",
@@ -346,7 +346,7 @@
      ],
      [
       "grass block",
-      3172
+      3245
      ],
      [
       "stone",
@@ -358,7 +358,7 @@
      ],
      [
       "deepslate",
-      1041
+      1043
      ]
     ],
     "top_crafted": [
@@ -1824,6 +1824,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 6.8,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-21 18:00 UTC"
+  "wann": "2026-11-21 18:30 UTC"
  }
 }
