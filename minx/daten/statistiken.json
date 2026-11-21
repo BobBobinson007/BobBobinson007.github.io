@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-21 16:30 UTC",
+ "aktualisiert": "2026-11-21 17:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -239,7 +239,7 @@
   {
    "name": "the_carlito_",
    "stats": {
-    "playtime_h": 86.4,
+    "playtime_h": 86.5,
     "deaths": 126,
     "mob_kills": 154,
     "distance_km": 218.0,
@@ -316,29 +316,29 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 54.4,
+    "playtime_h": 54.8,
     "deaths": 30,
-    "mob_kills": 4535,
-    "distance_km": 403.0,
-    "mined": 24142,
-    "crafted": 23272,
+    "mob_kills": 4552,
+    "distance_km": 409.2,
+    "mined": 24189,
+    "crafted": 23287,
     "distanz": {
-     "fuss": 148.5,
-     "elytra": 250.6,
+     "fuss": 149.3,
+     "elytra": 255.9,
      "schwimmen": 1.7,
      "boot": 2.2
     },
-    "jumps": 32736,
-    "damage_taken": 72993,
-    "damage_dealt": 300062,
+    "jumps": 32947,
+    "damage_taken": 73644,
+    "damage_dealt": 303801,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1311,
+    "drops": 1323,
     "trades": 0,
     "top_mined": [
      [
       "dirt",
-      4356
+      4357
      ],
      [
       "netherrack",
@@ -346,7 +346,7 @@
      ],
      [
       "grass block",
-      3170
+      3171
      ],
      [
       "stone",
@@ -1824,6 +1824,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 6.8,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-21 16:30 UTC"
+  "wann": "2026-11-21 17:00 UTC"
  }
 }
