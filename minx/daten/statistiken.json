@@ -1,27 +1,27 @@
 {
- "aktualisiert": "2026-11-21 00:30 UTC",
+ "aktualisiert": "2026-11-21 01:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 335.6,
+    "playtime_h": 336.0,
     "deaths": 116,
     "mob_kills": 53196,
-    "distance_km": 2554.9,
-    "mined": 183184,
+    "distance_km": 2555.9,
+    "mined": 183185,
     "crafted": 161288,
     "distanz": {
-     "fuss": 735.3,
-     "elytra": 1783.3,
+     "fuss": 735.6,
+     "elytra": 1784.0,
      "schwimmen": 23.0,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 198853,
-    "damage_taken": 279277,
-    "damage_dealt": 983767,
+    "jumps": 198953,
+    "damage_taken": 279769,
+    "damage_dealt": 983837,
     "fish_caught": 129,
     "enchanted": 0,
     "drops": 8085,
@@ -83,39 +83,39 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 307.8,
+    "playtime_h": 308.1,
     "deaths": 55,
-    "mob_kills": 9980,
-    "distance_km": 1682.5,
-    "mined": 65517,
+    "mob_kills": 9985,
+    "distance_km": 1686.0,
+    "mined": 71872,
     "crafted": 37541,
     "distanz": {
-     "fuss": 385.4,
-     "elytra": 1238.5,
+     "fuss": 387.7,
+     "elytra": 1239.7,
      "schwimmen": 56.6,
      "boot": 0.4,
      "minecart": 1.6,
      "pferd": 0.0
     },
-    "jumps": 143273,
-    "damage_taken": 103932,
-    "damage_dealt": 609189,
+    "jumps": 143443,
+    "damage_taken": 104099,
+    "damage_dealt": 610011,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4471,
+    "drops": 4474,
     "trades": 0,
     "top_mined": [
      [
       "stone",
-      17422
+      23470
      ],
      [
       "dirt",
-      8842
+      9049
      ],
      [
       "grass block",
-      8257
+      8258
      ],
      [
       "sand",
@@ -1756,6 +1756,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 6.7,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-21 00:30 UTC"
+  "wann": "2026-11-21 01:00 UTC"
  }
 }
