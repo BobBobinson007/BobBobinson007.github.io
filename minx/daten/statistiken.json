@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-22 17:30 UTC",
+ "aktualisiert": "2026-11-22 18:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -427,7 +427,7 @@
     "playtime_h": 60.8,
     "deaths": 30,
     "mob_kills": 5740,
-    "distance_km": 525.7,
+    "distance_km": 525.8,
     "mined": 25074,
     "crafted": 25471,
     "distanz": {
@@ -731,6 +731,112 @@
    }
   },
   {
+   "name": "Jaki_03",
+   "stats": {
+    "playtime_h": 22.0,
+    "deaths": 17,
+    "mob_kills": 187,
+    "distance_km": 205.8,
+    "mined": 6049,
+    "crafted": 2416,
+    "distanz": {
+     "fuss": 88.2,
+     "elytra": 108.0,
+     "schwimmen": 0.8,
+     "boot": 3.1,
+     "minecart": 5.8
+    },
+    "jumps": 9126,
+    "damage_taken": 14507,
+    "damage_dealt": 35669,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 332,
+    "trades": 0,
+    "totems": 0,
+    "player_kills": 0,
+    "killed_by_player": 3,
+    "top_killed_by": [
+     [
+      "skeleton",
+      4
+     ],
+     [
+      "Spieler",
+      3
+     ],
+     [
+      "creeper",
+      3
+     ],
+     [
+      "drowned",
+      3
+     ],
+     [
+      "wolf",
+      1
+     ],
+     [
+      "zombie",
+      1
+     ]
+    ],
+    "top_mined": [
+     [
+      "grass block",
+      2002
+     ],
+     [
+      "stone",
+      1046
+     ],
+     [
+      "dirt",
+      973
+     ],
+     [
+      "cobblestone",
+      482
+     ],
+     [
+      "rail",
+      206
+     ],
+     [
+      "short grass",
+      201
+     ]
+    ],
+    "top_crafted": [
+     [
+      "paper",
+      576
+     ],
+     [
+      "rail",
+      512
+     ],
+     [
+      "stone brick stairs",
+      244
+     ],
+     [
+      "stone brick slab",
+      240
+     ],
+     [
+      "black stained glass",
+      224
+     ],
+     [
+      "stone brick wall",
+      114
+     ]
+    ]
+   }
+  },
+  {
    "name": "Captifipo",
    "stats": {
     "playtime_h": 21.9,
@@ -816,112 +922,6 @@
      [
       "stone",
       202
-     ]
-    ]
-   }
-  },
-  {
-   "name": "Jaki_03",
-   "stats": {
-    "playtime_h": 21.9,
-    "deaths": 17,
-    "mob_kills": 187,
-    "distance_km": 205.4,
-    "mined": 6035,
-    "crafted": 2414,
-    "distanz": {
-     "fuss": 87.8,
-     "elytra": 108.0,
-     "schwimmen": 0.8,
-     "boot": 3.1,
-     "minecart": 5.8
-    },
-    "jumps": 9095,
-    "damage_taken": 14505,
-    "damage_dealt": 35669,
-    "fish_caught": 0,
-    "enchanted": 0,
-    "drops": 332,
-    "trades": 0,
-    "totems": 0,
-    "player_kills": 0,
-    "killed_by_player": 3,
-    "top_killed_by": [
-     [
-      "skeleton",
-      4
-     ],
-     [
-      "Spieler",
-      3
-     ],
-     [
-      "creeper",
-      3
-     ],
-     [
-      "drowned",
-      3
-     ],
-     [
-      "wolf",
-      1
-     ],
-     [
-      "zombie",
-      1
-     ]
-    ],
-    "top_mined": [
-     [
-      "grass block",
-      1996
-     ],
-     [
-      "stone",
-      1046
-     ],
-     [
-      "dirt",
-      965
-     ],
-     [
-      "cobblestone",
-      482
-     ],
-     [
-      "rail",
-      206
-     ],
-     [
-      "short grass",
-      201
-     ]
-    ],
-    "top_crafted": [
-     [
-      "paper",
-      576
-     ],
-     [
-      "rail",
-      512
-     ],
-     [
-      "stone brick stairs",
-      244
-     ],
-     [
-      "stone brick slab",
-      240
-     ],
-     [
-      "black stained glass",
-      224
-     ],
-     [
-      "stone brick wall",
-      114
      ]
     ]
    }
@@ -4017,6 +4017,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-22 17:30 UTC"
+  "wann": "2026-11-22 18:00 UTC"
  }
 }
