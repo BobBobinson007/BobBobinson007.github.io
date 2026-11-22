@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-22 15:18 UTC",
+ "aktualisiert": "2026-11-22 15:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 339.1,
+    "playtime_h": 339.4,
     "deaths": 117,
-    "mob_kills": 53364,
-    "distance_km": 2576.7,
-    "mined": 183554,
+    "mob_kills": 53426,
+    "distance_km": 2578.6,
+    "mined": 183556,
     "crafted": 161288,
     "distanz": {
-     "fuss": 740.0,
-     "elytra": 1800.2,
-     "schwimmen": 23.1,
+     "fuss": 740.2,
+     "elytra": 1801.9,
+     "schwimmen": 23.2,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 200858,
-    "damage_taken": 283021,
-    "damage_dealt": 1002635,
+    "jumps": 200962,
+    "damage_taken": 283500,
+    "damage_dealt": 1006395,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8139,
+    "drops": 8143,
     "trades": 0,
     "totems": 0,
     "player_kills": 35,
@@ -424,24 +424,24 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 59.0,
+    "playtime_h": 59.2,
     "deaths": 30,
-    "mob_kills": 5240,
-    "distance_km": 502.4,
-    "mined": 24637,
-    "crafted": 25324,
+    "mob_kills": 5317,
+    "distance_km": 503.5,
+    "mined": 24842,
+    "crafted": 25385,
     "distanz": {
-     "fuss": 161.4,
+     "fuss": 162.4,
      "elytra": 336.7,
      "schwimmen": 2.2,
      "boot": 2.2
     },
-    "jumps": 35871,
-    "damage_taken": 84622,
-    "damage_dealt": 352449,
+    "jumps": 36191,
+    "damage_taken": 85272,
+    "damage_dealt": 358356,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1549,
+    "drops": 1578,
     "trades": 0,
     "totems": 0,
     "player_kills": 3,
@@ -475,7 +475,7 @@
     "top_mined": [
      [
       "dirt",
-      4368
+      4370
      ],
      [
       "netherrack",
@@ -483,11 +483,11 @@
      ],
      [
       "grass block",
-      3252
+      3253
      ],
      [
       "stone",
-      2563
+      2682
      ],
      [
       "dark oak log",
@@ -495,7 +495,7 @@
      ],
      [
       "deepslate",
-      1043
+      1083
      ]
     ],
     "top_crafted": [
@@ -4017,6 +4017,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-22 15:18 UTC"
+  "wann": "2026-11-22 15:30 UTC"
  }
 }
