@@ -1,27 +1,27 @@
 {
- "aktualisiert": "2026-11-22 19:00 UTC",
+ "aktualisiert": "2026-11-22 19:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 340.8,
+    "playtime_h": 340.9,
     "deaths": 118,
-    "mob_kills": 53487,
-    "distance_km": 2610.4,
-    "mined": 183669,
+    "mob_kills": 53490,
+    "distance_km": 2612.3,
+    "mined": 183670,
     "crafted": 161392,
     "distanz": {
-     "fuss": 742.4,
-     "elytra": 1831.0,
+     "fuss": 743.2,
+     "elytra": 1832.2,
      "schwimmen": 23.6,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 202113,
-    "damage_taken": 288527,
-    "damage_dealt": 1017344,
+    "jumps": 202570,
+    "damage_taken": 289141,
+    "damage_dealt": 1017743,
     "fish_caught": 129,
     "enchanted": 0,
     "drops": 8174,
@@ -74,7 +74,7 @@
      ],
      [
       "dirt",
-      11241
+      11242
      ],
      [
       "magma block",
@@ -733,25 +733,25 @@
   {
    "name": "Jaki_03",
    "stats": {
-    "playtime_h": 23.0,
+    "playtime_h": 23.5,
     "deaths": 17,
-    "mob_kills": 195,
-    "distance_km": 216.9,
-    "mined": 6315,
-    "crafted": 3325,
+    "mob_kills": 202,
+    "distance_km": 221.9,
+    "mined": 6384,
+    "crafted": 4055,
     "distanz": {
-     "fuss": 93.2,
-     "elytra": 114.0,
+     "fuss": 95.8,
+     "elytra": 116.5,
      "schwimmen": 0.8,
      "boot": 3.1,
      "minecart": 5.8
     },
-    "jumps": 9483,
-    "damage_taken": 14684,
-    "damage_dealt": 36902,
+    "jumps": 9681,
+    "damage_taken": 14969,
+    "damage_dealt": 37931,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 347,
+    "drops": 354,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -788,34 +788,38 @@
       2114
      ],
      [
-      "stone",
-      1046
+      "dirt",
+      1047
      ],
      [
-      "dirt",
-      1045
+      "stone",
+      1046
      ],
      [
       "cobblestone",
       482
      ],
      [
-      "short grass",
-      222
+      "stone bricks",
+      233
      ],
      [
-      "rail",
-      206
+      "short grass",
+      223
      ]
     ],
     "top_crafted": [
      [
       "stone bricks",
-      704
+      1152
      ],
      [
       "paper",
       576
+     ],
+     [
+      "stone brick slab",
+      522
      ],
      [
       "rail",
@@ -824,10 +828,6 @@
      [
       "stone brick stairs",
       352
-     ],
-     [
-      "stone brick slab",
-      240
      ],
      [
       "black stained glass",
@@ -4017,6 +4017,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-22 19:00 UTC"
+  "wann": "2026-11-22 19:30 UTC"
  }
 }
