@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-22 18:30 UTC",
+ "aktualisiert": "2026-11-22 19:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -733,25 +733,25 @@
   {
    "name": "Jaki_03",
    "stats": {
-    "playtime_h": 22.5,
+    "playtime_h": 23.0,
     "deaths": 17,
-    "mob_kills": 193,
-    "distance_km": 211.3,
-    "mined": 6258,
-    "crafted": 2797,
+    "mob_kills": 195,
+    "distance_km": 216.9,
+    "mined": 6315,
+    "crafted": 3325,
     "distanz": {
-     "fuss": 90.9,
-     "elytra": 110.7,
+     "fuss": 93.2,
+     "elytra": 114.0,
      "schwimmen": 0.8,
      "boot": 3.1,
      "minecart": 5.8
     },
-    "jumps": 9299,
-    "damage_taken": 14600,
-    "damage_dealt": 36682,
+    "jumps": 9483,
+    "damage_taken": 14684,
+    "damage_dealt": 36902,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 344,
+    "drops": 347,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -793,7 +793,7 @@
      ],
      [
       "dirt",
-      1030
+      1045
      ],
      [
       "cobblestone",
@@ -801,7 +801,7 @@
      ],
      [
       "short grass",
-      221
+      222
      ],
      [
       "rail",
@@ -809,6 +809,10 @@
      ]
     ],
     "top_crafted": [
+     [
+      "stone bricks",
+      704
+     ],
      [
       "paper",
       576
@@ -818,12 +822,8 @@
       512
      ],
      [
-      "stone bricks",
-      320
-     ],
-     [
       "stone brick stairs",
-      244
+      352
      ],
      [
       "stone brick slab",
@@ -4017,6 +4017,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-22 18:30 UTC"
+  "wann": "2026-11-22 19:00 UTC"
  }
 }
