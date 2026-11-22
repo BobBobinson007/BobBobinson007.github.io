@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-22 11:30 UTC",
+ "aktualisiert": "2026-11-22 12:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -316,24 +316,24 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 56.3,
+    "playtime_h": 56.8,
     "deaths": 30,
-    "mob_kills": 4760,
-    "distance_km": 433.0,
-    "mined": 24334,
-    "crafted": 24189,
+    "mob_kills": 4932,
+    "distance_km": 442.8,
+    "mined": 24363,
+    "crafted": 24685,
     "distanz": {
-     "fuss": 153.2,
-     "elytra": 275.5,
+     "fuss": 154.8,
+     "elytra": 283.7,
      "schwimmen": 2.1,
      "boot": 2.2
     },
-    "jumps": 33851,
-    "damage_taken": 77566,
-    "damage_dealt": 310068,
+    "jumps": 34237,
+    "damage_taken": 78201,
+    "damage_dealt": 312894,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1424,
+    "drops": 1440,
     "trades": 0,
     "top_mined": [
      [
@@ -346,7 +346,7 @@
      ],
      [
       "grass block",
-      3247
+      3250
      ],
      [
       "stone",
@@ -368,7 +368,7 @@
      ],
      [
       "stick",
-      2440
+      2472
      ],
      [
       "spruce planks",
@@ -379,12 +379,12 @@
       2199
      ],
      [
-      "bone meal",
-      1266
+      "gold nugget",
+      1512
      ],
      [
-      "gold nugget",
-      1152
+      "bone meal",
+      1266
      ]
     ]
    }
@@ -1824,6 +1824,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 6.8,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-22 11:30 UTC"
+  "wann": "2026-11-22 12:00 UTC"
  }
 }
