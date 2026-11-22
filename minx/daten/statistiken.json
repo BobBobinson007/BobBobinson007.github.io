@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-22 20:30 UTC",
+ "aktualisiert": "2026-11-22 21:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -19,8 +19,8 @@
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 202649,
-    "damage_taken": 289812,
+    "jumps": 202657,
+    "damage_taken": 289854,
     "damage_dealt": 1017743,
     "fish_caught": 129,
     "enchanted": 0,
@@ -4017,6 +4017,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-22 20:30 UTC"
+  "wann": "2026-11-22 21:00 UTC"
  }
 }
