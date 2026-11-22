@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-22 19:30 UTC",
+ "aktualisiert": "2026-11-22 20:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 340.9,
-    "deaths": 118,
+    "playtime_h": 341.3,
+    "deaths": 119,
     "mob_kills": 53490,
-    "distance_km": 2612.3,
+    "distance_km": 2614.1,
     "mined": 183670,
     "crafted": 161392,
     "distanz": {
-     "fuss": 743.2,
-     "elytra": 1832.2,
+     "fuss": 743.4,
+     "elytra": 1833.8,
      "schwimmen": 23.6,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 202570,
-    "damage_taken": 289141,
+    "jumps": 202649,
+    "damage_taken": 289812,
     "damage_dealt": 1017743,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8174,
+    "drops": 8181,
     "trades": 0,
     "totems": 0,
     "player_kills": 35,
@@ -51,7 +51,7 @@
       2
      ],
      [
-      "enderman",
+      "spider",
       2
      ]
     ],
@@ -112,26 +112,26 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 314.1,
+    "playtime_h": 314.2,
     "deaths": 55,
     "mob_kills": 10343,
-    "distance_km": 1726.7,
-    "mined": 72974,
+    "distance_km": 1731.2,
+    "mined": 72978,
     "crafted": 37883,
     "distanz": {
-     "fuss": 396.1,
-     "elytra": 1271.9,
+     "fuss": 396.5,
+     "elytra": 1276.0,
      "schwimmen": 56.7,
      "boot": 0.4,
      "minecart": 1.6,
      "pferd": 0.0
     },
-    "jumps": 146811,
-    "damage_taken": 107807,
-    "damage_dealt": 623888,
+    "jumps": 146925,
+    "damage_taken": 107990,
+    "damage_dealt": 624218,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4651,
+    "drops": 4652,
     "trades": 0,
     "totems": 0,
     "player_kills": 27,
@@ -733,25 +733,25 @@
   {
    "name": "Jaki_03",
    "stats": {
-    "playtime_h": 23.5,
+    "playtime_h": 23.9,
     "deaths": 17,
-    "mob_kills": 202,
-    "distance_km": 221.9,
-    "mined": 6384,
-    "crafted": 4055,
+    "mob_kills": 207,
+    "distance_km": 226.3,
+    "mined": 6627,
+    "crafted": 4221,
     "distanz": {
-     "fuss": 95.8,
-     "elytra": 116.5,
+     "fuss": 98.0,
+     "elytra": 118.6,
      "schwimmen": 0.8,
      "boot": 3.1,
      "minecart": 5.8
     },
-    "jumps": 9681,
-    "damage_taken": 14969,
-    "damage_dealt": 37931,
+    "jumps": 9882,
+    "damage_taken": 15163,
+    "damage_dealt": 38633,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 354,
+    "drops": 360,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -801,25 +801,25 @@
      ],
      [
       "stone bricks",
-      233
+      301
      ],
      [
       "short grass",
-      223
+      226
      ]
     ],
     "top_crafted": [
      [
       "stone bricks",
-      1152
+      1216
+     ],
+     [
+      "stone brick slab",
+      624
      ],
      [
       "paper",
       576
-     ],
-     [
-      "stone brick slab",
-      522
      ],
      [
       "rail",
@@ -2211,6 +2211,12 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-22T19:42:14Z",
+   "typ": "tod",
+   "spieler": "BobBobinson007",
+   "text": "was slain by Spider"
+  },
   {
    "t": "2026-11-22T16:49:39Z",
    "typ": "advancement",
@@ -4004,19 +4010,13 @@
    "typ": "advancement",
    "spieler": "TheRealDmseife",
    "text": "husbandry - tame an animal"
-  },
-  {
-   "t": "2026-11-11T18:30:11Z",
-   "typ": "advancement",
-   "spieler": "Wemmbuuufaker",
-   "text": "adventure - trim with any armor pattern"
   }
  ],
  "server": {
   "cpu": "Intel Core i5-8500T CPU @ 2.10GHz",
-  "ram_gb": 9.7,
+  "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-22 19:30 UTC"
+  "wann": "2026-11-22 20:00 UTC"
  }
 }
