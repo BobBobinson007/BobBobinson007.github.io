@@ -1,27 +1,27 @@
 {
- "aktualisiert": "2026-11-22 18:00 UTC",
+ "aktualisiert": "2026-11-22 18:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 340.7,
+    "playtime_h": 340.8,
     "deaths": 118,
-    "mob_kills": 53485,
-    "distance_km": 2608.3,
-    "mined": 183668,
+    "mob_kills": 53487,
+    "distance_km": 2610.4,
+    "mined": 183669,
     "crafted": 161392,
     "distanz": {
-     "fuss": 742.3,
-     "elytra": 1829.0,
+     "fuss": 742.4,
+     "elytra": 1831.0,
      "schwimmen": 23.6,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 202031,
-    "damage_taken": 288038,
-    "damage_dealt": 1016864,
+    "jumps": 202113,
+    "damage_taken": 288527,
+    "damage_dealt": 1017344,
     "fish_caught": 129,
     "enchanted": 0,
     "drops": 8174,
@@ -634,17 +634,17 @@
     "playtime_h": 32.1,
     "deaths": 38,
     "mob_kills": 2907,
-    "distance_km": 437.3,
+    "distance_km": 437.4,
     "mined": 26628,
     "crafted": 5383,
     "distanz": {
-     "fuss": 96.1,
+     "fuss": 96.2,
      "elytra": 337.2,
      "schwimmen": 1.2,
      "boot": 1.2,
      "pferd": 1.6
     },
-    "jumps": 21560,
+    "jumps": 21575,
     "damage_taken": 39346,
     "damage_dealt": 97745,
     "fish_caught": 0,
@@ -733,25 +733,25 @@
   {
    "name": "Jaki_03",
    "stats": {
-    "playtime_h": 22.0,
+    "playtime_h": 22.5,
     "deaths": 17,
-    "mob_kills": 187,
-    "distance_km": 205.8,
-    "mined": 6049,
-    "crafted": 2416,
+    "mob_kills": 193,
+    "distance_km": 211.3,
+    "mined": 6258,
+    "crafted": 2797,
     "distanz": {
-     "fuss": 88.2,
-     "elytra": 108.0,
+     "fuss": 90.9,
+     "elytra": 110.7,
      "schwimmen": 0.8,
      "boot": 3.1,
      "minecart": 5.8
     },
-    "jumps": 9126,
-    "damage_taken": 14507,
-    "damage_dealt": 35669,
+    "jumps": 9299,
+    "damage_taken": 14600,
+    "damage_dealt": 36682,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 332,
+    "drops": 344,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -785,7 +785,7 @@
     "top_mined": [
      [
       "grass block",
-      2002
+      2114
      ],
      [
       "stone",
@@ -793,19 +793,19 @@
      ],
      [
       "dirt",
-      973
+      1030
      ],
      [
       "cobblestone",
       482
      ],
      [
-      "rail",
-      206
+      "short grass",
+      221
      ],
      [
-      "short grass",
-      201
+      "rail",
+      206
      ]
     ],
     "top_crafted": [
@@ -818,6 +818,10 @@
       512
      ],
      [
+      "stone bricks",
+      320
+     ],
+     [
       "stone brick stairs",
       244
      ],
@@ -828,10 +832,6 @@
      [
       "black stained glass",
       224
-     ],
-     [
-      "stone brick wall",
-      114
      ]
     ]
    }
@@ -4017,6 +4017,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-22 18:00 UTC"
+  "wann": "2026-11-22 18:30 UTC"
  }
 }
