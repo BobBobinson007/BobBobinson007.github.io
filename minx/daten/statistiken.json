@@ -1,27 +1,27 @@
 {
- "aktualisiert": "2026-11-22 15:04 UTC",
+ "aktualisiert": "2026-11-22 15:09 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 338.9,
+    "playtime_h": 339.1,
     "deaths": 117,
-    "mob_kills": 53243,
-    "distance_km": 2576.4,
+    "mob_kills": 53316,
+    "distance_km": 2576.6,
     "mined": 183554,
     "crafted": 161288,
     "distanz": {
-     "fuss": 739.8,
-     "elytra": 1800.1,
+     "fuss": 739.9,
+     "elytra": 1800.2,
      "schwimmen": 23.1,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 200802,
-    "damage_taken": 282585,
-    "damage_dealt": 993970,
+    "jumps": 200838,
+    "damage_taken": 282801,
+    "damage_dealt": 998767,
     "fish_caught": 129,
     "enchanted": 0,
     "drops": 8137,
@@ -424,24 +424,24 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 58.7,
+    "playtime_h": 58.9,
     "deaths": 30,
-    "mob_kills": 5201,
-    "distance_km": 493.1,
+    "mob_kills": 5237,
+    "distance_km": 496.9,
     "mined": 24634,
     "crafted": 25324,
     "distanz": {
-     "fuss": 160.5,
-     "elytra": 328.3,
+     "fuss": 161.3,
+     "elytra": 331.3,
      "schwimmen": 2.2,
      "boot": 2.2
     },
-    "jumps": 35600,
-    "damage_taken": 83883,
-    "damage_dealt": 344285,
+    "jumps": 35850,
+    "damage_taken": 84528,
+    "damage_dealt": 352389,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1544,
+    "drops": 1549,
     "trades": 0,
     "totems": 0,
     "player_kills": 3,
@@ -4017,6 +4017,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-22 15:04 UTC"
+  "wann": "2026-11-22 15:09 UTC"
  }
 }
