@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-22 15:09 UTC",
+ "aktualisiert": "2026-11-22 15:18 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -7,24 +7,24 @@
    "stats": {
     "playtime_h": 339.1,
     "deaths": 117,
-    "mob_kills": 53316,
-    "distance_km": 2576.6,
+    "mob_kills": 53364,
+    "distance_km": 2576.7,
     "mined": 183554,
     "crafted": 161288,
     "distanz": {
-     "fuss": 739.9,
+     "fuss": 740.0,
      "elytra": 1800.2,
      "schwimmen": 23.1,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 200838,
-    "damage_taken": 282801,
-    "damage_dealt": 998767,
+    "jumps": 200858,
+    "damage_taken": 283021,
+    "damage_dealt": 1002635,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8137,
+    "drops": 8139,
     "trades": 0,
     "totems": 0,
     "player_kills": 35,
@@ -424,21 +424,21 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 58.9,
+    "playtime_h": 59.0,
     "deaths": 30,
-    "mob_kills": 5237,
-    "distance_km": 496.9,
-    "mined": 24634,
+    "mob_kills": 5240,
+    "distance_km": 502.4,
+    "mined": 24637,
     "crafted": 25324,
     "distanz": {
-     "fuss": 161.3,
-     "elytra": 331.3,
+     "fuss": 161.4,
+     "elytra": 336.7,
      "schwimmen": 2.2,
      "boot": 2.2
     },
-    "jumps": 35850,
-    "damage_taken": 84528,
-    "damage_dealt": 352389,
+    "jumps": 35871,
+    "damage_taken": 84622,
+    "damage_dealt": 352449,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 1549,
@@ -475,7 +475,7 @@
     "top_mined": [
      [
       "dirt",
-      4367
+      4368
      ],
      [
       "netherrack",
@@ -483,7 +483,7 @@
      ],
      [
       "grass block",
-      3251
+      3252
      ],
      [
       "stone",
@@ -4017,6 +4017,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-22 15:09 UTC"
+  "wann": "2026-11-22 15:18 UTC"
  }
 }
