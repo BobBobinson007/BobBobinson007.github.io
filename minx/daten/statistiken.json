@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-22 16:00 UTC",
+ "aktualisiert": "2026-11-22 16:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 339.5,
+    "playtime_h": 339.7,
     "deaths": 117,
-    "mob_kills": 53426,
-    "distance_km": 2580.6,
-    "mined": 183596,
-    "crafted": 161288,
+    "mob_kills": 53449,
+    "distance_km": 2586.1,
+    "mined": 183663,
+    "crafted": 161392,
     "distanz": {
-     "fuss": 740.2,
-     "elytra": 1803.8,
-     "schwimmen": 23.2,
+     "fuss": 741.1,
+     "elytra": 1808.3,
+     "schwimmen": 23.3,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 200984,
-    "damage_taken": 283504,
-    "damage_dealt": 1006395,
+    "jumps": 201368,
+    "damage_taken": 285523,
+    "damage_dealt": 1009448,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8143,
+    "drops": 8166,
     "trades": 0,
     "totems": 0,
     "player_kills": 35,
@@ -58,7 +58,7 @@
     "top_mined": [
      [
       "stone",
-      46045
+      46046
      ],
      [
       "sand",
@@ -112,26 +112,26 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 313.2,
+    "playtime_h": 313.7,
     "deaths": 55,
-    "mob_kills": 10218,
-    "distance_km": 1704.3,
-    "mined": 72962,
-    "crafted": 37807,
+    "mob_kills": 10267,
+    "distance_km": 1708.7,
+    "mined": 72968,
+    "crafted": 37883,
     "distanz": {
-     "fuss": 394.0,
-     "elytra": 1251.7,
-     "schwimmen": 56.6,
+     "fuss": 395.3,
+     "elytra": 1254.7,
+     "schwimmen": 56.7,
      "boot": 0.4,
      "minecart": 1.6,
      "pferd": 0.0
     },
-    "jumps": 145903,
-    "damage_taken": 105522,
-    "damage_dealt": 619324,
+    "jumps": 146420,
+    "damage_taken": 106626,
+    "damage_dealt": 621966,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4575,
+    "drops": 4634,
     "trades": 0,
     "totems": 0,
     "player_kills": 26,
@@ -185,7 +185,7 @@
      ],
      [
       "short grass",
-      2915
+      2919
      ]
     ],
     "top_crafted": [
@@ -424,24 +424,24 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 59.7,
+    "playtime_h": 60.2,
     "deaths": 30,
-    "mob_kills": 5558,
-    "distance_km": 507.3,
-    "mined": 25061,
-    "crafted": 25457,
+    "mob_kills": 5671,
+    "distance_km": 515.5,
+    "mined": 25068,
+    "crafted": 25465,
     "distanz": {
-     "fuss": 164.1,
-     "elytra": 338.8,
+     "fuss": 165.4,
+     "elytra": 345.8,
      "schwimmen": 2.2,
      "boot": 2.2
     },
-    "jumps": 36748,
-    "damage_taken": 86105,
-    "damage_dealt": 368220,
+    "jumps": 37025,
+    "damage_taken": 88227,
+    "damage_dealt": 369783,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1652,
+    "drops": 1677,
     "trades": 0,
     "totems": 0,
     "player_kills": 3,
@@ -1365,23 +1365,23 @@
   {
    "name": "Devolos2358",
    "stats": {
-    "playtime_h": 5.3,
+    "playtime_h": 5.5,
     "deaths": 1,
-    "mob_kills": 1980,
-    "distance_km": 103.0,
-    "mined": 12859,
-    "crafted": 5260,
+    "mob_kills": 1983,
+    "distance_km": 104.7,
+    "mined": 12860,
+    "crafted": 5295,
     "distanz": {
-     "fuss": 16.4,
-     "elytra": 86.6,
+     "fuss": 16.9,
+     "elytra": 87.7,
      "schwimmen": 0.1
     },
-    "jumps": 4047,
-    "damage_taken": 8760,
-    "damage_dealt": 13969,
+    "jumps": 4143,
+    "damage_taken": 9093,
+    "damage_dealt": 17044,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 195,
+    "drops": 199,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -1429,7 +1429,7 @@
      ],
      [
       "emerald",
-      220
+      238
      ],
      [
       "gold ingot",
@@ -2211,6 +2211,12 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-22T16:22:00Z",
+   "typ": "advancement",
+   "spieler": "Devolos2358",
+   "text": "adventure - hero of the village"
+  },
   {
    "t": "2026-11-22T14:47:33Z",
    "typ": "tod",
@@ -4004,12 +4010,6 @@
    "typ": "advancement",
    "spieler": "Wemmbuuufaker",
    "text": "nether - obtain blaze rod"
-  },
-  {
-   "t": "2026-11-11T17:19:49Z",
-   "typ": "advancement",
-   "spieler": "Wemmbuuufaker",
-   "text": "nether - find fortress"
   }
  ],
  "server": {
@@ -4017,6 +4017,6 @@
   "ram_gb": 9.7,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-22 16:00 UTC"
+  "wann": "2026-11-22 16:30 UTC"
  }
 }
