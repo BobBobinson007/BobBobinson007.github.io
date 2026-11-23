@@ -1,11 +1,11 @@
 {
- "aktualisiert": "2026-11-23 21:00 UTC",
+ "aktualisiert": "2026-11-23 21:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 343.9,
+    "playtime_h": 344.1,
     "deaths": 124,
     "mob_kills": 53788,
     "distance_km": 2651.5,
@@ -1893,23 +1893,23 @@
   {
    "name": "Qmatteo",
    "stats": {
-    "playtime_h": 1.3,
+    "playtime_h": 1.4,
     "deaths": 11,
-    "mob_kills": 10,
-    "distance_km": 8.3,
-    "mined": 281,
+    "mob_kills": 11,
+    "distance_km": 8.6,
+    "mined": 301,
     "crafted": 15,
     "distanz": {
-     "fuss": 6.8,
+     "fuss": 7.1,
      "elytra": 1.3,
      "schwimmen": 0.2
     },
-    "jumps": 1591,
-    "damage_taken": 4241,
-    "damage_dealt": 2365,
+    "jumps": 1648,
+    "damage_taken": 4307,
+    "damage_dealt": 2528,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 57,
+    "drops": 60,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -1935,7 +1935,7 @@
      ],
      [
       "short grass",
-      22
+      33
      ],
      [
       "oak log",
@@ -1946,11 +1946,11 @@
       9
      ],
      [
-      "polished deepslate",
-      6
+      "grass block",
+      8
      ],
      [
-      "acacia log",
+      "polished deepslate",
       6
      ]
     ],
@@ -4097,6 +4097,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-23 21:00 UTC"
+  "wann": "2026-11-23 21:30 UTC"
  }
 }
