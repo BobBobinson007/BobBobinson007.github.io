@@ -1,26 +1,26 @@
 {
- "aktualisiert": "2026-11-23 08:00 UTC",
+ "aktualisiert": "2026-11-23 08:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 341.3,
-    "deaths": 119,
+    "playtime_h": 341.4,
+    "deaths": 120,
     "mob_kills": 53490,
-    "distance_km": 2614.1,
+    "distance_km": 2614.2,
     "mined": 183670,
     "crafted": 161392,
     "distanz": {
-     "fuss": 743.4,
+     "fuss": 743.5,
      "elytra": 1833.8,
      "schwimmen": 23.6,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 202657,
-    "damage_taken": 289854,
+    "jumps": 202674,
+    "damage_taken": 290308,
     "damage_dealt": 1017743,
     "fish_caught": 129,
     "enchanted": 0,
@@ -44,7 +44,7 @@
      ],
      [
       "zombie",
-      5
+      6
      ],
      [
       "creeper",
@@ -2212,6 +2212,12 @@
  ],
  "ereignisse": [
   {
+   "t": "2026-11-23T08:13:30Z",
+   "typ": "tod",
+   "spieler": "BobBobinson007",
+   "text": "was slain by Zombie"
+  },
+  {
    "t": "2026-11-22T19:42:14Z",
    "typ": "tod",
    "spieler": "BobBobinson007",
@@ -4004,12 +4010,6 @@
    "typ": "advancement",
    "spieler": "Jaki_03",
    "text": "nether - netherite armor"
-  },
-  {
-   "t": "2026-11-11T18:56:28Z",
-   "typ": "advancement",
-   "spieler": "TheRealDmseife",
-   "text": "husbandry - tame an animal"
   }
  ],
  "server": {
@@ -4017,6 +4017,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-23 08:00 UTC"
+  "wann": "2026-11-23 08:30 UTC"
  }
 }
