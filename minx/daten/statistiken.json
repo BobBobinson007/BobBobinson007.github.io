@@ -1,38 +1,38 @@
 {
- "aktualisiert": "2026-11-23 15:30 UTC",
+ "aktualisiert": "2026-11-23 16:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 341.8,
-    "deaths": 121,
-    "mob_kills": 53714,
-    "distance_km": 2621.8,
-    "mined": 183674,
+    "playtime_h": 342.3,
+    "deaths": 124,
+    "mob_kills": 53729,
+    "distance_km": 2637.2,
+    "mined": 183681,
     "crafted": 161392,
     "distanz": {
-     "fuss": 744.4,
-     "elytra": 1840.4,
-     "schwimmen": 23.6,
+     "fuss": 745.7,
+     "elytra": 1854.2,
+     "schwimmen": 24.0,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 203172,
-    "damage_taken": 292412,
-    "damage_dealt": 1020212,
+    "jumps": 203896,
+    "damage_taken": 295548,
+    "damage_dealt": 1022629,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8210,
+    "drops": 8220,
     "trades": 0,
     "totems": 0,
     "player_kills": 35,
-    "killed_by_player": 35,
+    "killed_by_player": 38,
     "top_killed_by": [
      [
       "Spieler",
-      35
+      38
      ],
      [
       "warden",
@@ -219,34 +219,34 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 108.5,
-    "deaths": 25,
+    "playtime_h": 109.0,
+    "deaths": 26,
     "mob_kills": 17244,
-    "distance_km": 1149.0,
-    "mined": 37246,
+    "distance_km": 1164.1,
+    "mined": 37251,
     "crafted": 133478,
     "distanz": {
-     "fuss": 277.1,
-     "elytra": 863.0,
-     "schwimmen": 5.7,
+     "fuss": 278.9,
+     "elytra": 876.2,
+     "schwimmen": 5.8,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 65857,
-    "damage_taken": 105336,
-    "damage_dealt": 510806,
+    "jumps": 66522,
+    "damage_taken": 108049,
+    "damage_dealt": 511970,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2753,
+    "drops": 2778,
     "trades": 0,
     "totems": 0,
     "player_kills": 34,
-    "killed_by_player": 16,
+    "killed_by_player": 17,
     "top_killed_by": [
      [
       "Spieler",
-      16
+      17
      ],
      [
       "warden",
@@ -318,22 +318,22 @@
   {
    "name": "the_carlito_",
    "stats": {
-    "playtime_h": 88.3,
+    "playtime_h": 88.7,
     "deaths": 127,
-    "mob_kills": 154,
-    "distance_km": 224.1,
-    "mined": 17991,
+    "mob_kills": 157,
+    "distance_km": 224.7,
+    "mined": 18183,
     "crafted": 56136,
     "distanz": {
-     "fuss": 93.4,
+     "fuss": 93.5,
      "elytra": 121.0,
      "schwimmen": 6.1,
      "boot": 0.3,
-     "minecart": 3.2
+     "minecart": 3.8
     },
-    "jumps": 16323,
-    "damage_taken": 61622,
-    "damage_dealt": 17769,
+    "jumps": 16712,
+    "damage_taken": 62075,
+    "damage_dealt": 18336,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 1326,
@@ -370,11 +370,11 @@
     "top_mined": [
      [
       "deepslate",
-      6400
+      6412
      ],
      [
       "stone",
-      1161
+      1229
      ],
      [
       "tuff",
@@ -382,7 +382,7 @@
      ],
      [
       "cobbled deepslate",
-      907
+      915
      ],
      [
       "oak leaves",
@@ -424,27 +424,27 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 61.9,
+    "playtime_h": 62.3,
     "deaths": 31,
-    "mob_kills": 6140,
-    "distance_km": 547.1,
-    "mined": 25087,
+    "mob_kills": 6217,
+    "distance_km": 560.9,
+    "mined": 25099,
     "crafted": 25471,
     "distanz": {
-     "fuss": 170.4,
-     "elytra": 372.2,
+     "fuss": 171.6,
+     "elytra": 384.7,
      "schwimmen": 2.3,
      "boot": 2.2
     },
-    "jumps": 38197,
-    "damage_taken": 94216,
-    "damage_dealt": 389585,
+    "jumps": 38528,
+    "damage_taken": 97281,
+    "damage_dealt": 394789,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1775,
+    "drops": 1790,
     "trades": 0,
     "totems": 0,
-    "player_kills": 3,
+    "player_kills": 8,
     "killed_by_player": 6,
     "top_killed_by": [
      [
@@ -475,7 +475,7 @@
     "top_mined": [
      [
       "dirt",
-      4375
+      4377
      ],
      [
       "netherrack",
@@ -483,7 +483,7 @@
      ],
      [
       "grass block",
-      3255
+      3256
      ],
      [
       "stone",
@@ -1199,31 +1199,31 @@
   {
    "name": "Manumel12",
    "stats": {
-    "playtime_h": 11.9,
-    "deaths": 3,
-    "mob_kills": 4830,
-    "distance_km": 150.7,
-    "mined": 10943,
-    "crafted": 21561,
+    "playtime_h": 12.4,
+    "deaths": 5,
+    "mob_kills": 5131,
+    "distance_km": 160.3,
+    "mined": 11003,
+    "crafted": 21564,
     "distanz": {
-     "fuss": 41.4,
-     "elytra": 108.3,
+     "fuss": 43.4,
+     "elytra": 115.9,
      "schwimmen": 1.0
     },
-    "jumps": 6788,
-    "damage_taken": 11268,
-    "damage_dealt": 57161,
+    "jumps": 7148,
+    "damage_taken": 14043,
+    "damage_dealt": 59362,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2970,
+    "drops": 2978,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
-    "killed_by_player": 2,
+    "killed_by_player": 4,
     "top_killed_by": [
      [
       "Spieler",
-      2
+      4
      ],
      [
       "piglin brute",
@@ -1241,7 +1241,7 @@
      ],
      [
       "stone",
-      778
+      780
      ],
      [
       "carrots",
@@ -1253,7 +1253,7 @@
      ],
      [
       "coal ore",
-      245
+      297
      ]
     ],
     "top_crafted": [
@@ -2211,6 +2211,66 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-23T15:40:41Z",
+   "typ": "tod",
+   "spieler": "TheRealDmseife",
+   "text": "was slain by Wemmbuuufaker using [Crucible]"
+  },
+  {
+   "t": "2026-11-23T15:40:41Z",
+   "typ": "kill",
+   "spieler": "Wemmbuuufaker",
+   "text": "hat TheRealDmseife erledigt (was slain by Wemmbuuufaker using [Crucible])"
+  },
+  {
+   "t": "2026-11-23T15:40:20Z",
+   "typ": "tod",
+   "spieler": "BobBobinson007",
+   "text": "was slain by Wemmbuuufaker using [Crucible]"
+  },
+  {
+   "t": "2026-11-23T15:40:20Z",
+   "typ": "kill",
+   "spieler": "Wemmbuuufaker",
+   "text": "hat BobBobinson007 erledigt (was slain by Wemmbuuufaker using [Crucible])"
+  },
+  {
+   "t": "2026-11-23T15:40:01Z",
+   "typ": "tod",
+   "spieler": "Manumel12",
+   "text": "was slain by Wemmbuuufaker using [Crucible]"
+  },
+  {
+   "t": "2026-11-23T15:40:01Z",
+   "typ": "kill",
+   "spieler": "Wemmbuuufaker",
+   "text": "hat Manumel12 erledigt (was slain by Wemmbuuufaker using [Crucible])"
+  },
+  {
+   "t": "2026-11-23T15:39:01Z",
+   "typ": "tod",
+   "spieler": "Manumel12",
+   "text": "was slain by Wemmbuuufaker using [Crucible]"
+  },
+  {
+   "t": "2026-11-23T15:39:01Z",
+   "typ": "kill",
+   "spieler": "Wemmbuuufaker",
+   "text": "hat Manumel12 erledigt (was slain by Wemmbuuufaker using [Crucible])"
+  },
+  {
+   "t": "2026-11-23T15:38:56Z",
+   "typ": "advancement",
+   "spieler": "Manumel12",
+   "text": "adventure - totem of undying"
+  },
+  {
+   "t": "2026-11-23T15:31:53Z",
+   "typ": "tod",
+   "spieler": "BobBobinson007",
+   "text": "was burned to a crisp while fighting Wemmbuuufaker"
+  },
   {
    "t": "2026-11-23T15:29:00Z",
    "typ": "tod",
@@ -3950,66 +4010,6 @@
    "typ": "tod",
    "spieler": "WerferHades19",
    "text": "was burned to a crisp while fighting [Player] Wemmbuuufaker"
-  },
-  {
-   "t": "2026-11-13T16:19:05Z",
-   "typ": "tod",
-   "spieler": "WerferHades19",
-   "text": "fell from a high place"
-  },
-  {
-   "t": "2026-11-13T16:09:43Z",
-   "typ": "advancement",
-   "spieler": "WerferHades19",
-   "text": "adventure - who needs rockets"
-  },
-  {
-   "t": "2026-11-13T16:05:57Z",
-   "typ": "advancement",
-   "spieler": "Wemmbuuufaker",
-   "text": "adventure - who needs rockets"
-  },
-  {
-   "t": "2026-11-13T15:05:08Z",
-   "typ": "tod",
-   "spieler": "Hagen13juhhuh",
-   "text": "was smashed by [VIP] TheRealDmseife"
-  },
-  {
-   "t": "2026-11-13T15:00:08Z",
-   "typ": "advancement",
-   "spieler": "Wemmbuuufaker",
-   "text": "adventure - under lock and key"
-  },
-  {
-   "t": "2026-11-13T14:59:15Z",
-   "typ": "tod",
-   "spieler": "BobBobinson007",
-   "text": "was blown up by Creeper"
-  },
-  {
-   "t": "2026-11-13T14:55:54Z",
-   "typ": "tod",
-   "spieler": "Hagen13juhhuh",
-   "text": "hit the ground too hard while trying to escape Zombie"
-  },
-  {
-   "t": "2026-11-13T14:10:37Z",
-   "typ": "tod",
-   "spieler": "Wemmbuuufaker",
-   "text": "was smashed by [Owner] BobBobinson007"
-  },
-  {
-   "t": "2026-11-13T14:09:02Z",
-   "typ": "tod",
-   "spieler": "BobBobinson007",
-   "text": "was slain by [Player] Wemmbuuufaker using [Fragger]"
-  },
-  {
-   "t": "2026-11-13T14:06:55Z",
-   "typ": "tod",
-   "spieler": "TheRealDmseife",
-   "text": "was doomed to fall by [Player] Wemmbuuufaker"
   }
  ],
  "server": {
@@ -4017,6 +4017,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-23 15:30 UTC"
+  "wann": "2026-11-23 16:00 UTC"
  }
 }
