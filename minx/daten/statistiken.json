@@ -1,11 +1,11 @@
 {
- "aktualisiert": "2026-11-23 18:30 UTC",
+ "aktualisiert": "2026-11-23 19:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 343.4,
+    "playtime_h": 343.6,
     "deaths": 124,
     "mob_kills": 53788,
     "distance_km": 2651.5,
@@ -112,29 +112,29 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 315.9,
+    "playtime_h": 316.3,
     "deaths": 55,
-    "mob_kills": 10397,
-    "distance_km": 1743.3,
-    "mined": 73018,
+    "mob_kills": 10400,
+    "distance_km": 1746.1,
+    "mined": 73023,
     "crafted": 37883,
     "distanz": {
-     "fuss": 400.2,
-     "elytra": 1284.1,
+     "fuss": 400.9,
+     "elytra": 1286.2,
      "schwimmen": 57.0,
      "boot": 0.4,
      "minecart": 1.6,
      "pferd": 0.0
     },
-    "jumps": 148512,
-    "damage_taken": 110393,
-    "damage_dealt": 632371,
+    "jumps": 148788,
+    "damage_taken": 110402,
+    "damage_dealt": 632977,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4703,
+    "drops": 4716,
     "trades": 0,
     "totems": 0,
-    "player_kills": 34,
+    "player_kills": 35,
     "killed_by_player": 11,
     "top_killed_by": [
      [
@@ -173,7 +173,7 @@
      ],
      [
       "grass block",
-      8274
+      8275
      ],
      [
       "sand",
@@ -185,7 +185,7 @@
      ],
      [
       "short grass",
-      2924
+      2926
      ]
     ],
     "top_crafted": [
@@ -424,32 +424,32 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 64.3,
-    "deaths": 33,
-    "mob_kills": 6943,
-    "distance_km": 589.0,
-    "mined": 25145,
-    "crafted": 26042,
+    "playtime_h": 64.7,
+    "deaths": 36,
+    "mob_kills": 7164,
+    "distance_km": 593.2,
+    "mined": 25151,
+    "crafted": 26059,
     "distanz": {
-     "fuss": 179.3,
-     "elytra": 405.0,
+     "fuss": 180.4,
+     "elytra": 408.0,
      "schwimmen": 2.6,
      "boot": 2.2
     },
-    "jumps": 40511,
-    "damage_taken": 102744,
-    "damage_dealt": 413850,
+    "jumps": 40799,
+    "damage_taken": 103905,
+    "damage_dealt": 414570,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1904,
+    "drops": 1966,
     "trades": 0,
     "totems": 0,
     "player_kills": 11,
-    "killed_by_player": 8,
+    "killed_by_player": 9,
     "top_killed_by": [
      [
       "Spieler",
-      8
+      9
      ],
      [
       "vindicator",
@@ -505,7 +505,7 @@
      ],
      [
       "stick",
-      2472
+      2476
      ],
      [
       "spruce planks",
@@ -1891,6 +1891,82 @@
    }
   },
   {
+   "name": "Qmatteo",
+   "stats": {
+    "playtime_h": 1.3,
+    "deaths": 11,
+    "mob_kills": 10,
+    "distance_km": 8.3,
+    "mined": 281,
+    "crafted": 15,
+    "distanz": {
+     "fuss": 6.8,
+     "elytra": 1.3,
+     "schwimmen": 0.2
+    },
+    "jumps": 1591,
+    "damage_taken": 4241,
+    "damage_dealt": 2365,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 57,
+    "trades": 0,
+    "totems": 0,
+    "player_kills": 0,
+    "killed_by_player": 8,
+    "top_killed_by": [
+     [
+      "Spieler",
+      8
+     ],
+     [
+      "guardian",
+      1
+     ],
+     [
+      "zombie",
+      1
+     ]
+    ],
+    "top_mined": [
+     [
+      "stone",
+      194
+     ],
+     [
+      "short grass",
+      22
+     ],
+     [
+      "oak log",
+      12
+     ],
+     [
+      "diorite",
+      9
+     ],
+     [
+      "polished deepslate",
+      6
+     ],
+     [
+      "acacia log",
+      6
+     ]
+    ],
+    "top_crafted": [
+     [
+      "birch planks",
+      12
+     ],
+     [
+      "birch door",
+      3
+     ]
+    ]
+   }
+  },
+  {
    "name": "PaladinEnzym661",
    "stats": {
     "playtime_h": 1.0,
@@ -1967,78 +2043,6 @@
      [
       "bucket",
       2
-     ]
-    ]
-   }
-  },
-  {
-   "name": "Qmatteo",
-   "stats": {
-    "playtime_h": 0.9,
-    "deaths": 10,
-    "mob_kills": 7,
-    "distance_km": 6.4,
-    "mined": 264,
-    "crafted": 15,
-    "distanz": {
-     "fuss": 4.9,
-     "elytra": 1.3,
-     "schwimmen": 0.1
-    },
-    "jumps": 1068,
-    "damage_taken": 3599,
-    "damage_dealt": 1628,
-    "fish_caught": 0,
-    "enchanted": 0,
-    "drops": 32,
-    "trades": 0,
-    "totems": 0,
-    "player_kills": 0,
-    "killed_by_player": 8,
-    "top_killed_by": [
-     [
-      "Spieler",
-      8
-     ],
-     [
-      "guardian",
-      1
-     ]
-    ],
-    "top_mined": [
-     [
-      "stone",
-      194
-     ],
-     [
-      "oak log",
-      12
-     ],
-     [
-      "short grass",
-      10
-     ],
-     [
-      "diorite",
-      9
-     ],
-     [
-      "polished deepslate",
-      6
-     ],
-     [
-      "acacia log",
-      6
-     ]
-    ],
-    "top_crafted": [
-     [
-      "birch planks",
-      12
-     ],
-     [
-      "birch door",
-      3
      ]
     ]
    }
@@ -2287,6 +2291,36 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-23T18:38:50Z",
+   "typ": "tod",
+   "spieler": "Wemmbuuufaker",
+   "text": "was slain by [SC] ZickZackBoss"
+  },
+  {
+   "t": "2026-11-23T18:38:36Z",
+   "typ": "advancement",
+   "spieler": "Qmatteo",
+   "text": "story - mine diamond"
+  },
+  {
+   "t": "2026-11-23T18:38:15Z",
+   "typ": "tod",
+   "spieler": "Wemmbuuufaker",
+   "text": "drowned"
+  },
+  {
+   "t": "2026-11-23T18:37:34Z",
+   "typ": "tod",
+   "spieler": "Wemmbuuufaker",
+   "text": "fell from a high place"
+  },
+  {
+   "t": "2026-11-23T18:35:58Z",
+   "typ": "tod",
+   "spieler": "Qmatteo",
+   "text": "was burned to a crisp while fighting Zombie"
+  },
   {
    "t": "2026-11-23T18:26:00Z",
    "typ": "tod",
@@ -4056,36 +4090,6 @@
    "typ": "tod",
    "spieler": "Hagen13juhhuh",
    "text": "fell from a high place"
-  },
-  {
-   "t": "2026-11-17T14:55:55Z",
-   "typ": "tod",
-   "spieler": "Hagen13juhhuh",
-   "text": "fell from a high place"
-  },
-  {
-   "t": "2026-11-17T14:53:47Z",
-   "typ": "tod",
-   "spieler": "Hagen13juhhuh",
-   "text": "was burned to a crisp while fighting [SC] TheRealDmseife  +"
-  },
-  {
-   "t": "2026-11-17T12:15:24Z",
-   "typ": "tod",
-   "spieler": "BobBobinson007",
-   "text": "was burned to a crisp while fighting [SC] TheRealD..."
-  },
-  {
-   "t": "2026-11-17T11:47:23Z",
-   "typ": "tod",
-   "spieler": "BobBobinson007",
-   "text": "fell from a high place"
-  },
-  {
-   "t": "2026-11-16T22:24:15Z",
-   "typ": "advancement",
-   "spieler": "the_carlito_",
-   "text": "adventure - summon iron golem"
   }
  ],
  "server": {
@@ -4093,6 +4097,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-23 18:30 UTC"
+  "wann": "2026-11-23 19:00 UTC"
  }
 }
