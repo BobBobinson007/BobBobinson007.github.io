@@ -1,11 +1,11 @@
 {
- "aktualisiert": "2026-11-23 21:30 UTC",
+ "aktualisiert": "2026-11-23 22:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 344.1,
+    "playtime_h": 344.6,
     "deaths": 124,
     "mob_kills": 53788,
     "distance_km": 2651.5,
@@ -112,26 +112,26 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 316.4,
+    "playtime_h": 316.7,
     "deaths": 55,
-    "mob_kills": 10400,
-    "distance_km": 1746.1,
-    "mined": 73023,
-    "crafted": 37883,
+    "mob_kills": 10402,
+    "distance_km": 1749.7,
+    "mined": 73113,
+    "crafted": 38216,
     "distanz": {
-     "fuss": 400.9,
-     "elytra": 1286.2,
+     "fuss": 401.5,
+     "elytra": 1289.2,
      "schwimmen": 57.0,
      "boot": 0.4,
      "minecart": 1.6,
      "pferd": 0.0
     },
-    "jumps": 148797,
-    "damage_taken": 110402,
-    "damage_dealt": 632977,
+    "jumps": 148903,
+    "damage_taken": 110559,
+    "damage_dealt": 633349,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4716,
+    "drops": 4723,
     "trades": 0,
     "totems": 0,
     "player_kills": 35,
@@ -165,7 +165,7 @@
     "top_mined": [
      [
       "stone",
-      23521
+      23591
      ],
      [
       "dirt",
@@ -185,7 +185,7 @@
      ],
      [
       "short grass",
-      2926
+      2927
      ]
     ],
     "top_crafted": [
@@ -1893,23 +1893,23 @@
   {
    "name": "Qmatteo",
    "stats": {
-    "playtime_h": 1.4,
+    "playtime_h": 1.8,
     "deaths": 11,
-    "mob_kills": 11,
-    "distance_km": 8.6,
-    "mined": 301,
-    "crafted": 15,
+    "mob_kills": 13,
+    "distance_km": 10.2,
+    "mined": 407,
+    "crafted": 16,
     "distanz": {
-     "fuss": 7.1,
+     "fuss": 8.7,
      "elytra": 1.3,
      "schwimmen": 0.2
     },
-    "jumps": 1648,
-    "damage_taken": 4307,
-    "damage_dealt": 2528,
+    "jumps": 1873,
+    "damage_taken": 4663,
+    "damage_dealt": 3077,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 60,
+    "drops": 107,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -1931,11 +1931,15 @@
     "top_mined": [
      [
       "stone",
-      194
+      254
      ],
      [
       "short grass",
-      33
+      37
+     ],
+     [
+      "dirt",
+      31
      ],
      [
       "oak log",
@@ -1948,10 +1952,6 @@
      [
       "grass block",
       8
-     ],
-     [
-      "polished deepslate",
-      6
      ]
     ],
     "top_crafted": [
@@ -1962,6 +1962,10 @@
      [
       "birch door",
       3
+     ],
+     [
+      "stone button",
+      1
      ]
     ]
    }
@@ -2291,6 +2295,18 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-23T21:43:34Z",
+   "typ": "advancement",
+   "spieler": "Qmatteo",
+   "text": "story - iron tools"
+  },
+  {
+   "t": "2026-11-23T21:39:17Z",
+   "typ": "advancement",
+   "spieler": "Qmatteo",
+   "text": "story - root"
+  },
   {
    "t": "2026-11-23T18:38:50Z",
    "typ": "tod",
@@ -4078,18 +4094,6 @@
    "typ": "advancement",
    "spieler": "TheRealDmseife",
    "text": "nether - summon wither"
-  },
-  {
-   "t": "2026-11-17T14:58:41Z",
-   "typ": "tod",
-   "spieler": "Hagen13juhhuh",
-   "text": "was shot by Skeleton"
-  },
-  {
-   "t": "2026-11-17T14:56:57Z",
-   "typ": "tod",
-   "spieler": "Hagen13juhhuh",
-   "text": "fell from a high place"
   }
  ],
  "server": {
@@ -4097,6 +4101,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-23 21:30 UTC"
+  "wann": "2026-11-23 22:00 UTC"
  }
 }
