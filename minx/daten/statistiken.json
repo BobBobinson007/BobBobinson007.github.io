@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-23 14:30 UTC",
+ "aktualisiert": "2026-11-23 15:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -424,24 +424,24 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 61.4,
+    "playtime_h": 61.6,
     "deaths": 30,
-    "mob_kills": 5973,
-    "distance_km": 539.3,
+    "mob_kills": 6133,
+    "distance_km": 542.1,
     "mined": 25083,
     "crafted": 25471,
     "distanz": {
-     "fuss": 169.0,
-     "elytra": 365.9,
-     "schwimmen": 2.2,
+     "fuss": 169.3,
+     "elytra": 368.3,
+     "schwimmen": 2.3,
      "boot": 2.2
     },
-    "jumps": 37823,
-    "damage_taken": 91297,
-    "damage_dealt": 381962,
+    "jumps": 37881,
+    "damage_taken": 91722,
+    "damage_dealt": 386904,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1725,
+    "drops": 1763,
     "trades": 0,
     "totems": 0,
     "player_kills": 3,
@@ -929,22 +929,22 @@
   {
    "name": "Hagen13juhhuh",
    "stats": {
-    "playtime_h": 17.4,
+    "playtime_h": 17.7,
     "deaths": 32,
-    "mob_kills": 273,
-    "distance_km": 150.5,
+    "mob_kills": 329,
+    "distance_km": 153.1,
     "mined": 6237,
     "crafted": 7508,
     "distanz": {
-     "fuss": 50.7,
-     "elytra": 99.1,
+     "fuss": 51.0,
+     "elytra": 101.5,
      "schwimmen": 0.0,
      "boot": 0.1,
      "minecart": 0.5
     },
-    "jumps": 7491,
-    "damage_taken": 21222,
-    "damage_dealt": 18299,
+    "jumps": 7554,
+    "damage_taken": 21628,
+    "damage_dealt": 18559,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 177,
@@ -4017,6 +4017,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-23 14:30 UTC"
+  "wann": "2026-11-23 15:00 UTC"
  }
 }
