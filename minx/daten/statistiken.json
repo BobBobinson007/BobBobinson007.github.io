@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-23 17:00 UTC",
+ "aktualisiert": "2026-11-23 17:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -112,23 +112,23 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 314.4,
+    "playtime_h": 314.9,
     "deaths": 55,
-    "mob_kills": 10343,
-    "distance_km": 1735.6,
-    "mined": 72981,
+    "mob_kills": 10384,
+    "distance_km": 1737.0,
+    "mined": 72985,
     "crafted": 37883,
     "distanz": {
-     "fuss": 396.8,
-     "elytra": 1280.1,
+     "fuss": 397.5,
+     "elytra": 1280.8,
      "schwimmen": 56.7,
      "boot": 0.4,
      "minecart": 1.6,
      "pferd": 0.0
     },
-    "jumps": 147181,
-    "damage_taken": 108102,
-    "damage_dealt": 624245,
+    "jumps": 147463,
+    "damage_taken": 109363,
+    "damage_dealt": 628120,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 4655,
@@ -165,7 +165,7 @@
     "top_mined": [
      [
       "stone",
-      23520
+      23521
      ],
      [
       "dirt",
@@ -318,25 +318,25 @@
   {
    "name": "the_carlito_",
    "stats": {
-    "playtime_h": 89.4,
-    "deaths": 131,
+    "playtime_h": 89.9,
+    "deaths": 134,
     "mob_kills": 157,
-    "distance_km": 225.5,
-    "mined": 18447,
-    "crafted": 56220,
+    "distance_km": 227.4,
+    "mined": 18460,
+    "crafted": 56328,
     "distanz": {
-     "fuss": 94.1,
-     "elytra": 121.0,
-     "schwimmen": 6.1,
+     "fuss": 95.0,
+     "elytra": 121.8,
+     "schwimmen": 6.3,
      "boot": 0.3,
      "minecart": 4.0
     },
-    "jumps": 16866,
-    "damage_taken": 64179,
+    "jumps": 16933,
+    "damage_taken": 64919,
     "damage_dealt": 18336,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1399,
+    "drops": 1402,
     "trades": 0,
     "totems": 0,
     "player_kills": 4,
@@ -374,7 +374,7 @@
      ],
      [
       "stone",
-      1246
+      1258
      ],
      [
       "tuff",
@@ -408,7 +408,7 @@
      ],
      [
       "iron ingot",
-      1938
+      1944
      ],
      [
       "tinted glass",
@@ -424,32 +424,32 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 63.1,
-    "deaths": 31,
-    "mob_kills": 6393,
-    "distance_km": 570.3,
-    "mined": 25105,
-    "crafted": 25471,
+    "playtime_h": 63.6,
+    "deaths": 33,
+    "mob_kills": 6827,
+    "distance_km": 574.9,
+    "mined": 25109,
+    "crafted": 25878,
     "distanz": {
-     "fuss": 174.1,
-     "elytra": 391.7,
-     "schwimmen": 2.3,
+     "fuss": 175.8,
+     "elytra": 394.6,
+     "schwimmen": 2.4,
      "boot": 2.2
     },
-    "jumps": 39299,
-    "damage_taken": 99204,
-    "damage_dealt": 400138,
+    "jumps": 39744,
+    "damage_taken": 101220,
+    "damage_dealt": 405535,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1842,
+    "drops": 1875,
     "trades": 0,
     "totems": 0,
-    "player_kills": 10,
-    "killed_by_player": 6,
+    "player_kills": 11,
+    "killed_by_player": 8,
     "top_killed_by": [
      [
       "Spieler",
-      6
+      8
      ],
      [
       "vindicator",
@@ -520,8 +520,8 @@
       1917
      ],
      [
-      "bone meal",
-      1266
+      "gold ingot",
+      1487
      ]
     ]
    }
@@ -529,33 +529,33 @@
   {
    "name": "LuisCrafter92",
    "stats": {
-    "playtime_h": 44.5,
-    "deaths": 11,
-    "mob_kills": 6113,
-    "distance_km": 894.4,
-    "mined": 38658,
-    "crafted": 49346,
+    "playtime_h": 45.0,
+    "deaths": 13,
+    "mob_kills": 6257,
+    "distance_km": 904.6,
+    "mined": 41520,
+    "crafted": 49401,
     "distanz": {
-     "fuss": 120.9,
-     "elytra": 768.5,
+     "fuss": 122.7,
+     "elytra": 777.0,
      "schwimmen": 3.1,
      "boot": 0.5,
      "pferd": 1.3
     },
-    "jumps": 31537,
-    "damage_taken": 77475,
-    "damage_dealt": 595426,
+    "jumps": 31985,
+    "damage_taken": 80270,
+    "damage_dealt": 597811,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2576,
+    "drops": 2589,
     "trades": 0,
     "totems": 0,
-    "player_kills": 5,
-    "killed_by_player": 3,
+    "player_kills": 6,
+    "killed_by_player": 4,
     "top_killed_by": [
      [
       "Spieler",
-      3
+      4
      ],
      [
       "creeper",
@@ -572,12 +572,16 @@
      [
       "zombified piglin",
       1
+     ],
+     [
+      "zombie",
+      1
      ]
     ],
     "top_mined": [
      [
       "netherrack",
-      15082
+      17523
      ],
      [
       "sandstone",
@@ -733,25 +737,25 @@
   {
    "name": "Jaki_03",
    "stats": {
-    "playtime_h": 24.1,
+    "playtime_h": 24.6,
     "deaths": 17,
-    "mob_kills": 209,
-    "distance_km": 228.8,
-    "mined": 6636,
+    "mob_kills": 214,
+    "distance_km": 235.7,
+    "mined": 6760,
     "crafted": 4605,
     "distanz": {
-     "fuss": 98.9,
-     "elytra": 120.2,
+     "fuss": 101.5,
+     "elytra": 123.8,
      "schwimmen": 0.8,
      "boot": 3.1,
-     "minecart": 5.8
+     "minecart": 6.5
     },
-    "jumps": 9967,
-    "damage_taken": 15238,
-    "damage_dealt": 38973,
+    "jumps": 10163,
+    "damage_taken": 15469,
+    "damage_dealt": 39757,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 367,
+    "drops": 371,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -785,7 +789,7 @@
     "top_mined": [
      [
       "grass block",
-      2114
+      2116
      ],
      [
       "dirt",
@@ -801,11 +805,11 @@
      ],
      [
       "stone bricks",
-      307
+      402
      ],
      [
       "short grass",
-      228
+      230
      ]
     ],
     "top_crafted": [
@@ -1365,26 +1369,26 @@
   {
    "name": "Devolos2358",
    "stats": {
-    "playtime_h": 6.8,
+    "playtime_h": 6.9,
     "deaths": 3,
-    "mob_kills": 2184,
-    "distance_km": 133.2,
+    "mob_kills": 2194,
+    "distance_km": 134.7,
     "mined": 12960,
     "crafted": 6373,
     "distanz": {
-     "fuss": 20.4,
-     "elytra": 112.7,
+     "fuss": 20.9,
+     "elytra": 113.7,
      "schwimmen": 0.1
     },
-    "jumps": 5423,
-    "damage_taken": 15623,
-    "damage_dealt": 27260,
+    "jumps": 5552,
+    "damage_taken": 16050,
+    "damage_dealt": 29044,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 285,
+    "drops": 307,
     "trades": 0,
     "totems": 0,
-    "player_kills": 0,
+    "player_kills": 1,
     "killed_by_player": 3,
     "top_killed_by": [
      [
@@ -2211,6 +2215,54 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-23T17:20:56Z",
+   "typ": "tod",
+   "spieler": "LuisCrafter92",
+   "text": "was slain by Zombie"
+  },
+  {
+   "t": "2026-11-23T17:20:27Z",
+   "typ": "tod",
+   "spieler": "LuisCrafter92",
+   "text": "was slain by Wemmbuuufaker using [Crucible]"
+  },
+  {
+   "t": "2026-11-23T17:20:27Z",
+   "typ": "kill",
+   "spieler": "Wemmbuuufaker",
+   "text": "hat LuisCrafter92 erledigt (was slain by Wemmbuuufaker using [Crucible])"
+  },
+  {
+   "t": "2026-11-23T17:20:03Z",
+   "typ": "tod",
+   "spieler": "the_carlito_",
+   "text": "drowned"
+  },
+  {
+   "t": "2026-11-23T17:18:17Z",
+   "typ": "tod",
+   "spieler": "Wemmbuuufaker",
+   "text": "was slain by LuisCrafter92  +"
+  },
+  {
+   "t": "2026-11-23T17:18:17Z",
+   "typ": "kill",
+   "spieler": "LuisCrafter92",
+   "text": "hat Wemmbuuufaker erledigt (was slain by LuisCrafter92  +)"
+  },
+  {
+   "t": "2026-11-23T17:10:42Z",
+   "typ": "tod",
+   "spieler": "the_carlito_",
+   "text": "drowned"
+  },
+  {
+   "t": "2026-11-23T17:03:29Z",
+   "typ": "advancement",
+   "spieler": "Devolos2358",
+   "text": "adventure - voluntary exile"
+  },
   {
    "t": "2026-11-23T16:57:15Z",
    "typ": "tod",
@@ -3962,54 +4014,6 @@
    "typ": "advancement",
    "spieler": "Hagen13juhhuh",
    "text": "adventure - trade"
-  },
-  {
-   "t": "2026-11-16T15:14:52Z",
-   "typ": "advancement",
-   "spieler": "Hagen13juhhuh",
-   "text": "adventure - honey block slide"
-  },
-  {
-   "t": "2026-11-15T13:15:11Z",
-   "typ": "advancement",
-   "spieler": "TheRealDmseife",
-   "text": "adventure - throw trident"
-  },
-  {
-   "t": "2026-11-14T22:16:44Z",
-   "typ": "advancement",
-   "spieler": "BobBobinson007",
-   "text": "adventure - craft decorated pot using only sherds"
-  },
-  {
-   "t": "2026-11-14T20:22:08Z",
-   "typ": "advancement",
-   "spieler": "BobBobinson007",
-   "text": "adventure - crafters crafting crafters"
-  },
-  {
-   "t": "2026-11-14T19:47:51Z",
-   "typ": "advancement",
-   "spieler": "Jaki_03",
-   "text": "adventure - trade"
-  },
-  {
-   "t": "2026-11-14T10:19:36Z",
-   "typ": "advancement",
-   "spieler": "the_carlito_",
-   "text": "story - upgrade tools"
-  },
-  {
-   "t": "2026-11-13T21:14:34Z",
-   "typ": "tod",
-   "spieler": "Hagen13juhhuh",
-   "text": "was blown up by Creeper"
-  },
-  {
-   "t": "2026-11-13T20:48:21Z",
-   "typ": "tod",
-   "spieler": "Hagen13juhhuh",
-   "text": "fell from a high place"
   }
  ],
  "server": {
@@ -4017,6 +4021,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-23 17:00 UTC"
+  "wann": "2026-11-23 17:30 UTC"
  }
 }
