@@ -1,11 +1,11 @@
 {
- "aktualisiert": "2026-11-23 20:30 UTC",
+ "aktualisiert": "2026-11-23 21:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 343.7,
+    "playtime_h": 343.9,
     "deaths": 124,
     "mob_kills": 53788,
     "distance_km": 2651.5,
@@ -737,25 +737,25 @@
   {
    "name": "Jaki_03",
    "stats": {
-    "playtime_h": 25.7,
+    "playtime_h": 25.9,
     "deaths": 17,
-    "mob_kills": 239,
-    "distance_km": 244.9,
-    "mined": 6869,
-    "crafted": 4815,
+    "mob_kills": 241,
+    "distance_km": 248.1,
+    "mined": 6917,
+    "crafted": 4869,
     "distanz": {
-     "fuss": 106.7,
-     "elytra": 127.9,
+     "fuss": 107.6,
+     "elytra": 130.2,
      "schwimmen": 0.8,
      "boot": 3.1,
      "minecart": 6.5
     },
-    "jumps": 10601,
-    "damage_taken": 16031,
-    "damage_dealt": 44140,
+    "jumps": 10686,
+    "damage_taken": 16074,
+    "damage_dealt": 44469,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 380,
+    "drops": 382,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -789,7 +789,7 @@
     "top_mined": [
      [
       "grass block",
-      2116
+      2117
      ],
      [
       "dirt",
@@ -805,11 +805,11 @@
      ],
      [
       "stone bricks",
-      455
+      456
      ],
      [
-      "short grass",
-      231
+      "stone brick slab",
+      238
      ]
     ],
     "top_crafted": [
@@ -819,7 +819,7 @@
      ],
      [
       "stone brick slab",
-      714
+      768
      ],
      [
       "paper",
@@ -4097,6 +4097,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-23 20:30 UTC"
+  "wann": "2026-11-23 21:00 UTC"
  }
 }
