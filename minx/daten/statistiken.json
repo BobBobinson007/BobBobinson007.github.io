@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-24 19:30 UTC",
+ "aktualisiert": "2026-11-24 20:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 348.8,
-    "deaths": 134,
-    "mob_kills": 54043,
-    "distance_km": 2726.5,
-    "mined": 186784,
+    "playtime_h": 349.3,
+    "deaths": 135,
+    "mob_kills": 54115,
+    "distance_km": 2732.2,
+    "mined": 187852,
     "crafted": 162101,
     "distanz": {
-     "fuss": 759.0,
-     "elytra": 1929.7,
+     "fuss": 760.7,
+     "elytra": 1933.8,
      "schwimmen": 24.4,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 210236,
-    "damage_taken": 314243,
-    "damage_dealt": 1092292,
+    "jumps": 210638,
+    "damage_taken": 316023,
+    "damage_dealt": 1104532,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8484,
+    "drops": 8536,
     "trades": 0,
     "totems": 0,
     "player_kills": 40,
@@ -70,7 +70,7 @@
      ],
      [
       "dirt",
-      12610
+      12651
      ],
      [
       "sandstone",
@@ -2300,6 +2300,12 @@
  ],
  "ereignisse": [
   {
+   "t": "2026-11-24T19:32:38Z",
+   "typ": "tod",
+   "spieler": "BobBobinson007",
+   "text": "was shot by Pillager"
+  },
+  {
    "t": "2026-11-24T18:19:11Z",
    "typ": "tod",
    "spieler": "Wemmbuuufaker",
@@ -4092,12 +4098,6 @@
    "typ": "advancement",
    "spieler": "TimotheToaster",
    "text": "story - obtain armor"
-  },
-  {
-   "t": "2026-11-18T22:29:26Z",
-   "typ": "advancement",
-   "spieler": "TimotheToaster",
-   "text": "story - smelt iron"
   }
  ],
  "server": {
@@ -4105,6 +4105,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-24 19:30 UTC"
+  "wann": "2026-11-24 20:00 UTC"
  }
 }
