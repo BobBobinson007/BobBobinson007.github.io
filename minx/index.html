@@ -201,6 +201,16 @@
   .tkill .tname{color:var(--white);font-weight:700;flex:1;min-width:0;word-break:break-word}
   .tkill .tnum{font-family:var(--mono);font-size:.76rem;color:var(--dim);text-align:right;flex:none;white-space:nowrap}
   .tkill .tpoints{font-family:var(--mono);font-size:1.05rem;color:var(--white);min-width:92px;text-align:right;flex:none}
+  .tkill .tkinfo{display:none;padding:12px 14px 14px 62px;border-bottom:1px solid var(--line);background:var(--panel2);font-size:.82rem;color:var(--dim);line-height:1.55}
+  .tkill .tkinfo.open{display:block}
+  .tkill .tkinfo b{color:var(--white);font-weight:700}
+  .tkill .tkinfo .tkrow{display:flex;justify-content:space-between;gap:12px;padding:2px 0}
+  .tkill .tkinfo .tkrow .tkv{font-family:var(--mono);color:var(--text);white-space:nowrap}
+  .tkill .tkinfo .tkdash{display:inline-block;margin-top:8px;padding:4px 10px;border:1px solid var(--line2);color:var(--text);font-family:var(--mono);font-size:.74rem;cursor:pointer}
+  .tkill .tkinfo .tkdash:hover{border-color:var(--white)}
+  .tkill .tkmore{display:block;width:100%;text-align:center;background:var(--panel2);border:0;border-top:1px solid var(--line);
+    color:var(--text);font-family:var(--mono);font-size:.8rem;padding:11px;cursor:pointer;transition:background .15s}
+  .tkill .tkmore:hover{background:var(--panel3)}
 
   /* ---------- Uptime ---------- */
   .uptgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:16px}
@@ -376,6 +386,15 @@
     .dbar2 .lbl{width:76px;font-size:.74rem}
     .dbar2 .val{min-width:62px;font-size:.72rem}
     .facts{gap:6px}
+    /* Tödlichste-Spieler-Liste auf schmalen Screens */
+    .tkill .trow{flex-wrap:wrap;gap:6px 10px;padding:8px 10px}
+    .tkill .thead{width:26px;height:26px}
+    .tkill .trank{width:28px;font-size:.72rem}
+    .tkill .tname{font-size:.88rem}
+    .tkill .tnum{font-size:.66rem}
+    .tkill .tpoints{min-width:60px;font-size:.95rem}
+    .tkill .tkinfo{padding:10px 12px 12px 48px;font-size:.78rem}
+    .tkill .tkinfo .tkrow{flex-wrap:wrap;gap:4px 10px}
   }
   @media(prefers-reduced-motion:reduce){
     .strip-track{animation:none}
@@ -958,6 +977,7 @@ function render(){
 // Jede Komponente wird relativ zum besten Spieler gesättigt (x ÷ (x + max)),
 // die Summe auf 0–100 min-max skaliert: 100 = tödlichster Spieler.
 const TK_SCHRUMPF = 10;   // Vertrauens-Horizont in Stunden
+let TK_AUFGEKLAPPT = false;   // Liste der tödlichsten Spieler: alle anzeigen?
 
 function renderToedlichste(){
   const spieler = (daten?.spieler||[]);
@@ -992,23 +1012,52 @@ function renderToedlichste(){
     0.35*sat(r.kraft, mx('kraft')) +
     0.20*sat(r.ueber, mx('ueber')));
   const lo = Math.min(...raw), hi = Math.max(...raw);
-  rows.forEach((r,i)=> r.punkte = hi > lo ? Math.round(100*(raw[i]-lo)/(hi-lo)) : 50);
+  rows.forEach((r,i)=>{ r.punkte = hi > lo ? Math.round(100*(raw[i]-lo)/(hi-lo)) : 50;
+    r.sDom = sat(r.dom, mx('dom')); r.sKraft = sat(r.kraft, mx('kraft')); r.sUeber = sat(r.ueber, mx('ueber')); });
   rows.sort((a,b)=>b.punkte - a.punkte);
+  window.__TK_ROWS = rows;
   const el = document.getElementById('tkill');
   if(!el) return;
   el.innerHTML = rows.length ? rows.map((r,i)=>
-    '<div class="trow'+(i<3?' top3':'')+'" onclick="openPlayer(\''+encodeURIComponent(r.name)+'\')">'+
+    '<div class="trow'+(i<3?' top3':'')+'" onclick="tkToggle('+i+')" data-tkrow="'+i+'"'+(i>=3&&!TK_AUFGEKLAPPT?' hidden':'')+'>'+
     '<span class="trank">#'+(i+1)+'</span>'+
     '<img class="thead" src="'+headUrl(r.name,64)+'" alt="'+r.name+'" onerror="helmFallback(this,\''+encodeURIComponent(r.name)+'\',32)">'+
     '<span class="tname">'+r.name+(VIPS.includes(r.name)?vplusHtml:'')+'</span>'+
     '<span class="tnum">'+fmtW(r.h,1)+' h</span>'+
     '<span class="tnum">'+r.pvk+' / '+r.pvd+' PvP</span>'+
     '<span class="tnum">'+fmtW(r.dph,2)+' Tode/h</span>'+
-    '<span class="tpoints">'+fmtW(r.punkte,1)+' P</span></div>').join('')
+    '<span class="tpoints">'+fmtW(r.punkte,1)+' P</span></div>'+
+    '<div class="tkinfo" id="tkinfo'+i+'"'+(i>=3&&!TK_AUFGEKLAPPT?' hidden':'')+'></div>').join('') +
+    (rows.length>3 ? '<button class="tkmore" type="button" onclick="tkAlle()">'+
+      (TK_AUFGEKLAPPT ? 'Weniger anzeigen ▲' : 'Alle '+rows.length+' Spieler anzeigen ▼')+'</button>' : '')
     : '<div class="trow"><span class="tname">Keine Daten geladen.</span></div>';
   const upd = document.getElementById('tkupdated');
   if(upd) upd.textContent = 'Stand: ' + (daten?.aktualisiert || 'unbekannt') +
-    ' · Punkte = 45 % PvP-Dominanz + 35 % Kampfkraft (Schaden/h) + 20 % Überleben · Farm-Mob-Kills zählen nicht · Bei wenig Spielzeit nähern sich die Werte dem Server-Durchschnitt an · 100 P = tödlichster Spieler';
+    ' · Punkte = 45 % PvP-Dominanz + 35 % Kampfkraft (Schaden/h) + 20 % Überleben · Farm-Mob-Kills zählen nicht · Bei wenig Spielzeit nähern sich die Werte dem Server-Durchschnitt an · 100 P = tödlichster Spieler · Klick auf einen Spieler zeigt, wie seine Punkte zustande kommen';
+}
+
+// Füllt das Klick-Info-Panel eines Spielers: wie die Punkte zustande kommen.
+function tkToggle(i){
+  const r = (window.__TK_ROWS||[])[i];
+  const info = document.getElementById('tkinfo'+i);
+  if(!r || !info) return;
+  if(!info.classList.contains('open')){
+    info.innerHTML =
+      '<div style="margin-bottom:6px"><b>Wie '+r.name+'s Punkte zustande kommen:</b></div>'+
+      '<div class="tkrow"><span>PvP-Dominanz (45 %): '+r.pvk+' Kills ÷ '+r.pvd+' Tode → '+fmtW(r.dom,2)+' · geglättet/gesättigt</span><span class="tkv">'+fmtW(r.sDom*100,1)+' / 100</span></div>'+
+      '<div class="tkrow"><span>Kampfkraft (35 %): verursachter Schaden pro Stunde → log₂(1 + …)</span><span class="tkv">'+fmtW(r.sKraft*100,1)+' / 100</span></div>'+
+      '<div class="tkrow"><span>Überleben (20 %): '+fmtW(r.dph,2)+' Tode/h → 1 ÷ (1 + …)</span><span class="tkv">'+fmtW(r.sUeber*100,1)+' / 100</span></div>'+
+      '<div class="tkrow"><span>Summe, auf 0–100 skaliert (100 = tödlichster Spieler)</span><span class="tkv"><b>'+fmtW(r.punkte,1)+' P</b></span></div>'+
+      '<div style="margin-top:6px">Alle Werte sind pro Stunde und mit Schrumpf-Ausgleich (K = 10 h) gegen den Server-Durchschnitt geglättet, damit wenige Stunden nicht durch Zufall oben stehen. Farm-Mob-Kills zählen nicht.</div>'+
+      '<span class="tkdash" onclick="event.stopPropagation();openPlayer(\''+encodeURIComponent(r.name)+'\')">Komplettes Dashboard öffnen →</span>';
+    info.classList.add('open');
+  }else{
+    info.classList.remove('open');
+  }
+}
+function tkAlle(){
+  TK_AUFGEKLAPPT = !TK_AUFGEKLAPPT;
+  renderToedlichste();
 }
 
 /* ================= Server-Stats ================= */
