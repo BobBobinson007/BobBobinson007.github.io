@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-24 18:30 UTC",
+ "aktualisiert": "2026-11-24 19:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 347.8,
+    "playtime_h": 348.3,
     "deaths": 134,
-    "mob_kills": 53931,
-    "distance_km": 2717.7,
-    "mined": 183914,
-    "crafted": 162029,
+    "mob_kills": 53974,
+    "distance_km": 2722.5,
+    "mined": 184841,
+    "crafted": 162101,
     "distanz": {
-     "fuss": 755.0,
-     "elytra": 1925.0,
+     "fuss": 756.4,
+     "elytra": 1928.3,
      "schwimmen": 24.4,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 209032,
-    "damage_taken": 312171,
-    "damage_dealt": 1068603,
+    "jumps": 209714,
+    "damage_taken": 313706,
+    "damage_dealt": 1078903,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8460,
+    "drops": 8464,
     "trades": 0,
     "totems": 0,
     "player_kills": 40,
@@ -58,7 +58,7 @@
     "top_mined": [
      [
       "stone",
-      46062
+      46243
      ],
      [
       "sand",
@@ -69,12 +69,12 @@
       17134
      ],
      [
-      "sandstone",
-      11369
+      "dirt",
+      11556
      ],
      [
-      "dirt",
-      11242
+      "sandstone",
+      11369
      ],
      [
       "magma block",
@@ -424,24 +424,24 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 69.5,
+    "playtime_h": 69.7,
     "deaths": 39,
-    "mob_kills": 8186,
-    "distance_km": 673.0,
+    "mob_kills": 8188,
+    "distance_km": 675.6,
     "mined": 27217,
     "crafted": 27104,
     "distanz": {
-     "fuss": 201.1,
-     "elytra": 466.8,
+     "fuss": 201.5,
+     "elytra": 469.0,
      "schwimmen": 2.9,
      "boot": 2.2
     },
-    "jumps": 45393,
-    "damage_taken": 123609,
-    "damage_dealt": 489324,
+    "jumps": 45573,
+    "damage_taken": 124663,
+    "damage_dealt": 490347,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2376,
+    "drops": 2377,
     "trades": 0,
     "totems": 0,
     "player_kills": 22,
@@ -4105,6 +4105,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-24 18:30 UTC"
+  "wann": "2026-11-24 19:00 UTC"
  }
 }
