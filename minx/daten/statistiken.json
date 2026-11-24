@@ -1,15 +1,15 @@
 {
- "aktualisiert": "2026-11-24 14:36 UTC",
+ "aktualisiert": "2026-11-24 14:43 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 346.5,
+    "playtime_h": 346.6,
     "deaths": 132,
     "mob_kills": 53824,
-    "distance_km": 2689.9,
-    "mined": 183820,
+    "distance_km": 2690.0,
+    "mined": 183882,
     "crafted": 161393,
     "distanz": {
      "fuss": 751.9,
@@ -19,12 +19,12 @@
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 207488,
-    "damage_taken": 306690,
+    "jumps": 207524,
+    "damage_taken": 306704,
     "damage_dealt": 1044245,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8364,
+    "drops": 8365,
     "trades": 0,
     "totems": 0,
     "player_kills": 38,
@@ -66,7 +66,7 @@
      ],
      [
       "netherrack",
-      17072
+      17134
      ],
      [
       "sandstone",
@@ -221,24 +221,24 @@
    "stats": {
     "playtime_h": 110.1,
     "deaths": 28,
-    "mob_kills": 17504,
-    "distance_km": 1179.6,
-    "mined": 37453,
+    "mob_kills": 17513,
+    "distance_km": 1180.0,
+    "mined": 37993,
     "crafted": 133663,
     "distanz": {
-     "fuss": 281.4,
-     "elytra": 889.2,
+     "fuss": 281.7,
+     "elytra": 889.3,
      "schwimmen": 5.9,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 67247,
-    "damage_taken": 110929,
-    "damage_dealt": 520229,
+    "jumps": 67377,
+    "damage_taken": 111321,
+    "damage_dealt": 521989,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2869,
+    "drops": 2887,
     "trades": 0,
     "totems": 0,
     "player_kills": 38,
@@ -264,7 +264,7 @@
     "top_mined": [
      [
       "netherrack",
-      11899
+      12404
      ],
      [
       "stone",
@@ -284,7 +284,7 @@
      ],
      [
       "gravel",
-      1243
+      1247
      ]
     ],
     "top_crafted": [
@@ -427,16 +427,16 @@
     "playtime_h": 67.2,
     "deaths": 37,
     "mob_kills": 7720,
-    "distance_km": 633.7,
+    "distance_km": 633.9,
     "mined": 26700,
     "crafted": 26922,
     "distanz": {
-     "fuss": 190.6,
+     "fuss": 190.8,
      "elytra": 438.1,
      "schwimmen": 2.9,
      "boot": 2.2
     },
-    "jumps": 43112,
+    "jumps": 43176,
     "damage_taken": 112176,
     "damage_dealt": 454857,
     "fish_caught": 0,
@@ -635,21 +635,21 @@
   {
    "name": "WerferHades19",
    "stats": {
-    "playtime_h": 32.8,
+    "playtime_h": 32.9,
     "deaths": 40,
     "mob_kills": 2943,
-    "distance_km": 450.1,
-    "mined": 26666,
+    "distance_km": 451.2,
+    "mined": 26697,
     "crafted": 5406,
     "distanz": {
-     "fuss": 97.6,
-     "elytra": 348.4,
+     "fuss": 97.9,
+     "elytra": 349.3,
      "schwimmen": 1.2,
      "boot": 1.2,
      "pferd": 1.6
     },
-    "jumps": 21950,
-    "damage_taken": 40229,
+    "jumps": 21994,
+    "damage_taken": 40279,
     "damage_dealt": 98891,
     "fish_caught": 0,
     "enchanted": 0,
@@ -703,11 +703,11 @@
      ],
      [
       "cut sandstone",
-      764
+      766
      ],
      [
       "sandstone stairs",
-      720
+      749
      ]
     ],
     "top_crafted": [
@@ -937,22 +937,22 @@
   {
    "name": "Hagen13juhhuh",
    "stats": {
-    "playtime_h": 18.9,
+    "playtime_h": 19.0,
     "deaths": 36,
-    "mob_kills": 343,
-    "distance_km": 161.5,
-    "mined": 7578,
+    "mob_kills": 348,
+    "distance_km": 162.0,
+    "mined": 7713,
     "crafted": 8358,
     "distanz": {
-     "fuss": 56.9,
+     "fuss": 57.4,
      "elytra": 103.9,
      "schwimmen": 0.0,
      "boot": 0.1,
      "minecart": 0.5
     },
-    "jumps": 8379,
-    "damage_taken": 23649,
-    "damage_dealt": 21372,
+    "jumps": 8442,
+    "damage_taken": 23679,
+    "damage_dealt": 22389,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 179,
@@ -985,11 +985,11 @@
     "top_mined": [
      [
       "netherrack",
-      2073
+      2179
      ],
      [
       "stone",
-      852
+      881
      ],
      [
       "deepslate",
@@ -4105,6 +4105,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-24 14:36 UTC"
+  "wann": "2026-11-24 14:43 UTC"
  }
 }
