@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-24 16:00 UTC",
+ "aktualisiert": "2026-11-24 16:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -318,22 +318,22 @@
   {
    "name": "the_carlito_",
    "stats": {
-    "playtime_h": 90.2,
-    "deaths": 136,
-    "mob_kills": 157,
-    "distance_km": 228.6,
-    "mined": 18483,
-    "crafted": 56577,
+    "playtime_h": 90.5,
+    "deaths": 137,
+    "mob_kills": 158,
+    "distance_km": 229.6,
+    "mined": 18507,
+    "crafted": 56605,
     "distanz": {
-     "fuss": 95.4,
+     "fuss": 96.5,
      "elytra": 121.8,
      "schwimmen": 6.3,
      "boot": 0.3,
      "minecart": 4.8
     },
-    "jumps": 17077,
-    "damage_taken": 65336,
-    "damage_dealt": 18336,
+    "jumps": 17161,
+    "damage_taken": 65666,
+    "damage_dealt": 18538,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 1443,
@@ -352,7 +352,7 @@
      ],
      [
       "zombie",
-      16
+      17
      ],
      [
       "pillager",
@@ -374,7 +374,7 @@
      ],
      [
       "stone",
-      1263
+      1265
      ],
      [
       "tuff",
@@ -424,24 +424,24 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 67.9,
+    "playtime_h": 68.4,
     "deaths": 37,
-    "mob_kills": 7823,
-    "distance_km": 645.6,
-    "mined": 26995,
-    "crafted": 27051,
+    "mob_kills": 7992,
+    "distance_km": 651.0,
+    "mined": 27194,
+    "crafted": 27091,
     "distanz": {
-     "fuss": 194.9,
-     "elytra": 445.7,
+     "fuss": 197.1,
+     "elytra": 448.9,
      "schwimmen": 2.9,
      "boot": 2.2
     },
-    "jumps": 43971,
-    "damage_taken": 114373,
-    "damage_dealt": 465479,
+    "jumps": 44422,
+    "damage_taken": 116362,
+    "damage_dealt": 480416,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2172,
+    "drops": 2209,
     "trades": 0,
     "totems": 0,
     "player_kills": 18,
@@ -475,7 +475,7 @@
     "top_mined": [
      [
       "dirt",
-      4389
+      4391
      ],
      [
       "netherrack",
@@ -483,15 +483,15 @@
      ],
      [
       "grass block",
-      3261
+      3262
      ],
      [
       "stone",
-      2971
+      3070
      ],
      [
       "deepslate",
-      2283
+      2320
      ],
      [
       "dark oak log",
@@ -531,23 +531,23 @@
    "stats": {
     "playtime_h": 45.6,
     "deaths": 13,
-    "mob_kills": 6828,
-    "distance_km": 916.8,
+    "mob_kills": 6831,
+    "distance_km": 919.8,
     "mined": 41527,
-    "crafted": 49630,
+    "crafted": 49642,
     "distanz": {
-     "fuss": 124.1,
-     "elytra": 787.7,
+     "fuss": 124.3,
+     "elytra": 790.5,
      "schwimmen": 3.1,
      "boot": 0.5,
      "pferd": 1.3
     },
-    "jumps": 32286,
-    "damage_taken": 81281,
-    "damage_dealt": 609381,
+    "jumps": 32304,
+    "damage_taken": 81360,
+    "damage_dealt": 609951,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2609,
+    "drops": 2618,
     "trades": 0,
     "totems": 0,
     "player_kills": 6,
@@ -2299,6 +2299,30 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-24T16:29:25Z",
+   "typ": "tod",
+   "spieler": "LuisCrafter92",
+   "text": "was blown up by Creeper"
+  },
+  {
+   "t": "2026-11-24T16:28:53Z",
+   "typ": "tod",
+   "spieler": "LuisCrafter92",
+   "text": "was slain by Wemmbuuufaker using [Made In Heaven]"
+  },
+  {
+   "t": "2026-11-24T16:28:53Z",
+   "typ": "kill",
+   "spieler": "Wemmbuuufaker",
+   "text": "hat LuisCrafter92 erledigt (was slain by Wemmbuuufaker using [Made In Heaven])"
+  },
+  {
+   "t": "2026-11-24T16:11:48Z",
+   "typ": "tod",
+   "spieler": "the_carlito_",
+   "text": "was slain by Zombie"
+  },
   {
    "t": "2026-11-24T14:33:42Z",
    "typ": "advancement",
@@ -4074,30 +4098,6 @@
    "typ": "advancement",
    "spieler": "BobBobinson007",
    "text": "adventure - salvage sherd"
-  },
-  {
-   "t": "2026-11-18T19:48:20Z",
-   "typ": "advancement",
-   "spieler": "TheRealDmseife",
-   "text": "adventure - salvage sherd"
-  },
-  {
-   "t": "2026-11-18T14:56:40Z",
-   "typ": "advancement",
-   "spieler": "Manumel12",
-   "text": "story - enchant item"
-  },
-  {
-   "t": "2026-11-18T14:51:21Z",
-   "typ": "advancement",
-   "spieler": "Manumel12",
-   "text": "story - form obsidian"
-  },
-  {
-   "t": "2026-11-18T14:37:58Z",
-   "typ": "advancement",
-   "spieler": "Manumel12",
-   "text": "adventure - trade"
   }
  ],
  "server": {
@@ -4105,6 +4105,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-24 16:00 UTC"
+  "wann": "2026-11-24 16:30 UTC"
  }
 }
