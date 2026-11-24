@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-24 17:30 UTC",
+ "aktualisiert": "2026-11-24 18:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 346.8,
-    "deaths": 132,
-    "mob_kills": 53835,
-    "distance_km": 2692.9,
-    "mined": 183882,
-    "crafted": 161393,
+    "playtime_h": 347.3,
+    "deaths": 133,
+    "mob_kills": 53875,
+    "distance_km": 2708.3,
+    "mined": 183901,
+    "crafted": 161395,
     "distanz": {
-     "fuss": 752.3,
-     "elytra": 1902.9,
-     "schwimmen": 24.3,
+     "fuss": 753.7,
+     "elytra": 1916.8,
+     "schwimmen": 24.4,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 207787,
-    "damage_taken": 307387,
-    "damage_dealt": 1046205,
+    "jumps": 208511,
+    "damage_taken": 310302,
+    "damage_dealt": 1058765,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8370,
+    "drops": 8408,
     "trades": 0,
     "totems": 0,
     "player_kills": 38,
@@ -58,7 +58,7 @@
     "top_mined": [
      [
       "stone",
-      46060
+      46062
      ],
      [
       "sand",
@@ -424,24 +424,24 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 69.0,
+    "playtime_h": 69.4,
     "deaths": 37,
-    "mob_kills": 8096,
-    "distance_km": 662.1,
-    "mined": 27198,
-    "crafted": 27091,
+    "mob_kills": 8104,
+    "distance_km": 670.2,
+    "mined": 27217,
+    "crafted": 27104,
     "distanz": {
-     "fuss": 199.4,
-     "elytra": 457.6,
+     "fuss": 200.8,
+     "elytra": 464.3,
      "schwimmen": 2.9,
      "boot": 2.2
     },
-    "jumps": 45077,
-    "damage_taken": 119540,
-    "damage_dealt": 485780,
+    "jumps": 45351,
+    "damage_taken": 122873,
+    "damage_dealt": 488793,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2266,
+    "drops": 2297,
     "trades": 0,
     "totems": 0,
     "player_kills": 21,
@@ -2300,6 +2300,18 @@
  ],
  "ereignisse": [
   {
+   "t": "2026-11-24T17:54:52Z",
+   "typ": "advancement",
+   "spieler": "Wemmbuuufaker",
+   "text": "story - deflect arrow"
+  },
+  {
+   "t": "2026-11-24T17:30:01Z",
+   "typ": "tod",
+   "spieler": "BobBobinson007",
+   "text": "was slain by Vindicator"
+  },
+  {
    "t": "2026-11-24T16:55:57Z",
    "typ": "tod",
    "spieler": "the_carlito_",
@@ -4086,18 +4098,6 @@
    "typ": "advancement",
    "spieler": "TimotheToaster",
    "text": "adventure - kill a mob"
-  },
-  {
-   "t": "2026-11-18T22:25:00Z",
-   "typ": "advancement",
-   "spieler": "TimotheToaster",
-   "text": "story - shiny gear"
-  },
-  {
-   "t": "2026-11-18T22:19:39Z",
-   "typ": "advancement",
-   "spieler": "TimotheToaster",
-   "text": "husbandry - root"
   }
  ],
  "server": {
@@ -4105,6 +4105,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-24 17:30 UTC"
+  "wann": "2026-11-24 18:00 UTC"
  }
 }
