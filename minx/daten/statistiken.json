@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-24 20:00 UTC",
+ "aktualisiert": "2026-11-24 20:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 349.3,
-    "deaths": 135,
-    "mob_kills": 54115,
-    "distance_km": 2732.2,
-    "mined": 187852,
-    "crafted": 162101,
+    "playtime_h": 349.8,
+    "deaths": 136,
+    "mob_kills": 54154,
+    "distance_km": 2741.8,
+    "mined": 188086,
+    "crafted": 162173,
     "distanz": {
-     "fuss": 760.7,
-     "elytra": 1933.8,
+     "fuss": 762.1,
+     "elytra": 1941.9,
      "schwimmen": 24.4,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 210638,
-    "damage_taken": 316023,
-    "damage_dealt": 1104532,
+    "jumps": 211031,
+    "damage_taken": 317738,
+    "damage_dealt": 1111726,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8536,
+    "drops": 8539,
     "trades": 0,
     "totems": 0,
     "player_kills": 40,
@@ -58,7 +58,7 @@
     "top_mined": [
      [
       "stone",
-      46322
+      46348
      ],
      [
       "sand",
@@ -70,7 +70,7 @@
      ],
      [
       "dirt",
-      12651
+      12793
      ],
      [
       "sandstone",
@@ -2300,6 +2300,18 @@
  ],
  "ereignisse": [
   {
+   "t": "2026-11-24T20:01:15Z",
+   "typ": "tod",
+   "spieler": "BobBobinson007",
+   "text": "was shot by Pillager"
+  },
+  {
+   "t": "2026-11-24T19:57:48Z",
+   "typ": "advancement",
+   "spieler": "BobBobinson007",
+   "text": "adventure - summon iron golem"
+  },
+  {
    "t": "2026-11-24T19:32:38Z",
    "typ": "tod",
    "spieler": "BobBobinson007",
@@ -4086,18 +4098,6 @@
    "typ": "advancement",
    "spieler": "TimotheToaster",
    "text": "adventure - craft decorated pot using only sherds"
-  },
-  {
-   "t": "2026-11-18T22:29:56Z",
-   "typ": "advancement",
-   "spieler": "TimotheToaster",
-   "text": "story - iron tools"
-  },
-  {
-   "t": "2026-11-18T22:29:36Z",
-   "typ": "advancement",
-   "spieler": "TimotheToaster",
-   "text": "story - obtain armor"
   }
  ],
  "server": {
@@ -4105,6 +4105,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-24 20:00 UTC"
+  "wann": "2026-11-24 20:30 UTC"
  }
 }
