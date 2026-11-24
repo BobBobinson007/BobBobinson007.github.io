@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-24 12:30 UTC",
+ "aktualisiert": "2026-11-24 13:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 344.7,
+    "playtime_h": 345.0,
     "deaths": 124,
-    "mob_kills": 53788,
-    "distance_km": 2651.5,
-    "mined": 183688,
+    "mob_kills": 53790,
+    "distance_km": 2655.5,
+    "mined": 183716,
     "crafted": 161393,
     "distanz": {
-     "fuss": 747.7,
-     "elytra": 1866.3,
+     "fuss": 748.2,
+     "elytra": 1869.9,
      "schwimmen": 24.1,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 205117,
-    "damage_taken": 296599,
-    "damage_dealt": 1034111,
+    "jumps": 205293,
+    "damage_taken": 296848,
+    "damage_dealt": 1034351,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8278,
+    "drops": 8312,
     "trades": 0,
     "totems": 0,
     "player_kills": 36,
@@ -424,24 +424,24 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 65.3,
+    "playtime_h": 65.8,
     "deaths": 36,
-    "mob_kills": 7373,
-    "distance_km": 599.0,
-    "mined": 26092,
+    "mob_kills": 7407,
+    "distance_km": 607.4,
+    "mined": 26635,
     "crafted": 26081,
     "distanz": {
-     "fuss": 182.3,
-     "elytra": 411.9,
+     "fuss": 184.3,
+     "elytra": 418.3,
      "schwimmen": 2.6,
      "boot": 2.2
     },
-    "jumps": 41076,
-    "damage_taken": 104720,
-    "damage_dealt": 420703,
+    "jumps": 41738,
+    "damage_taken": 105958,
+    "damage_dealt": 425825,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2002,
+    "drops": 2024,
     "trades": 0,
     "totems": 0,
     "player_kills": 11,
@@ -479,7 +479,7 @@
      ],
      [
       "netherrack",
-      4166
+      4245
      ],
      [
       "grass block",
@@ -487,11 +487,11 @@
      ],
      [
       "stone",
-      2832
+      2842
      ],
      [
       "deepslate",
-      1900
+      2247
      ],
      [
       "dark oak log",
@@ -2296,6 +2296,12 @@
  ],
  "ereignisse": [
   {
+   "t": "2026-11-24T12:53:28Z",
+   "typ": "advancement",
+   "spieler": "Wemmbuuufaker",
+   "text": "nether - get wither skull"
+  },
+  {
    "t": "2026-11-23T21:43:34Z",
    "typ": "advancement",
    "spieler": "Qmatteo",
@@ -4088,12 +4094,6 @@
    "typ": "advancement",
    "spieler": "ZickZackBoss",
    "text": "nether - create full beacon"
-  },
-  {
-   "t": "2026-11-17T15:45:17Z",
-   "typ": "advancement",
-   "spieler": "TheRealDmseife",
-   "text": "nether - summon wither"
   }
  ],
  "server": {
@@ -4101,6 +4101,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-24 12:30 UTC"
+  "wann": "2026-11-24 13:00 UTC"
  }
 }
