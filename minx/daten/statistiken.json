@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-24 17:00 UTC",
+ "aktualisiert": "2026-11-24 17:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -318,25 +318,25 @@
   {
    "name": "the_carlito_",
    "stats": {
-    "playtime_h": 91.0,
+    "playtime_h": 91.1,
     "deaths": 139,
     "mob_kills": 158,
-    "distance_km": 232.0,
+    "distance_km": 232.3,
     "mined": 18597,
-    "crafted": 56943,
+    "crafted": 56945,
     "distanz": {
-     "fuss": 97.8,
+     "fuss": 97.9,
      "elytra": 122.5,
      "schwimmen": 6.5,
      "boot": 0.3,
-     "minecart": 4.9
+     "minecart": 5.1
     },
-    "jumps": 17367,
+    "jumps": 17398,
     "damage_taken": 66368,
     "damage_dealt": 18538,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1445,
+    "drops": 1447,
     "trades": 0,
     "totems": 0,
     "player_kills": 4,
@@ -427,17 +427,17 @@
     "playtime_h": 69.0,
     "deaths": 37,
     "mob_kills": 8096,
-    "distance_km": 661.3,
+    "distance_km": 662.1,
     "mined": 27198,
     "crafted": 27091,
     "distanz": {
-     "fuss": 199.3,
-     "elytra": 456.9,
+     "fuss": 199.4,
+     "elytra": 457.6,
      "schwimmen": 2.9,
      "boot": 2.2
     },
-    "jumps": 45059,
-    "damage_taken": 119395,
+    "jumps": 45077,
+    "damage_taken": 119540,
     "damage_dealt": 485780,
     "fish_caught": 0,
     "enchanted": 0,
@@ -4105,6 +4105,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-24 17:00 UTC"
+  "wann": "2026-11-24 17:30 UTC"
  }
 }
