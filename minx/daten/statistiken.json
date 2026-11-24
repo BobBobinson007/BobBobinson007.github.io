@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-24 13:00 UTC",
+ "aktualisiert": "2026-11-24 13:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 345.0,
-    "deaths": 124,
-    "mob_kills": 53790,
-    "distance_km": 2655.5,
-    "mined": 183716,
+    "playtime_h": 345.5,
+    "deaths": 125,
+    "mob_kills": 53815,
+    "distance_km": 2659.6,
+    "mined": 183719,
     "crafted": 161393,
     "distanz": {
-     "fuss": 748.2,
-     "elytra": 1869.9,
-     "schwimmen": 24.1,
+     "fuss": 749.4,
+     "elytra": 1872.6,
+     "schwimmen": 24.2,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 205293,
-    "damage_taken": 296848,
-    "damage_dealt": 1034351,
+    "jumps": 206186,
+    "damage_taken": 298352,
+    "damage_dealt": 1039227,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8312,
+    "drops": 8316,
     "trades": 0,
     "totems": 0,
     "player_kills": 36,
@@ -48,7 +48,7 @@
      ],
      [
       "creeper",
-      2
+      3
      ],
      [
       "spider",
@@ -424,24 +424,24 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 65.8,
+    "playtime_h": 66.2,
     "deaths": 36,
-    "mob_kills": 7407,
-    "distance_km": 607.4,
-    "mined": 26635,
-    "crafted": 26081,
+    "mob_kills": 7454,
+    "distance_km": 614.4,
+    "mined": 26692,
+    "crafted": 26922,
     "distanz": {
-     "fuss": 184.3,
-     "elytra": 418.3,
+     "fuss": 185.8,
+     "elytra": 423.8,
      "schwimmen": 2.6,
      "boot": 2.2
     },
-    "jumps": 41738,
-    "damage_taken": 105958,
-    "damage_dealt": 425825,
+    "jumps": 42157,
+    "damage_taken": 107181,
+    "damage_dealt": 434171,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2024,
+    "drops": 2053,
     "trades": 0,
     "totems": 0,
     "player_kills": 11,
@@ -475,7 +475,7 @@
     "top_mined": [
      [
       "dirt",
-      4382
+      4383
      ],
      [
       "netherrack",
@@ -483,11 +483,11 @@
      ],
      [
       "grass block",
-      3260
+      3261
      ],
      [
       "stone",
-      2842
+      2849
      ],
      [
       "deepslate",
@@ -504,6 +504,10 @@
       3370
      ],
      [
+      "gold nugget",
+      2538
+     ],
+     [
       "stick",
       2476
      ],
@@ -516,12 +520,8 @@
       2199
      ],
      [
-      "gold nugget",
-      1917
-     ],
-     [
       "gold ingot",
-      1487
+      1631
      ]
     ]
    }
@@ -933,22 +933,22 @@
   {
    "name": "Hagen13juhhuh",
    "stats": {
-    "playtime_h": 17.8,
+    "playtime_h": 18.1,
     "deaths": 35,
-    "mob_kills": 329,
-    "distance_km": 156.1,
-    "mined": 6383,
-    "crafted": 7534,
+    "mob_kills": 332,
+    "distance_km": 157.3,
+    "mined": 6385,
+    "crafted": 8354,
     "distanz": {
-     "fuss": 51.5,
+     "fuss": 52.8,
      "elytra": 103.9,
      "schwimmen": 0.0,
      "boot": 0.1,
      "minecart": 0.5
     },
-    "jumps": 7627,
-    "damage_taken": 23006,
-    "damage_dealt": 18559,
+    "jumps": 7796,
+    "damage_taken": 23029,
+    "damage_dealt": 19161,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 178,
@@ -993,7 +993,7 @@
      ],
      [
       "grass block",
-      816
+      817
      ],
      [
       "snow",
@@ -1007,7 +1007,7 @@
     "top_crafted": [
      [
       "paper",
-      4179
+      4947
      ],
      [
       "oak planks",
@@ -2295,6 +2295,12 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-24T13:11:28Z",
+   "typ": "tod",
+   "spieler": "BobBobinson007",
+   "text": "was blown up by Creeper"
+  },
   {
    "t": "2026-11-24T12:53:28Z",
    "typ": "advancement",
@@ -4088,12 +4094,6 @@
    "typ": "advancement",
    "spieler": "ZickZackBoss",
    "text": "nether - create beacon"
-  },
-  {
-   "t": "2026-11-17T18:27:50Z",
-   "typ": "advancement",
-   "spieler": "ZickZackBoss",
-   "text": "nether - create full beacon"
   }
  ],
  "server": {
@@ -4101,6 +4101,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-24 13:00 UTC"
+  "wann": "2026-11-24 13:30 UTC"
  }
 }
