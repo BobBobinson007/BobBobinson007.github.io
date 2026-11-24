@@ -1,38 +1,38 @@
 {
- "aktualisiert": "2026-11-24 18:00 UTC",
+ "aktualisiert": "2026-11-24 18:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 347.3,
-    "deaths": 133,
-    "mob_kills": 53875,
-    "distance_km": 2708.3,
-    "mined": 183901,
-    "crafted": 161395,
+    "playtime_h": 347.8,
+    "deaths": 134,
+    "mob_kills": 53931,
+    "distance_km": 2717.7,
+    "mined": 183914,
+    "crafted": 162029,
     "distanz": {
-     "fuss": 753.7,
-     "elytra": 1916.8,
+     "fuss": 755.0,
+     "elytra": 1925.0,
      "schwimmen": 24.4,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 208511,
-    "damage_taken": 310302,
-    "damage_dealt": 1058765,
+    "jumps": 209032,
+    "damage_taken": 312171,
+    "damage_dealt": 1068603,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8408,
+    "drops": 8460,
     "trades": 0,
     "totems": 0,
-    "player_kills": 38,
-    "killed_by_player": 44,
+    "player_kills": 40,
+    "killed_by_player": 45,
     "top_killed_by": [
      [
       "Spieler",
-      44
+      45
      ],
      [
       "warden",
@@ -424,32 +424,32 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 69.4,
-    "deaths": 37,
-    "mob_kills": 8104,
-    "distance_km": 670.2,
+    "playtime_h": 69.5,
+    "deaths": 39,
+    "mob_kills": 8186,
+    "distance_km": 673.0,
     "mined": 27217,
     "crafted": 27104,
     "distanz": {
-     "fuss": 200.8,
-     "elytra": 464.3,
+     "fuss": 201.1,
+     "elytra": 466.8,
      "schwimmen": 2.9,
      "boot": 2.2
     },
-    "jumps": 45351,
-    "damage_taken": 122873,
-    "damage_dealt": 488793,
+    "jumps": 45393,
+    "damage_taken": 123609,
+    "damage_dealt": 489324,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2297,
+    "drops": 2376,
     "trades": 0,
     "totems": 0,
-    "player_kills": 21,
-    "killed_by_player": 10,
+    "player_kills": 22,
+    "killed_by_player": 12,
     "top_killed_by": [
      [
       "Spieler",
-      10
+      12
      ],
      [
       "vindicator",
@@ -2300,6 +2300,24 @@
  ],
  "ereignisse": [
   {
+   "t": "2026-11-24T18:19:11Z",
+   "typ": "tod",
+   "spieler": "Wemmbuuufaker",
+   "text": "was slain by [SC] BobBobinson007"
+  },
+  {
+   "t": "2026-11-24T18:18:53Z",
+   "typ": "tod",
+   "spieler": "BobBobinson007",
+   "text": "was slain by Wemmbuuufaker using [Made In Heaven]"
+  },
+  {
+   "t": "2026-11-24T18:18:53Z",
+   "typ": "kill",
+   "spieler": "Wemmbuuufaker",
+   "text": "hat BobBobinson007 erledigt (was slain by Wemmbuuufaker using [Made In Heaven])"
+  },
+  {
    "t": "2026-11-24T17:54:52Z",
    "typ": "advancement",
    "spieler": "Wemmbuuufaker",
@@ -4080,24 +4098,6 @@
    "typ": "advancement",
    "spieler": "TimotheToaster",
    "text": "story - smelt iron"
-  },
-  {
-   "t": "2026-11-18T22:29:15Z",
-   "typ": "advancement",
-   "spieler": "TimotheToaster",
-   "text": "story - root"
-  },
-  {
-   "t": "2026-11-18T22:27:05Z",
-   "typ": "advancement",
-   "spieler": "TimotheToaster",
-   "text": "adventure - root"
-  },
-  {
-   "t": "2026-11-18T22:27:05Z",
-   "typ": "advancement",
-   "spieler": "TimotheToaster",
-   "text": "adventure - kill a mob"
   }
  ],
  "server": {
@@ -4105,6 +4105,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-24 18:00 UTC"
+  "wann": "2026-11-24 18:30 UTC"
  }
 }
