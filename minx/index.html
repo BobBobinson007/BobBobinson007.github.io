@@ -949,32 +949,51 @@ function render(){
 
 /* ================= Toedlichste Spieler ================= */
 
-// Repraesentative Wertung: Kills und Tode pro Stunde, aber mit
-// Schrumpf-Ausgleich (Bayesian): wenige Stunden -> Werte nähern sich dem
-// Server-Durchschnitt an, damit 1-Stunden-Spieler nicht nach Zufall ganz
-// oben stehen. Punkte = Kills/h ÷ (1 + Tode/h), beide geglättet.
+// Wertung v2: "Tödlich" heißt gefährlich für andere Spieler — Farm-Mob-Kills
+// zählen nicht. Drei Komponenten, alle pro Stunde und mit Schrumpf-Ausgleich
+// (K = 10 h) zum Server-Durchschnitt geglättet:
+//   Dominanz   (45 %): geglättete PvP-Kills/h ÷ geglättete PvP-Tode/h
+//   Kampfkraft (35 %): log2(1 + geglätteter verursachter Schaden/h)
+//   Überleben  (20 %): 1 ÷ (1 + geglättete Tode/h)
+// Jede Komponente wird relativ zum besten Spieler gesättigt (x ÷ (x + max)),
+// die Summe auf 0–100 min-max skaliert: 100 = tödlichster Spieler.
 const TK_SCHRUMPF = 10;   // Vertrauens-Horizont in Stunden
 
 function renderToedlichste(){
   const spieler = (daten?.spieler||[]);
-  let totH = 0, totK = 0, totT = 0;
+  let totH = 0, totPVK = 0, totPVD = 0, totDMG = 0, totDTH = 0;
   spieler.forEach(p=>{
     const st = p.stats || {};
-    totH += Math.max(st.playtime_h || 0, 0.1);
-    totK += (st.mob_kills||0) + (st.player_kills||0);
-    totT += (st.deaths||0);
+    totH   += Math.max(st.playtime_h || 0, 0.1);
+    totPVK += st.player_kills||0;
+    totPVD += st.killed_by_player||0;
+    totDMG += st.damage_dealt||0;
+    totDTH += st.deaths||0;
   });
-  const avgK = totH ? totK/totH : 0, avgT = totH ? totT/totH : 0;
+  const K = TK_SCHRUMPF;
+  const aPVK = totPVK/totH, aPVD = totPVD/totH, aDMG = totDMG/totH, aDTH = totDTH/totH;
+  const sh = (v,h,a)=>(v + K*a)/(h + K);   // Schrumpf-Ausgleich (a = Avg-Rate/h)
   const rows = spieler.map(p=>{
     const st = p.stats || {};
     const h = Math.max(st.playtime_h || 0, 0.1);
-    const kills = (st.mob_kills||0) + (st.player_kills||0);
-    const kph = (kills + TK_SCHRUMPF*avgK) / (h + TK_SCHRUMPF);  // geglättet
-    const dph = (st.deaths + TK_SCHRUMPF*avgT) / (h + TK_SCHRUMPF);
-    const punkte = kph / (1 + dph);
-    const kd = kills / Math.max(st.deaths||0, 1);   // rohe Kill/Death-Quote
-    return {name:p.name, h, kph, dph, punkte, kd};
-  }).sort((a,b)=>b.punkte - a.punkte);
+    const pvkR = sh(st.player_kills||0, h, aPVK);
+    const pvdR = Math.max(sh(st.killed_by_player||0, h, aPVD), 0.01);
+    const dph  = sh(st.deaths||0, h, aDTH);
+    return {name:p.name, h,
+      dom:  pvkR / pvdR,                          // PvP-Dominanz
+      kraft: Math.log2(1 + sh(st.damage_dealt||0, h, aDMG)),   // Kampfkraft
+      ueber: 1/(1 + dph),                         // Überleben
+      pvk: st.player_kills||0, pvd: st.killed_by_player||0, dph};
+  });
+  const mx = k => Math.max(...rows.map(r=>r[k]), 0.0001);
+  const sat = (v,m) => v/(v + m);                 // Sättigung relativ zum Besten
+  const raw = rows.map(r=>
+    0.45*sat(r.dom, mx('dom')) +
+    0.35*sat(r.kraft, mx('kraft')) +
+    0.20*sat(r.ueber, mx('ueber')));
+  const lo = Math.min(...raw), hi = Math.max(...raw);
+  rows.forEach((r,i)=> r.punkte = hi > lo ? Math.round(100*(raw[i]-lo)/(hi-lo)) : 50);
+  rows.sort((a,b)=>b.punkte - a.punkte);
   const el = document.getElementById('tkill');
   if(!el) return;
   el.innerHTML = rows.length ? rows.map((r,i)=>
@@ -983,14 +1002,13 @@ function renderToedlichste(){
     '<img class="thead" src="'+headUrl(r.name,64)+'" alt="'+r.name+'" onerror="helmFallback(this,\''+encodeURIComponent(r.name)+'\',32)">'+
     '<span class="tname">'+r.name+(VIPS.includes(r.name)?vplusHtml:'')+'</span>'+
     '<span class="tnum">'+fmtW(r.h,1)+' h</span>'+
-    '<span class="tnum">'+(r.kd<100?fmtW(r.kd,1):fmt(Math.round(r.kd)))+' K/D</span>'+
-    '<span class="tnum">'+fmtW(r.kph,1)+' Kills/h</span>'+
+    '<span class="tnum">'+r.pvk+' / '+r.pvd+' PvP</span>'+
     '<span class="tnum">'+fmtW(r.dph,2)+' Tode/h</span>'+
     '<span class="tpoints">'+fmtW(r.punkte,1)+' P</span></div>').join('')
     : '<div class="trow"><span class="tname">Keine Daten geladen.</span></div>';
   const upd = document.getElementById('tkupdated');
   if(upd) upd.textContent = 'Stand: ' + (daten?.aktualisiert || 'unbekannt') +
-    ' · Punkte = Kills/h ÷ (1 + Tode/h) · Bei wenig Spielzeit nähern sich Werte dem Server-Durchschnitt (100 Kills/h, 0,6 Tode/h) an';
+    ' · Punkte = 45 % PvP-Dominanz + 35 % Kampfkraft (Schaden/h) + 20 % Überleben · Farm-Mob-Kills zählen nicht · Bei wenig Spielzeit nähern sich die Werte dem Server-Durchschnitt an · 100 P = tödlichster Spieler';
 }
 
 /* ================= Server-Stats ================= */
