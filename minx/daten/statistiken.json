@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-24 14:33 UTC",
+ "aktualisiert": "2026-11-24 14:36 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -8,23 +8,23 @@
     "playtime_h": 346.5,
     "deaths": 132,
     "mob_kills": 53824,
-    "distance_km": 2689.8,
-    "mined": 183819,
+    "distance_km": 2689.9,
+    "mined": 183820,
     "crafted": 161393,
     "distanz": {
-     "fuss": 751.8,
+     "fuss": 751.9,
      "elytra": 1900.3,
      "schwimmen": 24.3,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 207346,
-    "damage_taken": 306498,
+    "jumps": 207488,
+    "damage_taken": 306690,
     "damage_dealt": 1044245,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8359,
+    "drops": 8364,
     "trades": 0,
     "totems": 0,
     "player_kills": 38,
@@ -219,26 +219,26 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 110.0,
+    "playtime_h": 110.1,
     "deaths": 28,
     "mob_kills": 17504,
-    "distance_km": 1178.9,
-    "mined": 37269,
+    "distance_km": 1179.6,
+    "mined": 37453,
     "crafted": 133663,
     "distanz": {
-     "fuss": 280.9,
-     "elytra": 889.0,
+     "fuss": 281.4,
+     "elytra": 889.2,
      "schwimmen": 5.9,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 67153,
-    "damage_taken": 110864,
+    "jumps": 67247,
+    "damage_taken": 110929,
     "damage_dealt": 520229,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2862,
+    "drops": 2869,
     "trades": 0,
     "totems": 0,
     "player_kills": 38,
@@ -264,7 +264,7 @@
     "top_mined": [
      [
       "netherrack",
-      11743
+      11899
      ],
      [
       "stone",
@@ -284,7 +284,7 @@
      ],
      [
       "gravel",
-      1242
+      1243
      ]
     ],
     "top_crafted": [
@@ -635,22 +635,22 @@
   {
    "name": "WerferHades19",
    "stats": {
-    "playtime_h": 32.7,
+    "playtime_h": 32.8,
     "deaths": 40,
-    "mob_kills": 2942,
-    "distance_km": 449.6,
-    "mined": 26652,
+    "mob_kills": 2943,
+    "distance_km": 450.1,
+    "mined": 26666,
     "crafted": 5406,
     "distanz": {
-     "fuss": 97.4,
-     "elytra": 348.2,
+     "fuss": 97.6,
+     "elytra": 348.4,
      "schwimmen": 1.2,
      "boot": 1.2,
      "pferd": 1.6
     },
-    "jumps": 21934,
-    "damage_taken": 40218,
-    "damage_dealt": 98691,
+    "jumps": 21950,
+    "damage_taken": 40229,
+    "damage_dealt": 98891,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 504,
@@ -707,7 +707,7 @@
      ],
      [
       "sandstone stairs",
-      706
+      720
      ]
     ],
     "top_crafted": [
@@ -937,25 +937,25 @@
   {
    "name": "Hagen13juhhuh",
    "stats": {
-    "playtime_h": 18.8,
+    "playtime_h": 18.9,
     "deaths": 36,
     "mob_kills": 343,
-    "distance_km": 161.1,
-    "mined": 7248,
+    "distance_km": 161.5,
+    "mined": 7578,
     "crafted": 8358,
     "distanz": {
-     "fuss": 56.6,
+     "fuss": 56.9,
      "elytra": 103.9,
      "schwimmen": 0.0,
      "boot": 0.1,
      "minecart": 0.5
     },
-    "jumps": 8307,
-    "damage_taken": 23647,
+    "jumps": 8379,
+    "damage_taken": 23649,
     "damage_dealt": 21372,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 178,
+    "drops": 179,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -985,7 +985,7 @@
     "top_mined": [
      [
       "netherrack",
-      1760
+      2073
      ],
      [
       "stone",
@@ -2299,6 +2299,12 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-24T14:33:42Z",
+   "typ": "advancement",
+   "spieler": "Hagen13juhhuh",
+   "text": "nether - obtain ancient debris"
+  },
   {
    "t": "2026-11-24T14:29:13Z",
    "typ": "tod",
@@ -4092,12 +4098,6 @@
    "typ": "advancement",
    "spieler": "Manumel12",
    "text": "adventure - trade"
-  },
-  {
-   "t": "2026-11-18T14:23:39Z",
-   "typ": "tod",
-   "spieler": "Manumel12",
-   "text": "was burned to a crisp while fighting [SC] TheRealDmseife  +"
   }
  ],
  "server": {
@@ -4105,6 +4105,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-24 14:33 UTC"
+  "wann": "2026-11-24 14:36 UTC"
  }
 }
