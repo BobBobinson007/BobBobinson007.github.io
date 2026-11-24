@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-24 15:00 UTC",
+ "aktualisiert": "2026-11-24 15:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 346.7,
+    "playtime_h": 346.8,
     "deaths": 132,
-    "mob_kills": 53824,
-    "distance_km": 2690.1,
+    "mob_kills": 53835,
+    "distance_km": 2692.9,
     "mined": 183882,
     "crafted": 161393,
     "distanz": {
-     "fuss": 752.1,
-     "elytra": 1900.3,
+     "fuss": 752.3,
+     "elytra": 1902.9,
      "schwimmen": 24.3,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 207689,
-    "damage_taken": 306719,
-    "damage_dealt": 1044245,
+    "jumps": 207787,
+    "damage_taken": 307387,
+    "damage_dealt": 1046205,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8369,
+    "drops": 8370,
     "trades": 0,
     "totems": 0,
     "player_kills": 38,
@@ -219,26 +219,26 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 110.5,
+    "playtime_h": 111.0,
     "deaths": 28,
-    "mob_kills": 17622,
-    "distance_km": 1185.8,
-    "mined": 38035,
+    "mob_kills": 17639,
+    "distance_km": 1197.1,
+    "mined": 38393,
     "crafted": 133717,
     "distanz": {
-     "fuss": 283.5,
-     "elytra": 893.3,
+     "fuss": 284.3,
+     "elytra": 903.8,
      "schwimmen": 5.9,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 67902,
-    "damage_taken": 113052,
-    "damage_dealt": 540368,
+    "jumps": 68162,
+    "damage_taken": 113927,
+    "damage_dealt": 547302,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2900,
+    "drops": 2923,
     "trades": 0,
     "totems": 0,
     "player_kills": 38,
@@ -268,15 +268,15 @@
      ],
      [
       "stone",
-      3924
+      4126
      ],
      [
       "oak leaves",
-      3764
+      3768
      ],
      [
       "dirt",
-      1589
+      1594
      ],
      [
       "dark oak log",
@@ -284,7 +284,7 @@
      ],
      [
       "gravel",
-      1247
+      1259
      ]
     ],
     "top_crafted": [
@@ -424,24 +424,24 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 67.5,
+    "playtime_h": 67.9,
     "deaths": 37,
-    "mob_kills": 7754,
-    "distance_km": 638.8,
-    "mined": 26799,
-    "crafted": 26923,
+    "mob_kills": 7820,
+    "distance_km": 643.3,
+    "mined": 26954,
+    "crafted": 27051,
     "distanz": {
-     "fuss": 192.6,
-     "elytra": 441.1,
+     "fuss": 194.6,
+     "elytra": 443.6,
      "schwimmen": 2.9,
      "boot": 2.2
     },
-    "jumps": 43577,
-    "damage_taken": 112977,
-    "damage_dealt": 459236,
+    "jumps": 43912,
+    "damage_taken": 114218,
+    "damage_dealt": 464859,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2129,
+    "drops": 2164,
     "trades": 0,
     "totems": 0,
     "player_kills": 18,
@@ -475,7 +475,7 @@
     "top_mined": [
      [
       "dirt",
-      4385
+      4389
      ],
      [
       "netherrack",
@@ -487,11 +487,11 @@
      ],
      [
       "stone",
-      2885
+      2934
      ],
      [
       "deepslate",
-      2265
+      2283
      ],
      [
       "dark oak log",
@@ -635,21 +635,21 @@
   {
    "name": "WerferHades19",
    "stats": {
-    "playtime_h": 33.2,
+    "playtime_h": 33.4,
     "deaths": 40,
     "mob_kills": 2946,
-    "distance_km": 456.4,
-    "mined": 26725,
+    "distance_km": 458.1,
+    "mined": 26933,
     "crafted": 5406,
     "distanz": {
-     "fuss": 99.1,
-     "elytra": 353.3,
+     "fuss": 100.2,
+     "elytra": 353.9,
      "schwimmen": 1.2,
      "boot": 1.2,
      "pferd": 1.6
     },
-    "jumps": 22185,
-    "damage_taken": 40922,
+    "jumps": 22316,
+    "damage_taken": 40978,
     "damage_dealt": 99443,
     "fish_caught": 0,
     "enchanted": 0,
@@ -703,7 +703,7 @@
      ],
      [
       "cut sandstone",
-      774
+      982
      ],
      [
       "sandstone stairs",
@@ -4105,6 +4105,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-24 15:00 UTC"
+  "wann": "2026-11-24 15:30 UTC"
  }
 }
