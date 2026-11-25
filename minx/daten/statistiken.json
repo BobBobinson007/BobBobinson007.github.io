@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-25 14:30 UTC",
+ "aktualisiert": "2026-11-25 15:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -1128,23 +1128,23 @@
   {
    "name": "Manumel12",
    "stats": {
-    "playtime_h": 13.5,
+    "playtime_h": 14.0,
     "deaths": 5,
-    "mob_kills": 6203,
-    "distance_km": 174.6,
-    "mined": 11624,
-    "crafted": 22281,
+    "mob_kills": 6204,
+    "distance_km": 178.3,
+    "mined": 12568,
+    "crafted": 22985,
     "distanz": {
-     "fuss": 45.6,
-     "elytra": 127.0,
-     "schwimmen": 1.9
+     "fuss": 46.3,
+     "elytra": 129.7,
+     "schwimmen": 2.3
     },
-    "jumps": 7414,
-    "damage_taken": 14690,
-    "damage_dealt": 67427,
+    "jumps": 7549,
+    "damage_taken": 14707,
+    "damage_dealt": 67627,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3318,
+    "drops": 3332,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -1166,7 +1166,7 @@
      ],
      [
       "gravel",
-      1485
+      1569
      ],
      [
       "carrots",
@@ -1177,12 +1177,12 @@
       780
      ],
      [
-      "dirt",
-      621
+      "blue concrete",
+      758
      ],
      [
-      "coal ore",
-      297
+      "dirt",
+      639
      ]
     ],
     "top_crafted": [
@@ -1729,6 +1729,86 @@
    }
   },
   {
+   "name": "Qmatteo",
+   "stats": {
+    "playtime_h": 2.2,
+    "deaths": 11,
+    "mob_kills": 14,
+    "distance_km": 11.8,
+    "mined": 693,
+    "crafted": 16,
+    "distanz": {
+     "fuss": 10.2,
+     "elytra": 1.3,
+     "schwimmen": 0.3
+    },
+    "jumps": 2061,
+    "damage_taken": 4694,
+    "damage_dealt": 3236,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 110,
+    "trades": 0,
+    "totems": 0,
+    "player_kills": 0,
+    "killed_by_player": 8,
+    "top_killed_by": [
+     [
+      "Spieler",
+      8
+     ],
+     [
+      "guardian",
+      1
+     ],
+     [
+      "zombie",
+      1
+     ]
+    ],
+    "top_mined": [
+     [
+      "stone",
+      473
+     ],
+     [
+      "dirt",
+      51
+     ],
+     [
+      "short grass",
+      38
+     ],
+     [
+      "cobblestone",
+      17
+     ],
+     [
+      "oak log",
+      12
+     ],
+     [
+      "diorite",
+      9
+     ]
+    ],
+    "top_crafted": [
+     [
+      "birch planks",
+      12
+     ],
+     [
+      "birch door",
+      3
+     ],
+     [
+      "stone button",
+      1
+     ]
+    ]
+   }
+  },
+  {
    "name": "EnvyTheBlade",
    "stats": {
     "playtime_h": 1.8,
@@ -1890,86 +1970,6 @@
      [
       "cooked mutton",
       8
-     ]
-    ]
-   }
-  },
-  {
-   "name": "Qmatteo",
-   "stats": {
-    "playtime_h": 1.8,
-    "deaths": 11,
-    "mob_kills": 13,
-    "distance_km": 10.2,
-    "mined": 407,
-    "crafted": 16,
-    "distanz": {
-     "fuss": 8.7,
-     "elytra": 1.3,
-     "schwimmen": 0.2
-    },
-    "jumps": 1873,
-    "damage_taken": 4663,
-    "damage_dealt": 3077,
-    "fish_caught": 0,
-    "enchanted": 0,
-    "drops": 107,
-    "trades": 0,
-    "totems": 0,
-    "player_kills": 0,
-    "killed_by_player": 8,
-    "top_killed_by": [
-     [
-      "Spieler",
-      8
-     ],
-     [
-      "guardian",
-      1
-     ],
-     [
-      "zombie",
-      1
-     ]
-    ],
-    "top_mined": [
-     [
-      "stone",
-      254
-     ],
-     [
-      "short grass",
-      37
-     ],
-     [
-      "dirt",
-      31
-     ],
-     [
-      "oak log",
-      12
-     ],
-     [
-      "diorite",
-      9
-     ],
-     [
-      "grass block",
-      8
-     ]
-    ],
-    "top_crafted": [
-     [
-      "birch planks",
-      12
-     ],
-     [
-      "birch door",
-      3
-     ],
-     [
-      "stone button",
-      1
      ]
     ]
    }
@@ -4105,6 +4105,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-25 14:30 UTC"
+  "wann": "2026-11-25 15:00 UTC"
  }
 }
