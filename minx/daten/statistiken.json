@@ -1,38 +1,38 @@
 {
- "aktualisiert": "2026-11-25 18:30 UTC",
+ "aktualisiert": "2026-11-25 19:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 352.6,
-    "deaths": 139,
-    "mob_kills": 54218,
-    "distance_km": 2772.2,
-    "mined": 188335,
-    "crafted": 163221,
+    "playtime_h": 353.2,
+    "deaths": 143,
+    "mob_kills": 54319,
+    "distance_km": 2786.3,
+    "mined": 188345,
+    "crafted": 164041,
     "distanz": {
-     "fuss": 765.4,
-     "elytra": 1968.8,
-     "schwimmen": 24.6,
+     "fuss": 766.8,
+     "elytra": 1981.4,
+     "schwimmen": 24.7,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 212277,
-    "damage_taken": 323377,
-    "damage_dealt": 1120093,
+    "jumps": 213101,
+    "damage_taken": 329151,
+    "damage_dealt": 1122312,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8622,
+    "drops": 8642,
     "trades": 0,
     "totems": 0,
     "player_kills": 40,
-    "killed_by_player": 48,
+    "killed_by_player": 52,
     "top_killed_by": [
      [
       "Spieler",
-      48
+      52
      ],
      [
       "warden",
@@ -92,7 +92,7 @@
      ],
      [
       "gold nugget",
-      12092
+      12668
      ],
      [
       "bone meal",
@@ -424,27 +424,27 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 72.0,
+    "playtime_h": 72.5,
     "deaths": 39,
-    "mob_kills": 8787,
-    "distance_km": 733.8,
-    "mined": 28020,
+    "mob_kills": 8798,
+    "distance_km": 746.5,
+    "mined": 28049,
     "crafted": 27382,
     "distanz": {
-     "fuss": 209.0,
-     "elytra": 519.4,
+     "fuss": 211.0,
+     "elytra": 530.1,
      "schwimmen": 3.2,
      "boot": 2.2
     },
-    "jumps": 47225,
-    "damage_taken": 132630,
-    "damage_dealt": 525507,
+    "jumps": 47588,
+    "damage_taken": 135162,
+    "damage_dealt": 530780,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2635,
+    "drops": 2668,
     "trades": 0,
     "totems": 0,
-    "player_kills": 25,
+    "player_kills": 26,
     "killed_by_player": 12,
     "top_killed_by": [
      [
@@ -483,7 +483,7 @@
      ],
      [
       "grass block",
-      3272
+      3274
      ],
      [
       "stone",
@@ -2301,6 +2301,36 @@
  ],
  "ereignisse": [
   {
+   "t": "2026-11-25T18:56:45Z",
+   "typ": "tod",
+   "spieler": "BobBobinson007",
+   "text": "was slain by Wemmbuuufaker using [ZA WARUDO]"
+  },
+  {
+   "t": "2026-11-25T18:56:45Z",
+   "typ": "kill",
+   "spieler": "Wemmbuuufaker",
+   "text": "hat BobBobinson007 erledigt (was slain by Wemmbuuufaker using [ZA WARUDO])"
+  },
+  {
+   "t": "2026-11-25T18:56:14Z",
+   "typ": "tod",
+   "spieler": "BobBobinson007",
+   "text": "was slain by Wemmbuuufaker using [Made In Heaven]"
+  },
+  {
+   "t": "2026-11-25T18:56:14Z",
+   "typ": "kill",
+   "spieler": "Wemmbuuufaker",
+   "text": "hat BobBobinson007 erledigt (was slain by Wemmbuuufaker using [Made In Heaven])"
+  },
+  {
+   "t": "2026-11-25T18:51:17Z",
+   "typ": "tod",
+   "spieler": "BobBobinson007",
+   "text": "was burned to a crisp while fighting Wemmbuuufaker"
+  },
+  {
    "t": "2026-11-25T17:45:18Z",
    "typ": "tod",
    "spieler": "BobBobinson007",
@@ -4069,36 +4099,6 @@
    "typ": "advancement",
    "spieler": "TimotheToaster",
    "text": "story - enter the nether"
-  },
-  {
-   "t": "2026-11-19T13:55:04Z",
-   "typ": "advancement",
-   "spieler": "TimotheToaster",
-   "text": "nether - root"
-  },
-  {
-   "t": "2026-11-19T13:48:27Z",
-   "typ": "tod",
-   "spieler": "TimotheToaster",
-   "text": "was slain by [SC] BobBobinson007"
-  },
-  {
-   "t": "2026-11-19T13:24:17Z",
-   "typ": "advancement",
-   "spieler": "BobBobinson007",
-   "text": "adventure - overoverkill"
-  },
-  {
-   "t": "2026-11-19T12:42:05Z",
-   "typ": "advancement",
-   "spieler": "TimotheToaster",
-   "text": "adventure - trade"
-  },
-  {
-   "t": "2026-11-18T23:03:05Z",
-   "typ": "advancement",
-   "spieler": "TimotheToaster",
-   "text": "story - mine stone"
   }
  ],
  "server": {
@@ -4106,6 +4106,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-25 18:30 UTC"
+  "wann": "2026-11-25 19:00 UTC"
  }
 }
