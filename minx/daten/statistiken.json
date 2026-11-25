@@ -1,26 +1,26 @@
 {
- "aktualisiert": "2026-11-25 19:30 UTC",
+ "aktualisiert": "2026-11-25 20:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 353.3,
+    "playtime_h": 353.8,
     "deaths": 143,
     "mob_kills": 54319,
-    "distance_km": 2787.3,
+    "distance_km": 2787.5,
     "mined": 188345,
     "crafted": 164041,
     "distanz": {
-     "fuss": 766.9,
+     "fuss": 767.1,
      "elytra": 1982.4,
      "schwimmen": 24.7,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 213127,
-    "damage_taken": 329343,
+    "jumps": 213235,
+    "damage_taken": 329424,
     "damage_dealt": 1122312,
     "fish_caught": 129,
     "enchanted": 0,
@@ -112,26 +112,26 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 316.7,
+    "playtime_h": 317.2,
     "deaths": 55,
-    "mob_kills": 10402,
-    "distance_km": 1750.5,
-    "mined": 73113,
+    "mob_kills": 10457,
+    "distance_km": 1753.2,
+    "mined": 73116,
     "crafted": 38216,
     "distanz": {
-     "fuss": 401.6,
-     "elytra": 1290.0,
+     "fuss": 402.0,
+     "elytra": 1292.1,
      "schwimmen": 57.0,
      "boot": 0.4,
      "minecart": 1.6,
      "pferd": 0.0
     },
-    "jumps": 148937,
-    "damage_taken": 110575,
-    "damage_dealt": 633349,
+    "jumps": 149137,
+    "damage_taken": 110782,
+    "damage_dealt": 636870,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4723,
+    "drops": 4727,
     "trades": 0,
     "totems": 0,
     "player_kills": 35,
@@ -185,7 +185,7 @@
      ],
      [
       "short grass",
-      2927
+      2930
      ]
     ],
     "top_crafted": [
@@ -424,24 +424,24 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 72.6,
+    "playtime_h": 72.9,
     "deaths": 39,
-    "mob_kills": 8965,
-    "distance_km": 750.3,
+    "mob_kills": 8982,
+    "distance_km": 757.4,
     "mined": 28066,
     "crafted": 27382,
     "distanz": {
-     "fuss": 211.5,
-     "elytra": 533.4,
+     "fuss": 212.3,
+     "elytra": 539.7,
      "schwimmen": 3.2,
      "boot": 2.2
     },
-    "jumps": 47713,
-    "damage_taken": 135821,
-    "damage_dealt": 532486,
+    "jumps": 47875,
+    "damage_taken": 136598,
+    "damage_dealt": 537317,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2696,
+    "drops": 2701,
     "trades": 0,
     "totems": 0,
     "player_kills": 28,
@@ -4106,6 +4106,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-25 19:30 UTC"
+  "wann": "2026-11-25 20:00 UTC"
  }
 }
