@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-25 12:00 UTC",
+ "aktualisiert": "2026-11-25 12:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -424,24 +424,24 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 69.9,
+    "playtime_h": 70.1,
     "deaths": 39,
-    "mob_kills": 8341,
-    "distance_km": 683.5,
+    "mob_kills": 8436,
+    "distance_km": 688.0,
     "mined": 27217,
     "crafted": 27104,
     "distanz": {
-     "fuss": 202.0,
-     "elytra": 476.4,
+     "fuss": 202.4,
+     "elytra": 480.5,
      "schwimmen": 3.0,
      "boot": 2.2
     },
-    "jumps": 45634,
-    "damage_taken": 125050,
-    "damage_dealt": 494971,
+    "jumps": 45751,
+    "damage_taken": 125400,
+    "damage_dealt": 501751,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2481,
+    "drops": 2502,
     "trades": 0,
     "totems": 0,
     "player_kills": 22,
@@ -4105,6 +4105,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-25 12:00 UTC"
+  "wann": "2026-11-25 12:30 UTC"
  }
 }
