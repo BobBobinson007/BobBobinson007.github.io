@@ -1,38 +1,38 @@
 {
- "aktualisiert": "2026-11-25 17:30 UTC",
+ "aktualisiert": "2026-11-25 18:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 351.9,
-    "deaths": 137,
-    "mob_kills": 54175,
-    "distance_km": 2760.6,
-    "mined": 188242,
+    "playtime_h": 352.4,
+    "deaths": 139,
+    "mob_kills": 54177,
+    "distance_km": 2768.7,
+    "mined": 188254,
     "crafted": 162267,
     "distanz": {
-     "fuss": 763.9,
-     "elytra": 1958.9,
-     "schwimmen": 24.5,
+     "fuss": 764.9,
+     "elytra": 1965.9,
+     "schwimmen": 24.6,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 211617,
-    "damage_taken": 320043,
-    "damage_dealt": 1114952,
+    "jumps": 212187,
+    "damage_taken": 322822,
+    "damage_dealt": 1116321,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8585,
+    "drops": 8589,
     "trades": 0,
     "totems": 0,
     "player_kills": 40,
-    "killed_by_player": 46,
+    "killed_by_player": 48,
     "top_killed_by": [
      [
       "Spieler",
-      46
+      48
      ],
      [
       "warden",
@@ -424,27 +424,27 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 71.3,
+    "playtime_h": 71.8,
     "deaths": 39,
-    "mob_kills": 8672,
-    "distance_km": 712.6,
-    "mined": 27612,
-    "crafted": 27372,
+    "mob_kills": 8677,
+    "distance_km": 725.0,
+    "mined": 27997,
+    "crafted": 27382,
     "distanz": {
-     "fuss": 206.5,
-     "elytra": 500.8,
-     "schwimmen": 3.1,
+     "fuss": 208.4,
+     "elytra": 511.2,
+     "schwimmen": 3.2,
      "boot": 2.2
     },
-    "jumps": 46521,
-    "damage_taken": 129254,
-    "damage_dealt": 521566,
+    "jumps": 47013,
+    "damage_taken": 132236,
+    "damage_dealt": 524340,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2592,
+    "drops": 2627,
     "trades": 0,
     "totems": 0,
-    "player_kills": 23,
+    "player_kills": 25,
     "killed_by_player": 12,
     "top_killed_by": [
      [
@@ -475,7 +475,7 @@
     "top_mined": [
      [
       "dirt",
-      4401
+      4409
      ],
      [
       "netherrack",
@@ -483,15 +483,15 @@
      ],
      [
       "grass block",
-      3265
+      3266
      ],
      [
       "stone",
-      3141
+      3205
      ],
      [
       "deepslate",
-      2457
+      2652
      ],
      [
       "dark oak log",
@@ -741,25 +741,25 @@
   {
    "name": "Jaki_03",
    "stats": {
-    "playtime_h": 25.9,
+    "playtime_h": 26.4,
     "deaths": 17,
-    "mob_kills": 243,
-    "distance_km": 248.8,
-    "mined": 6921,
-    "crafted": 4869,
+    "mob_kills": 244,
+    "distance_km": 254.0,
+    "mined": 7122,
+    "crafted": 4906,
     "distanz": {
-     "fuss": 108.1,
-     "elytra": 130.3,
+     "fuss": 110.7,
+     "elytra": 133.0,
      "schwimmen": 0.8,
      "boot": 3.1,
      "minecart": 6.5
     },
-    "jumps": 10708,
-    "damage_taken": 16149,
-    "damage_dealt": 44779,
+    "jumps": 10900,
+    "damage_taken": 16308,
+    "damage_dealt": 45088,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 382,
+    "drops": 384,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -793,27 +793,27 @@
     "top_mined": [
      [
       "grass block",
-      2117
+      2181
      ],
      [
       "dirt",
-      1049
+      1119
      ],
      [
       "stone",
       1046
      ],
      [
+      "stone bricks",
+      495
+     ],
+     [
       "cobblestone",
       482
      ],
      [
-      "stone bricks",
-      459
-     ],
-     [
-      "short grass",
-      238
+      "stone brick slab",
+      253
      ]
     ],
     "top_crafted": [
@@ -823,7 +823,7 @@
      ],
      [
       "stone brick slab",
-      768
+      804
      ],
      [
       "paper",
@@ -847,22 +847,22 @@
   {
    "name": "Captifipo",
    "stats": {
-    "playtime_h": 21.9,
+    "playtime_h": 22.3,
     "deaths": 5,
-    "mob_kills": 3234,
-    "distance_km": 364.8,
-    "mined": 18401,
+    "mob_kills": 3244,
+    "distance_km": 370.2,
+    "mined": 18412,
     "crafted": 3655,
     "distanz": {
-     "fuss": 77.6,
-     "elytra": 284.7,
+     "fuss": 78.8,
+     "elytra": 288.7,
      "schwimmen": 0.3,
-     "minecart": 2.1,
+     "minecart": 2.3,
      "pferd": 0.0
     },
-    "jumps": 10664,
-    "damage_taken": 13764,
-    "damage_dealt": 52401,
+    "jumps": 11091,
+    "damage_taken": 14414,
+    "damage_dealt": 54207,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 791,
@@ -883,7 +883,7 @@
     "top_mined": [
      [
       "stone",
-      5102
+      5107
      ],
      [
       "netherrack",
@@ -2300,6 +2300,18 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-25T17:45:18Z",
+   "typ": "tod",
+   "spieler": "BobBobinson007",
+   "text": "was slain by Wemmbuuufaker using [Made In Heaven]"
+  },
+  {
+   "t": "2026-11-25T17:45:18Z",
+   "typ": "kill",
+   "spieler": "Wemmbuuufaker",
+   "text": "hat BobBobinson007 erledigt (was slain by Wemmbuuufaker using [Made In Heaven])"
+  },
   {
    "t": "2026-11-25T16:09:45Z",
    "typ": "advancement",
@@ -4087,18 +4099,6 @@
    "typ": "advancement",
    "spieler": "TimotheToaster",
    "text": "story - mine stone"
-  },
-  {
-   "t": "2026-11-18T23:01:33Z",
-   "typ": "advancement",
-   "spieler": "TimotheToaster",
-   "text": "end - elytra"
-  },
-  {
-   "t": "2026-11-18T22:51:17Z",
-   "typ": "advancement",
-   "spieler": "TimotheToaster",
-   "text": "adventure - sleep in bed"
   }
  ],
  "server": {
@@ -4106,6 +4106,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-25 17:30 UTC"
+  "wann": "2026-11-25 18:00 UTC"
  }
 }
