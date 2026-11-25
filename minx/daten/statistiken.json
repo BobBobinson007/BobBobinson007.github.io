@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-25 15:00 UTC",
+ "aktualisiert": "2026-11-25 15:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -1128,23 +1128,23 @@
   {
    "name": "Manumel12",
    "stats": {
-    "playtime_h": 14.0,
+    "playtime_h": 14.5,
     "deaths": 5,
-    "mob_kills": 6204,
-    "distance_km": 178.3,
-    "mined": 12568,
-    "crafted": 22985,
+    "mob_kills": 6217,
+    "distance_km": 183.8,
+    "mined": 13770,
+    "crafted": 24393,
     "distanz": {
-     "fuss": 46.3,
-     "elytra": 129.7,
+     "fuss": 48.2,
+     "elytra": 133.3,
      "schwimmen": 2.3
     },
-    "jumps": 7549,
-    "damage_taken": 14707,
-    "damage_dealt": 67627,
+    "jumps": 7941,
+    "damage_taken": 15179,
+    "damage_dealt": 70597,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3332,
+    "drops": 3352,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -1166,23 +1166,23 @@
      ],
      [
       "gravel",
-      1569
+      2138
+     ],
+     [
+      "blue concrete",
+      1147
+     ],
+     [
+      "stone",
+      857
      ],
      [
       "carrots",
       786
      ],
      [
-      "stone",
-      780
-     ],
-     [
-      "blue concrete",
-      758
-     ],
-     [
       "dirt",
-      639
+      641
      ]
     ],
     "top_crafted": [
@@ -1203,12 +1203,12 @@
       1940
      ],
      [
-      "blue stained glass",
-      1048
+      "blue concrete powder",
+      1688
      ],
      [
-      "sea lantern",
-      983
+      "blue stained glass",
+      1520
      ]
     ]
    }
@@ -4105,6 +4105,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-25 15:00 UTC"
+  "wann": "2026-11-25 15:30 UTC"
  }
 }
