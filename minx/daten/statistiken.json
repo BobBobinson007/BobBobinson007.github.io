@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-25 14:00 UTC",
+ "aktualisiert": "2026-11-25 14:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -1128,23 +1128,23 @@
   {
    "name": "Manumel12",
    "stats": {
-    "playtime_h": 13.0,
+    "playtime_h": 13.5,
     "deaths": 5,
-    "mob_kills": 6198,
-    "distance_km": 171.5,
-    "mined": 11034,
-    "crafted": 21569,
+    "mob_kills": 6203,
+    "distance_km": 174.6,
+    "mined": 11624,
+    "crafted": 22281,
     "distanz": {
-     "fuss": 44.6,
-     "elytra": 125.6,
-     "schwimmen": 1.3
+     "fuss": 45.6,
+     "elytra": 127.0,
+     "schwimmen": 1.9
     },
-    "jumps": 7298,
-    "damage_taken": 14604,
-    "damage_dealt": 66357,
+    "jumps": 7414,
+    "damage_taken": 14690,
+    "damage_dealt": 67427,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3304,
+    "drops": 3318,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -1166,7 +1166,7 @@
      ],
      [
       "gravel",
-      1147
+      1485
      ],
      [
       "carrots",
@@ -1178,7 +1178,7 @@
      ],
      [
       "dirt",
-      488
+      621
      ],
      [
       "coal ore",
@@ -1203,12 +1203,12 @@
       1940
      ],
      [
-      "sea lantern",
-      983
+      "blue stained glass",
+      1048
      ],
      [
-      "bone meal",
-      771
+      "sea lantern",
+      983
      ]
     ]
    }
@@ -4105,6 +4105,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-25 14:00 UTC"
+  "wann": "2026-11-25 14:30 UTC"
  }
 }
