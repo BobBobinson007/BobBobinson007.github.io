@@ -1,38 +1,38 @@
 {
- "aktualisiert": "2026-11-25 12:30 UTC",
+ "aktualisiert": "2026-11-25 13:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 350.8,
-    "deaths": 136,
+    "playtime_h": 351.0,
+    "deaths": 137,
     "mob_kills": 54175,
-    "distance_km": 2750.1,
-    "mined": 188225,
+    "distance_km": 2755.1,
+    "mined": 188227,
     "crafted": 162267,
     "distanz": {
-     "fuss": 763.1,
-     "elytra": 1949.2,
-     "schwimmen": 24.4,
+     "fuss": 763.3,
+     "elytra": 1953.9,
+     "schwimmen": 24.5,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 211344,
-    "damage_taken": 319239,
-    "damage_dealt": 1114760,
+    "jumps": 211443,
+    "damage_taken": 319900,
+    "damage_dealt": 1114943,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8577,
+    "drops": 8578,
     "trades": 0,
     "totems": 0,
     "player_kills": 40,
-    "killed_by_player": 45,
+    "killed_by_player": 46,
     "top_killed_by": [
      [
       "Spieler",
-      45
+      46
      ],
      [
       "warden",
@@ -424,27 +424,27 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 70.1,
+    "playtime_h": 70.4,
     "deaths": 39,
-    "mob_kills": 8436,
-    "distance_km": 688.0,
-    "mined": 27217,
-    "crafted": 27104,
+    "mob_kills": 8438,
+    "distance_km": 697.5,
+    "mined": 27222,
+    "crafted": 27115,
     "distanz": {
-     "fuss": 202.4,
-     "elytra": 480.5,
+     "fuss": 203.2,
+     "elytra": 489.1,
      "schwimmen": 3.0,
      "boot": 2.2
     },
-    "jumps": 45751,
-    "damage_taken": 125400,
-    "damage_dealt": 501751,
+    "jumps": 45899,
+    "damage_taken": 125896,
+    "damage_dealt": 502710,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2502,
+    "drops": 2513,
     "trades": 0,
     "totems": 0,
-    "player_kills": 22,
+    "player_kills": 23,
     "killed_by_player": 12,
     "top_killed_by": [
      [
@@ -4105,6 +4105,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-25 12:30 UTC"
+  "wann": "2026-11-25 13:00 UTC"
  }
 }
