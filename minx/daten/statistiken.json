@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-25 16:00 UTC",
+ "aktualisiert": "2026-11-25 16:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -424,21 +424,21 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 70.4,
+    "playtime_h": 70.5,
     "deaths": 39,
-    "mob_kills": 8438,
-    "distance_km": 697.5,
-    "mined": 27222,
+    "mob_kills": 8472,
+    "distance_km": 699.6,
+    "mined": 27340,
     "crafted": 27115,
     "distanz": {
-     "fuss": 203.2,
-     "elytra": 489.1,
+     "fuss": 203.8,
+     "elytra": 490.6,
      "schwimmen": 3.0,
      "boot": 2.2
     },
-    "jumps": 45899,
-    "damage_taken": 125896,
-    "damage_dealt": 502710,
+    "jumps": 45988,
+    "damage_taken": 126415,
+    "damage_dealt": 504310,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 2513,
@@ -475,7 +475,7 @@
     "top_mined": [
      [
       "dirt",
-      4391
+      4398
      ],
      [
       "netherrack",
@@ -483,15 +483,15 @@
      ],
      [
       "grass block",
-      3263
+      3265
      ],
      [
       "stone",
-      3070
+      3094
      ],
      [
       "deepslate",
-      2320
+      2321
      ],
      [
       "dark oak log",
@@ -1373,23 +1373,23 @@
   {
    "name": "Devolos2358",
    "stats": {
-    "playtime_h": 6.9,
+    "playtime_h": 7.1,
     "deaths": 3,
-    "mob_kills": 2194,
-    "distance_km": 134.7,
-    "mined": 12960,
+    "mob_kills": 2234,
+    "distance_km": 143.6,
+    "mined": 12962,
     "crafted": 6373,
     "distanz": {
-     "fuss": 20.9,
-     "elytra": 113.7,
+     "fuss": 21.3,
+     "elytra": 122.2,
      "schwimmen": 0.1
     },
-    "jumps": 5552,
-    "damage_taken": 16050,
-    "damage_dealt": 29044,
+    "jumps": 5664,
+    "damage_taken": 16259,
+    "damage_dealt": 29399,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 307,
+    "drops": 308,
     "trades": 0,
     "totems": 0,
     "player_kills": 1,
@@ -1419,7 +1419,7 @@
      ],
      [
       "stone",
-      74
+      76
      ],
      [
       "nether quartz ore",
@@ -1633,6 +1633,87 @@
    }
   },
   {
+   "name": "Qmatteo",
+   "stats": {
+    "playtime_h": 2.6,
+    "deaths": 11,
+    "mob_kills": 20,
+    "distance_km": 15.8,
+    "mined": 700,
+    "crafted": 16,
+    "distanz": {
+     "fuss": 12.8,
+     "elytra": 1.3,
+     "schwimmen": 0.3,
+     "minecart": 1.4
+    },
+    "jumps": 2511,
+    "damage_taken": 5230,
+    "damage_dealt": 4301,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 118,
+    "trades": 0,
+    "totems": 0,
+    "player_kills": 0,
+    "killed_by_player": 8,
+    "top_killed_by": [
+     [
+      "Spieler",
+      8
+     ],
+     [
+      "guardian",
+      1
+     ],
+     [
+      "zombie",
+      1
+     ]
+    ],
+    "top_mined": [
+     [
+      "stone",
+      473
+     ],
+     [
+      "dirt",
+      51
+     ],
+     [
+      "short grass",
+      40
+     ],
+     [
+      "cobblestone",
+      17
+     ],
+     [
+      "oak log",
+      12
+     ],
+     [
+      "diorite",
+      9
+     ]
+    ],
+    "top_crafted": [
+     [
+      "birch planks",
+      12
+     ],
+     [
+      "birch door",
+      3
+     ],
+     [
+      "stone button",
+      1
+     ]
+    ]
+   }
+  },
+  {
    "name": "Reep811",
    "stats": {
     "playtime_h": 2.2,
@@ -1724,86 +1805,6 @@
      [
       "bowl",
       4
-     ]
-    ]
-   }
-  },
-  {
-   "name": "Qmatteo",
-   "stats": {
-    "playtime_h": 2.2,
-    "deaths": 11,
-    "mob_kills": 14,
-    "distance_km": 11.8,
-    "mined": 693,
-    "crafted": 16,
-    "distanz": {
-     "fuss": 10.2,
-     "elytra": 1.3,
-     "schwimmen": 0.3
-    },
-    "jumps": 2061,
-    "damage_taken": 4694,
-    "damage_dealt": 3236,
-    "fish_caught": 0,
-    "enchanted": 0,
-    "drops": 110,
-    "trades": 0,
-    "totems": 0,
-    "player_kills": 0,
-    "killed_by_player": 8,
-    "top_killed_by": [
-     [
-      "Spieler",
-      8
-     ],
-     [
-      "guardian",
-      1
-     ],
-     [
-      "zombie",
-      1
-     ]
-    ],
-    "top_mined": [
-     [
-      "stone",
-      473
-     ],
-     [
-      "dirt",
-      51
-     ],
-     [
-      "short grass",
-      38
-     ],
-     [
-      "cobblestone",
-      17
-     ],
-     [
-      "oak log",
-      12
-     ],
-     [
-      "diorite",
-      9
-     ]
-    ],
-    "top_crafted": [
-     [
-      "birch planks",
-      12
-     ],
-     [
-      "birch door",
-      3
-     ],
-     [
-      "stone button",
-      1
      ]
     ]
    }
@@ -2299,6 +2300,12 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-25T16:09:45Z",
+   "typ": "advancement",
+   "spieler": "Qmatteo",
+   "text": "adventure - honey block slide"
+  },
   {
    "t": "2026-11-24T20:01:15Z",
    "typ": "tod",
@@ -4092,12 +4099,6 @@
    "typ": "advancement",
    "spieler": "TimotheToaster",
    "text": "adventure - sleep in bed"
-  },
-  {
-   "t": "2026-11-18T22:40:19Z",
-   "typ": "advancement",
-   "spieler": "TimotheToaster",
-   "text": "adventure - craft decorated pot using only sherds"
   }
  ],
  "server": {
@@ -4105,6 +4106,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-25 16:00 UTC"
+  "wann": "2026-11-25 16:30 UTC"
  }
 }
