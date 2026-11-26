@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-26 12:30 UTC",
+ "aktualisiert": "2026-11-26 13:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -424,24 +424,24 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 73.7,
+    "playtime_h": 74.2,
     "deaths": 39,
-    "mob_kills": 8984,
-    "distance_km": 764.2,
-    "mined": 28251,
-    "crafted": 27808,
+    "mob_kills": 8997,
+    "distance_km": 772.1,
+    "mined": 28293,
+    "crafted": 27812,
     "distanz": {
-     "fuss": 214.3,
-     "elytra": 544.5,
+     "fuss": 215.6,
+     "elytra": 551.2,
      "schwimmen": 3.2,
      "boot": 2.2
     },
-    "jumps": 48134,
-    "damage_taken": 137222,
-    "damage_dealt": 537727,
+    "jumps": 48709,
+    "damage_taken": 138526,
+    "damage_dealt": 539970,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2732,
+    "drops": 2765,
     "trades": 0,
     "totems": 0,
     "player_kills": 28,
@@ -475,7 +475,7 @@
     "top_mined": [
      [
       "dirt",
-      4427
+      4429
      ],
      [
       "netherrack",
@@ -483,7 +483,7 @@
      ],
      [
       "grass block",
-      3302
+      3304
      ],
      [
       "stone",
@@ -1373,23 +1373,23 @@
   {
    "name": "Devolos2358",
    "stats": {
-    "playtime_h": 7.1,
+    "playtime_h": 7.5,
     "deaths": 3,
-    "mob_kills": 2234,
-    "distance_km": 143.6,
-    "mined": 12962,
-    "crafted": 6373,
+    "mob_kills": 2283,
+    "distance_km": 153.0,
+    "mined": 12985,
+    "crafted": 8111,
     "distanz": {
-     "fuss": 21.3,
-     "elytra": 122.2,
-     "schwimmen": 0.1
+     "fuss": 22.2,
+     "elytra": 130.7,
+     "schwimmen": 0.2
     },
-    "jumps": 5664,
-    "damage_taken": 16259,
-    "damage_dealt": 29399,
+    "jumps": 5879,
+    "damage_taken": 16759,
+    "damage_dealt": 32372,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 308,
+    "drops": 323,
     "trades": 0,
     "totems": 0,
     "player_kills": 1,
@@ -1429,7 +1429,7 @@
     "top_crafted": [
      [
       "paper",
-      4980
+      6583
      ],
      [
       "gold nugget",
@@ -1437,7 +1437,7 @@
      ],
      [
       "emerald",
-      293
+      392
      ],
      [
       "wind charge",
@@ -4110,6 +4110,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-26 12:30 UTC"
+  "wann": "2026-11-26 13:00 UTC"
  }
 }
