@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-26 21:00 UTC",
+ "aktualisiert": "2026-11-26 21:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 357.5,
+    "playtime_h": 358.0,
     "deaths": 145,
     "mob_kills": 54568,
-    "distance_km": 2824.5,
-    "mined": 188480,
+    "distance_km": 2825.3,
+    "mined": 188592,
     "crafted": 164399,
     "distanz": {
-     "fuss": 771.2,
-     "elytra": 2014.8,
+     "fuss": 771.5,
+     "elytra": 2015.3,
      "schwimmen": 25.1,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 215225,
-    "damage_taken": 337304,
+    "jumps": 215280,
+    "damage_taken": 337329,
     "damage_dealt": 1133464,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8704,
+    "drops": 8705,
     "trades": 0,
     "totems": 0,
     "player_kills": 41,
@@ -112,26 +112,26 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 319.7,
+    "playtime_h": 320.0,
     "deaths": 55,
-    "mob_kills": 10465,
-    "distance_km": 1770.4,
-    "mined": 73142,
-    "crafted": 38216,
+    "mob_kills": 10476,
+    "distance_km": 1773.0,
+    "mined": 75594,
+    "crafted": 39359,
     "distanz": {
-     "fuss": 405.9,
-     "elytra": 1305.4,
+     "fuss": 407.3,
+     "elytra": 1306.6,
      "schwimmen": 57.1,
      "boot": 0.4,
      "minecart": 1.6,
      "pferd": 0.0
     },
-    "jumps": 150496,
-    "damage_taken": 111812,
-    "damage_dealt": 639741,
+    "jumps": 150719,
+    "damage_taken": 112124,
+    "damage_dealt": 641636,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4780,
+    "drops": 4791,
     "trades": 0,
     "totems": 0,
     "player_kills": 35,
@@ -165,7 +165,7 @@
     "top_mined": [
      [
       "stone",
-      23594
+      25983
      ],
      [
       "dirt",
@@ -173,7 +173,7 @@
      ],
      [
       "grass block",
-      8277
+      8278
      ],
      [
       "sand",
@@ -185,7 +185,7 @@
      ],
      [
       "short grass",
-      2930
+      2931
      ]
     ],
     "top_crafted": [
@@ -210,8 +210,8 @@
       3116
      ],
      [
-      "firework rocket",
-      2354
+      "gold nugget",
+      2965
      ]
     ]
    }
@@ -4108,8 +4108,8 @@
  "server": {
   "cpu": "Intel Core i5-8500T CPU @ 2.10GHz",
   "ram_gb": 6.8,
-  "welt_aktuell_gb": 6.9,
+  "welt_aktuell_gb": 7.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-26 21:00 UTC"
+  "wann": "2026-11-26 21:30 UTC"
  }
 }
