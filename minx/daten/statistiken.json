@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-26 16:00 UTC",
+ "aktualisiert": "2026-11-26 16:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -112,26 +112,26 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 318.5,
+    "playtime_h": 319.0,
     "deaths": 55,
-    "mob_kills": 10461,
-    "distance_km": 1760.0,
-    "mined": 73119,
+    "mob_kills": 10465,
+    "distance_km": 1767.0,
+    "mined": 73132,
     "crafted": 38216,
     "distanz": {
-     "fuss": 404.3,
-     "elytra": 1296.6,
+     "fuss": 405.0,
+     "elytra": 1303.0,
      "schwimmen": 57.0,
      "boot": 0.4,
      "minecart": 1.6,
      "pferd": 0.0
     },
-    "jumps": 149910,
-    "damage_taken": 111523,
-    "damage_dealt": 638546,
+    "jumps": 150187,
+    "damage_taken": 111567,
+    "damage_dealt": 639506,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4772,
+    "drops": 4780,
     "trades": 0,
     "totems": 0,
     "player_kills": 35,
@@ -165,7 +165,7 @@
     "top_mined": [
      [
       "stone",
-      23591
+      23594
      ],
      [
       "dirt",
@@ -173,7 +173,7 @@
      ],
      [
       "grass block",
-      8276
+      8277
      ],
      [
       "sand",
@@ -424,24 +424,24 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 76.6,
+    "playtime_h": 76.8,
     "deaths": 41,
-    "mob_kills": 9419,
-    "distance_km": 826.8,
-    "mined": 28364,
-    "crafted": 28245,
+    "mob_kills": 9483,
+    "distance_km": 832.4,
+    "mined": 28368,
+    "crafted": 28252,
     "distanz": {
-     "fuss": 224.0,
-     "elytra": 597.5,
+     "fuss": 224.6,
+     "elytra": 602.4,
      "schwimmen": 3.2,
      "boot": 2.2
     },
-    "jumps": 50656,
-    "damage_taken": 150968,
-    "damage_dealt": 570172,
+    "jumps": 50827,
+    "damage_taken": 151117,
+    "damage_dealt": 570821,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2864,
+    "drops": 2877,
     "trades": 0,
     "totems": 0,
     "player_kills": 93,
@@ -509,7 +509,7 @@
      ],
      [
       "stick",
-      2492
+      2496
      ],
      [
       "spruce planks",
@@ -1039,23 +1039,23 @@
   {
    "name": "Manumel12",
    "stats": {
-    "playtime_h": 15.5,
+    "playtime_h": 16.0,
     "deaths": 5,
-    "mob_kills": 6265,
-    "distance_km": 197.4,
-    "mined": 14311,
-    "crafted": 25746,
+    "mob_kills": 6311,
+    "distance_km": 205.0,
+    "mined": 14990,
+    "crafted": 25791,
     "distanz": {
-     "fuss": 49.9,
-     "elytra": 144.8,
-     "schwimmen": 2.7
+     "fuss": 50.7,
+     "elytra": 151.3,
+     "schwimmen": 2.9
     },
-    "jumps": 8271,
-    "damage_taken": 16584,
-    "damage_dealt": 74654,
+    "jumps": 8463,
+    "damage_taken": 16676,
+    "damage_dealt": 76042,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3374,
+    "drops": 3380,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -1081,7 +1081,7 @@
      ],
      [
       "blue concrete",
-      1196
+      1203
      ],
      [
       "stone",
@@ -1092,8 +1092,8 @@
       786
      ],
      [
-      "dirt",
-      641
+      "sand",
+      646
      ]
     ],
     "top_crafted": [
@@ -1298,16 +1298,16 @@
     "playtime_h": 9.0,
     "deaths": 3,
     "mob_kills": 2457,
-    "distance_km": 178.7,
-    "mined": 13041,
+    "distance_km": 178.9,
+    "mined": 13043,
     "crafted": 8908,
     "distanz": {
-     "fuss": 27.0,
-     "elytra": 151.4,
+     "fuss": 27.2,
+     "elytra": 151.5,
      "schwimmen": 0.2
     },
-    "jumps": 7761,
-    "damage_taken": 24846,
+    "jumps": 7788,
+    "damage_taken": 24849,
     "damage_dealt": 41145,
     "fish_caught": 0,
     "enchanted": 0,
@@ -4110,6 +4110,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-26 16:00 UTC"
+  "wann": "2026-11-26 16:30 UTC"
  }
 }
