@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-26 17:30 UTC",
+ "aktualisiert": "2026-11-26 18:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -427,17 +427,17 @@
     "playtime_h": 77.1,
     "deaths": 41,
     "mob_kills": 9519,
-    "distance_km": 837.0,
+    "distance_km": 839.1,
     "mined": 28383,
     "crafted": 28252,
     "distanz": {
-     "fuss": 225.5,
-     "elytra": 606.0,
+     "fuss": 225.6,
+     "elytra": 608.0,
      "schwimmen": 3.4,
      "boot": 2.2
     },
-    "jumps": 51072,
-    "damage_taken": 151429,
+    "jumps": 51105,
+    "damage_taken": 151489,
     "damage_dealt": 571271,
     "fish_caught": 0,
     "enchanted": 0,
@@ -741,25 +741,25 @@
   {
    "name": "Jaki_03",
    "stats": {
-    "playtime_h": 26.9,
+    "playtime_h": 27.2,
     "deaths": 17,
-    "mob_kills": 246,
-    "distance_km": 270.5,
-    "mined": 7252,
+    "mob_kills": 248,
+    "distance_km": 280.3,
+    "mined": 7318,
     "crafted": 4966,
     "distanz": {
-     "fuss": 112.5,
-     "elytra": 147.6,
+     "fuss": 113.7,
+     "elytra": 156.2,
      "schwimmen": 0.8,
      "boot": 3.1,
      "minecart": 6.5
     },
-    "jumps": 11098,
-    "damage_taken": 16477,
-    "damage_dealt": 45448,
+    "jumps": 11291,
+    "damage_taken": 16674,
+    "damage_dealt": 45539,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 388,
+    "drops": 398,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -793,7 +793,7 @@
     "top_mined": [
      [
       "grass block",
-      2198
+      2200
      ],
      [
       "dirt",
@@ -4110,6 +4110,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-26 17:30 UTC"
+  "wann": "2026-11-26 18:00 UTC"
  }
 }
