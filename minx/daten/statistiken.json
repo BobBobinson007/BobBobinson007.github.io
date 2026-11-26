@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-26 15:30 UTC",
+ "aktualisiert": "2026-11-26 16:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -112,26 +112,26 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 318.0,
+    "playtime_h": 318.5,
     "deaths": 55,
-    "mob_kills": 10458,
-    "distance_km": 1755.4,
-    "mined": 73116,
+    "mob_kills": 10461,
+    "distance_km": 1760.0,
+    "mined": 73119,
     "crafted": 38216,
     "distanz": {
-     "fuss": 402.6,
-     "elytra": 1293.7,
+     "fuss": 404.3,
+     "elytra": 1296.6,
      "schwimmen": 57.0,
      "boot": 0.4,
      "minecart": 1.6,
      "pferd": 0.0
     },
-    "jumps": 149374,
-    "damage_taken": 110927,
-    "damage_dealt": 637070,
+    "jumps": 149910,
+    "damage_taken": 111523,
+    "damage_dealt": 638546,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4728,
+    "drops": 4772,
     "trades": 0,
     "totems": 0,
     "player_kills": 35,
@@ -173,7 +173,7 @@
      ],
      [
       "grass block",
-      8275
+      8276
      ],
      [
       "sand",
@@ -424,32 +424,32 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 76.3,
-    "deaths": 40,
-    "mob_kills": 9354,
-    "distance_km": 822.6,
-    "mined": 28362,
+    "playtime_h": 76.6,
+    "deaths": 41,
+    "mob_kills": 9419,
+    "distance_km": 826.8,
+    "mined": 28364,
     "crafted": 28245,
     "distanz": {
-     "fuss": 222.9,
-     "elytra": 594.4,
+     "fuss": 224.0,
+     "elytra": 597.5,
      "schwimmen": 3.2,
      "boot": 2.2
     },
-    "jumps": 50408,
-    "damage_taken": 148760,
-    "damage_dealt": 568548,
+    "jumps": 50656,
+    "damage_taken": 150968,
+    "damage_dealt": 570172,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2855,
+    "drops": 2864,
     "trades": 0,
     "totems": 0,
     "player_kills": 93,
-    "killed_by_player": 13,
+    "killed_by_player": 14,
     "top_killed_by": [
      [
       "Spieler",
-      13
+      14
      ],
      [
       "vindicator",
@@ -937,21 +937,21 @@
   {
    "name": "Hagen13juhhuh",
    "stats": {
-    "playtime_h": 19.8,
+    "playtime_h": 20.2,
     "deaths": 101,
     "mob_kills": 409,
-    "distance_km": 166.9,
-    "mined": 7981,
-    "crafted": 9362,
+    "distance_km": 170.3,
+    "mined": 7987,
+    "crafted": 9884,
     "distanz": {
-     "fuss": 60.7,
-     "elytra": 105.5,
+     "fuss": 62.0,
+     "elytra": 107.7,
      "schwimmen": 0.0,
      "boot": 0.1,
      "minecart": 0.5
     },
-    "jumps": 8922,
-    "damage_taken": 41367,
+    "jumps": 8980,
+    "damage_taken": 41374,
     "damage_dealt": 23163,
     "fish_caught": 0,
     "enchanted": 0,
@@ -1011,7 +1011,7 @@
     "top_crafted": [
      [
       "paper",
-      5889
+      6336
      ],
      [
       "oak planks",
@@ -1026,12 +1026,12 @@
       280
      ],
      [
-      "oak stairs",
-      260
+      "emerald",
+      271
      ],
      [
-      "stone brick stairs",
-      256
+      "oak stairs",
+      260
      ]
     ]
    }
@@ -1039,23 +1039,23 @@
   {
    "name": "Manumel12",
    "stats": {
-    "playtime_h": 15.0,
+    "playtime_h": 15.5,
     "deaths": 5,
-    "mob_kills": 6221,
-    "distance_km": 188.7,
-    "mined": 13938,
-    "crafted": 24985,
+    "mob_kills": 6265,
+    "distance_km": 197.4,
+    "mined": 14311,
+    "crafted": 25746,
     "distanz": {
-     "fuss": 48.7,
-     "elytra": 137.4,
-     "schwimmen": 2.6
+     "fuss": 49.9,
+     "elytra": 144.8,
+     "schwimmen": 2.7
     },
-    "jumps": 8042,
-    "damage_taken": 15310,
-    "damage_dealt": 71438,
+    "jumps": 8271,
+    "damage_taken": 16584,
+    "damage_dealt": 74654,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3361,
+    "drops": 3374,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -1077,15 +1077,15 @@
      ],
      [
       "gravel",
-      2138
+      2422
      ],
      [
       "blue concrete",
-      1189
+      1196
      ],
      [
       "stone",
-      857
+      858
      ],
      [
       "carrots",
@@ -1102,16 +1102,16 @@
       10819
      ],
      [
+      "blue concrete powder",
+      2896
+     ],
+     [
       "paper",
       2880
      ],
      [
       "golden carrot",
       2590
-     ],
-     [
-      "blue concrete powder",
-      2200
      ],
      [
       "gold ingot",
@@ -1295,26 +1295,26 @@
   {
    "name": "Devolos2358",
    "stats": {
-    "playtime_h": 8.5,
+    "playtime_h": 9.0,
     "deaths": 3,
-    "mob_kills": 2320,
-    "distance_km": 170.2,
-    "mined": 13039,
+    "mob_kills": 2457,
+    "distance_km": 178.7,
+    "mined": 13041,
     "crafted": 8908,
     "distanz": {
-     "fuss": 25.5,
-     "elytra": 144.5,
+     "fuss": 27.0,
+     "elytra": 151.4,
      "schwimmen": 0.2
     },
-    "jumps": 7202,
-    "damage_taken": 22477,
-    "damage_dealt": 35669,
+    "jumps": 7761,
+    "damage_taken": 24846,
+    "damage_dealt": 41145,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 367,
+    "drops": 381,
     "trades": 0,
     "totems": 0,
-    "player_kills": 4,
+    "player_kills": 5,
     "killed_by_player": 3,
     "top_killed_by": [
      [
@@ -2304,6 +2304,24 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-26T15:58:40Z",
+   "typ": "tod",
+   "spieler": "Wemmbuuufaker",
+   "text": "was slain by Devolos2358"
+  },
+  {
+   "t": "2026-11-26T15:58:40Z",
+   "typ": "kill",
+   "spieler": "Devolos2358",
+   "text": "hat Wemmbuuufaker erledigt (was slain by Devolos2358)"
+  },
+  {
+   "t": "2026-11-26T15:53:07Z",
+   "typ": "advancement",
+   "spieler": "Manumel12",
+   "text": "husbandry - axolotl in a bucket"
+  },
   {
    "t": "2026-11-26T15:17:02Z",
    "typ": "tod",
@@ -4085,24 +4103,6 @@
    "typ": "tod",
    "spieler": "Reep811",
    "text": "was slain by Enderman"
-  },
-  {
-   "t": "2026-11-19T16:48:40Z",
-   "typ": "advancement",
-   "spieler": "Reep811",
-   "text": "end - find end city"
-  },
-  {
-   "t": "2026-11-19T16:48:28Z",
-   "typ": "advancement",
-   "spieler": "Reep811",
-   "text": "husbandry - root"
-  },
-  {
-   "t": "2026-11-19T16:48:10Z",
-   "typ": "advancement",
-   "spieler": "Reep811",
-   "text": "end - enter end gateway"
   }
  ],
  "server": {
@@ -4110,6 +4110,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-26 15:30 UTC"
+  "wann": "2026-11-26 16:00 UTC"
  }
 }
