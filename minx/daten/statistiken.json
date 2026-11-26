@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-26 19:30 UTC",
+ "aktualisiert": "2026-11-26 20:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 356.7,
+    "playtime_h": 357.1,
     "deaths": 145,
-    "mob_kills": 54421,
-    "distance_km": 2811.5,
-    "mined": 188465,
+    "mob_kills": 54567,
+    "distance_km": 2814.1,
+    "mined": 188478,
     "crafted": 164399,
     "distanz": {
-     "fuss": 769.8,
-     "elytra": 2003.3,
+     "fuss": 770.1,
+     "elytra": 2005.6,
      "schwimmen": 25.0,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 214785,
-    "damage_taken": 336571,
-    "damage_dealt": 1129683,
+    "jumps": 214964,
+    "damage_taken": 336797,
+    "damage_dealt": 1133070,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8687,
+    "drops": 8704,
     "trades": 0,
     "totems": 0,
     "player_kills": 41,
@@ -741,21 +741,21 @@
   {
    "name": "Jaki_03",
    "stats": {
-    "playtime_h": 28.7,
+    "playtime_h": 28.8,
     "deaths": 18,
     "mob_kills": 268,
-    "distance_km": 301.7,
+    "distance_km": 301.9,
     "mined": 7587,
     "crafted": 5538,
     "distanz": {
-     "fuss": 121.6,
+     "fuss": 121.7,
      "elytra": 169.8,
      "schwimmen": 0.8,
      "boot": 3.1,
      "minecart": 6.5
     },
-    "jumps": 12377,
-    "damage_taken": 17736,
+    "jumps": 12408,
+    "damage_taken": 17852,
     "damage_dealt": 49263,
     "fish_caught": 0,
     "enchanted": 0,
@@ -1548,6 +1548,91 @@
    }
   },
   {
+   "name": "Qmatteo",
+   "stats": {
+    "playtime_h": 4.3,
+    "deaths": 14,
+    "mob_kills": 36,
+    "distance_km": 29.7,
+    "mined": 940,
+    "crafted": 16,
+    "distanz": {
+     "fuss": 25.2,
+     "elytra": 1.3,
+     "schwimmen": 0.4,
+     "minecart": 2.8
+    },
+    "jumps": 5104,
+    "damage_taken": 7250,
+    "damage_dealt": 7343,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 136,
+    "trades": 0,
+    "totems": 0,
+    "player_kills": 0,
+    "killed_by_player": 8,
+    "top_killed_by": [
+     [
+      "Spieler",
+      8
+     ],
+     [
+      "zombie",
+      3
+     ],
+     [
+      "skeleton",
+      1
+     ],
+     [
+      "guardian",
+      1
+     ]
+    ],
+    "top_mined": [
+     [
+      "stone",
+      473
+     ],
+     [
+      "short grass",
+      238
+     ],
+     [
+      "dirt",
+      55
+     ],
+     [
+      "carrots",
+      22
+     ],
+     [
+      "cobblestone",
+      17
+     ],
+     [
+      "grass block",
+      15
+     ]
+    ],
+    "top_crafted": [
+     [
+      "birch planks",
+      12
+     ],
+     [
+      "birch door",
+      3
+     ],
+     [
+      "stone button",
+      1
+     ]
+    ]
+   }
+  },
+  {
    "name": "BooklyTooCozy",
    "stats": {
     "playtime_h": 4.2,
@@ -1628,91 +1713,6 @@
      [
       "cooked cod",
       16
-     ]
-    ]
-   }
-  },
-  {
-   "name": "Qmatteo",
-   "stats": {
-    "playtime_h": 4.2,
-    "deaths": 14,
-    "mob_kills": 36,
-    "distance_km": 29.4,
-    "mined": 940,
-    "crafted": 16,
-    "distanz": {
-     "fuss": 24.9,
-     "elytra": 1.3,
-     "schwimmen": 0.4,
-     "minecart": 2.8
-    },
-    "jumps": 5082,
-    "damage_taken": 7222,
-    "damage_dealt": 7239,
-    "fish_caught": 0,
-    "enchanted": 0,
-    "drops": 136,
-    "trades": 0,
-    "totems": 0,
-    "player_kills": 0,
-    "killed_by_player": 8,
-    "top_killed_by": [
-     [
-      "Spieler",
-      8
-     ],
-     [
-      "zombie",
-      3
-     ],
-     [
-      "skeleton",
-      1
-     ],
-     [
-      "guardian",
-      1
-     ]
-    ],
-    "top_mined": [
-     [
-      "stone",
-      473
-     ],
-     [
-      "short grass",
-      238
-     ],
-     [
-      "dirt",
-      55
-     ],
-     [
-      "carrots",
-      22
-     ],
-     [
-      "cobblestone",
-      17
-     ],
-     [
-      "grass block",
-      15
-     ]
-    ],
-    "top_crafted": [
-     [
-      "birch planks",
-      12
-     ],
-     [
-      "birch door",
-      3
-     ],
-     [
-      "stone button",
-      1
      ]
     ]
    }
@@ -2304,6 +2304,30 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-26T19:29:54Z",
+   "typ": "advancement",
+   "spieler": "Jaki_03",
+   "text": "nether - create beacon"
+  },
+  {
+   "t": "2026-11-26T19:29:54Z",
+   "typ": "advancement",
+   "spieler": "Jaki_03",
+   "text": "nether - create full beacon"
+  },
+  {
+   "t": "2026-11-26T19:29:16Z",
+   "typ": "advancement",
+   "spieler": "Qmatteo",
+   "text": "story - enter the nether"
+  },
+  {
+   "t": "2026-11-26T19:29:16Z",
+   "typ": "advancement",
+   "spieler": "Qmatteo",
+   "text": "nether - root"
+  },
   {
    "t": "2026-11-26T19:22:58Z",
    "typ": "tod",
@@ -4079,30 +4103,6 @@
    "typ": "advancement",
    "spieler": "FranoGames",
    "text": "adventure - root"
-  },
-  {
-   "t": "2026-11-19T16:59:30Z",
-   "typ": "advancement",
-   "spieler": "FranoGames",
-   "text": "story - upgrade tools"
-  },
-  {
-   "t": "2026-11-19T16:59:20Z",
-   "typ": "advancement",
-   "spieler": "FranoGames",
-   "text": "story - mine stone"
-  },
-  {
-   "t": "2026-11-19T16:58:58Z",
-   "typ": "advancement",
-   "spieler": "FranoGames",
-   "text": "story - root"
-  },
-  {
-   "t": "2026-11-19T16:57:19Z",
-   "typ": "tod",
-   "spieler": "Reep811",
-   "text": "was shot by Skeleton"
   }
  ],
  "server": {
@@ -4110,6 +4110,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-26 19:30 UTC"
+  "wann": "2026-11-26 20:00 UTC"
  }
 }
