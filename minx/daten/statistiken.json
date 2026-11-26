@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-26 19:00 UTC",
+ "aktualisiert": "2026-11-26 19:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -741,25 +741,25 @@
   {
    "name": "Jaki_03",
    "stats": {
-    "playtime_h": 28.2,
-    "deaths": 17,
-    "mob_kills": 264,
-    "distance_km": 293.6,
-    "mined": 7583,
+    "playtime_h": 28.7,
+    "deaths": 18,
+    "mob_kills": 268,
+    "distance_km": 301.7,
+    "mined": 7587,
     "crafted": 5538,
     "distanz": {
-     "fuss": 118.2,
-     "elytra": 165.0,
+     "fuss": 121.6,
+     "elytra": 169.8,
      "schwimmen": 0.8,
      "boot": 3.1,
      "minecart": 6.5
     },
-    "jumps": 11929,
-    "damage_taken": 17146,
-    "damage_dealt": 48408,
+    "jumps": 12377,
+    "damage_taken": 17736,
+    "damage_dealt": 49263,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 412,
+    "drops": 414,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -770,11 +770,11 @@
       4
      ],
      [
-      "Spieler",
-      3
+      "creeper",
+      4
      ],
      [
-      "creeper",
+      "Spieler",
       3
      ],
      [
@@ -1635,24 +1635,24 @@
   {
    "name": "Qmatteo",
    "stats": {
-    "playtime_h": 3.7,
+    "playtime_h": 4.2,
     "deaths": 14,
-    "mob_kills": 29,
-    "distance_km": 25.2,
-    "mined": 920,
+    "mob_kills": 36,
+    "distance_km": 29.4,
+    "mined": 940,
     "crafted": 16,
     "distanz": {
-     "fuss": 20.7,
+     "fuss": 24.9,
      "elytra": 1.3,
-     "schwimmen": 0.3,
+     "schwimmen": 0.4,
      "minecart": 2.8
     },
-    "jumps": 4249,
-    "damage_taken": 6663,
-    "damage_dealt": 5981,
+    "jumps": 5082,
+    "damage_taken": 7222,
+    "damage_dealt": 7239,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 135,
+    "drops": 136,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -1682,11 +1682,11 @@
      ],
      [
       "short grass",
-      226
+      238
      ],
      [
       "dirt",
-      51
+      55
      ],
      [
       "carrots",
@@ -1698,7 +1698,7 @@
      ],
      [
       "grass block",
-      13
+      15
      ]
     ],
     "top_crafted": [
@@ -2304,6 +2304,12 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-26T19:22:58Z",
+   "typ": "tod",
+   "spieler": "Jaki_03",
+   "text": "was blown up by Creeper"
+  },
   {
    "t": "2026-11-26T15:58:40Z",
    "typ": "tod",
@@ -4097,12 +4103,6 @@
    "typ": "tod",
    "spieler": "Reep811",
    "text": "was shot by Skeleton"
-  },
-  {
-   "t": "2026-11-19T16:50:41Z",
-   "typ": "tod",
-   "spieler": "Reep811",
-   "text": "was slain by Enderman"
   }
  ],
  "server": {
@@ -4110,6 +4110,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-26 19:00 UTC"
+  "wann": "2026-11-26 19:30 UTC"
  }
 }
