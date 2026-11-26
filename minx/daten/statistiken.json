@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-26 13:00 UTC",
+ "aktualisiert": "2026-11-26 13:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -424,32 +424,32 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 74.2,
-    "deaths": 39,
-    "mob_kills": 8997,
-    "distance_km": 772.1,
-    "mined": 28293,
+    "playtime_h": 74.7,
+    "deaths": 40,
+    "mob_kills": 9098,
+    "distance_km": 780.2,
+    "mined": 28314,
     "crafted": 27812,
     "distanz": {
-     "fuss": 215.6,
-     "elytra": 551.2,
+     "fuss": 217.3,
+     "elytra": 557.5,
      "schwimmen": 3.2,
      "boot": 2.2
     },
-    "jumps": 48709,
-    "damage_taken": 138526,
-    "damage_dealt": 539970,
+    "jumps": 49213,
+    "damage_taken": 140767,
+    "damage_dealt": 542166,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2765,
+    "drops": 2800,
     "trades": 0,
     "totems": 0,
     "player_kills": 28,
-    "killed_by_player": 12,
+    "killed_by_player": 13,
     "top_killed_by": [
      [
       "Spieler",
-      12
+      13
      ],
      [
       "vindicator",
@@ -475,7 +475,7 @@
     "top_mined": [
      [
       "dirt",
-      4429
+      4430
      ],
      [
       "netherrack",
@@ -483,7 +483,7 @@
      ],
      [
       "grass block",
-      3304
+      3307
      ],
      [
       "stone",
@@ -1373,26 +1373,26 @@
   {
    "name": "Devolos2358",
    "stats": {
-    "playtime_h": 7.5,
+    "playtime_h": 7.9,
     "deaths": 3,
     "mob_kills": 2283,
-    "distance_km": 153.0,
-    "mined": 12985,
-    "crafted": 8111,
+    "distance_km": 159.6,
+    "mined": 12989,
+    "crafted": 8908,
     "distanz": {
-     "fuss": 22.2,
-     "elytra": 130.7,
+     "fuss": 23.6,
+     "elytra": 135.8,
      "schwimmen": 0.2
     },
-    "jumps": 5879,
-    "damage_taken": 16759,
-    "damage_dealt": 32372,
+    "jumps": 6409,
+    "damage_taken": 18591,
+    "damage_dealt": 33250,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 323,
+    "drops": 345,
     "trades": 0,
     "totems": 0,
-    "player_kills": 1,
+    "player_kills": 2,
     "killed_by_player": 3,
     "top_killed_by": [
      [
@@ -1429,7 +1429,7 @@
     "top_crafted": [
      [
       "paper",
-      6583
+      7222
      ],
      [
       "gold nugget",
@@ -1437,7 +1437,7 @@
      ],
      [
       "emerald",
-      392
+      522
      ],
      [
       "wind charge",
@@ -2304,6 +2304,18 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-26T13:23:13Z",
+   "typ": "tod",
+   "spieler": "Wemmbuuufaker",
+   "text": "was slain by Devolos2358"
+  },
+  {
+   "t": "2026-11-26T13:23:13Z",
+   "typ": "kill",
+   "spieler": "Devolos2358",
+   "text": "hat Wemmbuuufaker erledigt (was slain by Devolos2358)"
+  },
   {
    "t": "2026-11-25T20:52:19Z",
    "typ": "tod",
@@ -4091,18 +4103,6 @@
    "typ": "tod",
    "spieler": "BobBobinson007",
    "text": "was slain by Spider"
-  },
-  {
-   "t": "2026-11-19T14:05:02Z",
-   "typ": "advancement",
-   "spieler": "Manumel12",
-   "text": "nether - obtain ancient debris"
-  },
-  {
-   "t": "2026-11-19T14:01:13Z",
-   "typ": "advancement",
-   "spieler": "Manumel12",
-   "text": "story - lava bucket"
   }
  ],
  "server": {
@@ -4110,6 +4110,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-26 13:00 UTC"
+  "wann": "2026-11-26 13:30 UTC"
  }
 }
