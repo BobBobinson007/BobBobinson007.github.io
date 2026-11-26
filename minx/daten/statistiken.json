@@ -1,33 +1,33 @@
 {
- "aktualisiert": "2026-11-26 14:00 UTC",
+ "aktualisiert": "2026-11-26 14:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 356.1,
+    "playtime_h": 356.6,
     "deaths": 144,
-    "mob_kills": 54411,
-    "distance_km": 2798.7,
-    "mined": 188433,
+    "mob_kills": 54421,
+    "distance_km": 2810.4,
+    "mined": 188465,
     "crafted": 164399,
     "distanz": {
-     "fuss": 768.3,
-     "elytra": 1992.2,
+     "fuss": 769.6,
+     "elytra": 2002.4,
      "schwimmen": 25.0,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 213562,
-    "damage_taken": 330420,
-    "damage_dealt": 1125294,
+    "jumps": 214679,
+    "damage_taken": 336178,
+    "damage_dealt": 1129624,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8674,
+    "drops": 8686,
     "trades": 0,
     "totems": 0,
-    "player_kills": 40,
+    "player_kills": 41,
     "killed_by_player": 52,
     "top_killed_by": [
      [
@@ -58,7 +58,7 @@
     "top_mined": [
      [
       "stone",
-      46468
+      46495
      ],
      [
       "sand",
@@ -219,34 +219,34 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 111.5,
-    "deaths": 28,
-    "mob_kills": 17800,
-    "distance_km": 1208.8,
-    "mined": 38411,
-    "crafted": 133725,
+    "playtime_h": 112.0,
+    "deaths": 31,
+    "mob_kills": 17808,
+    "distance_km": 1220.9,
+    "mined": 38417,
+    "crafted": 133928,
     "distanz": {
-     "fuss": 285.2,
-     "elytra": 914.6,
+     "fuss": 286.6,
+     "elytra": 925.2,
      "schwimmen": 5.9,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 68338,
-    "damage_taken": 114267,
-    "damage_dealt": 548979,
+    "jumps": 69221,
+    "damage_taken": 118486,
+    "damage_dealt": 551624,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2967,
+    "drops": 2983,
     "trades": 0,
     "totems": 0,
     "player_kills": 38,
-    "killed_by_player": 19,
+    "killed_by_player": 22,
     "top_killed_by": [
      [
       "Spieler",
-      19
+      22
      ],
      [
       "warden",
@@ -424,27 +424,27 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 74.9,
+    "playtime_h": 75.4,
     "deaths": 40,
-    "mob_kills": 9137,
-    "distance_km": 787.9,
-    "mined": 28332,
+    "mob_kills": 9138,
+    "distance_km": 803.7,
+    "mined": 28343,
     "crafted": 27812,
     "distanz": {
-     "fuss": 217.8,
-     "elytra": 564.8,
+     "fuss": 220.3,
+     "elytra": 578.0,
      "schwimmen": 3.2,
      "boot": 2.2
     },
-    "jumps": 49352,
-    "damage_taken": 140835,
-    "damage_dealt": 542666,
+    "jumps": 49935,
+    "damage_taken": 145949,
+    "damage_dealt": 549009,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2808,
+    "drops": 2818,
     "trades": 0,
     "totems": 0,
-    "player_kills": 28,
+    "player_kills": 29,
     "killed_by_player": 13,
     "top_killed_by": [
      [
@@ -475,7 +475,7 @@
     "top_mined": [
      [
       "dirt",
-      4430
+      4433
      ],
      [
       "netherrack",
@@ -1293,6 +1293,90 @@
    }
   },
   {
+   "name": "Devolos2358",
+   "stats": {
+    "playtime_h": 8.1,
+    "deaths": 3,
+    "mob_kills": 2283,
+    "distance_km": 161.4,
+    "mined": 13010,
+    "crafted": 8908,
+    "distanz": {
+     "fuss": 24.3,
+     "elytra": 137.0,
+     "schwimmen": 0.2
+    },
+    "jumps": 6694,
+    "damage_taken": 19691,
+    "damage_dealt": 34236,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 358,
+    "trades": 0,
+    "totems": 0,
+    "player_kills": 3,
+    "killed_by_player": 3,
+    "top_killed_by": [
+     [
+      "Spieler",
+      3
+     ]
+    ],
+    "top_mined": [
+     [
+      "netherrack",
+      9811
+     ],
+     [
+      "basalt",
+      2114
+     ],
+     [
+      "blackstone",
+      443
+     ],
+     [
+      "coal ore",
+      89
+     ],
+     [
+      "stone",
+      86
+     ],
+     [
+      "nether quartz ore",
+      69
+     ]
+    ],
+    "top_crafted": [
+     [
+      "paper",
+      7222
+     ],
+     [
+      "gold nugget",
+      566
+     ],
+     [
+      "emerald",
+      522
+     ],
+     [
+      "wind charge",
+      116
+     ],
+     [
+      "gold ingot",
+      90
+     ],
+     [
+      "golden carrot",
+      70
+     ]
+    ]
+   }
+  },
+  {
    "name": "fabsthreal",
    "stats": {
     "playtime_h": 8.0,
@@ -1366,90 +1450,6 @@
      [
       "crafting table",
       2
-     ]
-    ]
-   }
-  },
-  {
-   "name": "Devolos2358",
-   "stats": {
-    "playtime_h": 7.9,
-    "deaths": 3,
-    "mob_kills": 2283,
-    "distance_km": 159.6,
-    "mined": 12989,
-    "crafted": 8908,
-    "distanz": {
-     "fuss": 23.6,
-     "elytra": 135.8,
-     "schwimmen": 0.2
-    },
-    "jumps": 6409,
-    "damage_taken": 18591,
-    "damage_dealt": 33250,
-    "fish_caught": 0,
-    "enchanted": 0,
-    "drops": 345,
-    "trades": 0,
-    "totems": 0,
-    "player_kills": 2,
-    "killed_by_player": 3,
-    "top_killed_by": [
-     [
-      "Spieler",
-      3
-     ]
-    ],
-    "top_mined": [
-     [
-      "netherrack",
-      9811
-     ],
-     [
-      "basalt",
-      2114
-     ],
-     [
-      "blackstone",
-      443
-     ],
-     [
-      "coal ore",
-      89
-     ],
-     [
-      "stone",
-      76
-     ],
-     [
-      "nether quartz ore",
-      69
-     ]
-    ],
-    "top_crafted": [
-     [
-      "paper",
-      7222
-     ],
-     [
-      "gold nugget",
-      566
-     ],
-     [
-      "emerald",
-      522
-     ],
-     [
-      "wind charge",
-      116
-     ],
-     [
-      "gold ingot",
-      90
-     ],
-     [
-      "golden carrot",
-      70
      ]
     ]
    }
@@ -2304,6 +2304,48 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-26T14:29:18Z",
+   "typ": "tod",
+   "spieler": "BobBobinson007",
+   "text": "was slain by Devolos2358"
+  },
+  {
+   "t": "2026-11-26T14:29:18Z",
+   "typ": "kill",
+   "spieler": "Devolos2358",
+   "text": "hat BobBobinson007 erledigt (was slain by Devolos2358)"
+  },
+  {
+   "t": "2026-11-26T14:17:19Z",
+   "typ": "tod",
+   "spieler": "TheRealDmseife",
+   "text": "was smashed by Devolos2358"
+  },
+  {
+   "t": "2026-11-26T14:17:19Z",
+   "typ": "kill",
+   "spieler": "Devolos2358",
+   "text": "hat TheRealDmseife erledigt (was smashed by Devolos2358)"
+  },
+  {
+   "t": "2026-11-26T14:17:19Z",
+   "typ": "advancement",
+   "spieler": "Devolos2358",
+   "text": "adventure - overoverkill"
+  },
+  {
+   "t": "2026-11-26T14:08:20Z",
+   "typ": "tod",
+   "spieler": "TheRealDmseife",
+   "text": "was slain by Wemmbuuufaker using [Made In Heaven]"
+  },
+  {
+   "t": "2026-11-26T14:08:20Z",
+   "typ": "kill",
+   "spieler": "Wemmbuuufaker",
+   "text": "hat TheRealDmseife erledigt (was slain by Wemmbuuufaker using [Made In Heaven])"
+  },
   {
    "t": "2026-11-26T13:23:13Z",
    "typ": "tod",
@@ -4061,48 +4103,6 @@
    "typ": "advancement",
    "spieler": "Manumel12",
    "text": "adventure - salvage sherd"
-  },
-  {
-   "t": "2026-11-19T15:44:40Z",
-   "typ": "advancement",
-   "spieler": "Manumel12",
-   "text": "nether - netherite armor"
-  },
-  {
-   "t": "2026-11-19T15:20:41Z",
-   "typ": "tod",
-   "spieler": "Hagen13juhhuh",
-   "text": "was shot by Skeleton"
-  },
-  {
-   "t": "2026-11-19T15:19:36Z",
-   "typ": "tod",
-   "spieler": "Hagen13juhhuh",
-   "text": "was shot by Skeleton"
-  },
-  {
-   "t": "2026-11-19T15:17:03Z",
-   "typ": "tod",
-   "spieler": "Hagen13juhhuh",
-   "text": "was shot by Skeleton"
-  },
-  {
-   "t": "2026-11-19T15:00:21Z",
-   "typ": "advancement",
-   "spieler": "Manumel12",
-   "text": "adventure - avoid vibration"
-  },
-  {
-   "t": "2026-11-19T14:37:40Z",
-   "typ": "advancement",
-   "spieler": "Manumel12",
-   "text": "story - obtain armor"
-  },
-  {
-   "t": "2026-11-19T14:21:23Z",
-   "typ": "tod",
-   "spieler": "BobBobinson007",
-   "text": "was slain by Spider"
   }
  ],
  "server": {
@@ -4110,6 +4110,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-26 14:00 UTC"
+  "wann": "2026-11-26 14:30 UTC"
  }
 }
