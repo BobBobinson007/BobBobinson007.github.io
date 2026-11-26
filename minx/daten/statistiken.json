@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-26 18:00 UTC",
+ "aktualisiert": "2026-11-26 18:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -741,25 +741,25 @@
   {
    "name": "Jaki_03",
    "stats": {
-    "playtime_h": 27.2,
+    "playtime_h": 27.7,
     "deaths": 17,
-    "mob_kills": 248,
-    "distance_km": 280.3,
-    "mined": 7318,
-    "crafted": 4966,
+    "mob_kills": 255,
+    "distance_km": 287.9,
+    "mined": 7507,
+    "crafted": 5252,
     "distanz": {
-     "fuss": 113.7,
-     "elytra": 156.2,
+     "fuss": 116.1,
+     "elytra": 161.5,
      "schwimmen": 0.8,
      "boot": 3.1,
      "minecart": 6.5
     },
-    "jumps": 11291,
-    "damage_taken": 16674,
-    "damage_dealt": 45539,
+    "jumps": 11647,
+    "damage_taken": 16956,
+    "damage_dealt": 46718,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 398,
+    "drops": 406,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -793,11 +793,11 @@
     "top_mined": [
      [
       "grass block",
-      2200
+      2220
      ],
      [
       "dirt",
-      1124
+      1125
      ],
      [
       "stone",
@@ -4110,6 +4110,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-26 18:00 UTC"
+  "wann": "2026-11-26 18:30 UTC"
  }
 }
