@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-26 15:00 UTC",
+ "aktualisiert": "2026-11-26 15:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -424,27 +424,27 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 75.8,
+    "playtime_h": 76.3,
     "deaths": 40,
-    "mob_kills": 9340,
-    "distance_km": 810.9,
-    "mined": 28354,
-    "crafted": 27817,
+    "mob_kills": 9354,
+    "distance_km": 822.6,
+    "mined": 28362,
+    "crafted": 28245,
     "distanz": {
-     "fuss": 221.3,
-     "elytra": 584.3,
+     "fuss": 222.9,
+     "elytra": 594.4,
      "schwimmen": 3.2,
      "boot": 2.2
     },
-    "jumps": 50070,
-    "damage_taken": 147516,
-    "damage_dealt": 552021,
+    "jumps": 50408,
+    "damage_taken": 148760,
+    "damage_dealt": 568548,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2846,
+    "drops": 2855,
     "trades": 0,
     "totems": 0,
-    "player_kills": 29,
+    "player_kills": 93,
     "killed_by_player": 13,
     "top_killed_by": [
      [
@@ -475,7 +475,7 @@
     "top_mined": [
      [
       "dirt",
-      4433
+      4434
      ],
      [
       "netherrack",
@@ -521,7 +521,7 @@
      ],
      [
       "gold ingot",
-      1739
+      2063
      ]
     ]
    }
@@ -937,33 +937,33 @@
   {
    "name": "Hagen13juhhuh",
    "stats": {
-    "playtime_h": 19.3,
-    "deaths": 37,
-    "mob_kills": 348,
-    "distance_km": 163.4,
-    "mined": 7976,
-    "crafted": 8375,
+    "playtime_h": 19.8,
+    "deaths": 101,
+    "mob_kills": 409,
+    "distance_km": 166.9,
+    "mined": 7981,
+    "crafted": 9362,
     "distanz": {
-     "fuss": 58.8,
-     "elytra": 103.9,
+     "fuss": 60.7,
+     "elytra": 105.5,
      "schwimmen": 0.0,
      "boot": 0.1,
      "minecart": 0.5
     },
-    "jumps": 8615,
-    "damage_taken": 24263,
-    "damage_dealt": 22389,
+    "jumps": 8922,
+    "damage_taken": 41367,
+    "damage_dealt": 23163,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 179,
+    "drops": 191,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
-    "killed_by_player": 12,
+    "killed_by_player": 76,
     "top_killed_by": [
      [
       "Spieler",
-      12
+      76
      ],
      [
       "skeleton",
@@ -1011,7 +1011,7 @@
     "top_crafted": [
      [
       "paper",
-      4947
+      5889
      ],
      [
       "oak planks",
@@ -1039,23 +1039,23 @@
   {
    "name": "Manumel12",
    "stats": {
-    "playtime_h": 14.8,
+    "playtime_h": 15.0,
     "deaths": 5,
-    "mob_kills": 6219,
-    "distance_km": 187.3,
-    "mined": 13867,
-    "crafted": 24969,
+    "mob_kills": 6221,
+    "distance_km": 188.7,
+    "mined": 13938,
+    "crafted": 24985,
     "distanz": {
-     "fuss": 48.5,
-     "elytra": 136.3,
-     "schwimmen": 2.5
+     "fuss": 48.7,
+     "elytra": 137.4,
+     "schwimmen": 2.6
     },
-    "jumps": 7996,
-    "damage_taken": 15308,
-    "damage_dealt": 71078,
+    "jumps": 8042,
+    "damage_taken": 15310,
+    "damage_dealt": 71438,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3357,
+    "drops": 3361,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -1081,7 +1081,7 @@
      ],
      [
       "blue concrete",
-      1158
+      1189
      ],
      [
       "stone",
@@ -1295,23 +1295,23 @@
   {
    "name": "Devolos2358",
    "stats": {
-    "playtime_h": 8.3,
+    "playtime_h": 8.5,
     "deaths": 3,
     "mob_kills": 2320,
-    "distance_km": 165.6,
-    "mined": 13016,
+    "distance_km": 170.2,
+    "mined": 13039,
     "crafted": 8908,
     "distanz": {
-     "fuss": 25.0,
-     "elytra": 140.4,
+     "fuss": 25.5,
+     "elytra": 144.5,
      "schwimmen": 0.2
     },
-    "jumps": 6984,
-    "damage_taken": 20798,
-    "damage_dealt": 34887,
+    "jumps": 7202,
+    "damage_taken": 22477,
+    "damage_dealt": 35669,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 363,
+    "drops": 367,
     "trades": 0,
     "totems": 0,
     "player_kills": 4,
@@ -2304,6 +2304,90 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-26T15:17:02Z",
+   "typ": "tod",
+   "spieler": "Hagen13juhhuh",
+   "text": "was slain by Wemmbuuufaker using [ZA WARUDO]"
+  },
+  {
+   "t": "2026-11-26T15:17:02Z",
+   "typ": "kill",
+   "spieler": "Wemmbuuufaker",
+   "text": "hat Hagen13juhhuh erledigt (was slain by Wemmbuuufaker using [ZA WARUDO])"
+  },
+  {
+   "t": "2026-11-26T15:16:00Z",
+   "typ": "tod",
+   "spieler": "Hagen13juhhuh",
+   "text": "was slain by Wemmbuuufaker using [ZA WARUDO]"
+  },
+  {
+   "t": "2026-11-26T15:16:00Z",
+   "typ": "kill",
+   "spieler": "Wemmbuuufaker",
+   "text": "hat Hagen13juhhuh erledigt (was slain by Wemmbuuufaker using [ZA WARUDO])"
+  },
+  {
+   "t": "2026-11-26T15:15:13Z",
+   "typ": "tod",
+   "spieler": "Hagen13juhhuh",
+   "text": "was slain by Wemmbuuufaker using [Made In Heaven]"
+  },
+  {
+   "t": "2026-11-26T15:15:13Z",
+   "typ": "kill",
+   "spieler": "Wemmbuuufaker",
+   "text": "hat Hagen13juhhuh erledigt (was slain by Wemmbuuufaker using [Made In Heaven])"
+  },
+  {
+   "t": "2026-11-26T15:15:02Z",
+   "typ": "tod",
+   "spieler": "Hagen13juhhuh",
+   "text": "was slain by Wemmbuuufaker using [ZA WARUDO]"
+  },
+  {
+   "t": "2026-11-26T15:15:02Z",
+   "typ": "kill",
+   "spieler": "Wemmbuuufaker",
+   "text": "hat Hagen13juhhuh erledigt (was slain by Wemmbuuufaker using [ZA WARUDO])"
+  },
+  {
+   "t": "2026-11-26T15:14:00Z",
+   "typ": "tod",
+   "spieler": "Hagen13juhhuh",
+   "text": "was slain by Wemmbuuufaker using [ZA WARUDO]"
+  },
+  {
+   "t": "2026-11-26T15:14:00Z",
+   "typ": "kill",
+   "spieler": "Wemmbuuufaker",
+   "text": "hat Hagen13juhhuh erledigt (was slain by Wemmbuuufaker using [ZA WARUDO])"
+  },
+  {
+   "t": "2026-11-26T15:13:11Z",
+   "typ": "tod",
+   "spieler": "Hagen13juhhuh",
+   "text": "was slain by Wemmbuuufaker using [ZA WARUDO]"
+  },
+  {
+   "t": "2026-11-26T15:13:11Z",
+   "typ": "kill",
+   "spieler": "Wemmbuuufaker",
+   "text": "hat Hagen13juhhuh erledigt (was slain by Wemmbuuufaker using [ZA WARUDO])"
+  },
+  {
+   "t": "2026-11-26T15:12:45Z",
+   "typ": "tod",
+   "spieler": "Hagen13juhhuh",
+   "text": "was slain by Wemmbuuufaker using [ZA WARUDO]"
+  },
+  {
+   "t": "2026-11-26T15:12:45Z",
+   "typ": "kill",
+   "spieler": "Wemmbuuufaker",
+   "text": "hat Hagen13juhhuh erledigt (was slain by Wemmbuuufaker using [ZA WARUDO])"
+  },
   {
    "t": "2026-11-26T14:29:18Z",
    "typ": "tod",
@@ -4019,90 +4103,6 @@
    "typ": "advancement",
    "spieler": "Reep811",
    "text": "end - enter end gateway"
-  },
-  {
-   "t": "2026-11-19T16:47:00Z",
-   "typ": "advancement",
-   "spieler": "Reep811",
-   "text": "adventure - kill a mob"
-  },
-  {
-   "t": "2026-11-19T16:45:05Z",
-   "typ": "advancement",
-   "spieler": "Reep811",
-   "text": "end - root"
-  },
-  {
-   "t": "2026-11-19T16:45:05Z",
-   "typ": "advancement",
-   "spieler": "Reep811",
-   "text": "story - enter the end"
-  },
-  {
-   "t": "2026-11-19T16:44:35Z",
-   "typ": "advancement",
-   "spieler": "Reep811",
-   "text": "story - follow ender eye"
-  },
-  {
-   "t": "2026-11-19T16:43:36Z",
-   "typ": "advancement",
-   "spieler": "Reep811",
-   "text": "story - enter the nether"
-  },
-  {
-   "t": "2026-11-19T16:43:36Z",
-   "typ": "advancement",
-   "spieler": "Reep811",
-   "text": "nether - root"
-  },
-  {
-   "t": "2026-11-19T16:43:20Z",
-   "typ": "tod",
-   "spieler": "Reep811",
-   "text": "was slain by TimotheToaster"
-  },
-  {
-   "t": "2026-11-19T16:43:20Z",
-   "typ": "kill",
-   "spieler": "TimotheToaster",
-   "text": "hat Reep811 erledigt (was slain by TimotheToaster)"
-  },
-  {
-   "t": "2026-11-19T16:41:18Z",
-   "typ": "tod",
-   "spieler": "Reep811",
-   "text": "was slain by TimotheToaster"
-  },
-  {
-   "t": "2026-11-19T16:41:18Z",
-   "typ": "kill",
-   "spieler": "TimotheToaster",
-   "text": "hat Reep811 erledigt (was slain by TimotheToaster)"
-  },
-  {
-   "t": "2026-11-19T16:41:04Z",
-   "typ": "advancement",
-   "spieler": "Reep811",
-   "text": "adventure - sleep in bed"
-  },
-  {
-   "t": "2026-11-19T16:40:34Z",
-   "typ": "advancement",
-   "spieler": "Reep811",
-   "text": "adventure - root"
-  },
-  {
-   "t": "2026-11-19T16:30:37Z",
-   "typ": "advancement",
-   "spieler": "Manumel12",
-   "text": "story - follow ender eye"
-  },
-  {
-   "t": "2026-11-19T16:09:59Z",
-   "typ": "advancement",
-   "spieler": "Manumel12",
-   "text": "adventure - salvage sherd"
   }
  ],
  "server": {
@@ -4110,6 +4110,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 6.9,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-26 15:00 UTC"
+  "wann": "2026-11-26 15:30 UTC"
  }
 }
