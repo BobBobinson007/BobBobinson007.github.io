@@ -1,38 +1,38 @@
 {
- "aktualisiert": "2026-11-27 15:00 UTC",
+ "aktualisiert": "2026-11-27 15:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 358.2,
-    "deaths": 145,
+    "playtime_h": 358.5,
+    "deaths": 146,
     "mob_kills": 54568,
-    "distance_km": 2826.3,
-    "mined": 188592,
-    "crafted": 164399,
+    "distance_km": 2834.6,
+    "mined": 188595,
+    "crafted": 165478,
     "distanz": {
-     "fuss": 771.8,
-     "elytra": 2016.1,
-     "schwimmen": 25.1,
+     "fuss": 772.3,
+     "elytra": 2023.7,
+     "schwimmen": 25.2,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 215368,
-    "damage_taken": 337340,
-    "damage_dealt": 1133464,
+    "jumps": 215695,
+    "damage_taken": 339482,
+    "damage_dealt": 1134047,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8705,
+    "drops": 8725,
     "trades": 0,
     "totems": 0,
-    "player_kills": 41,
-    "killed_by_player": 53,
+    "player_kills": 42,
+    "killed_by_player": 54,
     "top_killed_by": [
      [
       "Spieler",
-      53
+      54
      ],
      [
       "warden",
@@ -92,7 +92,7 @@
      ],
      [
       "gold nugget",
-      12668
+      13253
      ],
      [
       "bone meal",
@@ -219,34 +219,34 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 112.2,
-    "deaths": 31,
-    "mob_kills": 17810,
-    "distance_km": 1223.4,
-    "mined": 38417,
-    "crafted": 133928,
+    "playtime_h": 112.6,
+    "deaths": 32,
+    "mob_kills": 17894,
+    "distance_km": 1235.5,
+    "mined": 38450,
+    "crafted": 133929,
     "distanz": {
-     "fuss": 287.0,
-     "elytra": 927.4,
+     "fuss": 288.7,
+     "elytra": 937.7,
      "schwimmen": 5.9,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 69312,
-    "damage_taken": 118554,
-    "damage_dealt": 552154,
+    "jumps": 69799,
+    "damage_taken": 120904,
+    "damage_dealt": 554636,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2991,
+    "drops": 3021,
     "trades": 0,
     "totems": 0,
-    "player_kills": 38,
-    "killed_by_player": 22,
+    "player_kills": 39,
+    "killed_by_player": 23,
     "top_killed_by": [
      [
       "Spieler",
-      22
+      23
      ],
      [
       "warden",
@@ -268,7 +268,7 @@
      ],
      [
       "stone",
-      4126
+      4128
      ],
      [
       "oak leaves",
@@ -424,24 +424,24 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 78.3,
+    "playtime_h": 78.7,
     "deaths": 41,
     "mob_kills": 9711,
-    "distance_km": 871.0,
-    "mined": 28407,
+    "distance_km": 879.7,
+    "mined": 28408,
     "crafted": 28567,
     "distanz": {
-     "fuss": 229.8,
-     "elytra": 635.6,
+     "fuss": 231.7,
+     "elytra": 642.3,
      "schwimmen": 3.4,
      "boot": 2.2
     },
-    "jumps": 52176,
-    "damage_taken": 156470,
-    "damage_dealt": 581247,
+    "jumps": 52518,
+    "damage_taken": 158017,
+    "damage_dealt": 583148,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2963,
+    "drops": 3005,
     "trades": 0,
     "totems": 0,
     "player_kills": 93,
@@ -937,21 +937,21 @@
   {
    "name": "Hagen13juhhuh",
    "stats": {
-    "playtime_h": 21.7,
+    "playtime_h": 22.2,
     "deaths": 102,
     "mob_kills": 486,
-    "distance_km": 184.6,
-    "mined": 9387,
-    "crafted": 11547,
+    "distance_km": 187.1,
+    "mined": 10155,
+    "crafted": 12476,
     "distanz": {
-     "fuss": 66.0,
-     "elytra": 117.9,
+     "fuss": 67.7,
+     "elytra": 118.8,
      "schwimmen": 0.0,
      "boot": 0.1,
      "minecart": 0.5
     },
-    "jumps": 9544,
-    "damage_taken": 42097,
+    "jumps": 9806,
+    "damage_taken": 42265,
     "damage_dealt": 26367,
     "fish_caught": 0,
     "enchanted": 0,
@@ -985,15 +985,15 @@
     "top_mined": [
      [
       "netherrack",
-      2413
+      2414
      ],
      [
       "stone",
-      1906
+      1907
      ],
      [
       "deepslate",
-      927
+      1613
      ],
      [
       "grass block",
@@ -1011,7 +1011,7 @@
     "top_crafted": [
      [
       "paper",
-      7551
+      8418
      ],
      [
       "oak planks",
@@ -1023,7 +1023,7 @@
      ],
      [
       "emerald",
-      321
+      357
      ],
      [
       "cobblestone stairs",
@@ -1039,23 +1039,23 @@
   {
    "name": "Manumel12",
    "stats": {
-    "playtime_h": 17.6,
+    "playtime_h": 17.9,
     "deaths": 5,
-    "mob_kills": 7035,
-    "distance_km": 221.1,
-    "mined": 15135,
-    "crafted": 25997,
+    "mob_kills": 8908,
+    "distance_km": 225.0,
+    "mined": 15140,
+    "crafted": 26002,
     "distanz": {
-     "fuss": 54.5,
-     "elytra": 163.6,
+     "fuss": 54.8,
+     "elytra": 167.1,
      "schwimmen": 3.0
     },
-    "jumps": 9186,
-    "damage_taken": 19531,
-    "damage_dealt": 89822,
+    "jumps": 9239,
+    "damage_taken": 20302,
+    "damage_dealt": 95642,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3851,
+    "drops": 3864,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -1295,23 +1295,23 @@
   {
    "name": "Devolos2358",
    "stats": {
-    "playtime_h": 9.3,
+    "playtime_h": 9.8,
     "deaths": 3,
-    "mob_kills": 2617,
-    "distance_km": 185.1,
-    "mined": 13082,
-    "crafted": 9443,
+    "mob_kills": 2718,
+    "distance_km": 191.2,
+    "mined": 13095,
+    "crafted": 9482,
     "distanz": {
-     "fuss": 28.1,
-     "elytra": 156.8,
+     "fuss": 29.8,
+     "elytra": 161.1,
      "schwimmen": 0.3
     },
-    "jumps": 8044,
-    "damage_taken": 27031,
-    "damage_dealt": 43046,
+    "jumps": 8527,
+    "damage_taken": 29140,
+    "damage_dealt": 45170,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 394,
+    "drops": 425,
     "trades": 0,
     "totems": 0,
     "player_kills": 5,
@@ -1341,7 +1341,7 @@
      ],
      [
       "stone",
-      86
+      87
      ],
      [
       "nether quartz ore",
@@ -1359,7 +1359,7 @@
      ],
      [
       "emerald",
-      522
+      549
      ],
      [
       "gold ingot",
@@ -2304,6 +2304,12 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-27T15:11:36Z",
+   "typ": "tod",
+   "spieler": "TheRealDmseife",
+   "text": "was slain by [SC] BobBo..."
+  },
   {
    "t": "2026-11-27T13:58:38Z",
    "typ": "tod",
@@ -4097,12 +4103,6 @@
    "typ": "advancement",
    "spieler": "Reep811",
    "text": "story - upgrade tools"
-  },
-  {
-   "t": "2026-11-19T17:10:42Z",
-   "typ": "advancement",
-   "spieler": "Reep811",
-   "text": "story - mine stone"
   }
  ],
  "server": {
@@ -4110,6 +4110,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 7.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-27 15:00 UTC"
+  "wann": "2026-11-27 15:30 UTC"
  }
 }
