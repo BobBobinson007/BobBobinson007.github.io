@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-27 20:00 UTC",
+ "aktualisiert": "2026-11-27 20:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -112,26 +112,26 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 320.9,
+    "playtime_h": 321.3,
     "deaths": 55,
-    "mob_kills": 10660,
-    "distance_km": 1786.5,
-    "mined": 80921,
+    "mob_kills": 10724,
+    "distance_km": 1796.8,
+    "mined": 81167,
     "crafted": 39359,
     "distanz": {
-     "fuss": 412.4,
-     "elytra": 1314.7,
+     "fuss": 413.2,
+     "elytra": 1324.0,
      "schwimmen": 57.1,
      "boot": 0.4,
      "minecart": 1.9,
      "pferd": 0.0
     },
-    "jumps": 152082,
-    "damage_taken": 116666,
-    "damage_dealt": 646398,
+    "jumps": 152504,
+    "damage_taken": 116805,
+    "damage_dealt": 646618,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4818,
+    "drops": 4833,
     "trades": 0,
     "totems": 0,
     "player_kills": 36,
@@ -165,15 +165,15 @@
     "top_mined": [
      [
       "stone",
-      31013
+      31043
      ],
      [
       "dirt",
-      9067
+      9273
      ],
      [
       "grass block",
-      8279
+      8285
      ],
      [
       "sand",
@@ -185,7 +185,7 @@
      ],
      [
       "short grass",
-      2945
+      2946
      ]
     ],
     "top_crafted": [
@@ -1296,23 +1296,23 @@
   {
    "name": "Devolos2358",
    "stats": {
-    "playtime_h": 10.5,
+    "playtime_h": 11.0,
     "deaths": 3,
-    "mob_kills": 2850,
-    "distance_km": 201.3,
-    "mined": 13101,
-    "crafted": 9496,
+    "mob_kills": 3051,
+    "distance_km": 211.2,
+    "mined": 13166,
+    "crafted": 10024,
     "distanz": {
-     "fuss": 32.9,
-     "elytra": 168.2,
+     "fuss": 33.9,
+     "elytra": 176.9,
      "schwimmen": 0.3
     },
-    "jumps": 9367,
-    "damage_taken": 31026,
-    "damage_dealt": 51280,
+    "jumps": 9750,
+    "damage_taken": 31822,
+    "damage_dealt": 53059,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 458,
+    "drops": 488,
     "trades": 0,
     "totems": 0,
     "player_kills": 6,
@@ -1337,12 +1337,12 @@
       443
      ],
      [
-      "coal ore",
-      89
+      "stone",
+      107
      ],
      [
-      "stone",
-      87
+      "coal ore",
+      89
      ],
      [
       "nether quartz ore",
@@ -1356,11 +1356,11 @@
      ],
      [
       "gold nugget",
-      971
+      1385
      ],
      [
       "emerald",
-      549
+      594
      ],
      [
       "gold ingot",
@@ -1368,7 +1368,7 @@
      ],
      [
       "golden carrot",
-      119
+      170
      ],
      [
       "wind charge",
@@ -4111,6 +4111,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 7.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-27 20:00 UTC"
+  "wann": "2026-11-27 20:30 UTC"
  }
 }
