@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-27 14:30 UTC",
+ "aktualisiert": "2026-11-27 15:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -219,23 +219,23 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 112.1,
+    "playtime_h": 112.2,
     "deaths": 31,
-    "mob_kills": 17809,
-    "distance_km": 1222.5,
+    "mob_kills": 17810,
+    "distance_km": 1223.4,
     "mined": 38417,
     "crafted": 133928,
     "distanz": {
-     "fuss": 286.8,
-     "elytra": 926.7,
+     "fuss": 287.0,
+     "elytra": 927.4,
      "schwimmen": 5.9,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 69267,
-    "damage_taken": 118549,
-    "damage_dealt": 551884,
+    "jumps": 69312,
+    "damage_taken": 118554,
+    "damage_dealt": 552154,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 2991,
@@ -424,24 +424,24 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 78.0,
+    "playtime_h": 78.3,
     "deaths": 41,
-    "mob_kills": 9708,
-    "distance_km": 861.1,
-    "mined": 28398,
+    "mob_kills": 9711,
+    "distance_km": 871.0,
+    "mined": 28407,
     "crafted": 28567,
     "distanz": {
-     "fuss": 228.6,
-     "elytra": 626.8,
+     "fuss": 229.8,
+     "elytra": 635.6,
      "schwimmen": 3.4,
      "boot": 2.2
     },
-    "jumps": 51759,
-    "damage_taken": 155445,
-    "damage_dealt": 580420,
+    "jumps": 52176,
+    "damage_taken": 156470,
+    "damage_dealt": 581247,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2939,
+    "drops": 2963,
     "trades": 0,
     "totems": 0,
     "player_kills": 93,
@@ -937,25 +937,25 @@
   {
    "name": "Hagen13juhhuh",
    "stats": {
-    "playtime_h": 21.2,
+    "playtime_h": 21.7,
     "deaths": 102,
-    "mob_kills": 485,
-    "distance_km": 182.2,
-    "mined": 8923,
-    "crafted": 10984,
+    "mob_kills": 486,
+    "distance_km": 184.6,
+    "mined": 9387,
+    "crafted": 11547,
     "distanz": {
-     "fuss": 64.7,
-     "elytra": 116.8,
+     "fuss": 66.0,
+     "elytra": 117.9,
      "schwimmen": 0.0,
      "boot": 0.1,
      "minecart": 0.5
     },
-    "jumps": 9495,
-    "damage_taken": 42063,
-    "damage_dealt": 26167,
+    "jumps": 9544,
+    "damage_taken": 42097,
+    "damage_dealt": 26367,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 191,
+    "drops": 192,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -985,11 +985,11 @@
     "top_mined": [
      [
       "netherrack",
-      2406
+      2413
      ],
      [
       "stone",
-      1521
+      1906
      ],
      [
       "deepslate",
@@ -1011,7 +1011,7 @@
     "top_crafted": [
      [
       "paper",
-      7230
+      7551
      ],
      [
       "oak planks",
@@ -1023,15 +1023,15 @@
      ],
      [
       "emerald",
-      307
+      321
      ],
      [
       "cobblestone stairs",
       280
      ],
      [
-      "oak stairs",
-      260
+      "stick",
+      264
      ]
     ]
    }
@@ -1039,23 +1039,23 @@
   {
    "name": "Manumel12",
    "stats": {
-    "playtime_h": 17.1,
+    "playtime_h": 17.6,
     "deaths": 5,
-    "mob_kills": 6807,
-    "distance_km": 218.0,
-    "mined": 15108,
-    "crafted": 25941,
+    "mob_kills": 7035,
+    "distance_km": 221.1,
+    "mined": 15135,
+    "crafted": 25997,
     "distanz": {
-     "fuss": 53.4,
-     "elytra": 161.7,
+     "fuss": 54.5,
+     "elytra": 163.6,
      "schwimmen": 3.0
     },
-    "jumps": 9079,
-    "damage_taken": 18839,
-    "damage_dealt": 82629,
+    "jumps": 9186,
+    "damage_taken": 19531,
+    "damage_dealt": 89822,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3669,
+    "drops": 3851,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -4110,6 +4110,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 7.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-27 14:30 UTC"
+  "wann": "2026-11-27 15:00 UTC"
  }
 }
