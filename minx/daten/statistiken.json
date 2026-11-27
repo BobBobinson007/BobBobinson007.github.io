@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-27 16:30 UTC",
+ "aktualisiert": "2026-11-27 17:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -112,29 +112,29 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 320.4,
+    "playtime_h": 320.9,
     "deaths": 55,
-    "mob_kills": 10482,
-    "distance_km": 1780.2,
-    "mined": 80914,
+    "mob_kills": 10660,
+    "distance_km": 1786.5,
+    "mined": 80921,
     "crafted": 39359,
     "distanz": {
-     "fuss": 410.9,
-     "elytra": 1309.9,
+     "fuss": 412.4,
+     "elytra": 1314.7,
      "schwimmen": 57.1,
      "boot": 0.4,
      "minecart": 1.9,
      "pferd": 0.0
     },
-    "jumps": 151397,
-    "damage_taken": 114904,
-    "damage_dealt": 644969,
+    "jumps": 152082,
+    "damage_taken": 116666,
+    "damage_dealt": 646398,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4801,
+    "drops": 4818,
     "trades": 0,
     "totems": 0,
-    "player_kills": 35,
+    "player_kills": 36,
     "killed_by_player": 11,
     "top_killed_by": [
      [
@@ -185,7 +185,7 @@
      ],
      [
       "short grass",
-      2940
+      2945
      ]
     ],
     "top_crafted": [
@@ -424,33 +424,33 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 79.2,
-    "deaths": 41,
-    "mob_kills": 9791,
-    "distance_km": 889.9,
-    "mined": 28479,
+    "playtime_h": 79.4,
+    "deaths": 42,
+    "mob_kills": 9837,
+    "distance_km": 892.3,
+    "mined": 28491,
     "crafted": 28570,
     "distanz": {
-     "fuss": 234.1,
-     "elytra": 650.3,
-     "schwimmen": 3.4,
+     "fuss": 235.1,
+     "elytra": 651.6,
+     "schwimmen": 3.5,
      "boot": 2.2,
      "minecart": 0.0
     },
-    "jumps": 53322,
-    "damage_taken": 161370,
-    "damage_dealt": 586278,
+    "jumps": 53632,
+    "damage_taken": 162892,
+    "damage_dealt": 587893,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3020,
+    "drops": 3044,
     "trades": 0,
     "totems": 0,
     "player_kills": 93,
-    "killed_by_player": 14,
+    "killed_by_player": 15,
     "top_killed_by": [
      [
       "Spieler",
-      14
+      15
      ],
      [
       "vindicator",
@@ -1296,23 +1296,23 @@
   {
    "name": "Devolos2358",
    "stats": {
-    "playtime_h": 10.0,
+    "playtime_h": 10.5,
     "deaths": 3,
-    "mob_kills": 2719,
-    "distance_km": 192.9,
-    "mined": 13095,
+    "mob_kills": 2850,
+    "distance_km": 201.3,
+    "mined": 13101,
     "crafted": 9496,
     "distanz": {
-     "fuss": 30.7,
-     "elytra": 161.9,
+     "fuss": 32.9,
+     "elytra": 168.2,
      "schwimmen": 0.3
     },
-    "jumps": 8716,
-    "damage_taken": 29731,
-    "damage_dealt": 45927,
+    "jumps": 9367,
+    "damage_taken": 31026,
+    "damage_dealt": 51280,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 428,
+    "drops": 458,
     "trades": 0,
     "totems": 0,
     "player_kills": 6,
@@ -2305,6 +2305,12 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-27T16:35:18Z",
+   "typ": "tod",
+   "spieler": "Wemmbuuufaker",
+   "text": "was smashed by [SC] ZickZackBoss"
+  },
   {
    "t": "2026-11-27T15:38:16Z",
    "typ": "tod",
@@ -4098,12 +4104,6 @@
    "typ": "advancement",
    "spieler": "Reep811",
    "text": "story - smelt iron"
-  },
-  {
-   "t": "2026-11-19T17:19:14Z",
-   "typ": "advancement",
-   "spieler": "FranoGames",
-   "text": "story - smelt iron"
   }
  ],
  "server": {
@@ -4111,6 +4111,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 7.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-27 16:30 UTC"
+  "wann": "2026-11-27 17:00 UTC"
  }
 }
