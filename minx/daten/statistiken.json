@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-27 12:30 UTC",
+ "aktualisiert": "2026-11-27 13:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -424,24 +424,24 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 77.1,
+    "playtime_h": 77.5,
     "deaths": 41,
-    "mob_kills": 9519,
-    "distance_km": 839.1,
+    "mob_kills": 9622,
+    "distance_km": 844.4,
     "mined": 28383,
     "crafted": 28252,
     "distanz": {
-     "fuss": 225.6,
-     "elytra": 608.0,
+     "fuss": 226.2,
+     "elytra": 612.6,
      "schwimmen": 3.4,
      "boot": 2.2
     },
-    "jumps": 51105,
-    "damage_taken": 151489,
-    "damage_dealt": 571271,
+    "jumps": 51224,
+    "damage_taken": 151916,
+    "damage_dealt": 576782,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 2907,
+    "drops": 2935,
     "trades": 0,
     "totems": 0,
     "player_kills": 93,
@@ -2305,6 +2305,12 @@
  ],
  "ereignisse": [
   {
+   "t": "2026-11-27T12:32:48Z",
+   "typ": "advancement",
+   "spieler": "Wemmbuuufaker",
+   "text": "adventure - overoverkill"
+  },
+  {
    "t": "2026-11-26T19:29:54Z",
    "typ": "advancement",
    "spieler": "Jaki_03",
@@ -4097,12 +4103,6 @@
    "typ": "advancement",
    "spieler": "Reep811",
    "text": "story - root"
-  },
-  {
-   "t": "2026-11-19T17:00:21Z",
-   "typ": "advancement",
-   "spieler": "FranoGames",
-   "text": "adventure - root"
   }
  ],
  "server": {
@@ -4110,6 +4110,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 7.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-27 12:30 UTC"
+  "wann": "2026-11-27 13:00 UTC"
  }
 }
