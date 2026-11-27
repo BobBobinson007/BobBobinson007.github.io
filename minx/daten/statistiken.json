@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-27 21:30 UTC",
+ "aktualisiert": "2026-11-27 22:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -112,29 +112,29 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 322.3,
+    "playtime_h": 322.6,
     "deaths": 55,
-    "mob_kills": 10736,
-    "distance_km": 1816.4,
-    "mined": 81246,
+    "mob_kills": 10850,
+    "distance_km": 1822.4,
+    "mined": 81247,
     "crafted": 39359,
     "distanz": {
-     "fuss": 416.8,
-     "elytra": 1340.1,
+     "fuss": 417.8,
+     "elytra": 1345.0,
      "schwimmen": 57.2,
      "boot": 0.4,
      "minecart": 1.9,
      "pferd": 0.0
     },
-    "jumps": 153954,
-    "damage_taken": 119169,
-    "damage_dealt": 651445,
+    "jumps": 154188,
+    "damage_taken": 120805,
+    "damage_dealt": 652989,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4869,
+    "drops": 4878,
     "trades": 0,
     "totems": 0,
-    "player_kills": 41,
+    "player_kills": 42,
     "killed_by_player": 11,
     "top_killed_by": [
      [
@@ -219,34 +219,34 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 113.5,
-    "deaths": 37,
-    "mob_kills": 17896,
-    "distance_km": 1246.8,
+    "playtime_h": 113.8,
+    "deaths": 38,
+    "mob_kills": 18273,
+    "distance_km": 1251.9,
     "mined": 43429,
     "crafted": 133929,
     "distanz": {
-     "fuss": 292.0,
-     "elytra": 945.8,
-     "schwimmen": 5.9,
+     "fuss": 292.9,
+     "elytra": 949.9,
+     "schwimmen": 6.0,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 70854,
-    "damage_taken": 126040,
-    "damage_dealt": 556454,
+    "jumps": 71124,
+    "damage_taken": 127643,
+    "damage_dealt": 558721,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3031,
+    "drops": 3059,
     "trades": 0,
     "totems": 0,
     "player_kills": 39,
-    "killed_by_player": 28,
+    "killed_by_player": 29,
     "top_killed_by": [
      [
       "Spieler",
-      28
+      29
      ],
      [
       "warden",
@@ -1299,20 +1299,20 @@
     "playtime_h": 12.0,
     "deaths": 3,
     "mob_kills": 3162,
-    "distance_km": 222.4,
-    "mined": 18055,
-    "crafted": 10103,
+    "distance_km": 223.0,
+    "mined": 18057,
+    "crafted": 10122,
     "distanz": {
-     "fuss": 37.6,
-     "elytra": 184.3,
+     "fuss": 37.7,
+     "elytra": 184.9,
      "schwimmen": 0.5
     },
-    "jumps": 10815,
-    "damage_taken": 34552,
+    "jumps": 10827,
+    "damage_taken": 34686,
     "damage_dealt": 58349,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 613,
+    "drops": 615,
     "trades": 0,
     "totems": 0,
     "player_kills": 6,
@@ -1364,7 +1364,7 @@
      ],
      [
       "gold ingot",
-      180
+      189
      ],
      [
       "golden carrot",
@@ -4111,6 +4111,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 7.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-27 21:30 UTC"
+  "wann": "2026-11-27 22:00 UTC"
  }
 }
