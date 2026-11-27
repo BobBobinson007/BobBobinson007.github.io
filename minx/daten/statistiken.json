@@ -1,38 +1,38 @@
 {
- "aktualisiert": "2026-11-27 15:30 UTC",
+ "aktualisiert": "2026-11-27 16:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
     "playtime_h": 358.5,
-    "deaths": 146,
+    "deaths": 147,
     "mob_kills": 54568,
-    "distance_km": 2834.6,
+    "distance_km": 2835.0,
     "mined": 188595,
     "crafted": 165478,
     "distanz": {
-     "fuss": 772.3,
-     "elytra": 2023.7,
+     "fuss": 772.6,
+     "elytra": 2023.9,
      "schwimmen": 25.2,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 215695,
-    "damage_taken": 339482,
-    "damage_dealt": 1134047,
+    "jumps": 215795,
+    "damage_taken": 340036,
+    "damage_dealt": 1134341,
     "fish_caught": 129,
     "enchanted": 0,
     "drops": 8725,
     "trades": 0,
     "totems": 0,
     "player_kills": 42,
-    "killed_by_player": 54,
+    "killed_by_player": 55,
     "top_killed_by": [
      [
       "Spieler",
-      54
+      55
      ],
      [
       "warden",
@@ -937,22 +937,22 @@
   {
    "name": "Hagen13juhhuh",
    "stats": {
-    "playtime_h": 22.2,
+    "playtime_h": 22.3,
     "deaths": 102,
     "mob_kills": 486,
-    "distance_km": 187.1,
+    "distance_km": 187.3,
     "mined": 10155,
     "crafted": 12476,
     "distanz": {
-     "fuss": 67.7,
+     "fuss": 67.8,
      "elytra": 118.8,
      "schwimmen": 0.0,
      "boot": 0.1,
      "minecart": 0.5
     },
-    "jumps": 9806,
-    "damage_taken": 42265,
-    "damage_dealt": 26367,
+    "jumps": 9820,
+    "damage_taken": 42462,
+    "damage_dealt": 26443,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 192,
@@ -1295,26 +1295,26 @@
   {
    "name": "Devolos2358",
    "stats": {
-    "playtime_h": 9.8,
+    "playtime_h": 10.0,
     "deaths": 3,
     "mob_kills": 2718,
-    "distance_km": 191.2,
+    "distance_km": 192.4,
     "mined": 13095,
-    "crafted": 9482,
+    "crafted": 9496,
     "distanz": {
-     "fuss": 29.8,
-     "elytra": 161.1,
+     "fuss": 30.6,
+     "elytra": 161.5,
      "schwimmen": 0.3
     },
-    "jumps": 8527,
-    "damage_taken": 29140,
-    "damage_dealt": 45170,
+    "jumps": 8695,
+    "damage_taken": 29667,
+    "damage_dealt": 45607,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 425,
+    "drops": 427,
     "trades": 0,
     "totems": 0,
-    "player_kills": 5,
+    "player_kills": 6,
     "killed_by_player": 3,
     "top_killed_by": [
      [
@@ -2304,6 +2304,18 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-27T15:38:16Z",
+   "typ": "tod",
+   "spieler": "BobBobinson007",
+   "text": "was smashed by Devolos2358 with [Gambling]"
+  },
+  {
+   "t": "2026-11-27T15:38:16Z",
+   "typ": "kill",
+   "spieler": "Devolos2358",
+   "text": "hat BobBobinson007 erledigt (was smashed by Devolos2358 with [Gambling])"
+  },
   {
    "t": "2026-11-27T15:11:36Z",
    "typ": "tod",
@@ -4091,18 +4103,6 @@
    "typ": "advancement",
    "spieler": "FranoGames",
    "text": "story - smelt iron"
-  },
-  {
-   "t": "2026-11-19T17:15:11Z",
-   "typ": "advancement",
-   "spieler": "FranoGames",
-   "text": "adventure - kill a mob"
-  },
-  {
-   "t": "2026-11-19T17:11:37Z",
-   "typ": "advancement",
-   "spieler": "Reep811",
-   "text": "story - upgrade tools"
   }
  ],
  "server": {
@@ -4110,6 +4110,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 7.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-27 15:30 UTC"
+  "wann": "2026-11-27 16:00 UTC"
  }
 }
