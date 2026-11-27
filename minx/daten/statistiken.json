@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-27 13:00 UTC",
+ "aktualisiert": "2026-11-27 13:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -424,20 +424,20 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 77.5,
+    "playtime_h": 77.6,
     "deaths": 41,
     "mob_kills": 9622,
-    "distance_km": 844.4,
-    "mined": 28383,
-    "crafted": 28252,
+    "distance_km": 847.4,
+    "mined": 28385,
+    "crafted": 28564,
     "distanz": {
-     "fuss": 226.2,
-     "elytra": 612.6,
+     "fuss": 226.5,
+     "elytra": 615.3,
      "schwimmen": 3.4,
      "boot": 2.2
     },
-    "jumps": 51224,
-    "damage_taken": 151916,
+    "jumps": 51297,
+    "damage_taken": 152183,
     "damage_dealt": 576782,
     "fish_caught": 0,
     "enchanted": 0,
@@ -512,16 +512,16 @@
       2496
      ],
      [
+      "gold ingot",
+      2351
+     ],
+     [
       "spruce planks",
       2320
      ],
      [
       "iron nugget",
       2199
-     ],
-     [
-      "gold ingot",
-      2063
      ]
     ]
    }
@@ -937,20 +937,20 @@
   {
    "name": "Hagen13juhhuh",
    "stats": {
-    "playtime_h": 20.2,
+    "playtime_h": 20.3,
     "deaths": 101,
     "mob_kills": 409,
-    "distance_km": 170.3,
-    "mined": 7987,
-    "crafted": 9884,
+    "distance_km": 171.8,
+    "mined": 8050,
+    "crafted": 10040,
     "distanz": {
-     "fuss": 62.0,
-     "elytra": 107.7,
+     "fuss": 62.1,
+     "elytra": 109.0,
      "schwimmen": 0.0,
      "boot": 0.1,
      "minecart": 0.5
     },
-    "jumps": 8980,
+    "jumps": 8998,
     "damage_taken": 41374,
     "damage_dealt": 23163,
     "fish_caught": 0,
@@ -989,11 +989,11 @@
      ],
      [
       "stone",
-      881
+      886
      ],
      [
       "grass block",
-      840
+      846
      ],
      [
       "deepslate",
@@ -1005,7 +1005,7 @@
      ],
      [
       "oak log",
-      500
+      527
      ]
     ],
     "top_crafted": [
@@ -1015,7 +1015,7 @@
      ],
      [
       "oak planks",
-      1152
+      1260
      ],
      [
       "stone brick slab",
@@ -4110,6 +4110,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 7.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-27 13:00 UTC"
+  "wann": "2026-11-27 13:30 UTC"
  }
 }
