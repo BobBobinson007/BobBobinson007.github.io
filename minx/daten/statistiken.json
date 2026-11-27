@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-27 21:00 UTC",
+ "aktualisiert": "2026-11-27 21:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -112,29 +112,29 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 321.8,
+    "playtime_h": 322.3,
     "deaths": 55,
-    "mob_kills": 10730,
-    "distance_km": 1808.7,
-    "mined": 81230,
+    "mob_kills": 10736,
+    "distance_km": 1816.4,
+    "mined": 81246,
     "crafted": 39359,
     "distanz": {
-     "fuss": 414.9,
-     "elytra": 1334.2,
-     "schwimmen": 57.1,
+     "fuss": 416.8,
+     "elytra": 1340.1,
+     "schwimmen": 57.2,
      "boot": 0.4,
      "minecart": 1.9,
      "pferd": 0.0
     },
-    "jumps": 153158,
-    "damage_taken": 117388,
-    "damage_dealt": 647707,
+    "jumps": 153954,
+    "damage_taken": 119169,
+    "damage_dealt": 651445,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4837,
+    "drops": 4869,
     "trades": 0,
     "totems": 0,
-    "player_kills": 36,
+    "player_kills": 41,
     "killed_by_player": 11,
     "top_killed_by": [
      [
@@ -173,7 +173,7 @@
      ],
      [
       "grass block",
-      8289
+      8290
      ],
      [
       "sand",
@@ -185,7 +185,7 @@
      ],
      [
       "short grass",
-      2950
+      2951
      ]
     ],
     "top_crafted": [
@@ -219,34 +219,34 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 113.0,
-    "deaths": 32,
-    "mob_kills": 17894,
-    "distance_km": 1237.8,
-    "mined": 43025,
+    "playtime_h": 113.5,
+    "deaths": 37,
+    "mob_kills": 17896,
+    "distance_km": 1246.8,
+    "mined": 43429,
     "crafted": 133929,
     "distanz": {
-     "fuss": 290.5,
-     "elytra": 938.2,
+     "fuss": 292.0,
+     "elytra": 945.8,
      "schwimmen": 5.9,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 70066,
-    "damage_taken": 121441,
-    "damage_dealt": 554849,
+    "jumps": 70854,
+    "damage_taken": 126040,
+    "damage_dealt": 556454,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3024,
+    "drops": 3031,
     "trades": 0,
     "totems": 0,
     "player_kills": 39,
-    "killed_by_player": 23,
+    "killed_by_player": 28,
     "top_killed_by": [
      [
       "Spieler",
-      23
+      28
      ],
      [
       "warden",
@@ -264,7 +264,7 @@
     "top_mined": [
      [
       "netherrack",
-      16696
+      17008
      ],
      [
       "stone",
@@ -1296,23 +1296,23 @@
   {
    "name": "Devolos2358",
    "stats": {
-    "playtime_h": 11.5,
+    "playtime_h": 12.0,
     "deaths": 3,
-    "mob_kills": 3159,
-    "distance_km": 214.4,
-    "mined": 16236,
-    "crafted": 10047,
+    "mob_kills": 3162,
+    "distance_km": 222.4,
+    "mined": 18055,
+    "crafted": 10103,
     "distanz": {
-     "fuss": 36.2,
-     "elytra": 177.8,
-     "schwimmen": 0.4
+     "fuss": 37.6,
+     "elytra": 184.3,
+     "schwimmen": 0.5
     },
-    "jumps": 10294,
-    "damage_taken": 32653,
-    "damage_dealt": 57596,
+    "jumps": 10815,
+    "damage_taken": 34552,
+    "damage_dealt": 58349,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 569,
+    "drops": 613,
     "trades": 0,
     "totems": 0,
     "player_kills": 6,
@@ -1326,7 +1326,7 @@
     "top_mined": [
      [
       "netherrack",
-      12683
+      14340
      ],
      [
       "basalt",
@@ -1334,19 +1334,19 @@
      ],
      [
       "blackstone",
-      481
+      493
      ],
      [
       "nether quartz ore",
-      147
+      160
      ],
      [
       "stone",
-      107
+      144
      ],
      [
-      "coal ore",
-      89
+      "gravel",
+      129
      ]
     ],
     "top_crafted": [
@@ -1364,7 +1364,7 @@
      ],
      [
       "gold ingot",
-      171
+      180
      ],
      [
       "golden carrot",
@@ -2305,6 +2305,36 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-27T21:25:58Z",
+   "typ": "tod",
+   "spieler": "TheRealDmseife",
+   "text": "was smashed by [SC] ZickZackBoss"
+  },
+  {
+   "t": "2026-11-27T21:16:28Z",
+   "typ": "tod",
+   "spieler": "TheRealDmseife",
+   "text": "was slain by [SC] ZickZackBoss"
+  },
+  {
+   "t": "2026-11-27T21:11:00Z",
+   "typ": "tod",
+   "spieler": "TheRealDmseife",
+   "text": "was slain by [SC] ZickZackBoss"
+  },
+  {
+   "t": "2026-11-27T21:04:16Z",
+   "typ": "tod",
+   "spieler": "TheRealDmseife",
+   "text": "was smashed by [SC] ZickZackBoss"
+  },
+  {
+   "t": "2026-11-27T21:04:16Z",
+   "typ": "advancement",
+   "spieler": "ZickZackBoss",
+   "text": "adventure - overoverkill"
+  },
   {
    "t": "2026-11-27T20:55:54Z",
    "typ": "advancement",
@@ -4074,36 +4104,6 @@
    "typ": "advancement",
    "spieler": "FranoGames",
    "text": "story - mine diamond"
-  },
-  {
-   "t": "2026-11-19T17:29:44Z",
-   "typ": "advancement",
-   "spieler": "TimotheToaster",
-   "text": "adventure - who needs rockets"
-  },
-  {
-   "t": "2026-11-19T17:29:22Z",
-   "typ": "advancement",
-   "spieler": "FranoGames",
-   "text": "story - deflect arrow"
-  },
-  {
-   "t": "2026-11-19T17:29:07Z",
-   "typ": "advancement",
-   "spieler": "FranoGames",
-   "text": "story - iron tools"
-  },
-  {
-   "t": "2026-11-19T17:24:40Z",
-   "typ": "tod",
-   "spieler": "Reep811",
-   "text": "fell from a high place"
-  },
-  {
-   "t": "2026-11-19T17:24:04Z",
-   "typ": "advancement",
-   "spieler": "Reep811",
-   "text": "story - obtain armor"
   }
  ],
  "server": {
@@ -4111,6 +4111,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 7.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-27 21:00 UTC"
+  "wann": "2026-11-27 21:30 UTC"
  }
 }
