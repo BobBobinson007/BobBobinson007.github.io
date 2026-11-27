@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-27 20:30 UTC",
+ "aktualisiert": "2026-11-27 21:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -112,26 +112,26 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 321.3,
+    "playtime_h": 321.8,
     "deaths": 55,
-    "mob_kills": 10724,
-    "distance_km": 1796.8,
-    "mined": 81167,
+    "mob_kills": 10730,
+    "distance_km": 1808.7,
+    "mined": 81230,
     "crafted": 39359,
     "distanz": {
-     "fuss": 413.2,
-     "elytra": 1324.0,
+     "fuss": 414.9,
+     "elytra": 1334.2,
      "schwimmen": 57.1,
      "boot": 0.4,
      "minecart": 1.9,
      "pferd": 0.0
     },
-    "jumps": 152504,
-    "damage_taken": 116805,
-    "damage_dealt": 646618,
+    "jumps": 153158,
+    "damage_taken": 117388,
+    "damage_dealt": 647707,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4833,
+    "drops": 4837,
     "trades": 0,
     "totems": 0,
     "player_kills": 36,
@@ -169,11 +169,11 @@
      ],
      [
       "dirt",
-      9273
+      9318
      ],
      [
       "grass block",
-      8285
+      8289
      ],
      [
       "sand",
@@ -185,7 +185,7 @@
      ],
      [
       "short grass",
-      2946
+      2950
      ]
     ],
     "top_crafted": [
@@ -219,26 +219,26 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 112.6,
+    "playtime_h": 113.0,
     "deaths": 32,
     "mob_kills": 17894,
-    "distance_km": 1235.5,
-    "mined": 38450,
+    "distance_km": 1237.8,
+    "mined": 43025,
     "crafted": 133929,
     "distanz": {
-     "fuss": 288.7,
-     "elytra": 937.7,
+     "fuss": 290.5,
+     "elytra": 938.2,
      "schwimmen": 5.9,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 69799,
-    "damage_taken": 120904,
-    "damage_dealt": 554636,
+    "jumps": 70066,
+    "damage_taken": 121441,
+    "damage_dealt": 554849,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3021,
+    "drops": 3024,
     "trades": 0,
     "totems": 0,
     "player_kills": 39,
@@ -264,7 +264,7 @@
     "top_mined": [
      [
       "netherrack",
-      12404
+      16696
      ],
      [
       "stone",
@@ -279,12 +279,12 @@
       1594
      ],
      [
-      "dark oak log",
-      1280
+      "gravel",
+      1285
      ],
      [
-      "gravel",
-      1259
+      "dark oak log",
+      1280
      ]
     ],
     "top_crafted": [
@@ -1296,23 +1296,23 @@
   {
    "name": "Devolos2358",
    "stats": {
-    "playtime_h": 11.0,
+    "playtime_h": 11.5,
     "deaths": 3,
-    "mob_kills": 3051,
-    "distance_km": 211.2,
-    "mined": 13166,
-    "crafted": 10024,
+    "mob_kills": 3159,
+    "distance_km": 214.4,
+    "mined": 16236,
+    "crafted": 10047,
     "distanz": {
-     "fuss": 33.9,
-     "elytra": 176.9,
-     "schwimmen": 0.3
+     "fuss": 36.2,
+     "elytra": 177.8,
+     "schwimmen": 0.4
     },
-    "jumps": 9750,
-    "damage_taken": 31822,
-    "damage_dealt": 53059,
+    "jumps": 10294,
+    "damage_taken": 32653,
+    "damage_dealt": 57596,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 488,
+    "drops": 569,
     "trades": 0,
     "totems": 0,
     "player_kills": 6,
@@ -1326,15 +1326,19 @@
     "top_mined": [
      [
       "netherrack",
-      9811
+      12683
      ],
      [
       "basalt",
-      2114
+      2122
      ],
      [
       "blackstone",
-      443
+      481
+     ],
+     [
+      "nether quartz ore",
+      147
      ],
      [
       "stone",
@@ -1343,10 +1347,6 @@
      [
       "coal ore",
       89
-     ],
-     [
-      "nether quartz ore",
-      69
      ]
     ],
     "top_crafted": [
@@ -1372,7 +1372,7 @@
      ],
      [
       "wind charge",
-      116
+      136
      ]
     ]
    }
@@ -2305,6 +2305,24 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-27T20:55:54Z",
+   "typ": "advancement",
+   "spieler": "Devolos2358",
+   "text": "husbandry - wax off"
+  },
+  {
+   "t": "2026-11-27T20:49:09Z",
+   "typ": "advancement",
+   "spieler": "Devolos2358",
+   "text": "adventure - revaulting"
+  },
+  {
+   "t": "2026-11-27T20:46:42Z",
+   "typ": "advancement",
+   "spieler": "Devolos2358",
+   "text": "adventure - minecraft trials edition"
+  },
   {
    "t": "2026-11-27T16:35:18Z",
    "typ": "tod",
@@ -4086,24 +4104,6 @@
    "typ": "advancement",
    "spieler": "Reep811",
    "text": "story - obtain armor"
-  },
-  {
-   "t": "2026-11-19T17:23:58Z",
-   "typ": "advancement",
-   "spieler": "TimotheToaster",
-   "text": "adventure - minecraft trials edition"
-  },
-  {
-   "t": "2026-11-19T17:23:08Z",
-   "typ": "advancement",
-   "spieler": "Reep811",
-   "text": "story - iron tools"
-  },
-  {
-   "t": "2026-11-19T17:23:03Z",
-   "typ": "advancement",
-   "spieler": "Reep811",
-   "text": "story - smelt iron"
   }
  ],
  "server": {
@@ -4111,6 +4111,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 7.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-27 20:30 UTC"
+  "wann": "2026-11-27 21:00 UTC"
  }
 }
