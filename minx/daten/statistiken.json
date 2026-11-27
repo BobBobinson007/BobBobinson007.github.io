@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-27 19:00 UTC",
+ "aktualisiert": "2026-11-27 19:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -424,25 +424,25 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 79.6,
+    "playtime_h": 79.9,
     "deaths": 42,
-    "mob_kills": 9885,
-    "distance_km": 899.0,
+    "mob_kills": 9900,
+    "distance_km": 900.8,
     "mined": 28493,
-    "crafted": 28634,
+    "crafted": 28897,
     "distanz": {
-     "fuss": 235.8,
-     "elytra": 657.5,
+     "fuss": 236.3,
+     "elytra": 658.9,
      "schwimmen": 3.5,
      "boot": 2.2,
      "minecart": 0.0
     },
-    "jumps": 53848,
-    "damage_taken": 163375,
-    "damage_dealt": 589713,
+    "jumps": 53949,
+    "damage_taken": 163971,
+    "damage_dealt": 592885,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3056,
+    "drops": 3062,
     "trades": 0,
     "totems": 0,
     "player_kills": 93,
@@ -505,16 +505,16 @@
       3370
      ],
      [
+      "gold ingot",
+      2585
+     ],
+     [
       "gold nugget",
       2538
      ],
      [
       "stick",
       2496
-     ],
-     [
-      "gold ingot",
-      2351
      ],
      [
       "spruce planks",
@@ -4111,6 +4111,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 7.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-27 19:00 UTC"
+  "wann": "2026-11-27 19:30 UTC"
  }
 }
