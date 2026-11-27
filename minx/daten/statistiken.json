@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-27 16:00 UTC",
+ "aktualisiert": "2026-11-27 16:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -112,26 +112,26 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 320.0,
+    "playtime_h": 320.4,
     "deaths": 55,
-    "mob_kills": 10476,
-    "distance_km": 1773.0,
-    "mined": 75594,
+    "mob_kills": 10482,
+    "distance_km": 1780.2,
+    "mined": 80914,
     "crafted": 39359,
     "distanz": {
-     "fuss": 407.3,
-     "elytra": 1306.6,
+     "fuss": 410.9,
+     "elytra": 1309.9,
      "schwimmen": 57.1,
      "boot": 0.4,
-     "minecart": 1.6,
+     "minecart": 1.9,
      "pferd": 0.0
     },
-    "jumps": 150719,
-    "damage_taken": 112124,
-    "damage_dealt": 641636,
+    "jumps": 151397,
+    "damage_taken": 114904,
+    "damage_dealt": 644969,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4791,
+    "drops": 4801,
     "trades": 0,
     "totems": 0,
     "player_kills": 35,
@@ -165,7 +165,7 @@
     "top_mined": [
      [
       "stone",
-      25983
+      31013
      ],
      [
       "dirt",
@@ -173,7 +173,7 @@
      ],
      [
       "grass block",
-      8278
+      8279
      ],
      [
       "sand",
@@ -185,7 +185,7 @@
      ],
      [
       "short grass",
-      2931
+      2940
      ]
     ],
     "top_crafted": [
@@ -424,24 +424,25 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 78.7,
+    "playtime_h": 79.2,
     "deaths": 41,
-    "mob_kills": 9711,
-    "distance_km": 879.7,
-    "mined": 28408,
-    "crafted": 28567,
+    "mob_kills": 9791,
+    "distance_km": 889.9,
+    "mined": 28479,
+    "crafted": 28570,
     "distanz": {
-     "fuss": 231.7,
-     "elytra": 642.3,
+     "fuss": 234.1,
+     "elytra": 650.3,
      "schwimmen": 3.4,
-     "boot": 2.2
+     "boot": 2.2,
+     "minecart": 0.0
     },
-    "jumps": 52518,
-    "damage_taken": 158017,
-    "damage_dealt": 583148,
+    "jumps": 53322,
+    "damage_taken": 161370,
+    "damage_dealt": 586278,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3005,
+    "drops": 3020,
     "trades": 0,
     "totems": 0,
     "player_kills": 93,
@@ -1297,21 +1298,21 @@
    "stats": {
     "playtime_h": 10.0,
     "deaths": 3,
-    "mob_kills": 2718,
-    "distance_km": 192.4,
+    "mob_kills": 2719,
+    "distance_km": 192.9,
     "mined": 13095,
     "crafted": 9496,
     "distanz": {
-     "fuss": 30.6,
-     "elytra": 161.5,
+     "fuss": 30.7,
+     "elytra": 161.9,
      "schwimmen": 0.3
     },
-    "jumps": 8695,
-    "damage_taken": 29667,
-    "damage_dealt": 45607,
+    "jumps": 8716,
+    "damage_taken": 29731,
+    "damage_dealt": 45927,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 427,
+    "drops": 428,
     "trades": 0,
     "totems": 0,
     "player_kills": 6,
@@ -4110,6 +4111,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 7.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-27 16:00 UTC"
+  "wann": "2026-11-27 16:30 UTC"
  }
 }
