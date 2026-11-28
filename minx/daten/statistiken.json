@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-28 10:00 UTC",
+ "aktualisiert": "2026-11-28 10:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -318,22 +318,22 @@
   {
    "name": "the_carlito_",
    "stats": {
-    "playtime_h": 91.3,
-    "deaths": 140,
-    "mob_kills": 158,
-    "distance_km": 233.4,
-    "mined": 18605,
-    "crafted": 56979,
+    "playtime_h": 91.8,
+    "deaths": 141,
+    "mob_kills": 178,
+    "distance_km": 235.3,
+    "mined": 18669,
+    "crafted": 57963,
     "distanz": {
-     "fuss": 98.6,
+     "fuss": 100.2,
      "elytra": 122.5,
-     "schwimmen": 6.9,
+     "schwimmen": 7.1,
      "boot": 0.3,
      "minecart": 5.1
     },
-    "jumps": 17451,
-    "damage_taken": 66868,
-    "damage_dealt": 18538,
+    "jumps": 17673,
+    "damage_taken": 67404,
+    "damage_dealt": 26280,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 1447,
@@ -370,7 +370,7 @@
     "top_mined": [
      [
       "deepslate",
-      6412
+      6417
      ],
      [
       "stone",
@@ -408,11 +408,11 @@
      ],
      [
       "iron ingot",
-      1962
+      2493
      ],
      [
       "stick",
-      1253
+      1273
      ],
      [
       "tinted glass",
@@ -424,25 +424,25 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 81.1,
+    "playtime_h": 81.4,
     "deaths": 42,
-    "mob_kills": 10327,
-    "distance_km": 918.1,
-    "mined": 28870,
-    "crafted": 28899,
+    "mob_kills": 10474,
+    "distance_km": 922.9,
+    "mined": 28905,
+    "crafted": 28947,
     "distanz": {
-     "fuss": 243.1,
-     "elytra": 668.8,
+     "fuss": 243.7,
+     "elytra": 673.0,
      "schwimmen": 3.9,
      "boot": 2.2,
      "minecart": 0.0
     },
-    "jumps": 55062,
-    "damage_taken": 168269,
-    "damage_dealt": 632519,
+    "jumps": 55140,
+    "damage_taken": 169022,
+    "damage_dealt": 637897,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3141,
+    "drops": 3176,
     "trades": 0,
     "totems": 0,
     "player_kills": 93,
@@ -846,6 +846,108 @@
    }
   },
   {
+   "name": "Hagen13juhhuh",
+   "stats": {
+    "playtime_h": 22.5,
+    "deaths": 102,
+    "mob_kills": 486,
+    "distance_km": 191.3,
+    "mined": 10303,
+    "crafted": 12745,
+    "distanz": {
+     "fuss": 68.7,
+     "elytra": 122.0,
+     "schwimmen": 0.0,
+     "boot": 0.1,
+     "minecart": 0.5
+    },
+    "jumps": 9889,
+    "damage_taken": 42467,
+    "damage_dealt": 26499,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 192,
+    "trades": 0,
+    "totems": 0,
+    "player_kills": 0,
+    "killed_by_player": 76,
+    "top_killed_by": [
+     [
+      "Spieler",
+      76
+     ],
+     [
+      "skeleton",
+      8
+     ],
+     [
+      "creeper",
+      2
+     ],
+     [
+      "zombie",
+      2
+     ],
+     [
+      "spider",
+      1
+     ]
+    ],
+    "top_mined": [
+     [
+      "netherrack",
+      2414
+     ],
+     [
+      "stone",
+      1946
+     ],
+     [
+      "deepslate",
+      1686
+     ],
+     [
+      "grass block",
+      849
+     ],
+     [
+      "snow",
+      570
+     ],
+     [
+      "oak log",
+      527
+     ]
+    ],
+    "top_crafted": [
+     [
+      "paper",
+      8676
+     ],
+     [
+      "oak planks",
+      1260
+     ],
+     [
+      "stone brick slab",
+      474
+     ],
+     [
+      "emerald",
+      368
+     ],
+     [
+      "cobblestone stairs",
+      280
+     ],
+     [
+      "stick",
+      264
+     ]
+    ]
+   }
+  },
+  {
    "name": "Captifipo",
    "stats": {
     "playtime_h": 22.5,
@@ -931,108 +1033,6 @@
      [
       "stone",
       202
-     ]
-    ]
-   }
-  },
-  {
-   "name": "Hagen13juhhuh",
-   "stats": {
-    "playtime_h": 22.3,
-    "deaths": 102,
-    "mob_kills": 486,
-    "distance_km": 187.3,
-    "mined": 10155,
-    "crafted": 12476,
-    "distanz": {
-     "fuss": 67.8,
-     "elytra": 118.8,
-     "schwimmen": 0.0,
-     "boot": 0.1,
-     "minecart": 0.5
-    },
-    "jumps": 9820,
-    "damage_taken": 42462,
-    "damage_dealt": 26443,
-    "fish_caught": 0,
-    "enchanted": 0,
-    "drops": 192,
-    "trades": 0,
-    "totems": 0,
-    "player_kills": 0,
-    "killed_by_player": 76,
-    "top_killed_by": [
-     [
-      "Spieler",
-      76
-     ],
-     [
-      "skeleton",
-      8
-     ],
-     [
-      "creeper",
-      2
-     ],
-     [
-      "zombie",
-      2
-     ],
-     [
-      "spider",
-      1
-     ]
-    ],
-    "top_mined": [
-     [
-      "netherrack",
-      2414
-     ],
-     [
-      "stone",
-      1907
-     ],
-     [
-      "deepslate",
-      1613
-     ],
-     [
-      "grass block",
-      849
-     ],
-     [
-      "snow",
-      570
-     ],
-     [
-      "oak log",
-      527
-     ]
-    ],
-    "top_crafted": [
-     [
-      "paper",
-      8418
-     ],
-     [
-      "oak planks",
-      1260
-     ],
-     [
-      "stone brick slab",
-      474
-     ],
-     [
-      "emerald",
-      357
-     ],
-     [
-      "cobblestone stairs",
-      280
-     ],
-     [
-      "stick",
-      264
      ]
     ]
    }
@@ -2305,6 +2305,12 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-28T10:14:57Z",
+   "typ": "tod",
+   "spieler": "the_carlito_",
+   "text": "fell out of the world"
+  },
   {
    "t": "2026-11-28T09:48:04Z",
    "typ": "tod",
@@ -4098,12 +4104,6 @@
    "typ": "advancement",
    "spieler": "Reep811",
    "text": "adventure - avoid vibration"
-  },
-  {
-   "t": "2026-11-19T17:30:17Z",
-   "typ": "advancement",
-   "spieler": "FranoGames",
-   "text": "adventure - avoid vibration"
   }
  ],
  "server": {
@@ -4111,6 +4111,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 7.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-28 10:00 UTC"
+  "wann": "2026-11-28 10:30 UTC"
  }
 }
