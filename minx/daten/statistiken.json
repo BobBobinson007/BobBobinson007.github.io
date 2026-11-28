@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-28 11:30 UTC",
+ "aktualisiert": "2026-11-28 12:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -219,26 +219,26 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 113.8,
+    "playtime_h": 113.9,
     "deaths": 38,
     "mob_kills": 18273,
-    "distance_km": 1251.9,
-    "mined": 43429,
-    "crafted": 133929,
+    "distance_km": 1252.4,
+    "mined": 43440,
+    "crafted": 133940,
     "distanz": {
-     "fuss": 292.9,
+     "fuss": 293.4,
      "elytra": 949.9,
      "schwimmen": 6.0,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 71124,
+    "jumps": 71176,
     "damage_taken": 127643,
     "damage_dealt": 558721,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3059,
+    "drops": 3077,
     "trades": 0,
     "totems": 0,
     "player_kills": 39,
@@ -268,7 +268,7 @@
      ],
      [
       "stone",
-      4128
+      4129
      ],
      [
       "oak leaves",
@@ -424,25 +424,25 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 82.1,
+    "playtime_h": 82.6,
     "deaths": 42,
-    "mob_kills": 10587,
-    "distance_km": 935.4,
-    "mined": 29435,
-    "crafted": 29058,
+    "mob_kills": 10781,
+    "distance_km": 941.3,
+    "mined": 33682,
+    "crafted": 29066,
     "distanz": {
-     "fuss": 245.6,
-     "elytra": 683.7,
+     "fuss": 247.4,
+     "elytra": 687.7,
      "schwimmen": 4.0,
      "boot": 2.2,
      "minecart": 0.0
     },
-    "jumps": 55654,
-    "damage_taken": 170621,
-    "damage_dealt": 641707,
+    "jumps": 56052,
+    "damage_taken": 172045,
+    "damage_dealt": 642287,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3221,
+    "drops": 3277,
     "trades": 0,
     "totems": 0,
     "player_kills": 93,
@@ -476,7 +476,7 @@
     "top_mined": [
      [
       "netherrack",
-      4714
+      8701
      ],
      [
       "dirt",
@@ -506,7 +506,7 @@
      ],
      [
       "gold ingot",
-      2585
+      2592
      ],
      [
       "gold nugget",
@@ -4111,6 +4111,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 7.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-28 11:30 UTC"
+  "wann": "2026-11-28 12:00 UTC"
  }
 }
