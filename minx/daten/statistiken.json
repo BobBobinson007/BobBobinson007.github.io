@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-28 14:00 UTC",
+ "aktualisiert": "2026-11-28 14:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 359.0,
+    "playtime_h": 359.5,
     "deaths": 147,
-    "mob_kills": 54570,
-    "distance_km": 2839.2,
-    "mined": 188596,
-    "crafted": 165478,
+    "mob_kills": 54664,
+    "distance_km": 2853.6,
+    "mined": 188606,
+    "crafted": 166533,
     "distanz": {
-     "fuss": 773.6,
-     "elytra": 2027.0,
-     "schwimmen": 25.2,
+     "fuss": 774.6,
+     "elytra": 2040.4,
+     "schwimmen": 25.3,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 216494,
-    "damage_taken": 340494,
-    "damage_dealt": 1134731,
+    "jumps": 217077,
+    "damage_taken": 341683,
+    "damage_dealt": 1137965,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8732,
+    "drops": 8757,
     "trades": 0,
     "totems": 0,
     "player_kills": 42,
@@ -92,7 +92,7 @@
      ],
      [
       "gold nugget",
-      13253
+      14183
      ],
      [
       "bone meal",
@@ -112,26 +112,26 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 324.1,
+    "playtime_h": 324.6,
     "deaths": 55,
-    "mob_kills": 11084,
-    "distance_km": 1842.6,
-    "mined": 81278,
+    "mob_kills": 11165,
+    "distance_km": 1862.7,
+    "mined": 81285,
     "crafted": 39365,
     "distanz": {
-     "fuss": 423.3,
-     "elytra": 1359.6,
-     "schwimmen": 57.3,
+     "fuss": 424.8,
+     "elytra": 1378.1,
+     "schwimmen": 57.4,
      "boot": 0.4,
      "minecart": 1.9,
      "pferd": 0.0
     },
-    "jumps": 156438,
-    "damage_taken": 124500,
-    "damage_dealt": 661550,
+    "jumps": 157004,
+    "damage_taken": 126742,
+    "damage_dealt": 663488,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 5040,
+    "drops": 5083,
     "trades": 0,
     "totems": 0,
     "player_kills": 44,
@@ -173,7 +173,7 @@
      ],
      [
       "grass block",
-      8290
+      8292
      ],
      [
       "sand",
@@ -185,7 +185,7 @@
      ],
      [
       "short grass",
-      2954
+      2957
      ]
     ],
     "top_crafted": [
@@ -219,26 +219,26 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 115.9,
+    "playtime_h": 116.4,
     "deaths": 38,
-    "mob_kills": 18617,
-    "distance_km": 1278.3,
-    "mined": 49047,
-    "crafted": 135452,
+    "mob_kills": 18619,
+    "distance_km": 1281.5,
+    "mined": 49200,
+    "crafted": 135748,
     "distanz": {
-     "fuss": 301.1,
-     "elytra": 968.0,
+     "fuss": 302.2,
+     "elytra": 970.1,
      "schwimmen": 6.1,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 73107,
-    "damage_taken": 130435,
-    "damage_dealt": 562446,
+    "jumps": 73444,
+    "damage_taken": 131114,
+    "damage_dealt": 563242,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3157,
+    "drops": 3165,
     "trades": 0,
     "totems": 0,
     "player_kills": 39,
@@ -424,25 +424,25 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 84.3,
+    "playtime_h": 84.7,
     "deaths": 42,
-    "mob_kills": 10819,
-    "distance_km": 970.4,
-    "mined": 36786,
+    "mob_kills": 10898,
+    "distance_km": 986.8,
+    "mined": 36995,
     "crafted": 30022,
     "distanz": {
-     "fuss": 255.0,
-     "elytra": 709.2,
+     "fuss": 256.2,
+     "elytra": 724.5,
      "schwimmen": 4.0,
      "boot": 2.2,
      "minecart": 0.0
     },
-    "jumps": 57404,
-    "damage_taken": 176460,
-    "damage_dealt": 647540,
+    "jumps": 57569,
+    "damage_taken": 178035,
+    "damage_dealt": 649925,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3333,
+    "drops": 3343,
     "trades": 0,
     "totems": 0,
     "player_kills": 93,
@@ -496,7 +496,7 @@
      ],
      [
       "dark oak log",
-      1096
+      1212
      ]
     ],
     "top_crafted": [
@@ -1040,23 +1040,23 @@
   {
    "name": "Manumel12",
    "stats": {
-    "playtime_h": 18.0,
+    "playtime_h": 18.5,
     "deaths": 5,
-    "mob_kills": 8908,
-    "distance_km": 226.8,
-    "mined": 15141,
+    "mob_kills": 9110,
+    "distance_km": 233.0,
+    "mined": 15519,
     "crafted": 26002,
     "distanz": {
-     "fuss": 55.6,
-     "elytra": 168.1,
-     "schwimmen": 3.0
+     "fuss": 57.1,
+     "elytra": 172.7,
+     "schwimmen": 3.2
     },
-    "jumps": 9382,
-    "damage_taken": 20842,
-    "damage_dealt": 95950,
+    "jumps": 9685,
+    "damage_taken": 23127,
+    "damage_dealt": 97214,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3864,
+    "drops": 4367,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -1085,16 +1085,16 @@
       1203
      ],
      [
+      "sand",
+      1014
+     ],
+     [
       "stone",
       858
      ],
      [
       "carrots",
       786
-     ],
-     [
-      "sand",
-      646
      ]
     ],
     "top_crafted": [
@@ -1296,23 +1296,23 @@
   {
    "name": "Devolos2358",
    "stats": {
-    "playtime_h": 12.1,
+    "playtime_h": 12.4,
     "deaths": 3,
-    "mob_kills": 3162,
-    "distance_km": 224.0,
+    "mob_kills": 3218,
+    "distance_km": 232.3,
     "mined": 18057,
     "crafted": 10263,
     "distanz": {
-     "fuss": 38.1,
-     "elytra": 185.4,
+     "fuss": 38.8,
+     "elytra": 193.0,
      "schwimmen": 0.5
     },
-    "jumps": 10965,
-    "damage_taken": 35330,
-    "damage_dealt": 58485,
+    "jumps": 11201,
+    "damage_taken": 36846,
+    "damage_dealt": 59903,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 616,
+    "drops": 649,
     "trades": 0,
     "totems": 0,
     "player_kills": 6,
@@ -1458,24 +1458,24 @@
   {
    "name": "Qmatteo",
    "stats": {
-    "playtime_h": 5.8,
-    "deaths": 18,
-    "mob_kills": 46,
-    "distance_km": 45.1,
-    "mined": 1160,
+    "playtime_h": 6.3,
+    "deaths": 20,
+    "mob_kills": 58,
+    "distance_km": 50.4,
+    "mined": 1208,
     "crafted": 94,
     "distanz": {
-     "fuss": 32.5,
-     "elytra": 9.4,
+     "fuss": 35.9,
+     "elytra": 11.3,
      "schwimmen": 0.4,
-     "minecart": 2.8
+     "minecart": 2.9
     },
-    "jumps": 6853,
-    "damage_taken": 10615,
-    "damage_dealt": 9191,
+    "jumps": 7773,
+    "damage_taken": 11841,
+    "damage_dealt": 10720,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 185,
+    "drops": 219,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -1496,6 +1496,10 @@
      [
       "guardian",
       1
+     ],
+     [
+      "enderman",
+      1
      ]
     ],
     "top_mined": [
@@ -1505,11 +1509,11 @@
      ],
      [
       "short grass",
-      319
+      358
      ],
      [
       "dirt",
-      56
+      57
      ],
      [
       "cobblestone",
@@ -1993,6 +1997,65 @@
    }
   },
   {
+   "name": "Bommel723",
+   "stats": {
+    "playtime_h": 1.1,
+    "deaths": 3,
+    "mob_kills": 0,
+    "distance_km": 23.4,
+    "mined": 8,
+    "crafted": 0,
+    "distanz": {
+     "fuss": 4.2,
+     "elytra": 19.0,
+     "schwimmen": 0.2
+    },
+    "jumps": 757,
+    "damage_taken": 1732,
+    "damage_dealt": 150,
+    "fish_caught": 0,
+    "enchanted": 0,
+    "drops": 22,
+    "trades": 0,
+    "totems": 0,
+    "player_kills": 0,
+    "killed_by_player": 2,
+    "top_killed_by": [
+     [
+      "Spieler",
+      2
+     ],
+     [
+      "zombie",
+      1
+     ]
+    ],
+    "top_mined": [
+     [
+      "kelp plant",
+      3
+     ],
+     [
+      "sand",
+      2
+     ],
+     [
+      "short grass",
+      1
+     ],
+     [
+      "glass",
+      1
+     ],
+     [
+      "acacia log",
+      1
+     ]
+    ],
+    "top_crafted": []
+   }
+  },
+  {
    "name": "PaladinEnzym661",
    "stats": {
     "playtime_h": 1.0,
@@ -2071,53 +2134,6 @@
       2
      ]
     ]
-   }
-  },
-  {
-   "name": "Bommel723",
-   "stats": {
-    "playtime_h": 0.8,
-    "deaths": 3,
-    "mob_kills": 0,
-    "distance_km": 17.3,
-    "mined": 4,
-    "crafted": 0,
-    "distanz": {
-     "fuss": 3.4,
-     "elytra": 13.7,
-     "schwimmen": 0.2
-    },
-    "jumps": 624,
-    "damage_taken": 1664,
-    "damage_dealt": 150,
-    "fish_caught": 0,
-    "enchanted": 0,
-    "drops": 20,
-    "trades": 0,
-    "totems": 0,
-    "player_kills": 0,
-    "killed_by_player": 2,
-    "top_killed_by": [
-     [
-      "Spieler",
-      2
-     ],
-     [
-      "zombie",
-      1
-     ]
-    ],
-    "top_mined": [
-     [
-      "kelp plant",
-      3
-     ],
-     [
-      "glass",
-      1
-     ]
-    ],
-    "top_crafted": []
    }
   },
   {
@@ -2364,6 +2380,18 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-28T14:13:54Z",
+   "typ": "tod",
+   "spieler": "Qmatteo",
+   "text": "was slain by Enderman"
+  },
+  {
+   "t": "2026-11-28T14:03:20Z",
+   "typ": "tod",
+   "spieler": "Qmatteo",
+   "text": "fell off a ladder"
+  },
   {
    "t": "2026-11-28T13:48:37Z",
    "typ": "tod",
@@ -4151,18 +4179,6 @@
    "typ": "advancement",
    "spieler": "2_Much_Marloo",
    "text": "adventure - root"
-  },
-  {
-   "t": "2026-11-19T18:29:38Z",
-   "typ": "advancement",
-   "spieler": "2_Much_Marloo",
-   "text": "story - upgrade tools"
-  },
-  {
-   "t": "2026-11-19T18:29:18Z",
-   "typ": "advancement",
-   "spieler": "2_Much_Marloo",
-   "text": "story - mine stone"
   }
  ],
  "server": {
@@ -4170,6 +4186,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 7.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-28 14:00 UTC"
+  "wann": "2026-11-28 14:30 UTC"
  }
 }
