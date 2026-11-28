@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-28 11:00 UTC",
+ "aktualisiert": "2026-11-28 11:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -318,25 +318,25 @@
   {
    "name": "the_carlito_",
    "stats": {
-    "playtime_h": 92.3,
+    "playtime_h": 92.5,
     "deaths": 143,
-    "mob_kills": 180,
-    "distance_km": 236.9,
-    "mined": 18835,
-    "crafted": 57965,
+    "mob_kills": 181,
+    "distance_km": 237.6,
+    "mined": 18836,
+    "crafted": 57976,
     "distanz": {
-     "fuss": 101.4,
+     "fuss": 102.1,
      "elytra": 122.5,
      "schwimmen": 7.6,
      "boot": 0.3,
      "minecart": 5.1
     },
-    "jumps": 17870,
-    "damage_taken": 68860,
-    "damage_dealt": 27080,
+    "jumps": 17911,
+    "damage_taken": 68940,
+    "damage_dealt": 27327,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1448,
+    "drops": 1456,
     "trades": 0,
     "totems": 0,
     "player_kills": 4,
@@ -424,25 +424,25 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 81.8,
+    "playtime_h": 82.1,
     "deaths": 42,
     "mob_kills": 10587,
-    "distance_km": 929.7,
-    "mined": 28909,
-    "crafted": 28975,
+    "distance_km": 935.4,
+    "mined": 29435,
+    "crafted": 29058,
     "distanz": {
-     "fuss": 244.8,
-     "elytra": 678.8,
+     "fuss": 245.6,
+     "elytra": 683.7,
      "schwimmen": 4.0,
      "boot": 2.2,
      "minecart": 0.0
     },
-    "jumps": 55489,
-    "damage_taken": 169965,
+    "jumps": 55654,
+    "damage_taken": 170621,
     "damage_dealt": 641707,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3204,
+    "drops": 3221,
     "trades": 0,
     "totems": 0,
     "player_kills": 93,
@@ -475,12 +475,12 @@
     ],
     "top_mined": [
      [
-      "dirt",
-      4438
+      "netherrack",
+      4714
      ],
      [
-      "netherrack",
-      4245
+      "dirt",
+      4438
      ],
      [
       "stone",
@@ -518,7 +518,7 @@
      ],
      [
       "spruce planks",
-      2320
+      2376
      ],
      [
       "iron nugget",
@@ -848,25 +848,25 @@
   {
    "name": "Hagen13juhhuh",
    "stats": {
-    "playtime_h": 23.0,
+    "playtime_h": 23.2,
     "deaths": 102,
-    "mob_kills": 642,
-    "distance_km": 197.2,
-    "mined": 10916,
+    "mob_kills": 652,
+    "distance_km": 201.9,
+    "mined": 10917,
     "crafted": 13020,
     "distanz": {
-     "fuss": 70.5,
-     "elytra": 126.1,
+     "fuss": 71.2,
+     "elytra": 130.0,
      "schwimmen": 0.0,
      "boot": 0.1,
      "minecart": 0.5
     },
-    "jumps": 10177,
-    "damage_taken": 42785,
-    "damage_dealt": 27409,
+    "jumps": 10253,
+    "damage_taken": 42901,
+    "damage_dealt": 28590,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 192,
+    "drops": 204,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -4111,6 +4111,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 7.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-28 11:00 UTC"
+  "wann": "2026-11-28 11:30 UTC"
  }
 }
