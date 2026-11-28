@@ -1,30 +1,30 @@
 {
- "aktualisiert": "2026-11-28 16:00 UTC",
+ "aktualisiert": "2026-11-28 16:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
    "name": "BobBobinson007",
    "stats": {
-    "playtime_h": 360.2,
-    "deaths": 147,
+    "playtime_h": 360.3,
+    "deaths": 148,
     "mob_kills": 54664,
-    "distance_km": 2866.1,
+    "distance_km": 2867.2,
     "mined": 189235,
     "crafted": 166533,
     "distanz": {
-     "fuss": 776.0,
-     "elytra": 2050.5,
+     "fuss": 776.3,
+     "elytra": 2051.2,
      "schwimmen": 26.3,
      "boot": 11.8,
      "minecart": 1.1,
      "pferd": 0.5
     },
-    "jumps": 217710,
-    "damage_taken": 342663,
+    "jumps": 217879,
+    "damage_taken": 343044,
     "damage_dealt": 1138029,
     "fish_caught": 129,
     "enchanted": 0,
-    "drops": 8792,
+    "drops": 8794,
     "trades": 0,
     "totems": 0,
     "player_kills": 42,
@@ -51,8 +51,8 @@
       3
      ],
      [
-      "spider",
-      2
+      "enderman",
+      3
      ]
     ],
     "top_mined": [
@@ -424,25 +424,25 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 85.5,
+    "playtime_h": 85.7,
     "deaths": 42,
-    "mob_kills": 10908,
-    "distance_km": 994.3,
+    "mob_kills": 10909,
+    "distance_km": 999.6,
     "mined": 37063,
     "crafted": 31658,
     "distanz": {
-     "fuss": 259.7,
-     "elytra": 728.4,
+     "fuss": 260.7,
+     "elytra": 732.7,
      "schwimmen": 4.0,
      "boot": 2.2,
      "minecart": 0.0
     },
-    "jumps": 57964,
-    "damage_taken": 179752,
-    "damage_dealt": 651990,
+    "jumps": 58104,
+    "damage_taken": 181162,
+    "damage_dealt": 652655,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3364,
+    "drops": 3369,
     "trades": 0,
     "totems": 0,
     "player_kills": 95,
@@ -1040,26 +1040,26 @@
   {
    "name": "Manumel12",
    "stats": {
-    "playtime_h": 20.0,
+    "playtime_h": 20.5,
     "deaths": 5,
-    "mob_kills": 9324,
-    "distance_km": 253.9,
-    "mined": 17123,
+    "mob_kills": 9326,
+    "distance_km": 258.9,
+    "mined": 17473,
     "crafted": 26122,
     "distanz": {
-     "fuss": 61.3,
-     "elytra": 188.6,
-     "schwimmen": 3.9
+     "fuss": 63.0,
+     "elytra": 191.7,
+     "schwimmen": 4.2
     },
-    "jumps": 10296,
-    "damage_taken": 30651,
-    "damage_dealt": 110022,
+    "jumps": 10710,
+    "damage_taken": 34108,
+    "damage_dealt": 112057,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4659,
+    "drops": 4677,
     "trades": 0,
     "totems": 0,
-    "player_kills": 1,
+    "player_kills": 2,
     "killed_by_player": 4,
     "top_killed_by": [
      [
@@ -1074,15 +1074,15 @@
     "top_mined": [
      [
       "netherrack",
-      5672
+      5973
      ],
      [
       "sand",
-      2464
+      2465
      ],
      [
       "gravel",
-      2422
+      2452
      ],
      [
       "blue concrete",
@@ -1217,23 +1217,23 @@
   {
    "name": "Devolos2358",
    "stats": {
-    "playtime_h": 12.9,
+    "playtime_h": 13.4,
     "deaths": 3,
-    "mob_kills": 3299,
-    "distance_km": 245.0,
-    "mined": 18066,
+    "mob_kills": 3367,
+    "distance_km": 250.4,
+    "mined": 18484,
     "crafted": 10838,
     "distanz": {
-     "fuss": 39.9,
-     "elytra": 204.5,
+     "fuss": 41.4,
+     "elytra": 208.3,
      "schwimmen": 0.7
     },
-    "jumps": 11585,
-    "damage_taken": 39296,
-    "damage_dealt": 68785,
+    "jumps": 12235,
+    "damage_taken": 41521,
+    "damage_dealt": 73685,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 680,
+    "drops": 712,
     "trades": 0,
     "totems": 0,
     "player_kills": 8,
@@ -1247,7 +1247,7 @@
     "top_mined": [
      [
       "netherrack",
-      14340
+      14733
      ],
      [
       "basalt",
@@ -1255,11 +1255,11 @@
      ],
      [
       "blackstone",
-      493
+      499
      ],
      [
       "nether quartz ore",
-      160
+      162
      ],
      [
       "stone",
@@ -1737,31 +1737,31 @@
   {
    "name": "Bommel723",
    "stats": {
-    "playtime_h": 2.6,
-    "deaths": 5,
-    "mob_kills": 413,
-    "distance_km": 53.8,
-    "mined": 47,
-    "crafted": 6,
+    "playtime_h": 3.1,
+    "deaths": 6,
+    "mob_kills": 525,
+    "distance_km": 62.2,
+    "mined": 75,
+    "crafted": 772,
     "distanz": {
-     "fuss": 8.7,
-     "elytra": 43.7,
-     "schwimmen": 1.5
+     "fuss": 9.8,
+     "elytra": 50.2,
+     "schwimmen": 2.2
     },
-    "jumps": 1616,
-    "damage_taken": 6428,
-    "damage_dealt": 2962,
+    "jumps": 1848,
+    "damage_taken": 7214,
+    "damage_dealt": 3902,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 236,
+    "drops": 250,
     "trades": 0,
     "totems": 0,
     "player_kills": 1,
-    "killed_by_player": 4,
+    "killed_by_player": 5,
     "top_killed_by": [
      [
       "Spieler",
-      4
+      5
      ],
      [
       "zombie",
@@ -1770,15 +1770,19 @@
     ],
     "top_mined": [
      [
+      "netherrack",
+      17
+     ],
+     [
       "sand",
-      11
+      17
      ],
      [
       "short grass",
-      9
+      11
      ],
      [
-      "netherrack",
+      "spruce slab",
       8
      ],
      [
@@ -1788,13 +1792,17 @@
      [
       "torch",
       3
-     ],
-     [
-      "wall torch",
-      3
      ]
     ],
     "top_crafted": [
+     [
+      "spruce slab",
+      510
+     ],
+     [
+      "spruce planks",
+      256
+     ],
      [
       "enchanted book",
       3
@@ -2401,6 +2409,36 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-28T16:21:23Z",
+   "typ": "tod",
+   "spieler": "BobBobinson007",
+   "text": "was slain by Enderman"
+  },
+  {
+   "t": "2026-11-28T16:08:05Z",
+   "typ": "advancement",
+   "spieler": "Bommel723",
+   "text": "adventure - hero of the village"
+  },
+  {
+   "t": "2026-11-28T16:04:47Z",
+   "typ": "advancement",
+   "spieler": "Bommel723",
+   "text": "adventure - voluntary exile"
+  },
+  {
+   "t": "2026-11-28T16:02:41Z",
+   "typ": "tod",
+   "spieler": "Bommel723",
+   "text": "was smashed by [SC] Manumel12"
+  },
+  {
+   "t": "2026-11-28T16:00:18Z",
+   "typ": "advancement",
+   "spieler": "Bommel723",
+   "text": "story - root"
+  },
   {
    "t": "2026-11-28T15:56:30Z",
    "typ": "tod",
@@ -4170,43 +4208,13 @@
    "typ": "advancement",
    "spieler": "Devolos2358",
    "text": "story - mine stone"
-  },
-  {
-   "t": "2026-11-20T14:22:56Z",
-   "typ": "advancement",
-   "spieler": "Devolos2358",
-   "text": "story - iron tools"
-  },
-  {
-   "t": "2026-11-20T14:22:45Z",
-   "typ": "advancement",
-   "spieler": "Devolos2358",
-   "text": "story - root"
-  },
-  {
-   "t": "2026-11-20T14:22:10Z",
-   "typ": "advancement",
-   "spieler": "Devolos2358",
-   "text": "story - smelt iron"
-  },
-  {
-   "t": "2026-11-20T14:16:46Z",
-   "typ": "advancement",
-   "spieler": "Manumel12",
-   "text": "adventure - sleep in bed"
-  },
-  {
-   "t": "2026-11-20T14:15:11Z",
-   "typ": "advancement",
-   "spieler": "Devolos2358",
-   "text": "husbandry - root"
   }
  ],
  "server": {
   "cpu": "Intel Core i5-8500T CPU @ 2.10GHz",
   "ram_gb": 6.8,
-  "welt_aktuell_gb": 7.0,
+  "welt_aktuell_gb": 7.1,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-28 16:00 UTC"
+  "wann": "2026-11-28 16:30 UTC"
  }
 }
