@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-28 13:00 UTC",
+ "aktualisiert": "2026-11-28 13:30 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -112,26 +112,26 @@
   {
    "name": "ZickZackBoss",
    "stats": {
-    "playtime_h": 323.1,
+    "playtime_h": 323.6,
     "deaths": 55,
-    "mob_kills": 10954,
-    "distance_km": 1833.3,
-    "mined": 81262,
+    "mob_kills": 11079,
+    "distance_km": 1837.6,
+    "mined": 81266,
     "crafted": 39365,
     "distanz": {
-     "fuss": 420.1,
-     "elytra": 1353.6,
-     "schwimmen": 57.2,
+     "fuss": 421.4,
+     "elytra": 1356.5,
+     "schwimmen": 57.3,
      "boot": 0.4,
      "minecart": 1.9,
      "pferd": 0.0
     },
-    "jumps": 155049,
-    "damage_taken": 122645,
-    "damage_dealt": 657457,
+    "jumps": 155565,
+    "damage_taken": 122901,
+    "damage_dealt": 659885,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4946,
+    "drops": 5037,
     "trades": 0,
     "totems": 0,
     "player_kills": 43,
@@ -185,7 +185,7 @@
      ],
      [
       "short grass",
-      2951
+      2954
      ]
     ],
     "top_crafted": [
@@ -219,26 +219,26 @@
   {
    "name": "TheRealDmseife",
    "stats": {
-    "playtime_h": 114.9,
+    "playtime_h": 115.4,
     "deaths": 38,
     "mob_kills": 18461,
-    "distance_km": 1267.8,
-    "mined": 46634,
-    "crafted": 134272,
+    "distance_km": 1273.2,
+    "mined": 48633,
+    "crafted": 134744,
     "distanz": {
-     "fuss": 297.6,
-     "elytra": 961.0,
+     "fuss": 299.6,
+     "elytra": 964.4,
      "schwimmen": 6.0,
      "boot": 2.0,
      "minecart": 1.2,
      "pferd": 0.0
     },
-    "jumps": 72050,
-    "damage_taken": 128760,
+    "jumps": 72557,
+    "damage_taken": 129473,
     "damage_dealt": 560470,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3097,
+    "drops": 3128,
     "trades": 0,
     "totems": 0,
     "player_kills": 39,
@@ -264,7 +264,7 @@
     "top_mined": [
      [
       "netherrack",
-      19591
+      21459
      ],
      [
       "stone",
@@ -280,7 +280,7 @@
      ],
      [
       "gravel",
-      1285
+      1313
      ],
      [
       "dark oak log",
@@ -424,25 +424,25 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 83.6,
+    "playtime_h": 84.0,
     "deaths": 42,
-    "mob_kills": 10790,
-    "distance_km": 960.3,
-    "mined": 33966,
+    "mob_kills": 10816,
+    "distance_km": 966.9,
+    "mined": 35572,
     "crafted": 30022,
     "distanz": {
-     "fuss": 250.9,
-     "elytra": 703.2,
+     "fuss": 253.2,
+     "elytra": 707.5,
      "schwimmen": 4.0,
      "boot": 2.2,
      "minecart": 0.0
     },
-    "jumps": 56903,
-    "damage_taken": 174688,
-    "damage_dealt": 645415,
+    "jumps": 57191,
+    "damage_taken": 175610,
+    "damage_dealt": 646991,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3306,
+    "drops": 3326,
     "trades": 0,
     "totems": 0,
     "player_kills": 93,
@@ -476,19 +476,19 @@
     "top_mined": [
      [
       "netherrack",
-      8701
+      8725
      ],
      [
       "dirt",
-      4546
+      5102
      ],
      [
       "stone",
-      3362
+      3821
      ],
      [
       "grass block",
-      3349
+      3790
      ],
      [
       "deepslate",
@@ -1458,24 +1458,24 @@
   {
    "name": "Qmatteo",
    "stats": {
-    "playtime_h": 4.8,
-    "deaths": 16,
-    "mob_kills": 41,
-    "distance_km": 36.1,
-    "mined": 1023,
-    "crafted": 30,
+    "playtime_h": 5.3,
+    "deaths": 17,
+    "mob_kills": 45,
+    "distance_km": 42.9,
+    "mined": 1089,
+    "crafted": 82,
     "distanz": {
-     "fuss": 28.5,
-     "elytra": 4.4,
+     "fuss": 31.5,
+     "elytra": 8.2,
      "schwimmen": 0.4,
      "minecart": 2.8
     },
-    "jumps": 5891,
-    "damage_taken": 8419,
-    "damage_dealt": 8347,
+    "jumps": 6663,
+    "damage_taken": 9305,
+    "damage_dealt": 9031,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 178,
+    "drops": 179,
     "trades": 0,
     "totems": 0,
     "player_kills": 0,
@@ -1501,11 +1501,11 @@
     "top_mined": [
      [
       "stone",
-      490
+      492
      ],
      [
       "short grass",
-      255
+      319
      ],
      [
       "dirt",
@@ -1526,6 +1526,10 @@
     ],
     "top_crafted": [
      [
+      "stone",
+      52
+     ],
+     [
       "ladder",
       12
      ],
@@ -1543,10 +1547,6 @@
      ],
      [
       "stone pressure plate",
-      1
-     ],
-     [
-      "pink dye",
       1
      ]
     ]
@@ -2364,6 +2364,12 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-28T13:20:31Z",
+   "typ": "tod",
+   "spieler": "Qmatteo",
+   "text": "was doomed to fall"
+  },
   {
    "t": "2026-11-28T12:45:47Z",
    "typ": "tod",
@@ -4157,12 +4163,6 @@
    "typ": "advancement",
    "spieler": "2_Much_Marloo",
    "text": "story - root"
-  },
-  {
-   "t": "2026-11-19T18:28:28Z",
-   "typ": "advancement",
-   "spieler": "2_Much_Marloo",
-   "text": "husbandry - root"
   }
  ],
  "server": {
@@ -4170,6 +4170,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 7.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-28 13:00 UTC"
+  "wann": "2026-11-28 13:30 UTC"
  }
 }
