@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-28 10:30 UTC",
+ "aktualisiert": "2026-11-28 11:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -318,25 +318,25 @@
   {
    "name": "the_carlito_",
    "stats": {
-    "playtime_h": 91.8,
-    "deaths": 141,
-    "mob_kills": 178,
-    "distance_km": 235.3,
-    "mined": 18669,
-    "crafted": 57963,
+    "playtime_h": 92.3,
+    "deaths": 143,
+    "mob_kills": 180,
+    "distance_km": 236.9,
+    "mined": 18835,
+    "crafted": 57965,
     "distanz": {
-     "fuss": 100.2,
+     "fuss": 101.4,
      "elytra": 122.5,
-     "schwimmen": 7.1,
+     "schwimmen": 7.6,
      "boot": 0.3,
      "minecart": 5.1
     },
-    "jumps": 17673,
-    "damage_taken": 67404,
-    "damage_dealt": 26280,
+    "jumps": 17870,
+    "damage_taken": 68860,
+    "damage_dealt": 27080,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 1447,
+    "drops": 1448,
     "trades": 0,
     "totems": 0,
     "player_kills": 4,
@@ -363,7 +363,7 @@
       4
      ],
      [
-      "zombified piglin",
+      "endermite",
       1
      ]
     ],
@@ -378,7 +378,7 @@
      ],
      [
       "tuff",
-      1155
+      1156
      ],
      [
       "cobbled deepslate",
@@ -424,25 +424,25 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 81.4,
+    "playtime_h": 81.8,
     "deaths": 42,
-    "mob_kills": 10474,
-    "distance_km": 922.9,
-    "mined": 28905,
-    "crafted": 28947,
+    "mob_kills": 10587,
+    "distance_km": 929.7,
+    "mined": 28909,
+    "crafted": 28975,
     "distanz": {
-     "fuss": 243.7,
-     "elytra": 673.0,
-     "schwimmen": 3.9,
+     "fuss": 244.8,
+     "elytra": 678.8,
+     "schwimmen": 4.0,
      "boot": 2.2,
      "minecart": 0.0
     },
-    "jumps": 55140,
-    "damage_taken": 169022,
-    "damage_dealt": 637897,
+    "jumps": 55489,
+    "damage_taken": 169965,
+    "damage_dealt": 641707,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3176,
+    "drops": 3204,
     "trades": 0,
     "totems": 0,
     "player_kills": 93,
@@ -848,22 +848,22 @@
   {
    "name": "Hagen13juhhuh",
    "stats": {
-    "playtime_h": 22.5,
+    "playtime_h": 23.0,
     "deaths": 102,
-    "mob_kills": 486,
-    "distance_km": 191.3,
-    "mined": 10303,
-    "crafted": 12745,
+    "mob_kills": 642,
+    "distance_km": 197.2,
+    "mined": 10916,
+    "crafted": 13020,
     "distanz": {
-     "fuss": 68.7,
-     "elytra": 122.0,
+     "fuss": 70.5,
+     "elytra": 126.1,
      "schwimmen": 0.0,
      "boot": 0.1,
      "minecart": 0.5
     },
-    "jumps": 9889,
-    "damage_taken": 42467,
-    "damage_dealt": 26499,
+    "jumps": 10177,
+    "damage_taken": 42785,
+    "damage_dealt": 27409,
     "fish_caught": 0,
     "enchanted": 0,
     "drops": 192,
@@ -899,12 +899,12 @@
       2414
      ],
      [
-      "stone",
-      1946
+      "deepslate",
+      2259
      ],
      [
-      "deepslate",
-      1686
+      "stone",
+      1946
      ],
      [
       "grass block",
@@ -922,7 +922,7 @@
     "top_crafted": [
      [
       "paper",
-      8676
+      8931
      ],
      [
       "oak planks",
@@ -934,7 +934,7 @@
      ],
      [
       "emerald",
-      368
+      380
      ],
      [
       "cobblestone stairs",
@@ -2305,6 +2305,24 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-28T10:56:34Z",
+   "typ": "advancement",
+   "spieler": "the_carlito_",
+   "text": "adventure - totem of undying"
+  },
+  {
+   "t": "2026-11-28T10:53:40Z",
+   "typ": "tod",
+   "spieler": "the_carlito_",
+   "text": "was slain by ender"
+  },
+  {
+   "t": "2026-11-28T10:45:37Z",
+   "typ": "tod",
+   "spieler": "the_carlito_",
+   "text": "drowned"
+  },
   {
    "t": "2026-11-28T10:14:57Z",
    "typ": "tod",
@@ -4086,24 +4104,6 @@
    "typ": "advancement",
    "spieler": "Reep811",
    "text": "story - deflect arrow"
-  },
-  {
-   "t": "2026-11-19T17:39:01Z",
-   "typ": "advancement",
-   "spieler": "Reep811",
-   "text": "story - mine diamond"
-  },
-  {
-   "t": "2026-11-19T17:33:03Z",
-   "typ": "advancement",
-   "spieler": "TimotheToaster",
-   "text": "adventure - revaulting"
-  },
-  {
-   "t": "2026-11-19T17:32:04Z",
-   "typ": "advancement",
-   "spieler": "Reep811",
-   "text": "adventure - avoid vibration"
   }
  ],
  "server": {
@@ -4111,6 +4111,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 7.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-28 10:30 UTC"
+  "wann": "2026-11-28 11:00 UTC"
  }
 }
