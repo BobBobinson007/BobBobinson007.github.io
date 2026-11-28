@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-28 16:30 UTC",
+ "aktualisiert": "2026-11-28 17:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -424,25 +424,25 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 85.7,
+    "playtime_h": 86.1,
     "deaths": 42,
-    "mob_kills": 10909,
-    "distance_km": 999.6,
-    "mined": 37063,
+    "mob_kills": 10960,
+    "distance_km": 1011.0,
+    "mined": 37251,
     "crafted": 31658,
     "distanz": {
-     "fuss": 260.7,
-     "elytra": 732.7,
-     "schwimmen": 4.0,
+     "fuss": 262.7,
+     "elytra": 742.0,
+     "schwimmen": 4.1,
      "boot": 2.2,
      "minecart": 0.0
     },
-    "jumps": 58104,
-    "damage_taken": 181162,
-    "damage_dealt": 652655,
+    "jumps": 58481,
+    "damage_taken": 181805,
+    "damage_dealt": 654397,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3369,
+    "drops": 3391,
     "trades": 0,
     "totems": 0,
     "player_kills": 95,
@@ -484,7 +484,7 @@
      ],
      [
       "stone",
-      4269
+      4282
      ],
      [
       "grass block",
@@ -492,11 +492,11 @@
      ],
      [
       "deepslate",
-      2698
+      2699
      ],
      [
       "dark oak log",
-      1212
+      1351
      ]
     ],
     "top_crafted": [
@@ -1040,23 +1040,23 @@
   {
    "name": "Manumel12",
    "stats": {
-    "playtime_h": 20.5,
+    "playtime_h": 20.9,
     "deaths": 5,
     "mob_kills": 9326,
-    "distance_km": 258.9,
-    "mined": 17473,
-    "crafted": 26122,
+    "distance_km": 268.1,
+    "mined": 17537,
+    "crafted": 26277,
     "distanz": {
-     "fuss": 63.0,
-     "elytra": 191.7,
-     "schwimmen": 4.2
+     "fuss": 64.3,
+     "elytra": 199.6,
+     "schwimmen": 4.3
     },
-    "jumps": 10710,
-    "damage_taken": 34108,
-    "damage_dealt": 112057,
+    "jumps": 10942,
+    "damage_taken": 34902,
+    "damage_dealt": 112242,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 4677,
+    "drops": 4689,
     "trades": 0,
     "totems": 0,
     "player_kills": 2,
@@ -1074,11 +1074,11 @@
     "top_mined": [
      [
       "netherrack",
-      5973
+      5975
      ],
      [
       "sand",
-      2465
+      2466
      ],
      [
       "gravel",
@@ -1090,7 +1090,7 @@
      ],
      [
       "stone",
-      933
+      958
      ],
      [
       "carrots",
@@ -1103,12 +1103,12 @@
       10819
      ],
      [
-      "blue concrete powder",
-      2896
+      "paper",
+      3027
      ],
      [
-      "paper",
-      2880
+      "blue concrete powder",
+      2896
      ],
      [
       "golden carrot",
@@ -1737,23 +1737,23 @@
   {
    "name": "Bommel723",
    "stats": {
-    "playtime_h": 3.1,
+    "playtime_h": 3.4,
     "deaths": 6,
-    "mob_kills": 525,
-    "distance_km": 62.2,
-    "mined": 75,
-    "crafted": 772,
+    "mob_kills": 628,
+    "distance_km": 69.1,
+    "mined": 79,
+    "crafted": 783,
     "distanz": {
-     "fuss": 9.8,
-     "elytra": 50.2,
-     "schwimmen": 2.2
+     "fuss": 11.1,
+     "elytra": 55.8,
+     "schwimmen": 2.3
     },
-    "jumps": 1848,
-    "damage_taken": 7214,
-    "damage_dealt": 3902,
+    "jumps": 2102,
+    "damage_taken": 7746,
+    "damage_dealt": 4401,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 250,
+    "drops": 257,
     "trades": 0,
     "totems": 0,
     "player_kills": 1,
@@ -1804,8 +1804,12 @@
       256
      ],
      [
+      "iron ingot",
+      9
+     ],
+     [
       "enchanted book",
-      3
+      5
      ],
      [
       "purple shulker box",
@@ -1813,10 +1817,6 @@
      ],
      [
       "diamond pickaxe",
-      1
-     ],
-     [
-      "bookshelf",
       1
      ]
     ]
@@ -2409,6 +2409,18 @@
   }
  ],
  "ereignisse": [
+  {
+   "t": "2026-11-28T16:52:52Z",
+   "typ": "advancement",
+   "spieler": "Manumel12",
+   "text": "adventure - minecraft trials edition"
+  },
+  {
+   "t": "2026-11-28T16:35:26Z",
+   "typ": "advancement",
+   "spieler": "Bommel723",
+   "text": "story - smelt iron"
+  },
   {
    "t": "2026-11-28T16:21:23Z",
    "typ": "tod",
@@ -4196,18 +4208,6 @@
    "typ": "advancement",
    "spieler": "Devolos2358",
    "text": "nether - obtain blaze rod"
-  },
-  {
-   "t": "2026-11-20T14:25:13Z",
-   "typ": "advancement",
-   "spieler": "Devolos2358",
-   "text": "story - mine diamond"
-  },
-  {
-   "t": "2026-11-20T14:24:22Z",
-   "typ": "advancement",
-   "spieler": "Devolos2358",
-   "text": "story - mine stone"
   }
  ],
  "server": {
@@ -4215,6 +4215,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 7.1,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-28 16:30 UTC"
+  "wann": "2026-11-28 17:00 UTC"
  }
 }
