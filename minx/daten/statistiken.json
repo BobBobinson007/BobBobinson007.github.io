@@ -1,5 +1,5 @@
 {
- "aktualisiert": "2026-11-28 09:30 UTC",
+ "aktualisiert": "2026-11-28 10:00 UTC",
  "hinweis": "Öffentliche Serverstatistiken. Nur freigegebene Felder. Keine Koordinaten, keine IPs. Alte und aktuelle Welt sind pro Spieler zusammengeführt.",
  "spieler": [
   {
@@ -318,21 +318,21 @@
   {
    "name": "the_carlito_",
    "stats": {
-    "playtime_h": 91.1,
-    "deaths": 139,
+    "playtime_h": 91.3,
+    "deaths": 140,
     "mob_kills": 158,
-    "distance_km": 232.3,
-    "mined": 18597,
-    "crafted": 56945,
+    "distance_km": 233.4,
+    "mined": 18605,
+    "crafted": 56979,
     "distanz": {
-     "fuss": 97.9,
+     "fuss": 98.6,
      "elytra": 122.5,
-     "schwimmen": 6.5,
+     "schwimmen": 6.9,
      "boot": 0.3,
      "minecart": 5.1
     },
-    "jumps": 17398,
-    "damage_taken": 66368,
+    "jumps": 17451,
+    "damage_taken": 66868,
     "damage_dealt": 18538,
     "fish_caught": 0,
     "enchanted": 0,
@@ -374,7 +374,7 @@
      ],
      [
       "stone",
-      1291
+      1296
      ],
      [
       "tuff",
@@ -424,25 +424,25 @@
   {
    "name": "Wemmbuuufaker",
    "stats": {
-    "playtime_h": 80.6,
+    "playtime_h": 81.1,
     "deaths": 42,
-    "mob_kills": 10091,
-    "distance_km": 913.8,
-    "mined": 28744,
-    "crafted": 28898,
+    "mob_kills": 10327,
+    "distance_km": 918.1,
+    "mined": 28870,
+    "crafted": 28899,
     "distanz": {
-     "fuss": 239.8,
-     "elytra": 667.9,
+     "fuss": 243.1,
+     "elytra": 668.8,
      "schwimmen": 3.9,
      "boot": 2.2,
      "minecart": 0.0
     },
-    "jumps": 54529,
-    "damage_taken": 166440,
-    "damage_dealt": 614596,
+    "jumps": 55062,
+    "damage_taken": 168269,
+    "damage_dealt": 632519,
     "fish_caught": 0,
     "enchanted": 0,
-    "drops": 3107,
+    "drops": 3141,
     "trades": 0,
     "totems": 0,
     "player_kills": 93,
@@ -476,7 +476,7 @@
     "top_mined": [
      [
       "dirt",
-      4436
+      4438
      ],
      [
       "netherrack",
@@ -484,11 +484,11 @@
      ],
      [
       "stone",
-      3320
+      3362
      ],
      [
       "grass block",
-      3310
+      3311
      ],
      [
       "deepslate",
@@ -2306,6 +2306,12 @@
  ],
  "ereignisse": [
   {
+   "t": "2026-11-28T09:48:04Z",
+   "typ": "tod",
+   "spieler": "the_carlito_",
+   "text": "fell from a high place"
+  },
+  {
    "t": "2026-11-27T21:25:58Z",
    "typ": "tod",
    "spieler": "TheRealDmseife",
@@ -4098,12 +4104,6 @@
    "typ": "advancement",
    "spieler": "FranoGames",
    "text": "adventure - avoid vibration"
-  },
-  {
-   "t": "2026-11-19T17:29:45Z",
-   "typ": "advancement",
-   "spieler": "FranoGames",
-   "text": "story - mine diamond"
   }
  ],
  "server": {
@@ -4111,6 +4111,6 @@
   "ram_gb": 6.8,
   "welt_aktuell_gb": 7.0,
   "welt_alt_gb": 1.6,
-  "wann": "2026-11-28 09:30 UTC"
+  "wann": "2026-11-28 10:00 UTC"
  }
 }
